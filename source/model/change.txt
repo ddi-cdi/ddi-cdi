@@ -1,0 +1,25 @@
+Changes as of 2022-07-20
+
+ModelIdentification
+  General URI used
+  Language added
+ScopedMeasure
+  HTML in doc removed, identifier doc added, sections in frequency removed
+CollectionsPattern::Comparison
+  Short title underline fixed
+CollectionsPattern::Structure
+  Attribute definition removed from class definition, partly integrated into attribute definition. HTML removed.
+PROV items
+  Swapped doc, Agent doc added.
+PhysicalSegmentLayout-delimiter
+  Default value corrected, repetitive doc improved
+Default values of properties reviewed and sometimes corrected. Often string values were in quotes which shouldn’t be the case.
+  Issue: There doesn’t seem to be a difference between a null value and an empty string in UML. For both, FormatDescription-ValueMapping-defaultDigitGroupSeparator and FormatDescription-ValueMapping-defaultValue, no default is now specified which could be either interpreted as null value or empty string.
+Wrong quotes (“”) in doc changed to ".
+Not allowed characters removed.
+StructuredDataTypes-IndividualName-suffix
+  HTML removed
+DCTERMS::creator
+  Documentation added
+Attribute catalogDetails in multiple classes
+  Doc formatted appropriate for attribute
