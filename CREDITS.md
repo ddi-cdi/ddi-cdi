@@ -63,7 +63,7 @@ allows for tracking individual data observations across multiple
 representations in varying structures.
 
 A spreadsheet containing a listing of all participants by event can be
-found at https://bitbucket.org/ddi-alliance/ddi-cdi/src/master/DDI-MovingForward_DDI-CDI_Contributors.md.
+found at https://bitbucket.org/ddi-alliance/ddi-cdi/src/master/DDI-MovingForward_DDI-CDI_Contributors.xlsx.
 
 The people listed below have contributed to either the DDI Moving
 Forward project or to the development of DDI-CDI.
