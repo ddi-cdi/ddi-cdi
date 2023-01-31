@@ -90,7 +90,7 @@ in-person development event (sprint).
 -   Brigitte Mathiak
 -   Dan Smith
 -   Darren Bell
--   Eric Prud\'hommeaux
+-   Eric Prud'hommeaux
 -   Guillaume Duffes
 -   Hilde Orten
 -   Jannik Jensen
@@ -147,7 +147,7 @@ in-person development event (sprint).
 -   Gregg Kellogg
 -   Helen Toole
 -   Henrik Sejersen
--   Hervé L\'Hours
+-   Hervé L'Hours
 -   Hossein Abroshan
 -   Ingo Barkow
 -   Irena Vipavc Brvar
