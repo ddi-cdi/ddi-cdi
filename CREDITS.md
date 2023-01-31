@@ -14,8 +14,7 @@ documentation. Listed in alphabetical order they are:
 -   Joachim Wackerow
 -   Larry Hoyle
 -   Oliver Hopt
-
-Wendy Lee Thomas (Technical Committee contact)
+-   Wendy Lee Thomas (Technical Committee contact)
 
 DDI-CDI evolved from the earlier DDI Moving Forward (DDI 4) effort. That
 effort involved multiple teams and in-person meetings (Sprints), both in
