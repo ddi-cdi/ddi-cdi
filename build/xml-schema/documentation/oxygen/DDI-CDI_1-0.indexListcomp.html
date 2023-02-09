@@ -1,0 +1,954 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for </title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                        //--></script></head>
+   <body>
+      <h2><a id="INDEX">Table of Contents</a></h2>
+      <div class="toc">
+         <form action="none">
+            <div><span> Group by: <select id="selectTOC" onchange="selectTOCGroupBy(this.options[this.selectedIndex].value, true, 'DDI-CDI_1-0.indexList.html', 'DDI-CDI_1-0.indexListns.html', 'DDI-CDI_1-0.indexListcomp.html');">
+                     <option value="toc_group_by_namespace">Namespace</option>
+                     <option value="toc_group_by_location">Location</option>
+                     <option value="toc_group_by_component_type" selected="selected">Component Type</option></select></span></div>
+         </form>
+         <div class="level1" id="toc_group_by_component_type" style="display:block">
+            <div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Main_schema" type="image" value="-" src="img/btM.gif" onclick="switchState('Main_schema');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Main Schema</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Main_schema" class="componentGroup" style="display:block">
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DDI-CDI_1-0.xsd" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DDI-CDI_1-0.xsd</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Imported_schema" type="image" value="-" src="img/btM.gif" onclick="switchState('Imported_schema');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Imported Schemas</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Imported_schema" class="componentGroup" style="display:block">
+                                          <div><b><a href="xml_xsd.html#xml.xsd" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for xml.xsd')">xml.xsd</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Element" type="image" value="-" src="img/btM.gif" onclick="switchState('Element');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Elements</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Element" class="componentGroup" style="display:block">
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AccessInformation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AccessInformation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AccessLocation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AccessLocation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Activity" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Activity</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Address" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Address</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Agent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Agent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentInRole" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentInRole</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentListing" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentListing</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AllenIntervalAlgebra" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AllenIntervalAlgebra</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AttributeComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AttributeComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AuthorizationSource" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AuthorizationSource</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#BibliographicName" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">BibliographicName</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CDIContent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CDIContent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CatalogDetails" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CatalogDetails</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Category" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Category</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryRelationStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryRelationStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategorySet" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategorySet</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryStatistic" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryStatistic</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationFamily" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationFamily</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationIndex" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationIndex</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationIndexEntry" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationIndexEntry</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationIndexEntryPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationIndexEntryPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationItem" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationItem</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationItemPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationItemPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationItemRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationItemRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationItemStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationItemStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationSeries" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationSeries</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationSeriesStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationSeriesStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Code" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Code</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodeList" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodeList</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodeListStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodeListStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodePosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodePosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodeRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodeRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CombinedDate" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CombinedDate</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Command" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Command</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CommandCode" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CommandCode</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CommandFile" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CommandFile</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ComplexLanguageString" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ComplexLanguageString</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ComponentPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ComponentPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Concept" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Concept</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptMap" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptMap</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptSystem" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptSystem</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptSystemCorrespondence" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptSystemCorrespondence</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptualDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptualDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptualValue" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptualValue</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptualVariable" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptualVariable</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConditionalControlLogic" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConditionalControlLogic</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ContactInformation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ContactInformation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ContextualComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ContextualComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ControlLogic" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ControlLogic</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ControlledVocabularyEntry" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ControlledVocabularyEntry</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CorrespondenceDefinition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CorrespondenceDefinition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CorrespondenceTable" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CorrespondenceTable</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Curator" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Curator</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DDICDIModels" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DDICDIModels</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataPoint" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataPoint</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataPointPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataPointPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataPointRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataPointRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataSet" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataSet</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataStore" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataStore</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataStructureComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataStructureComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DateRange" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DateRange</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Datum" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Datum</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Descriptor" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Descriptor</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DescriptorValueDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DescriptorValueDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DescriptorVariable" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DescriptorVariable</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DeterministicImperative" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DeterministicImperative</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionGroup" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionGroup</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalDataSet" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalDataSet</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalDataStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalDataStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalKey" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalKey</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalKeyDefinition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalKeyDefinition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalKeyDefinitionMember" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalKeyDefinitionMember</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalKeyMember" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalKeyMember</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ElectronicMessageSystem" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ElectronicMessageSystem</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Email" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Email</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#EmbargoInformation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">EmbargoInformation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#EnumerationDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">EnumerationDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ForeignKey" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ForeignKey</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ForeignKeyComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ForeignKeyComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#FundingInformation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">FundingInformation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#GeoRole" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">GeoRole</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Identifier" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Identifier</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#IdentifierComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">IdentifierComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Individual" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Individual</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#IndividualName" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">IndividualName</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InformationFlowDefinition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InformationFlowDefinition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InstanceKey" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InstanceKey</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InstanceValue" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InstanceValue</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InstanceVariable" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InstanceVariable</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InstanceVariableMap" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InstanceVariableMap</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InternationalIdentifier" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InternationalIdentifier</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InternationalRegistrationDataIdentifier" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InternationalRegistrationDataIdentifier</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InternationalString" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InternationalString</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#KeyValueDataStore" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">KeyValueDataStore</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#KeyValueStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">KeyValueStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LabelForDisplay" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LabelForDisplay</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LanguageSpecificString" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LanguageSpecificString</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LanguageString" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LanguageString</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Level" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Level</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LevelStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LevelStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LicenseInformation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LicenseInformation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LogicalRecord" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LogicalRecord</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LogicalRecordPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LogicalRecordPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LogicalRecordRelationStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LogicalRecordRelationStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LogicalRecordRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LogicalRecordRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LongDataSet" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LongDataSet</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LongDataStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LongDataStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LongKey" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LongKey</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LongMainKeyMember" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LongMainKeyMember</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Machine" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Machine</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#MainKeyMember" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">MainKeyMember</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#MeasureComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">MeasureComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ModelIdentification" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ModelIdentification</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#NonDdiIdentifier" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">NonDdiIdentifier</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#NonDeterministicDeclarative" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">NonDeterministicDeclarative</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#NonIsoDate" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">NonIsoDate</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Notation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Notation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ObjectAttributeSelector" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ObjectAttributeSelector</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ObjectName" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ObjectName</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Organization" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Organization</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#OrganizationName" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">OrganizationName</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PairedControlledVocabularyEntry" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PairedControlledVocabularyEntry</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Parameter" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Parameter</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalDataSet" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalDataSet</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalDataSetStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalDataSetStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalLayoutRelationStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalLayoutRelationStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalRecordSegment" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalRecordSegment</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalRecordSegmentPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalRecordSegmentPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalRecordSegmentRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalRecordSegmentRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalRecordSegmentStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalRecordSegmentStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalSegmentLayout" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalSegmentLayout</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalSegmentLocation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalSegmentLocation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Population" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Population</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PrimaryKey" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PrimaryKey</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PrimaryKeyComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PrimaryKeyComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PrivateImage" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PrivateImage</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ProcessingAgent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ProcessingAgent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ProductionEnvironment" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ProductionEnvironment</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ProvenanceInformation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ProvenanceInformation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#QualifiedMeasure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">QualifiedMeasure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RationaleDefinition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RationaleDefinition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RecordRelation" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RecordRelation</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Reference" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Reference</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ReferenceValue" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ReferenceValue</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ReferenceValueDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ReferenceValueDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ReferenceVariable" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ReferenceVariable</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RepresentedVariable" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RepresentedVariable</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RevisableDatum" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RevisableDatum</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Revision" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Revision</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Rule" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Rule</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RuleBasedScheduling" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RuleBasedScheduling</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RuleSet" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RuleSet</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ScopedMeasure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ScopedMeasure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SegmentByText" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SegmentByText</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Selector" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Selector</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SentinelConceptualDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SentinelConceptualDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SentinelValueDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SentinelValueDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Sequence" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Sequence</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Service" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Service</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SpatialCoordinate" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SpatialCoordinate</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SpatialPoint" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SpatialPoint</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SpecializationRole" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SpecializationRole</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Statistic" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Statistic</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StatisticalClassification" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StatisticalClassification</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StatisticalClassificationRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StatisticalClassificationRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Step" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Step</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StructureSpecification" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StructureSpecification</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SubstantiveConceptualDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SubstantiveConceptualDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SubstantiveValueDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SubstantiveValueDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SyntheticIdComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SyntheticIdComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Telephone" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Telephone</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TemporalConstraints" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TemporalConstraints</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TemporalControlConstruct" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TemporalControlConstruct</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TextPositionSelector" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TextPositionSelector</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TimeRole" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TimeRole</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TypedString" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TypedString</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Unit" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Unit</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#UnitSegmentLayout" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">UnitSegmentLayout</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#UnitType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">UnitType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#Universe" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">Universe</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueAndConceptDescription" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueAndConceptDescription</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueDomain" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueDomain</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueMapping" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueMapping</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueMappingPosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueMappingPosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueMappingRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueMappingRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableCollection" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableCollection</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableDescriptorComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableDescriptorComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariablePosition" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariablePosition</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableRelationship" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableRelationship</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableValueComponent" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableValueComponent</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WebLink" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WebLink</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WideDataSet" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WideDataSet</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WideDataStructure" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WideDataStructure</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WideKey" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WideKey</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WideKeyMember" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WideKeyMember</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('Complex_Type');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Complex Types</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Complex_Type" class="componentGroup" style="display:block">
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AccessInformationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AccessInformationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AccessLocationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AccessLocationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ActivityXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ActivityXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AddressXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AddressXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentInRoleXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentInRoleXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentListingXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentListingXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AgentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AgentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AllenIntervalAlgebraXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AllenIntervalAlgebraXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AttributeComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AttributeComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#AuthorizationSourceXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">AuthorizationSourceXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#BibliographicNameXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">BibliographicNameXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CDIContentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CDIContentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CatalogDetailsXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CatalogDetailsXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryRelationStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryRelationStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategorySetXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategorySetXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryStatisticXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryStatisticXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationFamilyXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationFamilyXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationIndexEntryPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationIndexEntryPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationIndexEntryXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationIndexEntryXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationIndexXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationIndexXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationItemPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationItemPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationItemRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationItemRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationItemStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationItemStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationItemXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationItemXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationSeriesStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationSeriesStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ClassificationSeriesXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ClassificationSeriesXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodeListStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodeListStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodeListXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodeListXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodePositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodePositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodeRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodeRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CodeXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CodeXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CombinedDateXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CombinedDateXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CommandCodeXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CommandCodeXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CommandFileXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CommandFileXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CommandXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CommandXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ComplexLanguageStringXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ComplexLanguageStringXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ComponentPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ComponentPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptMapXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptMapXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptSystemCorrespondenceXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptSystemCorrespondenceXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptSystemXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptSystemXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptualDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptualDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptualValueXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptualValueXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConceptualVariableXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConceptualVariableXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ConditionalControlLogicXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ConditionalControlLogicXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ContactInformationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ContactInformationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ContextualComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ContextualComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ControlLogicXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ControlLogicXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ControlledVocabularyEntryXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ControlledVocabularyEntryXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CorrespondenceDefinitionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CorrespondenceDefinitionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CorrespondenceTableXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CorrespondenceTableXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CuratorXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CuratorXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DDICDIModelsXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DDICDIModelsXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataPointPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataPointPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataPointRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataPointRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataPointXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataPointXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataSetXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataSetXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataStoreXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataStoreXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataStructureComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataStructureComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DataStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DataStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DateRangeXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DateRangeXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DatumXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DatumXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DescriptorValueDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DescriptorValueDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DescriptorVariableXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DescriptorVariableXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DescriptorXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DescriptorXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DeterministicImperativeXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DeterministicImperativeXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionGroupXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionGroupXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalDataSetXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalDataSetXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalDataStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalDataStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalKeyDefinitionMemberXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalKeyDefinitionMemberXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalKeyDefinitionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalKeyDefinitionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalKeyMemberXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalKeyMemberXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#DimensionalKeyXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">DimensionalKeyXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ElectronicMessageSystemXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ElectronicMessageSystemXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#EmailXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">EmailXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#EmbargoInformationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">EmbargoInformationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#EnumerationDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">EnumerationDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ForeignKeyComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ForeignKeyComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ForeignKeyXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ForeignKeyXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#FundingInformationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">FundingInformationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#GeoRoleXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">GeoRoleXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#IdentifierComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">IdentifierComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#IdentifierXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">IdentifierXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#IndividualNameXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">IndividualNameXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#IndividualXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">IndividualXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InformationFlowDefinitionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InformationFlowDefinitionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InstanceKeyXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InstanceKeyXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InstanceValueXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InstanceValueXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InstanceVariableMapXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InstanceVariableMapXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InstanceVariableXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InstanceVariableXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InternationalIdentifierXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InternationalIdentifierXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InternationalRegistrationDataIdentifierXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InternationalRegistrationDataIdentifierXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InternationalStringXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InternationalStringXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#KeyValueDataStoreXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">KeyValueDataStoreXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#KeyValueStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">KeyValueStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LabelForDisplayXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LabelForDisplayXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LanguageSpecificStringXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LanguageSpecificStringXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LanguageStringXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LanguageStringXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LevelStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LevelStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LevelXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LevelXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LicenseInformationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LicenseInformationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LogicalRecordPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LogicalRecordPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LogicalRecordRelationStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LogicalRecordRelationStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LogicalRecordRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LogicalRecordRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LogicalRecordXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LogicalRecordXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LongDataSetXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LongDataSetXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LongDataStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LongDataStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LongKeyXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LongKeyXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#LongMainKeyMemberXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">LongMainKeyMemberXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#MachineXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">MachineXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#MainKeyMemberXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">MainKeyMemberXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#MeasureComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">MeasureComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ModelIdentificationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ModelIdentificationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#NonDdiIdentifierXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">NonDdiIdentifierXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#NonDeterministicDeclarativeXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">NonDeterministicDeclarativeXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#NonIsoDateXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">NonIsoDateXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#NotationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">NotationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ObjectAttributeSelectorXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ObjectAttributeSelectorXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ObjectNameXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ObjectNameXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#OrganizationNameXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">OrganizationNameXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#OrganizationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">OrganizationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PairedControlledVocabularyEntryXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PairedControlledVocabularyEntryXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ParameterXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ParameterXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalDataSetStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalDataSetStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalDataSetXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalDataSetXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalLayoutRelationStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalLayoutRelationStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalRecordSegmentPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalRecordSegmentPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalRecordSegmentRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalRecordSegmentRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalRecordSegmentStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalRecordSegmentStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalRecordSegmentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalRecordSegmentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalSegmentLayoutXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalSegmentLayoutXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PhysicalSegmentLocationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PhysicalSegmentLocationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PopulationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PopulationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PrimaryKeyComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PrimaryKeyComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PrimaryKeyXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PrimaryKeyXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PrivateImageXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PrivateImageXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ProcessingAgentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ProcessingAgentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ProductionEnvironmentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ProductionEnvironmentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ProvenanceInformationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ProvenanceInformationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#QualifiedMeasureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">QualifiedMeasureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RationaleDefinitionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RationaleDefinitionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RecordRelationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RecordRelationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ReferenceValueDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ReferenceValueDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ReferenceValueXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ReferenceValueXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ReferenceVariableXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ReferenceVariableXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ReferenceXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ReferenceXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RepresentedVariableXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RepresentedVariableXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RevisableDatumXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RevisableDatumXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RevisionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RevisionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RuleBasedSchedulingXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RuleBasedSchedulingXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RuleSetXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RuleSetXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#RuleXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">RuleXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ScopedMeasureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ScopedMeasureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SegmentByTextXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SegmentByTextXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SelectorXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SelectorXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SentinelConceptualDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SentinelConceptualDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SentinelValueDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SentinelValueDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SequenceXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SequenceXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ServiceXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ServiceXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SpatialCoordinateXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SpatialCoordinateXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SpatialPointXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SpatialPointXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SpecializationRoleXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SpecializationRoleXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StatisticXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StatisticXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StatisticalClassificationRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StatisticalClassificationRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StatisticalClassificationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StatisticalClassificationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StepXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StepXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StructureSpecificationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StructureSpecificationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SubstantiveConceptualDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SubstantiveConceptualDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SubstantiveValueDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SubstantiveValueDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SyntheticIdComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SyntheticIdComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TelephoneXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TelephoneXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TemporalConstraintsXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TemporalConstraintsXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TemporalControlConstructXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TemporalControlConstructXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TextPositionSelectorXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TextPositionSelectorXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TimeRoleXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TimeRoleXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TypedStringXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TypedStringXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#UnitSegmentLayoutXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">UnitSegmentLayoutXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#UnitTypeXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">UnitTypeXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#UnitXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">UnitXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#UniverseXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">UniverseXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueAndConceptDescriptionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueAndConceptDescriptionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueDomainXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueDomainXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueMappingPositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueMappingPositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueMappingRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueMappingRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ValueMappingXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ValueMappingXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableCollectionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableCollectionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableDescriptorComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableDescriptorComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariablePositionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariablePositionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableRelationshipXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableRelationshipXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#VariableValueComponentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">VariableValueComponentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WebLinkXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WebLinkXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WideDataSetXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WideDataSetXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WideDataStructureXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WideDataStructureXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WideKeyMemberXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WideKeyMemberXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WideKeyXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WideKeyXsdType</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Simple_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('Simple_Type');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Simple Types</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Simple_Type" class="componentGroup" style="display:block">
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#CategoryRelationCodeXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">CategoryRelationCodeXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ComparisonOperatorXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ComparisonOperatorXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ComputationBaseListXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ComputationBaseListXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#ControlConstructXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">ControlConstructXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#InformationFlowDirectionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">InformationFlowDirectionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#MatchingCriterionXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">MatchingCriterionXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#MemberRelationshipScopeXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">MemberRelationshipScopeXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#PointFormatXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">PointFormatXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SchedulingStrategyXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SchedulingStrategyXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#SexSpecificationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">SexSpecificationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#StructureExtentXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">StructureExtentXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TableDirectionValuesXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TableDirectionValuesXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TemporalOperatorXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TemporalOperatorXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TemporalRelationXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TemporalRelationXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TextDirectionValuesXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TextDirectionValuesXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#TrimValuesXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">TrimValuesXsdType</a></b></div>
+                                          <div><b><a href="DDI-CDI_1-0_xsd.html#WhiteSpaceRuleXsdType" target="mainFrame" title="https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_2022-10-06_rdf/encoding/xsd/DDI-CDI_1-0.xsd" onclick="updatePageTitle('Schema documentation for DDI-CDI_1-0.xsd')">WhiteSpaceRuleXsdType</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attributes</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute" class="componentGroup" style="display:block">
+                                          <div><b><a href="xml_xsd.html#base" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for xml.xsd')">@xml:base</a></b></div>
+                                          <div><b><a href="xml_xsd.html#lang" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for xml.xsd')">@xml:lang</a></b></div>
+                                          <div><b><a href="xml_xsd.html#space" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for xml.xsd')">@xml:space</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute_Group');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attribute Groups</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute_Group" class="componentGroup" style="display:block">
+                                          <div><b><a href="xml_xsd.html#specialAttrs" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for xml.xsd')">xml:specialAttrs</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div style="clear:left"></div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div>
+   </body>
+</html>
