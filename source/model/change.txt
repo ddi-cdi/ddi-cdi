@@ -1,10 +1,18 @@
+Changes Feb 22/2023
+Datum
+-	Updated definition, example and explanatory text
+Datum-InstanceValue association
+-	Changed cardinality on InstanceValue end to 1..*
+Datum-InstanceVariable association
+-	Changed cardinality on InstanceVariable end to 1..*
+
 Changes Feb 16/2023
 DDICDIModels
 -	Added credits blurb at the end of the Element Notes
 CDIContent
 -	Removed
 Identifier
--	Made isDDIIdentifierPersistent and isDDIIdentifierGloballyUnique optional (cardinality O..1)
+-	Made isDDIIdentifierPersistent and isDDIIdentifierUniversallyUnique optional (cardinality O..1)
 
 Changes Dec 10/2022
 DDICDIModels
