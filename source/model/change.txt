@@ -1,3 +1,13 @@
+Changes 2023-04-12
+ComponentPosition
+- added attribute identifier
+DimensionGroup
+- added attribute identifier
+DDICDIModels
+- Definition text
+	changed URL https://ddialliance.org/Specification/DDI-CDI/
+	change rst credits list
+
 Changes Feb 22/2023
 Datum
 -	Updated definition, example and explanatory text
