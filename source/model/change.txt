@@ -1,3 +1,15 @@
+Changes 2023-05-23
+Activity
+- added "name" attribute of type ObjectName and cardinality [0..*]
+Parameter
+- added "name" attribute of type ObjectName and cardinality [0..*]
+Step to Parameter
+- removed "uses" association
+- added "receives" association with cardinality [0..*] on both ends and definition "The Step uses Parameter as an input."
+- added "produces" association with cardinality [0..*] on both ends and definition "The Step creates Parameter as an output."
+Diagrams
+- added "Process-Core", "Process-Step" and "Value and Conceptual Domains" diagrams
+
 Changes 2023-04-12
 ComponentPosition
 - added attribute identifier
