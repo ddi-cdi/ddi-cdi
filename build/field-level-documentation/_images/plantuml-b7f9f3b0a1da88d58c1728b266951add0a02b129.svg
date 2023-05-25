@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="605.7px" preserveAspectRatio="none" style="width:637px;height:605px;background:#FFFFFF;" version="1.1" viewBox="0 0 637 605" width="637.2px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="456.3" x="84.15" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="447.3" x="88.65" y="27.6855">UML Diagram: Class InstanceVariableMap in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="310.5" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[c87628a3227e99184f07098d1174ba73]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable--><a href="../DDICDILibrary/Classes/Conceptual/InstanceVariable.html#super-class-hierarchy-generalization" target="_top" title=" ― InstanceVariable:&#10;Use of a represented variable within a data set." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/InstanceVariable.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― InstanceVariable:&#10;Use of a represented variable within a data set." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable"><rect codeLine="59" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="303.3"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="46.35" y="317.1428">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="94.5" x="26.55" y="332.2002">InstanceVariable</text></g></a><!--MD5=[a48ab47bcba7568d9082939417f9cbdf]
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation--><a href="../DDICDILibrary/Classes/FormatDescription/RecordRelation.html#super-class-hierarchy-generalization" target="_top" title=" ― RecordRelation:&#10;Relationships among record types within and between logical records." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/FormatDescription/RecordRelation.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― RecordRelation:&#10;Relationships among record types within and between logical records." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation"><rect codeLine="60" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="296.1" y="303.3"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="82.8" x="322.2" y="317.1428">FormatDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="88.2" x="319.5" y="332.2002">RecordRelation</text></g></a><!--MD5=[3be6b965db101685ffe285f22e57fccc]
+class DDICDIModels::DesignPatterns::CollectionsPattern::Map--><a href="../DesignPatterns/CollectionsPattern/Map.html#super-class-hierarchy-generalization" target="_top" title=" ― Map:&#10;Provides a basic pattern for a comparison map which identifies source and target members and details about their match. Source and target were retained as in describing differences and commonalities the direction of the comparison may be important." xlink:actuate="onRequest" xlink:href="../DesignPatterns/CollectionsPattern/Map.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Map:&#10;Provides a basic pattern for a comparison map which identifies source and target members and details about their match. Source and target were retained as in describing differences and commonalities the direction of the comparison may be important." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::CollectionsPattern::Map"><rect codeLine="65" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::CollectionsPattern::Map" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="496.8" y="524.7"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="83.7" x="522.45" y="538.5428">CollectionsPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="25.2" x="551.7" y="553.6002">Map</text></g></a><!--MD5=[a0bd27d1d4ca8f2e2cb772f0157fc399]
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap--><g id="elem_DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap"><rect codeLine="46" fill="#FFD700" height="106.7625" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="262.8" x="168.3" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="82.8" x="258.3" y="137.5928">FormatDescription::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="118.8" x="240.3" y="152.6502">InstanceVariableMap</text><line style="stroke:#404040;stroke-width:0.45;" x1="169.2" x2="430.2" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/Enumerations/ComparisonOperator.html#diagram" target="_top" title=" ― ComparisonOperator:&#10;Defines the relationship between values in key/value pair." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/Enumerations/ComparisonOperator.html#diagram" xlink:show="new" xlink:title=" ― ComparisonOperator:&#10;Defines the relationship between values in key/value pair." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="72.9" x="173.7" y="176.5986">comparison :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="119.7" x="250.2" y="176.5986">ComparisonOperator</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/CorrespondenceDefinition.html#diagram" target="_top" title=" ― CorrespondenceDefinition:&#10;Describes the commonalities and differences between two members using a textual description of both commonalities and differences plus an optional coding of the type of commonality." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/CorrespondenceDefinition.html#diagram" xlink:show="new" xlink:title=" ― CorrespondenceDefinition:&#10;Describes the commonalities and differences between two members using a textual description of both commonalities and differences plus an optional coding of the type of commonality." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="99.9" x="173.7" y="192.4471">correspondence :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="148.5" x="277.2" y="192.4471">CorrespondenceDefinition</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="173.7" y="208.2955">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="233.1" y="208.2955">Identifier</text></a><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="93.6" x="173.7" y="224.1439">setValue : String</text></g><!--MD5=[27a7f688aada7d6c64b5e894b90c67b6]
+link DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap to DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable--><g id="link_DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap_DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable"><a href="" target="_top" title=" ― hasSource:&#10;The source instance variable for the relationship." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― hasSource:&#10;The source instance variable for the relationship." xlink:type="simple"><path codeLine="73" d="M168.696,230.877 C153.72,239.121 139.131,248.274 126,258.3 C111.078,269.685 97.551,286.038 88.011,299.106 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="85.176,303.048,92.8358,298.5873,87.8098,299.3993,86.9978,294.3733,85.176,303.048" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="55.8" x="126.9" y="271.3456">hasSource</text></a></g><!--MD5=[27a7f688aada7d6c64b5e894b90c67b6]
+link DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap to DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable--><g id="link_DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap_DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable"><a href="" target="_top" title=" ― hasTarget:&#10;Target instance variables if a directional relation is used." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― hasTarget:&#10;Target instance variables if a directional relation is used." xlink:type="simple"><path codeLine="74" d="M245.223,231.003 C227.619,246.321 207.405,262.215 187.2,274.5 C169.65,285.165 149.184,294.327 130.5,301.59 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable-1" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="126.297,303.21,135.1485,303.6805,130.5004,301.6032,132.5776,296.9551,126.297,303.21" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="51.3" x="212.4" y="271.3456">hasTarget</text></a></g><!--MD5=[a213885ec48320d5ddf2f9b22fd5cdd3]
+reverse link DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap to DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation--><g id="link_DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap_DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="75" d="M325.377,235.35 C336.312,259.686 348.273,286.299 355.851,303.156 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap-backto-DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="323.487,231.147,323.5153,240.0109,325.3278,235.2533,330.0854,237.0657,323.487,231.147" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="343.8" y="271.3456">has</text></a></g><!--MD5=[468cadc9870be85cfe7f1633bb34643f]
+link DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap to DDICDIModels::DesignPatterns::CollectionsPattern::Map--><g id="link_DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap_DDICDIModels::DesignPatterns::CollectionsPattern::Map"><path codeLine="79" d="M431.217,199.017 C497.628,217.818 564.3,253.386 564.3,320.4 C564.3,320.4 564.3,320.4 564.3,467.55 C564.3,485.154 564.3,505.107 564.3,519.894 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap-to-DDICDIModels::DesignPatterns::CollectionsPattern::Map" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="564.3,524.691,567.9,516.591,564.3,520.191,560.7,516.591,564.3,524.691" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="565.2" y="409.0456">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="369" x="127.8" y="565.3688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="310.95" y="574.7115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="310.95" y="586.0318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="369" x="127.8" y="597.3521">DDI Cross Domain Integration (DDI-CDI)   1.0 - FormatDescription::InstanceVariableMap</text><!--MD5=[424fc8f7875613e0b40c5e8c3dec1f92]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class InstanceVariableMap in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - FormatDescription::InstanceVariableMap
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap as "<size:10>FormatDescription::\n<color:black>InstanceVariableMap" #FFD700 {
+  comparison : <color:blue>ComparisonOperator   	  [[[../DDICDILibrary/DataTypes/Enumerations/ComparisonOperator.html#diagram{ <U+2015> ComparisonOperator:\nDefines the relationship between values in key/value pair.}]]]
+  correspondence : <color:blue>CorrespondenceDefinition   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CorrespondenceDefinition.html#diagram{ <U+2015> CorrespondenceDefinition:\nDescribes the commonalities and differences between two members using a textual description of both commonalities and differences plus an optional coding of the type of commonality.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  setValue : String
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable as "<size:10>Conceptual::\n<color:blue>InstanceVariable" [[../DDICDILibrary/Classes/Conceptual/InstanceVariable.html#super-class-hierarchy-generalization{ <U+2015> InstanceVariable:\nUse of a represented variable within a data set.}]]
+  class DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation as "<size:10>FormatDescription::\n<color:blue>RecordRelation" [[../DDICDILibrary/Classes/FormatDescription/RecordRelation.html#super-class-hierarchy-generalization{ <U+2015> RecordRelation:\nRelationships among record types within and between logical records.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Map as "<size:10>CollectionsPattern::\n<color:blue>Map" [[../DesignPatterns/CollectionsPattern/Map.html#super-class-hierarchy-generalization{ <U+2015> Map:\nProvides a basic pattern for a comparison map which identifies source and target members and details about their match. Source and target were retained as in describing differences and commonalities the direction of the comparison may be important.}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable [[{ <U+2015> hasSource:\nThe source instance variable for the relationship.}]] : hasSource
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable [[{ <U+2015> hasTarget:\nTarget instance variables if a directional relation is used.}]] : hasTarget
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap <-[#grey]- DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation [[{ <U+2015> has:\n}]] : has
+
+
+' Abstractions
+  DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap .....> DDICDIModels::DesignPatterns::CollectionsPattern::Map : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class InstanceVariableMap in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - FormatDescription::InstanceVariableMap
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap as "<size:10>FormatDescription::\n<color:black>InstanceVariableMap" #FFD700 {
+  comparison : <color:blue>ComparisonOperator   	  [[[../DDICDILibrary/DataTypes/Enumerations/ComparisonOperator.html#diagram{ <U+2015> ComparisonOperator:\nDefines the relationship between values in key/value pair.}]]]
+  correspondence : <color:blue>CorrespondenceDefinition   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CorrespondenceDefinition.html#diagram{ <U+2015> CorrespondenceDefinition:\nDescribes the commonalities and differences between two members using a textual description of both commonalities and differences plus an optional coding of the type of commonality.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  setValue : String
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable as "<size:10>Conceptual::\n<color:blue>InstanceVariable" [[../DDICDILibrary/Classes/Conceptual/InstanceVariable.html#super-class-hierarchy-generalization{ <U+2015> InstanceVariable:\nUse of a represented variable within a data set.}]]
+  class DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation as "<size:10>FormatDescription::\n<color:blue>RecordRelation" [[../DDICDILibrary/Classes/FormatDescription/RecordRelation.html#super-class-hierarchy-generalization{ <U+2015> RecordRelation:\nRelationships among record types within and between logical records.}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Map as "<size:10>CollectionsPattern::\n<color:blue>Map" [[../DesignPatterns/CollectionsPattern/Map.html#super-class-hierarchy-generalization{ <U+2015> Map:\nProvides a basic pattern for a comparison map which identifies source and target members and details about their match. Source and target were retained as in describing differences and commonalities the direction of the comparison may be important.}]]
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable [[{ <U+2015> hasSource:\nThe source instance variable for the relationship.}]] : hasSource
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable [[{ <U+2015> hasTarget:\nTarget instance variables if a directional relation is used.}]] : hasTarget
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap <-[#grey]- DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation [[{ <U+2015> has:\n}]] : has
+
+
+  DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap .....> DDICDIModels::DesignPatterns::CollectionsPattern::Map : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

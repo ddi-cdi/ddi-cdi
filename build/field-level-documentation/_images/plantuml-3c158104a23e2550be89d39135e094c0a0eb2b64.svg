@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="478.8px" preserveAspectRatio="none" style="width:345px;height:478px;background:#FFFFFF;" version="1.1" viewBox="0 0 345 478" width="345.6px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="329.4" x="4.5" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="320.4" x="9" y="27.6855">UML Diagram: Class Agent in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="167.4" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="31.05" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="36.45" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="36.45" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="36.45" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[a0438961881a4fc606840d398cef942c]
+entity ##3--><!--MD5=[7639129a7208b5720b5c8dbdaf72c8f5]
+entity ##5--><!--MD5=[708f4575c20e1f7b228db1d78cfc54f1]
+class DDICDIModels::Context::PROV::Agent--><a href="../Context/PROV/Agent.html#super-class-hierarchy-generalization" target="_top" title=" ― Agent:&#10;Something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. (See the W3C PROV-O ontology, https://www.w3.org/TR/prov-dm/#term-agent)" xlink:actuate="onRequest" xlink:href="../Context/PROV/Agent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Agent:&#10;Something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. (See the W3C PROV-O ontology, https://www.w3.org/TR/prov-dm/#term-agent)" xlink:type="simple"><g id="elem_DDICDIModels::Context::PROV::Agent"><rect codeLine="56" fill="#F1F1F1" height="36.1688" id="DDICDIModels::Context::PROV::Agent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="108.45" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="31.5" x="160.2" y="137.5928">PROV::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="33.3" x="159.3" y="152.6502">Agent</text></g></a><!--MD5=[f3615c1ebe64c201d1b666e7dcd79c89]
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent--><a href="../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization" target="_top" title=" ― Agent:&#10;Actor that performs a role in relation to a process or product." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Agent:&#10;Actor that performs a role in relation to a process or product." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Agents::Agent"><rect codeLine="60" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="108.45" y="397.35"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="34.2" x="158.85" y="411.1928">Agents::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="33.3" x="159.3" y="426.2502">Agent</text></g></a><!--MD5=[169d8b9f926dfdf01db9e037f0c6b4ca]
+reverse link DDICDIModels::Context::PROV::Agent to DDICDIModels::DDICDILibrary::Classes::Agents::Agent--><g id="link_DDICDIModels::Context::PROV::Agent_DDICDIModels::DDICDILibrary::Classes::Agents::Agent"><path codeLine="68" d="M175.95,164.61 C175.95,178.767 175.95,197.568 175.95,214.2 C175.95,214.2 175.95,214.2 175.95,342 C175.95,360.864 175.95,382.5 175.95,397.179 " fill="none" id="DDICDIModels::Context::PROV::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Agents::Agent" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="175.95,160.002,172.35,168.102,175.95,164.502,179.55,168.102,175.95,160.002" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="41.4" x="176.85" y="283.4956">«Trace»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="252" x="43.2" y="438.0188"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="167.85" y="447.3615"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="167.85" y="458.6818"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="252" x="43.2" y="470.0021">DDI Cross Domain Integration (DDI-CDI)   1.0 - PROV::Agent</text><!--MD5=[2378a4ff77e63e736e0ff5d895850e1f]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Agent in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - PROV::Agent
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::Context::PROV::Agent as "<size:10>PROV::\n<color:black>Agent" #FFD700 {
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  class DDICDIModels::Context::PROV::Agent as "<size:10>PROV::\n<color:blue>Agent" [[../Context/PROV/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nSomething that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. (See the W3C PROV-O ontology, https://www.w3.org/TR/prov-dm/#term-agent)}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10>Agents::\n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]]
+
+
+
+' Associations
+
+
+' Abstractions
+  DDICDIModels::Context::PROV::Agent <..... DDICDIModels::DDICDILibrary::Classes::Agents::Agent : <U+00AB>Trace<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Agent in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - PROV::Agent
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::Context::PROV::Agent as "<size:10>PROV::\n<color:black>Agent" #FFD700 {
+}
+
+together {
+}
+
+together {
+  class DDICDIModels::Context::PROV::Agent as "<size:10>PROV::\n<color:blue>Agent" [[../Context/PROV/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nSomething that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. (See the W3C PROV-O ontology, https://www.w3.org/TR/prov-dm/#term-agent)}]]
+}
+
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10>Agents::\n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]]
+
+
+
+
+
+  DDICDIModels::Context::PROV::Agent <..... DDICDIModels::DDICDILibrary::Classes::Agents::Agent : <U+00AB>Trace<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

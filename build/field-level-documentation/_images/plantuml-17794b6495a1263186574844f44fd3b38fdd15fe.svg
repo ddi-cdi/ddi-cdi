@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="652.5px" preserveAspectRatio="none" style="width:687px;height:652px;background:#FFFFFF;" version="1.1" viewBox="0 0 687 652" width="687.6px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="428.4" x="123.3" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="419.4" x="127.8" y="27.6855">UML Diagram: Class VariableStructure in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="335.7" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[8ad51cb951b15ecc2fdc30f3c95f4bf7]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship--><a href="../DDICDILibrary/Classes/Conceptual/VariableRelationship.html#super-class-hierarchy-generalization" target="_top" title=" ― VariableRelationship:&#10;Relationship between any variables in the variable cascade (conceptual, represented, instance), based on an ordered relation." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/VariableRelationship.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― VariableRelationship:&#10;Relationship between any variables in the variable cascade (conceptual, represented, instance), based on an ordered relation." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship"><rect codeLine="66" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="350.1"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="46.35" y="363.9428">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="117" x="15.3" y="379.0002">VariableRelationship</text></g></a><!--MD5=[5b1150c1f4d15180aebef2c7c3af2429]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection--><a href="../DDICDILibrary/Classes/Conceptual/VariableCollection.html#super-class-hierarchy-generalization" target="_top" title=" ― VariableCollection:&#10;Group of any type of variable within the variable cascade (conceptual, represented, instance)." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/VariableCollection.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― VariableCollection:&#10;Group of any type of variable within the variable cascade (conceptual, represented, instance)." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection"><rect codeLine="67" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="325.8" y="350.1"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="365.85" y="363.9428">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="102.6" x="342" y="379.0002">VariableCollection</text></g></a><!--MD5=[e8ea17671d2b816e5709704adf065cd9]
+class DDICDIModels::DesignPatterns::CollectionsPattern::Structure--><a href="../DesignPatterns/CollectionsPattern/Structure.html#super-class-hierarchy-generalization" target="_top" title=" ― Structure:&#10;Organized set of relationships between members in a collection. These relationships can be characterized mathematically in terms of reflexivity, symmetry and transitivity, or informally in terms of the collection's topology, e.g. network, tree, etc. In both cases it can also be defined either on all ..." xlink:actuate="onRequest" xlink:href="../DesignPatterns/CollectionsPattern/Structure.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Structure:&#10;Organized set of relationships between members in a collection. These relationships can be characterized mathematically in terms of reflexivity, symmetry and transitivity, or informally in terms of the collection's topology, e.g. network, tree, etc. In both cases it can also be defined either on all ..." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::CollectionsPattern::Structure"><rect codeLine="72" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::CollectionsPattern::Structure" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="547.2" y="571.5"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="83.7" x="572.85" y="585.3428">CollectionsPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="52.2" x="588.6" y="600.4002">Structure</text></g></a><!--MD5=[251572e13014b4534623dff9348cc719]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure"><rect codeLine="46" fill="#FFD700" height="154.3078" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="230.4" x="278.1" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="365.85" y="137.5928">Conceptual::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="99" x="343.8" y="152.6502">VariableStructure</text><line style="stroke:#404040;stroke-width:0.45;" x1="279" x2="507.6" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="283.5" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="342.9" y="176.5986">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/OrganizationName.html#diagram" target="_top" title=" ― OrganizationName:&#10;Names by which the organization is known. Use the attribute isFormal with a value of True to designate the legal or formal name of the organization. Names may be typed with typeOfOrganizationName to indicate their appropriate usage." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/OrganizationName.html#diagram" xlink:show="new" xlink:title=" ― OrganizationName:&#10;Names by which the organization is known. Use the attribute isFormal with a value of True to designate the legal or formal name of the organization. Names may be typed with typeOfOrganizationName to indicate their appropriate usage." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="38.7" x="283.5" y="192.4471">name :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="104.4" x="325.8" y="192.4471">OrganizationName</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="54" x="283.5" y="208.2955">purpose :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="341.1" y="208.2955">InternationalString</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="63.9" x="283.5" y="224.1439">semantics :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="351" y="224.1439">ControlledVocabularyEntry</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.html#diagram" target="_top" title=" ― StructureSpecification:&#10;The mathematical properties of the structure." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.html#diagram" xlink:show="new" xlink:title=" ― StructureSpecification:&#10;The mathematical properties of the structure." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="77.4" x="283.5" y="239.9924">specification :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="124.2" x="364.5" y="239.9924">StructureSpecification</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="283.5" y="255.8408">topology :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="342.9" y="255.8408">ControlledVocabularyEntry</text></a><a href="../DDICDILibrary/DataTypes/Enumerations/StructureExtent.html#diagram" target="_top" title=" ― StructureExtent:&#10;Type of relation in terms of totality with respect to an associated collection. The totality type is given by the controlled vocabulary {total, partial}." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/Enumerations/StructureExtent.html#diagram" xlink:show="new" xlink:title=" ― StructureExtent:&#10;Type of relation in terms of totality with respect to an associated collection. The totality type is given by the controlled vocabulary {total, partial}." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="44.1" x="283.5" y="271.6893">totality :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="87.3" x="331.2" y="271.6893">StructureExtent</text></a></g><!--MD5=[ddbed842a07619babc48ca0e3b885851]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure to DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure_DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="80" d="M268.3684,266.3588 C268.3684,266.3588 156.114,324.54 117.468,344.565 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure-DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="106.866,350.064,115.7139,349.531,110.8608,347.9924,112.3994,343.1393,106.866,350.064" style="stroke:#808080;stroke-width:1.35;"/><line style="stroke:#808080;stroke-width:1.35;" x1="110.8608" x2="117.2565" y1="347.9924" y2="344.682"/><polygon fill="#808080" points="277.956,261.387,271.505,260.677,268.3684,266.3588,274.8195,267.0687,277.956,261.387" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="187.2" y="318.1456">has</text></a></g><!--MD5=[85f4e5a997729359bbd26a3a59dc4cbf]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure to DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure_DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection"><a href="" target="_top" title=" ― structures:&#10;Variable structure structures zero to one variable collection." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― structures:&#10;Variable structure structures zero to one variable collection." xlink:type="simple"><path codeLine="81" d="M393.3,277.857 C393.3,302.535 393.3,327.987 393.3,345.384 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="393.3,350.064,396.9,341.964,393.3,345.564,389.7,341.964,393.3,350.064" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="52.2" x="394.2" y="318.1456">structures</text></a></g><!--MD5=[d7b90a04b8083913cb102765e0267865]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure to DDICDIModels::DesignPatterns::CollectionsPattern::Structure--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure_DDICDIModels::DesignPatterns::CollectionsPattern::Structure"><path codeLine="85" d="M508.545,240.489 C562.338,266.643 614.7,307.44 614.7,367.2 C614.7,367.2 614.7,367.2 614.7,514.35 C614.7,531.954 614.7,551.907 614.7,566.694 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure-to-DDICDIModels::DesignPatterns::CollectionsPattern::Structure" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="614.7,571.491,618.3,563.391,614.7,566.991,611.1,563.391,614.7,571.491" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="615.6" y="455.8456">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="324.9" x="175.05" y="612.1688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="336.15" y="621.5115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="336.15" y="632.8318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="324.9" x="175.05" y="644.1521">DDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::VariableStructure</text><!--MD5=[7b7438029e7c137d7447ffe3bea391ed]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class VariableStructure in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::VariableStructure
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure as "<size:10>Conceptual::\n<color:black>VariableStructure" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  name : <color:blue>OrganizationName   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/OrganizationName.html#diagram{ <U+2015> OrganizationName:\nNames by which the organization is known. Use the attribute isFormal with a value of True to designate the legal or formal name of the organization. Names may be typed with typeOfOrganizationName to indicate their appropriate usage.}]]]
+  purpose : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  semantics : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  specification : <color:blue>StructureSpecification   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.html#diagram{ <U+2015> StructureSpecification:\nThe mathematical properties of the structure.}]]]
+  topology : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  totality : <color:blue>StructureExtent   	  [[[../DDICDILibrary/DataTypes/Enumerations/StructureExtent.html#diagram{ <U+2015> StructureExtent:\nType of relation in terms of totality with respect to an associated collection. The totality type is given by the controlled vocabulary <U+007B>total, partial<U+007D>.}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship as "<size:10>Conceptual::\n<color:blue>VariableRelationship" [[../DDICDILibrary/Classes/Conceptual/VariableRelationship.html#super-class-hierarchy-generalization{ <U+2015> VariableRelationship:\nRelationship between any variables in the variable cascade (conceptual, represented, instance), based on an ordered relation.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection as "<size:10>Conceptual::\n<color:blue>VariableCollection" [[../DDICDILibrary/Classes/Conceptual/VariableCollection.html#super-class-hierarchy-generalization{ <U+2015> VariableCollection:\nGroup of any type of variable within the variable cascade (conceptual, represented, instance).}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Structure as "<size:10>CollectionsPattern::\n<color:blue>Structure" [[../DesignPatterns/CollectionsPattern/Structure.html#super-class-hierarchy-generalization{ <U+2015> Structure:\nOrganized set of relationships between members in a collection. These relationships can be characterized mathematically in terms of reflexivity, symmetry and transitivity, or informally in terms of the collection's topology, e.g. network, tree, etc. In both cases it can also be defined either on all ...}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure *-[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship [[{ <U+2015> has:\n}]] : has
+DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection [[{ <U+2015> structures:\nVariable structure structures zero to one variable collection.}]] : structures
+
+
+' Abstractions
+  DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure .....> DDICDIModels::DesignPatterns::CollectionsPattern::Structure : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class VariableStructure in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::VariableStructure
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure as "<size:10>Conceptual::\n<color:black>VariableStructure" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  name : <color:blue>OrganizationName   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/OrganizationName.html#diagram{ <U+2015> OrganizationName:\nNames by which the organization is known. Use the attribute isFormal with a value of True to designate the legal or formal name of the organization. Names may be typed with typeOfOrganizationName to indicate their appropriate usage.}]]]
+  purpose : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  semantics : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  specification : <color:blue>StructureSpecification   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.html#diagram{ <U+2015> StructureSpecification:\nThe mathematical properties of the structure.}]]]
+  topology : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  totality : <color:blue>StructureExtent   	  [[[../DDICDILibrary/DataTypes/Enumerations/StructureExtent.html#diagram{ <U+2015> StructureExtent:\nType of relation in terms of totality with respect to an associated collection. The totality type is given by the controlled vocabulary <U+007B>total, partial<U+007D>.}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship as "<size:10>Conceptual::\n<color:blue>VariableRelationship" [[../DDICDILibrary/Classes/Conceptual/VariableRelationship.html#super-class-hierarchy-generalization{ <U+2015> VariableRelationship:\nRelationship between any variables in the variable cascade (conceptual, represented, instance), based on an ordered relation.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection as "<size:10>Conceptual::\n<color:blue>VariableCollection" [[../DDICDILibrary/Classes/Conceptual/VariableCollection.html#super-class-hierarchy-generalization{ <U+2015> VariableCollection:\nGroup of any type of variable within the variable cascade (conceptual, represented, instance).}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Structure as "<size:10>CollectionsPattern::\n<color:blue>Structure" [[../DesignPatterns/CollectionsPattern/Structure.html#super-class-hierarchy-generalization{ <U+2015> Structure:\nOrganized set of relationships between members in a collection. These relationships can be characterized mathematically in terms of reflexivity, symmetry and transitivity, or informally in terms of the collection's topology, e.g. network, tree, etc. In both cases it can also be defined either on all ...}]]
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure *-[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship [[{ <U+2015> has:\n}]] : has
+DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection [[{ <U+2015> structures:\nVariable structure structures zero to one variable collection.}]] : structures
+
+
+  DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure .....> DDICDIModels::DesignPatterns::CollectionsPattern::Structure : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

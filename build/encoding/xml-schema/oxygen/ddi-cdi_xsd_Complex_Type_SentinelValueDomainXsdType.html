@@ -1,0 +1,1531 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component platformType</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        var propertiesBoxes= new Array('properties_SentinelValueDomainXsdType_platformType', 
+				'properties_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target', 
+				'properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass', 
+				'properties_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target', 
+				'properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass', 
+				'properties_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target', 
+				'properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass');
+var facetsBoxes= new Array('facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass', 
+				'facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass', 
+				'facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass');
+var usedByBoxes= new Array('usedBy_SentinelValueDomainXsdType');
+var sourceBoxes= new Array('source_SentinelValueDomainXsdType_platformType', 
+				'source_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target', 
+				'source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass', 
+				'source_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target', 
+				'source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass', 
+				'source_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target', 
+				'source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass', 
+				'source_SentinelValueDomainXsdType');
+var instanceBoxes= new Array('instance_SentinelValueDomainXsdType_platformType', 
+				'instance_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target', 
+				'instance_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target', 
+				'instance_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target');
+var diagramBoxes= new Array('diagram_SentinelValueDomainXsdType_platformType', 
+				'diagram_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target', 
+				'diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass', 
+				'diagram_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target', 
+				'diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass', 
+				'diagram_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target', 
+				'diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass', 
+				'diagram_SentinelValueDomainXsdType');
+var annotationBoxes= new Array('annotations_SentinelValueDomainXsdType_platformType', 
+				'annotations_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target', 
+				'annotations_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target', 
+				'annotations_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target', 
+				'annotations_SentinelValueDomainXsdType');
+var modelBoxes= new Array('model_SentinelValueDomainXsdType_platformType', 
+				'model_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target', 
+				'model_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target', 
+				'model_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target', 
+				'model_SentinelValueDomainXsdType');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, facetsBoxes);" class="control" /></span><span class="globalControlName">Facets </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="SentinelValueDomainXsdType_platformType"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b> / platformType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SentinelValueDomainXsdType_platformType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SentinelValueDomainXsdType_platformType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SentinelValueDomainXsdType_platformType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The type of platform under which sentinel codes will be used. Statistical software platforms use different sets of codes to indicate missing values. The external controlled vocabulary should list platform types and a description of the allowed missing value types. A sample list would be: </span><span class="tI">
+</span><span class="tT">        </span><span class="tI">
+</span><span class="tT">- BlankString - A Blank string indicates missing. Comparison is based on lexical order.  </span><span class="tI">
+</span><span class="tT">- EmptyString - An empty string indicates missing. Use in comparisons returns missing.   </span><span class="tI">
+</span><span class="tT">- Rstyle - Codes drawn from  NA and the IEEE 754 values of NaN  -Inf   +Inf.   Comparisons return NA.   </span><span class="tI">
+</span><span class="tT">- SASNumeric - codes drawn from . ._ .A .B .C .D .E .F .G .H .I .J .K .L .M .N .O .P .Q .R .S .T .U .V .W .X .Y .Z    Sentinel code treated as less than any substantive value   </span><span class="tI">
+</span><span class="tT">- SPSSstyle - System missing (a dot) a set of individual values drawn from the same datatype as the SubstantiveValueDomain, and a range of values  drawn from the same datatype as the SubstantiveValueDomain. Comparisons return system missing. Some functions substitute with valid values (e.g. SUM replaces missing values with 0).  </span><span class="tI">
+</span><span class="tT">- StataNumeric - codes drawn from . ._ .A .B .C .D .E .F .G .H .I .J .K .L .M .N .O .P .Q .R .S .T .U .V .W .X .Y .Z  Sentinel code treated as greater than any substantive value  - Unrestricted - No restrictions on codes for sentinel values. Use in comparisons is indeterminate.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SentinelValueDomainXsdType_platformType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SentinelValueDomainXsdType_platformType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SentinelValueDomainXsdType_platformType" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_platformType_1.jpeg" usemap="#ddi-cdi_xsd_Element_platformType_1" /><map name="ddi-cdi_xsd_Element_platformType_1" id="ddi-cdi_xsd_Element_platformType_1"><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_entryReference" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryReference" coords="389,40,546,84" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_entryValue" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryValue" coords="389,139,494,183" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_name" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_name" coords="389,252,494,296" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_valueForOther" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_valueForOther" coords="389,337,494,381" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_vocabulary" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_vocabulary" coords="389,436,546,480" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType" coords="286,3,509,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ControlledVocabularyEntryXsdType')">ControlledVocabularyEntryXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SentinelValueDomainXsdType_platformType" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SentinelValueDomainXsdType_platformType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SentinelValueDomainXsdType_platformType" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_SentinelValueDomainXsdType_platformType" type="image" src="img/btM.gif" value="-" onclick="switchState('model_SentinelValueDomainXsdType_platformType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_SentinelValueDomainXsdType_platformType" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component entryReference*')">entryReference*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryValue" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component entryValue*')">entryValue*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name{0,1}')">name{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_valueForOther" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component valueForOther{0,1}')">valueForOther{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_vocabulary" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component vocabulary{0,1}')">vocabulary{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component entryReference')">entryReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryValue" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component entryValue')">entryValue</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name')">name</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_valueForOther" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component valueForOther')">valueForOther</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_vocabulary" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component vocabulary')">vocabulary</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_SentinelValueDomainXsdType_platformType" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_SentinelValueDomainXsdType_platformType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_SentinelValueDomainXsdType_platformType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;platformType</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;entryReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/entryReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;entryValue</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/entryValue&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;valueForOther</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/valueForOther&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;vocabulary</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/vocabulary&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/platformType&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SentinelValueDomainXsdType_platformType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SentinelValueDomainXsdType_platformType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SentinelValueDomainXsdType_platformType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"platformType"</span><span class="tAN"> type=</span><span class="tAV">"ControlledVocabularyEntryXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain-platformType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The type of platform under which sentinel codes will be used. Statistical software platforms use different sets of codes to indicate missing values. The external controlled vocabulary should list platform types and a description of the allowed missing value types. A sample list would be: - BlankString - A Blank string indicates missing. Comparison is based on lexical order. - EmptyString - An empty string indicates missing. Use in comparisons returns missing. - Rstyle - Codes drawn from NA and the IEEE 754 values of NaN -Inf +Inf. Comparisons return NA. - SASNumeric - codes drawn from . ._ .A .B .C .D .E .F .G .H .I .J .K .L .M .N .O .P .Q .R .S .T .U .V .W .X .Y .Z Sentinel code treated as less than any substantive value - SPSSstyle - System missing (a dot) a set of individual values drawn from the same datatype as the SubstantiveValueDomain, and a range of values drawn from the same datatype as the SubstantiveValueDomain. Comparisons return system missing. Some functions substitute with valid values (e.g. SUM replaces missing values with 0). - StataNumeric - codes drawn from . ._ .A .B .C .D .E .F .G .H .I .J .K .L .M .N .O .P .Q .R .S .T .U .V .W .X .Y .Z Sentinel code treated as greater than any substantive value - Unrestricted - No restrictions on codes for sentinel values. Use in comparisons is indeterminate.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b> / SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Corresponding conceptual definition given by a sentinel conceptual domain.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target.jpeg" usemap="#ddi-cdi_xsd_Element_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" /><map name="ddi-cdi_xsd_Element_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" id="ddi-cdi_xsd_Element_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target"><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_ddiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" coords="556,42,797,86" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_deepLink" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" coords="556,127,702,171" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_description" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" coords="556,226,661,270" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_location" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" coords="556,311,748,355" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_nonDdiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" coords="556,396,737,440" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_semantic" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" coords="556,495,791,539" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_uri" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" coords="556,580,668,624" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_validType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" coords="556,665,661,709" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" coords="453,5,683,27" /><area alt="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.tmp#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" coords="542,830,740,874" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference{0,1}')">ddiReference{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink{0,1}')">deepLink{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description{0,1}')">description{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location{0,1}')">location{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference*')">nonDdiReference*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic{0,1}')">semantic{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri{0,1}')">uri{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType*')">validType*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass*')">typeOfClass*</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference')">ddiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink')">deepLink</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description')">description</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location')">location</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference')">nonDdiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic')">semantic</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass')">typeOfClass</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri')">uri</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType')">validType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ddiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/ddiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;deepLink</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/deepLink&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;description</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;location</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/location&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;nonDdiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/nonDdiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;semantic</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/semantic&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;validType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/validType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfClass</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/typeOfClass&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Corresponding conceptual definition given by a sentinel conceptual domain.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Source"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"SentinelConceptualDomain"</span><span class="tEl">/&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b> / <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target')">SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target</a></b> / typeOfClass</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_typeOfClass_225.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:NMTOKEN</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>SentinelConceptualDomain</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target_typeOfClass" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Source"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"SentinelConceptualDomain"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b> / SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Any subtype of an enumeration domain enumerating the set of valid values.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target.jpeg" usemap="#ddi-cdi_xsd_Element_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" /><map name="ddi-cdi_xsd_Element_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" id="ddi-cdi_xsd_Element_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target"><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_ddiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" coords="511,42,752,86" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_deepLink" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" coords="511,127,657,171" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_description" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" coords="511,226,616,270" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_location" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" coords="511,311,703,355" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_nonDdiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" coords="511,396,692,440" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_semantic" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" coords="511,495,746,539" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_uri" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" coords="511,580,623,624" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_validType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" coords="511,665,616,709" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" coords="408,5,638,27" /><area alt="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.tmp#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" coords="497,830,695,874" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference{0,1}')">ddiReference{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink{0,1}')">deepLink{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description{0,1}')">description{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location{0,1}')">location{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference*')">nonDdiReference*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic{0,1}')">semantic{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri{0,1}')">uri{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType*')">validType*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass*')">typeOfClass*</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference')">ddiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink')">deepLink</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description')">description</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location')">location</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference')">nonDdiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic')">semantic</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass')">typeOfClass</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri')">uri</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType')">validType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ddiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/ddiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;deepLink</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/deepLink&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;description</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;location</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/location&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;nonDdiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/nonDdiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;semantic</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/semantic&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;validType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/validType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfClass</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/typeOfClass&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Any subtype of an enumeration domain enumerating the set of valid values.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesValuesFrom_EnumerationDomain-Source"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"CodeList"</span><span class="tEl">/&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"EnumerationDomain"</span><span class="tEl">/&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"StatisticalClassification"</span><span class="tEl">/&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b> / <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target')">SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target</a></b> / typeOfClass</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_typeOfClass_226.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:NMTOKEN</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>CodeList</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>EnumerationDomain</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>StatisticalClassification</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target_typeOfClass" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesValuesFrom_EnumerationDomain-Source"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"CodeList"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"EnumerationDomain"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"StatisticalClassification"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b> / SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">A formal description of the set of valid values - for described value domains.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target.jpeg" usemap="#ddi-cdi_xsd_Element_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" /><map name="ddi-cdi_xsd_Element_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" id="ddi-cdi_xsd_Element_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target"><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_ddiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" coords="545,42,786,86" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_deepLink" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" coords="545,127,691,171" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_description" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" coords="545,226,650,270" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_location" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" coords="545,311,737,355" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_nonDdiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" coords="545,396,726,440" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_semantic" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" coords="545,495,780,539" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_uri" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" coords="545,580,657,624" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_validType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" coords="545,665,650,709" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" coords="442,5,672,27" /><area alt="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.tmp#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" coords="531,830,729,874" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference{0,1}')">ddiReference{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink{0,1}')">deepLink{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description{0,1}')">description{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location{0,1}')">location{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference*')">nonDdiReference*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic{0,1}')">semantic{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri{0,1}')">uri{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType*')">validType*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass*')">typeOfClass*</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference')">ddiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink')">deepLink</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description')">description</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location')">location</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference')">nonDdiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic')">semantic</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass')">typeOfClass</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri')">uri</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType')">validType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ddiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/ddiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;deepLink</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/deepLink&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;description</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;location</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/location&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;nonDdiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/nonDdiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;semantic</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/semantic&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;validType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/validType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfClass</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/typeOfClass&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A formal description of the set of valid values - for described value domains.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Source"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"ValueAndConceptDescription"</span><span class="tEl">/&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b> / <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target')">SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target</a></b> / typeOfClass</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_typeOfClass_227.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:NMTOKEN</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>ValueAndConceptDescription</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SentinelValueDomainXsdType_SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target_typeOfClass" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Source"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"ValueAndConceptDescription"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SentinelValueDomainXsdType"></a><div class="componentTitle">Complex Type <span class="qname">SentinelValueDomainXsdType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SentinelValueDomainXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SentinelValueDomainXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SentinelValueDomainXsdType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Definition </span><span class="tI">
+</span><span class="tT">============ </span><span class="tI">
+</span><span class="tT">Value domain for a sentinel conceptual domain.   </span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Examples </span><span class="tI">
+</span><span class="tT">========== </span><span class="tI">
+</span><span class="tT">Missing categories expressed as codes: -9, refused; -8, Don't Know; for a numeric variable with values greater than zero.    </span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Explanatory notes </span><span class="tI">
+</span><span class="tT">=================== </span><span class="tI">
+</span><span class="tT">Sentinel values are defined in ISO 11404 as "element of a value space that is not completely consistent with a datatype's properties and characterizing operations...". A common example would be codes for missing values. Sentinel values are used for processing, not to describe subject matter. Typical examples include missing values or invalid entry codes. Sentinel value domains are typically of the enumerated type, but they can be the described type, too. This is not to say that sentinel values carry no information. Data on gender might be enumerated by "0, male" and "1, female". These are the substantive values (see substantive value domain). However, there may be the need to include missing values along with that data, such as "m, missing" and "r, refused". These are sentinel values.  ISO/IEC 11404 - General Purpose Datatypes, defines sentinel values in terms of how that standard defines datatypes. But, the fact that the sentinels don't fit in terms of the calculations and statistics one would perform on the "clean" data is a distinguishing characteristic. In the example above, one would not include missing or refused data in calculating a ratio of females to the total population. Sentinel values may be described rather than enumerated. For instance, there might be a range of values, each representing an out of range value, but there could be too many to enumerate. It is easier to describe the range.  In some software missing values are represented as values not in the datatype of the valid values. R has values of NA, NaN, Inf, and -Inf. SAS and Stata have values displayed as ".", ".A" through ".Z", and "._"  Other software might use values like 999 for missing that would otherwise be the same datatype as valid values but outside the parameters of the domain. In the gender example above: For SPSS the sentinel values might be represented as: 998 = "refused" 999 = "not recorded"  For SAS or Stata the sentinel values might be represented as: .R = "refused" .N = "not recorded"  Sentinel values can also be used for other purposes beyond missing. For a numeric variable "A" might represent a value somewhere in a defined range to prevent disclosure of information about an individual. This might be considered a "semi-missing value". In SAS or Stata for example: .A = "greater than or equal to 100 and less than 1000 ".</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SentinelValueDomainXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SentinelValueDomainXsdType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SentinelValueDomainXsdType" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.jpeg" usemap="#ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType" /><map name="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType" id="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType"><area alt="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.tmp#ValueDomainXsdType_catalogDetails" href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_catalogDetails" coords="353,40,527,84" /><area alt="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.tmp#ValueDomainXsdType_displayLabel" href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_displayLabel" coords="353,139,536,183" /><area alt="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.tmp#ValueDomainXsdType_identifier" href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_identifier" coords="353,238,500,282" /><area alt="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.tmp#ValueDomainXsdType_recommendedDataType" href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_recommendedDataType" coords="353,337,588,381" /><area alt="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.tmp#ValueDomainXsdType" href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType" coords="250,3,492,25" /><area alt="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.tmp#SentinelValueDomainXsdType_platformType" href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_platformType" coords="318,474,553,518" /><area alt="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.tmp#SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" coords="318,573,720,617" /><area alt="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.tmp#SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" coords="318,658,675,702" /><area alt="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.tmp#SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" coords="318,743,709,787" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueDomainXsdType')">ValueDomainXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueDomainXsdType')">ValueDomainXsdType</a></b><ul class="internal">
+                                    <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_SentinelValueDomainXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_SentinelValueDomainXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_SentinelValueDomainXsdType" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="ddi-cdi_xsd_Element_SentinelValueDomain.html#SentinelValueDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain')">SentinelValueDomain</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_SentinelValueDomainXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('model_SentinelValueDomainXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_SentinelValueDomainXsdType" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_catalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component catalogDetails{0,1}')">catalogDetails{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_displayLabel" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component displayLabel*')">displayLabel*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier{0,1}')">identifier{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_recommendedDataType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component recommendedDataType*')">recommendedDataType*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_platformType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component platformType{0,1}')">platformType{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target{0,1}')">SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target{0,1}')">SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target{0,1}')">SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target')">SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target')">SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target')">SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_catalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component catalogDetails')">catalogDetails</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_displayLabel" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component displayLabel')">displayLabel</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier')">identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType_platformType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component platformType')">platformType</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_recommendedDataType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component recommendedDataType')">recommendedDataType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SentinelValueDomainXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SentinelValueDomainXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SentinelValueDomainXsdType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"SentinelValueDomainXsdType"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomainXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Definition ============ Value domain for a sentinel conceptual domain. Examples ========== Missing categories expressed as codes: -9, refused; -8, Don't Know; for a numeric variable with values greater than zero. Explanatory notes =================== Sentinel values are defined in ISO 11404 as "element of a value space that is not completely consistent with a datatype's properties and characterizing operations...". A common example would be codes for missing values. Sentinel values are used for processing, not to describe subject matter. Typical examples include missing values or invalid entry codes. Sentinel value domains are typically of the enumerated type, but they can be the described type, too. This is not to say that sentinel values carry no information. Data on gender might be enumerated by "0, male" and "1, female". These are the substantive values (see substantive value domain). However, there may be the need to include missing values along with that data, such as "m, missing" and "r, refused". These are sentinel values. ISO/IEC 11404 - General Purpose Datatypes, defines sentinel values in terms of how that standard defines datatypes. But, the fact that the sentinels don't fit in terms of the calculations and statistics one would perform on the "clean" data is a distinguishing characteristic. In the example above, one would not include missing or refused data in calculating a ratio of females to the total population. Sentinel values may be described rather than enumerated. For instance, there might be a range of values, each representing an out of range value, but there could be too many to enumerate. It is easier to describe the range. In some software missing values are represented as values not in the datatype of the valid values. R has values of NA, NaN, Inf, and -Inf. SAS and Stata have values displayed as ".", ".A" through ".Z", and "._" Other software might use values like 999 for missing that would otherwise be the same datatype as valid values but outside the parameters of the domain. In the gender example above: For SPSS the sentinel values might be represented as: 998 = "refused" 999 = "not recorded" For SAS or Stata the sentinel values might be represented as: .R = "refused" .N = "not recorded" Sentinel values can also be used for other purposes beyond missing. For a numeric variable "A" might represent a value somewhere in a defined range to prevent disclosure of information about an individual. This might be considered a "semi-missing value". In SAS or Stata for example: .A = "greater than or equal to 100 and less than 1000 ".</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ValueDomainXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"platformType"</span><span class="tAN"> type=</span><span class="tAV">"ControlledVocabularyEntryXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain-platformType"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The type of platform under which sentinel codes will be used. Statistical software platforms use different sets of codes to indicate missing values. The external controlled vocabulary should list platform types and a description of the allowed missing value types. A sample list would be: - BlankString - A Blank string indicates missing. Comparison is based on lexical order. - EmptyString - An empty string indicates missing. Use in comparisons returns missing. - Rstyle - Codes drawn from NA and the IEEE 754 values of NaN -Inf +Inf. Comparisons return NA. - SASNumeric - codes drawn from . ._ .A .B .C .D .E .F .G .H .I .J .K .L .M .N .O .P .Q .R .S .T .U .V .W .X .Y .Z Sentinel code treated as less than any substantive value - SPSSstyle - System missing (a dot) a set of individual values drawn from the same datatype as the SubstantiveValueDomain, and a range of values drawn from the same datatype as the SubstantiveValueDomain. Comparisons return system missing. Some functions substitute with valid values (e.g. SUM replaces missing values with 0). - StataNumeric - codes drawn from . ._ .A .B .C .D .E .F .G .H .I .J .K .L .M .N .O .P .Q .R .S .T .U .V .W .X .Y .Z Sentinel code treated as greater than any substantive value - Unrestricted - No restrictions on codes for sentinel values. Use in comparisons is indeterminate.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Target"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Corresponding conceptual definition given by a sentinel conceptual domain.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain-Source"</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                        </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"SentinelConceptualDomain"</span><span class="tEl">/&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesValuesFrom_EnumerationDomain-Target"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Any subtype of an enumeration domain enumerating the set of valid values.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_takesValuesFrom_EnumerationDomain-Source"</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                        </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"CodeList"</span><span class="tEl">/&gt;</span><span class="tI">
+                        </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"EnumerationDomain"</span><span class="tEl">/&gt;</span><span class="tI">
+                        </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"StatisticalClassification"</span><span class="tEl">/&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Target"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A formal description of the set of valid values - for described value domains.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"SentinelValueDomain_isDescribedBy_ValueAndConceptDescription-Source"</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                        </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"ValueAndConceptDescription"</span><span class="tEl">/&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

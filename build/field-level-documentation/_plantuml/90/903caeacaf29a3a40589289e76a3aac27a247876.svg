@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="647.1px" preserveAspectRatio="none" style="width:947px;height:647px;background:#FFFFFF;" version="1.1" viewBox="0 0 947 647" width="947.7px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="344.7" x="295.2" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="335.7" x="299.7" y="27.6855">UML Diagram: Class Curator in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="465.75" y="44.7205"> </text><rect fill="#FFFFFF" height="56.0813" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="164.7" x="12.6" y="113.2928">- The arrows of the inheritance tree are</text><text fill="#D2691E" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="32.4" x="180" y="113.2928">colored</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="212.4" y="113.2928">.</text><!--MD5=[176626d4bed7481770d2a75e2ecd0210]
+class DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling--><a href="../DDICDILibrary/Classes/Process/RuleBasedScheduling.html#super-class-hierarchy-generalization" target="_top" title=" ― RuleBasedScheduling:&#10;Rule based scheduling performs a fact check on rules from the rule set, testing their condition part against the facts in the research data store. Fact checking may be assisted by a curator who can semantically compare the condition part of each candidate rule with the facts. The fact checker return ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/RuleBasedScheduling.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― RuleBasedScheduling:&#10;Rule based scheduling performs a fact check on rules from the rule set, testing their condition part against the facts in the research data store. Fact checking may be assisted by a curator who can semantically compare the condition part of each candidate rule with the facts. The fact checker return ..." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling"><rect codeLine="53" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="228.6" y="565.3693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="277.2" y="579.2121">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="125.1" x="233.55" y="594.2695">RuleBasedScheduling</text></g></a><!--MD5=[fa26dd5b28bd31e0227766c25574e362]
+entity ##6--><!--MD5=[da34b2a5f0525633fff84df4b1d0d1d2]
+class DDICDIModels::DDICDILibrary::Classes::Process::Curator--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::Curator"><rect codeLine="47" fill="#FFD700" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::Curator" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="228.6" y="457.3693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="277.2" y="471.2121">Process::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="43.2" x="274.5" y="486.2695">Curator</text></g><!--MD5=[f5c866308475522126fc7414820e4923]
+class DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment--><a href="../DDICDILibrary/Classes/Process/ProductionEnvironment.html#super-class-hierarchy-generalization" target="_top" title=" ― ProductionEnvironment:&#10;Production environments consume and produce information objects by way of processing pipelines orchestrated by the processing agent." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/ProductionEnvironment.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ProductionEnvironment:&#10;Production environments consume and produce information objects by way of processing pipelines orchestrated by the processing agent." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment"><rect codeLine="61" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="137.7" x="632.25" y="366.4693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="682.2" y="380.3121">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="132.3" x="634.95" y="395.3695">ProductionEnvironment</text></g></a><!--MD5=[250dc3f1cdf1ef2cc74ebd3b8cfec0b1]
+class DDICDIModels::DDICDILibrary::Classes::Process::Activity--><a href="../DDICDILibrary/Classes/Process/Activity.html#super-class-hierarchy-generalization" target="_top" title=" ― Activity:&#10;An activity is a task described at a conceptual level. It is not parameterized and as such is less reusable. For more logical/physical, fine-grained, reusable description there is a sub-type called step." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/Activity.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Activity:&#10;An activity is a task described at a conceptual level. It is not parameterized and as such is less reusable. For more logical/physical, fine-grained, reusable description there is a sub-type called step." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::Activity"><rect codeLine="62" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::Activity" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="460.8" y="366.4693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="509.4" y="380.3121">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="39.6" x="508.5" y="395.3695">Activity</text></g></a><!--MD5=[86778c92e97b374d9d16badd6f2c91e1]
+class DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic--><a href="../DDICDILibrary/Classes/Process/ControlLogic.html#super-class-hierarchy-generalization" target="_top" title=" ― ControlLogic:&#10;Control logic is a program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may co ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/ControlLogic.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ControlLogic:&#10;Control logic is a program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may co ..." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic"><rect codeLine="63" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="807.3" y="366.4693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="855.9" y="380.3121">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="72" x="838.8" y="395.3695">ControlLogic</text></g></a><!--MD5=[f3615c1ebe64c201d1b666e7dcd79c89]
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent--><a href="../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization" target="_top" title=" ― Agent:&#10;Actor that performs a role in relation to a process or product." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Agent:&#10;Actor that performs a role in relation to a process or product." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Agents::Agent"><rect codeLine="124" fill="#FAFAD2" height="106.7625" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="184.5" x="203.85" y="188.7193"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="34.2" x="279" y="202.5621">Agents::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="33.3" x="279.45" y="217.6195">Agent</text><line style="stroke:#404040;stroke-width:0.45;" x1="204.75" x2="387.45" y1="224.8881" y2="224.8881"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram" target="_top" title=" ― CatalogDetails:&#10;A set of information useful for attribution, data discovery, and access." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram" xlink:show="new" xlink:title=" ― CatalogDetails:&#10;A set of information useful for attribution, data discovery, and access." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="87.3" x="209.25" y="241.5679">catalogDetails :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="82.8" x="300.15" y="241.5679">CatalogDetails</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="209.25" y="257.4164">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="268.65" y="257.4164">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/PrivateImage.html#diagram" target="_top" title=" ― PrivateImage:&#10;References an image using the standard Image description. In addition to the standard attributes provides an effective date (period) and a privacy ranking." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/PrivateImage.html#diagram" xlink:show="new" xlink:title=" ― PrivateImage:&#10;References an image using the standard Image description. In addition to the standard attributes provides an effective date (period) and a privacy ranking." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="41.4" x="209.25" y="273.2648">image :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="73.8" x="254.25" y="273.2648">PrivateImage</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="54" x="209.25" y="289.1133">purpose :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="266.85" y="289.1133">InternationalString</text></a></g></a><!--MD5=[3078b484125a0460bfac2d32d1854149]
+class DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent--><a href="../DDICDILibrary/Classes/Process/ProcessingAgent.html#super-class-hierarchy-generalization" target="_top" title=" ― ProcessingAgent:&#10;A processing agent orchestrates the production of information objects in a production environment. There are processing agents which perform data capture, data editing/processing, and data analysis (etc.), each in the appropriate production environments. The processing agent performs an activity bas ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/ProcessingAgent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ProcessingAgent:&#10;A processing agent orchestrates the production of information objects in a production environment. There are processing agents which perform data capture, data editing/processing, and data analysis (etc.), each in the appropriate production environments. The processing agent performs an activity bas ..." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent"><rect codeLine="97" fill="#FAFAD2" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="228.6" y="366.4693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="277.2" y="380.3121">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="96.3" x="247.95" y="395.3695">ProcessingAgent</text></g></a><!--MD5=[d08d00d1298a6dcae378aea45001ea51]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition--><a href="../DDICDILibrary/Classes/Agents/AgentPosition.html#super-class-hierarchy-generalization" target="_top" title=" ― AgentPosition:&#10;Assigns a sequence number to an agent in an agent listing." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Agents/AgentPosition.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― AgentPosition:&#10;Assigns a sequence number to an agent in an agent listing." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition"><rect codeLine="66" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="480.6" y="224.2693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="34.2" x="531" y="238.1121">Agents::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="78.3" x="508.95" y="253.1695">AgentPosition</text></g></a><!--MD5=[ed0afb77b436c4c4d8225e6d9c795979]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing--><a href="../DDICDILibrary/Classes/Agents/AgentListing.html#super-class-hierarchy-generalization" target="_top" title=" ― AgentListing:&#10;Listing of agents of any type who may be organized to describe relationships between agents." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Agents/AgentListing.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― AgentListing:&#10;Listing of agents of any type who may be organized to describe relationships between agents." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing"><rect codeLine="67" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="652.5" y="224.2693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="34.2" x="702.9" y="238.1121">Agents::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="70.2" x="684.9" y="253.1695">AgentListing</text></g></a><g id="elem_GMN20"><path d="M5.4,222.9193 L5.4,261.3521 A0,0 0 0 0 5.4,261.3521 L165.6,261.3521 A0,0 0 0 0 165.6,261.3521 L165.6,245.8693 L203.661,242.2693 L165.6,238.6693 L165.6,231.9193 L156.6,222.9193 L5.4,222.9193 A0,0 0 0 0 5.4,222.9193 " fill="#FFFFFF" style="stroke:#181818;stroke-width:0.45;"/><path d="M156.6,222.9193 L156.6,231.9193 L165.6,231.9193 L156.6,222.9193 " fill="#FFFFFF" style="stroke:#181818;stroke-width:0.45;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="141.3" x="10.8" y="239.5649">Class has 12 associations.</text><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="120.6" x="10.8" y="254.2813">Only 3 are shown here.</text></g><!--MD5=[1e0194a753b1efaf2ef6b15fef4ffabc]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::Curator to DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::Curator_DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling"><a href="" target="_top" title=" ― has:&#10;Rule based scheduling has one or more curators. The curators may be commercial/off-the-shelf, open source and/or home grown. They are likely to be domain-specific which is why rule based scheduling might employ many." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;Rule based scheduling has one or more curators. The curators may be commercial/off-the-shelf, open source and/or home grown. They are likely to be domain-specific which is why rule based scheduling might employ many." xlink:type="simple"><path codeLine="72" d="M296.1,498.1573 C296.1,518.0203 296.1,546.9013 296.1,565.1803 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::Curator-backto-DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="296.1,493.5673,292.5,501.6673,296.1,498.0673,299.7,501.6673,296.1,493.5673" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="297" y="533.4149">has</text></a></g><!--MD5=[163c66a244a2e5fb2fa790af2da645dc]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent to DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent_DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic"><a href="" target="_top" title=" ― informs:&#10;Control logic informs a processing agent. The information may be deterministic or non-deterministic." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― informs:&#10;Control logic informs a processing agent. The information may be deterministic or non-deterministic." xlink:type="simple"><path codeLine="85" d="M335.664,364.4083 C362.07,352.1773 397.98,337.7143 431.55,331.3693 C515.781,315.4483 500.922,321.2803 785.7,366.4693 C792.72,367.5853 800.019,368.8633 807.291,370.2133 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent-backto-DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="331.515,366.3523,340.3774,366.1877,335.5925,364.4486,337.3315,359.6637,331.515,366.3523" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="49.5" x="432.45" y="336.3149"> informs</text></a></g><!--MD5=[d0aacf00d4a2f82281a84ecb4baece16]
+link DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent to DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent_DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment"><a href="" target="_top" title=" ― operatesOn:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― operatesOn:&#10;" xlink:type="simple"><path codeLine="90" d="M337.518,366.4603 C395.784,343.5463 505.098,309.4093 596.7,331.3693 C623.025,337.6783 650.205,351.7903 670.23,363.8773 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent-to-DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="674.136,366.2623,669.1066,358.9634,670.2978,363.9132,665.348,365.1044,674.136,366.2623" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="72" x="523.8" y="336.3149"> operatesOn</text></a></g><!--MD5=[4fe8b1a1b35b2723928053d727174197]
+link DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent to DDICDIModels::DDICDILibrary::Classes::Process::Activity--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent_DDICDIModels::DDICDILibrary::Classes::Process::Activity"><a href="" target="_top" title=" ― performs:&#10;A processing agent performs an activity at the direction of control logic." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― performs:&#10;A processing agent performs an activity at the direction of control logic." xlink:type="simple"><path codeLine="95" d="M363.888,384.4693 C392.733,384.4693 426.42,384.4693 455.76,384.4693 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent-to-DDICDIModels::DDICDILibrary::Classes::Process::Activity" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="460.431,384.4693,452.331,380.8693,455.931,384.4693,452.331,388.0693,460.431,384.4693" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="56.7" x="383.85" y="378.6149"> performs</text></a></g><!--MD5=[b07c2f651108c06ea79ca96b76e439c4]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent to DDICDIModels::DDICDILibrary::Classes::Process::Curator--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent_DDICDIModels::DDICDILibrary::Classes::Process::Curator"><path codeLine="100" d="M296.1,420.8653 C296.1,433.4293 296.1,447.0013 296.1,457.3423 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent-backto-DDICDIModels::DDICDILibrary::Classes::Process::Curator" style="stroke:#D2691E;stroke-width:1.35;"/><polygon fill="none" points="289.8,420.5503,296.1,402.5503,302.4,420.5503,289.8,420.5503" style="stroke:#D2691E;stroke-width:1.35;"/></g><!--MD5=[1b0778de5f37e9fb908fe938d59324c3]
+reverse link DDICDIModels::DDICDILibrary::Classes::Agents::Agent to DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing--><g id="link_DDICDIModels::DDICDILibrary::Classes::Agents::Agent_DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="112" d="M392.607,188.2693 C457.335,159.1993 544.005,134.1703 618.3,160.3693 C654.003,172.9603 686.412,203.9743 704.619,224.0173 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="388.377,190.1863,397.2408,190.1349,392.4785,188.3349,394.2785,183.5725,388.377,190.1863" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="30.6" x="586.8" y="159.0149"> has</text></a></g><!--MD5=[1b0778de5f37e9fb908fe938d59324c3]
+reverse link DDICDIModels::DDICDILibrary::Classes::Agents::Agent to DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing--><g id="link_DDICDIModels::DDICDILibrary::Classes::Agents::Agent_DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing"><a href="" target="_top" title=" ― isMaintainedBy:&#10;The unit or group of persons within the organization responsible for the agent listing (i.e., for adding, changing or deleting agent entries)." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― isMaintainedBy:&#10;The unit or group of persons within the organization responsible for the agent listing (i.e., for adding, changing or deleting agent entries)." xlink:type="simple"><path codeLine="117" d="M392.607,188.2693 C457.335,159.1993 544.005,134.1703 618.3,160.3693 C654.003,172.9603 686.412,203.9743 704.619,224.0173 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing-1" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="388.377,190.1863,397.2408,190.1349,392.4785,188.3349,394.2785,183.5725,388.377,190.1863" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="91.8" x="556.2" y="159.0149"> isMaintainedBy</text></a></g><!--MD5=[46885dc28a1a8bfd65df7f3b6fef4541]
+reverse link DDICDIModels::DDICDILibrary::Classes::Agents::Agent to DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition--><g id="link_DDICDIModels::DDICDILibrary::Classes::Agents::Agent_DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition"><a href="" target="_top" title=" ― indexes:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― indexes:&#10;" xlink:type="simple"><path codeLine="122" d="M393.174,242.2693 C422.361,242.2693 453.735,242.2693 480.573,242.2693 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="388.512,242.2693,396.612,245.8693,393.012,242.2693,396.612,238.6693,388.512,242.2693" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="52.2" x="408.375" y="236.4149"> indexes</text></a></g><!--MD5=[292591ea760afe01bc2b8e59e19f5cb7]
+reverse link DDICDIModels::DDICDILibrary::Classes::Agents::Agent to DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent--><g id="link_DDICDIModels::DDICDILibrary::Classes::Agents::Agent_DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent"><path codeLine="135" d="M296.1,313.9993 C296.1,333.5113 296.1,352.9693 296.1,366.3163 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent" style="stroke:#D2691E;stroke-width:1.35;"/><polygon fill="none" points="289.8,313.8463,296.1,295.8463,302.4,313.8463,289.8,313.8463" style="stroke:#D2691E;stroke-width:1.35;"/></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="263.7" x="335.7" y="606.0381"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="466.2" y="615.3808"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="466.2" y="626.7011"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="263.7" x="335.7" y="638.0215">DDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Curator</text><!--MD5=[046abd1dbfa62a6b32fa21c8dad0c363]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Curator in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Curator
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Process::Curator as "<size:10>Process::\n<color:black>Curator" #FFD700 {
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling as "<size:10>Process::\n<color:blue>RuleBasedScheduling" [[../DDICDILibrary/Classes/Process/RuleBasedScheduling.html#super-class-hierarchy-generalization{ <U+2015> RuleBasedScheduling:\nRule based scheduling performs a fact check on rules from the rule set, testing their condition part against the facts in the research data store. Fact checking may be assisted by a curator who can semantically compare the condition part of each candidate rule with the facts. The fact checker return ...}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+class DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment as "<size:10>Process::\n<color:blue>ProductionEnvironment" [[../DDICDILibrary/Classes/Process/ProductionEnvironment.html#super-class-hierarchy-generalization{ <U+2015> ProductionEnvironment:\nProduction environments consume and produce information objects by way of processing pipelines orchestrated by the processing agent.}]]
+class DDICDIModels::DDICDILibrary::Classes::Process::Activity as "<size:10>Process::\n<color:blue>Activity" [[../DDICDILibrary/Classes/Process/Activity.html#super-class-hierarchy-generalization{ <U+2015> Activity:\nAn activity is a task described at a conceptual level. It is not parameterized and as such is less reusable. For more logical/physical, fine-grained, reusable description there is a sub-type called step.}]]
+class DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic as "<size:10>Process::\n<color:blue>ControlLogic" [[../DDICDILibrary/Classes/Process/ControlLogic.html#super-class-hierarchy-generalization{ <U+2015> ControlLogic:\nControl logic is a program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may co ...}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10>Agents::\n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]]
+class DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent as "<size:10>Process::\n<color:blue>ProcessingAgent" [[../DDICDILibrary/Classes/Process/ProcessingAgent.html#super-class-hierarchy-generalization{ <U+2015> ProcessingAgent:\nA processing agent orchestrates the production of information objects in a production environment. There are processing agents which perform data capture, data editing/processing, and data analysis (etc.), each in the appropriate production environments. The processing agent performs an activity bas ...}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition as "<size:10>Agents::\n<color:blue>AgentPosition" [[../DDICDILibrary/Classes/Agents/AgentPosition.html#super-class-hierarchy-generalization{ <U+2015> AgentPosition:\nAssigns a sequence number to an agent in an agent listing.}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing as "<size:10>Agents::\n<color:blue>AgentListing" [[../DDICDILibrary/Classes/Agents/AgentListing.html#super-class-hierarchy-generalization{ <U+2015> AgentListing:\nListing of agents of any type who may be organized to describe relationships between agents.}]]
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Process::Curator <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling [[{ <U+2015> has:\nRule based scheduling has one or more curators. The curators may be commercial/off-the-shelf, open source and/or home grown. They are likely to be domain-specific which is why rule based scheduling might employ many.}]] : has
+
+' Super classes
+' Associations of Super classes
+' firstAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@6f911326 (name: ProcessingAgent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)org.eclipse.uml2.uml.internal.impl.ClassImpl@78411116 (name: Agent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+' secondAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@78411116 (name: Agent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+
+
+
+' aClass:			Curator
+' aSuperClass:		ProcessingAgent
+' e_ownedEndClass:	ControlLogic
+' e_otherEndClass:	ProcessingAgent
+DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic [[{ <U+2015> informs:\nControl logic informs a processing agent. The information may be deterministic or non-deterministic.}]] : <U+2003>informs
+' aClass:			Curator
+' aSuperClass:		ProcessingAgent
+' e_ownedEndClass:	ProcessingAgent
+' e_otherEndClass:	ProductionEnvironment
+DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent -[#grey]> DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment [[{ <U+2015> operatesOn:\n}]] : <U+2003>operatesOn
+' aClass:			Curator
+' aSuperClass:		ProcessingAgent
+' e_ownedEndClass:	ProcessingAgent
+' e_otherEndClass:	Activity
+DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent -[#grey]> DDICDIModels::DDICDILibrary::Classes::Process::Activity [[{ <U+2015> performs:\nA processing agent performs an activity at the direction of control logic.}]] : <U+2003>performs
+
+class DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent as "<size:10> \n<color:blue>ProcessingAgent" [[../DDICDILibrary/Classes/Process/ProcessingAgent.html#super-class-hierarchy-generalization{ <U+2015> ProcessingAgent:\nA processing agent orchestrates the production of information objects in a production environment. There are processing agents which perform data capture, data editing/processing, and data analysis (etc.), each in the appropriate production environments. The processing agent performs an activity bas ...}]] #FAFAD2 {
+}
+
+DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::Process::Curator
+' Associations of Super classes
+note left of DDICDIModels::DDICDILibrary::Classes::Agents::Agent : Class has 12 associations.\nOnly 3 are shown here.
+' firstAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@78411116 (name: Agent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+' secondAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@78411116 (name: Agent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+
+
+
+' aClass:			ProcessingAgent
+' aSuperClass:		Agent
+' e_ownedEndClass:	AgentListing
+' e_otherEndClass:	Agent
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing [[{ <U+2015> has:\n}]] : <U+2003>has
+' aClass:			ProcessingAgent
+' aSuperClass:		Agent
+' e_ownedEndClass:	AgentListing
+' e_otherEndClass:	Agent
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing [[{ <U+2015> isMaintainedBy:\nThe unit or group of persons within the organization responsible for the agent listing (i.e., for adding, changing or deleting agent entries).}]] : <U+2003>isMaintainedBy
+' aClass:			ProcessingAgent
+' aSuperClass:		Agent
+' e_ownedEndClass:	AgentPosition
+' e_otherEndClass:	Agent
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition [[{ <U+2015> indexes:\n}]] : <U+2003>indexes
+
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10> \n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]] #FAFAD2 {
+  catalogDetails : <color:blue>CatalogDetails   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram{ <U+2015> CatalogDetails:\nA set of information useful for attribution, data discovery, and access.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  image : <color:blue>PrivateImage   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/PrivateImage.html#diagram{ <U+2015> PrivateImage:\nReferences an image using the standard Image description. In addition to the standard attributes provides an effective date (period) and a privacy ranking.}]]]
+  purpose : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+}
+
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent
+
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Curator in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Curator
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Process::Curator as "<size:10>Process::\n<color:black>Curator" #FFD700 {
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling as "<size:10>Process::\n<color:blue>RuleBasedScheduling" [[../DDICDILibrary/Classes/Process/RuleBasedScheduling.html#super-class-hierarchy-generalization{ <U+2015> RuleBasedScheduling:\nRule based scheduling performs a fact check on rules from the rule set, testing their condition part against the facts in the research data store. Fact checking may be assisted by a curator who can semantically compare the condition part of each candidate rule with the facts. The fact checker return ...}]]
+}
+
+together {
+}
+
+class DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment as "<size:10>Process::\n<color:blue>ProductionEnvironment" [[../DDICDILibrary/Classes/Process/ProductionEnvironment.html#super-class-hierarchy-generalization{ <U+2015> ProductionEnvironment:\nProduction environments consume and produce information objects by way of processing pipelines orchestrated by the processing agent.}]]
+class DDICDIModels::DDICDILibrary::Classes::Process::Activity as "<size:10>Process::\n<color:blue>Activity" [[../DDICDILibrary/Classes/Process/Activity.html#super-class-hierarchy-generalization{ <U+2015> Activity:\nAn activity is a task described at a conceptual level. It is not parameterized and as such is less reusable. For more logical/physical, fine-grained, reusable description there is a sub-type called step.}]]
+class DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic as "<size:10>Process::\n<color:blue>ControlLogic" [[../DDICDILibrary/Classes/Process/ControlLogic.html#super-class-hierarchy-generalization{ <U+2015> ControlLogic:\nControl logic is a program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may co ...}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10>Agents::\n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]]
+class DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent as "<size:10>Process::\n<color:blue>ProcessingAgent" [[../DDICDILibrary/Classes/Process/ProcessingAgent.html#super-class-hierarchy-generalization{ <U+2015> ProcessingAgent:\nA processing agent orchestrates the production of information objects in a production environment. There are processing agents which perform data capture, data editing/processing, and data analysis (etc.), each in the appropriate production environments. The processing agent performs an activity bas ...}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition as "<size:10>Agents::\n<color:blue>AgentPosition" [[../DDICDILibrary/Classes/Agents/AgentPosition.html#super-class-hierarchy-generalization{ <U+2015> AgentPosition:\nAssigns a sequence number to an agent in an agent listing.}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing as "<size:10>Agents::\n<color:blue>AgentListing" [[../DDICDILibrary/Classes/Agents/AgentListing.html#super-class-hierarchy-generalization{ <U+2015> AgentListing:\nListing of agents of any type who may be organized to describe relationships between agents.}]]
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Process::Curator <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling [[{ <U+2015> has:\nRule based scheduling has one or more curators. The curators may be commercial/off-the-shelf, open source and/or home grown. They are likely to be domain-specific which is why rule based scheduling might employ many.}]] : has
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic [[{ <U+2015> informs:\nControl logic informs a processing agent. The information may be deterministic or non-deterministic.}]] : <U+2003>informs
+DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent -[#grey]> DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment [[{ <U+2015> operatesOn:\n}]] : <U+2003>operatesOn
+DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent -[#grey]> DDICDIModels::DDICDILibrary::Classes::Process::Activity [[{ <U+2015> performs:\nA processing agent performs an activity at the direction of control logic.}]] : <U+2003>performs
+
+class DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent as "<size:10> \n<color:blue>ProcessingAgent" [[../DDICDILibrary/Classes/Process/ProcessingAgent.html#super-class-hierarchy-generalization{ <U+2015> ProcessingAgent:\nA processing agent orchestrates the production of information objects in a production environment. There are processing agents which perform data capture, data editing/processing, and data analysis (etc.), each in the appropriate production environments. The processing agent performs an activity bas ...}]] #FAFAD2 {
+}
+
+DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::Process::Curator
+note left of DDICDIModels::DDICDILibrary::Classes::Agents::Agent : Class has 12 associations.\nOnly 3 are shown here.
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing [[{ <U+2015> has:\n}]] : <U+2003>has
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing [[{ <U+2015> isMaintainedBy:\nThe unit or group of persons within the organization responsible for the agent listing (i.e., for adding, changing or deleting agent entries).}]] : <U+2003>isMaintainedBy
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition [[{ <U+2015> indexes:\n}]] : <U+2003>indexes
+
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10> \n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]] #FAFAD2 {
+  catalogDetails : <color:blue>CatalogDetails   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram{ <U+2015> CatalogDetails:\nA set of information useful for attribution, data discovery, and access.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  image : <color:blue>PrivateImage   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/PrivateImage.html#diagram{ <U+2015> PrivateImage:\nReferences an image using the standard Image description. In addition to the standard attributes provides an effective date (period) and a privacy ranking.}]]]
+  purpose : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+}
+
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent
+
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

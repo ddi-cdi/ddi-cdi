@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="621px" preserveAspectRatio="none" style="width:744px;height:621px;background:#FFFFFF;" version="1.1" viewBox="0 0 744 621" width="744.3px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="410.4" x="160.65" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="401.4" x="165.15" y="27.6855">UML Diagram: Class RecordRelation in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="364.05" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[a0bd27d1d4ca8f2e2cb772f0157fc399]
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap--><a href="../DDICDILibrary/Classes/FormatDescription/InstanceVariableMap.html#super-class-hierarchy-generalization" target="_top" title=" ― InstanceVariableMap:&#10;Key value relationship for two or more logical records where the key is one or more equivalent instance variables and the value is a defined relationship or a relationship to a set value." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/FormatDescription/InstanceVariableMap.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― InstanceVariableMap:&#10;Key value relationship for two or more logical records where the key is one or more equivalent instance variables and the value is a defined relationship or a relationship to a set value." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap"><rect codeLine="62" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="318.15"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="82.8" x="32.4" y="331.9928">FormatDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="118.8" x="14.4" y="347.0502">InstanceVariableMap</text></g></a><!--MD5=[db5fba43dd73e3574ad74b48cea32d19]
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore--><a href="../DDICDILibrary/Classes/FormatDescription/DataStore.html#super-class-hierarchy-generalization" target="_top" title=" ― DataStore:&#10;Collection of logical records." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/FormatDescription/DataStore.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― DataStore:&#10;Collection of logical records." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore"><rect codeLine="63" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="227.7" y="318.15"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="82.8" x="253.8" y="331.9928">FormatDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="57.6" x="266.4" y="347.0502">DataStore</text></g></a><!--MD5=[6c9ae7212f036fc7dd51e23948498201]
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord--><a href="../DDICDILibrary/Classes/FormatDescription/LogicalRecord.html#super-class-hierarchy-generalization" target="_top" title=" ― LogicalRecord:&#10;Collection of instance variables." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/FormatDescription/LogicalRecord.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― LogicalRecord:&#10;Collection of instance variables." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord"><rect codeLine="64" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="450" y="318.15"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="82.8" x="476.1" y="331.9928">FormatDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="81.9" x="476.55" y="347.0502">LogicalRecord</text></g></a><!--MD5=[b6708c477078459dba5bf7d586457a14]
+class DDICDIModels::DesignPatterns::CollectionsPattern::Comparison--><a href="../DesignPatterns/CollectionsPattern/Comparison.html#super-class-hierarchy-generalization" target="_top" title=" ― Comparison:&#10;The minimal pattern for a comparison including a mapping between members." xlink:actuate="onRequest" xlink:href="../DesignPatterns/CollectionsPattern/Comparison.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Comparison:&#10;The minimal pattern for a comparison including a mapping between members." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::CollectionsPattern::Comparison"><rect codeLine="69" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::CollectionsPattern::Comparison" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="603.9" y="539.55"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="83.7" x="629.55" y="553.3928">CollectionsPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="68.4" x="637.2" y="568.4502">Comparison</text></g></a><!--MD5=[a48ab47bcba7568d9082939417f9cbdf]
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation--><g id="elem_DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation"><rect codeLine="46" fill="#FFD700" height="122.6109" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="185.4" x="341.1" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="82.8" x="392.4" y="137.5928">FormatDescription::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="88.2" x="389.7" y="152.6502">RecordRelation</text><line style="stroke:#404040;stroke-width:0.45;" x1="342" x2="525.6" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram" target="_top" title=" ― CatalogDetails:&#10;A set of information useful for attribution, data discovery, and access." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram" xlink:show="new" xlink:title=" ― CatalogDetails:&#10;A set of information useful for attribution, data discovery, and access." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="87.3" x="346.5" y="176.5986">catalogDetails :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="82.8" x="437.4" y="176.5986">CatalogDetails</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram" target="_top" title=" ― LabelForDisplay:&#10;A structured display label. Label provides display content of a fully human readable display for the identification of the object." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram" xlink:show="new" xlink:title=" ― LabelForDisplay:&#10;A structured display label. Label provides display content of a fully human readable display for the identification of the object." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="78.3" x="346.5" y="192.4471">displayLabel :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="92.7" x="428.4" y="192.4471">LabelForDisplay</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="346.5" y="208.2955">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="405.9" y="208.2955">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="54" x="346.5" y="224.1439">purpose :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="404.1" y="224.1439">InternationalString</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="42.3" x="346.5" y="239.9924">usage :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="392.4" y="239.9924">InternationalString</text></a></g><!--MD5=[f452f32397377dea492b272f0427d3fe]
+reverse link DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation to DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore--><g id="link_DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation_DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore"><a href="" target="_top" title=" ― has:&#10;The record relation that defines the relationship and linking requirements between logical records in the data store." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;The record relation that defines the relationship and linking requirements between logical records in the data store." xlink:type="simple"><path codeLine="77" d="M374.715,249.543 C351.549,274.518 326.817,301.167 311.202,318.006 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation-backto-DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="377.829,246.186,369.684,249.683,374.7714,249.4877,374.9667,254.5751,377.829,246.186" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="352.8" y="286.1956">has</text></a></g><!--MD5=[eb3d7fefb6228c78e614b4faa94665c2]
+link DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation to DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap--><g id="link_DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation_DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="78" d="M331.1176,228.4687 C331.1176,228.4687 179.154,291.528 125.892,313.632 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation-DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="115.011,318.15,123.8722,318.3704,119.1673,316.4252,121.1125,311.7203,115.011,318.15" style="stroke:#808080;stroke-width:1.35;"/><line style="stroke:#808080;stroke-width:1.35;" x1="119.1673" x2="125.8155" y1="316.4252" y2="313.6635"/><polygon fill="#808080" points="341.091,224.325,334.723,223.0724,331.1176,228.4687,337.4855,229.7213,341.091,224.325" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="223.2" y="286.1956">has</text></a></g><!--MD5=[92aad94c6b03f5e51630c892482cf93f]
+link DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation to DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord--><g id="link_DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation_DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord"><a href="" target="_top" title=" ― maps:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― maps:&#10;" xlink:type="simple"><path codeLine="79" d="M467.604,246.186 C480.987,270.072 495.513,296.001 505.422,313.686 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation-to-DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="507.834,318.006,507.0252,309.179,505.6388,314.0778,500.7401,312.6913,507.834,318.006" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="28.8" x="490.5" y="286.1956">maps</text></a></g><!--MD5=[d72799e9ff6b02edfdd23e9dcd8c8388]
+link DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation to DDICDIModels::DesignPatterns::CollectionsPattern::Comparison--><g id="link_DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation_DDICDIModels::DesignPatterns::CollectionsPattern::Comparison"><path codeLine="83" d="M526.68,205.182 C593.325,225.126 671.4,263.745 671.4,335.25 C671.4,335.25 671.4,335.25 671.4,482.4 C671.4,500.004 671.4,519.957 671.4,534.744 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation-to-DDICDIModels::DesignPatterns::CollectionsPattern::Comparison" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="671.4,539.541,675,531.441,671.4,535.041,667.8,531.441,671.4,539.541" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="672.3" y="423.8956">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="344.7" x="193.5" y="580.2188"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="364.5" y="589.5615"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="364.5" y="600.8818"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="344.7" x="193.5" y="612.2021">DDI Cross Domain Integration (DDI-CDI)   1.0 - FormatDescription::RecordRelation</text><!--MD5=[316483b6635c44b6e8d6713fa4e3d304]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class RecordRelation in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - FormatDescription::RecordRelation
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation as "<size:10>FormatDescription::\n<color:black>RecordRelation" #FFD700 {
+  catalogDetails : <color:blue>CatalogDetails   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram{ <U+2015> CatalogDetails:\nA set of information useful for attribution, data discovery, and access.}]]]
+  displayLabel : <color:blue>LabelForDisplay   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram{ <U+2015> LabelForDisplay:\nA structured display label. Label provides display content of a fully human readable display for the identification of the object.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  purpose : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  usage : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap as "<size:10>FormatDescription::\n<color:blue>InstanceVariableMap" [[../DDICDILibrary/Classes/FormatDescription/InstanceVariableMap.html#super-class-hierarchy-generalization{ <U+2015> InstanceVariableMap:\nKey value relationship for two or more logical records where the key is one or more equivalent instance variables and the value is a defined relationship or a relationship to a set value.}]]
+  class DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore as "<size:10>FormatDescription::\n<color:blue>DataStore" [[../DDICDILibrary/Classes/FormatDescription/DataStore.html#super-class-hierarchy-generalization{ <U+2015> DataStore:\nCollection of logical records.}]]
+  class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord as "<size:10>FormatDescription::\n<color:blue>LogicalRecord" [[../DDICDILibrary/Classes/FormatDescription/LogicalRecord.html#super-class-hierarchy-generalization{ <U+2015> LogicalRecord:\nCollection of instance variables.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Comparison as "<size:10>CollectionsPattern::\n<color:blue>Comparison" [[../DesignPatterns/CollectionsPattern/Comparison.html#super-class-hierarchy-generalization{ <U+2015> Comparison:\nThe minimal pattern for a comparison including a mapping between members.}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation <-[#grey]- DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore [[{ <U+2015> has:\nThe record relation that defines the relationship and linking requirements between logical records in the data store.}]] : has
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation *-[#grey]-> DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap [[{ <U+2015> has:\n}]] : has
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation -[#grey]-> DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord [[{ <U+2015> maps:\n}]] : maps
+
+
+' Abstractions
+  DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation .....> DDICDIModels::DesignPatterns::CollectionsPattern::Comparison : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class RecordRelation in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - FormatDescription::RecordRelation
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation as "<size:10>FormatDescription::\n<color:black>RecordRelation" #FFD700 {
+  catalogDetails : <color:blue>CatalogDetails   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram{ <U+2015> CatalogDetails:\nA set of information useful for attribution, data discovery, and access.}]]]
+  displayLabel : <color:blue>LabelForDisplay   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram{ <U+2015> LabelForDisplay:\nA structured display label. Label provides display content of a fully human readable display for the identification of the object.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  purpose : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  usage : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap as "<size:10>FormatDescription::\n<color:blue>InstanceVariableMap" [[../DDICDILibrary/Classes/FormatDescription/InstanceVariableMap.html#super-class-hierarchy-generalization{ <U+2015> InstanceVariableMap:\nKey value relationship for two or more logical records where the key is one or more equivalent instance variables and the value is a defined relationship or a relationship to a set value.}]]
+  class DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore as "<size:10>FormatDescription::\n<color:blue>DataStore" [[../DDICDILibrary/Classes/FormatDescription/DataStore.html#super-class-hierarchy-generalization{ <U+2015> DataStore:\nCollection of logical records.}]]
+  class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord as "<size:10>FormatDescription::\n<color:blue>LogicalRecord" [[../DDICDILibrary/Classes/FormatDescription/LogicalRecord.html#super-class-hierarchy-generalization{ <U+2015> LogicalRecord:\nCollection of instance variables.}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Comparison as "<size:10>CollectionsPattern::\n<color:blue>Comparison" [[../DesignPatterns/CollectionsPattern/Comparison.html#super-class-hierarchy-generalization{ <U+2015> Comparison:\nThe minimal pattern for a comparison including a mapping between members.}]]
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation <-[#grey]- DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore [[{ <U+2015> has:\nThe record relation that defines the relationship and linking requirements between logical records in the data store.}]] : has
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation *-[#grey]-> DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap [[{ <U+2015> has:\n}]] : has
+DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation -[#grey]-> DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord [[{ <U+2015> maps:\n}]] : maps
+
+
+  DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation .....> DDICDIModels::DesignPatterns::CollectionsPattern::Comparison : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

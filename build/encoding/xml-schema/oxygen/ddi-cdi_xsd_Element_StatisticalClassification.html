@@ -1,0 +1,516 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component StatisticalClassification</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        var propertiesBoxes= new Array('properties_StatisticalClassification');
+var usedByBoxes= new Array('usedBy_StatisticalClassification');
+var sourceBoxes= new Array('source_StatisticalClassification');
+var instanceBoxes= new Array('instance_StatisticalClassification');
+var diagramBoxes= new Array('diagram_StatisticalClassification');
+var annotationBoxes= new Array('annotations_StatisticalClassification');
+var modelBoxes= new Array('model_StatisticalClassification');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="StatisticalClassification"></a><div class="componentTitle">Element <span class="qname">StatisticalClassification</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_StatisticalClassification" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_StatisticalClassification');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_StatisticalClassification" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Definition</span><span class="tI">
+</span><span class="tT">============</span><span class="tI">
+</span><span class="tT">Set of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent.</span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Examples</span><span class="tI">
+</span><span class="tT">==========</span><span class="tI">
+</span><span class="tT">ISIC rev 4; NAICS 2017, SOC 2018</span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Explanatory notes</span><span class="tI">
+</span><span class="tT">===================</span><span class="tI">
+</span><span class="tT">A statistical classification may have a flat, linear structure or may be hierarchically structured, such that all categories at lower levels are sub-categories of categories at the next Level up. (Source: GSIM StatisticalClassification)</span><span class="tI">
+</span><span class="tT">Each classification item represents a category. Every category is a member of a level within a statistical classification. The categories are defined with reference to one or more characteristics of a particular universe of units of observation.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_StatisticalClassification" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_StatisticalClassification');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_StatisticalClassification" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_StatisticalClassification.jpeg" usemap="#ddi-cdi_xsd_Element_StatisticalClassification" /><map name="ddi-cdi_xsd_Element_StatisticalClassification" id="ddi-cdi_xsd_Element_StatisticalClassification"><area alt="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.tmp#EnumerationDomainXsdType_identifier" href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_identifier" coords="384,99,531,143" /><area alt="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.tmp#EnumerationDomainXsdType_name" href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_name" coords="384,198,548,242" /><area alt="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.tmp#EnumerationDomainXsdType_purpose" href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_purpose" coords="384,297,576,341" /><area alt="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.tmp#EnumerationDomainXsdType_EnumerationDomain_uses_LevelStructure-Target" href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_uses_LevelStructure-Target" coords="384,382,651,426" /><area alt="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.tmp#EnumerationDomainXsdType_EnumerationDomain_references_CategorySet-Target" href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_references_CategorySet-Target" coords="384,467,670,511" /><area alt="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.tmp#EnumerationDomainXsdType_EnumerationDomain_isDefinedBy_Concept-Target" href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_isDefinedBy_Concept-Target" coords="384,552,654,596" /><area alt="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.tmp#EnumerationDomainXsdType" href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType" coords="281,62,554,84" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_allowsDuplicates" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_allowsDuplicates" coords="370,689,486,733" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_availableLanguage" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_availableLanguage" coords="370,788,492,832" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_catalogDetails" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_catalogDetails" coords="370,887,544,931" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_changeFromBase" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_changeFromBase" coords="370,986,562,1030" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_copyright" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_copyright" coords="370,1085,562,1129" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_displayLabel" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_displayLabel" coords="370,1170,553,1214" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_isCurrent" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_isCurrent" coords="370,1269,486,1313" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_isFloating" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_isFloating" coords="370,1354,486,1398" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_purposeOfVariant" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_purposeOfVariant" coords="370,1453,562,1497" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_rationale" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_rationale" coords="370,1552,562,1596" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_releaseDate" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_releaseDate" coords="370,1637,545,1681" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_updateChanges" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_updateChanges" coords="370,1722,562,1766" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_usage" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_usage" coords="370,1821,562,1865" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_validDates" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_validDates" coords="370,1906,529,1950" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_StatisticalClassification_isMaintainedBy_Organization-Target" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isMaintainedBy_Organization-Target" coords="370,2005,691,2049" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_StatisticalClassification_isIndexedBy_ClassificationIndex-Target" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isIndexedBy_ClassificationIndex-Target" coords="370,2104,707,2148" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_StatisticalClassification_isVariantOf_StatisticalClassification-Target" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isVariantOf_StatisticalClassification-Target" coords="370,2158,723,2202" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_StatisticalClassification_isSuccessorOf_StatisticalClassification-Target" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isSuccessorOf_StatisticalClassification-Target" coords="370,2243,741,2287" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_StatisticalClassification_isPredecessorOf_StatisticalClassification-Target" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isPredecessorOf_StatisticalClassification-Target" coords="370,2328,750,2372" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_StatisticalClassification_has_ClassificationItemPosition-Target" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_ClassificationItemPosition-Target" coords="370,2413,696,2457" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_StatisticalClassification_has_ClassificationItem-Target" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_ClassificationItem-Target" coords="370,2467,659,2511" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType_StatisticalClassification_has_LevelStructure-Target" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_LevelStructure-Target" coords="370,2521,647,2565" /><area alt="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.tmp#StatisticalClassificationXsdType" href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType" coords="267,3,491,44" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassificationXsdType')">StatisticalClassificationXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomainXsdType')">EnumerationDomainXsdType</a></b><ul class="internal">
+                                    <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassificationXsdType')">StatisticalClassificationXsdType</a></b></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_StatisticalClassification" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_StatisticalClassification');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_StatisticalClassification" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_StatisticalClassification" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_StatisticalClassification');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_StatisticalClassification" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element Group </td>
+                                    <td><b><a href="ddi-cdi_xsd_Element_Group_AllElementsDerivedFromClasses.html#AllElementsDerivedFromClasses" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AllElementsDerivedFromClasses')">AllElementsDerivedFromClasses</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_StatisticalClassification" type="image" src="img/btM.gif" value="-" onclick="switchState('model_StatisticalClassification');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_StatisticalClassification" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier{0,1}')">identifier{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name*')">name*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_purpose" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component purpose{0,1}')">purpose{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_uses_LevelStructure-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomain_uses_LevelStructure-Target{0,1}')">EnumerationDomain_uses_LevelStructure-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_references_CategorySet-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomain_references_CategorySet-Target{0,1}')">EnumerationDomain_references_CategorySet-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_isDefinedBy_Concept-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomain_isDefinedBy_Concept-Target*')">EnumerationDomain_isDefinedBy_Concept-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_allowsDuplicates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component allowsDuplicates')">allowsDuplicates</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_availableLanguage" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component availableLanguage*')">availableLanguage*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_catalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component catalogDetails{0,1}')">catalogDetails{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_changeFromBase" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component changeFromBase{0,1}')">changeFromBase{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_copyright" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component copyright*')">copyright*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_displayLabel" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component displayLabel*')">displayLabel*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_isCurrent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isCurrent{0,1}')">isCurrent{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_isFloating" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isFloating{0,1}')">isFloating{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_purposeOfVariant" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component purposeOfVariant{0,1}')">purposeOfVariant{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_rationale" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component rationale{0,1}')">rationale{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_releaseDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component releaseDate{0,1}')">releaseDate{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_updateChanges" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component updateChanges*')">updateChanges*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_usage" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component usage{0,1}')">usage{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_validDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validDates{0,1}')">validDates{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isMaintainedBy_Organization-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isMaintainedBy_Organization-Target*')">StatisticalClassification_isMaintainedBy_Organization-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isIndexedBy_ClassificationIndex-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isIndexedBy_ClassificationIndex-Target*')">StatisticalClassification_isIndexedBy_ClassificationIndex-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isVariantOf_StatisticalClassification-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isVariantOf_StatisticalClassification-Target{0,1}')">StatisticalClassification_isVariantOf_StatisticalClassification-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isSuccessorOf_StatisticalClassification-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isSuccessorOf_StatisticalClassification-Target*')">StatisticalClassification_isSuccessorOf_StatisticalClassification-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isPredecessorOf_StatisticalClassification-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isPredecessorOf_StatisticalClassification-Target*')">StatisticalClassification_isPredecessorOf_StatisticalClassification-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_ClassificationItemPosition-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_has_ClassificationItemPosition-Target*')">StatisticalClassification_has_ClassificationItemPosition-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_ClassificationItem-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_has_ClassificationItem-Target*')">StatisticalClassification_has_ClassificationItem-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_LevelStructure-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_has_LevelStructure-Target{0,1}')">StatisticalClassification_has_LevelStructure-Target{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_isDefinedBy_Concept-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomain_isDefinedBy_Concept-Target')">EnumerationDomain_isDefinedBy_Concept-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_references_CategorySet-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomain_references_CategorySet-Target')">EnumerationDomain_references_CategorySet-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_EnumerationDomain_uses_LevelStructure-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomain_uses_LevelStructure-Target')">EnumerationDomain_uses_LevelStructure-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_ClassificationItem-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_has_ClassificationItem-Target')">StatisticalClassification_has_ClassificationItem-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_ClassificationItemPosition-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_has_ClassificationItemPosition-Target')">StatisticalClassification_has_ClassificationItemPosition-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_has_LevelStructure-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_has_LevelStructure-Target')">StatisticalClassification_has_LevelStructure-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isIndexedBy_ClassificationIndex-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isIndexedBy_ClassificationIndex-Target')">StatisticalClassification_isIndexedBy_ClassificationIndex-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isMaintainedBy_Organization-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isMaintainedBy_Organization-Target')">StatisticalClassification_isMaintainedBy_Organization-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isPredecessorOf_StatisticalClassification-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isPredecessorOf_StatisticalClassification-Target')">StatisticalClassification_isPredecessorOf_StatisticalClassification-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isSuccessorOf_StatisticalClassification-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isSuccessorOf_StatisticalClassification-Target')">StatisticalClassification_isSuccessorOf_StatisticalClassification-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_StatisticalClassification_isVariantOf_StatisticalClassification-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification_isVariantOf_StatisticalClassification-Target')">StatisticalClassification_isVariantOf_StatisticalClassification-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_allowsDuplicates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component allowsDuplicates')">allowsDuplicates</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_availableLanguage" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component availableLanguage')">availableLanguage</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_catalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component catalogDetails')">catalogDetails</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_changeFromBase" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component changeFromBase')">changeFromBase</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_copyright" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component copyright')">copyright</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_displayLabel" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component displayLabel')">displayLabel</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier')">identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_isCurrent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isCurrent')">isCurrent</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_isFloating" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isFloating')">isFloating</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name')">name</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_purpose" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component purpose')">purpose</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_purposeOfVariant" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component purposeOfVariant')">purposeOfVariant</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_rationale" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component rationale')">rationale</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_releaseDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component releaseDate')">releaseDate</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_updateChanges" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component updateChanges')">updateChanges</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_usage" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component usage')">usage</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType_validDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validDates')">validDates</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_StatisticalClassification" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_StatisticalClassification');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_StatisticalClassification" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;StatisticalClassification</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;identifier</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/identifier&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;purpose</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/purpose&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;EnumerationDomain_uses_LevelStructure-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/EnumerationDomain_uses_LevelStructure-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;EnumerationDomain_references_CategorySet-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/EnumerationDomain_references_CategorySet-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;EnumerationDomain_isDefinedBy_Concept-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/EnumerationDomain_isDefinedBy_Concept-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;allowsDuplicates</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/allowsDuplicates&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;availableLanguage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/availableLanguage&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;catalogDetails</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/catalogDetails&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;changeFromBase</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/changeFromBase&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;copyright</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/copyright&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;displayLabel</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/displayLabel&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;isCurrent</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/isCurrent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;isFloating</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/isFloating&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;purposeOfVariant</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/purposeOfVariant&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;rationale</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/rationale&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;releaseDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/releaseDate&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;updateChanges</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/updateChanges&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;usage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/usage&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;validDates</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/validDates&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;StatisticalClassification_isMaintainedBy_Organization-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/StatisticalClassification_isMaintainedBy_Organization-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;StatisticalClassification_isIndexedBy_ClassificationIndex-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/StatisticalClassification_isIndexedBy_ClassificationIndex-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;StatisticalClassification_isVariantOf_StatisticalClassification-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/StatisticalClassification_isVariantOf_StatisticalClassification-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;StatisticalClassification_isSuccessorOf_StatisticalClassification-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/StatisticalClassification_isSuccessorOf_StatisticalClassification-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;StatisticalClassification_isPredecessorOf_StatisticalClassification-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/StatisticalClassification_isPredecessorOf_StatisticalClassification-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;StatisticalClassification_has_ClassificationItemPosition-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/StatisticalClassification_has_ClassificationItemPosition-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;StatisticalClassification_has_ClassificationItem-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/StatisticalClassification_has_ClassificationItem-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;StatisticalClassification_has_LevelStructure-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/StatisticalClassification_has_LevelStructure-Target&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/StatisticalClassification&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_StatisticalClassification" type="image" src="img/btM.gif" value="-" onclick="switchState('source_StatisticalClassification');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_StatisticalClassification" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"StatisticalClassification"</span><span class="tAN"> type=</span><span class="tAV">"StatisticalClassificationXsdType"</span><span class="tAN"> xml:id=</span><span class="tAV">"StatisticalClassification"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!-- based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification --&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Definition ============ Set of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent. Examples ========== ISIC rev 4; NAICS 2017, SOC 2018 Explanatory notes =================== A statistical classification may have a flat, linear structure or may be hierarchically structured, such that all categories at lower levels are sub-categories of categories at the next Level up. (Source: GSIM StatisticalClassification) Each classification item represents a category. Every category is a member of a level within a statistical classification. The categories are defined with reference to one or more characteristics of a particular universe of units of observation.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

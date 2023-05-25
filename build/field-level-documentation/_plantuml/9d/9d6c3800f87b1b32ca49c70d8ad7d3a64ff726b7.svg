@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="413.1px" preserveAspectRatio="none" style="width:630px;height:413px;background:#FFFFFF;" version="1.1" viewBox="0 0 630 413" width="630px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="491.4" x="63" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="482.4" x="67.5" y="27.6855">UML Diagram: DataType TextPositionSelector in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="306.9" y="44.7205"> </text><rect fill="#FFFFFF" height="67.4016" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="348.3" x="261.9" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="267.3" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="267.3" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="267.3" y="101.9725">- Click on a name to go to the corresponding page.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="337.5" x="267.3" y="113.2928">- The use of the data type is represented here by a dotted line (not formal UML).</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="164.7" x="267.3" y="124.6131">- The arrows of the inheritance tree are</text><text fill="#D2691E" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="32.4" x="434.7" y="124.6131">colored</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="467.1" y="124.6131">.</text><!--MD5=[7639129a7208b5720b5c8dbdaf72c8f5]
+entity ##5--><!--MD5=[c09f5ef791110389cd3fbb684c42cc6c]
+entity ##10--><!--MD5=[f06a45946e45c515f6d27564533d224f]
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector--><g id="elem_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector"><rect codeLine="48" fill="#FFD700" height="88.65" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="489.6" y="278.2406"/><text fill="#000000" font-family="sans-serif" font-size="10.8" font-style="italic" lengthAdjust="spacing" textLength="58.5" x="527.85" y="293.952">«dataType»</text><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="555.75" y="305.6678"> </text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="116.1" x="499.05" y="320.7252">TextPositionSelector</text><line style="stroke:#404040;stroke-width:0.45;" x1="490.5" x2="623.7" y1="327.9938" y2="327.9938"/><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="72" x="495" y="344.6736">end : Integer</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="75.6" x="495" y="360.5221">start : Integer</text></g><!--MD5=[5c87dfae530e1fd2b2e49e638951e641]
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference--><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#super-class-hierarchy-generalization" target="_top" title=" ― Reference:&#10;Provides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Reference:&#10;Provides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference"><rect codeLine="55" fill="#F1F1F1" height="183.7406" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="312.3" x="6.3" y="146.3906"/><text fill="#000000" font-family="sans-serif" font-size="10.8" font-style="italic" lengthAdjust="spacing" textLength="58.5" x="133.2" y="162.102">«dataType»</text><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="161.1" y="173.8178"> </text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="59.4" x="132.75" y="188.8752">Reference</text><line style="stroke:#404040;stroke-width:0.45;" x1="7.2" x2="317.7" y1="196.1438" y2="196.1438"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalRegistrationDataIdentifier.html#diagram" target="_top" title=" ― InternationalRegistrationDataIdentifier:&#10;Persistent, globally unique object identifier aligned with ISO/IEC 11179-6:2015, Information technology - Metadata registries (MDR) - Part 6: Registration, Annex A, Identifiers based on ISO/IEC 6523, http://standards.iso.org/ittf/PubliclyAvailableStandards/c060342_ISO_IEC_11179-6_2015.zip. The uniqu ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalRegistrationDataIdentifier.html#diagram" xlink:show="new" xlink:title=" ― InternationalRegistrationDataIdentifier:&#10;Persistent, globally unique object identifier aligned with ISO/IEC 11179-6:2015, Information technology - Metadata registries (MDR) - Part 6: Registration, Annex A, Identifiers based on ISO/IEC 6523, http://standards.iso.org/ittf/PubliclyAvailableStandards/c060342_ISO_IEC_11179-6_2015.zip. The uniqu ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="83.7" x="11.7" y="212.8236">ddiReference :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="214.2" x="99" y="212.8236">InternationalRegistrationDataIdentifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Selector.html#diagram" target="_top" title=" ― Selector:&#10;A resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Selector.html#diagram" xlink:show="new" xlink:title=" ― Selector:&#10;A resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="59.4" x="11.7" y="228.6721">deepLink :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="46.8" x="74.7" y="228.6721">Selector</text></a><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="106.2" x="11.7" y="244.5205">description : String</text><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="51.3" x="11.7" y="260.3689">location :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="66.6" y="260.3689">InternationalString</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/NonDdiIdentifier.html#diagram" target="_top" title=" ― NonDdiIdentifier:&#10;A unique set of attributes, not conforming to the DDI identifier structure nor structured as a URI, used to identify some entity." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/NonDdiIdentifier.html#diagram" xlink:show="new" xlink:title=" ― NonDdiIdentifier:&#10;A unique set of attributes, not conforming to the DDI identifier structure nor structured as a URI, used to identify some entity." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="107.1" x="11.7" y="276.2174">nonDdiReference :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="90" x="122.4" y="276.2174">NonDdiIdentifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="57.6" x="11.7" y="292.0658">semantic :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="72.9" y="292.0658">ControlledVocabularyEntry</text></a><a href="../DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdAnyUri.html#diagram" target="_top" title=" ― XsdAnyUri:&#10;Primitive data type &quot;anyURI&quot; of the XML Schema data types. Definition from XML Schema Part 2: Datatypes Second Edition: &quot;anyURI&quot; represents a Uniform Resource Identifier Reference (URI). An &quot;anyURI&quot; value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a UR ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdAnyUri.html#diagram" xlink:show="new" xlink:title=" ― XsdAnyUri:&#10;Primitive data type &quot;anyURI&quot; of the XML Schema data types. Definition from XML Schema Part 2: Datatypes Second Edition: &quot;anyURI&quot; represents a Uniform Resource Identifier Reference (URI). An &quot;anyURI&quot; value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a UR ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="21.6" x="11.7" y="307.9143">uri :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="57.6" x="36.9" y="307.9143">XsdAnyUri</text></a><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="99" x="11.7" y="323.7627">validType : String</text></g></a><!--MD5=[e68c8cc4f84dc16059e5b0f79a02b5ac]
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector--><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Selector.html#super-class-hierarchy-generalization" target="_top" title=" ― Selector:&#10;A resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Selector.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Selector:&#10;A resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector"><rect codeLine="71" fill="#F1F1F1" height="49.7531" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="489.6" y="197.2406"/><text fill="#000000" font-family="sans-serif" font-size="10.8" font-style="italic" lengthAdjust="spacing" textLength="58.5" x="527.85" y="212.952">«dataType»</text><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="555.75" y="224.6678"> </text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="46.8" x="533.7" y="239.7252">Selector</text></g></a><!--MD5=[b661d29f55bb6202e8036047d5d831d3]
+link DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference to DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector--><g id="link_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector"><path codeLine="83" d="M319.95,221.9906 C377.163,221.9906 442.179,221.9906 489.501,221.9906 " fill="none" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference-DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector" style="stroke:#808080;stroke-width:0.9;stroke-dasharray:1.0,3.0;"/></g><!--MD5=[bafc9261b7a9c4ee0371422f39c7542e]
+reverse link DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector to DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector--><g id="link_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector"><path codeLine="88" d="M557.1,265.0646 C557.1,269.3396 557.1,273.6236 557.1,277.8986 " fill="none" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector-backto-DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector" style="stroke:#D2691E;stroke-width:1.35;"/><polygon fill="none" points="550.8,264.8936,557.1,246.8936,563.4,264.8936,550.8,264.8936" style="stroke:#D2691E;stroke-width:1.35;"/></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="378.9" x="119.25" y="372.2906"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="307.35" y="381.6334"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="307.35" y="392.9537"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="378.9" x="119.25" y="404.274">DDI Cross Domain Integration (DDI-CDI)   1.0 - StructuredDataTypes::TextPositionSelector</text><!--MD5=[6098af98a2f03dd6f62f512780843583]
+@startuml
+left to right direction
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: DataType TextPositionSelector in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - StructuredDataTypes::TextPositionSelector
+
+legend top right
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The use of the data type is represented here by a dotted line (not formal UML).
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+' Core data type of diagram
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector as "<size:10> \n<color:black>TextPositionSelector" <<dataType>>   #FFD700 {
+  end : Integer
+  start : Integer
+}
+
+' Data type definitions in own package
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference as "<size:10> \n<color:blue>Reference" <<dataType>> [[../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#super-class-hierarchy-generalization{ <U+2015> Reference:\nProvides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata.}]] {
+  ddiReference : <color:blue>InternationalRegistrationDataIdentifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalRegistrationDataIdentifier.html#diagram{ <U+2015> InternationalRegistrationDataIdentifier:\nPersistent, globally unique object identifier aligned with ISO/IEC 11179-6:2015, Information technology - Metadata registries (MDR) - Part 6: Registration, Annex A, Identifiers based on ISO/IEC 6523, http://standards.iso.org/ittf/PubliclyAvailableStandards/c060342_ISO_IEC_11179-6_2015.zip. The uniqu ...}]]]
+  deepLink : <color:blue>Selector   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Selector.html#diagram{ <U+2015> Selector:\nA resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector.}]]]
+  description : String
+  location : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  nonDdiReference : <color:blue>NonDdiIdentifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/NonDdiIdentifier.html#diagram{ <U+2015> NonDdiIdentifier:\nA unique set of attributes, not conforming to the DDI identifier structure nor structured as a URI, used to identify some entity.}]]]
+  semantic : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  uri : <color:blue>XsdAnyUri   	  [[[../DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdAnyUri.html#diagram{ <U+2015> XsdAnyUri:\nPrimitive data type "anyURI" of the XML Schema data types. Definition from XML Schema Part 2: Datatypes Second Edition: "anyURI" represents a Uniform Resource Identifier Reference (URI). An "anyURI" value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a UR ...}]]]
+  validType : String
+}
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector as "<size:10> \n<color:blue>Selector" <<dataType>> [[../DDICDILibrary/DataTypes/StructuredDataTypes/Selector.html#super-class-hierarchy-generalization{ <U+2015> Selector:\nA resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector.}]] {
+}
+
+' Data type definitions in other packages
+
+' Use of data type
+together {
+}
+
+' Super classes
+' Use of super data types
+
+DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector - -up- - DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference::deepLink #grey;line.dotted;
+
+
+
+
+DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector <|- -r- - DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector #D2691E
+
+
+' Abstractions
+together {
+}
+@enduml
+
+@startuml
+left to right direction
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: DataType TextPositionSelector in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - StructuredDataTypes::TextPositionSelector
+
+legend top right
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The use of the data type is represented here by a dotted line (not formal UML).
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector as "<size:10> \n<color:black>TextPositionSelector" <<dataType>>   #FFD700 {
+  end : Integer
+  start : Integer
+}
+
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference as "<size:10> \n<color:blue>Reference" <<dataType>> [[../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#super-class-hierarchy-generalization{ <U+2015> Reference:\nProvides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata.}]] {
+  ddiReference : <color:blue>InternationalRegistrationDataIdentifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalRegistrationDataIdentifier.html#diagram{ <U+2015> InternationalRegistrationDataIdentifier:\nPersistent, globally unique object identifier aligned with ISO/IEC 11179-6:2015, Information technology - Metadata registries (MDR) - Part 6: Registration, Annex A, Identifiers based on ISO/IEC 6523, http://standards.iso.org/ittf/PubliclyAvailableStandards/c060342_ISO_IEC_11179-6_2015.zip. The uniqu ...}]]]
+  deepLink : <color:blue>Selector   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Selector.html#diagram{ <U+2015> Selector:\nA resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector.}]]]
+  description : String
+  location : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  nonDdiReference : <color:blue>NonDdiIdentifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/NonDdiIdentifier.html#diagram{ <U+2015> NonDdiIdentifier:\nA unique set of attributes, not conforming to the DDI identifier structure nor structured as a URI, used to identify some entity.}]]]
+  semantic : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  uri : <color:blue>XsdAnyUri   	  [[[../DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdAnyUri.html#diagram{ <U+2015> XsdAnyUri:\nPrimitive data type "anyURI" of the XML Schema data types. Definition from XML Schema Part 2: Datatypes Second Edition: "anyURI" represents a Uniform Resource Identifier Reference (URI). An "anyURI" value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a UR ...}]]]
+  validType : String
+}
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector as "<size:10> \n<color:blue>Selector" <<dataType>> [[../DDICDILibrary/DataTypes/StructuredDataTypes/Selector.html#super-class-hierarchy-generalization{ <U+2015> Selector:\nA resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector.}]] {
+}
+
+
+together {
+}
+
+
+DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector - -up- - DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference::deepLink #grey;line.dotted;
+
+
+
+
+DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector <|- -r- - DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector #D2691E
+
+
+together {
+}
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

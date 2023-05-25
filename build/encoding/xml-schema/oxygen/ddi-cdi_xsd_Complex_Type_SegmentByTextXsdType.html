@@ -1,0 +1,1013 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component characterLength</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        var propertiesBoxes= new Array('properties_SegmentByTextXsdType_characterLength', 
+				'properties_SegmentByTextXsdType_endCharacterPosition', 
+				'properties_SegmentByTextXsdType_endLine', 
+				'properties_SegmentByTextXsdType_startCharacterPosition', 
+				'properties_SegmentByTextXsdType_startLine');
+var usedByBoxes= new Array('usedBy_SegmentByTextXsdType');
+var sourceBoxes= new Array('source_SegmentByTextXsdType_characterLength', 
+				'source_SegmentByTextXsdType_endCharacterPosition', 
+				'source_SegmentByTextXsdType_endLine', 
+				'source_SegmentByTextXsdType_startCharacterPosition', 
+				'source_SegmentByTextXsdType_startLine', 
+				'source_SegmentByTextXsdType');
+var diagramBoxes= new Array('diagram_SegmentByTextXsdType_characterLength', 
+				'diagram_SegmentByTextXsdType_endCharacterPosition', 
+				'diagram_SegmentByTextXsdType_endLine', 
+				'diagram_SegmentByTextXsdType_startCharacterPosition', 
+				'diagram_SegmentByTextXsdType_startLine', 
+				'diagram_SegmentByTextXsdType');
+var annotationBoxes= new Array('annotations_SegmentByTextXsdType_characterLength', 
+				'annotations_SegmentByTextXsdType_endCharacterPosition', 
+				'annotations_SegmentByTextXsdType_endLine', 
+				'annotations_SegmentByTextXsdType_startCharacterPosition', 
+				'annotations_SegmentByTextXsdType_startLine', 
+				'annotations_SegmentByTextXsdType');
+var modelBoxes= new Array('model_SegmentByTextXsdType');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="SegmentByTextXsdType_characterLength"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByTextXsdType')">SegmentByTextXsdType</a></b> / characterLength</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SegmentByTextXsdType_characterLength" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SegmentByTextXsdType_characterLength');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SegmentByTextXsdType_characterLength" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The number of characters in the segment. The segment may include text from multiple lines of the resource. If it does, the length includes any line termination characters.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SegmentByTextXsdType_characterLength" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SegmentByTextXsdType_characterLength');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SegmentByTextXsdType_characterLength" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_characterLength.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:integer</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SegmentByTextXsdType_characterLength" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SegmentByTextXsdType_characterLength');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SegmentByTextXsdType_characterLength" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SegmentByTextXsdType_characterLength" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SegmentByTextXsdType_characterLength');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SegmentByTextXsdType_characterLength" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"characterLength"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-characterLength"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The number of characters in the segment. The segment may include text from multiple lines of the resource. If it does, the length includes any line termination characters.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SegmentByTextXsdType_endCharacterPosition"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByTextXsdType')">SegmentByTextXsdType</a></b> / endCharacterPosition</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SegmentByTextXsdType_endCharacterPosition" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SegmentByTextXsdType_endCharacterPosition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SegmentByTextXsdType_endCharacterPosition" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The character position of the last character of the segment.  If endLine is specified, the count begins at character 1 of endLine. If startLine and endLine are not specified, the count begins at character 1 of the first line of the resource and the count includes any line termination characters. The resulting segment may include text from multiple lines of the resource.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SegmentByTextXsdType_endCharacterPosition" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SegmentByTextXsdType_endCharacterPosition');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SegmentByTextXsdType_endCharacterPosition" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_endCharacterPosition.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:integer</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SegmentByTextXsdType_endCharacterPosition" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SegmentByTextXsdType_endCharacterPosition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SegmentByTextXsdType_endCharacterPosition" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SegmentByTextXsdType_endCharacterPosition" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SegmentByTextXsdType_endCharacterPosition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SegmentByTextXsdType_endCharacterPosition" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"endCharacterPosition"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-endCharacterPosition"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The character position of the last character of the segment. If endLine is specified, the count begins at character 1 of endLine. If startLine and endLine are not specified, the count begins at character 1 of the first line of the resource and the count includes any line termination characters. The resulting segment may include text from multiple lines of the resource.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SegmentByTextXsdType_endLine"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByTextXsdType')">SegmentByTextXsdType</a></b> / endLine</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SegmentByTextXsdType_endLine" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SegmentByTextXsdType_endLine');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SegmentByTextXsdType_endLine" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The last line on which to count characters. If missing this defaults to startLine.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SegmentByTextXsdType_endLine" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SegmentByTextXsdType_endLine');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SegmentByTextXsdType_endLine" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_endLine.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:integer</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SegmentByTextXsdType_endLine" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SegmentByTextXsdType_endLine');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SegmentByTextXsdType_endLine" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SegmentByTextXsdType_endLine" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SegmentByTextXsdType_endLine');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SegmentByTextXsdType_endLine" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"endLine"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-endLine"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The last line on which to count characters. If missing this defaults to startLine.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SegmentByTextXsdType_startCharacterPosition"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByTextXsdType')">SegmentByTextXsdType</a></b> / startCharacterPosition</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SegmentByTextXsdType_startCharacterPosition" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SegmentByTextXsdType_startCharacterPosition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SegmentByTextXsdType_startCharacterPosition" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The character position of the first character of the segment, with the count beginning at character 1 of startLine.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SegmentByTextXsdType_startCharacterPosition" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SegmentByTextXsdType_startCharacterPosition');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SegmentByTextXsdType_startCharacterPosition" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_startCharacterPosition.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:integer</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SegmentByTextXsdType_startCharacterPosition" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SegmentByTextXsdType_startCharacterPosition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SegmentByTextXsdType_startCharacterPosition" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SegmentByTextXsdType_startCharacterPosition" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SegmentByTextXsdType_startCharacterPosition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SegmentByTextXsdType_startCharacterPosition" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"startCharacterPosition"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-startCharacterPosition"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The character position of the first character of the segment, with the count beginning at character 1 of startLine.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SegmentByTextXsdType_startLine"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByTextXsdType')">SegmentByTextXsdType</a></b> / startLine</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SegmentByTextXsdType_startLine" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SegmentByTextXsdType_startLine');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SegmentByTextXsdType_startLine" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The line number, where 1 is the first line, on which to begin counting characters. If missing this defaults to 1 (the first line).</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SegmentByTextXsdType_startLine" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SegmentByTextXsdType_startLine');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SegmentByTextXsdType_startLine" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_startLine.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:integer</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_SegmentByTextXsdType_startLine" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_SegmentByTextXsdType_startLine');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_SegmentByTextXsdType_startLine" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SegmentByTextXsdType_startLine" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SegmentByTextXsdType_startLine');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SegmentByTextXsdType_startLine" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"startLine"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-startLine"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The line number, where 1 is the first line, on which to begin counting characters. If missing this defaults to 1 (the first line).</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="SegmentByTextXsdType"></a><div class="componentTitle">Complex Type <span class="qname">SegmentByTextXsdType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_SegmentByTextXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_SegmentByTextXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_SegmentByTextXsdType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Definition </span><span class="tI">
+</span><span class="tT">============ </span><span class="tI">
+</span><span class="tT">Location of a segment of text through character or line counts.  </span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Examples </span><span class="tI">
+</span><span class="tT">========== </span><span class="tI">
+</span><span class="tT">The segment beginning at line 3, character 4 and ending at line 27 character 13. Alternatively the segment beginning at character 257 and ending at character 1350 of the whole body of text. StartLine of 10, endLine of 12, startCharacterPosition of 1, endCharacterPosition of 0 means all of lines 10, 11, and 12.  An endCharacterPosition of 0 indicates that whole lines are specified.  </span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Explanatory notes </span><span class="tI">
+</span><span class="tT">=================== </span><span class="tI">
+</span><span class="tT">An adequate description will always include a startCharacterPosition and then may include an endCharacterPosition or a characterLength. If StartLine is specified, the character counts begin within that line.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_SegmentByTextXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SegmentByTextXsdType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_SegmentByTextXsdType" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.jpeg" usemap="#ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType" /><map name="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType" id="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType"><area alt="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.tmp#PhysicalSegmentLocationXsdType_catalogDetails" href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType_catalogDetails" coords="390,40,564,84" /><area alt="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.tmp#PhysicalSegmentLocationXsdType_identifier" href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType_identifier" coords="390,139,537,183" /><area alt="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.tmp#PhysicalSegmentLocationXsdType" href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType" coords="308,3,610,25" /><area alt="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.tmp#SegmentByTextXsdType_characterLength" href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_characterLength" coords="376,290,487,334" /><area alt="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.tmp#SegmentByTextXsdType_endCharacterPosition" href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_endCharacterPosition" coords="376,403,510,447" /><area alt="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.tmp#SegmentByTextXsdType_endLine" href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_endLine" coords="376,502,487,546" /><area alt="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.tmp#SegmentByTextXsdType_startCharacterPosition" href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_startCharacterPosition" coords="376,601,514,645" /><area alt="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.tmp#SegmentByTextXsdType_startLine" href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_startLine" coords="376,700,487,744" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalSegmentLocationXsdType')">PhysicalSegmentLocationXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalSegmentLocationXsdType')">PhysicalSegmentLocationXsdType</a></b><ul class="internal">
+                                    <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByTextXsdType')">SegmentByTextXsdType</a></b></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_SegmentByTextXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_SegmentByTextXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_SegmentByTextXsdType" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="ddi-cdi_xsd_Element_SegmentByText.html#SegmentByText" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByText')">SegmentByText</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_SegmentByTextXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('model_SegmentByTextXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_SegmentByTextXsdType" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType_catalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component catalogDetails{0,1}')">catalogDetails{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier{0,1}')">identifier{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_characterLength" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component characterLength{0,1}')">characterLength{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_endCharacterPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component endCharacterPosition{0,1}')">endCharacterPosition{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_endLine" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component endLine{0,1}')">endLine{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_startCharacterPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component startCharacterPosition{0,1}')">startCharacterPosition{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_startLine" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component startLine{0,1}')">startLine{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType_catalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component catalogDetails')">catalogDetails</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_characterLength" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component characterLength')">characterLength</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_endCharacterPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component endCharacterPosition')">endCharacterPosition</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_endLine" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component endLine')">endLine</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier')">identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_startCharacterPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component startCharacterPosition')">startCharacterPosition</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType_startLine" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component startLine')">startLine</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_SegmentByTextXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_SegmentByTextXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_SegmentByTextXsdType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"SegmentByTextXsdType"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByTextXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Definition ============ Location of a segment of text through character or line counts. Examples ========== The segment beginning at line 3, character 4 and ending at line 27 character 13. Alternatively the segment beginning at character 257 and ending at character 1350 of the whole body of text. StartLine of 10, endLine of 12, startCharacterPosition of 1, endCharacterPosition of 0 means all of lines 10, 11, and 12. An endCharacterPosition of 0 indicates that whole lines are specified. Explanatory notes =================== An adequate description will always include a startCharacterPosition and then may include an endCharacterPosition or a characterLength. If StartLine is specified, the character counts begin within that line.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"PhysicalSegmentLocationXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"characterLength"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-characterLength"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The number of characters in the segment. The segment may include text from multiple lines of the resource. If it does, the length includes any line termination characters.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"endCharacterPosition"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-endCharacterPosition"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The character position of the last character of the segment. If endLine is specified, the count begins at character 1 of endLine. If startLine and endLine are not specified, the count begins at character 1 of the first line of the resource and the count includes any line termination characters. The resulting segment may include text from multiple lines of the resource.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"endLine"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-endLine"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The last line on which to count characters. If missing this defaults to startLine.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"startCharacterPosition"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-startCharacterPosition"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The character position of the first character of the segment, with the count beginning at character 1 of startLine.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"startLine"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"SegmentByText-startLine"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The line number, where 1 is the first line, on which to begin counting characters. If missing this defaults to 1 (the first line).</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

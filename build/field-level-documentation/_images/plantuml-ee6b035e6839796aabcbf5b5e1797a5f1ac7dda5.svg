@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="571.5px" preserveAspectRatio="none" style="width:670px;height:571px;background:#FFFFFF;" version="1.1" viewBox="0 0 670 571" width="670.5px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="350.1" x="153.9" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="341.1" x="158.4" y="27.6855">UML Diagram: Class Signifier in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="327.15" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[f47d3e746fb7ad6238bccd36a0909031]
+class DDICDIModels::DesignPatterns::SignificationPattern::Sign--><a href="../DesignPatterns/SignificationPattern/Sign.html#super-class-hierarchy-generalization" target="_top" title=" ― Sign:&#10;Something that suggests the presence or existence of a fact, condition, or quality." xlink:actuate="onRequest" xlink:href="../DesignPatterns/SignificationPattern/Sign.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Sign:&#10;Something that suggests the presence or existence of a fact, condition, or quality." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::SignificationPattern::Sign"><rect codeLine="55" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::SignificationPattern::Sign" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="335.7" y="270.9"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="90" x="358.2" y="284.7428">SignificationPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="25.2" x="390.6" y="299.8002">Sign</text></g></a><!--MD5=[71a7a2ce0662d4c24c6bea8e66a5b8df]
+class DDICDIModels::DesignPatterns::SignificationPattern::Signified--><a href="../DesignPatterns/SignificationPattern/Signified.html#super-class-hierarchy-generalization" target="_top" title=" ― Signified:&#10;Concept or object denoted by the signifier associated to a sign." xlink:actuate="onRequest" xlink:href="../DesignPatterns/SignificationPattern/Signified.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Signified:&#10;Concept or object denoted by the signifier associated to a sign." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::SignificationPattern::Signified"><rect codeLine="56" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::SignificationPattern::Signified" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="530.1" y="270.9"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="90" x="552.6" y="284.7428">SignificationPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="48.6" x="573.3" y="299.8002">Signified</text></g></a><!--MD5=[cf2b466143bd797820c9416be252779d]
+entity ##7--><!--MD5=[718c9ccf910fa9d0edd15e6a7992dfdd]
+class DDICDIModels::DesignPatterns::SignificationPattern::Signifier--><a href="../DesignPatterns/SignificationPattern/Signifier.html#super-class-hierarchy-generalization" target="_top" title=" ― Signifier:&#10;Concept whose extension includes perceivable objects." xlink:actuate="onRequest" xlink:href="../DesignPatterns/SignificationPattern/Signifier.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Signifier:&#10;Concept whose extension includes perceivable objects." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::SignificationPattern::Signifier"><rect codeLine="62" fill="#F1F1F1" height="75.0656" id="DDICDIModels::DesignPatterns::SignificationPattern::Signifier" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="180.9" x="226.35" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="90" x="271.8" y="137.5928">SignificationPattern::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="45.9" x="293.85" y="152.6502">Signifier</text><line style="stroke:#404040;stroke-width:0.45;" x1="227.25" x2="406.35" y1="159.9188" y2="159.9188"/><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="86.4" x="231.75" y="176.5986">content : String</text><a href="../DDICDILibrary/DataTypes/Enumerations/WhiteSpaceRule.html#diagram" target="_top" title=" ― WhiteSpaceRule:&#10;WhiteSpace constrains the value space of types derived from string." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/Enumerations/WhiteSpaceRule.html#diagram" xlink:show="new" xlink:title=" ― WhiteSpaceRule:&#10;WhiteSpace constrains the value space of types derived from string." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="72" x="231.75" y="192.4471">whiteSpace :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="94.5" x="307.35" y="192.4471">WhiteSpaceRule</text></a></g></a><!--MD5=[9995a2dceb5f31a5260ac52ed8e35176]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue--><a href="../DDICDILibrary/Classes/DataDescription/InstanceValue.html#super-class-hierarchy-generalization" target="_top" title=" ― InstanceValue:&#10;Single data instance corresponding to a concept (with a notion of equality defined) being observed, captured, or derived." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/InstanceValue.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― InstanceValue:&#10;Single data instance corresponding to a concept (with a notion of equality defined) being observed, captured, or derived." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue"><rect codeLine="66" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="490.5"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="37.35" y="504.3428">DataDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="80.1" x="33.75" y="519.4002">InstanceValue</text></g></a><!--MD5=[2a662664d8b34af381a05d0c59c9fa6d]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation--><a href="../DDICDILibrary/Classes/DataDescription/Notation.html#super-class-hierarchy-generalization" target="_top" title=" ― Notation:&#10;Representation of a category in the context of a code or a classification item, as opposed of the corresponding instance value which would appear when used in a dataset." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Notation.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Notation:&#10;Representation of a category in the context of a code or a classification item, as opposed of the corresponding instance value which would appear when used in a dataset." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation"><rect codeLine="67" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="200.7" y="490.5"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="231.75" y="504.3428">DataDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="46.8" x="244.8" y="519.4002">Notation</text></g></a><!--MD5=[0059cdee7d9795b341af6f646fbbe07c]
+reverse link DDICDIModels::DesignPatterns::SignificationPattern::Signifier to DDICDIModels::DesignPatterns::SignificationPattern::Sign--><g id="link_DDICDIModels::DesignPatterns::SignificationPattern::Signifier_DDICDIModels::DesignPatterns::SignificationPattern::Sign"><a href="" target="_top" title=" ― uses:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― uses:&#10;" xlink:type="simple"><path codeLine="72" d="M344.718,202.716 C360.459,225.675 379.314,253.17 391.275,270.603 " fill="none" id="DDICDIModels::DesignPatterns::SignificationPattern::Signifier-backto-DDICDIModels::DesignPatterns::SignificationPattern::Sign" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="342.018,198.783,343.6403,207.4972,344.5674,202.4912,349.5734,203.4182,342.018,198.783" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="25.2" x="370.8" y="238.9456">uses</text></a></g><!--MD5=[d83cf5689e4ea339f55d006b6e09327c]
+link DDICDIModels::DesignPatterns::SignificationPattern::Signifier to DDICDIModels::DesignPatterns::SignificationPattern::Signified--><g id="link_DDICDIModels::DesignPatterns::SignificationPattern::Signifier_DDICDIModels::DesignPatterns::SignificationPattern::Signified"><a href="" target="_top" title=" ― represents:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― represents:&#10;" xlink:type="simple"><path codeLine="73" d="M398.394,198.612 C449.748,221.652 513.9,250.443 555.3,269.019 " fill="none" id="DDICDIModels::DesignPatterns::SignificationPattern::Signifier-to-DDICDIModels::DesignPatterns::SignificationPattern::Signified" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="559.485,270.9,553.5757,264.2931,555.3814,269.0534,550.6211,270.859,559.485,270.9" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="54.9" x="491.4" y="238.9456">represents</text></a></g><!--MD5=[161765003e1b4568c8489dde50414427]
+reverse link DDICDIModels::DesignPatterns::SignificationPattern::Signifier to DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue--><g id="link_DDICDIModels::DesignPatterns::SignificationPattern::Signifier_DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue"><path codeLine="77" d="M221.841,192.195 C153.684,216.819 73.8,253.125 73.8,288 C73.8,288 73.8,288 73.8,435.15 C73.8,454.014 73.8,475.65 73.8,490.329 " fill="none" id="DDICDIModels::DesignPatterns::SignificationPattern::Signifier-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="226.314,190.584,217.4731,189.9452,222.0808,192.1105,219.9155,196.7183,226.314,190.584" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="74.7" y="376.6456">«Refine»</text></g><!--MD5=[86556606b2ffb453d64646a46233b1de]
+reverse link DDICDIModels::DesignPatterns::SignificationPattern::Signifier to DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation--><g id="link_DDICDIModels::DesignPatterns::SignificationPattern::Signifier_DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation"><path codeLine="79" d="M292.392,202.707 C280.278,226.674 268.2,258.075 268.2,288 C268.2,288 268.2,288 268.2,435.15 C268.2,454.014 268.2,475.65 268.2,490.329 " fill="none" id="DDICDIModels::DesignPatterns::SignificationPattern::Signifier-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="294.489,198.621,287.5822,204.1768,292.4304,202.6225,293.9846,207.4706,294.489,198.621" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="269.1" y="376.6456">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="322.2" x="167.85" y="531.1688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="327.6" y="540.5115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="327.6" y="551.8318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="322.2" x="167.85" y="563.1521">DDI Cross Domain Integration (DDI-CDI)   1.0 - SignificationPattern::Signifier</text><!--MD5=[0606bde09330bed950dd7fe478c714fa]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Signifier in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - SignificationPattern::Signifier
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+abstract class DDICDIModels::DesignPatterns::SignificationPattern::Signifier as "<size:10>SignificationPattern::\n<color:black>Signifier" #FFD700 {
+  content : String
+  whiteSpace : <color:blue>WhiteSpaceRule   	  [[[../DDICDILibrary/DataTypes/Enumerations/WhiteSpaceRule.html#diagram{ <U+2015> WhiteSpaceRule:\nWhiteSpace constrains the value space of types derived from string.}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  abstract class DDICDIModels::DesignPatterns::SignificationPattern::Sign as "<size:10>SignificationPattern::\n<color:blue>Sign" [[../DesignPatterns/SignificationPattern/Sign.html#super-class-hierarchy-generalization{ <U+2015> Sign:\nSomething that suggests the presence or existence of a fact, condition, or quality.}]]
+  abstract class DDICDIModels::DesignPatterns::SignificationPattern::Signified as "<size:10>SignificationPattern::\n<color:blue>Signified" [[../DesignPatterns/SignificationPattern/Signified.html#super-class-hierarchy-generalization{ <U+2015> Signified:\nConcept or object denoted by the signifier associated to a sign.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::SignificationPattern::Signifier as "<size:10>SignificationPattern::\n<color:blue>Signifier" [[../DesignPatterns/SignificationPattern/Signifier.html#super-class-hierarchy-generalization{ <U+2015> Signifier:\nConcept whose extension includes perceivable objects.}]]
+  abstract class DDICDIModels::DesignPatterns::SignificationPattern::Signifier as "<size:10>SignificationPattern::\n<color:blue>Signifier" [[../DesignPatterns/SignificationPattern/Signifier.html#super-class-hierarchy-generalization{ <U+2015> Signifier:\nConcept whose extension includes perceivable objects.}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue as "<size:10>DataDescription::\n<color:blue>InstanceValue" [[../DDICDILibrary/Classes/DataDescription/InstanceValue.html#super-class-hierarchy-generalization{ <U+2015> InstanceValue:\nSingle data instance corresponding to a concept (with a notion of equality defined) being observed, captured, or derived.}]]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation as "<size:10>DataDescription::\n<color:blue>Notation" [[../DDICDILibrary/Classes/DataDescription/Notation.html#super-class-hierarchy-generalization{ <U+2015> Notation:\nRepresentation of a category in the context of a code or a classification item, as opposed of the corresponding instance value which would appear when used in a dataset.}]]
+
+
+
+' Associations
+DDICDIModels::DesignPatterns::SignificationPattern::Signifier <-[#grey]- DDICDIModels::DesignPatterns::SignificationPattern::Sign [[{ <U+2015> uses:\n}]] : uses
+DDICDIModels::DesignPatterns::SignificationPattern::Signifier -[#grey]-> DDICDIModels::DesignPatterns::SignificationPattern::Signified [[{ <U+2015> represents:\n}]] : represents
+
+
+' Abstractions
+  DDICDIModels::DesignPatterns::SignificationPattern::Signifier <..... DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue : <U+00AB>Refine<U+00BB>
+   
+  DDICDIModels::DesignPatterns::SignificationPattern::Signifier <..... DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Signifier in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - SignificationPattern::Signifier
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+abstract class DDICDIModels::DesignPatterns::SignificationPattern::Signifier as "<size:10>SignificationPattern::\n<color:black>Signifier" #FFD700 {
+  content : String
+  whiteSpace : <color:blue>WhiteSpaceRule   	  [[[../DDICDILibrary/DataTypes/Enumerations/WhiteSpaceRule.html#diagram{ <U+2015> WhiteSpaceRule:\nWhiteSpace constrains the value space of types derived from string.}]]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::SignificationPattern::Sign as "<size:10>SignificationPattern::\n<color:blue>Sign" [[../DesignPatterns/SignificationPattern/Sign.html#super-class-hierarchy-generalization{ <U+2015> Sign:\nSomething that suggests the presence or existence of a fact, condition, or quality.}]]
+  abstract class DDICDIModels::DesignPatterns::SignificationPattern::Signified as "<size:10>SignificationPattern::\n<color:blue>Signified" [[../DesignPatterns/SignificationPattern/Signified.html#super-class-hierarchy-generalization{ <U+2015> Signified:\nConcept or object denoted by the signifier associated to a sign.}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::SignificationPattern::Signifier as "<size:10>SignificationPattern::\n<color:blue>Signifier" [[../DesignPatterns/SignificationPattern/Signifier.html#super-class-hierarchy-generalization{ <U+2015> Signifier:\nConcept whose extension includes perceivable objects.}]]
+  abstract class DDICDIModels::DesignPatterns::SignificationPattern::Signifier as "<size:10>SignificationPattern::\n<color:blue>Signifier" [[../DesignPatterns/SignificationPattern/Signifier.html#super-class-hierarchy-generalization{ <U+2015> Signifier:\nConcept whose extension includes perceivable objects.}]]
+}
+
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue as "<size:10>DataDescription::\n<color:blue>InstanceValue" [[../DDICDILibrary/Classes/DataDescription/InstanceValue.html#super-class-hierarchy-generalization{ <U+2015> InstanceValue:\nSingle data instance corresponding to a concept (with a notion of equality defined) being observed, captured, or derived.}]]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation as "<size:10>DataDescription::\n<color:blue>Notation" [[../DDICDILibrary/Classes/DataDescription/Notation.html#super-class-hierarchy-generalization{ <U+2015> Notation:\nRepresentation of a category in the context of a code or a classification item, as opposed of the corresponding instance value which would appear when used in a dataset.}]]
+
+
+
+DDICDIModels::DesignPatterns::SignificationPattern::Signifier <-[#grey]- DDICDIModels::DesignPatterns::SignificationPattern::Sign [[{ <U+2015> uses:\n}]] : uses
+DDICDIModels::DesignPatterns::SignificationPattern::Signifier -[#grey]-> DDICDIModels::DesignPatterns::SignificationPattern::Signified [[{ <U+2015> represents:\n}]] : represents
+
+
+  DDICDIModels::DesignPatterns::SignificationPattern::Signifier <..... DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue : <U+00AB>Refine<U+00BB>
+   
+  DDICDIModels::DesignPatterns::SignificationPattern::Signifier <..... DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

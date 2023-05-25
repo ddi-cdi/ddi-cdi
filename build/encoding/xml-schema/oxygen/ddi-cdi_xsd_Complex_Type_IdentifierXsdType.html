@@ -1,0 +1,1461 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component ddiIdentifier</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        var propertiesBoxes= new Array('properties_IdentifierXsdType_ddiIdentifier', 
+				'properties_IdentifierXsdType_isDdiIdentifierPersistent', 
+				'properties_IdentifierXsdType_isDdiIdentifierUniversallyUnique', 
+				'properties_IdentifierXsdType_nonDdiIdentifier', 
+				'properties_IdentifierXsdType_uri', 
+				'properties_IdentifierXsdType_versionDate', 
+				'properties_IdentifierXsdType_versionRationale', 
+				'properties_IdentifierXsdType_versionResponsibility');
+var usedByBoxes= new Array('usedBy_IdentifierXsdType');
+var sourceBoxes= new Array('source_IdentifierXsdType_ddiIdentifier', 
+				'source_IdentifierXsdType_isDdiIdentifierPersistent', 
+				'source_IdentifierXsdType_isDdiIdentifierUniversallyUnique', 
+				'source_IdentifierXsdType_nonDdiIdentifier', 
+				'source_IdentifierXsdType_uri', 
+				'source_IdentifierXsdType_versionDate', 
+				'source_IdentifierXsdType_versionRationale', 
+				'source_IdentifierXsdType_versionResponsibility', 
+				'source_IdentifierXsdType');
+var instanceBoxes= new Array('instance_IdentifierXsdType_ddiIdentifier', 
+				'instance_IdentifierXsdType_nonDdiIdentifier', 
+				'instance_IdentifierXsdType_versionRationale', 
+				'instance_IdentifierXsdType_versionResponsibility');
+var diagramBoxes= new Array('diagram_IdentifierXsdType_ddiIdentifier', 
+				'diagram_IdentifierXsdType_isDdiIdentifierPersistent', 
+				'diagram_IdentifierXsdType_isDdiIdentifierUniversallyUnique', 
+				'diagram_IdentifierXsdType_nonDdiIdentifier', 
+				'diagram_IdentifierXsdType_uri', 
+				'diagram_IdentifierXsdType_versionDate', 
+				'diagram_IdentifierXsdType_versionRationale', 
+				'diagram_IdentifierXsdType_versionResponsibility', 
+				'diagram_IdentifierXsdType');
+var annotationBoxes= new Array('annotations_IdentifierXsdType_ddiIdentifier', 
+				'annotations_IdentifierXsdType_isDdiIdentifierPersistent', 
+				'annotations_IdentifierXsdType_isDdiIdentifierUniversallyUnique', 
+				'annotations_IdentifierXsdType_nonDdiIdentifier', 
+				'annotations_IdentifierXsdType_uri', 
+				'annotations_IdentifierXsdType_versionDate', 
+				'annotations_IdentifierXsdType_versionRationale', 
+				'annotations_IdentifierXsdType_versionResponsibility', 
+				'annotations_IdentifierXsdType');
+var modelBoxes= new Array('model_IdentifierXsdType_ddiIdentifier', 
+				'model_IdentifierXsdType_nonDdiIdentifier', 
+				'model_IdentifierXsdType_versionRationale', 
+				'model_IdentifierXsdType_versionResponsibility', 
+				'model_IdentifierXsdType');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="IdentifierXsdType_ddiIdentifier"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b> / ddiIdentifier</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType_ddiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType_ddiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType_ddiIdentifier" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">A globally unique identifier. The values of the three attributes can be used to create a DDI URN.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType_ddiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType_ddiIdentifier');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType_ddiIdentifier" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_ddiIdentifier.jpeg" usemap="#ddi-cdi_xsd_Element_ddiIdentifier" /><map name="ddi-cdi_xsd_Element_ddiIdentifier" id="ddi-cdi_xsd_Element_ddiIdentifier"><area alt="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.tmp#InternationalRegistrationDataIdentifierXsdType_dataIdentifier" href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_dataIdentifier" coords="374,40,479,84" /><area alt="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.tmp#InternationalRegistrationDataIdentifierXsdType_registrationAuthorityIdentifier" href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_registrationAuthorityIdentifier" coords="374,153,544,197" /><area alt="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.tmp#InternationalRegistrationDataIdentifierXsdType_versionIdentifier" href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_versionIdentifier" coords="374,252,482,296" /><area alt="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.tmp#InternationalRegistrationDataIdentifierXsdType" href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType" coords="292,3,564,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InternationalRegistrationDataIdentifierXsdType')">InternationalRegistrationDataIdentifierXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IdentifierXsdType_ddiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IdentifierXsdType_ddiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IdentifierXsdType_ddiIdentifier" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IdentifierXsdType_ddiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IdentifierXsdType_ddiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_IdentifierXsdType_ddiIdentifier" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_dataIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component dataIdentifier')">dataIdentifier</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_registrationAuthorityIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component registrationAuthorityIdentifier')">registrationAuthorityIdentifier</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_versionIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component versionIdentifier')">versionIdentifier</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_dataIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component dataIdentifier')">dataIdentifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_registrationAuthorityIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component registrationAuthorityIdentifier')">registrationAuthorityIdentifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType_versionIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component versionIdentifier')">versionIdentifier</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_IdentifierXsdType_ddiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_IdentifierXsdType_ddiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_IdentifierXsdType_ddiIdentifier" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;ddiIdentifier</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;dataIdentifier</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dataIdentifier&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;registrationAuthorityIdentifier</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/registrationAuthorityIdentifier&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;versionIdentifier</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/versionIdentifier&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/ddiIdentifier&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType_ddiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType_ddiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType_ddiIdentifier" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ddiIdentifier"</span><span class="tAN"> type=</span><span class="tAV">"InternationalRegistrationDataIdentifierXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-ddiIdentifier"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A globally unique identifier. The values of the three attributes can be used to create a DDI URN.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="IdentifierXsdType_isDdiIdentifierPersistent"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b> / isDdiIdentifierPersistent</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType_isDdiIdentifierPersistent" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType_isDdiIdentifierPersistent');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType_isDdiIdentifierPersistent" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Default value is False indicating that the content of the current version may change (may be in development mode). Set to True when the content of this version will no longer change.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType_isDdiIdentifierPersistent" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType_isDdiIdentifierPersistent');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType_isDdiIdentifierPersistent" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_isDdiIdentifierPersistent.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:boolean</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IdentifierXsdType_isDdiIdentifierPersistent" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IdentifierXsdType_isDdiIdentifierPersistent');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IdentifierXsdType_isDdiIdentifierPersistent" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType_isDdiIdentifierPersistent" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType_isDdiIdentifierPersistent');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType_isDdiIdentifierPersistent" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"isDdiIdentifierPersistent"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-isDdiIdentifierPersistent"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Default value is False indicating that the content of the current version may change (may be in development mode). Set to True when the content of this version will no longer change.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="IdentifierXsdType_isDdiIdentifierUniversallyUnique"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b> / isDdiIdentifierUniversallyUnique</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType_isDdiIdentifierUniversallyUnique" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType_isDdiIdentifierUniversallyUnique');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType_isDdiIdentifierUniversallyUnique" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Default value is False. If the id of the object was created as a Universally Unique ID (UUID) set to True.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType_isDdiIdentifierUniversallyUnique" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType_isDdiIdentifierUniversallyUnique');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType_isDdiIdentifierUniversallyUnique" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_isDdiIdentifierUniversallyUnique.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:boolean</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IdentifierXsdType_isDdiIdentifierUniversallyUnique" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IdentifierXsdType_isDdiIdentifierUniversallyUnique');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IdentifierXsdType_isDdiIdentifierUniversallyUnique" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType_isDdiIdentifierUniversallyUnique" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType_isDdiIdentifierUniversallyUnique');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType_isDdiIdentifierUniversallyUnique" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"isDdiIdentifierUniversallyUnique"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-isDdiIdentifierUniversallyUnique"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Default value is False. If the id of the object was created as a Universally Unique ID (UUID) set to True.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="IdentifierXsdType_nonDdiIdentifier"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b> / nonDdiIdentifier</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType_nonDdiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType_nonDdiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType_nonDdiIdentifier" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Any identifier other than a DDI identifier.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType_nonDdiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType_nonDdiIdentifier');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType_nonDdiIdentifier" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_nonDdiIdentifier.jpeg" usemap="#ddi-cdi_xsd_Element_nonDdiIdentifier" /><map name="ddi-cdi_xsd_Element_nonDdiIdentifier" id="ddi-cdi_xsd_Element_nonDdiIdentifier"><area alt="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.tmp#NonDdiIdentifierXsdType_managingAgency" href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_managingAgency" coords="314,40,429,84" /><area alt="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.tmp#NonDdiIdentifierXsdType_type" href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_type" coords="314,125,419,169" /><area alt="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.tmp#NonDdiIdentifierXsdType_value" href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_value" coords="314,224,419,268" /><area alt="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.tmp#NonDdiIdentifierXsdType_version" href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_version" coords="314,309,419,353" /><area alt="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.tmp#NonDdiIdentifierXsdType" href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType" coords="232,3,401,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NonDdiIdentifierXsdType')">NonDdiIdentifierXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IdentifierXsdType_nonDdiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IdentifierXsdType_nonDdiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IdentifierXsdType_nonDdiIdentifier" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IdentifierXsdType_nonDdiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IdentifierXsdType_nonDdiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_IdentifierXsdType_nonDdiIdentifier" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_managingAgency" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component managingAgency{0,1}')">managingAgency{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_type" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component type')">type</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_value" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component value')">value</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_version" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component version{0,1}')">version{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_managingAgency" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component managingAgency')">managingAgency</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_type" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component type')">type</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_value" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component value')">value</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType_version" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component version')">version</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_IdentifierXsdType_nonDdiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_IdentifierXsdType_nonDdiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_IdentifierXsdType_nonDdiIdentifier" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;nonDdiIdentifier</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;managingAgency</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/managingAgency&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;type</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/type&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;value</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/value&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;version</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/version&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/nonDdiIdentifier&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType_nonDdiIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType_nonDdiIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType_nonDdiIdentifier" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"nonDdiIdentifier"</span><span class="tAN"> type=</span><span class="tAV">"NonDdiIdentifierXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-nonDdiIdentifier"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Any identifier other than a DDI identifier.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="IdentifierXsdType_uri"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b> / uri</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType_uri" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType_uri');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType_uri" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">A Universal Resource Identifier, valid according to the W3C XML Schema specification.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType_uri" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType_uri');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType_uri" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_uri_1.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:anyURI</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IdentifierXsdType_uri" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IdentifierXsdType_uri');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IdentifierXsdType_uri" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType_uri" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType_uri');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType_uri" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"uri"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-uri"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A Universal Resource Identifier, valid according to the W3C XML Schema specification.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="IdentifierXsdType_versionDate"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b> / versionDate</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType_versionDate" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType_versionDate');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType_versionDate" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Date and time the object was changed expressed in standard ISO formats.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType_versionDate" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType_versionDate');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType_versionDate" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_versionDate.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:date</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IdentifierXsdType_versionDate" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IdentifierXsdType_versionDate');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IdentifierXsdType_versionDate" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType_versionDate" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType_versionDate');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType_versionDate" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"versionDate"</span><span class="tAN"> type=</span><span class="tAV">"xs:date"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-versionDate"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Date and time the object was changed expressed in standard ISO formats.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="IdentifierXsdType_versionRationale"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b> / versionRationale</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType_versionRationale" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType_versionRationale');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType_versionRationale" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Reason for making a new version of the object.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType_versionRationale" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType_versionRationale');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType_versionRationale" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_versionRationale.jpeg" usemap="#ddi-cdi_xsd_Element_versionRationale" /><map name="ddi-cdi_xsd_Element_versionRationale" id="ddi-cdi_xsd_Element_versionRationale"><area alt="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.tmp#RationaleDefinitionXsdType_rationaleCode" href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType_rationaleCode" coords="327,40,562,84" /><area alt="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.tmp#RationaleDefinitionXsdType_rationaleDescription" href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType_rationaleDescription" coords="327,139,519,183" /><area alt="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.tmp#RationaleDefinitionXsdType" href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType" coords="245,3,427,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RationaleDefinitionXsdType')">RationaleDefinitionXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IdentifierXsdType_versionRationale" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IdentifierXsdType_versionRationale');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IdentifierXsdType_versionRationale" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IdentifierXsdType_versionRationale" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IdentifierXsdType_versionRationale');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_IdentifierXsdType_versionRationale" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType_rationaleCode" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component rationaleCode{0,1}')">rationaleCode{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType_rationaleDescription" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component rationaleDescription{0,1}')">rationaleDescription{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType_rationaleCode" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component rationaleCode')">rationaleCode</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType_rationaleDescription" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component rationaleDescription')">rationaleDescription</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_IdentifierXsdType_versionRationale" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_IdentifierXsdType_versionRationale');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_IdentifierXsdType_versionRationale" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;versionRationale</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;rationaleCode</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/rationaleCode&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;rationaleDescription</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/rationaleDescription&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/versionRationale&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType_versionRationale" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType_versionRationale');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType_versionRationale" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"versionRationale"</span><span class="tAN"> type=</span><span class="tAV">"RationaleDefinitionXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-versionRationale"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Reason for making a new version of the object.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="IdentifierXsdType_versionResponsibility"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b> / versionResponsibility</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType_versionResponsibility" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType_versionResponsibility');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType_versionResponsibility" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Contributor who has the ownership and responsibility for the current version.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType_versionResponsibility" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType_versionResponsibility');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType_versionResponsibility" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_versionResponsibility.jpeg" usemap="#ddi-cdi_xsd_Element_versionResponsibility" /><map name="ddi-cdi_xsd_Element_versionResponsibility" id="ddi-cdi_xsd_Element_versionResponsibility"><area alt="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.tmp#AgentInRoleXsdType_agentName" href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_agentName" coords="318,40,512,84" /><area alt="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.tmp#AgentInRoleXsdType_reference" href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_reference" coords="318,139,475,183" /><area alt="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.tmp#AgentInRoleXsdType_role" href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_role" coords="318,224,583,268" /><area alt="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.tmp#AgentInRoleXsdType" href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType" coords="215,3,367,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentInRoleXsdType')">AgentInRoleXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IdentifierXsdType_versionResponsibility" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IdentifierXsdType_versionResponsibility');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IdentifierXsdType_versionResponsibility" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IdentifierXsdType_versionResponsibility" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IdentifierXsdType_versionResponsibility');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_IdentifierXsdType_versionResponsibility" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_agentName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component agentName{0,1}')">agentName{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_reference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component reference{0,1}')">reference{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_role" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component role*')">role*</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_agentName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component agentName')">agentName</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_reference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component reference')">reference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType_role" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component role')">role</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_IdentifierXsdType_versionResponsibility" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_IdentifierXsdType_versionResponsibility');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_IdentifierXsdType_versionResponsibility" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;versionResponsibility</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;agentName</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/agentName&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;reference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/reference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;role</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/role&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/versionResponsibility&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType_versionResponsibility" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType_versionResponsibility');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType_versionResponsibility" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"versionResponsibility"</span><span class="tAN"> type=</span><span class="tAV">"AgentInRoleXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-versionResponsibility"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Contributor who has the ownership and responsibility for the current version.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="IdentifierXsdType"></a><div class="componentTitle">Complex Type <span class="qname">IdentifierXsdType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_IdentifierXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IdentifierXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_IdentifierXsdType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Definition</span><span class="tI">
+</span><span class="tT">============</span><span class="tI">
+</span><span class="tT">Identifier for objects requiring short- or long-lasting referencing and management.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IdentifierXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IdentifierXsdType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IdentifierXsdType" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Complex_Type_IdentifierXsdType.jpeg" usemap="#ddi-cdi_xsd_Complex_Type_IdentifierXsdType" /><map name="ddi-cdi_xsd_Complex_Type_IdentifierXsdType" id="ddi-cdi_xsd_Complex_Type_IdentifierXsdType"><area alt="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.tmp#IdentifierXsdType_ddiIdentifier" href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_ddiIdentifier" coords="279,0,520,44" /><area alt="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.tmp#IdentifierXsdType_isDdiIdentifierPersistent" href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_isDdiIdentifierPersistent" coords="279,99,422,143" /><area alt="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.tmp#IdentifierXsdType_isDdiIdentifierUniversallyUnique" href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_isDdiIdentifierUniversallyUnique" coords="279,198,460,242" /><area alt="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.tmp#IdentifierXsdType_nonDdiIdentifier" href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_nonDdiIdentifier" coords="279,297,460,341" /><area alt="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.tmp#IdentifierXsdType_uri" href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_uri" coords="279,382,391,426" /><area alt="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.tmp#IdentifierXsdType_versionDate" href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionDate" coords="279,481,378,525" /><area alt="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.tmp#IdentifierXsdType_versionRationale" href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionRationale" coords="279,580,473,624" /><area alt="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.tmp#IdentifierXsdType_versionResponsibility" href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionResponsibility" coords="279,665,443,709" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_IdentifierXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IdentifierXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_IdentifierXsdType" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="ddi-cdi_xsd_Complex_Type_ActivityXsdType.html#ActivityXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ActivityXsdType/identifier')">ActivityXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AgentListingXsdType.html#AgentListingXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentListingXsdType/identifier')">AgentListingXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AgentPositionXsdType.html#AgentPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentPositionXsdType/identifier')">AgentPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AgentRelationshipXsdType.html#AgentRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentRelationshipXsdType/identifier')">AgentRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AgentStructureXsdType.html#AgentStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentStructureXsdType/identifier')">AgentStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AgentXsdType.html#AgentXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentXsdType/identifier')">AgentXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AuthorizationSourceXsdType.html#AuthorizationSourceXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AuthorizationSourceXsdType/identifier')">AuthorizationSourceXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CategoryPositionXsdType.html#CategoryPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryPositionXsdType/identifier')">CategoryPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CategoryRelationStructureXsdType.html#CategoryRelationStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryRelationStructureXsdType/identifier')">CategoryRelationStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CategoryRelationshipXsdType.html#CategoryRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryRelationshipXsdType/identifier')">CategoryRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CategoryStatisticXsdType.html#CategoryStatisticXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryStatisticXsdType/identifier')">CategoryStatisticXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationFamilyXsdType.html#ClassificationFamilyXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationFamilyXsdType/identifier')">ClassificationFamilyXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationIndexEntryPositionXsdType.html#ClassificationIndexEntryPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndexEntryPositionXsdType/identifier')">ClassificationIndexEntryPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationIndexEntryXsdType.html#ClassificationIndexEntryXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndexEntryXsdType/identifier')">ClassificationIndexEntryXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationIndexXsdType.html#ClassificationIndexXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndexXsdType/identifier')">ClassificationIndexXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationItemPositionXsdType.html#ClassificationItemPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemPositionXsdType/identifier')">ClassificationItemPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationItemRelationshipXsdType.html#ClassificationItemRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemRelationshipXsdType/identifier')">ClassificationItemRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationItemStructureXsdType.html#ClassificationItemStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemStructureXsdType/identifier')">ClassificationItemStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationItemXsdType.html#ClassificationItemXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemXsdType/identifier')">ClassificationItemXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationPositionXsdType.html#ClassificationPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationPositionXsdType/identifier')">ClassificationPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationSeriesStructureXsdType.html#ClassificationSeriesStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationSeriesStructureXsdType/identifier')">ClassificationSeriesStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ClassificationSeriesXsdType.html#ClassificationSeriesXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationSeriesXsdType/identifier')">ClassificationSeriesXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CodeListStructureXsdType.html#CodeListStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeListStructureXsdType/identifier')">CodeListStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CodePositionXsdType.html#CodePositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodePositionXsdType/identifier')">CodePositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CodeRelationshipXsdType.html#CodeRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeRelationshipXsdType/identifier')">CodeRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CodeXsdType.html#CodeXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeXsdType/identifier')">CodeXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ComponentPositionXsdType.html#ComponentPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ComponentPositionXsdType/identifier')">ComponentPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptMapXsdType.html#ConceptMapXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptMapXsdType/identifier')">ConceptMapXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptRelationshipXsdType.html#ConceptRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptRelationshipXsdType/identifier')">ConceptRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptStructureXsdType.html#ConceptStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptStructureXsdType/identifier')">ConceptStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptSystemCorrespondenceXsdType.html#ConceptSystemCorrespondenceXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptSystemCorrespondenceXsdType/identifier')">ConceptSystemCorrespondenceXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptSystemXsdType.html#ConceptSystemXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptSystemXsdType/identifier')">ConceptSystemXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptXsdType/identifier')">ConceptXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualDomainXsdType.html#ConceptualDomainXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualDomainXsdType/identifier')">ConceptualDomainXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlLogicXsdType.html#ControlLogicXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ControlLogicXsdType/identifier')">ControlLogicXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_CorrespondenceTableXsdType.html#CorrespondenceTableXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CorrespondenceTableXsdType/identifier')">CorrespondenceTableXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataPointPositionXsdType.html#DataPointPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPointPositionXsdType/identifier')">DataPointPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataPointRelationshipXsdType.html#DataPointRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPointRelationshipXsdType/identifier')">DataPointRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataPointXsdType.html#DataPointXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPointXsdType/identifier')">DataPointXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataSetXsdType.html#DataSetXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataSetXsdType/identifier')">DataSetXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataStoreXsdType.html#DataStoreXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStoreXsdType/identifier')">DataStoreXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructureComponentXsdType/identifier')">DataStructureComponentXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DatumXsdType.html#DatumXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DatumXsdType/identifier')">DatumXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DimensionGroupXsdType.html#DimensionGroupXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionGroupXsdType/identifier')">DimensionGroupXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DimensionalKeyDefinitionXsdType.html#DimensionalKeyDefinitionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyDefinitionXsdType/identifier')">DimensionalKeyDefinitionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DimensionalKeyXsdType.html#DimensionalKeyXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyXsdType/identifier')">DimensionalKeyXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomainXsdType/identifier')">EnumerationDomainXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ForeignKeyComponentXsdType.html#ForeignKeyComponentXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ForeignKeyComponentXsdType/identifier')">ForeignKeyComponentXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ForeignKeyXsdType.html#ForeignKeyXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ForeignKeyXsdType/identifier')">ForeignKeyXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Element_Identifier.html#Identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Identifier')">Identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InformationFlowDefinitionXsdType.html#InformationFlowDefinitionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InformationFlowDefinitionXsdType/identifier')">InformationFlowDefinitionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InstanceValueXsdType.html#InstanceValueXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceValueXsdType/identifier')">InstanceValueXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableMapXsdType.html#InstanceVariableMapXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariableMapXsdType/identifier')">InstanceVariableMapXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_LevelStructureXsdType.html#LevelStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LevelStructureXsdType/identifier')">LevelStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_LevelXsdType.html#LevelXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LevelXsdType/identifier')">LevelXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_LogicalRecordPositionXsdType.html#LogicalRecordPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordPositionXsdType/identifier')">LogicalRecordPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_LogicalRecordRelationStructureXsdType.html#LogicalRecordRelationStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordRelationStructureXsdType/identifier')">LogicalRecordRelationStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_LogicalRecordRelationshipXsdType.html#LogicalRecordRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordRelationshipXsdType/identifier')">LogicalRecordRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_LogicalRecordXsdType.html#LogicalRecordXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordXsdType/identifier')">LogicalRecordXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_LongKeyXsdType.html#LongKeyXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongKeyXsdType/identifier')">LongKeyXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_NotationXsdType.html#NotationXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NotationXsdType/identifier')">NotationXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ParameterXsdType.html#ParameterXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ParameterXsdType/identifier')">ParameterXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalDataSetStructureXsdType.html#PhysicalDataSetStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalDataSetStructureXsdType/identifier')">PhysicalDataSetStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalDataSetXsdType.html#PhysicalDataSetXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalDataSetXsdType/identifier')">PhysicalDataSetXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalLayoutRelationStructureXsdType.html#PhysicalLayoutRelationStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalLayoutRelationStructureXsdType/identifier')">PhysicalLayoutRelationStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalRecordSegmentPositionXsdType.html#PhysicalRecordSegmentPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentPositionXsdType/identifier')">PhysicalRecordSegmentPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalRecordSegmentRelationshipXsdType.html#PhysicalRecordSegmentRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentRelationshipXsdType/identifier')">PhysicalRecordSegmentRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalRecordSegmentStructureXsdType.html#PhysicalRecordSegmentStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentStructureXsdType/identifier')">PhysicalRecordSegmentStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalRecordSegmentXsdType.html#PhysicalRecordSegmentXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentXsdType/identifier')">PhysicalRecordSegmentXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLayoutXsdType.html#PhysicalSegmentLayoutXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalSegmentLayoutXsdType/identifier')">PhysicalSegmentLayoutXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalSegmentLocationXsdType/identifier')">PhysicalSegmentLocationXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PrimaryKeyComponentXsdType.html#PrimaryKeyComponentXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PrimaryKeyComponentXsdType/identifier')">PrimaryKeyComponentXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_PrimaryKeyXsdType.html#PrimaryKeyXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PrimaryKeyXsdType/identifier')">PrimaryKeyXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ProductionEnvironmentXsdType.html#ProductionEnvironmentXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ProductionEnvironmentXsdType/identifier')">ProductionEnvironmentXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RecordRelationXsdType.html#RecordRelationXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RecordRelationXsdType/identifier')">RecordRelationXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RevisionXsdType.html#RevisionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RevisionXsdType/identifier')">RevisionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RuleSetXsdType.html#RuleSetXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RuleSetXsdType/identifier')">RuleSetXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RuleXsdType.html#RuleXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RuleXsdType/identifier')">RuleXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ScopedMeasureXsdType.html#ScopedMeasureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ScopedMeasureXsdType/identifier')">ScopedMeasureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationRelationshipXsdType.html#StatisticalClassificationRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassificationRelationshipXsdType/identifier')">StatisticalClassificationRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_UnitXsdType.html#UnitXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component UnitXsdType/identifier')">UnitXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueAndConceptDescriptionXsdType.html#ValueAndConceptDescriptionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueAndConceptDescriptionXsdType/identifier')">ValueAndConceptDescriptionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueDomainXsdType/identifier')">ValueDomainXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueMappingPositionXsdType.html#ValueMappingPositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMappingPositionXsdType/identifier')">ValueMappingPositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueMappingRelationshipXsdType.html#ValueMappingRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMappingRelationshipXsdType/identifier')">ValueMappingRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ValueMappingXsdType.html#ValueMappingXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMappingXsdType/identifier')">ValueMappingXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariableCollectionXsdType.html#VariableCollectionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableCollectionXsdType/identifier')">VariableCollectionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariablePositionXsdType.html#VariablePositionXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariablePositionXsdType/identifier')">VariablePositionXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariableRelationshipXsdType.html#VariableRelationshipXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableRelationshipXsdType/identifier')">VariableRelationshipXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariableStructureXsdType.html#VariableStructureXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableStructureXsdType/identifier')">VariableStructureXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_WideKeyXsdType.html#WideKeyXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideKeyXsdType/identifier')">WideKeyXsdType/identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_WrapperXsdType.html#WrapperXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WrapperXsdType/identifier')">WrapperXsdType/identifier</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IdentifierXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IdentifierXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_IdentifierXsdType" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_ddiIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiIdentifier{0,1}')">ddiIdentifier{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_isDdiIdentifierPersistent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isDdiIdentifierPersistent{0,1}')">isDdiIdentifierPersistent{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_isDdiIdentifierUniversallyUnique" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isDdiIdentifierUniversallyUnique{0,1}')">isDdiIdentifierUniversallyUnique{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_nonDdiIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiIdentifier*')">nonDdiIdentifier*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri{0,1}')">uri{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component versionDate{0,1}')">versionDate{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionRationale" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component versionRationale{0,1}')">versionRationale{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionResponsibility" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component versionResponsibility{0,1}')">versionResponsibility{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_ddiIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiIdentifier')">ddiIdentifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_isDdiIdentifierPersistent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isDdiIdentifierPersistent')">isDdiIdentifierPersistent</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_isDdiIdentifierUniversallyUnique" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isDdiIdentifierUniversallyUnique')">isDdiIdentifierUniversallyUnique</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_nonDdiIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiIdentifier')">nonDdiIdentifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri')">uri</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component versionDate')">versionDate</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionRationale" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component versionRationale')">versionRationale</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType_versionResponsibility" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component versionResponsibility')">versionResponsibility</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_IdentifierXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IdentifierXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_IdentifierXsdType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"IdentifierXsdType"</span><span class="tAN"> xml:id=</span><span class="tAV">"IdentifierXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Definition ============ Identifier for objects requiring short- or long-lasting referencing and management.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ddiIdentifier"</span><span class="tAN"> type=</span><span class="tAV">"InternationalRegistrationDataIdentifierXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-ddiIdentifier"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A globally unique identifier. The values of the three attributes can be used to create a DDI URN.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"isDdiIdentifierPersistent"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-isDdiIdentifierPersistent"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Default value is False indicating that the content of the current version may change (may be in development mode). Set to True when the content of this version will no longer change.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"isDdiIdentifierUniversallyUnique"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-isDdiIdentifierUniversallyUnique"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Default value is False. If the id of the object was created as a Universally Unique ID (UUID) set to True.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"nonDdiIdentifier"</span><span class="tAN"> type=</span><span class="tAV">"NonDdiIdentifierXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-nonDdiIdentifier"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Any identifier other than a DDI identifier.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"uri"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-uri"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A Universal Resource Identifier, valid according to the W3C XML Schema specification.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"versionDate"</span><span class="tAN"> type=</span><span class="tAV">"xs:date"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-versionDate"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Date and time the object was changed expressed in standard ISO formats.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"versionRationale"</span><span class="tAN"> type=</span><span class="tAV">"RationaleDefinitionXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-versionRationale"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Reason for making a new version of the object.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"versionResponsibility"</span><span class="tAN"> type=</span><span class="tAV">"AgentInRoleXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"Identifier-versionResponsibility"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Contributor who has the ownership and responsibility for the current version.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

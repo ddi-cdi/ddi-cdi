@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="573.3px" preserveAspectRatio="none" style="width:603px;height:573px;background:#FFFFFF;" version="1.1" viewBox="0 0 603 573" width="603.9px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="499.5" x="45.9" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="490.5" x="50.4" y="27.6855">UML Diagram: Class ClassificationItemPosition in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="293.85" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[5df64ea727c0b6324db8e3d9641e7ada]
+class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem--><a href="../DDICDILibrary/Classes/Representations/ClassificationItem.html#super-class-hierarchy-generalization" target="_top" title=" ― ClassificationItem:&#10;A space for a category within a statistical classification." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Representations/ClassificationItem.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ClassificationItem:&#10;A space for a category within a statistical classification." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem"><rect codeLine="55" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="270.9"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="37.35" y="284.7428">Representations::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="98.1" x="24.75" y="299.8002">ClassificationItem</text></g></a><!--MD5=[1d83e88dbbdb96075cf050a5702520b3]
+class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification--><a href="../DDICDILibrary/Classes/Representations/StatisticalClassification.html#super-class-hierarchy-generalization" target="_top" title=" ― StatisticalClassification:&#10;Set of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Representations/StatisticalClassification.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― StatisticalClassification:&#10;Set of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification"><rect codeLine="56" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="276.3" y="270.9"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="307.35" y="284.7428">Representations::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="128.7" x="279.45" y="299.8002">StatisticalClassification</text></g></a><!--MD5=[d76d739c0682f3af0403f0bf321852fe]
+class DDICDIModels::DesignPatterns::CollectionsPattern::Position--><a href="../DesignPatterns/CollectionsPattern/Position.html#super-class-hierarchy-generalization" target="_top" title=" ― Position:&#10;Position of the associated member within the associated List." xlink:actuate="onRequest" xlink:href="../DesignPatterns/CollectionsPattern/Position.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Position:&#10;Position of the associated member within the associated List." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::CollectionsPattern::Position"><rect codeLine="61" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::CollectionsPattern::Position" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="463.5" y="492.3"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="83.7" x="489.15" y="506.1428">CollectionsPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="45" x="508.5" y="521.2002">Position</text></g></a><!--MD5=[524f4d417a898acb289f5338fbdda063]
+class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition"><rect codeLine="46" fill="#FFD700" height="75.0656" id="DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="148.5" x="269.55" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="307.35" y="137.5928">Representations::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="143.1" x="272.25" y="152.6502">ClassificationItemPosition</text><line style="stroke:#404040;stroke-width:0.45;" x1="270.45" x2="417.15" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="274.95" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="334.35" y="176.5986">Identifier</text></a><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="81" x="274.95" y="192.4471">value : Integer</text></g><!--MD5=[5596ecc2b0deeb7f5d728900e851a711]
+link DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition to DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition_DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem"><a href="" target="_top" title=" ― indexes:&#10;Classification item position indexes zero to one classification items. The member containing the designation of the classification item." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― indexes:&#10;Classification item position indexes zero to one classification items. The member containing the designation of the classification item." xlink:type="simple"><path codeLine="69" d="M269.307,196.767 C219.357,220.077 155.466,249.885 114.579,268.965 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition-to-DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="110.457,270.891,119.3196,270.737,114.5368,268.9922,116.2816,264.2094,110.457,270.891" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="40.5" x="202.5" y="238.9456">indexes</text></a></g><!--MD5=[38e30db15dc2eceda70ff2c9d26482cc]
+reverse link DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition to DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="70" d="M343.8,203.292 C343.8,226.134 343.8,253.314 343.8,270.603 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition-backto-DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="343.8,198.783,340.2,206.883,343.8,203.283,347.4,206.883,343.8,198.783" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="344.7" y="238.9456">has</text></a></g><!--MD5=[ba56cdfbef99ba21ef4b16bc275aca54]
+link DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition to DDICDIModels::DesignPatterns::CollectionsPattern::Position--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition_DDICDIModels::DesignPatterns::CollectionsPattern::Position"><path codeLine="74" d="M418.05,180.207 C470.322,197.973 531,230.904 531,288 C531,288 531,288 531,435.15 C531,452.754 531,472.707 531,487.494 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition-to-DDICDIModels::DesignPatterns::CollectionsPattern::Position" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="531,492.291,534.6,484.191,531,487.791,527.4,484.191,531,492.291" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="531.9" y="376.6456">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="378" x="106.65" y="532.9688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="294.3" y="542.3115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="294.3" y="553.6318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="378" x="106.65" y="564.9521">DDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::ClassificationItemPosition</text><!--MD5=[b3123052f1a543cad03d14c32fb4d364]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class ClassificationItemPosition in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::ClassificationItemPosition
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition as "<size:10>Representations::\n<color:black>ClassificationItemPosition" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  value : Integer
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem as "<size:10>Representations::\n<color:blue>ClassificationItem" [[../DDICDILibrary/Classes/Representations/ClassificationItem.html#super-class-hierarchy-generalization{ <U+2015> ClassificationItem:\nA space for a category within a statistical classification.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification as "<size:10>Representations::\n<color:blue>StatisticalClassification" [[../DDICDILibrary/Classes/Representations/StatisticalClassification.html#super-class-hierarchy-generalization{ <U+2015> StatisticalClassification:\nSet of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Position as "<size:10>CollectionsPattern::\n<color:blue>Position" [[../DesignPatterns/CollectionsPattern/Position.html#super-class-hierarchy-generalization{ <U+2015> Position:\nPosition of the associated member within the associated List.}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem [[{ <U+2015> indexes:\nClassification item position indexes zero to one classification items. The member containing the designation of the classification item.}]] : indexes
+DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification [[{ <U+2015> has:\n}]] : has
+
+
+' Abstractions
+  DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition .....> DDICDIModels::DesignPatterns::CollectionsPattern::Position : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class ClassificationItemPosition in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::ClassificationItemPosition
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition as "<size:10>Representations::\n<color:black>ClassificationItemPosition" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  value : Integer
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem as "<size:10>Representations::\n<color:blue>ClassificationItem" [[../DDICDILibrary/Classes/Representations/ClassificationItem.html#super-class-hierarchy-generalization{ <U+2015> ClassificationItem:\nA space for a category within a statistical classification.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification as "<size:10>Representations::\n<color:blue>StatisticalClassification" [[../DDICDILibrary/Classes/Representations/StatisticalClassification.html#super-class-hierarchy-generalization{ <U+2015> StatisticalClassification:\nSet of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent.}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Position as "<size:10>CollectionsPattern::\n<color:blue>Position" [[../DesignPatterns/CollectionsPattern/Position.html#super-class-hierarchy-generalization{ <U+2015> Position:\nPosition of the associated member within the associated List.}]]
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem [[{ <U+2015> indexes:\nClassification item position indexes zero to one classification items. The member containing the designation of the classification item.}]] : indexes
+DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification [[{ <U+2015> has:\n}]] : has
+
+
+  DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition .....> DDICDIModels::DesignPatterns::CollectionsPattern::Position : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

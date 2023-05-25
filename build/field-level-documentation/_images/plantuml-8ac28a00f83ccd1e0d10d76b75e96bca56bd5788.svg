@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="400.5px" preserveAspectRatio="none" style="width:641px;height:400px;background:#FFFFFF;" version="1.1" viewBox="0 0 641 400" width="641.7px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="393.3" x="117.9" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="384.3" x="122.4" y="27.6855">UML Diagram: DataType TimeRole in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="312.75" y="44.7205"> </text><rect fill="#FFFFFF" height="67.4016" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="348.3" x="273.6" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="279" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="279" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="279" y="101.9725">- Click on a name to go to the corresponding page.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="337.5" x="279" y="113.2928">- The use of the data type is represented here by a dotted line (not formal UML).</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="164.7" x="279" y="124.6131">- The arrows of the inheritance tree are</text><text fill="#D2691E" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="32.4" x="446.4" y="124.6131">colored</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="478.8" y="124.6131">.</text><!--MD5=[7639129a7208b5720b5c8dbdaf72c8f5]
+entity ##5--><!--MD5=[c09f5ef791110389cd3fbb684c42cc6c]
+entity ##10--><!--MD5=[48921ea5a756616425940a41f36e9d61]
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole--><g id="elem_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole"><rect codeLine="48" fill="#FFD700" height="72.8016" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="197.1" x="438.3" y="281.8406"/><text fill="#000000" font-family="sans-serif" font-size="10.8" font-style="italic" lengthAdjust="spacing" textLength="58.5" x="507.6" y="297.552">«dataType»</text><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="535.5" y="309.2678"> </text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="54" x="509.85" y="324.3252">TimeRole</text><line style="stroke:#404040;stroke-width:0.45;" x1="439.2" x2="634.5" y1="331.5938" y2="331.5938"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="30.6" x="443.7" y="348.2736">time :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="477.9" y="348.2736">ControlledVocabularyEntry</text></a></g><!--MD5=[9d611112f7acc1925950f188348a7df7]
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole--><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#super-class-hierarchy-generalization" target="_top" title=" ― SpecializationRole:&#10;Specific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― SpecializationRole:&#10;Specific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole"><rect codeLine="55" fill="#F1F1F1" height="49.7531" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="469.35" y="200.8406"/><text fill="#000000" font-family="sans-serif" font-size="10.8" font-style="italic" lengthAdjust="spacing" textLength="58.5" x="507.6" y="216.552">«dataType»</text><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="535.5" y="228.2678"> </text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="485.1" y="243.3252">SpecializationRole</text></g></a><!--MD5=[1fe5a69c56948e803e4ee51554e950d9]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent--><a href="../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization" target="_top" title=" ― DataStructureComponent:&#10;Role given to a represented variable in the context of a data structure." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― DataStructureComponent:&#10;Role given to a represented variable in the context of a data structure." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent"><rect codeLine="59" fill="#F1F1F1" height="90.9141" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="261" x="6.3" y="146.3906"/><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="107.55" y="160.2334">Components::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="144.9" x="64.35" y="175.2908">DataStructureComponent</text><line style="stroke:#404040;stroke-width:0.45;" x1="7.2" x2="266.4" y1="182.5594" y2="182.5594"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="11.7" y="199.2393">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="71.1" y="199.2393">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/PairedControlledVocabularyEntry.html#diagram" target="_top" title=" ― PairedControlledVocabularyEntry:&#10;A tightly bound pair of items from an external controlled vocabulary. The extent property describes the extent to which the parent term applies for the specific case." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/PairedControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― PairedControlledVocabularyEntry:&#10;A tightly bound pair of items from an external controlled vocabulary. The extent property describes the extent to which the parent term applies for the specific case." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="57.6" x="11.7" y="215.0877">semantic :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="189" x="72.9" y="215.0877">PairedControlledVocabularyEntry</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#diagram" target="_top" title=" ― SpecializationRole:&#10;Specific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#diagram" xlink:show="new" xlink:title=" ― SpecializationRole:&#10;Specific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="82.8" x="11.7" y="230.9361">specialization :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="98.1" y="230.9361">SpecializationRole</text></a></g></a><!--MD5=[e5e2b3861ff3dff427c9585e2ae766c2]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent to DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole"><path codeLine="75" d="M268.2,225.5906 C336.645,225.5906 414.936,225.5906 469.107,225.5906 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent-DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole" style="stroke:#808080;stroke-width:0.9;stroke-dasharray:1.0,3.0;"/></g><!--MD5=[b25ef1ff411810e8b64835b58d806cc8]
+reverse link DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole to DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole--><g id="link_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole"><path codeLine="80" d="M536.85,268.8266 C536.85,273.1196 536.85,277.4216 536.85,281.7146 " fill="none" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole-backto-DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole" style="stroke:#D2691E;stroke-width:1.35;"/><polygon fill="none" points="530.55,268.5836,536.85,250.5836,543.15,268.5836,530.55,268.5836" style="stroke:#D2691E;stroke-width:1.35;"/></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="332.1" x="148.5" y="360.0422"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="313.2" y="369.385"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="313.2" y="380.7053"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="332.1" x="148.5" y="392.0256">DDI Cross Domain Integration (DDI-CDI)   1.0 - StructuredDataTypes::TimeRole</text><!--MD5=[d982c6f89c4d3fdb566eaf1bc3b8e1ef]
+@startuml
+left to right direction
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: DataType TimeRole in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - StructuredDataTypes::TimeRole
+
+legend top right
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The use of the data type is represented here by a dotted line (not formal UML).
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+' Core data type of diagram
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole as "<size:10> \n<color:black>TimeRole" <<dataType>>   #FFD700 {
+  time : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+' Data type definitions in own package
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole as "<size:10> \n<color:blue>SpecializationRole" <<dataType>> [[../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#super-class-hierarchy-generalization{ <U+2015> SpecializationRole:\nSpecific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data.}]] {
+}
+
+' Data type definitions in other packages
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent as "<size:10><color:grey>Components::\n<color:blue>DataStructureComponent" [[../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization{ <U+2015> DataStructureComponent:\nRole given to a represented variable in the context of a data structure.}]] {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  semantic : <color:blue>PairedControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/PairedControlledVocabularyEntry.html#diagram{ <U+2015> PairedControlledVocabularyEntry:\nA tightly bound pair of items from an external controlled vocabulary. The extent property describes the extent to which the parent term applies for the specific case.}]]]
+  specialization : <color:blue>SpecializationRole   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#diagram{ <U+2015> SpecializationRole:\nSpecific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data.}]]]
+}
+
+' Use of data type
+together {
+}
+
+' Super classes
+' Use of super data types
+
+DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole - -up- - DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent::specialization #grey;line.dotted;
+
+
+
+
+DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole <|- -r- - DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole #D2691E
+
+
+' Abstractions
+together {
+}
+@enduml
+
+@startuml
+left to right direction
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: DataType TimeRole in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - StructuredDataTypes::TimeRole
+
+legend top right
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The use of the data type is represented here by a dotted line (not formal UML).
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole as "<size:10> \n<color:black>TimeRole" <<dataType>>   #FFD700 {
+  time : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole as "<size:10> \n<color:blue>SpecializationRole" <<dataType>> [[../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#super-class-hierarchy-generalization{ <U+2015> SpecializationRole:\nSpecific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data.}]] {
+}
+
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent as "<size:10><color:grey>Components::\n<color:blue>DataStructureComponent" [[../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization{ <U+2015> DataStructureComponent:\nRole given to a represented variable in the context of a data structure.}]] {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  semantic : <color:blue>PairedControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/PairedControlledVocabularyEntry.html#diagram{ <U+2015> PairedControlledVocabularyEntry:\nA tightly bound pair of items from an external controlled vocabulary. The extent property describes the extent to which the parent term applies for the specific case.}]]]
+  specialization : <color:blue>SpecializationRole   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#diagram{ <U+2015> SpecializationRole:\nSpecific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data.}]]]
+}
+
+together {
+}
+
+
+DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole - -up- - DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent::specialization #grey;line.dotted;
+
+
+
+
+DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole <|- -r- - DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole #D2691E
+
+
+together {
+}
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

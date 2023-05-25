@@ -1,0 +1,204 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Agent &#8212; UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/custom.js"></script>
+    <script src="../../_static/definition.js"></script>
+    
+    <script src="../../_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Entity" href="Entity.html" />
+    <link rel="prev" title="Activity" href="Activity.html" /> 
+    <!-- geht nicht
+    <link rel="stylesheet" type="text/css" href="_static/handsontable.full.min.css"/>
+    <script type="text/javascript" src="_static/handsontable.full.min.js"></script>
+    -->
+	<!--
+		Combined css and js downloads created with https://datatables.net/download/.
+		DataTables, Buttons (HTML5 export, JSZip, Print view), Search panes, Select, Minify, Concatenate
+	-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/sp-1.2.2/sl-1.3.3/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/sp-1.2.2/sl-1.3.3/datatables.min.js"></script>
+	<!-- For jquery tooltip. See: https://jqueryui.com/tooltip/ -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+	<!--
+		2022-07-17, no change with issue in attribute table
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-html5-2.2.3/b-print-2.2.3/sp-2.0.2/sl-1.4.0/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-html5-2.2.3/b-print-2.2.3/sp-2.0.2/sl-1.4.0/datatables.min.js"></script>
+
+	<link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" rel="stylesheet" type="text/css" />
+	-->
+    <!--
+    already loaded by sphinx
+	<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!--		
+	<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!-- jszip 2.5 should be enough for datatables, it is smaller then version 3.*, from datatables forum admin -->
+	<!--
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!--
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!--
+	<script src="https://unpkg.com/3d-force-graph" type="text/javascript" language="javascript"></script>
+	<script src="https://unpkg.com/@panzoom/panzoom@4.3.2/dist/panzoom.min.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!--
+	<style>
+body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !important;text-align:center;list-style:none;padding:0 0 0 10px;line-height:24px;height:26px;overflow:hidden;font-size:12px;font-family:verdana;position:relative;margin:0}.tab li{margin-left:0px !important;margin-top:2px !important;float:left;height:24px;border:1px solid #aaa;background:#d1d1d1;background:linear-gradient(top, #ececec 50%, #d1d1d1);display:inline-block;position:relative;z-index:0;border-top-left-radius:6px;border-top-right-radius:6px;box-shadow:0 3px 3px rgba(0,0,0,0.4),inset 0 1px 0 #fff;text-shadow:0 1px #fff;margin:0 -5px;padding:0 20px}.tab li.active{background:#fff;color:#333;z-index:2}.tab li:before{left:-6px;border-width:0 1px 1px 0;box-shadow:2px 2px 0 #d1d1d1}.tab li:after{right:-6px;border-width:0 0 1px 1px;box-shadow:-2px 2px 0 #d1d1d1}.tab a{color:#555;text-decoration:none}.tab:before{position:absolute;content:" ";width:100%;bottom:0;left:0;border-bottom:1px solid #aaa;z-index:1}.tabcontent{margin-top:-1px}
+    </style>
+-->
+
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Entity.html" title="Entity"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Activity.html" title="Activity"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Context</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">PROV</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Agent</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="agent">
+<span id="ddicdimodels-context-prov-agent"></span><h1>Agent<a class="headerlink" href="#agent" title="Permalink to this headline">¶</a></h1>
+<p><strong>Fully qualified class name</strong>: DDICDIModels::Context::PROV::Agent</p>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>Something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent’s activity. (See the W3C PROV-O ontology, <a class="reference external" href="https://www.w3.org/TR/prov-dm/#term-agent">https://www.w3.org/TR/prov-dm/#term-agent</a>)</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Diagram<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="docutils container" id="diagram">
+<p class="plantuml">
+<object data="../../_images/plantuml-3c158104a23e2550be89d39135e094c0a0eb2b64.svg" type="image/svg+xml" style="width:345px;height:478px;background:#FFFFFF;"></object></p>
+</div>
+</div>
+</details></section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/cdi.svg" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Context</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../DCTerms/index.html">DCTerms</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">PROV</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Activity.html">Activity</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#definition">Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Entity.html">Entity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../RDF/index.html">RDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../XMLSchema/index.html">XMLSchema</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../DDICDILibrary/index.html">DDICDILibrary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DesignPatterns/index.html">DesignPatterns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Appendices/index.html">Appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Entity.html" title="Entity"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Activity.html" title="Activity"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Context</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >PROV</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Agent</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, DDI Alliance.
+    </div>
+  </body>
+</html>

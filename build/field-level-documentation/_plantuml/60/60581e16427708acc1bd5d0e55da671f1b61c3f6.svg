@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="597.6px" preserveAspectRatio="none" style="width:774px;height:597px;background:#FFFFFF;" version="1.1" viewBox="0 0 774 597" width="774px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="351" x="205.2" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="342" x="209.7" y="27.6855">UML Diagram: Class Machine in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="378.9" y="44.7205"> </text><rect fill="#FFFFFF" height="56.0813" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="164.7" x="12.6" y="113.2928">- The arrows of the inheritance tree are</text><text fill="#D2691E" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="32.4" x="180" y="113.2928">colored</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="212.4" y="113.2928">.</text><!--MD5=[a0438961881a4fc606840d398cef942c]
+entity ##3--><!--MD5=[7639129a7208b5720b5c8dbdaf72c8f5]
+entity ##5--><!--MD5=[8528f7d0e4f618e505c2ff120ac1c05c]
+class DDICDIModels::DDICDILibrary::Classes::Agents::Machine--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Agents::Machine"><rect codeLine="47" fill="#FFD700" height="138.4594" id="DDICDIModels::DDICDILibrary::Classes::Agents::Machine" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="270.9" x="154.35" y="413.0353"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="34.2" x="272.7" y="426.8781">Agents::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="47.7" x="265.95" y="441.9355">Machine</text><line style="stroke:#404040;stroke-width:0.45;" x1="155.25" x2="424.35" y1="449.2041" y2="449.2041"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/AccessLocation.html#diagram" target="_top" title=" ― AccessLocation:&#10;A set of access information for a machine including URI, mime type, and physical location." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/AccessLocation.html#diagram" xlink:show="new" xlink:title=" ― AccessLocation:&#10;A set of access information for a machine including URI, mime type, and physical location." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="95.4" x="159.75" y="465.8839">accessLocation :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="89.1" x="258.75" y="465.8839">AccessLocation</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="52.2" x="159.75" y="481.7324">function :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="215.55" y="481.7324">ControlledVocabularyEntry</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="104.4" x="159.75" y="497.5808">machineInterface :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="267.75" y="497.5808">ControlledVocabularyEntry</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#diagram" target="_top" title=" ― ObjectName:&#10;A standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#diagram" xlink:show="new" xlink:title=" ― ObjectName:&#10;A standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="38.7" x="159.75" y="513.4293">name :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="69.3" x="202.05" y="513.4293">ObjectName</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ContactInformation.html#diagram" target="_top" title=" ― ContactInformation:&#10;Contact information for the individual or organization including location specification, address, web site, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ContactInformation.html#diagram" xlink:show="new" xlink:title=" ― ContactInformation:&#10;Contact information for the individual or organization including location specification, address, web site, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="136.8" x="159.75" y="529.2777">ownerOperatorContact :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="107.1" x="300.15" y="529.2777">ContactInformation</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="92.7" x="159.75" y="545.1261">typeOfMachine :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="256.05" y="545.1261">ControlledVocabularyEntry</text></a></g><!--MD5=[f3615c1ebe64c201d1b666e7dcd79c89]
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent--><a href="../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization" target="_top" title=" ― Agent:&#10;Actor that performs a role in relation to a process or product." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Agent:&#10;Actor that performs a role in relation to a process or product." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Agents::Agent"><rect codeLine="104" fill="#FAFAD2" height="106.7625" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="184.5" x="197.55" y="211.8853"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="34.2" x="272.7" y="225.7281">Agents::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="33.3" x="273.15" y="240.7855">Agent</text><line style="stroke:#404040;stroke-width:0.45;" x1="198.45" x2="381.15" y1="248.0541" y2="248.0541"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram" target="_top" title=" ― CatalogDetails:&#10;A set of information useful for attribution, data discovery, and access." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram" xlink:show="new" xlink:title=" ― CatalogDetails:&#10;A set of information useful for attribution, data discovery, and access." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="87.3" x="202.95" y="264.7339">catalogDetails :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="82.8" x="293.85" y="264.7339">CatalogDetails</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="202.95" y="280.5824">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="262.35" y="280.5824">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/PrivateImage.html#diagram" target="_top" title=" ― PrivateImage:&#10;References an image using the standard Image description. In addition to the standard attributes provides an effective date (period) and a privacy ranking." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/PrivateImage.html#diagram" xlink:show="new" xlink:title=" ― PrivateImage:&#10;References an image using the standard Image description. In addition to the standard attributes provides an effective date (period) and a privacy ranking." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="41.4" x="202.95" y="296.4308">image :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="73.8" x="247.95" y="296.4308">PrivateImage</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="54" x="202.95" y="312.2793">purpose :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="260.55" y="312.2793">InternationalString</text></a></g></a><!--MD5=[d08d00d1298a6dcae378aea45001ea51]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition--><a href="../DDICDILibrary/Classes/Agents/AgentPosition.html#super-class-hierarchy-generalization" target="_top" title=" ― AgentPosition:&#10;Assigns a sequence number to an agent in an agent listing." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Agents/AgentPosition.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― AgentPosition:&#10;Assigns a sequence number to an agent in an agent listing." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition"><rect codeLine="73" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="467.1" y="247.4353"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="34.2" x="517.5" y="261.2781">Agents::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="78.3" x="495.45" y="276.3355">AgentPosition</text></g></a><!--MD5=[ed0afb77b436c4c4d8225e6d9c795979]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing--><a href="../DDICDILibrary/Classes/Agents/AgentListing.html#super-class-hierarchy-generalization" target="_top" title=" ― AgentListing:&#10;Listing of agents of any type who may be organized to describe relationships between agents." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Agents/AgentListing.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― AgentListing:&#10;Listing of agents of any type who may be organized to describe relationships between agents." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing"><rect codeLine="74" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="633.6" y="247.4353"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="34.2" x="684" y="261.2781">Agents::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="70.2" x="666" y="276.3355">AgentListing</text></g></a><g id="elem_GMN10"><path d="M5.4,246.0853 L5.4,284.5181 A0,0 0 0 0 5.4,284.5181 L165.6,284.5181 A0,0 0 0 0 165.6,284.5181 L165.6,269.0353 L197.451,265.4353 L165.6,261.8353 L165.6,255.0853 L156.6,246.0853 L5.4,246.0853 A0,0 0 0 0 5.4,246.0853 " fill="#FFFFFF" style="stroke:#181818;stroke-width:0.45;"/><path d="M156.6,246.0853 L156.6,255.0853 L165.6,255.0853 L156.6,246.0853 " fill="#FFFFFF" style="stroke:#181818;stroke-width:0.45;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="141.3" x="10.8" y="262.7309">Class has 12 associations.</text><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="120.6" x="10.8" y="277.4473">Only 3 are shown here.</text></g><!--MD5=[1b0778de5f37e9fb908fe938d59324c3]
+reverse link DDICDIModels::DDICDILibrary::Classes::Agents::Agent to DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing--><g id="link_DDICDIModels::DDICDILibrary::Classes::Agents::Agent_DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="92" d="M369.675,209.3473 C433.809,171.6193 525.618,134.1703 603,166.4353 C642.303,182.8243 673.938,223.4683 689.859,247.2733 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="365.49,211.8313,374.2905,210.7725,369.3544,209.5256,370.6013,204.5894,365.49,211.8313" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="30.6" x="571.5" y="161.4809"> has</text></a></g><!--MD5=[1b0778de5f37e9fb908fe938d59324c3]
+reverse link DDICDIModels::DDICDILibrary::Classes::Agents::Agent to DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing--><g id="link_DDICDIModels::DDICDILibrary::Classes::Agents::Agent_DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing"><a href="" target="_top" title=" ― isMaintainedBy:&#10;The unit or group of persons within the organization responsible for the agent listing (i.e., for adding, changing or deleting agent entries)." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― isMaintainedBy:&#10;The unit or group of persons within the organization responsible for the agent listing (i.e., for adding, changing or deleting agent entries)." xlink:type="simple"><path codeLine="97" d="M369.675,209.3473 C433.809,171.6193 525.618,134.1703 603,166.4353 C642.303,182.8243 673.938,223.4683 689.859,247.2733 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing-1" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="365.49,211.8313,374.2905,210.7725,369.3544,209.5256,370.6013,204.5894,365.49,211.8313" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="91.8" x="540.9" y="161.4809"> isMaintainedBy</text></a></g><!--MD5=[46885dc28a1a8bfd65df7f3b6fef4541]
+reverse link DDICDIModels::DDICDILibrary::Classes::Agents::Agent to DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition--><g id="link_DDICDIModels::DDICDILibrary::Classes::Agents::Agent_DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition"><a href="" target="_top" title=" ― indexes:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― indexes:&#10;" xlink:type="simple"><path codeLine="102" d="M386.991,265.4353 C413.82,265.4353 442.35,265.4353 467.1,265.4353 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="382.347,265.4353,390.447,269.0353,386.847,265.4353,390.447,261.8353,382.347,265.4353" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="52.2" x="398.475" y="259.5809"> indexes</text></a></g><!--MD5=[5ea73602783b7268717a38ad10f72274]
+reverse link DDICDIModels::DDICDILibrary::Classes::Agents::Agent to DDICDIModels::DDICDILibrary::Classes::Agents::Machine--><g id="link_DDICDIModels::DDICDILibrary::Classes::Agents::Agent_DDICDIModels::DDICDILibrary::Classes::Agents::Machine"><path codeLine="115" d="M289.8,337.5433 C289.8,361.7893 289.8,388.8253 289.8,412.8553 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Agents::Agent-backto-DDICDIModels::DDICDILibrary::Classes::Agents::Machine" style="stroke:#D2691E;stroke-width:1.35;"/><polygon fill="none" points="283.5,337.2283,289.8,319.2283,296.1,337.2283,283.5,337.2283" style="stroke:#D2691E;stroke-width:1.35;"/></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="267.3" x="247.05" y="556.8947"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="379.35" y="566.2375"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="379.35" y="577.5578"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="267.3" x="247.05" y="588.8781">DDI Cross Domain Integration (DDI-CDI)   1.0 - Agents::Machine</text><!--MD5=[6554a50e5eea73b12108ef22c45ba61e]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Machine in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Agents::Machine
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Agents::Machine as "<size:10>Agents::\n<color:black>Machine" #FFD700 {
+  accessLocation : <color:blue>AccessLocation   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/AccessLocation.html#diagram{ <U+2015> AccessLocation:\nA set of access information for a machine including URI, mime type, and physical location.}]]]
+  function : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  machineInterface : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  name : <color:blue>ObjectName   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#diagram{ <U+2015> ObjectName:\nA standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles.}]]]
+  ownerOperatorContact : <color:blue>ContactInformation   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ContactInformation.html#diagram{ <U+2015> ContactInformation:\nContact information for the individual or organization including location specification, address, web site, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over ...}]]]
+  typeOfMachine : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10>Agents::\n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition as "<size:10>Agents::\n<color:blue>AgentPosition" [[../DDICDILibrary/Classes/Agents/AgentPosition.html#super-class-hierarchy-generalization{ <U+2015> AgentPosition:\nAssigns a sequence number to an agent in an agent listing.}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing as "<size:10>Agents::\n<color:blue>AgentListing" [[../DDICDILibrary/Classes/Agents/AgentListing.html#super-class-hierarchy-generalization{ <U+2015> AgentListing:\nListing of agents of any type who may be organized to describe relationships between agents.}]]
+
+
+
+' Associations
+
+' Super classes
+' Associations of Super classes
+note left of DDICDIModels::DDICDILibrary::Classes::Agents::Agent : Class has 12 associations.\nOnly 3 are shown here.
+' firstAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@78411116 (name: Agent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+' secondAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@78411116 (name: Agent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+
+
+
+' aClass:			Machine
+' aSuperClass:		Agent
+' e_ownedEndClass:	AgentListing
+' e_otherEndClass:	Agent
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing [[{ <U+2015> has:\n}]] : <U+2003>has
+' aClass:			Machine
+' aSuperClass:		Agent
+' e_ownedEndClass:	AgentListing
+' e_otherEndClass:	Agent
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing [[{ <U+2015> isMaintainedBy:\nThe unit or group of persons within the organization responsible for the agent listing (i.e., for adding, changing or deleting agent entries).}]] : <U+2003>isMaintainedBy
+' aClass:			Machine
+' aSuperClass:		Agent
+' e_ownedEndClass:	AgentPosition
+' e_otherEndClass:	Agent
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition [[{ <U+2015> indexes:\n}]] : <U+2003>indexes
+
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10> \n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]] #FAFAD2 {
+  catalogDetails : <color:blue>CatalogDetails   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram{ <U+2015> CatalogDetails:\nA set of information useful for attribution, data discovery, and access.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  image : <color:blue>PrivateImage   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/PrivateImage.html#diagram{ <U+2015> PrivateImage:\nReferences an image using the standard Image description. In addition to the standard attributes provides an effective date (period) and a privacy ranking.}]]]
+  purpose : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+}
+
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::Agents::Machine
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Machine in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Agents::Machine
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Agents::Machine as "<size:10>Agents::\n<color:black>Machine" #FFD700 {
+  accessLocation : <color:blue>AccessLocation   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/AccessLocation.html#diagram{ <U+2015> AccessLocation:\nA set of access information for a machine including URI, mime type, and physical location.}]]]
+  function : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  machineInterface : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  name : <color:blue>ObjectName   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#diagram{ <U+2015> ObjectName:\nA standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles.}]]]
+  ownerOperatorContact : <color:blue>ContactInformation   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ContactInformation.html#diagram{ <U+2015> ContactInformation:\nContact information for the individual or organization including location specification, address, web site, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over ...}]]]
+  typeOfMachine : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+together {
+}
+
+together {
+}
+
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10>Agents::\n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition as "<size:10>Agents::\n<color:blue>AgentPosition" [[../DDICDILibrary/Classes/Agents/AgentPosition.html#super-class-hierarchy-generalization{ <U+2015> AgentPosition:\nAssigns a sequence number to an agent in an agent listing.}]]
+class DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing as "<size:10>Agents::\n<color:blue>AgentListing" [[../DDICDILibrary/Classes/Agents/AgentListing.html#super-class-hierarchy-generalization{ <U+2015> AgentListing:\nListing of agents of any type who may be organized to describe relationships between agents.}]]
+
+
+
+
+note left of DDICDIModels::DDICDILibrary::Classes::Agents::Agent : Class has 12 associations.\nOnly 3 are shown here.
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing [[{ <U+2015> has:\n}]] : <U+2003>has
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing [[{ <U+2015> isMaintainedBy:\nThe unit or group of persons within the organization responsible for the agent listing (i.e., for adding, changing or deleting agent entries).}]] : <U+2003>isMaintainedBy
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <-[#grey] DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition [[{ <U+2015> indexes:\n}]] : <U+2003>indexes
+
+class DDICDIModels::DDICDILibrary::Classes::Agents::Agent as "<size:10> \n<color:blue>Agent" [[../DDICDILibrary/Classes/Agents/Agent.html#super-class-hierarchy-generalization{ <U+2015> Agent:\nActor that performs a role in relation to a process or product.}]] #FAFAD2 {
+  catalogDetails : <color:blue>CatalogDetails   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram{ <U+2015> CatalogDetails:\nA set of information useful for attribution, data discovery, and access.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  image : <color:blue>PrivateImage   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/PrivateImage.html#diagram{ <U+2015> PrivateImage:\nReferences an image using the standard Image description. In addition to the standard attributes provides an effective date (period) and a privacy ranking.}]]]
+  purpose : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+}
+
+DDICDIModels::DDICDILibrary::Classes::Agents::Agent <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::Agents::Machine
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

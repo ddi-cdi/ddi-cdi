@@ -1,0 +1,1041 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        var propertiesBoxes= new Array('properties_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target', 
+				'properties_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass', 
+				'properties_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target', 
+				'properties_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass');
+var facetsBoxes= new Array('facets_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass', 
+				'facets_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass');
+var usedByBoxes= new Array('usedBy_VariableDescriptorComponentXsdType');
+var sourceBoxes= new Array('source_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target', 
+				'source_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass', 
+				'source_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target', 
+				'source_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass', 
+				'source_VariableDescriptorComponentXsdType');
+var instanceBoxes= new Array('instance_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target', 
+				'instance_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target');
+var diagramBoxes= new Array('diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target', 
+				'diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass', 
+				'diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target', 
+				'diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass', 
+				'diagram_VariableDescriptorComponentXsdType');
+var annotationBoxes= new Array('annotations_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target', 
+				'annotations_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target', 
+				'annotations_VariableDescriptorComponentXsdType');
+var modelBoxes= new Array('model_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target', 
+				'model_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target', 
+				'model_VariableDescriptorComponentXsdType');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, facetsBoxes);" class="control" /></span><span class="globalControlName">Facets </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponentXsdType')">VariableDescriptorComponentXsdType</a></b> / VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" style="display:block">
+                              <div class="annotation"></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target.jpeg" usemap="#ddi-cdi_xsd_Element_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" /><map name="ddi-cdi_xsd_Element_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" id="ddi-cdi_xsd_Element_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target"><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_ddiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" coords="504,42,745,86" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_deepLink" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" coords="504,127,650,171" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_description" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" coords="504,226,609,270" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_location" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" coords="504,311,696,355" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_nonDdiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" coords="504,396,685,440" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_semantic" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" coords="504,495,739,539" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_uri" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" coords="504,580,616,624" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_validType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" coords="504,665,609,709" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" coords="401,5,631,27" /><area alt="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.tmp#VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" coords="490,830,688,874" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference{0,1}')">ddiReference{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink{0,1}')">deepLink{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description{0,1}')">description{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location{0,1}')">location{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference*')">nonDdiReference*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic{0,1}')">semantic{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri{0,1}')">uri{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType*')">validType*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass*')">typeOfClass*</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference')">ddiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink')">deepLink</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description')">description</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location')">location</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference')">nonDdiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic')">semantic</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass')">typeOfClass</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri')">uri</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType')">validType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ddiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/ddiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;deepLink</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/deepLink&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;description</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;location</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/location&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;nonDdiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/nonDdiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;semantic</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/semantic&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;validType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/validType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfClass</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/typeOfClass&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Source"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"DescriptorVariable"</span><span class="tEl">/&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponentXsdType')">VariableDescriptorComponentXsdType</a></b> / <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target')">VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target</a></b> / typeOfClass</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_typeOfClass_251.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:NMTOKEN</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>DescriptorVariable</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('source_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target_typeOfClass" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Source"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"DescriptorVariable"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponentXsdType')">VariableDescriptorComponentXsdType</a></b> / VariableDescriptorComponent_refersTo_VariableValueComponent-Target</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" style="display:block">
+                              <div class="annotation"></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_VariableDescriptorComponent_refersTo_VariableValueComponent-Target.jpeg" usemap="#ddi-cdi_xsd_Element_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" /><map name="ddi-cdi_xsd_Element_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" id="ddi-cdi_xsd_Element_VariableDescriptorComponent_refersTo_VariableValueComponent-Target"><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_ddiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" coords="520,42,761,86" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_deepLink" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" coords="520,127,666,171" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_description" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" coords="520,226,625,270" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_location" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" coords="520,311,712,355" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_nonDdiReference" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" coords="520,396,701,440" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_semantic" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" coords="520,495,755,539" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_uri" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" coords="520,580,632,624" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType_validType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" coords="520,665,625,709" /><area alt="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.tmp#ReferenceXsdType" href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" coords="417,5,647,27" /><area alt="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.tmp#VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" coords="485,830,683,874" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference{0,1}')">ddiReference{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink{0,1}')">deepLink{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description{0,1}')">description{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location{0,1}')">location{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference*')">nonDdiReference*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic{0,1}')">semantic{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri{0,1}')">uri{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType*')">validType*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass')">typeOfClass</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_ddiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddiReference')">ddiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_deepLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component deepLink')">deepLink</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_description" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component description')">description</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_location" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component location')">location</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_nonDdiReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component nonDdiReference')">nonDdiReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic')">semantic</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfClass')">typeOfClass</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri')">uri</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType_validType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component validType')">validType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;VariableDescriptorComponent_refersTo_VariableValueComponent-Target</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ddiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/ddiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;deepLink</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/deepLink&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;description</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;location</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/location&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;nonDdiReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/nonDdiReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;semantic</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/semantic&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;validType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/validType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfClass</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/typeOfClass&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/VariableDescriptorComponent_refersTo_VariableValueComponent-Target&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"VariableDescriptorComponent_refersTo_VariableValueComponent-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"1"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_refersTo_VariableValueComponent-Target"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"1"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_refersTo_VariableValueComponent-Source"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"VariableValueComponent"</span><span class="tEl">/&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponentXsdType')">VariableDescriptorComponentXsdType</a></b> / <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponent_refersTo_VariableValueComponent-Target')">VariableDescriptorComponent_refersTo_VariableValueComponent-Target</a></b> / typeOfClass</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_typeOfClass_252.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:NMTOKEN</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>VariableValueComponent</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" type="image" src="img/btM.gif" value="-" onclick="switchState('source_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_VariableDescriptorComponentXsdType_VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target_typeOfClass" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"1"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_refersTo_VariableValueComponent-Source"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"VariableValueComponent"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="VariableDescriptorComponentXsdType"></a><div class="componentTitle">Complex Type <span class="qname">VariableDescriptorComponentXsdType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_VariableDescriptorComponentXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_VariableDescriptorComponentXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_VariableDescriptorComponentXsdType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Definition </span><span class="tI">
+</span><span class="tT">============ </span><span class="tI">
+</span><span class="tT">Role given to a represented variable in the context of a data structure to provide codes for variable identification.   </span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Examples </span><span class="tI">
+</span><span class="tT">========== </span><span class="tI">
+</span><span class="tT">Consider {"income", "age"} to be the value domain of the represented variable working as a variable descriptor component.  The two codes, i.e. those designating "income" and "age", are descriptors used to identify which values in the variable value component correspond to income and which ones to age.   </span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Explanatory notes </span><span class="tI">
+</span><span class="tT">=================== </span><span class="tI">
+</span><span class="tT">Whenever more than one variable appears in the same column, we need a mechanism to distinguish which values correspond to which variable. This mechanism is provided by the variable descriptor component, which contains the codes used to link the variables to their values.  This structure provides a flexible mechanism avoiding the need for a formal pointer.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_VariableDescriptorComponentXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_VariableDescriptorComponentXsdType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_VariableDescriptorComponentXsdType" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.jpeg" usemap="#ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType" /><map name="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType" id="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType"><area alt="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.tmp#DataStructureComponentXsdType_identifier" href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_identifier" coords="409,40,556,84" /><area alt="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.tmp#DataStructureComponentXsdType_semantic" href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_semantic" coords="409,139,674,183" /><area alt="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.tmp#DataStructureComponentXsdType_specialization" href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_specialization" coords="409,224,602,268" /><area alt="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.tmp#DataStructureComponentXsdType_DataStructureComponent_isDefinedBy_RepresentedVariable-Target" href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_DataStructureComponent_isDefinedBy_RepresentedVariable-Target" coords="409,323,768,367" /><area alt="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.tmp#DataStructureComponentXsdType" href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType" coords="306,3,606,25" /><area alt="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.tmp#VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" coords="374,460,744,504" /><area alt="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.tmp#VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" coords="374,514,760,558" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructureComponentXsdType')">DataStructureComponentXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructureComponentXsdType')">DataStructureComponentXsdType</a></b><ul class="internal">
+                                    <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponentXsdType')">VariableDescriptorComponentXsdType</a></b></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_VariableDescriptorComponentXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_VariableDescriptorComponentXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_VariableDescriptorComponentXsdType" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="ddi-cdi_xsd_Element_VariableDescriptorComponent.html#VariableDescriptorComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponent')">VariableDescriptorComponent</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_VariableDescriptorComponentXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('model_VariableDescriptorComponentXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_VariableDescriptorComponentXsdType" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier{0,1}')">identifier{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic*')">semantic*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_specialization" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component specialization{0,1}')">specialization{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_DataStructureComponent_isDefinedBy_RepresentedVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructureComponent_isDefinedBy_RepresentedVariable-Target{0,1}')">DataStructureComponent_isDefinedBy_RepresentedVariable-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target{0,1}')">VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponent_refersTo_VariableValueComponent-Target')">VariableDescriptorComponent_refersTo_VariableValueComponent-Target</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_DataStructureComponent_isDefinedBy_RepresentedVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructureComponent_isDefinedBy_RepresentedVariable-Target')">DataStructureComponent_isDefinedBy_RepresentedVariable-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target')">VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType_VariableDescriptorComponent_refersTo_VariableValueComponent-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponent_refersTo_VariableValueComponent-Target')">VariableDescriptorComponent_refersTo_VariableValueComponent-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier')">identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_semantic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component semantic')">semantic</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType_specialization" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component specialization')">specialization</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_VariableDescriptorComponentXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_VariableDescriptorComponentXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_VariableDescriptorComponentXsdType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"VariableDescriptorComponentXsdType"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponentXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Definition ============ Role given to a represented variable in the context of a data structure to provide codes for variable identification. Examples ========== Consider {"income", "age"} to be the value domain of the represented variable working as a variable descriptor component. The two codes, i.e. those designating "income" and "age", are descriptors used to identify which values in the variable value component correspond to income and which ones to age. Explanatory notes =================== Whenever more than one variable appears in the same column, we need a mechanism to distinguish which values correspond to which variable. This mechanism is provided by the variable descriptor component, which contains the codes used to link the variables to their values. This structure provides a flexible mechanism avoiding the need for a formal pointer.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"DataStructureComponentXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Target"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_isDefinedBy_DescriptorVariable-Source"</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                        </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"DescriptorVariable"</span><span class="tEl">/&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"VariableDescriptorComponent_refersTo_VariableValueComponent-Target"</span><span class="tAN"> minOccurs=</span><span class="tAV">"1"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_refersTo_VariableValueComponent-Target"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ReferenceXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfClass"</span><span class="tAN"> minOccurs=</span><span class="tAV">"1"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"VariableDescriptorComponent_refersTo_VariableValueComponent-Source"</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:NMTOKEN"</span><span class="tEl">&gt;</span><span class="tI">
+                        </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"VariableValueComponent"</span><span class="tEl">/&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

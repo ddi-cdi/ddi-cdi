@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="573.3px" preserveAspectRatio="none" style="width:603px;height:573px;background:#FFFFFF;" version="1.1" viewBox="0 0 603 573" width="603.9px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="426.6" x="82.35" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="417.6" x="86.85" y="27.6855">UML Diagram: Class CategoryPosition in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="293.85" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[86fde835898c23203c5cd8f4cdc4497e]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet--><a href="../DDICDILibrary/Classes/Conceptual/CategorySet.html#super-class-hierarchy-generalization" target="_top" title=" ― CategorySet:&#10;Concept system where the underlying concepts are categories." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/CategorySet.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― CategorySet:&#10;Concept system where the underlying concepts are categories." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet"><rect codeLine="55" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="270.9"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="46.35" y="284.7428">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="71.1" x="38.25" y="299.8002">CategorySet</text></g></a><!--MD5=[773bbebeccb7db9d342b93d3d3d1bf2c]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::Category--><a href="../DDICDILibrary/Classes/Conceptual/Category.html#super-class-hierarchy-generalization" target="_top" title=" ― Category:&#10;Concept whose role is to define and measure a characteristic." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/Category.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Category:&#10;Concept whose role is to define and measure a characteristic." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::Category"><rect codeLine="56" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::Category" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="276.3" y="270.9"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="316.35" y="284.7428">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="52.2" x="317.7" y="299.8002">Category</text></g></a><!--MD5=[d76d739c0682f3af0403f0bf321852fe]
+class DDICDIModels::DesignPatterns::CollectionsPattern::Position--><a href="../DesignPatterns/CollectionsPattern/Position.html#super-class-hierarchy-generalization" target="_top" title=" ― Position:&#10;Position of the associated member within the associated List." xlink:actuate="onRequest" xlink:href="../DesignPatterns/CollectionsPattern/Position.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Position:&#10;Position of the associated member within the associated List." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::CollectionsPattern::Position"><rect codeLine="61" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::CollectionsPattern::Position" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="463.5" y="492.3"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="83.7" x="489.15" y="506.1428">CollectionsPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="45" x="508.5" y="521.2002">Position</text></g></a><!--MD5=[71b8b462948d0da3428d452e93083c64]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition"><rect codeLine="46" fill="#FFD700" height="75.0656" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="276.3" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="316.35" y="137.5928">Conceptual::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="97.2" x="295.2" y="152.6502">CategoryPosition</text><line style="stroke:#404040;stroke-width:0.45;" x1="277.2" x2="410.4" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="281.7" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="341.1" y="176.5986">Identifier</text></a><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="81" x="281.7" y="192.4471">value : Integer</text></g><!--MD5=[5ce383aef10b96cc267dbb9891b83845]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition to DDICDIModels::DDICDILibrary::Classes::Conceptual::Category--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition_DDICDIModels::DDICDILibrary::Classes::Conceptual::Category"><a href="" target="_top" title=" ― indexes:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― indexes:&#10;" xlink:type="simple"><path codeLine="69" d="M343.8,198.783 C343.8,220.617 343.8,247.554 343.8,266.085 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::Category" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="343.8,270.603,347.4,262.503,343.8,266.103,340.2,262.503,343.8,270.603" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="40.5" x="344.7" y="238.9456">indexes</text></a></g><!--MD5=[628f76e228094fc45a81fba9cdfff409]
+reverse link DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition to DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition_DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="70" d="M271.674,195.66 C219.681,219.924 151.686,251.658 110.448,270.9 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition-backto-DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="276.012,193.635,267.1496,193.7996,271.9345,195.5387,270.1955,200.3236,276.012,193.635" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="202.5" y="238.9456">has</text></a></g><!--MD5=[2dd2599812171a8e1cc1730e1eb4c258]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition to DDICDIModels::DesignPatterns::CollectionsPattern::Position--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition_DDICDIModels::DesignPatterns::CollectionsPattern::Position"><path codeLine="74" d="M411.381,178.002 C465.003,195.201 531,228.456 531,288 C531,288 531,288 531,435.15 C531,452.754 531,472.707 531,487.494 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition-to-DDICDIModels::DesignPatterns::CollectionsPattern::Position" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="531,492.291,534.6,484.191,531,487.791,527.4,484.191,531,492.291" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="531.9" y="376.6456">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="322.2" x="134.55" y="532.9688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="294.3" y="542.3115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="294.3" y="553.6318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="322.2" x="134.55" y="564.9521">DDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::CategoryPosition</text><!--MD5=[b848f999eb9a76f45fb20eb328d5c0b3]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class CategoryPosition in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::CategoryPosition
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition as "<size:10>Conceptual::\n<color:black>CategoryPosition" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  value : Integer
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet as "<size:10>Conceptual::\n<color:blue>CategorySet" [[../DDICDILibrary/Classes/Conceptual/CategorySet.html#super-class-hierarchy-generalization{ <U+2015> CategorySet:\nConcept system where the underlying concepts are categories.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::Category as "<size:10>Conceptual::\n<color:blue>Category" [[../DDICDILibrary/Classes/Conceptual/Category.html#super-class-hierarchy-generalization{ <U+2015> Category:\nConcept whose role is to define and measure a characteristic.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Position as "<size:10>CollectionsPattern::\n<color:blue>Position" [[../DesignPatterns/CollectionsPattern/Position.html#super-class-hierarchy-generalization{ <U+2015> Position:\nPosition of the associated member within the associated List.}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Category [[{ <U+2015> indexes:\n}]] : indexes
+DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet [[{ <U+2015> has:\n}]] : has
+
+
+' Abstractions
+  DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition .....> DDICDIModels::DesignPatterns::CollectionsPattern::Position : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class CategoryPosition in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::CategoryPosition
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition as "<size:10>Conceptual::\n<color:black>CategoryPosition" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  value : Integer
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet as "<size:10>Conceptual::\n<color:blue>CategorySet" [[../DDICDILibrary/Classes/Conceptual/CategorySet.html#super-class-hierarchy-generalization{ <U+2015> CategorySet:\nConcept system where the underlying concepts are categories.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::Category as "<size:10>Conceptual::\n<color:blue>Category" [[../DDICDILibrary/Classes/Conceptual/Category.html#super-class-hierarchy-generalization{ <U+2015> Category:\nConcept whose role is to define and measure a characteristic.}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Position as "<size:10>CollectionsPattern::\n<color:blue>Position" [[../DesignPatterns/CollectionsPattern/Position.html#super-class-hierarchy-generalization{ <U+2015> Position:\nPosition of the associated member within the associated List.}]]
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Category [[{ <U+2015> indexes:\n}]] : indexes
+DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet [[{ <U+2015> has:\n}]] : has
+
+
+  DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition .....> DDICDIModels::DesignPatterns::CollectionsPattern::Position : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

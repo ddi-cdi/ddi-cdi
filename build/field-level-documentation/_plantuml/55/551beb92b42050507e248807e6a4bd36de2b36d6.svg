@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="573.3px" preserveAspectRatio="none" style="width:614px;height:573px;background:#FFFFFF;" version="1.1" viewBox="0 0 614 573" width="614.7px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="583.2" x="9.675" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="574.2" x="14.175" y="27.6855">UML Diagram: Class StatisticalClassificationRelationship in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="299.475" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[763cc00662a209634f139486137f4c03]
+class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure--><a href="../DDICDILibrary/Classes/Representations/ClassificationSeriesStructure.html#super-class-hierarchy-generalization" target="_top" title=" ― ClassificationSeriesStructure:&#10;Structure for describing the complex relationships between statistical classifications in a classification series." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Representations/ClassificationSeriesStructure.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ClassificationSeriesStructure:&#10;Structure for describing the complex relationships between statistical classifications in a classification series." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure"><rect codeLine="56" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="168.3" x="6.3" y="270.9"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="54" y="284.7428">Representations::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="162.9" x="9" y="299.8002">ClassificationSeriesStructure</text></g></a><!--MD5=[1d83e88dbbdb96075cf050a5702520b3]
+class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification--><a href="../DDICDILibrary/Classes/Representations/StatisticalClassification.html#super-class-hierarchy-generalization" target="_top" title=" ― StatisticalClassification:&#10;Set of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Representations/StatisticalClassification.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― StatisticalClassification:&#10;Set of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification"><rect codeLine="57" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="300.15" y="270.9"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="331.2" y="284.7428">Representations::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="128.7" x="303.3" y="299.8002">StatisticalClassification</text></g></a><!--MD5=[26ed6b543731beaf3afce7fd6b75ac79]
+class DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship--><a href="../DesignPatterns/CollectionsPattern/MemberRelationship.html#super-class-hierarchy-generalization" target="_top" title=" ― MemberRelationship:&#10;Relationship between members in a collection with directionality given by source and target." xlink:actuate="onRequest" xlink:href="../DesignPatterns/CollectionsPattern/MemberRelationship.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― MemberRelationship:&#10;Relationship between members in a collection with directionality given by source and target." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship"><rect codeLine="62" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="474.75" y="492.3"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="83.7" x="500.4" y="506.1428">CollectionsPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="117" x="483.75" y="521.2002">MemberRelationship</text></g></a><!--MD5=[290e379a7ad3bf48335a60ad5a5e6594]
+class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship"><rect codeLine="46" fill="#FFD700" height="75.0656" id="DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="230.4" x="212.85" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="291.6" y="137.5928">Representations::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="198.9" x="228.6" y="152.6502">StatisticalClassificationRelationship</text><line style="stroke:#404040;stroke-width:0.45;" x1="213.75" x2="442.35" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="218.25" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="277.65" y="176.5986">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="63.9" x="218.25" y="192.4471">semantics :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="285.75" y="192.4471">ControlledVocabularyEntry</text></a></g><!--MD5=[37fa47a8b2e545b6375f087a4b40df1a]
+reverse link DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship to DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship_DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="70" d="M255.033,200.727 C210.771,224.19 156.51,252.972 122.697,270.9 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship-backto-DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="259.011,198.612,250.1686,199.2295,255.0361,200.7216,253.544,205.5892,259.011,198.612" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="203.85" y="238.9456">has</text></a></g><!--MD5=[9782367ceafaf770cc562dd0d8e7a392]
+link DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship to DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification"><a href="" target="_top" title=" ― hasSource:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― hasSource:&#10;" xlink:type="simple"><path codeLine="71" d="M304.758,198.54 C298.8,212.589 295.821,228.501 302.85,242.1 C308.331,252.693 317.511,261.369 327.258,268.218 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship-to-DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="331.164,270.846,326.4569,263.3351,327.4317,268.3321,322.4347,269.3069,331.164,270.846" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="55.8" x="303.75" y="238.9456">hasSource</text></a></g><!--MD5=[9782367ceafaf770cc562dd0d8e7a392]
+link DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship to DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification"><a href="" target="_top" title=" ― hasTarget:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― hasTarget:&#10;" xlink:type="simple"><path codeLine="72" d="M352.377,198.576 C357.048,207.207 361.323,216.612 364.05,225.9 C367.866,238.887 368.802,254.052 368.775,266.139 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship-to-DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification-1" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="368.712,270.774,372.4273,262.7262,368.7763,266.2745,365.2281,262.6234,368.712,270.774" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="51.3" x="367.65" y="238.9456">hasTarget</text></a></g><!--MD5=[06e263faca9dfe0a6ab5f53a7dc9c768]
+link DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship to DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship_DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship"><path codeLine="76" d="M443.304,186.381 C494.001,204.534 542.25,235.584 542.25,288 C542.25,288 542.25,288 542.25,435.15 C542.25,452.754 542.25,472.707 542.25,487.494 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship-to-DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="542.25,492.291,545.85,484.191,542.25,487.791,538.65,484.191,542.25,492.291" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="543.15" y="376.6456">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="420.3" x="91.125" y="532.9688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="299.925" y="542.3115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="299.925" y="553.6318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="420.3" x="91.125" y="564.9521">DDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::StatisticalClassificationRelationship</text><!--MD5=[6a727ff76ca9f0bf9e01b3673670a555]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class StatisticalClassificationRelationship in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::StatisticalClassificationRelationship
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship as "<size:10>Representations::\n<color:black>StatisticalClassificationRelationship" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  semantics : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure as "<size:10>Representations::\n<color:blue>ClassificationSeriesStructure" [[../DDICDILibrary/Classes/Representations/ClassificationSeriesStructure.html#super-class-hierarchy-generalization{ <U+2015> ClassificationSeriesStructure:\nStructure for describing the complex relationships between statistical classifications in a classification series.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification as "<size:10>Representations::\n<color:blue>StatisticalClassification" [[../DDICDILibrary/Classes/Representations/StatisticalClassification.html#super-class-hierarchy-generalization{ <U+2015> StatisticalClassification:\nSet of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship as "<size:10>CollectionsPattern::\n<color:blue>MemberRelationship" [[../DesignPatterns/CollectionsPattern/MemberRelationship.html#super-class-hierarchy-generalization{ <U+2015> MemberRelationship:\nRelationship between members in a collection with directionality given by source and target.}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure [[{ <U+2015> has:\n}]] : has
+DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification [[{ <U+2015> hasSource:\n}]] : hasSource
+DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification [[{ <U+2015> hasTarget:\n}]] : hasTarget
+
+
+' Abstractions
+  DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship .....> DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class StatisticalClassificationRelationship in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::StatisticalClassificationRelationship
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship as "<size:10>Representations::\n<color:black>StatisticalClassificationRelationship" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  semantics : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure as "<size:10>Representations::\n<color:blue>ClassificationSeriesStructure" [[../DDICDILibrary/Classes/Representations/ClassificationSeriesStructure.html#super-class-hierarchy-generalization{ <U+2015> ClassificationSeriesStructure:\nStructure for describing the complex relationships between statistical classifications in a classification series.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification as "<size:10>Representations::\n<color:blue>StatisticalClassification" [[../DDICDILibrary/Classes/Representations/StatisticalClassification.html#super-class-hierarchy-generalization{ <U+2015> StatisticalClassification:\nSet of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent.}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship as "<size:10>CollectionsPattern::\n<color:blue>MemberRelationship" [[../DesignPatterns/CollectionsPattern/MemberRelationship.html#super-class-hierarchy-generalization{ <U+2015> MemberRelationship:\nRelationship between members in a collection with directionality given by source and target.}]]
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure [[{ <U+2015> has:\n}]] : has
+DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification [[{ <U+2015> hasSource:\n}]] : hasSource
+DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification [[{ <U+2015> hasTarget:\n}]] : hasTarget
+
+
+  DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship .....> DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

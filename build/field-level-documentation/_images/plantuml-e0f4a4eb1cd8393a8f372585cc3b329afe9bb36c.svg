@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="368.1px" preserveAspectRatio="none" style="width:442px;height:368px;background:#FFFFFF;" version="1.1" viewBox="0 0 442 368" width="442.8px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="426.6" x="4.5" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="417.6" x="9" y="27.6855">UML Diagram: Class CategoryStatistic in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="216" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="62.55" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="67.95" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="67.95" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="67.95" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[c87628a3227e99184f07098d1174ba73]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable--><a href="../DDICDILibrary/Classes/Conceptual/InstanceVariable.html#super-class-hierarchy-generalization" target="_top" title=" ― InstanceVariable:&#10;Use of a represented variable within a data set." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/InstanceVariable.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― InstanceVariable:&#10;Use of a represented variable within a data set." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable"><rect codeLine="58" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="61.65" y="287.1"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="101.7" y="300.9428">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="94.5" x="81.9" y="316.0002">InstanceVariable</text></g></a><!--MD5=[773bbebeccb7db9d342b93d3d3d1bf2c]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::Category--><a href="../DDICDILibrary/Classes/Conceptual/Category.html#super-class-hierarchy-generalization" target="_top" title=" ― Category:&#10;Concept whose role is to define and measure a characteristic." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/Category.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Category:&#10;Concept whose role is to define and measure a characteristic." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::Category"><rect codeLine="59" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::Category" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="247.05" y="287.1"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="287.1" y="300.9428">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="52.2" x="288.45" y="316.0002">Category</text></g></a><!--MD5=[cf2b466143bd797820c9416be252779d]
+entity ##7--><!--MD5=[c741a11889ff8ffe93a953797fdd059d]
+class DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic"><rect codeLine="46" fill="#FFD700" height="90.9141" id="DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="307.8" x="78.75" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="196.2" y="137.5928">Representations::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="96.3" x="184.5" y="152.6502">CategoryStatistic</text><line style="stroke:#404040;stroke-width:0.45;" x1="79.65" x2="385.65" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="84.15" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="143.55" y="176.5986">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.html#diagram" target="_top" title=" ― Statistic:&#10;The value of the statistic expressed as a decimal, float and/or double. Indicates whether it is weighted value and the computation base." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.html#diagram" xlink:show="new" xlink:title=" ― Statistic:&#10;The value of the statistic expressed as a decimal, float and/or double. Indicates whether it is weighted value and the computation base." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="49.5" x="84.15" y="192.4471">statistic :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="44.1" x="137.25" y="192.4471">Statistic</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="141.3" x="84.15" y="208.2955">typeOfCategoryStatistic :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="229.05" y="208.2955">ControlledVocabularyEntry</text></a></g><!--MD5=[aeb7c0652470d402e0565087b3a65649]
+link DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic to DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic_DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable"><a href="" target="_top" title=" ― appliesTo:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― appliesTo:&#10;" xlink:type="simple"><path codeLine="71" d="M198.18,214.749 C180.396,237.798 159.534,264.834 145.431,283.104 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="142.533,286.866,150.3339,282.657,145.2841,283.3049,144.6362,278.2552,142.533,286.866" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="49.5" x="175.95" y="255.1456">appliesTo</text></a></g><!--MD5=[7c0a654e423c24d48ba7231f48b8ca20]
+link DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic to DDICDIModels::DDICDILibrary::Classes::Conceptual::Category--><g id="link_DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic_DDICDIModels::DDICDILibrary::Classes::Conceptual::Category"><a href="" target="_top" title=" ― for:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― for:&#10;" xlink:type="simple"><path codeLine="72" d="M259.92,214.749 C273.933,237.708 290.367,264.609 301.518,282.87 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::Category" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="303.957,286.866,302.8205,278.0752,301.6172,283.0221,296.6703,281.8188,303.957,286.866" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="12.6" x="285.75" y="255.1456">for</text></a></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="340.2" x="47.7" y="327.7688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="216.45" y="337.1115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="216.45" y="348.4318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="340.2" x="47.7" y="359.7521">DDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::CategoryStatistic</text><!--MD5=[71b9c09e96bed9aaaabdf581297700dd]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class CategoryStatistic in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::CategoryStatistic
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic as "<size:10>Representations::\n<color:black>CategoryStatistic" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  statistic : <color:blue>Statistic   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.html#diagram{ <U+2015> Statistic:\nThe value of the statistic expressed as a decimal, float and/or double. Indicates whether it is weighted value and the computation base.}]]]
+  typeOfCategoryStatistic : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable as "<size:10>Conceptual::\n<color:blue>InstanceVariable" [[../DDICDILibrary/Classes/Conceptual/InstanceVariable.html#super-class-hierarchy-generalization{ <U+2015> InstanceVariable:\nUse of a represented variable within a data set.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::Category as "<size:10>Conceptual::\n<color:blue>Category" [[../DDICDILibrary/Classes/Conceptual/Category.html#super-class-hierarchy-generalization{ <U+2015> Category:\nConcept whose role is to define and measure a characteristic.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable [[{ <U+2015> appliesTo:\n}]] : appliesTo
+DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Category [[{ <U+2015> for:\n}]] : for
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class CategoryStatistic in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Representations::CategoryStatistic
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic as "<size:10>Representations::\n<color:black>CategoryStatistic" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  statistic : <color:blue>Statistic   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.html#diagram{ <U+2015> Statistic:\nThe value of the statistic expressed as a decimal, float and/or double. Indicates whether it is weighted value and the computation base.}]]]
+  typeOfCategoryStatistic : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable as "<size:10>Conceptual::\n<color:blue>InstanceVariable" [[../DDICDILibrary/Classes/Conceptual/InstanceVariable.html#super-class-hierarchy-generalization{ <U+2015> InstanceVariable:\nUse of a represented variable within a data set.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::Category as "<size:10>Conceptual::\n<color:blue>Category" [[../DDICDILibrary/Classes/Conceptual/Category.html#super-class-hierarchy-generalization{ <U+2015> Category:\nConcept whose role is to define and measure a characteristic.}]]
+}
+
+together {
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable [[{ <U+2015> appliesTo:\n}]] : appliesTo
+DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Category [[{ <U+2015> for:\n}]] : for
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,521 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component InstanceVariable</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        var propertiesBoxes= new Array('properties_InstanceVariable');
+var usedByBoxes= new Array('usedBy_InstanceVariable');
+var sourceBoxes= new Array('source_InstanceVariable');
+var instanceBoxes= new Array('instance_InstanceVariable');
+var diagramBoxes= new Array('diagram_InstanceVariable');
+var annotationBoxes= new Array('annotations_InstanceVariable');
+var modelBoxes= new Array('model_InstanceVariable');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="InstanceVariable"></a><div class="componentTitle">Element <span class="qname">InstanceVariable</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_InstanceVariable" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_InstanceVariable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_InstanceVariable" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Definition</span><span class="tI">
+</span><span class="tT">==========</span><span class="tI">
+</span><span class="tT">Use of a represented variable within a data set.  </span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Examples</span><span class="tI">
+</span><span class="tT">======== </span><span class="tI">
+</span><span class="tT">1. Gender: Dan Gillman has gender &lt;m, male&gt;, Arofan Gregory has gender &lt;m, male&gt;, etc.</span><span class="tI">
+</span><span class="tT">2. Number of employees: Microsoft has 90,000 employees; IBM has 433,000 employees, etc.</span><span class="tI">
+</span><span class="tT">3. Endowment: Johns Hopkins has endowment of &lt;3, $1,000,000 and above&gt;, Yale has endowment of &lt;3, $1,000,000 and above&gt;, etc.</span><span class="tI">
+</span><span class="tT">4. A tornado near Winterset, Iowa, had a peak wind speed of 170 mph. Two instance variables of a person's height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable.</span><span class="tI">
+</span><span class="tT">            </span><span class="tI">
+</span><span class="tT">Explanatory notes</span><span class="tI">
+</span><span class="tT">================= </span><span class="tI">
+</span><span class="tT">The instance variable class inherits all of the properties and relationships of the represented variable class and, in turn, the conceptual variable class. This means that an instance variable can be completely populated without the need to create an associated represented variable or conceptual variable. If, however, a user wishes to indicate that a particular instance variable is patterned after a particular represented variable or a particular conceptual variable that may be indicated by including a relationship to the represented variable and/or conceptual variable. Including these references is an important method of indicating that multiple instance variables have the same representation, measure the same concept, and are drawn from the same universe. If two instance variables of a person's height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. The instance variable describes actual instances of data that have been collected.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_InstanceVariable" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_InstanceVariable');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_InstanceVariable" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_InstanceVariable.jpeg" usemap="#ddi-cdi_xsd_Element_InstanceVariable" /><map name="ddi-cdi_xsd_Element_InstanceVariable" id="ddi-cdi_xsd_Element_InstanceVariable"><area alt="ddi-cdi_xsd_Complex_Type_ConceptXsdType.tmp#ConceptXsdType_catalogDetails" href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_catalogDetails" coords="383,217,557,261" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptXsdType.tmp#ConceptXsdType_definition" href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_definition" coords="383,316,575,360" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptXsdType.tmp#ConceptXsdType_displayLabel" href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_displayLabel" coords="383,415,566,459" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptXsdType.tmp#ConceptXsdType_externalDefinition" href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_externalDefinition" coords="383,514,540,558" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptXsdType.tmp#ConceptXsdType_identifier" href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_identifier" coords="383,613,530,657" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptXsdType.tmp#ConceptXsdType_name" href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_name" coords="383,712,547,756" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptXsdType.tmp#ConceptXsdType" href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType" coords="280,180,499,202" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.tmp#ConceptualVariableXsdType_descriptiveText" href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_descriptiveText" coords="369,863,561,907" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.tmp#ConceptualVariableXsdType_unitOfMeasureKind" href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_unitOfMeasureKind" coords="369,948,604,992" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.tmp#ConceptualVariableXsdType_ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target" href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target" coords="369,1047,802,1091" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.tmp#ConceptualVariableXsdType_ConceptualVariable_uses_Concept-Target" href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_uses_Concept-Target" coords="369,1132,605,1176" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.tmp#ConceptualVariableXsdType_ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target" href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target" coords="369,1217,840,1261" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.tmp#ConceptualVariableXsdType_ConceptualVariable_measures_UnitType-Target" href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_measures_UnitType-Target" coords="369,1302,631,1346" /><area alt="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.tmp#ConceptualVariableXsdType" href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType" coords="266,121,539,162" /><area alt="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.tmp#RepresentedVariableXsdType_describedUnitOfMeasure" href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_describedUnitOfMeasure" coords="355,1425,590,1469" /><area alt="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.tmp#RepresentedVariableXsdType_hasIntendedDataType" href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_hasIntendedDataType" coords="355,1524,590,1568" /><area alt="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.tmp#RepresentedVariableXsdType_simpleUnitOfMeasure" href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_simpleUnitOfMeasure" coords="355,1623,488,1667" /><area alt="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.tmp#RepresentedVariableXsdType_RepresentedVariable_isBasedOn_ConceptualVariable-Target" href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_isBasedOn_ConceptualVariable-Target" coords="355,1722,682,1766" /><area alt="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.tmp#RepresentedVariableXsdType_RepresentedVariable_measures_Universe-Target" href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_measures_Universe-Target" coords="355,1821,626,1865" /><area alt="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.tmp#RepresentedVariableXsdType_RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target" href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target" coords="355,1920,758,1964" /><area alt="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.tmp#RepresentedVariableXsdType_RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target" href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target" coords="355,2005,796,2049" /><area alt="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.tmp#RepresentedVariableXsdType" href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType" coords="252,62,533,103" /><area alt="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.tmp#InstanceVariableXsdType_physicalDataType" href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_physicalDataType" coords="341,2128,576,2172" /><area alt="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.tmp#InstanceVariableXsdType_platformType" href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_platformType" coords="341,2227,576,2271" /><area alt="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.tmp#InstanceVariableXsdType_source" href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_source" coords="341,2326,498,2370" /><area alt="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.tmp#InstanceVariableXsdType_variableFunction" href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_variableFunction" coords="341,2411,576,2455" /><area alt="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.tmp#InstanceVariableXsdType_InstanceVariable_measures_Population-Target" href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_InstanceVariable_measures_Population-Target" coords="341,2510,597,2554" /><area alt="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.tmp#InstanceVariableXsdType_InstanceVariable_isBasedOn_RepresentedVariable-Target" href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_InstanceVariable_isBasedOn_RepresentedVariable-Target" coords="341,2609,655,2653" /><area alt="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.tmp#InstanceVariableXsdType" href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType" coords="238,3,470,44" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariableXsdType')">InstanceVariableXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptXsdType')">ConceptXsdType</a></b><ul class="internal">
+                                    <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariableXsdType')">ConceptualVariableXsdType</a></b><ul class="internal">
+                                          <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariableXsdType')">RepresentedVariableXsdType</a></b><ul class="internal">
+                                                <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariableXsdType')">InstanceVariableXsdType</a></b></li>
+                                             </ul>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_InstanceVariable" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_InstanceVariable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_InstanceVariable" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_InstanceVariable" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_InstanceVariable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_InstanceVariable" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element Group </td>
+                                    <td><b><a href="ddi-cdi_xsd_Element_Group_AllElementsDerivedFromClasses.html#AllElementsDerivedFromClasses" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AllElementsDerivedFromClasses')">AllElementsDerivedFromClasses</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_InstanceVariable" type="image" src="img/btM.gif" value="-" onclick="switchState('model_InstanceVariable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_InstanceVariable" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_catalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component catalogDetails{0,1}')">catalogDetails{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_definition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component definition{0,1}')">definition{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_displayLabel" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component displayLabel*')">displayLabel*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_externalDefinition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component externalDefinition{0,1}')">externalDefinition{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier{0,1}')">identifier{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name*')">name*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_descriptiveText" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component descriptiveText{0,1}')">descriptiveText{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_unitOfMeasureKind" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component unitOfMeasureKind{0,1}')">unitOfMeasureKind{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target{0,1}')">ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_uses_Concept-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable_uses_Concept-Target*')">ConceptualVariable_uses_Concept-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target{0,1}')">ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_measures_UnitType-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable_measures_UnitType-Target{0,1}')">ConceptualVariable_measures_UnitType-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_describedUnitOfMeasure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component describedUnitOfMeasure{0,1}')">describedUnitOfMeasure{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_hasIntendedDataType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component hasIntendedDataType{0,1}')">hasIntendedDataType{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_simpleUnitOfMeasure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component simpleUnitOfMeasure{0,1}')">simpleUnitOfMeasure{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_isBasedOn_ConceptualVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable_isBasedOn_ConceptualVariable-Target{0,1}')">RepresentedVariable_isBasedOn_ConceptualVariable-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_measures_Universe-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable_measures_Universe-Target{0,1}')">RepresentedVariable_measures_Universe-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target*')">RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target{0,1}')">RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_physicalDataType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component physicalDataType{0,1}')">physicalDataType{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_platformType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component platformType{0,1}')">platformType{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_source" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component source{0,1}')">source{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_variableFunction" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component variableFunction*')">variableFunction*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_InstanceVariable_measures_Population-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariable_measures_Population-Target{0,1}')">InstanceVariable_measures_Population-Target{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_InstanceVariable_isBasedOn_RepresentedVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariable_isBasedOn_RepresentedVariable-Target{0,1}')">InstanceVariable_isBasedOn_RepresentedVariable-Target{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_measures_UnitType-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable_measures_UnitType-Target')">ConceptualVariable_measures_UnitType-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target')">ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target')">ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_ConceptualVariable_uses_Concept-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable_uses_Concept-Target')">ConceptualVariable_uses_Concept-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_InstanceVariable_isBasedOn_RepresentedVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariable_isBasedOn_RepresentedVariable-Target')">InstanceVariable_isBasedOn_RepresentedVariable-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_InstanceVariable_measures_Population-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariable_measures_Population-Target')">InstanceVariable_measures_Population-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_isBasedOn_ConceptualVariable-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable_isBasedOn_ConceptualVariable-Target')">RepresentedVariable_isBasedOn_ConceptualVariable-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_measures_Universe-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable_measures_Universe-Target')">RepresentedVariable_measures_Universe-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target')">RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target')">RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_catalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component catalogDetails')">catalogDetails</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_definition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component definition')">definition</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_describedUnitOfMeasure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component describedUnitOfMeasure')">describedUnitOfMeasure</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_descriptiveText" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component descriptiveText')">descriptiveText</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_displayLabel" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component displayLabel')">displayLabel</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_externalDefinition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component externalDefinition')">externalDefinition</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_hasIntendedDataType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component hasIntendedDataType')">hasIntendedDataType</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component identifier')">identifier</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name')">name</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_physicalDataType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component physicalDataType')">physicalDataType</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_platformType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component platformType')">platformType</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType_simpleUnitOfMeasure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component simpleUnitOfMeasure')">simpleUnitOfMeasure</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_source" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component source')">source</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType_unitOfMeasureKind" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component unitOfMeasureKind')">unitOfMeasureKind</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType_variableFunction" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component variableFunction')">variableFunction</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_InstanceVariable" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_InstanceVariable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_InstanceVariable" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;InstanceVariable</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;catalogDetails</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/catalogDetails&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;displayLabel</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/displayLabel&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;externalDefinition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/externalDefinition&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;identifier</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/identifier&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;descriptiveText</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/descriptiveText&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;unitOfMeasureKind</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/unitOfMeasureKind&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ConceptualVariable_uses_Concept-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/ConceptualVariable_uses_Concept-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;ConceptualVariable_measures_UnitType-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/ConceptualVariable_measures_UnitType-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;describedUnitOfMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/describedUnitOfMeasure&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;hasIntendedDataType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/hasIntendedDataType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;simpleUnitOfMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/simpleUnitOfMeasure&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;RepresentedVariable_isBasedOn_ConceptualVariable-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/RepresentedVariable_isBasedOn_ConceptualVariable-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;RepresentedVariable_measures_Universe-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/RepresentedVariable_measures_Universe-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;physicalDataType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/physicalDataType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;platformType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/platformType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;source</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/source&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;variableFunction</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/variableFunction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;InstanceVariable_measures_Population-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/InstanceVariable_measures_Population-Target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;InstanceVariable_isBasedOn_RepresentedVariable-Target</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/InstanceVariable_isBasedOn_RepresentedVariable-Target&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/InstanceVariable&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_InstanceVariable" type="image" src="img/btM.gif" value="-" onclick="switchState('source_InstanceVariable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_InstanceVariable" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"InstanceVariable"</span><span class="tAN"> type=</span><span class="tAV">"InstanceVariableXsdType"</span><span class="tAN"> xml:id=</span><span class="tAV">"InstanceVariable"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!-- based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable --&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Definition ========== Use of a represented variable within a data set. Examples ======== 1. Gender: Dan Gillman has gender &lt;m, male&gt;, Arofan Gregory has gender &lt;m, male&gt;, etc. 2. Number of employees: Microsoft has 90,000 employees; IBM has 433,000 employees, etc. 3. Endowment: Johns Hopkins has endowment of &lt;3, $1,000,000 and above&gt;, Yale has endowment of &lt;3, $1,000,000 and above&gt;, etc. 4. A tornado near Winterset, Iowa, had a peak wind speed of 170 mph. Two instance variables of a person's height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. Explanatory notes ================= The instance variable class inherits all of the properties and relationships of the represented variable class and, in turn, the conceptual variable class. This means that an instance variable can be completely populated without the need to create an associated represented variable or conceptual variable. If, however, a user wishes to indicate that a particular instance variable is patterned after a particular represented variable or a particular conceptual variable that may be indicated by including a relationship to the represented variable and/or conceptual variable. Including these references is an important method of indicating that multiple instance variables have the same representation, measure the same concept, and are drawn from the same universe. If two instance variables of a person's height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. The instance variable describes actual instances of data that have been collected.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="342.9px" preserveAspectRatio="none" style="width:333px;height:342px;background:#FFFFFF;" version="1.1" viewBox="0 0 333 342" width="333.9px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="317.7" x="4.5" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="308.7" x="9" y="27.6855">UML Diagram: Class Rule in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="161.55" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="16.875" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="22.275" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="22.275" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="22.275" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[aeb310b8222cbee6a8a391ebc0bc3b5e]
+class DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic--><a href="../DDICDILibrary/Classes/Process/ConditionalControlLogic.html#super-class-hierarchy-generalization" target="_top" title=" ― ConditionalControlLogic:&#10;A set of decision points which determine the flow between the steps used to perform an activity." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/ConditionalControlLogic.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ConditionalControlLogic:&#10;A set of decision points which determine the flow between the steps used to perform an activity." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic"><rect codeLine="54" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="141.3" x="15.975" y="261.45"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="67.725" y="275.2928">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="135.9" x="18.675" y="290.3502">ConditionalControlLogic</text></g></a><!--MD5=[dce7397f6e0597c464aeadfc6cc1c787]
+class DDICDIModels::DDICDILibrary::Classes::Process::RuleSet--><a href="../DDICDILibrary/Classes/Process/RuleSet.html#super-class-hierarchy-generalization" target="_top" title=" ― RuleSet:&#10;A rule set is a collection of rules. A rule set is a component of rule based scheduling." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/RuleSet.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― RuleSet:&#10;A rule set is a collection of rules. A rule set is a component of rule based scheduling." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::RuleSet"><rect codeLine="55" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::RuleSet" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="189.225" y="261.45"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="237.825" y="275.2928">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="45" x="234.225" y="290.3502">RuleSet</text></g></a><!--MD5=[cf2b466143bd797820c9416be252779d]
+entity ##7--><!--MD5=[cc49f1ab46f9010e697b8f1ad345c33d]
+class DDICDIModels::DDICDILibrary::Classes::Process::Rule--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::Rule"><rect codeLine="46" fill="#FFD700" height="59.2172" id="DDICDIModels::DDICDILibrary::Classes::Process::Rule" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="110.025" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="158.625" y="137.5928">Process::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="26.1" x="164.475" y="152.6502">Rule</text><line style="stroke:#404040;stroke-width:0.45;" x1="110.925" x2="244.125" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="115.425" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="174.825" y="176.5986">Identifier</text></a></g><!--MD5=[e1fb2226ffcd4bcd12ace1f63922d475]
+link DDICDIModels::DDICDILibrary::Classes::Process::Rule to DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::Rule_DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic"><a href="" target="_top" title=" ― hasPrecondition:&#10;The condition part of a rule is associated with conditonal control logic." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― hasPrecondition:&#10;The condition part of a rule is associated with conditonal control logic." xlink:type="simple"><path codeLine="67" d="M149.562,183.276 C141.066,192.663 131.994,203.346 124.425,213.75 C114.444,227.475 104.832,244.008 97.803,256.941 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::Rule-to-DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="95.517,261.18,102.529,255.7577,97.652,257.2187,96.1909,252.3417,95.517,261.18" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="83.7" x="125.325" y="226.7956">hasPrecondition</text></a></g><!--MD5=[808ba4efc2714da1f18c63ffa9ac4a06]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::Rule to DDICDIModels::DDICDILibrary::Classes::Process::RuleSet--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::Rule_DDICDIModels::DDICDILibrary::Classes::Process::RuleSet"><a href="" target="_top" title=" ― has:&#10;A rule is a member of a rule set." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;A rule is a member of a rule set." xlink:type="simple"><path codeLine="68" d="M198.477,187.209 C213.669,211.032 233.604,242.298 245.772,261.378 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::Rule-backto-DDICDIModels::DDICDILibrary::Classes::Process::RuleSet" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="195.894,183.159,197.2113,191.9245,198.3124,186.9539,203.2831,188.055,195.894,183.159" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="224.325" y="226.7956">has</text></a></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="252.9" x="36.9" y="302.1188"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="162" y="311.4615"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="162" y="322.7818"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="252.9" x="36.9" y="334.1021">DDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Rule</text><!--MD5=[352197bfb2b938d0f2e144f55767feb4]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Rule in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Rule
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Process::Rule as "<size:10>Process::\n<color:black>Rule" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic as "<size:10>Process::\n<color:blue>ConditionalControlLogic" [[../DDICDILibrary/Classes/Process/ConditionalControlLogic.html#super-class-hierarchy-generalization{ <U+2015> ConditionalControlLogic:\nA set of decision points which determine the flow between the steps used to perform an activity.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Process::RuleSet as "<size:10>Process::\n<color:blue>RuleSet" [[../DDICDILibrary/Classes/Process/RuleSet.html#super-class-hierarchy-generalization{ <U+2015> RuleSet:\nA rule set is a collection of rules. A rule set is a component of rule based scheduling.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Process::Rule -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic [[{ <U+2015> hasPrecondition:\nThe condition part of a rule is associated with conditonal control logic.}]] : hasPrecondition
+DDICDIModels::DDICDILibrary::Classes::Process::Rule <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::RuleSet [[{ <U+2015> has:\nA rule is a member of a rule set.}]] : has
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Rule in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Rule
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Process::Rule as "<size:10>Process::\n<color:black>Rule" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic as "<size:10>Process::\n<color:blue>ConditionalControlLogic" [[../DDICDILibrary/Classes/Process/ConditionalControlLogic.html#super-class-hierarchy-generalization{ <U+2015> ConditionalControlLogic:\nA set of decision points which determine the flow between the steps used to perform an activity.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Process::RuleSet as "<size:10>Process::\n<color:blue>RuleSet" [[../DDICDILibrary/Classes/Process/RuleSet.html#super-class-hierarchy-generalization{ <U+2015> RuleSet:\nA rule set is a collection of rules. A rule set is a component of rule based scheduling.}]]
+}
+
+together {
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Process::Rule -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic [[{ <U+2015> hasPrecondition:\nThe condition part of a rule is associated with conditonal control logic.}]] : hasPrecondition
+DDICDIModels::DDICDILibrary::Classes::Process::Rule <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::RuleSet [[{ <U+2015> has:\nA rule is a member of a rule set.}]] : has
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

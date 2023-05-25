@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="638.1px" preserveAspectRatio="none" style="width:898px;height:638px;background:#FFFFFF;" version="1.1" viewBox="0 0 898 638" width="898.2px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="540.9" x="172.575" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="531.9" x="177.075" y="27.6855">UML Diagram: Class SubstantiveConceptualDomain in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="441.225" y="44.7205"> </text><rect fill="#FFFFFF" height="56.0813" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="164.7" x="12.6" y="113.2928">- The arrows of the inheritance tree are</text><text fill="#D2691E" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="32.4" x="180" y="113.2928">colored</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="212.4" y="113.2928">.</text><!--MD5=[10baaa6de57ba4d6e71557471506b9ce]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable--><a href="../DDICDILibrary/Classes/Conceptual/ConceptualVariable.html#super-class-hierarchy-generalization" target="_top" title=" ― ConceptualVariable:&#10;A variable at the highest level of abstraction." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/ConceptualVariable.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ConceptualVariable:&#10;A variable at the highest level of abstraction." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable"><rect codeLine="53" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="556.4143"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="46.35" y="570.2571">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="111.6" x="18" y="585.3145">ConceptualVariable</text></g></a><!--MD5=[48dd8570e1f8a0ac97ec2802de29911d]
+class DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain--><a href="../DDICDILibrary/Classes/Representations/SubstantiveValueDomain.html#super-class-hierarchy-generalization" target="_top" title=" ― SubstantiveValueDomain:&#10;Value domain for a substantive conceptual domain. Typically a description and/or enumeration of allowed values of interest." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Representations/SubstantiveValueDomain.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― SubstantiveValueDomain:&#10;Value domain for a substantive conceptual domain. Typically a description and/or enumeration of allowed values of interest." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain"><rect codeLine="54" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="147.6" x="172.8" y="556.4143"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="210.15" y="570.2571">Representations::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="142.2" x="175.5" y="585.3145">SubstantiveValueDomain</text></g></a><!--MD5=[cf2b466143bd797820c9416be252779d]
+entity ##7--><!--MD5=[8f11a1741f24cbd1af2154c4885c9a6c]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain"><rect codeLine="47" fill="#FFD700" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="180" x="70.2" y="410.6143"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="132.75" y="424.4571">Conceptual::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="174.6" x="72.9" y="439.5145">SubstantiveConceptualDomain</text></g><!--MD5=[cc1a93bbed18b03827399842bad0aaf4]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain--><a href="../DDICDILibrary/Classes/Conceptual/ConceptualDomain.html#super-class-hierarchy-generalization" target="_top" title=" ― ConceptualDomain:&#10;Set of concepts, where each concept is intended to be used as the meaning (signified) for a datum." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/ConceptualDomain.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ConceptualDomain:&#10;Set of concepts, where each concept is intended to be used as the meaning (signified) for a datum." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain"><rect codeLine="96" fill="#FAFAD2" height="90.9141" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="185.4" x="67.5" y="223.8643"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="132.75" y="237.7071">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="108" x="106.2" y="252.7645">ConceptualDomain</text><line style="stroke:#404040;stroke-width:0.45;" x1="68.4" x2="252" y1="260.0331" y2="260.0331"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram" target="_top" title=" ― CatalogDetails:&#10;A set of information useful for attribution, data discovery, and access." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram" xlink:show="new" xlink:title=" ― CatalogDetails:&#10;A set of information useful for attribution, data discovery, and access." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="87.3" x="72.9" y="276.7129">catalogDetails :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="82.8" x="163.8" y="276.7129">CatalogDetails</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram" target="_top" title=" ― LabelForDisplay:&#10;A structured display label. Label provides display content of a fully human readable display for the identification of the object." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram" xlink:show="new" xlink:title=" ― LabelForDisplay:&#10;A structured display label. Label provides display content of a fully human readable display for the identification of the object." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="78.3" x="72.9" y="292.5614">displayLabel :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="92.7" x="154.8" y="292.5614">LabelForDisplay</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="72.9" y="308.4098">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="132.3" y="308.4098">Identifier</text></a></g></a><!--MD5=[dcbe118f13496bfa82f9b0557ee64903]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue--><a href="../DDICDILibrary/Classes/DataDescription/ConceptualValue.html#super-class-hierarchy-generalization" target="_top" title=" ― ConceptualValue:&#10;Concept (with a notion of equality defined) being observed, captured, or derived which is associated to a single data instance." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/ConceptualValue.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ConceptualValue:&#10;Concept (with a notion of equality defined) being observed, captured, or derived which is associated to a single data instance." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue"><rect codeLine="63" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="387" y="251.3143"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="418.05" y="265.1571">DataDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="97.2" x="405.9" y="280.2145">ConceptualValue</text></g></a><!--MD5=[296bbaf9e8829ea7176055b294e3da05]
+class DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription--><a href="../DDICDILibrary/Classes/Representations/ValueAndConceptDescription.html#super-class-hierarchy-generalization" target="_top" title=" ― ValueAndConceptDescription:&#10;Formal description of a set of values." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Representations/ValueAndConceptDescription.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ValueAndConceptDescription:&#10;Formal description of a set of values." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription"><rect codeLine="64" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="171.9" x="720.45" y="251.3143"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="769.95" y="265.1571">Representations::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="166.5" x="723.15" y="280.2145">ValueAndConceptDescription</text></g></a><!--MD5=[389c0d85ebee7824a7ea11451bba5944]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem--><a href="../DDICDILibrary/Classes/Conceptual/ConceptSystem.html#super-class-hierarchy-generalization" target="_top" title=" ― ConceptSystem:&#10;Set of concepts structured by the relations among them [GSIM 1.1]." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/ConceptSystem.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ConceptSystem:&#10;Set of concepts structured by the relations among them [GSIM 1.1]." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem"><rect codeLine="65" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="553.5" y="251.3143"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="593.55" y="265.1571">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="89.1" x="576.45" y="280.2145">ConceptSystem</text></g></a><!--MD5=[07edc9a68911a153426cf0668ef32ac5]
+reverse link DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain to DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable"><a href="" target="_top" title=" ― takesSubstantiveConceptsFrom:&#10;Identifies the substantive conceptual domain containing the set of substantive concepts used to describe the conceptual variable." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― takesSubstantiveConceptsFrom:&#10;Identifies the substantive conceptual domain containing the set of substantive concepts used to describe the conceptual variable." xlink:type="simple"><path codeLine="70" d="M105.525,448.7473 C86.292,458.4583 66.753,472.3633 55.8,491.6143 C44.289,511.8643 54.198,538.7923 63.243,556.1443 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain-backto-DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="109.62,446.7403,100.7623,447.0749,105.5798,448.7218,103.9328,453.5392,109.62,446.7403" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="165.6" x="56.7" y="504.6599">takesSubstantiveConceptsFrom</text></a></g><!--MD5=[26ecf22768dfd0c9f9b72f45aadd2055]
+reverse link DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain to DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain_DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain"><a href="" target="_top" title=" ― takesConceptsFrom:&#10;Corresponding conceptual definition given by an substantive conceptual domain." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― takesConceptsFrom:&#10;Corresponding conceptual definition given by an substantive conceptual domain." xlink:type="simple"><path codeLine="71" d="M188.604,449.6743 C202.059,460.6273 217.251,475.2703 226.8,491.6143 C238.608,511.8283 243.387,538.7653 245.313,556.1263 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain-backto-DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="184.86,446.6863,188.9396,454.5557,188.3752,449.4959,193.4349,448.9314,184.86,446.6863" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="105.3" x="234.9" y="504.6599">takesConceptsFrom</text></a></g><!--MD5=[07801cf9629d899b965a397c6e6dd275]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain to DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain_DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription"><a href="" target="_top" title=" ― isDescribedBy:&#10;A description of the concepts in the domain. A numeric domain might use a logical expression to be machine actionable; a text domain might use a regular expression to describe strings that describe the concepts." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― isDescribedBy:&#10;A description of the concepts in the domain. A numeric domain might use a logical expression to be machine actionable; a text domain might use a regular expression to describe strings that describe the concepts." xlink:type="simple"><path codeLine="84" d="M252.936,224.3503 C349.902,183.3193 506.115,134.1703 638.55,170.3143 C693.909,185.4253 749.592,223.9723 780.867,248.2633 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain-to-DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="784.557,251.1523,780.3793,243.3346,781.007,248.3869,775.9547,249.0146,784.557,251.1523" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="87.3" x="550.35" y="165.3599"> isDescribedBy</text></a></g><!--MD5=[eefc7fc958209d987d052be7e6d9b3c2]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain to DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem"><a href="" target="_top" title=" ― takesConceptsFrom:&#10;Conceptual domain takes concept from zero to one concept system." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― takesConceptsFrom:&#10;Conceptual domain takes concept from zero to one concept system." xlink:type="simple"><path codeLine="89" d="M225.765,223.6663 C259.407,202.9933 302.013,180.8623 343.8,170.3143 C394.992,157.3903 411.849,155.7613 462.6,170.3143 C515.466,185.4793 567.81,224.0083 597.123,248.2813 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="600.579,251.1703,596.6582,243.2207,597.121,248.2907,592.0509,248.7535,600.579,251.1703" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="117" x="344.7" y="165.3599"> takesConceptsFrom</text></a></g><!--MD5=[53127e7d16d9ed7bdec78623328304b7]
+reverse link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain to DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain_DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue"><a href="" target="_top" title=" ― hasConceptFrom:&#10;Conceptual value has concept from one conceptual domain." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― hasConceptFrom:&#10;Conceptual value has concept from one conceptual domain." xlink:type="simple"><path codeLine="94" d="M257.526,269.3143 C299.943,269.3143 348.633,269.3143 386.982,269.3143 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="252.918,269.3143,261.018,272.9143,257.418,269.3143,261.018,265.7143,252.918,269.3143" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="100.8" x="269.55" y="263.4599"> hasConceptFrom</text></a></g><!--MD5=[2cb5379756a29af1459b32e1c70d4353]
+reverse link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain to DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain_DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain"><path codeLine="105" d="M160.2,333.2233 C160.2,361.2043 160.2,391.9573 160.2,410.5513 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain-backto-DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain" style="stroke:#D2691E;stroke-width:1.35;"/><polygon fill="none" points="153.9,332.9263,160.2,314.9263,166.5,332.9263,153.9,332.9263" style="stroke:#D2691E;stroke-width:1.35;"/></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="382.5" x="251.775" y="597.0831"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="441.675" y="606.4258"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="441.675" y="617.7461"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="382.5" x="251.775" y="629.0665">DDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::SubstantiveConceptualDomain</text><!--MD5=[627aed4454d369979808de7f2cbc8e70]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class SubstantiveConceptualDomain in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::SubstantiveConceptualDomain
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain as "<size:10>Conceptual::\n<color:black>SubstantiveConceptualDomain" #FFD700 {
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable as "<size:10>Conceptual::\n<color:blue>ConceptualVariable" [[../DDICDILibrary/Classes/Conceptual/ConceptualVariable.html#super-class-hierarchy-generalization{ <U+2015> ConceptualVariable:\nA variable at the highest level of abstraction.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain as "<size:10>Representations::\n<color:blue>SubstantiveValueDomain" [[../DDICDILibrary/Classes/Representations/SubstantiveValueDomain.html#super-class-hierarchy-generalization{ <U+2015> SubstantiveValueDomain:\nValue domain for a substantive conceptual domain. Typically a description and/or enumeration of allowed values of interest.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain as "<size:10>Conceptual::\n<color:blue>ConceptualDomain" [[../DDICDILibrary/Classes/Conceptual/ConceptualDomain.html#super-class-hierarchy-generalization{ <U+2015> ConceptualDomain:\nSet of concepts, where each concept is intended to be used as the meaning (signified) for a datum.}]]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue as "<size:10>DataDescription::\n<color:blue>ConceptualValue" [[../DDICDILibrary/Classes/DataDescription/ConceptualValue.html#super-class-hierarchy-generalization{ <U+2015> ConceptualValue:\nConcept (with a notion of equality defined) being observed, captured, or derived which is associated to a single data instance.}]]
+class DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription as "<size:10>Representations::\n<color:blue>ValueAndConceptDescription" [[../DDICDILibrary/Classes/Representations/ValueAndConceptDescription.html#super-class-hierarchy-generalization{ <U+2015> ValueAndConceptDescription:\nFormal description of a set of values.}]]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem as "<size:10>Conceptual::\n<color:blue>ConceptSystem" [[../DDICDILibrary/Classes/Conceptual/ConceptSystem.html#super-class-hierarchy-generalization{ <U+2015> ConceptSystem:\nSet of concepts structured by the relations among them [GSIM 1.1].}]]
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable [[{ <U+2015> takesSubstantiveConceptsFrom:\nIdentifies the substantive conceptual domain containing the set of substantive concepts used to describe the conceptual variable.}]] : takesSubstantiveConceptsFrom
+DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain [[{ <U+2015> takesConceptsFrom:\nCorresponding conceptual definition given by an substantive conceptual domain.}]] : takesConceptsFrom
+
+' Super classes
+' Associations of Super classes
+' firstAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@1f966492 (name: ConceptualDomain, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+' secondAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@1f966492 (name: ConceptualDomain, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+
+
+
+' aClass:			SubstantiveConceptualDomain
+' aSuperClass:		ConceptualDomain
+' e_ownedEndClass:	ConceptualDomain
+' e_otherEndClass:	ValueAndConceptDescription
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain -[#grey]> DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription [[{ <U+2015> isDescribedBy:\nA description of the concepts in the domain. A numeric domain might use a logical expression to be machine actionable; a text domain might use a regular expression to describe strings that describe the concepts.}]] : <U+2003>isDescribedBy
+' aClass:			SubstantiveConceptualDomain
+' aSuperClass:		ConceptualDomain
+' e_ownedEndClass:	ConceptualDomain
+' e_otherEndClass:	ConceptSystem
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain -[#grey]> DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem [[{ <U+2015> takesConceptsFrom:\nConceptual domain takes concept from zero to one concept system.}]] : <U+2003>takesConceptsFrom
+' aClass:			SubstantiveConceptualDomain
+' aSuperClass:		ConceptualDomain
+' e_ownedEndClass:	ConceptualValue
+' e_otherEndClass:	ConceptualDomain
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain <-[#grey] DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue [[{ <U+2015> hasConceptFrom:\nConceptual value has concept from one conceptual domain.}]] : <U+2003>hasConceptFrom
+
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain as "<size:10> \n<color:blue>ConceptualDomain" [[../DDICDILibrary/Classes/Conceptual/ConceptualDomain.html#super-class-hierarchy-generalization{ <U+2015> ConceptualDomain:\nSet of concepts, where each concept is intended to be used as the meaning (signified) for a datum.}]] #FAFAD2 {
+  catalogDetails : <color:blue>CatalogDetails   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram{ <U+2015> CatalogDetails:\nA set of information useful for attribution, data discovery, and access.}]]]
+  displayLabel : <color:blue>LabelForDisplay   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram{ <U+2015> LabelForDisplay:\nA structured display label. Label provides display content of a fully human readable display for the identification of the object.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class SubstantiveConceptualDomain in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::SubstantiveConceptualDomain
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain as "<size:10>Conceptual::\n<color:black>SubstantiveConceptualDomain" #FFD700 {
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable as "<size:10>Conceptual::\n<color:blue>ConceptualVariable" [[../DDICDILibrary/Classes/Conceptual/ConceptualVariable.html#super-class-hierarchy-generalization{ <U+2015> ConceptualVariable:\nA variable at the highest level of abstraction.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain as "<size:10>Representations::\n<color:blue>SubstantiveValueDomain" [[../DDICDILibrary/Classes/Representations/SubstantiveValueDomain.html#super-class-hierarchy-generalization{ <U+2015> SubstantiveValueDomain:\nValue domain for a substantive conceptual domain. Typically a description and/or enumeration of allowed values of interest.}]]
+}
+
+together {
+}
+
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain as "<size:10>Conceptual::\n<color:blue>ConceptualDomain" [[../DDICDILibrary/Classes/Conceptual/ConceptualDomain.html#super-class-hierarchy-generalization{ <U+2015> ConceptualDomain:\nSet of concepts, where each concept is intended to be used as the meaning (signified) for a datum.}]]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue as "<size:10>DataDescription::\n<color:blue>ConceptualValue" [[../DDICDILibrary/Classes/DataDescription/ConceptualValue.html#super-class-hierarchy-generalization{ <U+2015> ConceptualValue:\nConcept (with a notion of equality defined) being observed, captured, or derived which is associated to a single data instance.}]]
+class DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription as "<size:10>Representations::\n<color:blue>ValueAndConceptDescription" [[../DDICDILibrary/Classes/Representations/ValueAndConceptDescription.html#super-class-hierarchy-generalization{ <U+2015> ValueAndConceptDescription:\nFormal description of a set of values.}]]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem as "<size:10>Conceptual::\n<color:blue>ConceptSystem" [[../DDICDILibrary/Classes/Conceptual/ConceptSystem.html#super-class-hierarchy-generalization{ <U+2015> ConceptSystem:\nSet of concepts structured by the relations among them [GSIM 1.1].}]]
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable [[{ <U+2015> takesSubstantiveConceptsFrom:\nIdentifies the substantive conceptual domain containing the set of substantive concepts used to describe the conceptual variable.}]] : takesSubstantiveConceptsFrom
+DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain [[{ <U+2015> takesConceptsFrom:\nCorresponding conceptual definition given by an substantive conceptual domain.}]] : takesConceptsFrom
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain -[#grey]> DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription [[{ <U+2015> isDescribedBy:\nA description of the concepts in the domain. A numeric domain might use a logical expression to be machine actionable; a text domain might use a regular expression to describe strings that describe the concepts.}]] : <U+2003>isDescribedBy
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain -[#grey]> DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem [[{ <U+2015> takesConceptsFrom:\nConceptual domain takes concept from zero to one concept system.}]] : <U+2003>takesConceptsFrom
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain <-[#grey] DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue [[{ <U+2015> hasConceptFrom:\nConceptual value has concept from one conceptual domain.}]] : <U+2003>hasConceptFrom
+
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain as "<size:10> \n<color:blue>ConceptualDomain" [[../DDICDILibrary/Classes/Conceptual/ConceptualDomain.html#super-class-hierarchy-generalization{ <U+2015> ConceptualDomain:\nSet of concepts, where each concept is intended to be used as the meaning (signified) for a datum.}]] #FAFAD2 {
+  catalogDetails : <color:blue>CatalogDetails   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#diagram{ <U+2015> CatalogDetails:\nA set of information useful for attribution, data discovery, and access.}]]]
+  displayLabel : <color:blue>LabelForDisplay   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram{ <U+2015> LabelForDisplay:\nA structured display label. Label provides display content of a fully human readable display for the identification of the object.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

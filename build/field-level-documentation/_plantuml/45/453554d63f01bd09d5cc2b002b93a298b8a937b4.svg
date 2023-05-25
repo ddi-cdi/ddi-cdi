@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="444.6px" preserveAspectRatio="none" style="width:614px;height:444px;background:#FFFFFF;" version="1.1" viewBox="0 0 614 444" width="614.7px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="482.4" x="59.85" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="473.4" x="64.35" y="27.6855">UML Diagram: Enumeration SexSpecification in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="299.25" y="44.7205"> </text><rect fill="#FFFFFF" height="56.0813" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="348.3" x="246.6" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="252" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="252" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="252" y="101.9725">- Click on a name to go to the corresponding page.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="337.5" x="252" y="113.2928">- The use of the data type is represented here by a dotted line (not formal UML).</text><!--MD5=[02009956934ec10683a08703356fd7bb]
+entity ##4--><!--MD5=[cf2b466143bd797820c9416be252779d]
+entity ##7--><!--MD5=[4d1054091f14000b99fad4467fc4cea9]
+class DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification--><g id="elem_DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification"><rect codeLine="47" fill="#FFD700" height="49.7531" id="DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="474.3" y="330.3703"/><text fill="#000000" font-family="sans-serif" font-size="10.8" font-style="italic" lengthAdjust="spacing" textLength="75.6" x="504" y="346.0816">«enumeration»</text><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="540.45" y="357.7975"> </text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="92.7" x="495.45" y="372.8549">SexSpecification</text></g><!--MD5=[712a697d9c2d6f3a9829efaa066f8ab1]
+class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName--><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/IndividualName.html#super-class-hierarchy-generalization" target="_top" title=" ― IndividualName:&#10;The name of an individual broken out into its component parts of prefix, first/given name, middle name, last/family/surname, and suffix. The preferred compilation of the name parts may also be provided. The legal or formal name of the individual should have the isFormal attribute set to true. The pr ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/IndividualName.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― IndividualName:&#10;The name of an individual broken out into its component parts of prefix, first/given name, middle name, last/family/surname, and suffix. The preferred compilation of the name parts may also be provided. The legal or formal name of the individual should have the isFormal attribute set to true. The pr ..." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName"><rect codeLine="54" fill="#F1F1F1" height="262.9828" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="297" x="6.3" y="135.0703"/><text fill="#000000" font-family="sans-serif" font-size="10.8" font-style="italic" lengthAdjust="spacing" textLength="58.5" x="125.55" y="150.7816">«dataType»</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="94.5" x="107.55" y="162.4975">StructuredDataTypes::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="85.5" x="112.05" y="177.5549">IndividualName</text><line style="stroke:#404040;stroke-width:0.45;" x1="7.2" x2="302.4" y1="184.8234" y2="184.8234"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="77.4" x="11.7" y="201.5033">abbreviation :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="92.7" y="201.5033">InternationalString</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="47.7" x="11.7" y="217.3518">context :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="63" y="217.3518">ControlledVocabularyEntry</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/DateRange.html#diagram" target="_top" title=" ― DateRange:&#10;Expresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/DateRange.html#diagram" xlink:show="new" xlink:title=" ― DateRange:&#10;Expresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="88.2" x="11.7" y="233.2002">effectiveDates :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="64.8" x="103.5" y="233.2002">DateRange</text></a><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="98.1" x="11.7" y="249.0486">firstGiven : String</text><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="11.7" y="264.8971">fullName :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="71.1" y="264.8971">InternationalString</text></a><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="106.2" x="11.7" y="280.7455">isFormal : Boolean</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="120.6" x="11.7" y="296.5939">isPreferred : Boolean</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="100.8" x="11.7" y="312.4424">lastFamily : String</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="81" x="11.7" y="328.2908">middle : String</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="74.7" x="11.7" y="344.1393">prefix : String</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="122.4" x="11.7" y="359.9877">sex : SexSpecification</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="72.9" x="11.7" y="375.8361">suffix : String</text><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" target="_top" title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― ControlledVocabularyEntry:&#10;Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="130.5" x="11.7" y="391.6846">typeOfIndividualName :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="152.1" x="145.8" y="391.6846">ControlledVocabularyEntry</text></a></g></a><!--MD5=[e6ffee6cca8ffafabe307deefdb44962]
+link DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName to DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification--><g id="link_DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName_DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification"><path codeLine="77" d="M304.2,355.1203 C361.53,355.1203 426.663,355.1203 474.075,355.1203 " fill="none" id="DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName-DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification" style="stroke:#808080;stroke-width:0.9;stroke-dasharray:1.0,3.0;"/></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="333" x="134.55" y="403.4531"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="299.7" y="412.7959"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="299.7" y="424.1162"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="333" x="134.55" y="435.4365">DDI Cross Domain Integration (DDI-CDI)   1.0 - Enumerations::SexSpecification</text><!--MD5=[ab1c3be0bd62efc6eeed414bb23d3291]
+@startuml
+left to right direction
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Enumeration SexSpecification in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Enumerations::SexSpecification
+
+legend top right
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The use of the data type is represented here by a dotted line (not formal UML).
+endlegend
+
+' Core data type of diagram
+class DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification as "<size:10> \n<color:black>SexSpecification" <<enumeration>>   #FFD700 {
+}
+
+' Data type definitions in own package
+
+' Data type definitions in other packages
+  class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName as "<size:10><color:grey>StructuredDataTypes::\n<color:blue>IndividualName" <<dataType>> [[../DDICDILibrary/DataTypes/StructuredDataTypes/IndividualName.html#super-class-hierarchy-generalization{ <U+2015> IndividualName:\nThe name of an individual broken out into its component parts of prefix, first/given name, middle name, last/family/surname, and suffix. The preferred compilation of the name parts may also be provided. The legal or formal name of the individual should have the isFormal attribute set to true. The pr ...}]] {
+  abbreviation : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  context : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  effectiveDates : <color:blue>DateRange   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/DateRange.html#diagram{ <U+2015> DateRange:\nExpresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc.}]]]
+  firstGiven : String
+  fullName : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  isFormal : Boolean
+  isPreferred : Boolean
+  lastFamily : String
+  middle : String
+  prefix : String
+  sex : SexSpecification
+  suffix : String
+  typeOfIndividualName : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+' Use of data type
+together {
+  DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName::sex - - - - DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification #grey;line.dotted;
+}
+
+
+' Abstractions
+together {
+}
+@enduml
+
+@startuml
+left to right direction
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Enumeration SexSpecification in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Enumerations::SexSpecification
+
+legend top right
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The use of the data type is represented here by a dotted line (not formal UML).
+endlegend
+
+class DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification as "<size:10> \n<color:black>SexSpecification" <<enumeration>>   #FFD700 {
+}
+
+
+  class DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName as "<size:10><color:grey>StructuredDataTypes::\n<color:blue>IndividualName" <<dataType>> [[../DDICDILibrary/DataTypes/StructuredDataTypes/IndividualName.html#super-class-hierarchy-generalization{ <U+2015> IndividualName:\nThe name of an individual broken out into its component parts of prefix, first/given name, middle name, last/family/surname, and suffix. The preferred compilation of the name parts may also be provided. The legal or formal name of the individual should have the isFormal attribute set to true. The pr ...}]] {
+  abbreviation : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  context : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+  effectiveDates : <color:blue>DateRange   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/DateRange.html#diagram{ <U+2015> DateRange:\nExpresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc.}]]]
+  firstGiven : String
+  fullName : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  isFormal : Boolean
+  isPreferred : Boolean
+  lastFamily : String
+  middle : String
+  prefix : String
+  sex : SexSpecification
+  suffix : String
+  typeOfIndividualName : <color:blue>ControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html#diagram{ <U+2015> ControlledVocabularyEntry:\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the iden ...}]]]
+}
+
+together {
+  DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName::sex - - - - DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SexSpecification #grey;line.dotted;
+}
+
+
+together {
+}
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

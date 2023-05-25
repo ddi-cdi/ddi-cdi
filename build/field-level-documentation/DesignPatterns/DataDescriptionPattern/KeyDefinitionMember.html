@@ -1,0 +1,578 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>KeyDefinitionMember &#8212; UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/custom.js"></script>
+    <script src="../../_static/definition.js"></script>
+    
+    <script src="../../_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="KeyMember" href="KeyMember.html" />
+    <link rel="prev" title="KeyDefinition" href="KeyDefinition.html" /> 
+    <!-- geht nicht
+    <link rel="stylesheet" type="text/css" href="_static/handsontable.full.min.css"/>
+    <script type="text/javascript" src="_static/handsontable.full.min.js"></script>
+    -->
+	<!--
+		Combined css and js downloads created with https://datatables.net/download/.
+		DataTables, Buttons (HTML5 export, JSZip, Print view), Search panes, Select, Minify, Concatenate
+	-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/sp-1.2.2/sl-1.3.3/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/sp-1.2.2/sl-1.3.3/datatables.min.js"></script>
+	<!-- For jquery tooltip. See: https://jqueryui.com/tooltip/ -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+	<!--
+		2022-07-17, no change with issue in attribute table
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-html5-2.2.3/b-print-2.2.3/sp-2.0.2/sl-1.4.0/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-html5-2.2.3/b-print-2.2.3/sp-2.0.2/sl-1.4.0/datatables.min.js"></script>
+
+	<link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" rel="stylesheet" type="text/css" />
+	-->
+    <!--
+    already loaded by sphinx
+	<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!--		
+	<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!-- jszip 2.5 should be enough for datatables, it is smaller then version 3.*, from datatables forum admin -->
+	<!--
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!--
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!--
+	<script src="https://unpkg.com/3d-force-graph" type="text/javascript" language="javascript"></script>
+	<script src="https://unpkg.com/@panzoom/panzoom@4.3.2/dist/panzoom.min.js" type="text/javascript" language="javascript"></script>
+	-->
+	<!--
+	<style>
+body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !important;text-align:center;list-style:none;padding:0 0 0 10px;line-height:24px;height:26px;overflow:hidden;font-size:12px;font-family:verdana;position:relative;margin:0}.tab li{margin-left:0px !important;margin-top:2px !important;float:left;height:24px;border:1px solid #aaa;background:#d1d1d1;background:linear-gradient(top, #ececec 50%, #d1d1d1);display:inline-block;position:relative;z-index:0;border-top-left-radius:6px;border-top-right-radius:6px;box-shadow:0 3px 3px rgba(0,0,0,0.4),inset 0 1px 0 #fff;text-shadow:0 1px #fff;margin:0 -5px;padding:0 20px}.tab li.active{background:#fff;color:#333;z-index:2}.tab li:before{left:-6px;border-width:0 1px 1px 0;box-shadow:2px 2px 0 #d1d1d1}.tab li:after{right:-6px;border-width:0 0 1px 1px;box-shadow:-2px 2px 0 #d1d1d1}.tab a{color:#555;text-decoration:none}.tab:before{position:absolute;content:" ";width:100%;bottom:0;left:0;border-bottom:1px solid #aaa;z-index:1}.tabcontent{margin-top:-1px}
+    </style>
+-->
+
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="KeyMember.html" title="KeyMember"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="KeyDefinition.html" title="KeyDefinition"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >DesignPatterns</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DataDescriptionPattern</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><em>KeyDefinitionMember</em></a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="keydefinitionmember">
+<span id="ddicdimodels-designpatterns-datadescriptionpattern-keydefinitionmember"></span><h1><em>KeyDefinitionMember</em><a class="headerlink" href="#keydefinitionmember" title="Permalink to this headline">¶</a></h1>
+<p><strong>Fully qualified class name</strong>: DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinitionMember
+| Class is abstract.</p>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>Single concept that is part of the structure of a key definition.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Diagram<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="docutils container" id="diagram">
+<p class="plantuml">
+<object data="../../_images/plantuml-fddafecdb2a19f50719b8b3fa25c76a03d8140c3.svg" type="image/svg+xml" style="width:1264px;height:893px;background:#FFFFFF;"></object></p>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Inheritance<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="regular line-block">
+<div class="line"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></div>
+</div>
+<div class="regular line-block">
+<div class="line">  ᐊ── <a class="reference internal" href="../../DDICDILibrary/Classes/DataDescription/ConceptualValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-conceptualvalue"><span class="std std-ref">DataDescription::ConceptualValue</span></a></div>
+</div>
+<div class="abstract line-block">
+<div class="line">    ᐊ── <span class="focus">DataDescriptionPattern::KeyDefinitionMember</span></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Attributes<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="colwidths-given datatable-attributes docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 55%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Name</p></th>
+<th class="head"><p class="sd-card-text">Inherited from</p></th>
+<th class="head"><p class="sd-card-text">Description</p></th>
+<th class="head"><p class="sd-card-text">Data Type</p></th>
+<th class="head"><p class="sd-card-text">Multiplicity</p></th>
+<th class="head"><p class="sd-card-text">Default value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">catalogDetails</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+<td><p class="sd-card-text">Bundles the information useful for a data catalog entry. Examples would be creator, contributor, title, copyright, embargo, and license information. A set of information useful for attribution, data discovery, and access. This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/DataTypes/StructuredDataTypes/CatalogDetails.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-catalogdetails"><span class="std std-ref">CatalogDetails</span></a></p></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">definition</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+<td><p class="sd-card-text">Natural language statement conveying the meaning of a concept, differentiating it from other concepts. Supports the use of multiple languages and structured text. ‘externalDefinition’ can’t be used if ‘definition’ is used.</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-internationalstring"><span class="std std-ref">InternationalString</span></a></p></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">displayLabel</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+<td><p class="sd-card-text">A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-labelfordisplay"><span class="std std-ref">LabelForDisplay</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">externalDefinition</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+<td><p class="sd-card-text">A reference to an external definition of a concept (that is, a concept which is described outside the content of the DDI-CDI metadata description). An example is a SKOS concept. The definition property is assumed to duplicate the external one referenced if externalDefinition is used. Other corresponding properties are assumed to be included unchanged if used.</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-reference"><span class="std std-ref">Reference</span></a></p></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">identifier</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+<td><p class="sd-card-text">Identifier for objects requiring short- or long-lasting referencing and management.</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-identifier"><span class="std std-ref">Identifier</span></a></p></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">name</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+<td><p class="sd-card-text">Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-objectname"><span class="std std-ref">ObjectName</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Associations<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="colwidths-given datatable-associations docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 11%" />
+<col style="width: 32%" />
+<col style="width: 5%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Direction</p></th>
+<th class="head"><p class="sd-card-text">Association</p></th>
+<th class="head"><p class="sd-card-text">Description</p></th>
+<th class="head"><p class="sd-card-text">Multiplicity of KeyDefinitionMember</p></th>
+<th class="head"><p class="sd-card-text">Package of Other Class</p></th>
+<th class="head"><p class="sd-card-text">Other Class</p></th>
+<th class="head"><p class="sd-card-text">Multiplicity of other class</p></th>
+<th class="head"><p class="sd-card-text">Aggregation Kind</p></th>
+<th class="head"><p class="sd-card-text">Inherited from</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">from</p></td>
+<td><p class="sd-card-text">ConceptualValue hasConceptFrom ConceptualDomain</p></td>
+<td><p class="sd-card-text">Conceptual value has concept from one conceptual domain.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/ConceptualDomain.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualdomain"><span class="std std-ref">ConceptualDomain</span></a></p></td>
+<td><p class="sd-card-text">1..1</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/DataDescription/ConceptualValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-conceptualvalue"><span class="std std-ref">DataDescription::ConceptualValue</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">Datum denotes ConceptualValue</p></td>
+<td></td>
+<td><p class="sd-card-text">1..1</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/DataDescription/index.html#ddicdimodels-ddicdilibrary-classes-datadescription"><span class="std std-ref">DataDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/DataDescription/Datum.html#ddicdimodels-ddicdilibrary-classes-datadescription-datum"><span class="std std-ref">Datum</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/DataDescription/ConceptualValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-conceptualvalue"><span class="std std-ref">DataDescription::ConceptualValue</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">InstanceValue represents ConceptualValue</p></td>
+<td></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/DataDescription/index.html#ddicdimodels-ddicdilibrary-classes-datadescription"><span class="std std-ref">DataDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/DataDescription/InstanceValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-instancevalue"><span class="std std-ref">InstanceValue</span></a></p></td>
+<td><p class="sd-card-text">1..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/DataDescription/ConceptualValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-conceptualvalue"><span class="std std-ref">DataDescription::ConceptualValue</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">AgentListing isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Agents/index.html#ddicdimodels-ddicdilibrary-classes-agents"><span class="std std-ref">Agents</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Agents/AgentListing.html#ddicdimodels-ddicdilibrary-classes-agents-agentlisting"><span class="std std-ref">AgentListing</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ClassificationFamily isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/index.html#ddicdimodels-ddicdilibrary-classes-representations"><span class="std std-ref">Representations</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/ClassificationFamily.html#ddicdimodels-ddicdilibrary-classes-representations-classificationfamily"><span class="std std-ref">ClassificationFamily</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ClassificationIndex isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/index.html#ddicdimodels-ddicdilibrary-classes-representations"><span class="std std-ref">Representations</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/ClassificationIndex.html#ddicdimodels-ddicdilibrary-classes-representations-classificationindex"><span class="std std-ref">ClassificationIndex</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ClassificationSeries isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/index.html#ddicdimodels-ddicdilibrary-classes-representations"><span class="std std-ref">Representations</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/ClassificationSeries.html#ddicdimodels-ddicdilibrary-classes-representations-classificationseries"><span class="std std-ref">ClassificationSeries</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ConceptMap hasSource Concept</p></td>
+<td><p class="sd-card-text">Concept map has one to many source concepts.</p></td>
+<td><p class="sd-card-text">1..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/ConceptMap.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptmap"><span class="std std-ref">ConceptMap</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ConceptMap hasTarget Concept</p></td>
+<td><p class="sd-card-text">Concept map has one to many target concepts.</p></td>
+<td><p class="sd-card-text">1..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/ConceptMap.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptmap"><span class="std std-ref">ConceptMap</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ConceptRelationship hasSource Concept</p></td>
+<td><p class="sd-card-text">Restricts source object to concept for the relationship.</p></td>
+<td><p class="sd-card-text">1..1</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/ConceptRelationship.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptrelationship"><span class="std std-ref">ConceptRelationship</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ConceptRelationship hasTarget Concept</p></td>
+<td><p class="sd-card-text">Restricts target object to concept for the relationship.</p></td>
+<td><p class="sd-card-text">1..1</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/ConceptRelationship.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptrelationship"><span class="std std-ref">ConceptRelationship</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ConceptSystem has Concept</p></td>
+<td><p class="sd-card-text">Concept system has zero to many concepts.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/ConceptSystem.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptsystem"><span class="std std-ref">ConceptSystem</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ConceptSystem isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">Concept system is defined by zero to many concepts. The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/ConceptSystem.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptsystem"><span class="std std-ref">ConceptSystem</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">ConceptualVariable uses Concept</p></td>
+<td><p class="sd-card-text">Reference to a concept that is being used.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">ConceptualVariable</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">DataStore isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/index.html#ddicdimodels-ddicdilibrary-classes-formatdescription"><span class="std std-ref">FormatDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/DataStore.html#ddicdimodels-ddicdilibrary-classes-formatdescription-datastore"><span class="std std-ref">DataStore</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">EnumerationDomain isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/index.html#ddicdimodels-ddicdilibrary-classes-representations"><span class="std std-ref">Representations</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/EnumerationDomain.html#ddicdimodels-ddicdilibrary-classes-representations-enumerationdomain"><span class="std std-ref">EnumerationDomain</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">Level isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">A concept or concept sub-type which describes the level.</p></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/index.html#ddicdimodels-ddicdilibrary-classes-representations"><span class="std std-ref">Representations</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Representations/Level.html#ddicdimodels-ddicdilibrary-classes-representations-level"><span class="std std-ref">Level</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">LogicalRecord isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/index.html#ddicdimodels-ddicdilibrary-classes-formatdescription"><span class="std std-ref">FormatDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/LogicalRecord.html#ddicdimodels-ddicdilibrary-classes-formatdescription-logicalrecord"><span class="std std-ref">LogicalRecord</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">PhysicalDataSet isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/index.html#ddicdimodels-ddicdilibrary-classes-formatdescription"><span class="std std-ref">FormatDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/PhysicalDataSet.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicaldataset"><span class="std std-ref">PhysicalDataSet</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">PhysicalRecordSegment isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/index.html#ddicdimodels-ddicdilibrary-classes-formatdescription"><span class="std std-ref">FormatDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/PhysicalRecordSegment.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalrecordsegment"><span class="std std-ref">PhysicalRecordSegment</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">PhysicalSegmentLayout isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/index.html#ddicdimodels-ddicdilibrary-classes-formatdescription"><span class="std std-ref">FormatDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/FormatDescription/PhysicalSegmentLayout.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalsegmentlayout"><span class="std std-ref">PhysicalSegmentLayout</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">UnitType uses Concept</p></td>
+<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/UnitType.html#ddicdimodels-ddicdilibrary-classes-conceptual-unittype"><span class="std std-ref">UnitType</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">Universe uses Concept</p></td>
+<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Universe</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">VariableCollection isDefinedBy Concept</p></td>
+<td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/VariableCollection.html#ddicdimodels-ddicdilibrary-classes-conceptual-variablecollection"><span class="std std-ref">VariableCollection</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../DDICDILibrary/Classes/Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">KeyDefinition has KeyDefinitionMember</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">- <em>own package</em> -</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="KeyDefinition.html#ddicdimodels-designpatterns-datadescriptionpattern-keydefinition"><span class="std std-ref">KeyDefinition</span></a></p></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/cdi.svg" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Context/index.html">Context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DDICDILibrary/index.html">DDICDILibrary</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">DesignPatterns</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../CollectionsPattern/index.html">CollectionsPattern</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">DataDescriptionPattern</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Key.html"><em>Key</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="KeyDefinition.html"><em>KeyDefinition</em></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><em>KeyDefinitionMember</em></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#definition">Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="KeyMember.html"><em>KeyMember</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../SignificationPattern/index.html">SignificationPattern</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Appendices/index.html">Appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="KeyMember.html" title="KeyMember"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="KeyDefinition.html" title="KeyDefinition"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >DesignPatterns</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >DataDescriptionPattern</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><em>KeyDefinitionMember</em></a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, DDI Alliance.
+    </div>
+  </body>
+</html>

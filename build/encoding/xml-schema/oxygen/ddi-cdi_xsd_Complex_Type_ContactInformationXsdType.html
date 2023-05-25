@@ -1,0 +1,1178 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component address</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        var propertiesBoxes= new Array('properties_ContactInformationXsdType_address', 
+				'properties_ContactInformationXsdType_email', 
+				'properties_ContactInformationXsdType_emessaging', 
+				'properties_ContactInformationXsdType_telephone', 
+				'properties_ContactInformationXsdType_website');
+var usedByBoxes= new Array('usedBy_ContactInformationXsdType');
+var sourceBoxes= new Array('source_ContactInformationXsdType_address', 
+				'source_ContactInformationXsdType_email', 
+				'source_ContactInformationXsdType_emessaging', 
+				'source_ContactInformationXsdType_telephone', 
+				'source_ContactInformationXsdType_website', 
+				'source_ContactInformationXsdType');
+var instanceBoxes= new Array('instance_ContactInformationXsdType_address', 
+				'instance_ContactInformationXsdType_email', 
+				'instance_ContactInformationXsdType_emessaging', 
+				'instance_ContactInformationXsdType_telephone', 
+				'instance_ContactInformationXsdType_website');
+var diagramBoxes= new Array('diagram_ContactInformationXsdType_address', 
+				'diagram_ContactInformationXsdType_email', 
+				'diagram_ContactInformationXsdType_emessaging', 
+				'diagram_ContactInformationXsdType_telephone', 
+				'diagram_ContactInformationXsdType_website', 
+				'diagram_ContactInformationXsdType');
+var annotationBoxes= new Array('annotations_ContactInformationXsdType_address', 
+				'annotations_ContactInformationXsdType_email', 
+				'annotations_ContactInformationXsdType_emessaging', 
+				'annotations_ContactInformationXsdType_telephone', 
+				'annotations_ContactInformationXsdType_website', 
+				'annotations_ContactInformationXsdType');
+var modelBoxes= new Array('model_ContactInformationXsdType_address', 
+				'model_ContactInformationXsdType_email', 
+				'model_ContactInformationXsdType_emessaging', 
+				'model_ContactInformationXsdType_telephone', 
+				'model_ContactInformationXsdType_website', 
+				'model_ContactInformationXsdType');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="ContactInformationXsdType_address"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContactInformationXsdType')">ContactInformationXsdType</a></b> / address</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_ContactInformationXsdType_address" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_ContactInformationXsdType_address');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_ContactInformationXsdType_address" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The address for contact.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_ContactInformationXsdType_address" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ContactInformationXsdType_address');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_ContactInformationXsdType_address" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_address.jpeg" usemap="#ddi-cdi_xsd_Element_address" /><map name="ddi-cdi_xsd_Element_address" id="ddi-cdi_xsd_Element_address"><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_cityPlaceLocal" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_cityPlaceLocal" coords="302,40,407,84" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_countryCode" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_countryCode" coords="302,125,537,169" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_effectiveDates" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_effectiveDates" coords="302,210,461,254" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_geographicPoint" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_geographicPoint" coords="302,295,463,339" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_isPreferred" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_isPreferred" coords="302,380,418,424" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_line" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_line" coords="302,479,407,523" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_locationName" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_locationName" coords="302,578,466,622" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_postalCode" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_postalCode" coords="302,663,407,707" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_privacy" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_privacy" coords="302,748,537,792" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_regionalCoverage" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_regionalCoverage" coords="302,847,537,891" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_stateProvince" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_stateProvince" coords="302,932,407,976" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_timeZone" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_timeZone" coords="302,1031,537,1075" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_typeOfAddress" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_typeOfAddress" coords="302,1116,537,1160" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType_typeOfLocation" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_typeOfLocation" coords="302,1201,537,1245" /><area alt="ddi-cdi_xsd_Complex_Type_AddressXsdType.tmp#AddressXsdType" href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType" coords="199,3,335,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AddressXsdType')">AddressXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_ContactInformationXsdType_address" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_ContactInformationXsdType_address');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_ContactInformationXsdType_address" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_ContactInformationXsdType_address" type="image" src="img/btM.gif" value="-" onclick="switchState('model_ContactInformationXsdType_address');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_ContactInformationXsdType_address" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_cityPlaceLocal" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component cityPlaceLocal{0,1}')">cityPlaceLocal{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_countryCode" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component countryCode{0,1}')">countryCode{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates{0,1}')">effectiveDates{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_geographicPoint" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component geographicPoint{0,1}')">geographicPoint{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred{0,1}')">isPreferred{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_line" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component line*')">line*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_locationName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component locationName{0,1}')">locationName{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_postalCode" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component postalCode{0,1}')">postalCode{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy{0,1}')">privacy{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_regionalCoverage" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component regionalCoverage{0,1}')">regionalCoverage{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_stateProvince" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component stateProvince{0,1}')">stateProvince{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_timeZone" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component timeZone{0,1}')">timeZone{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_typeOfAddress" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfAddress{0,1}')">typeOfAddress{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_typeOfLocation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfLocation{0,1}')">typeOfLocation{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_cityPlaceLocal" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component cityPlaceLocal')">cityPlaceLocal</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_countryCode" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component countryCode')">countryCode</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates')">effectiveDates</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_geographicPoint" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component geographicPoint')">geographicPoint</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred')">isPreferred</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_line" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component line')">line</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_locationName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component locationName')">locationName</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_postalCode" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component postalCode')">postalCode</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy')">privacy</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_regionalCoverage" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component regionalCoverage')">regionalCoverage</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_stateProvince" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component stateProvince')">stateProvince</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_timeZone" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component timeZone')">timeZone</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_typeOfAddress" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfAddress')">typeOfAddress</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType_typeOfLocation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfLocation')">typeOfLocation</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_ContactInformationXsdType_address" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_ContactInformationXsdType_address');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_ContactInformationXsdType_address" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;address</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;cityPlaceLocal</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/cityPlaceLocal&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;countryCode</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/countryCode&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;effectiveDates</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/effectiveDates&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;geographicPoint</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/geographicPoint&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;isPreferred</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/isPreferred&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;line</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/line&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;locationName</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/locationName&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;postalCode</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/postalCode&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;privacy</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/privacy&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;regionalCoverage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/regionalCoverage&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;stateProvince</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/stateProvince&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;timeZone</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/timeZone&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfAddress</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/typeOfAddress&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfLocation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/typeOfLocation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/address&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ContactInformationXsdType_address" type="image" src="img/btM.gif" value="-" onclick="switchState('source_ContactInformationXsdType_address');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ContactInformationXsdType_address" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"address"</span><span class="tAN"> type=</span><span class="tAV">"AddressXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-address"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The address for contact.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="ContactInformationXsdType_email"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContactInformationXsdType')">ContactInformationXsdType</a></b> / email</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_ContactInformationXsdType_email" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_ContactInformationXsdType_email');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_ContactInformationXsdType_email" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Email contact information.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_ContactInformationXsdType_email" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ContactInformationXsdType_email');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_ContactInformationXsdType_email" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_email.jpeg" usemap="#ddi-cdi_xsd_Element_email" /><map name="ddi-cdi_xsd_Element_email" id="ddi-cdi_xsd_Element_email"><area alt="ddi-cdi_xsd_Complex_Type_EmailXsdType.tmp#EmailXsdType_effectiveDates" href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_effectiveDates" coords="263,40,422,84" /><area alt="ddi-cdi_xsd_Complex_Type_EmailXsdType.tmp#EmailXsdType_internetEmail" href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_internetEmail" coords="263,125,368,169" /><area alt="ddi-cdi_xsd_Complex_Type_EmailXsdType.tmp#EmailXsdType_isPreferred" href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_isPreferred" coords="263,224,379,268" /><area alt="ddi-cdi_xsd_Complex_Type_EmailXsdType.tmp#EmailXsdType_privacy" href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_privacy" coords="263,309,498,353" /><area alt="ddi-cdi_xsd_Complex_Type_EmailXsdType.tmp#EmailXsdType_typeOfEmail" href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_typeOfEmail" coords="263,394,498,438" /><area alt="ddi-cdi_xsd_Complex_Type_EmailXsdType.tmp#EmailXsdType" href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType" coords="181,3,299,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EmailXsdType')">EmailXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_ContactInformationXsdType_email" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_ContactInformationXsdType_email');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_ContactInformationXsdType_email" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_ContactInformationXsdType_email" type="image" src="img/btM.gif" value="-" onclick="switchState('model_ContactInformationXsdType_email');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_ContactInformationXsdType_email" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates{0,1}')">effectiveDates{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_internetEmail" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component internetEmail{0,1}')">internetEmail{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred{0,1}')">isPreferred{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy{0,1}')">privacy{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_typeOfEmail" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfEmail{0,1}')">typeOfEmail{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates')">effectiveDates</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_internetEmail" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component internetEmail')">internetEmail</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred')">isPreferred</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy')">privacy</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType_typeOfEmail" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfEmail')">typeOfEmail</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_ContactInformationXsdType_email" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_ContactInformationXsdType_email');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_ContactInformationXsdType_email" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;email</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;effectiveDates</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/effectiveDates&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;internetEmail</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/internetEmail&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;isPreferred</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/isPreferred&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;privacy</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/privacy&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfEmail</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/typeOfEmail&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/email&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ContactInformationXsdType_email" type="image" src="img/btM.gif" value="-" onclick="switchState('source_ContactInformationXsdType_email');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ContactInformationXsdType_email" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"email"</span><span class="tAN"> type=</span><span class="tAV">"EmailXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-email"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Email contact information.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="ContactInformationXsdType_emessaging"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContactInformationXsdType')">ContactInformationXsdType</a></b> / emessaging</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_ContactInformationXsdType_emessaging" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_ContactInformationXsdType_emessaging');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_ContactInformationXsdType_emessaging" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Electronic messaging other than email.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_ContactInformationXsdType_emessaging" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ContactInformationXsdType_emessaging');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_ContactInformationXsdType_emessaging" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_emessaging.jpeg" usemap="#ddi-cdi_xsd_Element_emessaging" /><map name="ddi-cdi_xsd_Element_emessaging" id="ddi-cdi_xsd_Element_emessaging"><area alt="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.tmp#ElectronicMessageSystemXsdType_contactAddress" href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_contactAddress" coords="366,40,475,84" /><area alt="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.tmp#ElectronicMessageSystemXsdType_effectiveDates" href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_effectiveDates" coords="366,125,525,169" /><area alt="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.tmp#ElectronicMessageSystemXsdType_isPreferred" href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_isPreferred" coords="366,210,482,254" /><area alt="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.tmp#ElectronicMessageSystemXsdType_privacy" href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_privacy" coords="366,295,601,339" /><area alt="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.tmp#ElectronicMessageSystemXsdType_typeOfService" href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_typeOfService" coords="366,394,601,438" /><area alt="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.tmp#ElectronicMessageSystemXsdType" href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType" coords="284,3,505,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ElectronicMessageSystemXsdType')">ElectronicMessageSystemXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_ContactInformationXsdType_emessaging" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_ContactInformationXsdType_emessaging');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_ContactInformationXsdType_emessaging" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_ContactInformationXsdType_emessaging" type="image" src="img/btM.gif" value="-" onclick="switchState('model_ContactInformationXsdType_emessaging');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_ContactInformationXsdType_emessaging" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_contactAddress" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component contactAddress{0,1}')">contactAddress{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates{0,1}')">effectiveDates{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred{0,1}')">isPreferred{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy{0,1}')">privacy{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_typeOfService" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfService{0,1}')">typeOfService{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_contactAddress" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component contactAddress')">contactAddress</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates')">effectiveDates</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred')">isPreferred</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy')">privacy</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType_typeOfService" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfService')">typeOfService</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_ContactInformationXsdType_emessaging" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_ContactInformationXsdType_emessaging');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_ContactInformationXsdType_emessaging" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;emessaging</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;contactAddress</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/contactAddress&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;effectiveDates</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/effectiveDates&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;isPreferred</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/isPreferred&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;privacy</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/privacy&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfService</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/typeOfService&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/emessaging&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ContactInformationXsdType_emessaging" type="image" src="img/btM.gif" value="-" onclick="switchState('source_ContactInformationXsdType_emessaging');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ContactInformationXsdType_emessaging" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"emessaging"</span><span class="tAN"> type=</span><span class="tAV">"ElectronicMessageSystemXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-emessaging"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Electronic messaging other than email.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="ContactInformationXsdType_telephone"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContactInformationXsdType')">ContactInformationXsdType</a></b> / telephone</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_ContactInformationXsdType_telephone" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_ContactInformationXsdType_telephone');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_ContactInformationXsdType_telephone" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Telephone for contact.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_ContactInformationXsdType_telephone" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ContactInformationXsdType_telephone');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_ContactInformationXsdType_telephone" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_telephone.jpeg" usemap="#ddi-cdi_xsd_Element_telephone" /><map name="ddi-cdi_xsd_Element_telephone" id="ddi-cdi_xsd_Element_telephone"><area alt="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.tmp#TelephoneXsdType_effectiveDates" href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_effectiveDates" coords="289,40,448,84" /><area alt="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.tmp#TelephoneXsdType_isPreferred" href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_isPreferred" coords="289,125,405,169" /><area alt="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.tmp#TelephoneXsdType_privacy" href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_privacy" coords="289,224,524,268" /><area alt="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.tmp#TelephoneXsdType_telephoneNumber" href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_telephoneNumber" coords="289,323,404,367" /><area alt="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.tmp#TelephoneXsdType_typeOfTelephone" href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_typeOfTelephone" coords="289,408,524,452" /><area alt="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.tmp#TelephoneXsdType" href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType" coords="207,3,351,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TelephoneXsdType')">TelephoneXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_ContactInformationXsdType_telephone" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_ContactInformationXsdType_telephone');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_ContactInformationXsdType_telephone" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_ContactInformationXsdType_telephone" type="image" src="img/btM.gif" value="-" onclick="switchState('model_ContactInformationXsdType_telephone');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_ContactInformationXsdType_telephone" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates{0,1}')">effectiveDates{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred{0,1}')">isPreferred{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy{0,1}')">privacy{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_telephoneNumber" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component telephoneNumber{0,1}')">telephoneNumber{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_typeOfTelephone" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfTelephone{0,1}')">typeOfTelephone{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates')">effectiveDates</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred')">isPreferred</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy')">privacy</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_telephoneNumber" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component telephoneNumber')">telephoneNumber</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType_typeOfTelephone" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfTelephone')">typeOfTelephone</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_ContactInformationXsdType_telephone" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_ContactInformationXsdType_telephone');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_ContactInformationXsdType_telephone" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;telephone</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;effectiveDates</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/effectiveDates&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;isPreferred</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/isPreferred&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;privacy</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/privacy&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;telephoneNumber</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/telephoneNumber&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfTelephone</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/typeOfTelephone&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/telephone&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ContactInformationXsdType_telephone" type="image" src="img/btM.gif" value="-" onclick="switchState('source_ContactInformationXsdType_telephone');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ContactInformationXsdType_telephone" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"telephone"</span><span class="tAN"> type=</span><span class="tAV">"TelephoneXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-telephone"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Telephone for contact.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="ContactInformationXsdType_website"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContactInformationXsdType')">ContactInformationXsdType</a></b> / website</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_ContactInformationXsdType_website" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_ContactInformationXsdType_website');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_ContactInformationXsdType_website" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The URL of the Agent's website.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_ContactInformationXsdType_website" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ContactInformationXsdType_website');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_ContactInformationXsdType_website" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_website.jpeg" usemap="#ddi-cdi_xsd_Element_website" /><map name="ddi-cdi_xsd_Element_website" id="ddi-cdi_xsd_Element_website"><area alt="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.tmp#WebLinkXsdType_effectiveDates" href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_effectiveDates" coords="280,40,439,84" /><area alt="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.tmp#WebLinkXsdType_isPreferred" href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_isPreferred" coords="280,125,396,169" /><area alt="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.tmp#WebLinkXsdType_privacy" href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_privacy" coords="280,210,515,254" /><area alt="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.tmp#WebLinkXsdType_typeOfWebsite" href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_typeOfWebsite" coords="280,295,515,339" /><area alt="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.tmp#WebLinkXsdType_uri" href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_uri" coords="280,380,392,424" /><area alt="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.tmp#WebLinkXsdType" href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType" coords="198,3,333,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WebLinkXsdType')">WebLinkXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_ContactInformationXsdType_website" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_ContactInformationXsdType_website');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_ContactInformationXsdType_website" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_ContactInformationXsdType_website" type="image" src="img/btM.gif" value="-" onclick="switchState('model_ContactInformationXsdType_website');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_ContactInformationXsdType_website" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates{0,1}')">effectiveDates{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred{0,1}')">isPreferred{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy{0,1}')">privacy{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_typeOfWebsite" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfWebsite{0,1}')">typeOfWebsite{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri{0,1}')">uri{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates')">effectiveDates</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_isPreferred" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isPreferred')">isPreferred</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_privacy" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component privacy')">privacy</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_typeOfWebsite" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfWebsite')">typeOfWebsite</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType_uri" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component uri')">uri</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_ContactInformationXsdType_website" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_ContactInformationXsdType_website');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_ContactInformationXsdType_website" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;website</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;effectiveDates</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/effectiveDates&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;isPreferred</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/isPreferred&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;privacy</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/privacy&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;typeOfWebsite</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/typeOfWebsite&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/website&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ContactInformationXsdType_website" type="image" src="img/btM.gif" value="-" onclick="switchState('source_ContactInformationXsdType_website');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ContactInformationXsdType_website" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"website"</span><span class="tAN"> type=</span><span class="tAV">"WebLinkXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-website"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The URL of the Agent's website.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="ContactInformationXsdType"></a><div class="componentTitle">Complex Type <span class="qname">ContactInformationXsdType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_ContactInformationXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_ContactInformationXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_ContactInformationXsdType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Definition</span><span class="tI">
+</span><span class="tT">============</span><span class="tI">
+</span><span class="tT">Contact information for the individual or organization including location specification, address, web site, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over time. Each major piece of contact information contains the element effectiveDates in order to date stamp the period for which the information is valid.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_ContactInformationXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ContactInformationXsdType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_ContactInformationXsdType" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.jpeg" usemap="#ddi-cdi_xsd_Complex_Type_ContactInformationXsdType" /><map name="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType" id="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType"><area alt="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.tmp#ContactInformationXsdType_address" href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_address" coords="328,0,476,44" /><area alt="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.tmp#ContactInformationXsdType_email" href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_email" coords="328,85,458,129" /><area alt="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.tmp#ContactInformationXsdType_emessaging" href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_emessaging" coords="328,170,561,214" /><area alt="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.tmp#ContactInformationXsdType_telephone" href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_telephone" coords="328,255,484,299" /><area alt="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.tmp#ContactInformationXsdType_website" href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_website" coords="328,340,475,384" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_ContactInformationXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_ContactInformationXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_ContactInformationXsdType" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="ddi-cdi_xsd_Element_ContactInformation.html#ContactInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContactInformation')">ContactInformation</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_IndividualXsdType.html#IndividualXsdType_contactInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IndividualXsdType/contactInformation')">IndividualXsdType/contactInformation</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_LicenseInformationXsdType.html#LicenseInformationXsdType_contact" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LicenseInformationXsdType/contact')">LicenseInformationXsdType/contact</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_MachineXsdType.html#MachineXsdType_ownerOperatorContact" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component MachineXsdType/ownerOperatorContact')">MachineXsdType/ownerOperatorContact</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationXsdType.html#OrganizationXsdType_contactInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationXsdType/contactInformation')">OrganizationXsdType/contactInformation</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_ContactInformationXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('model_ContactInformationXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_ContactInformationXsdType" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_address" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component address*')">address*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_email" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component email*')">email*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_emessaging" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component emessaging*')">emessaging*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_telephone" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component telephone*')">telephone*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_website" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component website*')">website*</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_address" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component address')">address</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_email" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component email')">email</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_emessaging" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component emessaging')">emessaging</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_telephone" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component telephone')">telephone</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType_website" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component website')">website</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ContactInformationXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_ContactInformationXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ContactInformationXsdType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"ContactInformationXsdType"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformationXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Definition ============ Contact information for the individual or organization including location specification, address, web site, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over time. Each major piece of contact information contains the element effectiveDates in order to date stamp the period for which the information is valid.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"address"</span><span class="tAN"> type=</span><span class="tAV">"AddressXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-address"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The address for contact.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"email"</span><span class="tAN"> type=</span><span class="tAV">"EmailXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-email"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Email contact information.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"emessaging"</span><span class="tAN"> type=</span><span class="tAV">"ElectronicMessageSystemXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-emessaging"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Electronic messaging other than email.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"telephone"</span><span class="tAN"> type=</span><span class="tAV">"TelephoneXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-telephone"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Telephone for contact.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"website"</span><span class="tAN"> type=</span><span class="tAV">"WebLinkXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> xml:id=</span><span class="tAV">"ContactInformation-website"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The URL of the Agent's website.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

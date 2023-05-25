@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="349.2px" preserveAspectRatio="none" style="width:491px;height:349px;background:#FFFFFF;" version="1.1" viewBox="0 0 491 349" width="491.4px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="475.2" x="4.5" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="466.2" x="9" y="27.6855">UML Diagram: DataType ModelIdentification in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="240.3" y="44.7205"> </text><rect fill="#FFFFFF" height="56.0813" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="348.3" x="67.95" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="73.35" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="73.35" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="73.35" y="101.9725">- Click on a name to go to the corresponding page.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="337.5" x="73.35" y="113.2928">- The use of the data type is represented here by a dotted line (not formal UML).</text><!--MD5=[a0438961881a4fc606840d398cef942c]
+entity ##3--><!--MD5=[7639129a7208b5720b5c8dbdaf72c8f5]
+entity ##5--><!--MD5=[5900af991dbebb68543283119f955d30]
+class DDICDIModels::DDICDILibrary::DataTypes::ModelIdentification--><g id="elem_DDICDIModels::DDICDILibrary::DataTypes::ModelIdentification"><rect codeLine="47" fill="#FFD700" height="167.8922" id="DDICDIModels::DDICDILibrary::DataTypes::ModelIdentification" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135.9" x="180.45" y="135.0703"/><text fill="#000000" font-family="sans-serif" font-size="10.8" font-style="italic" lengthAdjust="spacing" textLength="58.5" x="219.15" y="150.7816">«dataType»</text><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="247.05" y="162.4975"> </text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="105.3" x="195.75" y="177.5549">ModelIdentification</text><line style="stroke:#404040;stroke-width:0.45;" x1="181.35" x2="315.45" y1="184.8234" y2="184.8234"/><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="92.7" x="185.85" y="201.5033">acronym : String</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="97.2" x="185.85" y="217.3518">language : String</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="125.1" x="185.85" y="233.2002">majorVersion : Integer</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="125.1" x="185.85" y="249.0486">minorVersion : Integer</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="84.6" x="185.85" y="264.8971">subtitle : String</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="63.9" x="185.85" y="280.7455">title : String</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="58.5" x="185.85" y="296.5939">uri : String</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="329.4" x="77.4" y="308.3625"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="240.75" y="317.7053"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="240.75" y="329.0256"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="329.4" x="77.4" y="340.3459">DDI Cross Domain Integration (DDI-CDI)   1.0 - DataTypes::ModelIdentification</text><!--MD5=[44d71d94f215c1026c7265c77f2f2c25]
+@startuml
+left to right direction
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: DataType ModelIdentification in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - DataTypes::ModelIdentification
+
+legend top right
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The use of the data type is represented here by a dotted line (not formal UML).
+endlegend
+
+' Core data type of diagram
+class DDICDIModels::DDICDILibrary::DataTypes::ModelIdentification as "<size:10> \n<color:black>ModelIdentification" <<dataType>>   #FFD700 {
+  acronym : String
+  language : String
+  majorVersion : Integer
+  minorVersion : Integer
+  subtitle : String
+  title : String
+  uri : String
+}
+
+' Data type definitions in own package
+
+' Data type definitions in other packages
+
+' Use of data type
+together {
+}
+
+
+' Abstractions
+together {
+}
+@enduml
+
+@startuml
+left to right direction
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: DataType ModelIdentification in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - DataTypes::ModelIdentification
+
+legend top right
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The use of the data type is represented here by a dotted line (not formal UML).
+endlegend
+
+class DDICDIModels::DDICDILibrary::DataTypes::ModelIdentification as "<size:10> \n<color:black>ModelIdentification" <<dataType>>   #FFD700 {
+  acronym : String
+  language : String
+  majorVersion : Integer
+  minorVersion : Integer
+  subtitle : String
+  title : String
+  uri : String
+}
+
+
+
+together {
+}
+
+
+together {
+}
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

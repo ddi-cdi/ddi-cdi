@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="368.1px" preserveAspectRatio="none" style="width:383px;height:368px;background:#FFFFFF;" version="1.1" viewBox="0 0 383 368" width="383.4px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="367.2" x="4.5" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="358.2" x="9" y="27.6855">UML Diagram: Class Parameter in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="186.3" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="31.05" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="36.45" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="36.45" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="36.45" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[52638b0770114f5e4336b936e2b81262]
+class DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition--><a href="../DDICDILibrary/Classes/Process/InformationFlowDefinition.html#super-class-hierarchy-generalization" target="_top" title=" ― InformationFlowDefinition:&#10;The relationships between parameters across steps is described by the information flow definition. Each relationship creates a pathway for an information object to follow." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/InformationFlowDefinition.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― InformationFlowDefinition:&#10;The relationships between parameters across steps is described by the information flow definition. Each relationship creates a pathway for an information object to follow." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition"><rect codeLine="58" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="147.6" x="30.15" y="287.1"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="85.05" y="300.9428">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="142.2" x="32.85" y="316.0002">InformationFlowDefinition</text></g></a><!--MD5=[2c37921695407d096dd2c82a03bab8f7]
+class DDICDIModels::DDICDILibrary::Classes::Process::Step--><a href="../DDICDILibrary/Classes/Process/Step.html#super-class-hierarchy-generalization" target="_top" title=" ― Step:&#10;Step is a reusable, parameterized activity associated to information flows. One or more steps perform an sctivity." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/Step.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Step:&#10;Step is a reusable, parameterized activity associated to information flows. One or more steps perform an sctivity." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::Step"><rect codeLine="59" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::Step" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="224.55" y="287.1"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="273.15" y="300.9428">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="26.1" x="279" y="316.0002">Step</text></g></a><!--MD5=[cf2b466143bd797820c9416be252779d]
+entity ##7--><!--MD5=[a08a5e20e95ed5b574a4539b60f4d8ee]
+class DDICDIModels::DDICDILibrary::Classes::Process::Parameter--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::Parameter"><rect codeLine="46" fill="#FFD700" height="90.9141" id="DDICDIModels::DDICDILibrary::Classes::Process::Parameter" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="148.5" x="109.8" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="165.15" y="137.5928">Process::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="59.4" x="154.35" y="152.6502">Parameter</text><line style="stroke:#404040;stroke-width:0.45;" x1="110.7" x2="257.4" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#diagram" target="_top" title=" ― Reference:&#10;Provides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#diagram" xlink:show="new" xlink:title=" ― Reference:&#10;Provides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="74.7" x="115.2" y="176.5986">entityBound :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="59.4" x="193.5" y="176.5986">Reference</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="115.2" y="192.4471">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="174.6" y="192.4471">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#diagram" target="_top" title=" ― ObjectName:&#10;A standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#diagram" xlink:show="new" xlink:title=" ― ObjectName:&#10;A standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="38.7" x="115.2" y="208.2955">name :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="69.3" x="157.5" y="208.2955">ObjectName</text></a></g><!--MD5=[43f88ba76ad041367b7f38681e1bf5da]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::Parameter to DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::Parameter_DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition"><a href="" target="_top" title=" ― from:&#10;From parameters are the outputs from a control construct produced in its step/sub-step." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― from:&#10;From parameters are the outputs from a control construct produced in its step/sub-step." xlink:type="simple"><path codeLine="71" d="M112.095,218.421 C105.588,225.603 99.927,233.505 95.85,242.1 C89.136,256.248 92.538,274.122 96.804,287.064 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::Parameter-backto-DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="115.353,214.956,107.18,218.3871,112.2689,218.2329,112.4231,223.3217,115.353,214.956" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="22.5" x="96.75" y="255.1456">from</text></a></g><!--MD5=[43f88ba76ad041367b7f38681e1bf5da]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::Parameter to DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::Parameter_DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition"><a href="" target="_top" title=" ― to:&#10;To parameters are the inputs to a control construct used in its step/sub-step." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― to:&#10;To parameters are the inputs to a control construct used in its step/sub-step." xlink:type="simple"><path codeLine="72" d="M154.935,218.844 C140.742,242.604 124.56,269.694 114.309,286.866 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::Parameter-backto-DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition-1" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="157.374,214.749,150.1321,219.8603,155.0682,218.6134,156.3152,223.5495,157.374,214.749" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="9.9" x="140.85" y="255.1456">to</text></a></g><!--MD5=[253cbb7ef83cb83b2b5f4e576578498a]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::Parameter to DDICDIModels::DDICDILibrary::Classes::Process::Step--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::Parameter_DDICDIModels::DDICDILibrary::Classes::Process::Step"><a href="" target="_top" title=" ― produces:&#10;The Step creates Parameter as an output." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― produces:&#10;The Step creates Parameter as an output." xlink:type="simple"><path codeLine="73" d="M195.003,219.267 C199.719,232.911 206.334,247.059 215.55,258.3 C225.27,270.162 238.914,279.711 251.991,286.965 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::Parameter-backto-DDICDIModels::DDICDILibrary::Classes::Process::Step" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="193.473,214.659,192.6192,223.4818,194.896,218.9281,199.4497,221.2049,193.473,214.659" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="47.7" x="216.45" y="255.1456">produces</text></a></g><!--MD5=[253cbb7ef83cb83b2b5f4e576578498a]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::Parameter to DDICDIModels::DDICDILibrary::Classes::Process::Step--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::Parameter_DDICDIModels::DDICDILibrary::Classes::Process::Step"><a href="" target="_top" title=" ― receives:&#10;The Step uses Parameter as an input." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― receives:&#10;The Step uses Parameter as an input." xlink:type="simple"><path codeLine="74" d="M248.022,218.187 C255.6,225.639 262.728,233.676 268.65,242.1 C278.262,255.762 284.49,273.87 288.09,287.01 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::Parameter-backto-DDICDIModels::DDICDILibrary::Classes::Process::Step-1" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="244.746,215.037,248.0948,223.2441,247.9917,218.1539,253.0819,218.0509,244.746,215.037" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="42.3" x="278.55" y="255.1456">receives</text></a></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="277.2" x="49.5" y="327.7688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="186.75" y="337.1115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="186.75" y="348.4318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="277.2" x="49.5" y="359.7521">DDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Parameter</text><!--MD5=[13a19fe3b39457d700e31f38dc43092b]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Parameter in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Parameter
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Process::Parameter as "<size:10>Process::\n<color:black>Parameter" #FFD700 {
+  entityBound : <color:blue>Reference   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#diagram{ <U+2015> Reference:\nProvides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  name : <color:blue>ObjectName   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#diagram{ <U+2015> ObjectName:\nA standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles.}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition as "<size:10>Process::\n<color:blue>InformationFlowDefinition" [[../DDICDILibrary/Classes/Process/InformationFlowDefinition.html#super-class-hierarchy-generalization{ <U+2015> InformationFlowDefinition:\nThe relationships between parameters across steps is described by the information flow definition. Each relationship creates a pathway for an information object to follow.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Process::Step as "<size:10>Process::\n<color:blue>Step" [[../DDICDILibrary/Classes/Process/Step.html#super-class-hierarchy-generalization{ <U+2015> Step:\nStep is a reusable, parameterized activity associated to information flows. One or more steps perform an sctivity.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Process::Parameter <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition [[{ <U+2015> from:\nFrom parameters are the outputs from a control construct produced in its step/sub-step.}]] : from
+DDICDIModels::DDICDILibrary::Classes::Process::Parameter <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition [[{ <U+2015> to:\nTo parameters are the inputs to a control construct used in its step/sub-step.}]] : to
+DDICDIModels::DDICDILibrary::Classes::Process::Parameter <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::Step [[{ <U+2015> produces:\nThe Step creates Parameter as an output.}]] : produces
+DDICDIModels::DDICDILibrary::Classes::Process::Parameter <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::Step [[{ <U+2015> receives:\nThe Step uses Parameter as an input.}]] : receives
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Parameter in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Process::Parameter
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Process::Parameter as "<size:10>Process::\n<color:black>Parameter" #FFD700 {
+  entityBound : <color:blue>Reference   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Reference.html#diagram{ <U+2015> Reference:\nProvides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  name : <color:blue>ObjectName   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/ObjectName.html#diagram{ <U+2015> ObjectName:\nA standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles.}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition as "<size:10>Process::\n<color:blue>InformationFlowDefinition" [[../DDICDILibrary/Classes/Process/InformationFlowDefinition.html#super-class-hierarchy-generalization{ <U+2015> InformationFlowDefinition:\nThe relationships between parameters across steps is described by the information flow definition. Each relationship creates a pathway for an information object to follow.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Process::Step as "<size:10>Process::\n<color:blue>Step" [[../DDICDILibrary/Classes/Process/Step.html#super-class-hierarchy-generalization{ <U+2015> Step:\nStep is a reusable, parameterized activity associated to information flows. One or more steps perform an sctivity.}]]
+}
+
+together {
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Process::Parameter <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition [[{ <U+2015> from:\nFrom parameters are the outputs from a control construct produced in its step/sub-step.}]] : from
+DDICDIModels::DDICDILibrary::Classes::Process::Parameter <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition [[{ <U+2015> to:\nTo parameters are the inputs to a control construct used in its step/sub-step.}]] : to
+DDICDIModels::DDICDILibrary::Classes::Process::Parameter <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::Step [[{ <U+2015> produces:\nThe Step creates Parameter as an output.}]] : produces
+DDICDIModels::DDICDILibrary::Classes::Process::Parameter <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::Step [[{ <U+2015> receives:\nThe Step uses Parameter as an input.}]] : receives
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

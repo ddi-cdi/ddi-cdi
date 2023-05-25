@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="616.5px" preserveAspectRatio="none" style="width:822px;height:616px;background:#FFFFFF;" version="1.1" viewBox="0 0 822 616" width="822.6px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="496.8" x="156.6" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="487.8" x="161.1" y="27.6855">UML Diagram: Class DimensionalKeyDefinition in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="403.2" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[15188d8779e9e173fc8ff2f0957dc56d]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe--><a href="../DDICDILibrary/Classes/Conceptual/Universe.html#super-class-hierarchy-generalization" target="_top" title=" ― Universe:&#10;Specialized unit type, with the specialization based upon characteristics other than time and geography." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/Universe.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Universe:&#10;Specialized unit type, with the specialization based upon characteristics other than time and geography." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe"><rect codeLine="54" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="275.85"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="46.35" y="289.6928">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="49.5" x="49.05" y="304.7502">Universe</text></g></a><!--MD5=[a5073d06afbf8b59d890c7beb27e9292]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember--><a href="../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKeyDefinitionMember.html#super-class-hierarchy-generalization" target="_top" title=" ― DimensionalKeyDefinitionMember:&#10;Single concept that is part of a dimensional key definition." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKeyDefinitionMember.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― DimensionalKeyDefinitionMember:&#10;Single concept that is part of a dimensional key definition." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember"><rect codeLine="55" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="195.3" x="173.25" y="275.85"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="241.65" y="289.6928">Dimensional::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="189.9" x="175.95" y="304.7502">DimensionalKeyDefinitionMember</text></g></a><!--MD5=[c71d4aa8051245da3b0cd5f27fb5fc80]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey--><a href="../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKey.html#super-class-hierarchy-generalization" target="_top" title=" ― DimensionalKey:&#10;Collection of data instances that uniquely identify a collection of data points in a dimensional dataset." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKey.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― DimensionalKey:&#10;Collection of data instances that uniquely identify a collection of data points in a dimensional dataset." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey"><rect codeLine="56" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="400.5" y="275.85"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="438.75" y="289.6928">Dimensional::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="90.9" x="422.55" y="304.7502">DimensionalKey</text></g></a><!--MD5=[a14ba88bd403b61eebe603054e658f00]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure--><a href="../DDICDILibrary/Classes/DataDescription/Dimensional/ScopedMeasure.html#super-class-hierarchy-generalization" target="_top" title=" ― ScopedMeasure:&#10;A qualified measure whose domain is a universe as an aggregate, i.e. a measure with a specific production method applied to a specific cell in a cube." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Dimensional/ScopedMeasure.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ScopedMeasure:&#10;A qualified measure whose domain is a universe as an aggregate, i.e. a measure with a specific production method applied to a specific cell in a cube." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure"><rect codeLine="57" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="567" y="275.85"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="605.25" y="289.6928">Dimensional::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="92.7" x="588.15" y="304.7502">ScopedMeasure</text></g></a><!--MD5=[3939a00f65d15efe0e49a522f281fc52]
+class DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition--><a href="../DesignPatterns/DataDescriptionPattern/KeyDefinition.html#super-class-hierarchy-generalization" target="_top" title=" ― KeyDefinition:&#10;Collection of concepts that uniquely defines a collection of data points in a dataset." xlink:actuate="onRequest" xlink:href="../DesignPatterns/DataDescriptionPattern/KeyDefinition.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― KeyDefinition:&#10;Collection of concepts that uniquely defines a collection of data points in a dataset." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition"><rect codeLine="62" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="682.2" y="535.05"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="103.5" x="697.95" y="548.8928">DataDescriptionPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="74.7" x="712.35" y="563.9502">KeyDefinition</text></g></a><!--MD5=[60bdb978a8c322a707e643201517cc2b]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition--><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition"><rect codeLine="46" fill="#FFD700" height="59.2172" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="149.4" x="393.3" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="438.75" y="137.5928">Dimensional::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="144" x="396" y="152.6502">DimensionalKeyDefinition</text><line style="stroke:#404040;stroke-width:0.45;" x1="394.2" x2="541.8" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="398.7" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="458.1" y="176.5986">Identifier</text></a></g><!--MD5=[52c4a041420445f638991453d24b475c]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition to DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition_DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe"><a href="" target="_top" title=" ― providesSemanticTo:&#10;Dimensional key definition provides semantic to zero to one universe." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― providesSemanticTo:&#10;Dimensional key definition provides semantic to zero to one universe." xlink:type="simple"><path codeLine="70" d="M393.138,173.7 C347.742,185.994 288.864,202.95 237.6,220.95 C201.222,233.721 192.807,238.761 157.5,254.25 C143.415,260.433 128.115,267.426 114.498,273.744 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="110.331,275.688,119.1936,275.534,114.4108,273.7892,116.1556,269.0064,110.331,275.688" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="104.4" x="238.5" y="233.9956">providesSemanticTo</text></a></g><!--MD5=[22e55a520b9d8edfdd0e5deeb91109ba]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition to DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="71" d="M418.0847,189.4453 C418.0847,189.4453 336.285,246.969 305.343,268.731 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition-DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="295.452,275.688,304.1489,273.975,299.1334,273.1001,300.0083,268.0847,295.452,275.688" style="stroke:#808080;stroke-width:1.35;"/><line style="stroke:#808080;stroke-width:1.35;" x1="299.1334" x2="305.0235" y1="273.1001" y2="268.956"/><polygon fill="none" points="426.924,183.24,420.4359,183.3962,418.0847,189.4453,424.5728,189.2891,426.924,183.24" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="369.9" y="233.9956">has</text></a></g><!--MD5=[e95c63ab72d9f601327fd713e1f07bde]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition to DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey"><a href="" target="_top" title=" ― isRepresentedBy:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― isRepresentedBy:&#10;" xlink:type="simple"><path codeLine="72" d="M468,183.402 C468,209.601 468,247.536 468,271.197 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition-to-DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="468,275.733,471.6,267.633,468,271.233,464.4,267.633,468,275.733" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="89.1" x="468.9" y="233.9956">isRepresentedBy</text></a></g><!--MD5=[f4533e67a1b8544189f5a5c563024b5e]
+reverse link DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition to DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure"><a href="" target="_top" title=" ― circumscribes:&#10;A universe is specific to the specific cell associated with a scoped measure." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― circumscribes:&#10;A universe is specific to the specific cell associated with a scoped measure." xlink:type="simple"><path codeLine="73" d="M518.859,185.868 C534.528,196.362 551.484,208.548 566.1,220.95 C586.215,238.023 606.717,260.406 619.956,275.652 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="514.908,183.24,519.6507,190.7285,518.6522,185.7362,523.6445,184.7377,514.908,183.24" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="72.9" x="582.3" y="233.9956">circumscribes</text></a></g><!--MD5=[99c535957c565b2dcb979064f8e0bdc3]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition to DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition_DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition"><path codeLine="77" d="M542.754,159.489 C626.202,169.758 749.7,200.565 749.7,292.95 C749.7,292.95 749.7,292.95 749.7,465.3 C749.7,487.35 749.7,512.55 749.7,530.109 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition-to-DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="749.7,534.852,753.3,526.752,749.7,530.352,746.1,526.752,749.7,534.852" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="750.6" y="395.0956">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="364.5" x="222.75" y="575.7188"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="403.65" y="585.0615"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="403.65" y="596.3818"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="364.5" x="222.75" y="607.7021">DDI Cross Domain Integration (DDI-CDI)   1.0 - Dimensional::DimensionalKeyDefinition</text><!--MD5=[31842060a7c6fa195ff37951f282452e]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class DimensionalKeyDefinition in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Dimensional::DimensionalKeyDefinition
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition as "<size:10>Dimensional::\n<color:black>DimensionalKeyDefinition" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe as "<size:10>Conceptual::\n<color:blue>Universe" [[../DDICDILibrary/Classes/Conceptual/Universe.html#super-class-hierarchy-generalization{ <U+2015> Universe:\nSpecialized unit type, with the specialization based upon characteristics other than time and geography.}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember as "<size:10>Dimensional::\n<color:blue>DimensionalKeyDefinitionMember" [[../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKeyDefinitionMember.html#super-class-hierarchy-generalization{ <U+2015> DimensionalKeyDefinitionMember:\nSingle concept that is part of a dimensional key definition.}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey as "<size:10>Dimensional::\n<color:blue>DimensionalKey" [[../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKey.html#super-class-hierarchy-generalization{ <U+2015> DimensionalKey:\nCollection of data instances that uniquely identify a collection of data points in a dimensional dataset.}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure as "<size:10>Dimensional::\n<color:blue>ScopedMeasure" [[../DDICDILibrary/Classes/DataDescription/Dimensional/ScopedMeasure.html#super-class-hierarchy-generalization{ <U+2015> ScopedMeasure:\nA qualified measure whose domain is a universe as an aggregate, i.e. a measure with a specific production method applied to a specific cell in a cube.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition as "<size:10>DataDescriptionPattern::\n<color:blue>KeyDefinition" [[../DesignPatterns/DataDescriptionPattern/KeyDefinition.html#super-class-hierarchy-generalization{ <U+2015> KeyDefinition:\nCollection of concepts that uniquely defines a collection of data points in a dataset.}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe [[{ <U+2015> providesSemanticTo:\nDimensional key definition provides semantic to zero to one universe.}]] : providesSemanticTo
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition o-[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember [[{ <U+2015> has:\n}]] : has
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey [[{ <U+2015> isRepresentedBy:\n}]] : isRepresentedBy
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition <-[#grey]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure [[{ <U+2015> circumscribes:\nA universe is specific to the specific cell associated with a scoped measure.}]] : circumscribes
+
+
+' Abstractions
+  DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition .....> DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class DimensionalKeyDefinition in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Dimensional::DimensionalKeyDefinition
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition as "<size:10>Dimensional::\n<color:black>DimensionalKeyDefinition" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe as "<size:10>Conceptual::\n<color:blue>Universe" [[../DDICDILibrary/Classes/Conceptual/Universe.html#super-class-hierarchy-generalization{ <U+2015> Universe:\nSpecialized unit type, with the specialization based upon characteristics other than time and geography.}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember as "<size:10>Dimensional::\n<color:blue>DimensionalKeyDefinitionMember" [[../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKeyDefinitionMember.html#super-class-hierarchy-generalization{ <U+2015> DimensionalKeyDefinitionMember:\nSingle concept that is part of a dimensional key definition.}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey as "<size:10>Dimensional::\n<color:blue>DimensionalKey" [[../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKey.html#super-class-hierarchy-generalization{ <U+2015> DimensionalKey:\nCollection of data instances that uniquely identify a collection of data points in a dimensional dataset.}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure as "<size:10>Dimensional::\n<color:blue>ScopedMeasure" [[../DDICDILibrary/Classes/DataDescription/Dimensional/ScopedMeasure.html#super-class-hierarchy-generalization{ <U+2015> ScopedMeasure:\nA qualified measure whose domain is a universe as an aggregate, i.e. a measure with a specific production method applied to a specific cell in a cube.}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition as "<size:10>DataDescriptionPattern::\n<color:blue>KeyDefinition" [[../DesignPatterns/DataDescriptionPattern/KeyDefinition.html#super-class-hierarchy-generalization{ <U+2015> KeyDefinition:\nCollection of concepts that uniquely defines a collection of data points in a dataset.}]]
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe [[{ <U+2015> providesSemanticTo:\nDimensional key definition provides semantic to zero to one universe.}]] : providesSemanticTo
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition o-[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember [[{ <U+2015> has:\n}]] : has
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey [[{ <U+2015> isRepresentedBy:\n}]] : isRepresentedBy
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition <-[#grey]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure [[{ <U+2015> circumscribes:\nA universe is specific to the specific cell associated with a scoped measure.}]] : circumscribes
+
+
+  DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition .....> DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

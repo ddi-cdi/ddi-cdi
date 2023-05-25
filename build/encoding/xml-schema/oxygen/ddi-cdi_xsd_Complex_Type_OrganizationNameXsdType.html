@@ -1,0 +1,997 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component abbreviation</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        var propertiesBoxes= new Array('properties_OrganizationNameXsdType_abbreviation', 
+				'properties_OrganizationNameXsdType_effectiveDates', 
+				'properties_OrganizationNameXsdType_isFormal', 
+				'properties_OrganizationNameXsdType_typeOfOrganizationName');
+var usedByBoxes= new Array('usedBy_OrganizationNameXsdType');
+var sourceBoxes= new Array('source_OrganizationNameXsdType_abbreviation', 
+				'source_OrganizationNameXsdType_effectiveDates', 
+				'source_OrganizationNameXsdType_isFormal', 
+				'source_OrganizationNameXsdType_typeOfOrganizationName', 
+				'source_OrganizationNameXsdType');
+var instanceBoxes= new Array('instance_OrganizationNameXsdType_abbreviation', 
+				'instance_OrganizationNameXsdType_effectiveDates', 
+				'instance_OrganizationNameXsdType_typeOfOrganizationName');
+var diagramBoxes= new Array('diagram_OrganizationNameXsdType_abbreviation', 
+				'diagram_OrganizationNameXsdType_effectiveDates', 
+				'diagram_OrganizationNameXsdType_isFormal', 
+				'diagram_OrganizationNameXsdType_typeOfOrganizationName', 
+				'diagram_OrganizationNameXsdType');
+var annotationBoxes= new Array('annotations_OrganizationNameXsdType_abbreviation', 
+				'annotations_OrganizationNameXsdType_effectiveDates', 
+				'annotations_OrganizationNameXsdType_isFormal', 
+				'annotations_OrganizationNameXsdType_typeOfOrganizationName', 
+				'annotations_OrganizationNameXsdType');
+var modelBoxes= new Array('model_OrganizationNameXsdType_abbreviation', 
+				'model_OrganizationNameXsdType_effectiveDates', 
+				'model_OrganizationNameXsdType_typeOfOrganizationName', 
+				'model_OrganizationNameXsdType');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="OrganizationNameXsdType_abbreviation"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationNameXsdType')">OrganizationNameXsdType</a></b> / abbreviation</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_OrganizationNameXsdType_abbreviation" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_OrganizationNameXsdType_abbreviation');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_OrganizationNameXsdType_abbreviation" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">An abbreviation or acronym for the name. This may be expressed in multiple languages. It is assumed that if only a single language is provided that it may be used in any of the other languages within which the name itself is expressed.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_OrganizationNameXsdType_abbreviation" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_OrganizationNameXsdType_abbreviation');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_OrganizationNameXsdType_abbreviation" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_abbreviation_1.jpeg" usemap="#ddi-cdi_xsd_Element_abbreviation_1" /><map name="ddi-cdi_xsd_Element_abbreviation_1" id="ddi-cdi_xsd_Element_abbreviation_1"><area alt="ddi-cdi_xsd_Complex_Type_InternationalStringXsdType.tmp#InternationalStringXsdType_languageSpecificString" href="ddi-cdi_xsd_Complex_Type_InternationalStringXsdType.html#InternationalStringXsdType_languageSpecificString" coords="346,40,569,84" /><area alt="ddi-cdi_xsd_Complex_Type_InternationalStringXsdType.tmp#InternationalStringXsdType" href="ddi-cdi_xsd_Complex_Type_InternationalStringXsdType.html#InternationalStringXsdType" coords="243,3,423,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_InternationalStringXsdType.html#InternationalStringXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InternationalStringXsdType')">InternationalStringXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_OrganizationNameXsdType_abbreviation" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_OrganizationNameXsdType_abbreviation');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_OrganizationNameXsdType_abbreviation" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_OrganizationNameXsdType_abbreviation" type="image" src="img/btM.gif" value="-" onclick="switchState('model_OrganizationNameXsdType_abbreviation');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_OrganizationNameXsdType_abbreviation" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_InternationalStringXsdType.html#InternationalStringXsdType_languageSpecificString" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component languageSpecificString*')">languageSpecificString*</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_InternationalStringXsdType.html#InternationalStringXsdType_languageSpecificString" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component languageSpecificString')">languageSpecificString</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_OrganizationNameXsdType_abbreviation" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_OrganizationNameXsdType_abbreviation');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_OrganizationNameXsdType_abbreviation" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;abbreviation</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;languageSpecificString</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/languageSpecificString&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/abbreviation&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_OrganizationNameXsdType_abbreviation" type="image" src="img/btM.gif" value="-" onclick="switchState('source_OrganizationNameXsdType_abbreviation');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_OrganizationNameXsdType_abbreviation" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"abbreviation"</span><span class="tAN"> type=</span><span class="tAV">"InternationalStringXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationName-abbreviation"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">An abbreviation or acronym for the name. This may be expressed in multiple languages. It is assumed that if only a single language is provided that it may be used in any of the other languages within which the name itself is expressed.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="OrganizationNameXsdType_effectiveDates"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationNameXsdType')">OrganizationNameXsdType</a></b> / effectiveDates</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_OrganizationNameXsdType_effectiveDates" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_OrganizationNameXsdType_effectiveDates');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_OrganizationNameXsdType_effectiveDates" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The time period for which this name is accurate and in use.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_OrganizationNameXsdType_effectiveDates" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_OrganizationNameXsdType_effectiveDates');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_OrganizationNameXsdType_effectiveDates" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_effectiveDates_10.jpeg" usemap="#ddi-cdi_xsd_Element_effectiveDates_10" /><map name="ddi-cdi_xsd_Element_effectiveDates_10" id="ddi-cdi_xsd_Element_effectiveDates_10"><area alt="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.tmp#DateRangeXsdType_endDate" href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType_endDate" coords="292,40,467,84" /><area alt="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.tmp#DateRangeXsdType_startDate" href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType_startDate" coords="292,125,467,169" /><area alt="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.tmp#DateRangeXsdType" href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType" coords="210,3,357,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DateRangeXsdType')">DateRangeXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_OrganizationNameXsdType_effectiveDates" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_OrganizationNameXsdType_effectiveDates');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_OrganizationNameXsdType_effectiveDates" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_OrganizationNameXsdType_effectiveDates" type="image" src="img/btM.gif" value="-" onclick="switchState('model_OrganizationNameXsdType_effectiveDates');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_OrganizationNameXsdType_effectiveDates" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType_endDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component endDate{0,1}')">endDate{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType_startDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component startDate{0,1}')">startDate{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType_endDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component endDate')">endDate</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType_startDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component startDate')">startDate</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_OrganizationNameXsdType_effectiveDates" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_OrganizationNameXsdType_effectiveDates');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_OrganizationNameXsdType_effectiveDates" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;effectiveDates</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;endDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/endDate&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;startDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/startDate&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/effectiveDates&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_OrganizationNameXsdType_effectiveDates" type="image" src="img/btM.gif" value="-" onclick="switchState('source_OrganizationNameXsdType_effectiveDates');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_OrganizationNameXsdType_effectiveDates" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"effectiveDates"</span><span class="tAN"> type=</span><span class="tAV">"DateRangeXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationName-effectiveDates"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The time period for which this name is accurate and in use.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="OrganizationNameXsdType_isFormal"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationNameXsdType')">OrganizationNameXsdType</a></b> / isFormal</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_OrganizationNameXsdType_isFormal" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_OrganizationNameXsdType_isFormal');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_OrganizationNameXsdType_isFormal" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The legal or formal name of the organization should have the isFormal attribute set to True. To avoid confusion only one organization name should have the isFormal attribute set to True. Use the typeOfOrganizationName to further differentiate the type and applied usage when multiple names are provided.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_OrganizationNameXsdType_isFormal" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_OrganizationNameXsdType_isFormal');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_OrganizationNameXsdType_isFormal" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_isFormal_1.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:boolean</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_OrganizationNameXsdType_isFormal" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_OrganizationNameXsdType_isFormal');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_OrganizationNameXsdType_isFormal" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_OrganizationNameXsdType_isFormal" type="image" src="img/btM.gif" value="-" onclick="switchState('source_OrganizationNameXsdType_isFormal');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_OrganizationNameXsdType_isFormal" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"isFormal"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationName-isFormal"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The legal or formal name of the organization should have the isFormal attribute set to True. To avoid confusion only one organization name should have the isFormal attribute set to True. Use the typeOfOrganizationName to further differentiate the type and applied usage when multiple names are provided.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="OrganizationNameXsdType_typeOfOrganizationName"></a><div class="componentTitle">Element <span class="qname"><b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationNameXsdType')">OrganizationNameXsdType</a></b> / typeOfOrganizationName</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_OrganizationNameXsdType_typeOfOrganizationName" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_OrganizationNameXsdType_typeOfOrganizationName');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_OrganizationNameXsdType_typeOfOrganizationName" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">The type of organization name provided. the use of a controlled vocabulary is strongly recommended. At minimum this should include, e.g. PreviousFormalName, Nickname (or CommonName), Other.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_OrganizationNameXsdType_typeOfOrganizationName" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_OrganizationNameXsdType_typeOfOrganizationName');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_OrganizationNameXsdType_typeOfOrganizationName" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Element_typeOfOrganizationName.jpeg" usemap="#ddi-cdi_xsd_Element_typeOfOrganizationName" /><map name="ddi-cdi_xsd_Element_typeOfOrganizationName" id="ddi-cdi_xsd_Element_typeOfOrganizationName"><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_entryReference" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryReference" coords="389,40,546,84" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_entryValue" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryValue" coords="389,139,494,183" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_name" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_name" coords="389,252,494,296" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_valueForOther" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_valueForOther" coords="389,337,494,381" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType_vocabulary" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_vocabulary" coords="389,436,546,480" /><area alt="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.tmp#ControlledVocabularyEntryXsdType" href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType" coords="286,3,509,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ControlledVocabularyEntryXsdType')">ControlledVocabularyEntryXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_OrganizationNameXsdType_typeOfOrganizationName" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_OrganizationNameXsdType_typeOfOrganizationName');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_OrganizationNameXsdType_typeOfOrganizationName" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>1</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_OrganizationNameXsdType_typeOfOrganizationName" type="image" src="img/btM.gif" value="-" onclick="switchState('model_OrganizationNameXsdType_typeOfOrganizationName');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_OrganizationNameXsdType_typeOfOrganizationName" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component entryReference*')">entryReference*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryValue" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component entryValue*')">entryValue*</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name{0,1}')">name{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_valueForOther" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component valueForOther{0,1}')">valueForOther{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_vocabulary" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component vocabulary{0,1}')">vocabulary{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryReference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component entryReference')">entryReference</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_entryValue" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component entryValue')">entryValue</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name')">name</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_valueForOther" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component valueForOther')">valueForOther</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType_vocabulary" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component vocabulary')">vocabulary</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_OrganizationNameXsdType_typeOfOrganizationName" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_OrganizationNameXsdType_typeOfOrganizationName');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_OrganizationNameXsdType_typeOfOrganizationName" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;typeOfOrganizationName</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;entryReference</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/entryReference&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;entryValue</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/entryValue&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;valueForOther</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/valueForOther&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;vocabulary</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/vocabulary&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/typeOfOrganizationName&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_OrganizationNameXsdType_typeOfOrganizationName" type="image" src="img/btM.gif" value="-" onclick="switchState('source_OrganizationNameXsdType_typeOfOrganizationName');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_OrganizationNameXsdType_typeOfOrganizationName" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfOrganizationName"</span><span class="tAN"> type=</span><span class="tAV">"ControlledVocabularyEntryXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationName-typeOfOrganizationName"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The type of organization name provided. the use of a controlled vocabulary is strongly recommended. At minimum this should include, e.g. PreviousFormalName, Nickname (or CommonName), Other.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="OrganizationNameXsdType"></a><div class="componentTitle">Complex Type <span class="qname">OrganizationNameXsdType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_OrganizationNameXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_OrganizationNameXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_OrganizationNameXsdType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Definition</span><span class="tI">
+</span><span class="tT">==========</span><span class="tI">
+</span><span class="tT">Names by which the organization is known. Use the attribute isFormal with a value of True to designate the legal or formal name of the organization. Names may be typed with typeOfOrganizationName to indicate their appropriate usage.</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_OrganizationNameXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_OrganizationNameXsdType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_OrganizationNameXsdType" style="display:block"><img alt="Diagram" border="0" src="img/ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.jpeg" usemap="#ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType" /><map name="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType" id="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType"><area alt="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.tmp#ObjectNameXsdType_context" href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType_context" coords="325,40,560,84" /><area alt="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.tmp#ObjectNameXsdType_name" href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType_name" coords="325,139,430,183" /><area alt="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.tmp#ObjectNameXsdType" href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType" coords="243,3,480,25" /><area alt="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.tmp#OrganizationNameXsdType_abbreviation" href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_abbreviation" coords="311,276,503,320" /><area alt="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.tmp#OrganizationNameXsdType_effectiveDates" href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_effectiveDates" coords="311,375,470,419" /><area alt="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.tmp#OrganizationNameXsdType_isFormal" href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_isFormal" coords="311,460,427,504" /><area alt="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.tmp#OrganizationNameXsdType_typeOfOrganizationName" href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_typeOfOrganizationName" coords="311,559,546,603" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ObjectNameXsdType')">ObjectNameXsdType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ObjectNameXsdType')">ObjectNameXsdType</a></b><ul class="internal">
+                                    <li class="internal"><b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationNameXsdType')">OrganizationNameXsdType</a></b></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_OrganizationNameXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_OrganizationNameXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_OrganizationNameXsdType" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="ddi-cdi_xsd_Element_OrganizationName.html#OrganizationName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationName')">OrganizationName</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationXsdType.html#OrganizationXsdType_organizationName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationXsdType/organizationName')">OrganizationXsdType/organizationName</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_VariableStructureXsdType.html#VariableStructureXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableStructureXsdType/name')">VariableStructureXsdType/name</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_OrganizationNameXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('model_OrganizationNameXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_OrganizationNameXsdType" style="display:block"><b><a href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType_context" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component context{0,1}')">context{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name{0,1}')">name{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_abbreviation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component abbreviation{0,1}')">abbreviation{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates{0,1}')">effectiveDates{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_isFormal" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isFormal{0,1}')">isFormal{0,1}</a></b> , <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_typeOfOrganizationName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfOrganizationName{0,1}')">typeOfOrganizationName{0,1}</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_abbreviation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component abbreviation')">abbreviation</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType_context" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component context')">context</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_effectiveDates" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component effectiveDates')">effectiveDates</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_isFormal" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component isFormal')">isFormal</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType_name" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component name')">name</a></b>, <b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType_typeOfOrganizationName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component typeOfOrganizationName')">typeOfOrganizationName</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_OrganizationNameXsdType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_OrganizationNameXsdType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_OrganizationNameXsdType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"OrganizationNameXsdType"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationNameXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Definition ========== Names by which the organization is known. Use the attribute isFormal with a value of True to designate the legal or formal name of the organization. Names may be typed with typeOfOrganizationName to indicate their appropriate usage.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexContent</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"ObjectNameXsdType"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"abbreviation"</span><span class="tAN"> type=</span><span class="tAV">"InternationalStringXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationName-abbreviation"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">An abbreviation or acronym for the name. This may be expressed in multiple languages. It is assumed that if only a single language is provided that it may be used in any of the other languages within which the name itself is expressed.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"effectiveDates"</span><span class="tAN"> type=</span><span class="tAV">"DateRangeXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationName-effectiveDates"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The time period for which this name is accurate and in use.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"isFormal"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationName-isFormal"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The legal or formal name of the organization should have the isFormal attribute set to True. To avoid confusion only one organization name should have the isFormal attribute set to True. Use the typeOfOrganizationName to further differentiate the type and applied usage when multiple names are provided.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"typeOfOrganizationName"</span><span class="tAN"> type=</span><span class="tAV">"ControlledVocabularyEntryXsdType"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"1"</span><span class="tAN"> xml:id=</span><span class="tAV">"OrganizationName-typeOfOrganizationName"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The type of organization name provided. the use of a controlled vocabulary is strongly recommended. At minimum this should include, e.g. PreviousFormalName, Nickname (or CommonName), Other.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexContent&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

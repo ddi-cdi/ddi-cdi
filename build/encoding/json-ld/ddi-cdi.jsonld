@@ -1,0 +1,819 @@
+{
+  "@context": {
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "iri": "@id",
+    "type": "@type",
+    "Agent": {
+      "@id": "cdi:Agent",
+      "@context": "Agent.jsonld"
+    }, 
+    "AgentListing": {
+      "@id": "cdi:AgentListing",
+      "@context": "AgentListing.jsonld"
+    }, 
+    "AgentPosition": {
+      "@id": "cdi:AgentPosition",
+      "@context": "AgentPosition.jsonld"
+    }, 
+    "AgentRelationship": {
+      "@id": "cdi:AgentRelationship",
+      "@context": "AgentRelationship.jsonld"
+    }, 
+    "AgentStructure": {
+      "@id": "cdi:AgentStructure",
+      "@context": "AgentStructure.jsonld"
+    }, 
+    "Individual": {
+      "@id": "cdi:Individual",
+      "@context": "Individual.jsonld"
+    }, 
+    "Machine": {
+      "@id": "cdi:Machine",
+      "@context": "Machine.jsonld"
+    }, 
+    "Organization": {
+      "@id": "cdi:Organization",
+      "@context": "Organization.jsonld"
+    }, 
+    "Category": {
+      "@id": "cdi:Category",
+      "@context": "Category.jsonld"
+    }, 
+    "CategoryPosition": {
+      "@id": "cdi:CategoryPosition",
+      "@context": "CategoryPosition.jsonld"
+    }, 
+    "CategoryRelationship": {
+      "@id": "cdi:CategoryRelationship",
+      "@context": "CategoryRelationship.jsonld"
+    }, 
+    "CategoryRelationStructure": {
+      "@id": "cdi:CategoryRelationStructure",
+      "@context": "CategoryRelationStructure.jsonld"
+    }, 
+    "CategorySet": {
+      "@id": "cdi:CategorySet",
+      "@context": "CategorySet.jsonld"
+    }, 
+    "Concept": {
+      "@id": "cdi:Concept",
+      "@context": "Concept.jsonld"
+    }, 
+    "ConceptMap": {
+      "@id": "cdi:ConceptMap",
+      "@context": "ConceptMap.jsonld"
+    }, 
+    "ConceptRelationship": {
+      "@id": "cdi:ConceptRelationship",
+      "@context": "ConceptRelationship.jsonld"
+    }, 
+    "ConceptStructure": {
+      "@id": "cdi:ConceptStructure",
+      "@context": "ConceptStructure.jsonld"
+    }, 
+    "ConceptSystem": {
+      "@id": "cdi:ConceptSystem",
+      "@context": "ConceptSystem.jsonld"
+    }, 
+    "ConceptSystemCorrespondence": {
+      "@id": "cdi:ConceptSystemCorrespondence",
+      "@context": "ConceptSystemCorrespondence.jsonld"
+    }, 
+    "ConceptualDomain": {
+      "@id": "cdi:ConceptualDomain",
+      "@context": "ConceptualDomain.jsonld"
+    }, 
+    "ConceptualVariable": {
+      "@id": "cdi:ConceptualVariable",
+      "@context": "ConceptualVariable.jsonld"
+    }, 
+    "InstanceVariable": {
+      "@id": "cdi:InstanceVariable",
+      "@context": "InstanceVariable.jsonld"
+    }, 
+    "Population": {
+      "@id": "cdi:Population",
+      "@context": "Population.jsonld"
+    }, 
+    "RepresentedVariable": {
+      "@id": "cdi:RepresentedVariable",
+      "@context": "RepresentedVariable.jsonld"
+    }, 
+    "SentinelConceptualDomain": {
+      "@id": "cdi:SentinelConceptualDomain",
+      "@context": "SentinelConceptualDomain.jsonld"
+    }, 
+    "SubstantiveConceptualDomain": {
+      "@id": "cdi:SubstantiveConceptualDomain",
+      "@context": "SubstantiveConceptualDomain.jsonld"
+    }, 
+    "Unit": {
+      "@id": "cdi:Unit",
+      "@context": "Unit.jsonld"
+    }, 
+    "UnitType": {
+      "@id": "cdi:UnitType",
+      "@context": "UnitType.jsonld"
+    }, 
+    "Universe": {
+      "@id": "cdi:Universe",
+      "@context": "Universe.jsonld"
+    }, 
+    "VariableCollection": {
+      "@id": "cdi:VariableCollection",
+      "@context": "VariableCollection.jsonld"
+    }, 
+    "VariablePosition": {
+      "@id": "cdi:VariablePosition",
+      "@context": "VariablePosition.jsonld"
+    }, 
+    "VariableRelationship": {
+      "@id": "cdi:VariableRelationship",
+      "@context": "VariableRelationship.jsonld"
+    }, 
+    "VariableStructure": {
+      "@id": "cdi:VariableStructure",
+      "@context": "VariableStructure.jsonld"
+    }, 
+    "ConceptualValue": {
+      "@id": "cdi:ConceptualValue",
+      "@context": "ConceptualValue.jsonld"
+    }, 
+    "DataPoint": {
+      "@id": "cdi:DataPoint",
+      "@context": "DataPoint.jsonld"
+    }, 
+    "DataSet": {
+      "@id": "cdi:DataSet",
+      "@context": "DataSet.jsonld"
+    }, 
+    "DataStructure": {
+      "@id": "cdi:DataStructure",
+      "@context": "DataStructure.jsonld"
+    }, 
+    "Datum": {
+      "@id": "cdi:Datum",
+      "@context": "Datum.jsonld"
+    }, 
+    "InstanceValue": {
+      "@id": "cdi:InstanceValue",
+      "@context": "InstanceValue.jsonld"
+    }, 
+    "Notation": {
+      "@id": "cdi:Notation",
+      "@context": "Notation.jsonld"
+    }, 
+    "AttributeComponent": {
+      "@id": "cdi:AttributeComponent",
+      "@context": "AttributeComponent.jsonld"
+    }, 
+    "ComponentPosition": {
+      "@id": "cdi:ComponentPosition",
+      "@context": "ComponentPosition.jsonld"
+    }, 
+    "DataStructureComponent": {
+      "@id": "cdi:DataStructureComponent",
+      "@context": "DataStructureComponent.jsonld"
+    }, 
+    "DimensionComponent": {
+      "@id": "cdi:DimensionComponent",
+      "@context": "DimensionComponent.jsonld"
+    }, 
+    "ForeignKey": {
+      "@id": "cdi:ForeignKey",
+      "@context": "ForeignKey.jsonld"
+    }, 
+    "ForeignKeyComponent": {
+      "@id": "cdi:ForeignKeyComponent",
+      "@context": "ForeignKeyComponent.jsonld"
+    }, 
+    "IdentifierComponent": {
+      "@id": "cdi:IdentifierComponent",
+      "@context": "IdentifierComponent.jsonld"
+    }, 
+    "MeasureComponent": {
+      "@id": "cdi:MeasureComponent",
+      "@context": "MeasureComponent.jsonld"
+    }, 
+    "PrimaryKey": {
+      "@id": "cdi:PrimaryKey",
+      "@context": "PrimaryKey.jsonld"
+    }, 
+    "PrimaryKeyComponent": {
+      "@id": "cdi:PrimaryKeyComponent",
+      "@context": "PrimaryKeyComponent.jsonld"
+    }, 
+    "VariableDescriptorComponent": {
+      "@id": "cdi:VariableDescriptorComponent",
+      "@context": "VariableDescriptorComponent.jsonld"
+    }, 
+    "VariableValueComponent": {
+      "@id": "cdi:VariableValueComponent",
+      "@context": "VariableValueComponent.jsonld"
+    }, 
+    "DimensionalDataSet": {
+      "@id": "cdi:DimensionalDataSet",
+      "@context": "DimensionalDataSet.jsonld"
+    }, 
+    "DimensionalDataStructure": {
+      "@id": "cdi:DimensionalDataStructure",
+      "@context": "DimensionalDataStructure.jsonld"
+    }, 
+    "DimensionalKey": {
+      "@id": "cdi:DimensionalKey",
+      "@context": "DimensionalKey.jsonld"
+    }, 
+    "DimensionalKeyDefinition": {
+      "@id": "cdi:DimensionalKeyDefinition",
+      "@context": "DimensionalKeyDefinition.jsonld"
+    }, 
+    "DimensionalKeyDefinitionMember": {
+      "@id": "cdi:DimensionalKeyDefinitionMember",
+      "@context": "DimensionalKeyDefinitionMember.jsonld"
+    }, 
+    "DimensionalKeyMember": {
+      "@id": "cdi:DimensionalKeyMember",
+      "@context": "DimensionalKeyMember.jsonld"
+    }, 
+    "DimensionGroup": {
+      "@id": "cdi:DimensionGroup",
+      "@context": "DimensionGroup.jsonld"
+    }, 
+    "QualifiedMeasure": {
+      "@id": "cdi:QualifiedMeasure",
+      "@context": "QualifiedMeasure.jsonld"
+    }, 
+    "RevisableDatum": {
+      "@id": "cdi:RevisableDatum",
+      "@context": "RevisableDatum.jsonld"
+    }, 
+    "Revision": {
+      "@id": "cdi:Revision",
+      "@context": "Revision.jsonld"
+    }, 
+    "ScopedMeasure": {
+      "@id": "cdi:ScopedMeasure",
+      "@context": "ScopedMeasure.jsonld"
+    }, 
+    "InstanceKey": {
+      "@id": "cdi:InstanceKey",
+      "@context": "InstanceKey.jsonld"
+    }, 
+    "KeyValueDataStore": {
+      "@id": "cdi:KeyValueDataStore",
+      "@context": "KeyValueDataStore.jsonld"
+    }, 
+    "KeyValueStructure": {
+      "@id": "cdi:KeyValueStructure",
+      "@context": "KeyValueStructure.jsonld"
+    }, 
+    "MainKeyMember": {
+      "@id": "cdi:MainKeyMember",
+      "@context": "MainKeyMember.jsonld"
+    }, 
+    "SyntheticIdComponent": {
+      "@id": "cdi:SyntheticIdComponent",
+      "@context": "SyntheticIdComponent.jsonld"
+    }, 
+    "Descriptor": {
+      "@id": "cdi:Descriptor",
+      "@context": "Descriptor.jsonld"
+    }, 
+    "DescriptorValueDomain": {
+      "@id": "cdi:DescriptorValueDomain",
+      "@context": "DescriptorValueDomain.jsonld"
+    }, 
+    "DescriptorVariable": {
+      "@id": "cdi:DescriptorVariable",
+      "@context": "DescriptorVariable.jsonld"
+    }, 
+    "LongDataSet": {
+      "@id": "cdi:LongDataSet",
+      "@context": "LongDataSet.jsonld"
+    }, 
+    "LongDataStructure": {
+      "@id": "cdi:LongDataStructure",
+      "@context": "LongDataStructure.jsonld"
+    }, 
+    "LongKey": {
+      "@id": "cdi:LongKey",
+      "@context": "LongKey.jsonld"
+    }, 
+    "LongMainKeyMember": {
+      "@id": "cdi:LongMainKeyMember",
+      "@context": "LongMainKeyMember.jsonld"
+    }, 
+    "ReferenceValue": {
+      "@id": "cdi:ReferenceValue",
+      "@context": "ReferenceValue.jsonld"
+    }, 
+    "ReferenceValueDomain": {
+      "@id": "cdi:ReferenceValueDomain",
+      "@context": "ReferenceValueDomain.jsonld"
+    }, 
+    "ReferenceVariable": {
+      "@id": "cdi:ReferenceVariable",
+      "@context": "ReferenceVariable.jsonld"
+    }, 
+    "WideDataSet": {
+      "@id": "cdi:WideDataSet",
+      "@context": "WideDataSet.jsonld"
+    }, 
+    "WideDataStructure": {
+      "@id": "cdi:WideDataStructure",
+      "@context": "WideDataStructure.jsonld"
+    }, 
+    "WideKey": {
+      "@id": "cdi:WideKey",
+      "@context": "WideKey.jsonld"
+    }, 
+    "WideKeyMember": {
+      "@id": "cdi:WideKeyMember",
+      "@context": "WideKeyMember.jsonld"
+    }, 
+    "DataPointPosition": {
+      "@id": "cdi:DataPointPosition",
+      "@context": "DataPointPosition.jsonld"
+    }, 
+    "DataPointRelationship": {
+      "@id": "cdi:DataPointRelationship",
+      "@context": "DataPointRelationship.jsonld"
+    }, 
+    "DataStore": {
+      "@id": "cdi:DataStore",
+      "@context": "DataStore.jsonld"
+    }, 
+    "InstanceVariableMap": {
+      "@id": "cdi:InstanceVariableMap",
+      "@context": "InstanceVariableMap.jsonld"
+    }, 
+    "LogicalRecord": {
+      "@id": "cdi:LogicalRecord",
+      "@context": "LogicalRecord.jsonld"
+    }, 
+    "LogicalRecordPosition": {
+      "@id": "cdi:LogicalRecordPosition",
+      "@context": "LogicalRecordPosition.jsonld"
+    }, 
+    "LogicalRecordRelationship": {
+      "@id": "cdi:LogicalRecordRelationship",
+      "@context": "LogicalRecordRelationship.jsonld"
+    }, 
+    "LogicalRecordRelationStructure": {
+      "@id": "cdi:LogicalRecordRelationStructure",
+      "@context": "LogicalRecordRelationStructure.jsonld"
+    }, 
+    "PhysicalDataSet": {
+      "@id": "cdi:PhysicalDataSet",
+      "@context": "PhysicalDataSet.jsonld"
+    }, 
+    "PhysicalDataSetStructure": {
+      "@id": "cdi:PhysicalDataSetStructure",
+      "@context": "PhysicalDataSetStructure.jsonld"
+    }, 
+    "PhysicalLayoutRelationStructure": {
+      "@id": "cdi:PhysicalLayoutRelationStructure",
+      "@context": "PhysicalLayoutRelationStructure.jsonld"
+    }, 
+    "PhysicalRecordSegment": {
+      "@id": "cdi:PhysicalRecordSegment",
+      "@context": "PhysicalRecordSegment.jsonld"
+    }, 
+    "PhysicalRecordSegmentPosition": {
+      "@id": "cdi:PhysicalRecordSegmentPosition",
+      "@context": "PhysicalRecordSegmentPosition.jsonld"
+    }, 
+    "PhysicalRecordSegmentRelationship": {
+      "@id": "cdi:PhysicalRecordSegmentRelationship",
+      "@context": "PhysicalRecordSegmentRelationship.jsonld"
+    }, 
+    "PhysicalRecordSegmentStructure": {
+      "@id": "cdi:PhysicalRecordSegmentStructure",
+      "@context": "PhysicalRecordSegmentStructure.jsonld"
+    }, 
+    "PhysicalSegmentLayout": {
+      "@id": "cdi:PhysicalSegmentLayout",
+      "@context": "PhysicalSegmentLayout.jsonld"
+    }, 
+    "PhysicalSegmentLocation": {
+      "@id": "cdi:PhysicalSegmentLocation",
+      "@context": "PhysicalSegmentLocation.jsonld"
+    }, 
+    "RecordRelation": {
+      "@id": "cdi:RecordRelation",
+      "@context": "RecordRelation.jsonld"
+    }, 
+    "SegmentByText": {
+      "@id": "cdi:SegmentByText",
+      "@context": "SegmentByText.jsonld"
+    }, 
+    "UnitSegmentLayout": {
+      "@id": "cdi:UnitSegmentLayout",
+      "@context": "UnitSegmentLayout.jsonld"
+    }, 
+    "ValueMapping": {
+      "@id": "cdi:ValueMapping",
+      "@context": "ValueMapping.jsonld"
+    }, 
+    "ValueMappingPosition": {
+      "@id": "cdi:ValueMappingPosition",
+      "@context": "ValueMappingPosition.jsonld"
+    }, 
+    "ValueMappingRelationship": {
+      "@id": "cdi:ValueMappingRelationship",
+      "@context": "ValueMappingRelationship.jsonld"
+    }, 
+    "Activity": {
+      "@id": "cdi:Activity",
+      "@context": "Activity.jsonld"
+    }, 
+    "AllenIntervalAlgebra": {
+      "@id": "cdi:AllenIntervalAlgebra",
+      "@context": "AllenIntervalAlgebra.jsonld"
+    }, 
+    "ConditionalControlLogic": {
+      "@id": "cdi:ConditionalControlLogic",
+      "@context": "ConditionalControlLogic.jsonld"
+    }, 
+    "ControlLogic": {
+      "@id": "cdi:ControlLogic",
+      "@context": "ControlLogic.jsonld"
+    }, 
+    "Curator": {
+      "@id": "cdi:Curator",
+      "@context": "Curator.jsonld"
+    }, 
+    "DeterministicImperative": {
+      "@id": "cdi:DeterministicImperative",
+      "@context": "DeterministicImperative.jsonld"
+    }, 
+    "InformationFlowDefinition": {
+      "@id": "cdi:InformationFlowDefinition",
+      "@context": "InformationFlowDefinition.jsonld"
+    }, 
+    "NonDeterministicDeclarative": {
+      "@id": "cdi:NonDeterministicDeclarative",
+      "@context": "NonDeterministicDeclarative.jsonld"
+    }, 
+    "Parameter": {
+      "@id": "cdi:Parameter",
+      "@context": "Parameter.jsonld"
+    }, 
+    "ProcessingAgent": {
+      "@id": "cdi:ProcessingAgent",
+      "@context": "ProcessingAgent.jsonld"
+    }, 
+    "ProductionEnvironment": {
+      "@id": "cdi:ProductionEnvironment",
+      "@context": "ProductionEnvironment.jsonld"
+    }, 
+    "Rule": {
+      "@id": "cdi:Rule",
+      "@context": "Rule.jsonld"
+    }, 
+    "RuleBasedScheduling": {
+      "@id": "cdi:RuleBasedScheduling",
+      "@context": "RuleBasedScheduling.jsonld"
+    }, 
+    "RuleSet": {
+      "@id": "cdi:RuleSet",
+      "@context": "RuleSet.jsonld"
+    }, 
+    "Sequence": {
+      "@id": "cdi:Sequence",
+      "@context": "Sequence.jsonld"
+    }, 
+    "Service": {
+      "@id": "cdi:Service",
+      "@context": "Service.jsonld"
+    }, 
+    "Step": {
+      "@id": "cdi:Step",
+      "@context": "Step.jsonld"
+    }, 
+    "TemporalConstraints": {
+      "@id": "cdi:TemporalConstraints",
+      "@context": "TemporalConstraints.jsonld"
+    }, 
+    "TemporalControlConstruct": {
+      "@id": "cdi:TemporalControlConstruct",
+      "@context": "TemporalControlConstruct.jsonld"
+    }, 
+    "AuthorizationSource": {
+      "@id": "cdi:AuthorizationSource",
+      "@context": "AuthorizationSource.jsonld"
+    }, 
+    "CategoryStatistic": {
+      "@id": "cdi:CategoryStatistic",
+      "@context": "CategoryStatistic.jsonld"
+    }, 
+    "ClassificationFamily": {
+      "@id": "cdi:ClassificationFamily",
+      "@context": "ClassificationFamily.jsonld"
+    }, 
+    "ClassificationIndex": {
+      "@id": "cdi:ClassificationIndex",
+      "@context": "ClassificationIndex.jsonld"
+    }, 
+    "ClassificationIndexEntry": {
+      "@id": "cdi:ClassificationIndexEntry",
+      "@context": "ClassificationIndexEntry.jsonld"
+    }, 
+    "ClassificationIndexEntryPosition": {
+      "@id": "cdi:ClassificationIndexEntryPosition",
+      "@context": "ClassificationIndexEntryPosition.jsonld"
+    }, 
+    "ClassificationItem": {
+      "@id": "cdi:ClassificationItem",
+      "@context": "ClassificationItem.jsonld"
+    }, 
+    "ClassificationItemPosition": {
+      "@id": "cdi:ClassificationItemPosition",
+      "@context": "ClassificationItemPosition.jsonld"
+    }, 
+    "ClassificationItemRelationship": {
+      "@id": "cdi:ClassificationItemRelationship",
+      "@context": "ClassificationItemRelationship.jsonld"
+    }, 
+    "ClassificationItemStructure": {
+      "@id": "cdi:ClassificationItemStructure",
+      "@context": "ClassificationItemStructure.jsonld"
+    }, 
+    "ClassificationPosition": {
+      "@id": "cdi:ClassificationPosition",
+      "@context": "ClassificationPosition.jsonld"
+    }, 
+    "ClassificationSeries": {
+      "@id": "cdi:ClassificationSeries",
+      "@context": "ClassificationSeries.jsonld"
+    }, 
+    "ClassificationSeriesStructure": {
+      "@id": "cdi:ClassificationSeriesStructure",
+      "@context": "ClassificationSeriesStructure.jsonld"
+    }, 
+    "Code": {
+      "@id": "cdi:Code",
+      "@context": "Code.jsonld"
+    }, 
+    "CodeList": {
+      "@id": "cdi:CodeList",
+      "@context": "CodeList.jsonld"
+    }, 
+    "CodeListStructure": {
+      "@id": "cdi:CodeListStructure",
+      "@context": "CodeListStructure.jsonld"
+    }, 
+    "CodePosition": {
+      "@id": "cdi:CodePosition",
+      "@context": "CodePosition.jsonld"
+    }, 
+    "CodeRelationship": {
+      "@id": "cdi:CodeRelationship",
+      "@context": "CodeRelationship.jsonld"
+    }, 
+    "CorrespondenceTable": {
+      "@id": "cdi:CorrespondenceTable",
+      "@context": "CorrespondenceTable.jsonld"
+    }, 
+    "EnumerationDomain": {
+      "@id": "cdi:EnumerationDomain",
+      "@context": "EnumerationDomain.jsonld"
+    }, 
+    "Level": {
+      "@id": "cdi:Level",
+      "@context": "Level.jsonld"
+    }, 
+    "LevelStructure": {
+      "@id": "cdi:LevelStructure",
+      "@context": "LevelStructure.jsonld"
+    }, 
+    "SentinelValueDomain": {
+      "@id": "cdi:SentinelValueDomain",
+      "@context": "SentinelValueDomain.jsonld"
+    }, 
+    "StatisticalClassification": {
+      "@id": "cdi:StatisticalClassification",
+      "@context": "StatisticalClassification.jsonld"
+    }, 
+    "StatisticalClassificationRelationship": {
+      "@id": "cdi:StatisticalClassificationRelationship",
+      "@context": "StatisticalClassificationRelationship.jsonld"
+    }, 
+    "SubstantiveValueDomain": {
+      "@id": "cdi:SubstantiveValueDomain",
+      "@context": "SubstantiveValueDomain.jsonld"
+    }, 
+    "ValueAndConceptDescription": {
+      "@id": "cdi:ValueAndConceptDescription",
+      "@context": "ValueAndConceptDescription.jsonld"
+    }, 
+    "ValueDomain": {
+      "@id": "cdi:ValueDomain",
+      "@context": "ValueDomain.jsonld"
+    }, 
+    "ModelIdentification": {
+      "@id": "cdi:ModelIdentification",
+      "@context": "ModelIdentification.jsonld"
+    }, 
+    "AccessInformation": {
+      "@id": "cdi:AccessInformation",
+      "@context": "AccessInformation.jsonld"
+    }, 
+    "AccessLocation": {
+      "@id": "cdi:AccessLocation",
+      "@context": "AccessLocation.jsonld"
+    }, 
+    "Address": {
+      "@id": "cdi:Address",
+      "@context": "Address.jsonld"
+    }, 
+    "AgentInRole": {
+      "@id": "cdi:AgentInRole",
+      "@context": "AgentInRole.jsonld"
+    }, 
+    "BibliographicName": {
+      "@id": "cdi:BibliographicName",
+      "@context": "BibliographicName.jsonld"
+    }, 
+    "CatalogDetails": {
+      "@id": "cdi:CatalogDetails",
+      "@context": "CatalogDetails.jsonld"
+    }, 
+    "CombinedDate": {
+      "@id": "cdi:CombinedDate",
+      "@context": "CombinedDate.jsonld"
+    }, 
+    "Command": {
+      "@id": "cdi:Command",
+      "@context": "Command.jsonld"
+    }, 
+    "CommandCode": {
+      "@id": "cdi:CommandCode",
+      "@context": "CommandCode.jsonld"
+    }, 
+    "CommandFile": {
+      "@id": "cdi:CommandFile",
+      "@context": "CommandFile.jsonld"
+    }, 
+    "ComplexLanguageString": {
+      "@id": "cdi:ComplexLanguageString",
+      "@context": "ComplexLanguageString.jsonld"
+    }, 
+    "ContactInformation": {
+      "@id": "cdi:ContactInformation",
+      "@context": "ContactInformation.jsonld"
+    }, 
+    "ControlledVocabularyEntry": {
+      "@id": "cdi:ControlledVocabularyEntry",
+      "@context": "ControlledVocabularyEntry.jsonld"
+    }, 
+    "CorrespondenceDefinition": {
+      "@id": "cdi:CorrespondenceDefinition",
+      "@context": "CorrespondenceDefinition.jsonld"
+    }, 
+    "DateRange": {
+      "@id": "cdi:DateRange",
+      "@context": "DateRange.jsonld"
+    }, 
+    "ElectronicMessageSystem": {
+      "@id": "cdi:ElectronicMessageSystem",
+      "@context": "ElectronicMessageSystem.jsonld"
+    }, 
+    "Email": {
+      "@id": "cdi:Email",
+      "@context": "Email.jsonld"
+    }, 
+    "EmbargoInformation": {
+      "@id": "cdi:EmbargoInformation",
+      "@context": "EmbargoInformation.jsonld"
+    }, 
+    "FundingInformation": {
+      "@id": "cdi:FundingInformation",
+      "@context": "FundingInformation.jsonld"
+    }, 
+    "GeoRole": {
+      "@id": "cdi:GeoRole",
+      "@context": "GeoRole.jsonld"
+    }, 
+    "Identifier": {
+      "@id": "cdi:Identifier",
+      "@context": "Identifier.jsonld"
+    }, 
+    "IndividualName": {
+      "@id": "cdi:IndividualName",
+      "@context": "IndividualName.jsonld"
+    }, 
+    "InternationalIdentifier": {
+      "@id": "cdi:InternationalIdentifier",
+      "@context": "InternationalIdentifier.jsonld"
+    }, 
+    "InternationalRegistrationDataIdentifier": {
+      "@id": "cdi:InternationalRegistrationDataIdentifier",
+      "@context": "InternationalRegistrationDataIdentifier.jsonld"
+    }, 
+    "InternationalString": {
+      "@id": "cdi:InternationalString",
+      "@context": "InternationalString.jsonld"
+    }, 
+    "LabelForDisplay": {
+      "@id": "cdi:LabelForDisplay",
+      "@context": "LabelForDisplay.jsonld"
+    }, 
+    "LanguageSpecificString": {
+      "@id": "cdi:LanguageSpecificString",
+      "@context": "LanguageSpecificString.jsonld"
+    }, 
+    "LicenseInformation": {
+      "@id": "cdi:LicenseInformation",
+      "@context": "LicenseInformation.jsonld"
+    }, 
+    "NonDdiIdentifier": {
+      "@id": "cdi:NonDdiIdentifier",
+      "@context": "NonDdiIdentifier.jsonld"
+    }, 
+    "NonIsoDate": {
+      "@id": "cdi:NonIsoDate",
+      "@context": "NonIsoDate.jsonld"
+    }, 
+    "ObjectAttributeSelector": {
+      "@id": "cdi:ObjectAttributeSelector",
+      "@context": "ObjectAttributeSelector.jsonld"
+    }, 
+    "ObjectName": {
+      "@id": "cdi:ObjectName",
+      "@context": "ObjectName.jsonld"
+    }, 
+    "OrganizationName": {
+      "@id": "cdi:OrganizationName",
+      "@context": "OrganizationName.jsonld"
+    }, 
+    "PairedControlledVocabularyEntry": {
+      "@id": "cdi:PairedControlledVocabularyEntry",
+      "@context": "PairedControlledVocabularyEntry.jsonld"
+    }, 
+    "PrivateImage": {
+      "@id": "cdi:PrivateImage",
+      "@context": "PrivateImage.jsonld"
+    }, 
+    "ProvenanceInformation": {
+      "@id": "cdi:ProvenanceInformation",
+      "@context": "ProvenanceInformation.jsonld"
+    }, 
+    "RationaleDefinition": {
+      "@id": "cdi:RationaleDefinition",
+      "@context": "RationaleDefinition.jsonld"
+    }, 
+    "Reference": {
+      "@id": "cdi:Reference",
+      "@context": "Reference.jsonld"
+    }, 
+    "Selector": {
+      "@id": "cdi:Selector",
+      "@context": "Selector.jsonld"
+    }, 
+    "SpatialCoordinate": {
+      "@id": "cdi:SpatialCoordinate",
+      "@context": "SpatialCoordinate.jsonld"
+    }, 
+    "SpatialPoint": {
+      "@id": "cdi:SpatialPoint",
+      "@context": "SpatialPoint.jsonld"
+    }, 
+    "SpecializationRole": {
+      "@id": "cdi:SpecializationRole",
+      "@context": "SpecializationRole.jsonld"
+    }, 
+    "Statistic": {
+      "@id": "cdi:Statistic",
+      "@context": "Statistic.jsonld"
+    }, 
+    "StructureSpecification": {
+      "@id": "cdi:StructureSpecification",
+      "@context": "StructureSpecification.jsonld"
+    }, 
+    "Telephone": {
+      "@id": "cdi:Telephone",
+      "@context": "Telephone.jsonld"
+    }, 
+    "TextPositionSelector": {
+      "@id": "cdi:TextPositionSelector",
+      "@context": "TextPositionSelector.jsonld"
+    }, 
+    "TimeRole": {
+      "@id": "cdi:TimeRole",
+      "@context": "TimeRole.jsonld"
+    }, 
+    "TypedString": {
+      "@id": "cdi:TypedString",
+      "@context": "TypedString.jsonld"
+    }, 
+    "WebLink": {
+      "@id": "cdi:WebLink",
+      "@context": "WebLink.jsonld"
+    }, 
+    "@vocab": "tag:DEBUG:UNRECOGNIZED_TERM:",
+    " comment ": "tag:json-should-support-trailing-commas"
+  },
+  "generatedBy": "This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:35.",
+  "basedOn": "based on the UML model DDICDIModels"
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="340.2px" preserveAspectRatio="none" style="width:513px;height:340px;background:#FFFFFF;" version="1.1" viewBox="0 0 513 340" width="513.9px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="497.7" x="4.5" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="488.7" x="9" y="27.6855">UML Diagram: Class InformationFlowDefinition in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="251.55" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="110.25" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="115.65" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="115.65" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="115.65" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[86778c92e97b374d9d16badd6f2c91e1]
+class DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic--><a href="../DDICDILibrary/Classes/Process/ControlLogic.html#super-class-hierarchy-generalization" target="_top" title=" ― ControlLogic:&#10;Control logic is a program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may co ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/ControlLogic.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ControlLogic:&#10;Control logic is a program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may co ..." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic"><rect codeLine="54" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="109.35" y="258.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="157.95" y="272.5928">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="72" x="140.85" y="287.6502">ControlLogic</text></g></a><!--MD5=[a08a5e20e95ed5b574a4539b60f4d8ee]
+class DDICDIModels::DDICDILibrary::Classes::Process::Parameter--><a href="../DDICDILibrary/Classes/Process/Parameter.html#super-class-hierarchy-generalization" target="_top" title=" ― Parameter:&#10;An input or output to control logic and the step/sub-step it invokes. Parameters may take the form of any information object, including data sets and structured metadata as well as configuration information for the step/sub-step." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Process/Parameter.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Parameter:&#10;An input or output to control logic and the step/sub-step it invokes. Parameters may take the form of any information object, including data sets and structured metadata as well as configuration information for the step/sub-step." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::Parameter"><rect codeLine="55" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Process::Parameter" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="275.85" y="258.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="324.45" y="272.5928">Process::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="59.4" x="313.65" y="287.6502">Parameter</text></g></a><!--MD5=[cf2b466143bd797820c9416be252779d]
+entity ##7--><!--MD5=[52638b0770114f5e4336b936e2b81262]
+class DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition"><rect codeLine="46" fill="#FFD700" height="59.2172" id="DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="147.6" x="209.25" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="37.8" x="264.15" y="137.5928">Process::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="142.2" x="211.95" y="152.6502">InformationFlowDefinition</text><line style="stroke:#404040;stroke-width:0.45;" x1="210.15" x2="355.95" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="214.65" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="274.05" y="176.5986">Identifier</text></a></g><!--MD5=[50342c86371412d580c5b2e7e9e092ec]
+reverse link DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition to DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition_DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic"><a href="" target="_top" title=" ― has:&#10;A control construct has zero or more information flow definitions each of which provides the control construct with zero or more input and output parameters used or produced in the step/sub-step with which it is associated." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;A control construct has zero or more information flow definitions each of which provides the control construct with zero or more input and output parameters used or produced in the step/sub-step with which it is associated." xlink:type="simple"><path codeLine="67" d="M254.43,187.092 C234.288,210.141 208.125,240.075 191.916,258.615 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition-backto-DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="257.616,183.456,249.5658,187.1661,254.6464,186.837,254.9755,191.9175,257.616,183.456" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="230.85" y="224.9956">has</text></a></g><!--MD5=[57c0e92ce96156b2f89e82a6d4647d62]
+link DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition to DDICDIModels::DDICDILibrary::Classes::Process::Parameter--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition_DDICDIModels::DDICDILibrary::Classes::Process::Parameter"><a href="" target="_top" title=" ― from:&#10;From parameters are the outputs from a control construct produced in its step/sub-step." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― from:&#10;From parameters are the outputs from a control construct produced in its step/sub-step." xlink:type="simple"><path codeLine="68" d="M275.724,183.402 C273.663,197.586 273.555,214.488 280.35,228.15 C285.957,239.418 295.632,248.742 305.739,256.059 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition-to-DDICDIModels::DDICDILibrary::Classes::Process::Parameter" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="309.483,258.66,304.8957,251.0754,305.791,256.0872,300.7792,256.9825,309.483,258.66" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="22.5" x="281.25" y="224.9956">from</text></a></g><!--MD5=[57c0e92ce96156b2f89e82a6d4647d62]
+link DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition to DDICDIModels::DDICDILibrary::Classes::Process::Parameter--><g id="link_DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition_DDICDIModels::DDICDILibrary::Classes::Process::Parameter"><a href="" target="_top" title=" ― to:&#10;To parameters are the inputs to a control construct used in its step/sub-step." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― to:&#10;To parameters are the inputs to a control construct used in its step/sub-step." xlink:type="simple"><path codeLine="69" d="M297.495,183.456 C308.358,205.344 323.001,234.846 332.784,254.565 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition-to-DDICDIModels::DDICDILibrary::Classes::Process::Parameter-1" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="334.8,258.615,334.4315,249.7587,332.803,254.5824,327.9793,252.9539,334.8,258.615" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="9.9" x="319.05" y="224.9956">to</text></a></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="342.9" x="81.9" y="299.4188"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="252" y="308.7615"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="252" y="320.0818"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="342.9" x="81.9" y="331.4021">DDI Cross Domain Integration (DDI-CDI)   1.0 - Process::InformationFlowDefinition</text><!--MD5=[5e7f997d60d691302c39785da628a610]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class InformationFlowDefinition in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Process::InformationFlowDefinition
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition as "<size:10>Process::\n<color:black>InformationFlowDefinition" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic as "<size:10>Process::\n<color:blue>ControlLogic" [[../DDICDILibrary/Classes/Process/ControlLogic.html#super-class-hierarchy-generalization{ <U+2015> ControlLogic:\nControl logic is a program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may co ...}]]
+  class DDICDIModels::DDICDILibrary::Classes::Process::Parameter as "<size:10>Process::\n<color:blue>Parameter" [[../DDICDILibrary/Classes/Process/Parameter.html#super-class-hierarchy-generalization{ <U+2015> Parameter:\nAn input or output to control logic and the step/sub-step it invokes. Parameters may take the form of any information object, including data sets and structured metadata as well as configuration information for the step/sub-step.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic [[{ <U+2015> has:\nA control construct has zero or more information flow definitions each of which provides the control construct with zero or more input and output parameters used or produced in the step/sub-step with which it is associated.}]] : has
+DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Process::Parameter [[{ <U+2015> from:\nFrom parameters are the outputs from a control construct produced in its step/sub-step.}]] : from
+DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Process::Parameter [[{ <U+2015> to:\nTo parameters are the inputs to a control construct used in its step/sub-step.}]] : to
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class InformationFlowDefinition in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Process::InformationFlowDefinition
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition as "<size:10>Process::\n<color:black>InformationFlowDefinition" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic as "<size:10>Process::\n<color:blue>ControlLogic" [[../DDICDILibrary/Classes/Process/ControlLogic.html#super-class-hierarchy-generalization{ <U+2015> ControlLogic:\nControl logic is a program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may co ...}]]
+  class DDICDIModels::DDICDILibrary::Classes::Process::Parameter as "<size:10>Process::\n<color:blue>Parameter" [[../DDICDILibrary/Classes/Process/Parameter.html#super-class-hierarchy-generalization{ <U+2015> Parameter:\nAn input or output to control logic and the step/sub-step it invokes. Parameters may take the form of any information object, including data sets and structured metadata as well as configuration information for the step/sub-step.}]]
+}
+
+together {
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic [[{ <U+2015> has:\nA control construct has zero or more information flow definitions each of which provides the control construct with zero or more input and output parameters used or produced in the step/sub-step with which it is associated.}]] : has
+DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Process::Parameter [[{ <U+2015> from:\nFrom parameters are the outputs from a control construct produced in its step/sub-step.}]] : from
+DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Process::Parameter [[{ <U+2015> to:\nTo parameters are the inputs to a control construct used in its step/sub-step.}]] : to
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

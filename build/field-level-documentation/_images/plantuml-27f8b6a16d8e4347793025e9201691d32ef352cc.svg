@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="679.5px" preserveAspectRatio="none" style="width:989px;height:679px;background:#FFFFFF;" version="1.1" viewBox="0 0 989 679" width="989.1px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="451.8" x="262.575" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="442.8" x="267.075" y="27.6855">UML Diagram: Class AttributeComponent in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="486.675" y="44.7205"> </text><rect fill="#FFFFFF" height="56.0813" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="164.7" x="12.6" y="113.2928">- The arrows of the inheritance tree are</text><text fill="#D2691E" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="32.4" x="180" y="113.2928">colored</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="212.4" y="113.2928">.</text><!--MD5=[bb41f45ac46f4ee5542eed3acac73083]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember--><a href="../DDICDILibrary/Classes/DataDescription/Long/LongMainKeyMember.html#super-class-hierarchy-generalization" target="_top" title=" ― LongMainKeyMember:&#10;Single data instance that is part of a long key." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Long/LongMainKeyMember.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― LongMainKeyMember:&#10;Single data instance that is part of a long key." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember"><rect codeLine="53" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="254.25" y="598.2193"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="27" x="308.25" y="612.0621">Long::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="123.3" x="260.1" y="627.1195">LongMainKeyMember</text></g></a><!--MD5=[fa26dd5b28bd31e0227766c25574e362]
+entity ##6--><!--MD5=[357fbaa6e3f3ff67349d0db07bd7d662]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent--><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent"><rect codeLine="47" fill="#FFD700" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="254.25" y="448.8193"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="292.5" y="462.6621">Components::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="113.4" x="265.05" y="477.7195">AttributeComponent</text></g><!--MD5=[e7e7182780bccba8828738500ef82a58]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint--><a href="../DDICDILibrary/Classes/DataDescription/DataPoint.html#super-class-hierarchy-generalization" target="_top" title=" ― DataPoint:&#10;Container for an instance value." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/DataPoint.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― DataPoint:&#10;Container for an instance value." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint"><rect codeLine="61" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="682.65" y="263.4193"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="713.7" y="277.2621">DataDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="722.25" y="292.3195">DataPoint</text></g></a><!--MD5=[6ad7b2ef38a4f700249d0e2b32d82517]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure--><a href="../DDICDILibrary/Classes/DataDescription/DataStructure.html#super-class-hierarchy-generalization" target="_top" title=" ― DataStructure:&#10;Data organization based on reusable data structure components." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/DataStructure.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― DataStructure:&#10;Data organization based on reusable data structure components." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure"><rect codeLine="62" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="516.15" y="263.4193"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="547.2" y="277.2621">DataDescription::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="79.2" x="544.05" y="292.3195">DataStructure</text></g></a><!--MD5=[65a51a3beb66455af85c430549e256a7]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable--><a href="../DDICDILibrary/Classes/Conceptual/RepresentedVariable.html#super-class-hierarchy-generalization" target="_top" title=" ― RepresentedVariable:&#10;Conceptual variable with a substantive value domain specified." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/RepresentedVariable.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― RepresentedVariable:&#10;Conceptual variable with a substantive value domain specified." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable"><rect codeLine="63" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="849.15" y="263.4193"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="889.2" y="277.2621">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="120.6" x="856.35" y="292.3195">RepresentedVariable</text></g></a><!--MD5=[1fe5a69c56948e803e4ee51554e950d9]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent--><a href="../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization" target="_top" title=" ― DataStructureComponent:&#10;Role given to a represented variable in the context of a data structure." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― DataStructureComponent:&#10;Role given to a represented variable in the context of a data structure." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent"><rect codeLine="96" fill="#FAFAD2" height="90.9141" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="261" x="191.25" y="235.9693"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="292.5" y="249.8121">Components::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="144.9" x="249.3" y="264.8695">DataStructureComponent</text><line style="stroke:#404040;stroke-width:0.45;" x1="192.15" x2="451.35" y1="272.1381" y2="272.1381"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="196.65" y="288.8179">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="256.05" y="288.8179">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/PairedControlledVocabularyEntry.html#diagram" target="_top" title=" ― PairedControlledVocabularyEntry:&#10;A tightly bound pair of items from an external controlled vocabulary. The extent property describes the extent to which the parent term applies for the specific case." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/PairedControlledVocabularyEntry.html#diagram" xlink:show="new" xlink:title=" ― PairedControlledVocabularyEntry:&#10;A tightly bound pair of items from an external controlled vocabulary. The extent property describes the extent to which the parent term applies for the specific case." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="57.6" x="196.65" y="304.6664">semantic :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="189" x="257.85" y="304.6664">PairedControlledVocabularyEntry</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#diagram" target="_top" title=" ― SpecializationRole:&#10;Specific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#diagram" xlink:show="new" xlink:title=" ― SpecializationRole:&#10;Specific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="82.8" x="196.65" y="320.5148">specialization :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="283.05" y="320.5148">SpecializationRole</text></a></g></a><g id="elem_GMN14"><path d="M5.4,262.0693 L5.4,300.5021 A0,0 0 0 0 5.4,300.5021 L159.3,300.5021 A0,0 0 0 0 159.3,300.5021 L159.3,285.0193 L191.187,281.4193 L159.3,277.8193 L159.3,271.0693 L150.3,262.0693 L5.4,262.0693 A0,0 0 0 0 5.4,262.0693 " fill="#FFFFFF" style="stroke:#181818;stroke-width:0.45;"/><path d="M150.3,262.0693 L150.3,271.0693 L159.3,271.0693 L150.3,262.0693 " fill="#FFFFFF" style="stroke:#181818;stroke-width:0.45;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="135" x="10.8" y="278.7149">Class has 8 associations.</text><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="120.6" x="10.8" y="293.4313">Only 3 are shown here.</text></g><!--MD5=[9718fcb8d9724acf3e3180562263d433]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent to DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent"><a href="" target="_top" title=" ― qualifies:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― qualifies:&#10;" xlink:type="simple"><path codeLine="69" d="M321.75,448.3963 C321.75,421.8103 321.75,370.2853 321.75,331.6393 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent-to-DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="321.75,326.9953,318.15,335.0953,321.75,331.4953,325.35,335.0953,321.75,326.9953" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="42.3" x="322.65" y="397.9649">qualifies</text></a></g><!--MD5=[e9414a62ec8c8c32f3d004a172b196b9]
+reverse link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent to DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent"><path codeLine="105" d="M316.044,345.0043 C315.045,363.1033 314.568,382.8943 315.45,401.1193 C316.233,417.2563 318.105,435.5893 319.608,448.6213 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent" style="stroke:#D2691E;stroke-width:1.35;"/><polygon fill="none" points="309.771,344.4193,317.241,326.8783,322.344,345.2563,309.771,344.4193" style="stroke:#D2691E;stroke-width:1.35;"/></g><!--MD5=[bdab763bcc282148856fc744bb3edb1b]
+reverse link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent to DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent_DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember"><a href="" target="_top" title=" ― isBasedOn:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― isBasedOn:&#10;" xlink:type="simple"><path codeLine="70" d="M321.75,489.4813 C321.75,519.0373 321.75,571.2733 321.75,598.2013 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="321.75,484.9363,318.15,493.0363,321.75,489.4363,325.35,493.0363,321.75,484.9363" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="57.6" x="322.65" y="545.5649">isBasedOn</text></a></g><!--MD5=[c63541bbe79c986839a22d272db8c3c1]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent to DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent_DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable"><a href="" target="_top" title=" ― isDefinedBy:&#10;Data structure component is defined by zero to one represented variable." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― isDefinedBy:&#10;Data structure component is defined by zero to one represented variable." xlink:type="simple"><path codeLine="84" d="M406.467,235.8073 C502.128,190.5553 661.509,134.1703 792.45,180.6193 C836.604,196.2793 876.501,235.0693 898.578,259.7113 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="901.701,263.2393,899.0264,254.7885,898.7178,259.8703,893.6359,259.5617,901.701,263.2393" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="73.8" x="717.75" y="175.6649"> isDefinedBy</text></a></g><!--MD5=[de733db451d17b880e005c897cb725c2]
+reverse link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent to DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent_DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint"><a href="" target="_top" title=" ― correspondsTo:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― correspondsTo:&#10;" xlink:type="simple"><path codeLine="89" d="M385.911,233.2333 C441.666,197.3683 524.88,158.1913 598.95,180.6193 C652.545,196.8463 704.511,239.0293 731.34,263.3743 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="381.942,235.8073,390.6957,234.4134,385.7156,233.3558,386.7732,228.3757,381.942,235.8073" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="88.2" x="509.85" y="175.6649"> correspondsTo</text></a></g><!--MD5=[686c287475af6761e2c6bf05bcd759ac]
+reverse link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent to DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent_DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure"><a href="" target="_top" title=" ― has:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;" xlink:type="simple"><path codeLine="94" d="M456.966,281.4193 C477.441,281.4193 497.781,281.4193 515.979,281.4193 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="452.313,281.4193,460.413,285.0193,456.813,281.4193,460.413,277.8193,452.313,281.4193" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="30.6" x="468.9" y="275.5649"> has</text></a></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="339.3" x="318.825" y="638.8881"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="487.125" y="648.2308"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="487.125" y="659.5511"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="339.3" x="318.825" y="670.8715">DDI Cross Domain Integration (DDI-CDI)   1.0 - Components::AttributeComponent</text><!--MD5=[fccfb3b6104a9e963e6dae0d77f703af]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class AttributeComponent in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Components::AttributeComponent
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent as "<size:10>Components::\n<color:black>AttributeComponent" #FFD700 {
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember as "<size:10>Long::\n<color:blue>LongMainKeyMember" [[../DDICDILibrary/Classes/DataDescription/Long/LongMainKeyMember.html#super-class-hierarchy-generalization{ <U+2015> LongMainKeyMember:\nSingle data instance that is part of a long key.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint as "<size:10>DataDescription::\n<color:blue>DataPoint" [[../DDICDILibrary/Classes/DataDescription/DataPoint.html#super-class-hierarchy-generalization{ <U+2015> DataPoint:\nContainer for an instance value.}]]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure as "<size:10>DataDescription::\n<color:blue>DataStructure" [[../DDICDILibrary/Classes/DataDescription/DataStructure.html#super-class-hierarchy-generalization{ <U+2015> DataStructure:\nData organization based on reusable data structure components.}]]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable as "<size:10>Conceptual::\n<color:blue>RepresentedVariable" [[../DDICDILibrary/Classes/Conceptual/RepresentedVariable.html#super-class-hierarchy-generalization{ <U+2015> RepresentedVariable:\nConceptual variable with a substantive value domain specified.}]]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent as "<size:10>Components::\n<color:blue>DataStructureComponent" [[../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization{ <U+2015> DataStructureComponent:\nRole given to a represented variable in the context of a data structure.}]]
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent -[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent [[{ <U+2015> qualifies:\n}]] : qualifies
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent <-[#grey]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember [[{ <U+2015> isBasedOn:\n}]] : isBasedOn
+
+' Super classes
+' Associations of Super classes
+note left of DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent : Class has 8 associations.\nOnly 3 are shown here.
+' firstAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@46d567cb (name: DataStructureComponent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+' secondAncestor:	org.eclipse.uml2.uml.internal.impl.ClassImpl@46d567cb (name: DataStructureComponent, visibility: <unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)
+
+
+
+' aClass:			AttributeComponent
+' aSuperClass:		DataStructureComponent
+' e_ownedEndClass:	DataStructureComponent
+' e_otherEndClass:	RepresentedVariable
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent -[#grey]> DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable [[{ <U+2015> isDefinedBy:\nData structure component is defined by zero to one represented variable.}]] : <U+2003>isDefinedBy
+' aClass:			AttributeComponent
+' aSuperClass:		DataStructureComponent
+' e_ownedEndClass:	DataPoint
+' e_otherEndClass:	DataStructureComponent
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent <-[#grey] DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint [[{ <U+2015> correspondsTo:\n}]] : <U+2003>correspondsTo
+' aClass:			AttributeComponent
+' aSuperClass:		DataStructureComponent
+' e_ownedEndClass:	DataStructure
+' e_otherEndClass:	DataStructureComponent
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent <-[#grey] DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure [[{ <U+2015> has:\n}]] : <U+2003>has
+
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent as "<size:10> \n<color:blue>DataStructureComponent" [[../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization{ <U+2015> DataStructureComponent:\nRole given to a represented variable in the context of a data structure.}]] #FAFAD2 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  semantic : <color:blue>PairedControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/PairedControlledVocabularyEntry.html#diagram{ <U+2015> PairedControlledVocabularyEntry:\nA tightly bound pair of items from an external controlled vocabulary. The extent property describes the extent to which the parent term applies for the specific case.}]]]
+  specialization : <color:blue>SpecializationRole   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#diagram{ <U+2015> SpecializationRole:\nSpecific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data.}]]]
+}
+
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class AttributeComponent in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Components::AttributeComponent
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+<color:grey>- The arrows of the inheritance tree are <color:#D2691E>colored<color:grey>.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent as "<size:10>Components::\n<color:black>AttributeComponent" #FFD700 {
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember as "<size:10>Long::\n<color:blue>LongMainKeyMember" [[../DDICDILibrary/Classes/DataDescription/Long/LongMainKeyMember.html#super-class-hierarchy-generalization{ <U+2015> LongMainKeyMember:\nSingle data instance that is part of a long key.}]]
+}
+
+together {
+}
+
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint as "<size:10>DataDescription::\n<color:blue>DataPoint" [[../DDICDILibrary/Classes/DataDescription/DataPoint.html#super-class-hierarchy-generalization{ <U+2015> DataPoint:\nContainer for an instance value.}]]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure as "<size:10>DataDescription::\n<color:blue>DataStructure" [[../DDICDILibrary/Classes/DataDescription/DataStructure.html#super-class-hierarchy-generalization{ <U+2015> DataStructure:\nData organization based on reusable data structure components.}]]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable as "<size:10>Conceptual::\n<color:blue>RepresentedVariable" [[../DDICDILibrary/Classes/Conceptual/RepresentedVariable.html#super-class-hierarchy-generalization{ <U+2015> RepresentedVariable:\nConceptual variable with a substantive value domain specified.}]]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent as "<size:10>Components::\n<color:blue>DataStructureComponent" [[../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization{ <U+2015> DataStructureComponent:\nRole given to a represented variable in the context of a data structure.}]]
+
+
+
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent -[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent [[{ <U+2015> qualifies:\n}]] : qualifies
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent <-[#grey]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember [[{ <U+2015> isBasedOn:\n}]] : isBasedOn
+
+note left of DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent : Class has 8 associations.\nOnly 3 are shown here.
+
+
+
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent -[#grey]> DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable [[{ <U+2015> isDefinedBy:\nData structure component is defined by zero to one represented variable.}]] : <U+2003>isDefinedBy
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent <-[#grey] DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint [[{ <U+2015> correspondsTo:\n}]] : <U+2003>correspondsTo
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent <-[#grey] DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure [[{ <U+2015> has:\n}]] : <U+2003>has
+
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent as "<size:10> \n<color:blue>DataStructureComponent" [[../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization{ <U+2015> DataStructureComponent:\nRole given to a represented variable in the context of a data structure.}]] #FAFAD2 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  semantic : <color:blue>PairedControlledVocabularyEntry   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/PairedControlledVocabularyEntry.html#diagram{ <U+2015> PairedControlledVocabularyEntry:\nA tightly bound pair of items from an external controlled vocabulary. The extent property describes the extent to which the parent term applies for the specific case.}]]]
+  specialization : <color:blue>SpecializationRole   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.html#diagram{ <U+2015> SpecializationRole:\nSpecific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data.}]]]
+}
+
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent <|-[#D2691E]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

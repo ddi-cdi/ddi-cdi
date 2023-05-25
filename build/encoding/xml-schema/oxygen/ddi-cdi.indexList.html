@@ -1,0 +1,1029 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component </title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <h2><a id="INDEX">Table of Contents</a></h2>
+      <div class="toc">
+         <form action="none">
+            <div><span> Group by: <select id="selectTOC" onchange="selectTOCGroupBy(this.options[this.selectedIndex].value, true, 'ddi-cdi.indexList.html', 'ddi-cdi.indexListns.html', 'ddi-cdi.indexListcomp.html');">
+                     <option value="toc_group_by_namespace">Namespace</option>
+                     <option value="toc_group_by_location" selected="selected">Location</option>
+                     <option value="toc_group_by_component_type">Component Type</option></select></span></div>
+         </form>
+         <div class="level1" id="toc_group_by_location" style="display:block">
+            <div>
+               <div class="level2">
+                  <p><input id="button_gr_ddi-cdi.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_ddi-cdi.xsd');" class="control" /><span class="indexGroupTitle">ddi-cdi.xsd</span></p>
+                  <div id="gr_ddi-cdi.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_ddi-cdi.xsdMain_schema" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_ddi-cdi.xsdMain_schema');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Main Schema</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_ddi-cdi.xsdMain_schema" class="componentGroup" style="display:block">
+                                                <div><b><a href="ddi-cdi_xsd_Main_schema_ddi-cdi_xsd.html#ddi-cdi.xsd" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ddi-cdi.xsd')">ddi-cdi.xsd</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_ddi-cdi.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_ddi-cdi.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_ddi-cdi.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="ddi-cdi_xsd_Element_AccessInformation.html#AccessInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AccessInformation')">AccessInformation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AccessLocation.html#AccessLocation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AccessLocation')">AccessLocation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Activity.html#Activity" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Activity')">Activity</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Address.html#Address" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Address')">Address</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Agent.html#Agent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Agent')">Agent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AgentInRole.html#AgentInRole" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentInRole')">AgentInRole</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AgentListing.html#AgentListing" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentListing')">AgentListing</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AgentPosition.html#AgentPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentPosition')">AgentPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AgentRelationship.html#AgentRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentRelationship')">AgentRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AgentStructure.html#AgentStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentStructure')">AgentStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AllenIntervalAlgebra.html#AllenIntervalAlgebra" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AllenIntervalAlgebra')">AllenIntervalAlgebra</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AttributeComponent.html#AttributeComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AttributeComponent')">AttributeComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_AuthorizationSource.html#AuthorizationSource" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AuthorizationSource')">AuthorizationSource</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_BibliographicName.html#BibliographicName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component BibliographicName')">BibliographicName</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CatalogDetails.html#CatalogDetails" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CatalogDetails')">CatalogDetails</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Category.html#Category" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Category')">Category</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CategoryPosition.html#CategoryPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryPosition')">CategoryPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CategoryRelationStructure.html#CategoryRelationStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryRelationStructure')">CategoryRelationStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CategoryRelationship.html#CategoryRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryRelationship')">CategoryRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CategorySet.html#CategorySet" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategorySet')">CategorySet</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CategoryStatistic.html#CategoryStatistic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryStatistic')">CategoryStatistic</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationFamily.html#ClassificationFamily" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationFamily')">ClassificationFamily</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationIndex.html#ClassificationIndex" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndex')">ClassificationIndex</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationIndexEntry.html#ClassificationIndexEntry" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndexEntry')">ClassificationIndexEntry</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationIndexEntryPosition.html#ClassificationIndexEntryPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndexEntryPosition')">ClassificationIndexEntryPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationItem.html#ClassificationItem" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItem')">ClassificationItem</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationItemPosition.html#ClassificationItemPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemPosition')">ClassificationItemPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationItemRelationship.html#ClassificationItemRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemRelationship')">ClassificationItemRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationItemStructure.html#ClassificationItemStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemStructure')">ClassificationItemStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationPosition.html#ClassificationPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationPosition')">ClassificationPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationSeries.html#ClassificationSeries" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationSeries')">ClassificationSeries</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ClassificationSeriesStructure.html#ClassificationSeriesStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationSeriesStructure')">ClassificationSeriesStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Code.html#Code" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Code')">Code</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CodeList.html#CodeList" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeList')">CodeList</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CodeListStructure.html#CodeListStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeListStructure')">CodeListStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CodePosition.html#CodePosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodePosition')">CodePosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CodeRelationship.html#CodeRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeRelationship')">CodeRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CombinedDate.html#CombinedDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CombinedDate')">CombinedDate</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Command.html#Command" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Command')">Command</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CommandCode.html#CommandCode" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CommandCode')">CommandCode</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CommandFile.html#CommandFile" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CommandFile')">CommandFile</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ComplexLanguageString.html#ComplexLanguageString" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ComplexLanguageString')">ComplexLanguageString</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ComponentPosition.html#ComponentPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ComponentPosition')">ComponentPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Concept.html#Concept" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Concept')">Concept</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConceptMap.html#ConceptMap" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptMap')">ConceptMap</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConceptRelationship.html#ConceptRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptRelationship')">ConceptRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConceptStructure.html#ConceptStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptStructure')">ConceptStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConceptSystem.html#ConceptSystem" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptSystem')">ConceptSystem</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConceptSystemCorrespondence.html#ConceptSystemCorrespondence" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptSystemCorrespondence')">ConceptSystemCorrespondence</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConceptualDomain.html#ConceptualDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualDomain')">ConceptualDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConceptualValue.html#ConceptualValue" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualValue')">ConceptualValue</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConceptualVariable.html#ConceptualVariable" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariable')">ConceptualVariable</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ConditionalControlLogic.html#ConditionalControlLogic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConditionalControlLogic')">ConditionalControlLogic</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ContactInformation.html#ContactInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContactInformation')">ContactInformation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ContextualComponent.html#ContextualComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContextualComponent')">ContextualComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ControlLogic.html#ControlLogic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ControlLogic')">ControlLogic</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ControlledVocabularyEntry.html#ControlledVocabularyEntry" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ControlledVocabularyEntry')">ControlledVocabularyEntry</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CorrespondenceDefinition.html#CorrespondenceDefinition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CorrespondenceDefinition')">CorrespondenceDefinition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_CorrespondenceTable.html#CorrespondenceTable" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CorrespondenceTable')">CorrespondenceTable</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Curator.html#Curator" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Curator')">Curator</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DDICDIModels.html#DDICDIModels" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DDICDIModels')">DDICDIModels</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DataPoint.html#DataPoint" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPoint')">DataPoint</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DataPointPosition.html#DataPointPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPointPosition')">DataPointPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DataPointRelationship.html#DataPointRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPointRelationship')">DataPointRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DataSet.html#DataSet" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataSet')">DataSet</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DataStore.html#DataStore" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStore')">DataStore</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DataStructure.html#DataStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructure')">DataStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DataStructureComponent.html#DataStructureComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructureComponent')">DataStructureComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DateRange.html#DateRange" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DateRange')">DateRange</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Datum.html#Datum" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Datum')">Datum</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Descriptor.html#Descriptor" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Descriptor')">Descriptor</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DescriptorValueDomain.html#DescriptorValueDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DescriptorValueDomain')">DescriptorValueDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DescriptorVariable.html#DescriptorVariable" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DescriptorVariable')">DescriptorVariable</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DeterministicImperative.html#DeterministicImperative" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DeterministicImperative')">DeterministicImperative</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DimensionComponent.html#DimensionComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionComponent')">DimensionComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DimensionGroup.html#DimensionGroup" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionGroup')">DimensionGroup</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DimensionalDataSet.html#DimensionalDataSet" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalDataSet')">DimensionalDataSet</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DimensionalDataStructure.html#DimensionalDataStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalDataStructure')">DimensionalDataStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DimensionalKey.html#DimensionalKey" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKey')">DimensionalKey</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DimensionalKeyDefinition.html#DimensionalKeyDefinition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyDefinition')">DimensionalKeyDefinition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DimensionalKeyDefinitionMember.html#DimensionalKeyDefinitionMember" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyDefinitionMember')">DimensionalKeyDefinitionMember</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_DimensionalKeyMember.html#DimensionalKeyMember" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyMember')">DimensionalKeyMember</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ElectronicMessageSystem.html#ElectronicMessageSystem" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ElectronicMessageSystem')">ElectronicMessageSystem</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Email.html#Email" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Email')">Email</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_EmbargoInformation.html#EmbargoInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EmbargoInformation')">EmbargoInformation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_EnumerationDomain.html#EnumerationDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomain')">EnumerationDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ForeignKey.html#ForeignKey" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ForeignKey')">ForeignKey</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ForeignKeyComponent.html#ForeignKeyComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ForeignKeyComponent')">ForeignKeyComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_FundingInformation.html#FundingInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component FundingInformation')">FundingInformation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_GeoRole.html#GeoRole" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component GeoRole')">GeoRole</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Identifier.html#Identifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Identifier')">Identifier</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_IdentifierComponent.html#IdentifierComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierComponent')">IdentifierComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Individual.html#Individual" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Individual')">Individual</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_IndividualName.html#IndividualName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IndividualName')">IndividualName</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_InformationFlowDefinition.html#InformationFlowDefinition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InformationFlowDefinition')">InformationFlowDefinition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_InstanceKey.html#InstanceKey" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceKey')">InstanceKey</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_InstanceValue.html#InstanceValue" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceValue')">InstanceValue</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_InstanceVariable.html#InstanceVariable" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariable')">InstanceVariable</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_InstanceVariableMap.html#InstanceVariableMap" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariableMap')">InstanceVariableMap</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_InternationalIdentifier.html#InternationalIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InternationalIdentifier')">InternationalIdentifier</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_InternationalRegistrationDataIdentifier.html#InternationalRegistrationDataIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InternationalRegistrationDataIdentifier')">InternationalRegistrationDataIdentifier</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_InternationalString.html#InternationalString" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InternationalString')">InternationalString</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_KeyValueDataStore.html#KeyValueDataStore" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component KeyValueDataStore')">KeyValueDataStore</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_KeyValueStructure.html#KeyValueStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component KeyValueStructure')">KeyValueStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LabelForDisplay.html#LabelForDisplay" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LabelForDisplay')">LabelForDisplay</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LanguageSpecificString.html#LanguageSpecificString" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LanguageSpecificString')">LanguageSpecificString</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LanguageString.html#LanguageString" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LanguageString')">LanguageString</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Level.html#Level" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Level')">Level</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LevelStructure.html#LevelStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LevelStructure')">LevelStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LicenseInformation.html#LicenseInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LicenseInformation')">LicenseInformation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LogicalRecord.html#LogicalRecord" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecord')">LogicalRecord</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LogicalRecordPosition.html#LogicalRecordPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordPosition')">LogicalRecordPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LogicalRecordRelationStructure.html#LogicalRecordRelationStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordRelationStructure')">LogicalRecordRelationStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LogicalRecordRelationship.html#LogicalRecordRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordRelationship')">LogicalRecordRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LongDataSet.html#LongDataSet" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongDataSet')">LongDataSet</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LongDataStructure.html#LongDataStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongDataStructure')">LongDataStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LongKey.html#LongKey" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongKey')">LongKey</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_LongMainKeyMember.html#LongMainKeyMember" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongMainKeyMember')">LongMainKeyMember</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Machine.html#Machine" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Machine')">Machine</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_MainKeyMember.html#MainKeyMember" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component MainKeyMember')">MainKeyMember</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_MeasureComponent.html#MeasureComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component MeasureComponent')">MeasureComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ModelIdentification.html#ModelIdentification" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ModelIdentification')">ModelIdentification</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_NonDdiIdentifier.html#NonDdiIdentifier" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NonDdiIdentifier')">NonDdiIdentifier</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_NonDeterministicDeclarative.html#NonDeterministicDeclarative" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NonDeterministicDeclarative')">NonDeterministicDeclarative</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_NonIsoDate.html#NonIsoDate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NonIsoDate')">NonIsoDate</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Notation.html#Notation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Notation')">Notation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ObjectAttributeSelector.html#ObjectAttributeSelector" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ObjectAttributeSelector')">ObjectAttributeSelector</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ObjectName.html#ObjectName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ObjectName')">ObjectName</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Organization.html#Organization" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Organization')">Organization</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_OrganizationName.html#OrganizationName" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationName')">OrganizationName</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PairedControlledVocabularyEntry.html#PairedControlledVocabularyEntry" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PairedControlledVocabularyEntry')">PairedControlledVocabularyEntry</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Parameter.html#Parameter" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Parameter')">Parameter</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalDataSet.html#PhysicalDataSet" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalDataSet')">PhysicalDataSet</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalDataSetStructure.html#PhysicalDataSetStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalDataSetStructure')">PhysicalDataSetStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalLayoutRelationStructure.html#PhysicalLayoutRelationStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalLayoutRelationStructure')">PhysicalLayoutRelationStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalRecordSegment.html#PhysicalRecordSegment" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegment')">PhysicalRecordSegment</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalRecordSegmentPosition.html#PhysicalRecordSegmentPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentPosition')">PhysicalRecordSegmentPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalRecordSegmentRelationship.html#PhysicalRecordSegmentRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentRelationship')">PhysicalRecordSegmentRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalRecordSegmentStructure.html#PhysicalRecordSegmentStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentStructure')">PhysicalRecordSegmentStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalSegmentLayout.html#PhysicalSegmentLayout" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalSegmentLayout')">PhysicalSegmentLayout</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PhysicalSegmentLocation.html#PhysicalSegmentLocation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalSegmentLocation')">PhysicalSegmentLocation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Population.html#Population" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Population')">Population</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PrimaryKey.html#PrimaryKey" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PrimaryKey')">PrimaryKey</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PrimaryKeyComponent.html#PrimaryKeyComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PrimaryKeyComponent')">PrimaryKeyComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_PrivateImage.html#PrivateImage" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PrivateImage')">PrivateImage</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ProcessingAgent.html#ProcessingAgent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ProcessingAgent')">ProcessingAgent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ProductionEnvironment.html#ProductionEnvironment" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ProductionEnvironment')">ProductionEnvironment</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ProvenanceInformation.html#ProvenanceInformation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ProvenanceInformation')">ProvenanceInformation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_QualifiedMeasure.html#QualifiedMeasure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component QualifiedMeasure')">QualifiedMeasure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_RationaleDefinition.html#RationaleDefinition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RationaleDefinition')">RationaleDefinition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_RecordRelation.html#RecordRelation" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RecordRelation')">RecordRelation</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Reference.html#Reference" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Reference')">Reference</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ReferenceValue.html#ReferenceValue" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceValue')">ReferenceValue</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ReferenceValueDomain.html#ReferenceValueDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceValueDomain')">ReferenceValueDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ReferenceVariable.html#ReferenceVariable" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceVariable')">ReferenceVariable</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_RepresentedVariable.html#RepresentedVariable" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariable')">RepresentedVariable</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_RevisableDatum.html#RevisableDatum" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RevisableDatum')">RevisableDatum</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Revision.html#Revision" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Revision')">Revision</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Rule.html#Rule" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Rule')">Rule</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_RuleBasedScheduling.html#RuleBasedScheduling" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RuleBasedScheduling')">RuleBasedScheduling</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_RuleSet.html#RuleSet" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RuleSet')">RuleSet</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ScopedMeasure.html#ScopedMeasure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ScopedMeasure')">ScopedMeasure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SegmentByText.html#SegmentByText" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByText')">SegmentByText</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Selector.html#Selector" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Selector')">Selector</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SentinelConceptualDomain.html#SentinelConceptualDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelConceptualDomain')">SentinelConceptualDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SentinelValueDomain.html#SentinelValueDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomain')">SentinelValueDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Sequence.html#Sequence" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Sequence')">Sequence</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Service.html#Service" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Service')">Service</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SpatialCoordinate.html#SpatialCoordinate" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SpatialCoordinate')">SpatialCoordinate</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SpatialPoint.html#SpatialPoint" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SpatialPoint')">SpatialPoint</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SpecializationRole.html#SpecializationRole" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SpecializationRole')">SpecializationRole</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Statistic.html#Statistic" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Statistic')">Statistic</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_StatisticalClassification.html#StatisticalClassification" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassification')">StatisticalClassification</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_StatisticalClassificationRelationship.html#StatisticalClassificationRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassificationRelationship')">StatisticalClassificationRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Step.html#Step" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Step')">Step</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_StructureSpecification.html#StructureSpecification" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StructureSpecification')">StructureSpecification</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SubstantiveConceptualDomain.html#SubstantiveConceptualDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SubstantiveConceptualDomain')">SubstantiveConceptualDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SubstantiveValueDomain.html#SubstantiveValueDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SubstantiveValueDomain')">SubstantiveValueDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_SyntheticIdComponent.html#SyntheticIdComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SyntheticIdComponent')">SyntheticIdComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Telephone.html#Telephone" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Telephone')">Telephone</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_TemporalConstraints.html#TemporalConstraints" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TemporalConstraints')">TemporalConstraints</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_TemporalControlConstruct.html#TemporalControlConstruct" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TemporalControlConstruct')">TemporalControlConstruct</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_TextPositionSelector.html#TextPositionSelector" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TextPositionSelector')">TextPositionSelector</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_TimeRole.html#TimeRole" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TimeRole')">TimeRole</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_TypedString.html#TypedString" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TypedString')">TypedString</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Unit.html#Unit" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Unit')">Unit</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_UnitSegmentLayout.html#UnitSegmentLayout" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component UnitSegmentLayout')">UnitSegmentLayout</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_UnitType.html#UnitType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component UnitType')">UnitType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Universe.html#Universe" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Universe')">Universe</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ValueAndConceptDescription.html#ValueAndConceptDescription" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueAndConceptDescription')">ValueAndConceptDescription</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ValueDomain.html#ValueDomain" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueDomain')">ValueDomain</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ValueMapping.html#ValueMapping" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMapping')">ValueMapping</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ValueMappingPosition.html#ValueMappingPosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMappingPosition')">ValueMappingPosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_ValueMappingRelationship.html#ValueMappingRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMappingRelationship')">ValueMappingRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_VariableCollection.html#VariableCollection" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableCollection')">VariableCollection</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_VariableDescriptorComponent.html#VariableDescriptorComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponent')">VariableDescriptorComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_VariablePosition.html#VariablePosition" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariablePosition')">VariablePosition</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_VariableRelationship.html#VariableRelationship" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableRelationship')">VariableRelationship</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_VariableStructure.html#VariableStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableStructure')">VariableStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_VariableValueComponent.html#VariableValueComponent" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableValueComponent')">VariableValueComponent</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_WebLink.html#WebLink" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WebLink')">WebLink</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_WideDataSet.html#WideDataSet" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideDataSet')">WideDataSet</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_WideDataStructure.html#WideDataStructure" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideDataStructure')">WideDataStructure</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_WideKey.html#WideKey" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideKey')">WideKey</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_WideKeyMember.html#WideKeyMember" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideKeyMember')">WideKeyMember</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Element_Wrapper.html#Wrapper" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component Wrapper')">Wrapper</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_ddi-cdi.xsdComplex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_ddi-cdi.xsdComplex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_ddi-cdi.xsdComplex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AccessInformationXsdType.html#AccessInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AccessInformationXsdType')">AccessInformationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AccessLocationXsdType.html#AccessLocationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AccessLocationXsdType')">AccessLocationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ActivityXsdType.html#ActivityXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ActivityXsdType')">ActivityXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AddressXsdType.html#AddressXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AddressXsdType')">AddressXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AgentInRoleXsdType.html#AgentInRoleXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentInRoleXsdType')">AgentInRoleXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AgentListingXsdType.html#AgentListingXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentListingXsdType')">AgentListingXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AgentPositionXsdType.html#AgentPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentPositionXsdType')">AgentPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AgentRelationshipXsdType.html#AgentRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentRelationshipXsdType')">AgentRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AgentStructureXsdType.html#AgentStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentStructureXsdType')">AgentStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AgentXsdType.html#AgentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AgentXsdType')">AgentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AllenIntervalAlgebraXsdType.html#AllenIntervalAlgebraXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AllenIntervalAlgebraXsdType')">AllenIntervalAlgebraXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AttributeComponentXsdType.html#AttributeComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AttributeComponentXsdType')">AttributeComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_AuthorizationSourceXsdType.html#AuthorizationSourceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AuthorizationSourceXsdType')">AuthorizationSourceXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_BibliographicNameXsdType.html#BibliographicNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component BibliographicNameXsdType')">BibliographicNameXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CatalogDetailsXsdType.html#CatalogDetailsXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CatalogDetailsXsdType')">CatalogDetailsXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CategoryPositionXsdType.html#CategoryPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryPositionXsdType')">CategoryPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CategoryRelationStructureXsdType.html#CategoryRelationStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryRelationStructureXsdType')">CategoryRelationStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CategoryRelationshipXsdType.html#CategoryRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryRelationshipXsdType')">CategoryRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CategorySetXsdType.html#CategorySetXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategorySetXsdType')">CategorySetXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CategoryStatisticXsdType.html#CategoryStatisticXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryStatisticXsdType')">CategoryStatisticXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CategoryXsdType.html#CategoryXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryXsdType')">CategoryXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationFamilyXsdType.html#ClassificationFamilyXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationFamilyXsdType')">ClassificationFamilyXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationIndexEntryPositionXsdType.html#ClassificationIndexEntryPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndexEntryPositionXsdType')">ClassificationIndexEntryPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationIndexEntryXsdType.html#ClassificationIndexEntryXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndexEntryXsdType')">ClassificationIndexEntryXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationIndexXsdType.html#ClassificationIndexXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationIndexXsdType')">ClassificationIndexXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationItemPositionXsdType.html#ClassificationItemPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemPositionXsdType')">ClassificationItemPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationItemRelationshipXsdType.html#ClassificationItemRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemRelationshipXsdType')">ClassificationItemRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationItemStructureXsdType.html#ClassificationItemStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemStructureXsdType')">ClassificationItemStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationItemXsdType.html#ClassificationItemXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationItemXsdType')">ClassificationItemXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationPositionXsdType.html#ClassificationPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationPositionXsdType')">ClassificationPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationSeriesStructureXsdType.html#ClassificationSeriesStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationSeriesStructureXsdType')">ClassificationSeriesStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ClassificationSeriesXsdType.html#ClassificationSeriesXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ClassificationSeriesXsdType')">ClassificationSeriesXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CodeListStructureXsdType.html#CodeListStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeListStructureXsdType')">CodeListStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CodeListXsdType.html#CodeListXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeListXsdType')">CodeListXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CodePositionXsdType.html#CodePositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodePositionXsdType')">CodePositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CodeRelationshipXsdType.html#CodeRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeRelationshipXsdType')">CodeRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CodeXsdType.html#CodeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CodeXsdType')">CodeXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CombinedDateXsdType.html#CombinedDateXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CombinedDateXsdType')">CombinedDateXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CommandCodeXsdType.html#CommandCodeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CommandCodeXsdType')">CommandCodeXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CommandFileXsdType.html#CommandFileXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CommandFileXsdType')">CommandFileXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CommandXsdType.html#CommandXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CommandXsdType')">CommandXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ComplexLanguageStringXsdType.html#ComplexLanguageStringXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ComplexLanguageStringXsdType')">ComplexLanguageStringXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ComponentPositionXsdType.html#ComponentPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ComponentPositionXsdType')">ComponentPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptMapXsdType.html#ConceptMapXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptMapXsdType')">ConceptMapXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptRelationshipXsdType.html#ConceptRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptRelationshipXsdType')">ConceptRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptStructureXsdType.html#ConceptStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptStructureXsdType')">ConceptStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptSystemCorrespondenceXsdType.html#ConceptSystemCorrespondenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptSystemCorrespondenceXsdType')">ConceptSystemCorrespondenceXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptSystemXsdType.html#ConceptSystemXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptSystemXsdType')">ConceptSystemXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptXsdType.html#ConceptXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptXsdType')">ConceptXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptualDomainXsdType.html#ConceptualDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualDomainXsdType')">ConceptualDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptualValueXsdType.html#ConceptualValueXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualValueXsdType')">ConceptualValueXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConceptualVariableXsdType.html#ConceptualVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConceptualVariableXsdType')">ConceptualVariableXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ConditionalControlLogicXsdType.html#ConditionalControlLogicXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ConditionalControlLogicXsdType')">ConditionalControlLogicXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ContactInformationXsdType.html#ContactInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContactInformationXsdType')">ContactInformationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ContextualComponentXsdType.html#ContextualComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ContextualComponentXsdType')">ContextualComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ControlLogicXsdType.html#ControlLogicXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ControlLogicXsdType')">ControlLogicXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ControlledVocabularyEntryXsdType.html#ControlledVocabularyEntryXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ControlledVocabularyEntryXsdType')">ControlledVocabularyEntryXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CorrespondenceDefinitionXsdType.html#CorrespondenceDefinitionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CorrespondenceDefinitionXsdType')">CorrespondenceDefinitionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CorrespondenceTableXsdType.html#CorrespondenceTableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CorrespondenceTableXsdType')">CorrespondenceTableXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_CuratorXsdType.html#CuratorXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CuratorXsdType')">CuratorXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DDICDIModelsXsdType.html#DDICDIModelsXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DDICDIModelsXsdType')">DDICDIModelsXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DataPointPositionXsdType.html#DataPointPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPointPositionXsdType')">DataPointPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DataPointRelationshipXsdType.html#DataPointRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPointRelationshipXsdType')">DataPointRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DataPointXsdType.html#DataPointXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataPointXsdType')">DataPointXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DataSetXsdType.html#DataSetXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataSetXsdType')">DataSetXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DataStoreXsdType.html#DataStoreXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStoreXsdType')">DataStoreXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DataStructureComponentXsdType.html#DataStructureComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructureComponentXsdType')">DataStructureComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DataStructureXsdType.html#DataStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DataStructureXsdType')">DataStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DateRangeXsdType.html#DateRangeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DateRangeXsdType')">DateRangeXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DatumXsdType.html#DatumXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DatumXsdType')">DatumXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DescriptorValueDomainXsdType.html#DescriptorValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DescriptorValueDomainXsdType')">DescriptorValueDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DescriptorVariableXsdType.html#DescriptorVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DescriptorVariableXsdType')">DescriptorVariableXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DescriptorXsdType.html#DescriptorXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DescriptorXsdType')">DescriptorXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DeterministicImperativeXsdType.html#DeterministicImperativeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DeterministicImperativeXsdType')">DeterministicImperativeXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DimensionComponentXsdType.html#DimensionComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionComponentXsdType')">DimensionComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DimensionGroupXsdType.html#DimensionGroupXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionGroupXsdType')">DimensionGroupXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DimensionalDataSetXsdType.html#DimensionalDataSetXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalDataSetXsdType')">DimensionalDataSetXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DimensionalDataStructureXsdType.html#DimensionalDataStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalDataStructureXsdType')">DimensionalDataStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DimensionalKeyDefinitionMemberXsdType.html#DimensionalKeyDefinitionMemberXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyDefinitionMemberXsdType')">DimensionalKeyDefinitionMemberXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DimensionalKeyDefinitionXsdType.html#DimensionalKeyDefinitionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyDefinitionXsdType')">DimensionalKeyDefinitionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DimensionalKeyMemberXsdType.html#DimensionalKeyMemberXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyMemberXsdType')">DimensionalKeyMemberXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_DimensionalKeyXsdType.html#DimensionalKeyXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component DimensionalKeyXsdType')">DimensionalKeyXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ElectronicMessageSystemXsdType.html#ElectronicMessageSystemXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ElectronicMessageSystemXsdType')">ElectronicMessageSystemXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_EmailXsdType.html#EmailXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EmailXsdType')">EmailXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_EmbargoInformationXsdType.html#EmbargoInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EmbargoInformationXsdType')">EmbargoInformationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_EnumerationDomainXsdType.html#EnumerationDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component EnumerationDomainXsdType')">EnumerationDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ForeignKeyComponentXsdType.html#ForeignKeyComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ForeignKeyComponentXsdType')">ForeignKeyComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ForeignKeyXsdType.html#ForeignKeyXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ForeignKeyXsdType')">ForeignKeyXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_FundingInformationXsdType.html#FundingInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component FundingInformationXsdType')">FundingInformationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_GeoRoleXsdType.html#GeoRoleXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component GeoRoleXsdType')">GeoRoleXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierComponentXsdType.html#IdentifierComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierComponentXsdType')">IdentifierComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_IdentifierXsdType.html#IdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IdentifierXsdType')">IdentifierXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_IndividualNameXsdType.html#IndividualNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IndividualNameXsdType')">IndividualNameXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_IndividualXsdType.html#IndividualXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component IndividualXsdType')">IndividualXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_InformationFlowDefinitionXsdType.html#InformationFlowDefinitionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InformationFlowDefinitionXsdType')">InformationFlowDefinitionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_InstanceKeyXsdType.html#InstanceKeyXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceKeyXsdType')">InstanceKeyXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_InstanceValueXsdType.html#InstanceValueXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceValueXsdType')">InstanceValueXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableMapXsdType.html#InstanceVariableMapXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariableMapXsdType')">InstanceVariableMapXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_InstanceVariableXsdType.html#InstanceVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InstanceVariableXsdType')">InstanceVariableXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_InternationalIdentifierXsdType.html#InternationalIdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InternationalIdentifierXsdType')">InternationalIdentifierXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_InternationalRegistrationDataIdentifierXsdType.html#InternationalRegistrationDataIdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InternationalRegistrationDataIdentifierXsdType')">InternationalRegistrationDataIdentifierXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_InternationalStringXsdType.html#InternationalStringXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component InternationalStringXsdType')">InternationalStringXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_KeyValueDataStoreXsdType.html#KeyValueDataStoreXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component KeyValueDataStoreXsdType')">KeyValueDataStoreXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_KeyValueStructureXsdType.html#KeyValueStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component KeyValueStructureXsdType')">KeyValueStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LabelForDisplayXsdType.html#LabelForDisplayXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LabelForDisplayXsdType')">LabelForDisplayXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LanguageSpecificStringXsdType.html#LanguageSpecificStringXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LanguageSpecificStringXsdType')">LanguageSpecificStringXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LanguageStringXsdType.html#LanguageStringXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LanguageStringXsdType')">LanguageStringXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LevelStructureXsdType.html#LevelStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LevelStructureXsdType')">LevelStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LevelXsdType.html#LevelXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LevelXsdType')">LevelXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LicenseInformationXsdType.html#LicenseInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LicenseInformationXsdType')">LicenseInformationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LogicalRecordPositionXsdType.html#LogicalRecordPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordPositionXsdType')">LogicalRecordPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LogicalRecordRelationStructureXsdType.html#LogicalRecordRelationStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordRelationStructureXsdType')">LogicalRecordRelationStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LogicalRecordRelationshipXsdType.html#LogicalRecordRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordRelationshipXsdType')">LogicalRecordRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LogicalRecordXsdType.html#LogicalRecordXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LogicalRecordXsdType')">LogicalRecordXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LongDataSetXsdType.html#LongDataSetXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongDataSetXsdType')">LongDataSetXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LongDataStructureXsdType.html#LongDataStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongDataStructureXsdType')">LongDataStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LongKeyXsdType.html#LongKeyXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongKeyXsdType')">LongKeyXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_LongMainKeyMemberXsdType.html#LongMainKeyMemberXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component LongMainKeyMemberXsdType')">LongMainKeyMemberXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_MachineXsdType.html#MachineXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component MachineXsdType')">MachineXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_MainKeyMemberXsdType.html#MainKeyMemberXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component MainKeyMemberXsdType')">MainKeyMemberXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_MeasureComponentXsdType.html#MeasureComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component MeasureComponentXsdType')">MeasureComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ModelIdentificationXsdType.html#ModelIdentificationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ModelIdentificationXsdType')">ModelIdentificationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_NonDdiIdentifierXsdType.html#NonDdiIdentifierXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NonDdiIdentifierXsdType')">NonDdiIdentifierXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_NonDeterministicDeclarativeXsdType.html#NonDeterministicDeclarativeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NonDeterministicDeclarativeXsdType')">NonDeterministicDeclarativeXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_NonIsoDateXsdType.html#NonIsoDateXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NonIsoDateXsdType')">NonIsoDateXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_NotationXsdType.html#NotationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component NotationXsdType')">NotationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ObjectAttributeSelectorXsdType.html#ObjectAttributeSelectorXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ObjectAttributeSelectorXsdType')">ObjectAttributeSelectorXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ObjectNameXsdType.html#ObjectNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ObjectNameXsdType')">ObjectNameXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_OrganizationNameXsdType.html#OrganizationNameXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationNameXsdType')">OrganizationNameXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_OrganizationXsdType.html#OrganizationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component OrganizationXsdType')">OrganizationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PairedControlledVocabularyEntryXsdType.html#PairedControlledVocabularyEntryXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PairedControlledVocabularyEntryXsdType')">PairedControlledVocabularyEntryXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ParameterXsdType.html#ParameterXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ParameterXsdType')">ParameterXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalDataSetStructureXsdType.html#PhysicalDataSetStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalDataSetStructureXsdType')">PhysicalDataSetStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalDataSetXsdType.html#PhysicalDataSetXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalDataSetXsdType')">PhysicalDataSetXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalLayoutRelationStructureXsdType.html#PhysicalLayoutRelationStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalLayoutRelationStructureXsdType')">PhysicalLayoutRelationStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalRecordSegmentPositionXsdType.html#PhysicalRecordSegmentPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentPositionXsdType')">PhysicalRecordSegmentPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalRecordSegmentRelationshipXsdType.html#PhysicalRecordSegmentRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentRelationshipXsdType')">PhysicalRecordSegmentRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalRecordSegmentStructureXsdType.html#PhysicalRecordSegmentStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentStructureXsdType')">PhysicalRecordSegmentStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalRecordSegmentXsdType.html#PhysicalRecordSegmentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalRecordSegmentXsdType')">PhysicalRecordSegmentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLayoutXsdType.html#PhysicalSegmentLayoutXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalSegmentLayoutXsdType')">PhysicalSegmentLayoutXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PhysicalSegmentLocationXsdType.html#PhysicalSegmentLocationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PhysicalSegmentLocationXsdType')">PhysicalSegmentLocationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PopulationXsdType.html#PopulationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PopulationXsdType')">PopulationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PrimaryKeyComponentXsdType.html#PrimaryKeyComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PrimaryKeyComponentXsdType')">PrimaryKeyComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PrimaryKeyXsdType.html#PrimaryKeyXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PrimaryKeyXsdType')">PrimaryKeyXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_PrivateImageXsdType.html#PrivateImageXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PrivateImageXsdType')">PrivateImageXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ProcessingAgentXsdType.html#ProcessingAgentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ProcessingAgentXsdType')">ProcessingAgentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ProductionEnvironmentXsdType.html#ProductionEnvironmentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ProductionEnvironmentXsdType')">ProductionEnvironmentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ProvenanceInformationXsdType.html#ProvenanceInformationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ProvenanceInformationXsdType')">ProvenanceInformationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_QualifiedMeasureXsdType.html#QualifiedMeasureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component QualifiedMeasureXsdType')">QualifiedMeasureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_RationaleDefinitionXsdType.html#RationaleDefinitionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RationaleDefinitionXsdType')">RationaleDefinitionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_RecordRelationXsdType.html#RecordRelationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RecordRelationXsdType')">RecordRelationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceValueDomainXsdType.html#ReferenceValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceValueDomainXsdType')">ReferenceValueDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceValueXsdType.html#ReferenceValueXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceValueXsdType')">ReferenceValueXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceVariableXsdType.html#ReferenceVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceVariableXsdType')">ReferenceVariableXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ReferenceXsdType.html#ReferenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ReferenceXsdType')">ReferenceXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_RepresentedVariableXsdType.html#RepresentedVariableXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RepresentedVariableXsdType')">RepresentedVariableXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_RevisableDatumXsdType.html#RevisableDatumXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RevisableDatumXsdType')">RevisableDatumXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_RevisionXsdType.html#RevisionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RevisionXsdType')">RevisionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_RuleBasedSchedulingXsdType.html#RuleBasedSchedulingXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RuleBasedSchedulingXsdType')">RuleBasedSchedulingXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_RuleSetXsdType.html#RuleSetXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RuleSetXsdType')">RuleSetXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_RuleXsdType.html#RuleXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component RuleXsdType')">RuleXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ScopedMeasureXsdType.html#ScopedMeasureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ScopedMeasureXsdType')">ScopedMeasureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SegmentByTextXsdType.html#SegmentByTextXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SegmentByTextXsdType')">SegmentByTextXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SelectorXsdType.html#SelectorXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SelectorXsdType')">SelectorXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SentinelConceptualDomainXsdType.html#SentinelConceptualDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelConceptualDomainXsdType')">SentinelConceptualDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SentinelValueDomainXsdType.html#SentinelValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SentinelValueDomainXsdType')">SentinelValueDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SequenceXsdType.html#SequenceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SequenceXsdType')">SequenceXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ServiceXsdType.html#ServiceXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ServiceXsdType')">ServiceXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SpatialCoordinateXsdType.html#SpatialCoordinateXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SpatialCoordinateXsdType')">SpatialCoordinateXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SpatialPointXsdType.html#SpatialPointXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SpatialPointXsdType')">SpatialPointXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SpecializationRoleXsdType.html#SpecializationRoleXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SpecializationRoleXsdType')">SpecializationRoleXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_StatisticXsdType.html#StatisticXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticXsdType')">StatisticXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationRelationshipXsdType.html#StatisticalClassificationRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassificationRelationshipXsdType')">StatisticalClassificationRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_StatisticalClassificationXsdType.html#StatisticalClassificationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StatisticalClassificationXsdType')">StatisticalClassificationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_StepXsdType.html#StepXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StepXsdType')">StepXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_StructureSpecificationXsdType.html#StructureSpecificationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StructureSpecificationXsdType')">StructureSpecificationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SubstantiveConceptualDomainXsdType.html#SubstantiveConceptualDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SubstantiveConceptualDomainXsdType')">SubstantiveConceptualDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SubstantiveValueDomainXsdType.html#SubstantiveValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SubstantiveValueDomainXsdType')">SubstantiveValueDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_SyntheticIdComponentXsdType.html#SyntheticIdComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SyntheticIdComponentXsdType')">SyntheticIdComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_TelephoneXsdType.html#TelephoneXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TelephoneXsdType')">TelephoneXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_TemporalConstraintsXsdType.html#TemporalConstraintsXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TemporalConstraintsXsdType')">TemporalConstraintsXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_TemporalControlConstructXsdType.html#TemporalControlConstructXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TemporalControlConstructXsdType')">TemporalControlConstructXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_TextPositionSelectorXsdType.html#TextPositionSelectorXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TextPositionSelectorXsdType')">TextPositionSelectorXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_TimeRoleXsdType.html#TimeRoleXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TimeRoleXsdType')">TimeRoleXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_TypedStringXsdType.html#TypedStringXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TypedStringXsdType')">TypedStringXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_UnitSegmentLayoutXsdType.html#UnitSegmentLayoutXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component UnitSegmentLayoutXsdType')">UnitSegmentLayoutXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_UnitTypeXsdType.html#UnitTypeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component UnitTypeXsdType')">UnitTypeXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_UnitXsdType.html#UnitXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component UnitXsdType')">UnitXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_UniverseXsdType.html#UniverseXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component UniverseXsdType')">UniverseXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ValueAndConceptDescriptionXsdType.html#ValueAndConceptDescriptionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueAndConceptDescriptionXsdType')">ValueAndConceptDescriptionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ValueDomainXsdType.html#ValueDomainXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueDomainXsdType')">ValueDomainXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ValueMappingPositionXsdType.html#ValueMappingPositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMappingPositionXsdType')">ValueMappingPositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ValueMappingRelationshipXsdType.html#ValueMappingRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMappingRelationshipXsdType')">ValueMappingRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_ValueMappingXsdType.html#ValueMappingXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ValueMappingXsdType')">ValueMappingXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_VariableCollectionXsdType.html#VariableCollectionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableCollectionXsdType')">VariableCollectionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_VariableDescriptorComponentXsdType.html#VariableDescriptorComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableDescriptorComponentXsdType')">VariableDescriptorComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_VariablePositionXsdType.html#VariablePositionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariablePositionXsdType')">VariablePositionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_VariableRelationshipXsdType.html#VariableRelationshipXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableRelationshipXsdType')">VariableRelationshipXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_VariableStructureXsdType.html#VariableStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableStructureXsdType')">VariableStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_VariableValueComponentXsdType.html#VariableValueComponentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component VariableValueComponentXsdType')">VariableValueComponentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_WebLinkXsdType.html#WebLinkXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WebLinkXsdType')">WebLinkXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_WideDataSetXsdType.html#WideDataSetXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideDataSetXsdType')">WideDataSetXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_WideDataStructureXsdType.html#WideDataStructureXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideDataStructureXsdType')">WideDataStructureXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_WideKeyMemberXsdType.html#WideKeyMemberXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideKeyMemberXsdType')">WideKeyMemberXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_WideKeyXsdType.html#WideKeyXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WideKeyXsdType')">WideKeyXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Complex_Type_WrapperXsdType.html#WrapperXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WrapperXsdType')">WrapperXsdType</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_ddi-cdi.xsdSimple_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_ddi-cdi.xsdSimple_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Simple Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_ddi-cdi.xsdSimple_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_CategoryRelationCodeXsdType.html#CategoryRelationCodeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component CategoryRelationCodeXsdType')">CategoryRelationCodeXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_ComparisonOperatorXsdType.html#ComparisonOperatorXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ComparisonOperatorXsdType')">ComparisonOperatorXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_ComputationBaseListXsdType.html#ComputationBaseListXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ComputationBaseListXsdType')">ComputationBaseListXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_ControlConstructXsdType.html#ControlConstructXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component ControlConstructXsdType')">ControlConstructXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_MatchingCriterionXsdType.html#MatchingCriterionXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component MatchingCriterionXsdType')">MatchingCriterionXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_MemberRelationshipScopeXsdType.html#MemberRelationshipScopeXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component MemberRelationshipScopeXsdType')">MemberRelationshipScopeXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_PointFormatXsdType.html#PointFormatXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component PointFormatXsdType')">PointFormatXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_SchedulingStrategyXsdType.html#SchedulingStrategyXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SchedulingStrategyXsdType')">SchedulingStrategyXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_SexSpecificationXsdType.html#SexSpecificationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component SexSpecificationXsdType')">SexSpecificationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_StructureExtentXsdType.html#StructureExtentXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component StructureExtentXsdType')">StructureExtentXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_TableDirectionValuesXsdType.html#TableDirectionValuesXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TableDirectionValuesXsdType')">TableDirectionValuesXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_TemporalOperatorXsdType.html#TemporalOperatorXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TemporalOperatorXsdType')">TemporalOperatorXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_TemporalRelationXsdType.html#TemporalRelationXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TemporalRelationXsdType')">TemporalRelationXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_TextDirectionValuesXsdType.html#TextDirectionValuesXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TextDirectionValuesXsdType')">TextDirectionValuesXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_TrimValuesXsdType.html#TrimValuesXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component TrimValuesXsdType')">TrimValuesXsdType</a></b></div>
+                                                <div><b><a href="ddi-cdi_xsd_Simple_Type_WhiteSpaceRuleXsdType.html#WhiteSpaceRuleXsdType" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component WhiteSpaceRuleXsdType')">WhiteSpaceRuleXsdType</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_ddi-cdi.xsdElement_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_ddi-cdi.xsdElement_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Element Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_ddi-cdi.xsdElement_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="ddi-cdi_xsd_Element_Group_AllElementsDerivedFromClasses.html#AllElementsDerivedFromClasses" target="mainFrame" title="http://ddialliance.org/Specification/DDI-CDI/1.0/XMLSchema/" onclick="updatePageTitle('Schema documentation for component AllElementsDerivedFromClasses')">AllElementsDerivedFromClasses</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_gr_xml.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsd');" class="control" /><span class="indexGroupTitle">xml.xsd</span></p>
+                  <div id="gr_xml.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_xml.xsdImported_schema" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsdImported_schema');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Imported Schemas</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_xml.xsdImported_schema" class="componentGroup" style="display:block">
+                                                <div><b><a href="xml_xsd_Imported_schema_xml_xsd.html#xml.xsd" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for component xml.xsd')">xml.xsd</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_xml.xsdAttribute" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsdAttribute');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attributes</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_xml.xsdAttribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="xml_xsd_Attribute_xml_base.html#base" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for component @xml:base')">@xml:base</a></b></div>
+                                                <div><b><a href="xml_xsd_Attribute_xml_lang.html#lang" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for component @xml:lang')">@xml:lang</a></b></div>
+                                                <div><b><a href="xml_xsd_Attribute_xml_space.html#space" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for component @xml:space')">@xml:space</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_xml.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsdAttribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_xml.xsdAttribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="xml_xsd_Attribute_Group_xml_specialAttrs.html#specialAttrs" target="mainFrame" title="http://www.w3.org/XML/1998/namespace" onclick="updatePageTitle('Schema documentation for component xml:specialAttrs')">xml:specialAttrs</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Developer.</div>
+      </div><script type="text/javascript"><!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

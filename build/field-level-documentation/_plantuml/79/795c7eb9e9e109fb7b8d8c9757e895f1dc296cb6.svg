@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="403.2px" preserveAspectRatio="none" style="width:496px;height:403px;background:#FFFFFF;" version="1.1" viewBox="0 0 496 403" width="496.8px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="475.2" x="4.725" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="466.2" x="9.225" y="27.6855">UML Diagram: Class ForeignKeyComponent in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="240.525" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[b0d8b834a31de0f9d033a4fef235e477]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey--><a href="../DDICDILibrary/Classes/DataDescription/Components/ForeignKey.html#super-class-hierarchy-generalization" target="_top" title=" ― ForeignKey:&#10;Role of a set of data structure components for content referencing purposes" xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Components/ForeignKey.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ForeignKey:&#10;Role of a set of data structure components for content referencing purposes" xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey"><rect codeLine="54" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="321.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="44.55" y="335.5928">Components::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="65.7" x="40.95" y="350.6502">ForeignKey</text></g></a><!--MD5=[39cd8d9fff7eef7d9c77c1d57122097b]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent--><a href="../DDICDILibrary/Classes/DataDescription/Components/PrimaryKeyComponent.html#super-class-hierarchy-generalization" target="_top" title=" ― PrimaryKeyComponent:&#10;Role of a data structure component for content identification purposes" xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Components/PrimaryKeyComponent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― PrimaryKeyComponent:&#10;Role of a data structure component for content identification purposes" xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent"><rect codeLine="55" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135.9" x="173.25" y="321.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="211.95" y="335.5928">Components::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="130.5" x="175.95" y="350.6502">PrimaryKeyComponent</text></g></a><!--MD5=[1fe5a69c56948e803e4ee51554e950d9]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent--><a href="../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization" target="_top" title=" ― DataStructureComponent:&#10;Role given to a represented variable in the context of a data structure." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― DataStructureComponent:&#10;Role given to a represented variable in the context of a data structure." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent"><rect codeLine="56" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="150.3" x="340.65" y="321.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="386.55" y="335.5928">Components::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="144.9" x="343.35" y="350.6502">DataStructureComponent</text></g></a><!--MD5=[f9cab4dd997d7c1fc86d2ab62e0cc130]
+entity ##8--><!--MD5=[8e7c4ce3477d9b85deb39c8a45d38868]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent--><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent"><rect codeLine="46" fill="#FFD700" height="59.2172" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="136.8" x="172.8" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="211.95" y="137.5928">Components::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="131.4" x="175.5" y="152.6502">ForeignKeyComponent</text><line style="stroke:#404040;stroke-width:0.45;" x1="173.7" x2="308.7" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="178.2" y="176.5986">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="237.6" y="176.5986">Identifier</text></a></g><!--MD5=[e563f890070682b44ea543b65c534f37]
+reverse link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent to DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey"><a href="" target="_top" title=" ― isComposedOf:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― isComposedOf:&#10;" xlink:type="simple"><path codeLine="68" d="M210.447,186.957 C194.076,204.408 173.673,226.341 155.7,246.15 C132.039,272.241 105.084,302.949 88.758,321.651 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="213.66,183.528,205.4942,186.9761,210.5827,186.8113,210.7475,191.8998,213.66,183.528" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="76.5" x="156.6" y="259.1956">isComposedOf</text></a></g><!--MD5=[c8ade4bf80da8c38cc71a76443ee29fa]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent to DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent"><a href="" target="_top" title=" ― correspondsTo:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― correspondsTo:&#10;" xlink:type="simple"><path codeLine="69" d="M268.479,183.177 C303.921,220.635 364.95,285.111 396.162,318.105 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent-to-DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="399.456,321.579,396.4923,313.2252,396.3587,318.3146,391.2692,318.1809,399.456,321.579" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="76.5" x="339.3" y="259.1956">correspondsTo</text></a></g><!--MD5=[d6b3d8ff43e16fb9437d189234ed1ddd]
+link DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent to DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent_DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent"><a href="" target="_top" title=" ― references:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― references:&#10;" xlink:type="simple"><path codeLine="70" d="M241.2,183.177 C241.2,220.176 241.2,283.554 241.2,316.881 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent-to-DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="241.2,321.579,244.8,313.479,241.2,317.079,237.6,313.479,241.2,321.579" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="54" x="242.1" y="259.1956">references</text></a></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="351.9" x="66.375" y="362.4188"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="240.975" y="371.7615"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="240.975" y="383.0818"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="351.9" x="66.375" y="394.4021">DDI Cross Domain Integration (DDI-CDI)   1.0 - Components::ForeignKeyComponent</text><!--MD5=[5cc7010ea18d08da86ca5e7502af7f4c]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class ForeignKeyComponent in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Components::ForeignKeyComponent
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent as "<size:10>Components::\n<color:black>ForeignKeyComponent" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey as "<size:10>Components::\n<color:blue>ForeignKey" [[../DDICDILibrary/Classes/DataDescription/Components/ForeignKey.html#super-class-hierarchy-generalization{ <U+2015> ForeignKey:\nRole of a set of data structure components for content referencing purposes}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent as "<size:10>Components::\n<color:blue>PrimaryKeyComponent" [[../DDICDILibrary/Classes/DataDescription/Components/PrimaryKeyComponent.html#super-class-hierarchy-generalization{ <U+2015> PrimaryKeyComponent:\nRole of a data structure component for content identification purposes}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent as "<size:10>Components::\n<color:blue>DataStructureComponent" [[../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization{ <U+2015> DataStructureComponent:\nRole given to a represented variable in the context of a data structure.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent <-[#grey]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey [[{ <U+2015> isComposedOf:\n}]] : isComposedOf
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent -[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent [[{ <U+2015> correspondsTo:\n}]] : correspondsTo
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent -[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent [[{ <U+2015> references:\n}]] : references
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class ForeignKeyComponent in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Components::ForeignKeyComponent
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent as "<size:10>Components::\n<color:black>ForeignKeyComponent" #FFD700 {
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey as "<size:10>Components::\n<color:blue>ForeignKey" [[../DDICDILibrary/Classes/DataDescription/Components/ForeignKey.html#super-class-hierarchy-generalization{ <U+2015> ForeignKey:\nRole of a set of data structure components for content referencing purposes}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent as "<size:10>Components::\n<color:blue>PrimaryKeyComponent" [[../DDICDILibrary/Classes/DataDescription/Components/PrimaryKeyComponent.html#super-class-hierarchy-generalization{ <U+2015> PrimaryKeyComponent:\nRole of a data structure component for content identification purposes}]]
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent as "<size:10>Components::\n<color:blue>DataStructureComponent" [[../DDICDILibrary/Classes/DataDescription/Components/DataStructureComponent.html#super-class-hierarchy-generalization{ <U+2015> DataStructureComponent:\nRole given to a represented variable in the context of a data structure.}]]
+}
+
+together {
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent <-[#grey]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey [[{ <U+2015> isComposedOf:\n}]] : isComposedOf
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent -[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent [[{ <U+2015> correspondsTo:\n}]] : correspondsTo
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent -[#grey]-> DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent [[{ <U+2015> references:\n}]] : references
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

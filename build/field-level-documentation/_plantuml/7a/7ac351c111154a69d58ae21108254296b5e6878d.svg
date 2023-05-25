@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="621px" preserveAspectRatio="none" style="width:765px;height:621px;background:#FFFFFF;" version="1.1" viewBox="0 0 765 621" width="765px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="387" x="182.7" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="378" x="187.2" y="27.6855">UML Diagram: Class ConceptMap in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="374.4" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="7.2" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="12.6" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="12.6" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="12.6" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[24a257863b398b5270390d96fe65d257]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept--><a href="../DDICDILibrary/Classes/Conceptual/Concept.html#super-class-hierarchy-generalization" target="_top" title=" ― Concept:&#10;Unit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept)." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/Concept.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Concept:&#10;Unit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept)." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept"><rect codeLine="62" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="6.3" y="318.15"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="46.35" y="331.9928">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="47.7" x="49.95" y="347.0502">Concept</text></g></a><!--MD5=[10385ada812ade043ded5ea25aa1d5d4]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence--><a href="../DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.html#super-class-hierarchy-generalization" target="_top" title=" ― ConceptSystemCorrespondence:&#10;Relationship between 2 or more concept systems described through mapping similarity relationships between their member concepts." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― ConceptSystemCorrespondence:&#10;Relationship between 2 or more concept systems described through mapping similarity relationships between their member concepts." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence"><rect codeLine="63" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="189.9" x="217.35" y="318.15"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="284.85" y="331.9928">Conceptual::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="184.5" x="220.05" y="347.0502">ConceptSystemCorrespondence</text></g></a><!--MD5=[d787cebc257d54f8319ee9fb2c67da32]
+class DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable--><a href="../DDICDILibrary/Classes/Representations/CorrespondenceTable.html#super-class-hierarchy-generalization" target="_top" title=" ― CorrespondenceTable:&#10;Set of relationships between the members within or between statistical classifications." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/Representations/CorrespondenceTable.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― CorrespondenceTable:&#10;Set of relationships between the members within or between statistical classifications." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable"><rect codeLine="64" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="483.3" y="318.15"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="72.9" x="514.35" y="331.9928">Representations::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="127.8" x="486.9" y="347.0502">CorrespondenceTable</text></g></a><!--MD5=[3be6b965db101685ffe285f22e57fccc]
+class DDICDIModels::DesignPatterns::CollectionsPattern::Map--><a href="../DesignPatterns/CollectionsPattern/Map.html#super-class-hierarchy-generalization" target="_top" title=" ― Map:&#10;Provides a basic pattern for a comparison map which identifies source and target members and details about their match. Source and target were retained as in describing differences and commonalities the direction of the comparison may be important." xlink:actuate="onRequest" xlink:href="../DesignPatterns/CollectionsPattern/Map.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― Map:&#10;Provides a basic pattern for a comparison map which identifies source and target members and details about their match. Source and target were retained as in describing differences and commonalities the direction of the comparison may be important." xlink:type="simple"><g id="elem_DDICDIModels::DesignPatterns::CollectionsPattern::Map"><rect codeLine="69" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DesignPatterns::CollectionsPattern::Map" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="624.6" y="539.55"/><text fill="#000000" font-family="sans-serif" font-size="9" font-style="italic" lengthAdjust="spacing" textLength="83.7" x="650.25" y="553.3928">CollectionsPattern::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" font-style="italic" lengthAdjust="spacing" textLength="25.2" x="679.5" y="568.4502">Map</text></g></a><!--MD5=[fb91417aba18c4ada1c79346849991a1]
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap--><g id="elem_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap"><rect codeLine="46" fill="#FFD700" height="122.6109" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="262.8" x="180.9" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="54.9" x="284.85" y="137.5928">Conceptual::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="72" x="276.3" y="152.6502">ConceptMap</text><line style="stroke:#404040;stroke-width:0.45;" x1="181.8" x2="442.8" y1="159.9188" y2="159.9188"/><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/CorrespondenceDefinition.html#diagram" target="_top" title=" ― CorrespondenceDefinition:&#10;Describes the commonalities and differences between two members using a textual description of both commonalities and differences plus an optional coding of the type of commonality." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/CorrespondenceDefinition.html#diagram" xlink:show="new" xlink:title=" ― CorrespondenceDefinition:&#10;Describes the commonalities and differences between two members using a textual description of both commonalities and differences plus an optional coding of the type of commonality." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="99.9" x="186.3" y="176.5986">correspondence :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="148.5" x="289.8" y="176.5986">CorrespondenceDefinition</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram" target="_top" title=" ― LabelForDisplay:&#10;A structured display label. Label provides display content of a fully human readable display for the identification of the object." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram" xlink:show="new" xlink:title=" ― LabelForDisplay:&#10;A structured display label. Label provides display content of a fully human readable display for the identification of the object." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="78.3" x="186.3" y="192.4471">displayLabel :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="92.7" x="268.2" y="192.4471">LabelForDisplay</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="186.3" y="208.2955">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="245.7" y="208.2955">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="42.3" x="186.3" y="224.1439">usage :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="232.2" y="224.1439">InternationalString</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/DateRange.html#diagram" target="_top" title=" ― DateRange:&#10;Expresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/DateRange.html#diagram" xlink:show="new" xlink:title=" ― DateRange:&#10;Expresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="66.6" x="186.3" y="239.9924">validDates :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="64.8" x="256.5" y="239.9924">DateRange</text></a></g><!--MD5=[a1d2e4bc4f49cb4bb61d9dfc6602122b]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap to DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap_DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept"><a href="" target="_top" title=" ― hasSource:&#10;Concept map has one to many source concepts." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― hasSource:&#10;Concept map has one to many source concepts." xlink:type="simple"><path codeLine="77" d="M180.684,223.749 C152.865,236.196 125.352,252.369 103.5,273.15 C91.98,284.103 84.42,300.429 79.803,313.596 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="78.354,317.925,84.3543,311.4007,79.7924,313.6611,77.532,309.0992,78.354,317.925" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="55.8" x="104.4" y="286.1956">hasSource</text></a></g><!--MD5=[a1d2e4bc4f49cb4bb61d9dfc6602122b]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap to DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap_DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept"><a href="" target="_top" title=" ― hasTarget:&#10;Concept map has one to many target concepts." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― hasTarget:&#10;Concept map has one to many target concepts." xlink:type="simple"><path codeLine="78" d="M230.553,246.294 C209.493,260.991 186.579,276.246 164.7,289.35 C148.896,298.818 130.896,308.178 115.11,315.954 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap-to-DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept-1" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="110.718,318.105,119.5761,317.7816,114.7607,316.1286,116.4138,311.3132,110.718,318.105" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="51.3" x="190.8" y="286.1956">hasTarget</text></a></g><!--MD5=[2db0364ce6216c6f4414c0f408cc5b06]
+reverse link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap to DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence"><a href="" target="_top" title=" ― has:&#10;Concept system correspondence has zero to many concept maps." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;Concept system correspondence has zero to many concept maps." xlink:type="simple"><path codeLine="79" d="M312.3,250.767 C312.3,275.382 312.3,301.446 312.3,318.006 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap-backto-DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="312.3,246.186,308.7,254.286,312.3,250.686,315.9,254.286,312.3,246.186" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="313.2" y="286.1956">has</text></a></g><!--MD5=[0564e26eb2f8244099badfa387ad9e83]
+reverse link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap to DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap_DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable"><a href="" target="_top" title=" ― has:&#10;Correspondence table has zero to many concept maps." xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― has:&#10;Correspondence table has zero to many concept maps." xlink:type="simple"><path codeLine="80" d="M412.506,248.625 C452.799,273.861 496.062,300.96 523.26,318.006 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap-backto-DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="408.618,246.186,413.5721,253.5363,412.4318,248.5745,417.3937,247.4342,408.618,246.186" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="18.9" x="474.3" y="286.1956">has</text></a></g><!--MD5=[3c5b50b21f85f22c9253fd6ef923f696]
+link DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap to DDICDIModels::DesignPatterns::CollectionsPattern::Map--><g id="link_DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap_DDICDIModels::DesignPatterns::CollectionsPattern::Map"><path codeLine="84" d="M443.799,211.806 C553.536,237.357 692.1,280.467 692.1,335.25 C692.1,335.25 692.1,335.25 692.1,482.4 C692.1,500.004 692.1,519.957 692.1,534.744 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap-to-DDICDIModels::DesignPatterns::CollectionsPattern::Map" style="stroke:#404040;stroke-width:1.35;stroke-dasharray:7.0,7.0;"/><polygon fill="#404040" points="692.1,539.541,695.7,531.441,692.1,535.041,688.5,531.441,692.1,539.541" style="stroke:#404040;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="45" x="693" y="423.8956">«Refine»</text></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="305.1" x="223.65" y="580.2188"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="374.85" y="589.5615"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="374.85" y="600.8818"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="305.1" x="223.65" y="612.2021">DDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::ConceptMap</text><!--MD5=[6138b8b7f4b6d72f57bc82059c2b38fd]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class ConceptMap in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::ConceptMap
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap as "<size:10>Conceptual::\n<color:black>ConceptMap" #FFD700 {
+  correspondence : <color:blue>CorrespondenceDefinition   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CorrespondenceDefinition.html#diagram{ <U+2015> CorrespondenceDefinition:\nDescribes the commonalities and differences between two members using a textual description of both commonalities and differences plus an optional coding of the type of commonality.}]]]
+  displayLabel : <color:blue>LabelForDisplay   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram{ <U+2015> LabelForDisplay:\nA structured display label. Label provides display content of a fully human readable display for the identification of the object.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  usage : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  validDates : <color:blue>DateRange   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/DateRange.html#diagram{ <U+2015> DateRange:\nExpresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc.}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept as "<size:10>Conceptual::\n<color:blue>Concept" [[../DDICDILibrary/Classes/Conceptual/Concept.html#super-class-hierarchy-generalization{ <U+2015> Concept:\nUnit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).}]]
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence as "<size:10>Conceptual::\n<color:blue>ConceptSystemCorrespondence" [[../DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.html#super-class-hierarchy-generalization{ <U+2015> ConceptSystemCorrespondence:\nRelationship between 2 or more concept systems described through mapping similarity relationships between their member concepts.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable as "<size:10>Representations::\n<color:blue>CorrespondenceTable" [[../DDICDILibrary/Classes/Representations/CorrespondenceTable.html#super-class-hierarchy-generalization{ <U+2015> CorrespondenceTable:\nSet of relationships between the members within or between statistical classifications.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Map as "<size:10>CollectionsPattern::\n<color:blue>Map" [[../DesignPatterns/CollectionsPattern/Map.html#super-class-hierarchy-generalization{ <U+2015> Map:\nProvides a basic pattern for a comparison map which identifies source and target members and details about their match. Source and target were retained as in describing differences and commonalities the direction of the comparison may be important.}]]
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept [[{ <U+2015> hasSource:\nConcept map has one to many source concepts.}]] : hasSource
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept [[{ <U+2015> hasTarget:\nConcept map has one to many target concepts.}]] : hasTarget
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence [[{ <U+2015> has:\nConcept system correspondence has zero to many concept maps.}]] : has
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable [[{ <U+2015> has:\nCorrespondence table has zero to many concept maps.}]] : has
+
+
+' Abstractions
+  DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap .....> DDICDIModels::DesignPatterns::CollectionsPattern::Map : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class ConceptMap in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Conceptual::ConceptMap
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap as "<size:10>Conceptual::\n<color:black>ConceptMap" #FFD700 {
+  correspondence : <color:blue>CorrespondenceDefinition   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/CorrespondenceDefinition.html#diagram{ <U+2015> CorrespondenceDefinition:\nDescribes the commonalities and differences between two members using a textual description of both commonalities and differences plus an optional coding of the type of commonality.}]]]
+  displayLabel : <color:blue>LabelForDisplay   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.html#diagram{ <U+2015> LabelForDisplay:\nA structured display label. Label provides display content of a fully human readable display for the identification of the object.}]]]
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  usage : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+  validDates : <color:blue>DateRange   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/DateRange.html#diagram{ <U+2015> DateRange:\nExpresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc.}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept as "<size:10>Conceptual::\n<color:blue>Concept" [[../DDICDILibrary/Classes/Conceptual/Concept.html#super-class-hierarchy-generalization{ <U+2015> Concept:\nUnit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).}]]
+  class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence as "<size:10>Conceptual::\n<color:blue>ConceptSystemCorrespondence" [[../DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.html#super-class-hierarchy-generalization{ <U+2015> ConceptSystemCorrespondence:\nRelationship between 2 or more concept systems described through mapping similarity relationships between their member concepts.}]]
+  class DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable as "<size:10>Representations::\n<color:blue>CorrespondenceTable" [[../DDICDILibrary/Classes/Representations/CorrespondenceTable.html#super-class-hierarchy-generalization{ <U+2015> CorrespondenceTable:\nSet of relationships between the members within or between statistical classifications.}]]
+}
+
+together {
+  abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Map as "<size:10>CollectionsPattern::\n<color:blue>Map" [[../DesignPatterns/CollectionsPattern/Map.html#super-class-hierarchy-generalization{ <U+2015> Map:\nProvides a basic pattern for a comparison map which identifies source and target members and details about their match. Source and target were retained as in describing differences and commonalities the direction of the comparison may be important.}]]
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept [[{ <U+2015> hasSource:\nConcept map has one to many source concepts.}]] : hasSource
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap -[#grey]-> DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept [[{ <U+2015> hasTarget:\nConcept map has one to many target concepts.}]] : hasTarget
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence [[{ <U+2015> has:\nConcept system correspondence has zero to many concept maps.}]] : has
+DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap <-[#grey]- DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable [[{ <U+2015> has:\nCorrespondence table has zero to many concept maps.}]] : has
+
+
+  DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap .....> DDICDIModels::DesignPatterns::CollectionsPattern::Map : <U+00AB>Refine<U+00BB>
+   
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

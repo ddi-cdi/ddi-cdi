@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="368.1px" preserveAspectRatio="none" style="width:369px;height:368px;background:#FFFFFF;" version="1.1" viewBox="0 0 369 368" width="369px" zoomAndPan="magnify"><defs/><g><rect height="47.4891" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="352.8" x="4.5" y="4.5"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="343.8" x="9" y="27.6855">UML Diagram: Class Revision in Context</text><text fill="#000000" font-family="sans-serif" font-size="12.6" font-weight="bold" lengthAdjust="spacing" textLength="3.6" x="179.1" y="44.7205"> </text><rect fill="#FFFFFF" height="44.7609" rx="6.75" ry="6.75" style="stroke:#000000;stroke-width:0.9;" width="276.3" x="42.75" y="64.5891"/><text fill="#000000" font-family="sans-serif" font-size="9" font-weight="bold" lengthAdjust="spacing" textLength="22.5" x="48.15" y="79.3318">Hints</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="265.5" x="48.15" y="90.6521">- Move the mouse cursor over a name to see more information.</text><text fill="#808080" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="216" x="48.15" y="101.9725">- Click on a name to go to the corresponding page.</text><!--MD5=[ec65fffdf6230ba94f2b6f185b17fa43]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum--><a href="../DDICDILibrary/Classes/DataDescription/Dimensional/RevisableDatum.html#super-class-hierarchy-generalization" target="_top" title=" ― RevisableDatum:&#10;A datum that can be qualified by a revision." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/Classes/DataDescription/Dimensional/RevisableDatum.html#super-class-hierarchy-generalization" xlink:show="new" xlink:title=" ― RevisableDatum:&#10;A datum that can be qualified by a revision." xlink:type="simple"><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum"><rect codeLine="57" fill="#F1F1F1" height="36.1688" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="135" x="119.7" y="287.1"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="157.95" y="300.9428">Dimensional::</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="92.7" x="140.85" y="316.0002">RevisableDatum</text></g></a><!--MD5=[fa26dd5b28bd31e0227766c25574e362]
+entity ##6--><!--MD5=[491939936e0e3d9e57d75ceabcd1aef7]
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision--><g id="elem_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision"><rect codeLine="46" fill="#FFD700" height="90.9141" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision" rx="2.25" ry="2.25" style="stroke:#404040;stroke-width:0.45;" width="174.6" x="99.9" y="123.75"/><text fill="#000000" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="58.5" x="157.95" y="137.5928">Dimensional::</text><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="162.9" y="152.6502">Revision</text><line style="stroke:#404040;stroke-width:0.45;" x1="100.8" x2="273.6" y1="159.9188" y2="159.9188"/><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="96.3" x="105.3" y="176.5986">algorithm : String</text><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" target="_top" title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram" xlink:show="new" xlink:title=" ― Identifier:&#10;Identifier for objects requiring short- or long-lasting referencing and management." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="55.8" x="105.3" y="192.4471">identifier :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="48.6" x="164.7" y="192.4471">Identifier</text></a><a href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" target="_top" title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:actuate="onRequest" xlink:href="../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram" xlink:show="new" xlink:title=" ― InternationalString:&#10;Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ..." xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="56.7" x="105.3" y="208.2955">overview :</text><text fill="#0000FF" font-family="sans-serif" font-size="12.6" lengthAdjust="spacing" textLength="103.5" x="165.6" y="208.2955">InternationalString</text></a></g><!--MD5=[3bc40680a655027d8504ae1c7cdd14a1]
+reverse link DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision to DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum--><g id="link_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision_DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum"><a href="" target="_top" title=" ― correspondsTo:&#10;" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title=" ― correspondsTo:&#10;" xlink:type="simple"><path codeLine="69" d="M187.2,219.429 C187.2,243.054 187.2,269.838 187.2,286.866 " fill="none" id="DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision-backto-DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum" style="stroke:#808080;stroke-width:1.35;"/><polygon fill="#808080" points="187.2,214.749,183.6,222.849,187.2,219.249,190.8,222.849,187.2,214.749" style="stroke:#808080;stroke-width:1.35;"/><text fill="#000000" font-family="sans-serif" font-size="11.7" lengthAdjust="spacing" textLength="76.5" x="188.1" y="255.1456">correspondsTo</text></a></g><rect height="33.9609" style="stroke:#00000000;stroke-width:0.9;fill:none;" width="289.8" x="36" y="327.7688"/><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="179.55" y="337.1115"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="2.7" x="179.55" y="348.4318"> </text><text fill="#888888" font-family="sans-serif" font-size="9" lengthAdjust="spacing" textLength="289.8" x="36" y="359.7521">DDI Cross Domain Integration (DDI-CDI)   1.0 - Dimensional::Revision</text><!--MD5=[eeea0cd0ac8ee298b4c5371364085455]
+@startuml
+!pragma ratio 0.5625
+' HD display aspect ratio 16:9
+' hyperlinkColor and pathHoverColor do not seem to work with class diagrams
+' working approach: colors per item
+' default font size for class names is 14
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Revision in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Dimensional::Revision
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+' Core class of diagram
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision as "<size:10>Dimensional::\n<color:black>Revision" #FFD700 {
+  algorithm : String
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  overview : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+}
+
+' Class definitions for associated classes without superclass (might have also an association)
+' This would be too many constraints for Graphviz. 
+together {
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum as "<size:10>Dimensional::\n<color:blue>RevisableDatum" [[../DDICDILibrary/Classes/DataDescription/Dimensional/RevisableDatum.html#super-class-hierarchy-generalization{ <U+2015> RevisableDatum:\nA datum that can be qualified by a revision.}]]
+}
+
+' Class definitions for suppliers of abstractions
+together {
+}
+
+' Rest of class definitions, without associated classes of core class and abstraction supplier classes
+
+
+
+' Associations
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision <-[#grey]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum [[{ <U+2015> correspondsTo:\n}]] : correspondsTo
+
+
+' Abstractions
+@enduml
+
+@startuml
+!pragma ratio 0.5625
+
+hide circle
+hide empty members
+scale 0.9
+
+skinparam {
+  ArrowThickness 1.5
+  MinClassWidth 150
+}
+
+skinparam legend {
+  BackgroundColor white
+  FontSize 10
+}
+
+skinparam note {
+  BackgroundColor white
+}
+
+skinparam class {
+  ArrowColor #404040
+  BorderColor #404040
+}
+
+skinparam package {
+  FontColor lightgrey
+  BorderColor lightgrey
+}
+
+title <size:20>UML Diagram: Class Revision in Context\n
+footer \n\nDDI Cross Domain Integration (DDI-CDI)   1.0 - Dimensional::Revision
+
+legend top left
+**Hints**
+<color:grey>- Move the mouse cursor over a name to see more information.
+<color:grey>- Click on a name to go to the corresponding page.
+endlegend
+
+class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision as "<size:10>Dimensional::\n<color:black>Revision" #FFD700 {
+  algorithm : String
+  identifier : <color:blue>Identifier   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/Identifier.html#diagram{ <U+2015> Identifier:\nIdentifier for objects requiring short- or long-lasting referencing and management.}]]]
+  overview : <color:blue>InternationalString   	  [[[../DDICDILibrary/DataTypes/StructuredDataTypes/InternationalString.html#diagram{ <U+2015> InternationalString:\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String ...}]]]
+}
+
+together {
+  class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum as "<size:10>Dimensional::\n<color:blue>RevisableDatum" [[../DDICDILibrary/Classes/DataDescription/Dimensional/RevisableDatum.html#super-class-hierarchy-generalization{ <U+2015> RevisableDatum:\nA datum that can be qualified by a revision.}]]
+}
+
+together {
+}
+
+
+
+
+DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision <-[#grey]- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum [[{ <U+2015> correspondsTo:\n}]] : correspondsTo
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 19:34:49 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>
