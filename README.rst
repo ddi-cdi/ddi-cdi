@@ -1,6 +1,24 @@
 DDI-CDI Specification
 *********************
 
+-----
+
+**For the impatient:**
+
+-  The complete download package can be found under
+   '`Downloads <https://bitbucket.org/ddi-alliance/ddi-cdi/downloads/>`_'
+   in the left navigation bar of Bitbucket.
+   
+-  The model in syntax representations/encodings, the high-level and
+   field-level documentation are available in the folder build.
+   
+-  The core model field-level documentation is available in the section
+   DDICDIModels::DDICDILibrary.
+   
+-  Examples are available in the folder source/example.
+
+-----
+
 The DDI-Cross Domain Integration (DDI-CDI) specification provides a
 model for working with a wide variety of research data across many
 scientific and policy domains. It provides a level of detail which
@@ -22,20 +40,6 @@ comply with a range of related specifications for both functions related
 to data description and process/provenance. The model is designed to be
 easy to fit into such systems, by aligning with relevant external
 standards, and to be align-able with them into the future.
-
-**For the impatient:**
-
--  The complete download package can be found under
-   '`Downloads <https://bitbucket.org/ddi-alliance/ddi-cdi/downloads/>`_'
-   in the left navigation bar of Bitbucket.
-   
--  The model in syntax representations/encodings, the high-level and
-   field-level documentation are available in the folder build.
-   
--  The core model field-level documentation is available in the section
-   DDICDIModels::DDICDILibrary.
-   
--  Examples are available in the folder source/example.
 
 Further information on DDI-CDI is available at the
 related DDI Alliance web page https://ddialliance.org/Specification/DDI-CDI/.
