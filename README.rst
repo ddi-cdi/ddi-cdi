@@ -25,12 +25,16 @@ standards, and to be align-able with them into the future.
 
 **For the impatient:**
 
- - The complete download package can be found under 'Downloads' in the
-   left navigation bar of Bitbucket. 
+ - The complete download package can be found under
+   '`Downloads <https://bitbucket.org/ddi-alliance/ddi-cdi/downloads/>`_'
+   in the left navigation bar of Bitbucket.
+   
  - The model in syntax representations/encodings, the high-level and
    field-level documentation are available in the folder build.
+   
  - The core model field-level documentation is available in the section
    DDICDIModels::DDICDILibrary.
+   
  - Examples are available in the folder source/example.
 
 Further information on DDI-CDI is available at the
