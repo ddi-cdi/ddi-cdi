@@ -23,11 +23,15 @@ to data description and process/provenance. The model is designed to be
 easy to fit into such systems, by aligning with relevant external
 standards, and to be align-able with them into the future.
 
-The core model field-level documentation is available in the section
-:ref:`DDICDIModels::DDICDILibrary`.
+**
+For the impatient:
 
-The corresponding Git repository can be found at
-https://bitbucket.org/ddi-alliance/ddi-cdi/.
+ - The model in syntax representations/encodings, the high-level and field-level
+   documentation are available in the folder build.
+ - The core model field-level documentation is available in the section
+   DDICDIModels::DDICDILibrary.
+ - Examples are available in the folder source/example.
+**
 
 Further information on DDI-CDI is available at the
 related DDI Alliance web page https://ddialliance.org/Specification/DDI-CDI/.
