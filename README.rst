@@ -7,7 +7,8 @@ DDI-CDI Specification
 
 -  The complete download package can be found under
    '`Downloads <https://bitbucket.org/ddi-alliance/ddi-cdi/downloads/>`_'
-   in the left navigation bar of Bitbucket.
+   in the left navigation bar of Bitbucket. Specific releases are available
+   below '`Tags <https://bitbucket.org/ddi-alliance/ddi-cdi/downloads/?tab=tags>`_'.
    
 -  The model in syntax representations/encodings, the high-level and
    field-level documentation are available in the folder build.
