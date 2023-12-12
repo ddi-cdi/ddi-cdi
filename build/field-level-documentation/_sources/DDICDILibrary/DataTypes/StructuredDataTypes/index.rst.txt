@@ -25,7 +25,6 @@ This package contains classes which describe logical values that have a complex 
    Command.rst
    CommandCode.rst
    CommandFile.rst
-   ComplexLanguageString.rst
    ContactInformation.rst
    ControlledVocabularyEntry.rst
    CorrespondenceDefinition.rst
@@ -41,7 +40,6 @@ This package contains classes which describe logical values that have a complex 
    InternationalRegistrationDataIdentifier.rst
    InternationalString.rst
    LabelForDisplay.rst
-   LanguageSpecificString.rst
    LanguageString.rst
    LicenseInformation.rst
    NonDdiIdentifier.rst

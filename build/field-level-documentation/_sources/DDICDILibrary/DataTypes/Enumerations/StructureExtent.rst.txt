@@ -16,125 +16,134 @@ Examples
 ==========
 A binary relation R on a collection C is total if all members of C are related to each other in R. The relation is partial otherwise.
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/Enumerations/StructureExtent.pu
 
-.. dropdown:: Enumeration literals
-   :open:
+.. container::
+   :name: literals
 
-   .. list-table::
-      :widths: 20 80
-      :header-rows: 1
-      :class: datatable-enumeration-literals
+   .. dropdown:: Enumeration literals
+      :open:
 
-      * - Name
-        - Description
-      * - Partial
-        - Some members of a collection C are not related to each other.
-      * - Total
-        - All members of a collection C are related to each other.
+      .. list-table::
+         :widths: 20 80
+         :header-rows: 1
+         :class: datatable-enumeration-literals
 
-.. dropdown:: Usage
+         * - Name
+           - Description
+         * - Partial
+           - Some members of a collection C are not related to each other.
+         * - Total
+           - All members of a collection C are related to each other.
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+.. container::
+   :name: usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - Class
-        - Agents
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Agents::AgentStructure`
-        - totality
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryRelationStructure`
-        - totality
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptStructure`
-        - totality
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure`
-        - totality
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordRelationStructure`
-        - totality
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSetStructure`
-        - totality
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalLayoutRelationStructure`
-        - totality
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentStructure`
-        - totality
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemStructure`
-        - totality
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure`
-        - totality
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CodeListStructure`
-        - totality
-      * - Class
-        - CollectionsPattern
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Structure`
-        - totality
+   .. dropdown:: Usage
+
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
+
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - Class
+           - Agents
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Agents::AgentStructure`
+           - totality
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryRelationStructure`
+           - totality
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptStructure`
+           - totality
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure`
+           - totality
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordRelationStructure`
+           - totality
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSetStructure`
+           - totality
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalLayoutRelationStructure`
+           - totality
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentStructure`
+           - totality
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemStructure`
+           - totality
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure`
+           - totality
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CodeListStructure`
+           - totality
+         * - Class
+           - CollectionsPattern
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Structure`
+           - totality
 
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: encodings
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Syntax representations / encodings
 
-   .. tab-set::
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      .. tab-set::
 
-         Fragment for the enumeration **StructureExtent**
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-         .. literalinclude:: /xmi/StructureExtent.xmi 
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+            Fragment for the enumeration **StructureExtent**
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            .. literalinclude:: /xmi/StructureExtent.xmi 
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         Fragment for the enumeration **StructureExtent**
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/StructureExtent_xsd.txt 
-            :language: xml
-            :linenos:
-            :dedent: 2
-            :emphasize-lines: 1
+            Fragment for the enumeration **StructureExtent**
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/StructureExtent_xsd.txt 
+               :language: xml
+               :linenos:
+               :dedent: 2
+               :emphasize-lines: 1
 
-         Fragment for the enumeration **StructureExtent** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/StructureExtent.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+            Fragment for the enumeration **StructureExtent** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/StructureExtent.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3

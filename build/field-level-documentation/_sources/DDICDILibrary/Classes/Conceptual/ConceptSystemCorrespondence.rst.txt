@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence:
 
-
 ConceptSystemCorrespondence
 ***************************
 
@@ -23,145 +22,154 @@ Explanatory notes
 Describes correspondence with one or more maps which identify a source and target concept and defines their commonality and difference using descriptive text and controlled vocabularies.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - catalogDetails
+           - \- *own class* \-
+           - Bundles the information useful for a data catalog entry. Examples would be creator, contributor, title, copyright, embargo, and license information. A set of information useful for attribution, data discovery, and access. This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails` 
+           - 0..1
+           - 
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - catalogDetails
-        - \- *own class* \-
-        - Bundles the information useful for a data catalog entry. Examples would be creator, contributor, title, copyright, embargo, and license information. A set of information useful for attribution, data discovery, and access. This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails` 
-        - 0..1
-        - 
+         * - displayLabel
+           - \- *own class* \-
+           - A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LabelForDisplay` 
+           - 0..*
+           - 
 
-      * - displayLabel
-        - \- *own class* \-
-        - A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LabelForDisplay` 
-        - 0..*
-        - 
+         * - identifier
+           - \- *own class* \-
+           - Identifier for objects requiring short- or long-lasting referencing and management.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
+           - 0..1
+           - 
 
-      * - identifier
-        - \- *own class* \-
-        - Identifier for objects requiring short- or long-lasting referencing and management.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
-        - 0..1
-        - 
+         * - purpose
+           - \- *own class* \-
+           - Intent or reason for the object/the description of the object.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
+           - 0..1
+           - 
 
-      * - purpose
-        - \- *own class* \-
-        - Intent or reason for the object/the description of the object.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
-        - 0..1
-        - 
-
-      * - usage
-        - \- *own class* \-
-        - Explanation of the ways in which the object is employed.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
-        - 0..1
-        - 
+         * - usage
+           - \- *own class* \-
+           - Explanation of the ways in which the object is employed.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
+           - 0..1
+           - 
 
 
-.. dropdown:: Associations
+.. container::
+   :name: associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of ConceptSystemCorrespondence
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - from
-        - ConceptSystemCorrespondence has ConceptMap
-        - Concept system correspondence has zero to many concept maps.
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap`
-        - 0..*
-        - composite
-        - \- *own class* \-
-      * - from
-        - ConceptSystemCorrespondence maps ConceptSystem
-        - Concept system correspondence maps two to many concept systems. Realization of structures in symmetric relation. When concepts of a single concept system are mapped, the Concept has to appear twice as target.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem`
-        - 2..*
-        - none
-        - \- *own class* \-
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of ConceptSystemCorrespondence
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - from
+           - ConceptSystemCorrespondence has ConceptMap
+           - Concept system correspondence has zero to many concept maps.
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap`
+           - 0..*
+           - composite
+           - \- *own class* \-
+         * - from
+           - ConceptSystemCorrespondence maps ConceptSystem
+           - Concept system correspondence maps two to many concept systems. Realization of structures in symmetric relation. When concepts of a single concept system are mapped, the Concept has to appear twice as target.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem`
+           - 2..*
+           - none
+           - \- *own class* \-
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: encodings
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Syntax representations / encodings
+    
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
+    
+      .. tab-set::
+    
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
+    
+            Fragment for the class **ConceptSystemCorrespondence** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+    
+            .. literalinclude:: /xmi/ConceptSystemCorrespondence.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-   .. tab-set::
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+            Fragment for the class **ConceptSystemCorrespondence** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         Fragment for the class **ConceptSystemCorrespondence** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         .. literalinclude:: /xmi/ConceptSystemCorrespondence.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+            Fragment for the class **ConceptSystemCorrespondence** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+         .. tab-item:: JSON-LD
+            :class-content: encoding
 
-         Fragment for the class **ConceptSystemCorrespondence** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
-
-         .. literalinclude:: /DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
-
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
-
-         Fragment for the class **ConceptSystemCorrespondence** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
-
-         .. literalinclude:: /DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
-
-      .. tab-item:: JSON-LD
-         :class-content: encoding
-
-         Fragment for the class **ConceptSystemCorrespondence** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
-
-         .. literalinclude:: /DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.jsonld 
-            :language: JSON-LD
-            :linenos:
-            :emphasize-lines: 5
+            Fragment for the class **ConceptSystemCorrespondence** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Conceptual/ConceptSystemCorrespondence.jsonld 
+               :language: JSON-LD
+               :linenos:
+               :emphasize-lines: 5
 

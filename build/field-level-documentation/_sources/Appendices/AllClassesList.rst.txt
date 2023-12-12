@@ -42,7 +42,7 @@ All Classes (list)
      - 1 
      - 5
      - 0
-     - 6
+     - 8
      - 0
    * - :ref:`DDICDIModels::Context::PROV::Agent`
      - :ref:`DDICDIModels::Context::PROV`
@@ -128,7 +128,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 2
+     - 1
      - 1
      - 0
      - 3
@@ -151,7 +151,7 @@ All Classes (list)
      - 0
      - 0 
      - 8
-     - 0
+     - 1
      - 1
      - 6
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition`
@@ -423,9 +423,9 @@ All Classes (list)
      - 0
      - no
      - yes
-     - 5
+     - 4
      - 12 
-     - 21
+     - 19
      - 0
      - 6
      - 0
@@ -503,7 +503,7 @@ All Classes (list)
      - 2
      - 2 
      - 3
-     - 0
+     - 1
      - 0
      - 6
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable`
@@ -513,8 +513,8 @@ All Classes (list)
      - yes
      - 1
      - 4 
-     - 9
-     - 0
+     - 7
+     - 1
      - 2
      - 6
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic`
@@ -535,7 +535,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 1
+     - 0
      - 1
      - 0
      - 3
@@ -579,7 +579,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 14
+     - 10
      - 0
      - 2
      - 0
@@ -662,13 +662,13 @@ All Classes (list)
      - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - 1
+     - 2
      - no
      - no
      - 0
      - 0 
-     - 6
      - 3
+     - 4
      - 0
      - 3
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::DescriptorValueDomain`
@@ -690,7 +690,7 @@ All Classes (list)
      - 0
      - 0 
      - 2
-     - 8
+     - 6
      - 0
      - 11
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::DeterministicImperative`
@@ -711,7 +711,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 4
+     - 2
      - 1
      - 1
      - 3
@@ -733,7 +733,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 2
+     - 1
      - 3
      - 1
      - 2
@@ -750,26 +750,26 @@ All Classes (list)
      - 3
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - 0
+     - 1
      - no
      - no
      - 0
      - 0 
+     - 0
      - 5
      - 0
      - 1
-     - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - 0
+     - 1
      - no
      - no
      - 0
      - 0 
-     - 4
+     - 1
+     - 3
      - 0
      - 1
-     - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
      - 2
@@ -777,19 +777,19 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 2
      - 1
+     - 2
      - 0
      - 6
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyMember`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - 1
+     - 2
      - no
      - no
      - 0
      - 0 
+     - 2
      - 4
-     - 3
      - 0
      - 3
    * - :ref:`DDICDIModels::Context::PROV::Entity`
@@ -843,7 +843,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 3
+     - 0
      - 1
      - 0
      - 3
@@ -887,18 +887,18 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 7
-     - 3
+     - 2
+     - 5
      - 0
-     - 3
+     - 1
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - 0
      - no
      - yes
-     - 8
-     - 8 
-     - 4
+     - 2
+     - 7 
+     - 5
      - 0
      - 3
      - 0
@@ -909,8 +909,8 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 8
-     - 8
+     - 7
+     - 6
      - 4
      - 11
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap`
@@ -924,46 +924,46 @@ All Classes (list)
      - 0
      - 4
      - 0
-   * - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::Key`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
+   * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Key`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - 0
-     - yes
      - no
-     - 0
-     - 0 
+     - yes
+     - 4
+     - 4 
      - 6
      - 0
+     - 1
      - 0
+   * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - 0
-   * - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - 0
-     - yes
      - no
-     - 0
-     - 0 
-     - 2
-     - 0
-     - 0
-     - 0
-   * - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinitionMember`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - 2
      - yes
+     - 1
+     - 1 
+     - 4
+     - 0
+     - 1
+     - 0
+   * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinitionMember`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - 2
+     - no
      - no
      - 0
      - 0 
      - 1
-     - 1
+     - 2
      - 0
      - 6
-   * - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyMember`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
+   * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - 1
-     - yes
      - no
-     - 0
-     - 0 
+     - yes
+     - 5
+     - 5 
      - 2
      - 3
      - 0
@@ -975,7 +975,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 1
+     - 0
      - 3
      - 0
      - 2
@@ -1074,7 +1074,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 1
+     - 0
      - 3
      - 0
      - 2
@@ -1091,24 +1091,24 @@ All Classes (list)
      - 3
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - 0
+     - 1
      - no
      - no
      - 0
      - 0 
+     - 0
      - 5
      - 0
      - 1
-     - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - 1
+     - 2
      - no
      - no
      - 0
      - 0 
+     - 0
      - 4
-     - 3
      - 0
      - 3
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Agents::Machine`
@@ -1124,13 +1124,13 @@ All Classes (list)
      - 4
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - 1
+     - 2
      - no
      - no
      - 0
      - 0 
-     - 6
-     - 3
+     - 1
+     - 4
      - 0
      - 3
    * - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Map`
@@ -1151,7 +1151,7 @@ All Classes (list)
      - yes
      - 1
      - 1 
-     - 2
+     - 1
      - 1
      - 1
      - 3
@@ -1228,7 +1228,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 5
+     - 6
      - 0
      - 8
      - 0
@@ -1322,13 +1322,13 @@ All Classes (list)
      - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Population`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - 2
+     - 3
      - no
      - no
      - 0
      - 0 
-     - 4
      - 2
+     - 1
      - 1
      - 8
    * - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Position`
@@ -1438,7 +1438,7 @@ All Classes (list)
      - 0
      - 0 
      - 2
-     - 8
+     - 6
      - 0
      - 11
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable`
@@ -1448,7 +1448,7 @@ All Classes (list)
      - yes
      - 3
      - 3 
-     - 6
+     - 3
      - 4
      - 3
      - 8
@@ -1558,10 +1558,21 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 0
+     - 1
      - 4
      - 0
      - 3
+   * - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::SequencePosition`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
+     - 0
+     - no
+     - no
+     - 0
+     - 0 
+     - 1
+     - 0
+     - 2
+     - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Service`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
      - 2
@@ -1638,7 +1649,7 @@ All Classes (list)
      - 4
      - 3
      - 2
-     - 6
+     - 8
    * - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Structure`
      - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern`
      - 0
@@ -1679,7 +1690,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 1
+     - 0
      - 1
      - 0
      - 3
@@ -1712,7 +1723,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 6
+     - 4
      - 0
      - 5
      - 0
@@ -1731,24 +1742,24 @@ All Classes (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
      - 1
      - no
-     - no
-     - 0
-     - 0 
-     - 4
-     - 0
+     - yes
+     - 1
+     - 2 
+     - 2
+     - 1
      - 1
      - 6
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - 1
+     - 2
      - no
      - yes
      - 1
      - 1 
-     - 8
-     - 0
      - 2
-     - 6
+     - 1
+     - 1
+     - 7
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations`
      - 0
@@ -1822,7 +1833,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 3
+     - 2
      - 1
      - 0
      - 3
@@ -1877,7 +1888,7 @@ All Classes (list)
      - no
      - 0
      - 0 
-     - 1
+     - 0
      - 3
      - 0
      - 2
@@ -1894,23 +1905,23 @@ All Classes (list)
      - 3
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide`
-     - 0
+     - 1
      - no
      - no
      - 0
      - 0 
-     - 4
+     - 0
+     - 5
      - 0
      - 1
-     - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKeyMember`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide`
-     - 1
+     - 2
      - no
      - no
      - 0
      - 0 
-     - 2
-     - 3
+     - 0
+     - 4
      - 0
      - 3

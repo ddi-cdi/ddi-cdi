@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DesignPatterns::SignificationPattern::Signified:
 
-
 *Signified*
 ***********
 
@@ -19,48 +18,51 @@ Explanatory notes
 :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept` or object represented by the sign.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DesignPatterns/SignificationPattern/Signified.pu
 
 
 
-.. dropdown:: Associations
+.. container::
+   :name: associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of Signified
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - to
-        - Sign denotes Signified
-        - Concept or object denoted by the signifier associated to the sign.
-        - 1..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::SignificationPattern::Sign`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - to
-        - Signifier represents Signified
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::SignificationPattern::Signifier`
-        - 1..*
-        - none
-        - \- *own class* \-
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of Signified
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - to
+           - Sign denotes Signified
+           - Concept or object denoted by the signifier associated to the sign.
+           - 1..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::SignificationPattern::Sign`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - to
+           - Signifier represents Signified
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::SignificationPattern::Signifier`
+           - 1..*
+           - none
+           - \- *own class* \-
 

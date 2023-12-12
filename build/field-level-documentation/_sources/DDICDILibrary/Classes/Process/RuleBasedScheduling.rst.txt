@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling:
 
-
 RuleBasedScheduling
 *******************
 
@@ -23,203 +22,215 @@ Explanatory notes
 :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Rule` based scheduling is guided by its scheduling strategy. This is described by an enumeration that consists of "forwardChaining" and "backwardChaining".
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/Classes/Process/RuleBasedScheduling.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
 
-   | |_| ᐊ── :ref:`Process::NonDeterministicDeclarative<DDICDIModels::DDICDILibrary::Classes::Process::NonDeterministicDeclarative>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | |_| ᐊ── :ref:`Process::NonDeterministicDeclarative<DDICDIModels::DDICDILibrary::Classes::Process::NonDeterministicDeclarative>`
 
-   | |_| |_| ᐊ── :focus:`Process::RuleBasedScheduling`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - schedulingType
-        - \- *own class* \-
-        - Indicated if rule-based scheduling is forward-chaining or backward-chaining.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SchedulingStrategy` 
-        - 1..1
-        - 
-
-      * - description
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-        - A desription of the control logic in human-readable language.
-        - String 
-        - 0..1
-        - 
-
-      * - identifier
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-        - Identifier for objects requiring short- or long-lasting referencing and management.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
-        - 0..1
-        - 
-
-      * - workflow
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-        - Reference to the system or standard from which the workflow was taken.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
-        - 0..1
-        - 
+      | |_| |_| ᐊ── :focus:`Process::RuleBasedScheduling`
 
 
-.. dropdown:: Associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of RuleBasedScheduling
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - to
-        - Activity hasInternal ControlLogic
-        - An activity is embedded in the control construct which launches it.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
-        - 0..*
-        - none
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - from
-        - ControlLogic has InformationFlowDefinition
-        - A control construct has zero or more information flow definitions each of which provides the control construct with zero or more input and output parameters used or produced in the step/sub-step with which it is associated.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition`
-        - 0..*
-        - shared
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - to
-        - ControlLogic hasSubControlLogic ControlLogic
-        - Control logic is a container of control logic which is in turn a container of control logic ad infinitum so that it is able to represent the structure of a program.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic`
-        - 0..1
-        - none
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - from
-        - ControlLogic informs ProcessingAgent
-        - Control logic informs a processing agent. The information may be deterministic or non-deterministic.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent`
-        - 0..*
-        - none
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - from
-        - ControlLogic invokes Activity
-        - Control logic invokes an activity deterministically (either conditionally or unconditionally) or non-derministically (based on temporal constraints or rule-based scheduling).
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
-        - 1..*
-        - none
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - from
-        - RuleBasedScheduling has Curator
-        - Rule based scheduling has one or more curators. The curators may be commercial/off-the-shelf, open source and/or home grown. They are likely to be domain-specific which is why rule based scheduling might employ many.
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Curator`
-        - 0..*
-        - composite
-        - \- *own class* \-
-      * - from
-        - RuleBasedScheduling has RuleSet
-        - Rule sets are a component of rule based scheduling.
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::RuleSet`
-        - 0..*
-        - composite
-        - \- *own class* \-
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: attributes
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - schedulingType
+           - \- *own class* \-
+           - Indicated if rule-based scheduling is forward-chaining or backward-chaining.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::SchedulingStrategy` 
+           - 1..1
+           - 
 
-   .. tab-set::
+         * - description
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+           - A desription of the control logic in human-readable language.
+           - String 
+           - 0..1
+           - 
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+         * - identifier
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+           - Identifier for objects requiring short- or long-lasting referencing and management.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
+           - 0..1
+           - 
 
-         Fragment for the class **RuleBasedScheduling** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+         * - workflow
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+           - Reference to the system or standard from which the workflow was taken.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
 
-         .. literalinclude:: /xmi/RuleBasedScheduling.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+.. container::
+   :name: associations
 
-         Fragment for the class **RuleBasedScheduling** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of RuleBasedScheduling
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - to
+           - Activity hasInternal ControlLogic
+           - An activity is embedded in the control construct which launches it.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
+           - 0..*
+           - none
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - from
+           - ControlLogic has InformationFlowDefinition
+           - A control construct has zero or more information flow definitions each of which provides the control construct with zero or more input and output parameters used or produced in the step/sub-step with which it is associated.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition`
+           - 0..*
+           - shared
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - to
+           - ControlLogic hasSubControlLogic ControlLogic
+           - Control logic is a container of control logic which is in turn a container of control logic ad infinitum so that it is able to represent the structure of a program.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic`
+           - 0..1
+           - none
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - from
+           - ControlLogic informs ProcessingAgent
+           - Control logic informs a processing agent. The information may be deterministic or non-deterministic.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent`
+           - 0..*
+           - none
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - from
+           - ControlLogic invokes Activity
+           - Control logic invokes an activity deterministically (either conditionally or unconditionally) or non-derministically (based on temporal constraints or rule-based scheduling).
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
+           - 1..*
+           - none
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - from
+           - RuleBasedScheduling has Curator
+           - Rule based scheduling has one or more curators. The curators may be commercial/off-the-shelf, open source and/or home grown. They are likely to be domain-specific which is why rule based scheduling might employ many.
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Curator`
+           - 0..*
+           - composite
+           - \- *own class* \-
+         * - from
+           - RuleBasedScheduling has RuleSet
+           - Rule sets are a component of rule based scheduling.
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::RuleSet`
+           - 0..*
+           - composite
+           - \- *own class* \-
 
-         .. literalinclude:: /DDICDILibrary/Classes/Process/RuleBasedScheduling_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+.. container::
+   :name: encodings
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+   .. dropdown:: Syntax representations / encodings
+    
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
+    
+      .. tab-set::
+    
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
+    
+            Fragment for the class **RuleBasedScheduling** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+    
+            .. literalinclude:: /xmi/RuleBasedScheduling.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         Fragment for the class **RuleBasedScheduling** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/Classes/Process/RuleBasedScheduling.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+            Fragment for the class **RuleBasedScheduling** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Process/RuleBasedScheduling_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         Fragment for the class **RuleBasedScheduling** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+            Fragment for the class **RuleBasedScheduling** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Process/RuleBasedScheduling.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/Classes/Process/RuleBasedScheduling.jsonld 
-            :language: JSON-LD
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the class **RuleBasedScheduling** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Process/RuleBasedScheduling.jsonld 
+               :language: JSON-LD
+               :linenos:
+               :emphasize-lines: 5
 

@@ -13,11 +13,11 @@ Definition
 An alternative name for the resource. The distinction between titles and alternative titles is application-specific. (See DCMI Metadata Terms - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/alternative.)
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /Context/DCTerms/alternative.pu
 

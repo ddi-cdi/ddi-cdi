@@ -95,10 +95,6 @@ Inheritance Tree (diagram)
         class DDICDIModels::DDICDILibrary::Classes::Conceptual::UnitType as "UnitType"
       }
       DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept <|-- DDICDIModels::DDICDILibrary::Classes::Conceptual::UnitType
-      package Conceptual #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe as "Universe"
-      }
-      DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept <|-- DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe
       package Conceptual [[../../_build/Appendices/InheritanceTreeDiagram/Conceptual.html{Inheritance tree of super classes starting from package Conceptual without leaf classes}]] #FAFAD2 {
         class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem as "ConceptSystem"
       }
@@ -207,38 +203,40 @@ Inheritance Tree (diagram)
       package DataDescription [[../../_build/Appendices/InheritanceTreeDiagram/DataDescription.html{Inheritance tree of super classes starting from package DataDescription without leaf classes}]] #FAFAD2 {
         class DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue as "InstanceValue"
       }
-      package Long #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor as "Descriptor"
+      package DataDescription #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember as "KeyMember"
       }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor
-      package Dimensional #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyMember as "DimensionalKeyMember"
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyMember
-      package KeyValue #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey as "InstanceKey"
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey
-      package DataDescriptionPattern #FAFAD2 {
-        abstract class DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyMember as "KeyMember"
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyMember
-      package Long #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember as "LongMainKeyMember"
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember
-      package KeyValue #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember as "MainKeyMember"
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember
       package Long #FAFAD2 {
         class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue as "ReferenceValue"
       }
       DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue
-      package Wide #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKeyMember as "WideKeyMember"
+      package DataDescription [[../../_build/Appendices/InheritanceTreeDiagram/DataDescription.html{Inheritance tree of super classes starting from package DataDescription without leaf classes}]] #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Key as "Key"
       }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKeyMember
+      package Dimensional #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey as "DimensionalKey"
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::Key <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey
+      package KeyValue #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey as "InstanceKey"
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::Key <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey
+      package Long #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey as "LongKey"
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::Key <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey
+      package Wide #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey as "WideKey"
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::Key <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey
+      package DataDescription [[../../_build/Appendices/InheritanceTreeDiagram/DataDescription.html{Inheritance tree of super classes starting from package DataDescription without leaf classes}]] #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition as "KeyDefinition"
+      }
+      package Dimensional #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition as "DimensionalKeyDefinition"
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition
       package CollectionsPattern [[../../_build/Appendices/InheritanceTreeDiagram/CollectionsPattern.html{Inheritance tree of super classes starting from package CollectionsPattern without leaf classes}]] #FAFAD2 {
         abstract class DDICDIModels::DesignPatterns::CollectionsPattern::Member as "Member"
       }

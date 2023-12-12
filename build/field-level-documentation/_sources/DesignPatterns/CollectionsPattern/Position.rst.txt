@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DesignPatterns::CollectionsPattern::Position:
 
-
 *Position*
 **********
 
@@ -19,68 +18,74 @@ Explanatory notes
 Position indexes members within a collection to create a list (array).
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DesignPatterns/CollectionsPattern/Position.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - value
+           - \- *own class* \-
+           - Index value of the member in an ordered array.
+           - Integer 
+           - 1..1
+           - 
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - value
-        - \- *own class* \-
-        - Index value of the member in an ordered array.
-        - Integer 
-        - 1..1
-        - 
 
+.. container::
+   :name: associations
 
-.. dropdown:: Associations
-
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of Position
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - to
-        - List has Position
-        - The Position of the member in the list.  Lifecycle dependency: position cannot exist without a list and can be related to one and only one list.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::List`
-        - 1..1
-        - none
-        - \- *own class* \-
-      * - from
-        - Position indexes Member
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Member`
-        - 0..1
-        - none
-        - \- *own class* \-
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of Position
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - to
+           - List has Position
+           - The Position of the member in the list.  Lifecycle dependency: position cannot exist without a list and can be related to one and only one list.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::List`
+           - 1..1
+           - none
+           - \- *own class* \-
+         * - from
+           - Position indexes Member
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Member`
+           - 0..1
+           - none
+           - \- *own class* \-
 

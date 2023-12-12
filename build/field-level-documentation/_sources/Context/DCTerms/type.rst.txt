@@ -13,11 +13,11 @@ Definition
 The nature or genre of the resource. Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMI-TYPE]. To describe the file format, physical medium, or dimensions of the resource, use the property Format. (See DCMI Metadata Terms - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type.)
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /Context/DCTerms/type.pu
 

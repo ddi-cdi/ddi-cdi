@@ -13,98 +13,107 @@ Definition
 A resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/Selector.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :focus:`StructuredDataTypes::Selector`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :focus:`StructuredDataTypes::Selector`
 
-   |    ᐊ── :ref:`StructuredDataTypes::ObjectAttributeSelector<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectAttributeSelector>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      |    ᐊ── :ref:`StructuredDataTypes::ObjectAttributeSelector<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectAttributeSelector>`
 
-   |    ᐊ── :ref:`StructuredDataTypes::TextPositionSelector<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector>`
+      .. cssclass:: regular
+
+      |    ᐊ── :ref:`StructuredDataTypes::TextPositionSelector<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector>`
 
 
 
 
 
-.. dropdown:: Usage
+.. container::
+   :name: usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+   .. dropdown:: Usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference`
-        - deepLink
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-.. dropdown:: Syntax representations / encodings
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference`
+           - deepLink
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: encodings
 
-   .. tab-set::
+   .. dropdown:: Syntax representations / encodings
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         Fragment for the data type **Selector** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+      .. tab-set::
 
-         .. literalinclude:: /xmi/Selector.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            Fragment for the data type **Selector** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         Fragment for the data type **Selector** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            .. literalinclude:: /xmi/Selector.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Selector_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the data type **Selector** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         Fragment for the data type **Selector** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Selector_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Selector.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the data type **Selector** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         Fragment for the data type **Selector** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Selector.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Selector.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **Selector** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Selector.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

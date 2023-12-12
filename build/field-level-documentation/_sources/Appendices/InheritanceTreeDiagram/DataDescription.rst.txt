@@ -100,38 +100,40 @@ DataDescription
       package DataDescription  {
         class DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue as "<color:blue>InstanceValue" [[../DDICDILibrary/Classes/DataDescription/InstanceValue.html#super-class-hierarchy-generalization{ <U+2015> InstanceValue:\nSingle data instance corresponding to a concept (with a notion of equality defined) being observed, captured, or derived.}]]
       }
-      package Long #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor as "<color:blue>Descriptor" [[../DDICDILibrary/Classes/DataDescription/Long/Descriptor.html#super-class-hierarchy-generalization{ <U+2015> Descriptor:\nUse of a code for variable identification in the context of a data structure and a variable descriptor component.}]]
+      package DataDescription  {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember as "<color:blue>KeyMember" [[../DDICDILibrary/Classes/DataDescription/KeyMember.html#super-class-hierarchy-generalization{ <U+2015> KeyMember:\nSingle data instance that is part of a key.}]]
       }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor
-      package Dimensional #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyMember as "<color:blue>DimensionalKeyMember" [[../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKeyMember.html#super-class-hierarchy-generalization{ <U+2015> DimensionalKeyMember:\nSingle data instance that is part of a dimensional key.}]]
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyMember
-      package KeyValue #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey as "<color:blue>InstanceKey" [[../DDICDILibrary/Classes/DataDescription/KeyValue/InstanceKey.html#super-class-hierarchy-generalization{ <U+2015> InstanceKey:\nSingle-valued key representation produced from the merge of the representations of all key members and a descriptor.}]]
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey
-      package DataDescriptionPattern #FAFAD2 {
-        abstract class DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyMember as "<color:blue>KeyMember" [[../DesignPatterns/DataDescriptionPattern/KeyMember.html#super-class-hierarchy-generalization{ <U+2015> KeyMember:\nSingle data instance that is part of a key.}]]
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyMember
-      package Long #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember as "<color:blue>LongMainKeyMember" [[../DDICDILibrary/Classes/DataDescription/Long/LongMainKeyMember.html#super-class-hierarchy-generalization{ <U+2015> LongMainKeyMember:\nSingle data instance that is part of a long key.}]]
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember
-      package KeyValue #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember as "<color:blue>MainKeyMember" [[../DDICDILibrary/Classes/DataDescription/KeyValue/MainKeyMember.html#super-class-hierarchy-generalization{ <U+2015> MainKeyMember:\nIdentifies the unit of interest, either a statistical unit or a population, via identifier or dimension components, respectively, plus an optional contextual component. If neither identifier nor dimension components are present, then a synthetic id component is used.}]]
-      }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember
       package Long #FAFAD2 {
         class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue as "<color:blue>ReferenceValue" [[../DDICDILibrary/Classes/DataDescription/Long/ReferenceValue.html#super-class-hierarchy-generalization{ <U+2015> ReferenceValue:\nRecorded value in a variable value component. Value referenced by a descriptor.}]]
       }
       DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue
-      package Wide #FAFAD2 {
-        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKeyMember as "<color:blue>WideKeyMember" [[../DDICDILibrary/Classes/DataDescription/Wide/WideKeyMember.html#super-class-hierarchy-generalization{ <U+2015> WideKeyMember:\nSingle data instance that is part of a wide key.}]]
+      package DataDescription  {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Key as "<color:blue>Key" [[../DDICDILibrary/Classes/DataDescription/Key.html#super-class-hierarchy-generalization{ <U+2015> Key:\nCollection of data instances that uniquely identify a collection of data points in a dataset.}]]
       }
-      DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKeyMember
+      package Dimensional #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey as "<color:blue>DimensionalKey" [[../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKey.html#super-class-hierarchy-generalization{ <U+2015> DimensionalKey:\nCollection of data instances that uniquely identify a collection of data points in a dimensional dataset.}]]
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::Key <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey
+      package KeyValue #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey as "<color:blue>InstanceKey" [[../DDICDILibrary/Classes/DataDescription/KeyValue/InstanceKey.html#super-class-hierarchy-generalization{ <U+2015> InstanceKey:\nSingle-valued key representation produced from the merge of the representations of all key members and a descriptor.}]]
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::Key <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey
+      package Long #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey as "<color:blue>LongKey" [[../DDICDILibrary/Classes/DataDescription/Long/LongKey.html#super-class-hierarchy-generalization{ <U+2015> LongKey:\nCollection of data instances that uniquely identify a collection of data points in a long dataset.}]]
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::Key <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey
+      package Wide #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey as "<color:blue>WideKey" [[../DDICDILibrary/Classes/DataDescription/Wide/WideKey.html#super-class-hierarchy-generalization{ <U+2015> WideKey:\nCollection of data instances that uniquely identify a collection of data points in a wide dataset.}]]
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::Key <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey
+      package DataDescription  {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition as "<color:blue>KeyDefinition" [[../DDICDILibrary/Classes/DataDescription/KeyDefinition.html#super-class-hierarchy-generalization{ <U+2015> KeyDefinition:\nCollection of concepts that uniquely defines a collection of data points in a dataset.}]]
+      }
+      package Dimensional #FAFAD2 {
+        class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition as "<color:blue>DimensionalKeyDefinition" [[../DDICDILibrary/Classes/DataDescription/Dimensional/DimensionalKeyDefinition.html#super-class-hierarchy-generalization{ <U+2015> DimensionalKeyDefinition:\nCollection of concepts that uniquely defines a collection of data points in a dimensional dataset.}]]
+      }
+      DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition <|-- DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition
 
       @enduml
 

@@ -131,6 +131,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <section id="explanatory-notes">
 <h2>Explanatory notes<a class="headerlink" href="#explanatory-notes" title="Permalink to this headline">¶</a></h2>
 <p>The instance variable class inherits all of the properties and relationships of the represented variable class and, in turn, the conceptual variable class. This means that an instance variable can be completely populated without the need to create an associated represented variable or conceptual variable. If, however, a user wishes to indicate that a particular instance variable is patterned after a particular represented variable or a particular conceptual variable that may be indicated by including a relationship to the represented variable and/or conceptual variable. Including these references is an important method of indicating that multiple instance variables have the same representation, measure the same concept, and are drawn from the same universe. If two instance variables of a person’s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. The instance variable describes actual instances of data that have been collected.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -138,12 +139,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-deb5a0fb4b3d15d535366ef1b7d5f0e1660714a1.svg" type="image/svg+xml" style="width:1850px;height:1181px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-6155f06da07fc614c68c7787accb6dab6da75afb.svg" type="image/svg+xml" style="width:1811px;height:1166px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="inheritance">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Inheritance<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -163,7 +164,9 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="line">      ᐊ── <span class="focus">Conceptual::InstanceVariable</span></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -297,7 +300,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -339,37 +344,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">InstanceVariable isBasedOn RepresentedVariable</p></td>
-<td><p class="sd-card-text">The represented variable that can be shared by multiple instance variables. Indicates comparability in substantive representation, universe, and (indirectly) conceptual domain. If a relationship to a represented variable is defined there should be no relationship to a conceptual variable.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="#ddicdimodels-ddicdilibrary-classes-conceptual-instancevariable"><span class="std std-ref">InstanceVariable</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">RepresentedVariable isBasedOn ConceptualVariable</p></td>
-<td><p class="sd-card-text">The conceptual variable that can be shared by a set of represented variables. Indicates comparability in conceptual domain and unit type.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">ConceptualVariable</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
-</tr>
 <tr class="row-odd"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">RepresentedVariable measures Universe</p></td>
-<td><p class="sd-card-text">The defined class of people, entities, events, or objects to be measured by the represented variable.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Universe</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">RepresentedVariable takesSentinelValuesFrom SentinelValueDomain</p></td>
 <td><p class="sd-card-text">A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -379,7 +354,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
+<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">RepresentedVariable takesSubstantiveValuesFrom SubstantiveValueDomain</p></td>
 <td><p class="sd-card-text">The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship “Measures” in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -389,7 +364,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">ConceptualVariable measures UnitType</p></td>
 <td><p class="sd-card-text">Identifies the unit type associated with the conceptual variable.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -399,7 +374,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
+<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">ConceptualVariable takesSentinelConceptsFrom SentinelConceptualDomain</p></td>
 <td><p class="sd-card-text">Identifies the conceptual domain containing the set of sentinel concepts used to describe the conceptual variable.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -409,7 +384,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">ConceptualVariable takesSubstantiveConceptsFrom SubstantiveConceptualDomain</p></td>
 <td><p class="sd-card-text">Identifies the substantive conceptual domain containing the set of substantive concepts used to describe the conceptual variable.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -419,27 +394,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">ConceptualVariable uses Concept</p></td>
-<td><p class="sd-card-text">Reference to a concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Concept</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
-</tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">RepresentedVariable isBasedOn ConceptualVariable</p></td>
-<td><p class="sd-card-text">The conceptual variable that can be shared by a set of represented variables. Indicates comparability in conceptual domain and unit type.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">RepresentedVariable</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableCollection has ConceptualVariable</p></td>
 <td><p class="sd-card-text">Variable collection has zero to many conceptual variables.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -449,7 +404,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariablePosition indexes ConceptualVariable</p></td>
 <td><p class="sd-card-text">Variable position indexes a conceptual variable.</p></td>
 <td><p class="sd-card-text">1..1</p></td>
@@ -459,7 +414,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableRelationship hasSource ConceptualVariable</p></td>
 <td></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -469,7 +424,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableRelationship hasTarget ConceptualVariable</p></td>
 <td><p class="sd-card-text">Note that this can be realized as a collection to support tuples.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -479,7 +434,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">AgentListing isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -489,7 +444,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ClassificationFamily isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -499,7 +454,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ClassificationIndex isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -509,12 +464,22 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ClassificationSeries isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Representations/index.html#ddicdimodels-ddicdilibrary-classes-representations"><span class="std std-ref">Representations</span></a></p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Representations/ClassificationSeries.html#ddicdimodels-ddicdilibrary-classes-representations-classificationseries"><span class="std std-ref">ClassificationSeries</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">Concept uses Concept</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">- <em>own package</em> -</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Concept</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
@@ -580,16 +545,6 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">ConceptualVariable uses Concept</p></td>
-<td><p class="sd-card-text">Reference to a concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">ConceptualVariable</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">DataStore isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -599,7 +554,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">EnumerationDomain isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -609,7 +564,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">Level isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">A concept or concept sub-type which describes the level.</p></td>
 <td><p class="sd-card-text">0..1</p></td>
@@ -619,7 +574,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">LogicalRecord isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -629,7 +584,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">PhysicalDataSet isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -639,7 +594,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">PhysicalRecordSegment isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -649,7 +604,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">PhysicalSegmentLayout isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -659,27 +614,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">UnitType uses Concept</p></td>
-<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="UnitType.html#ddicdimodels-ddicdilibrary-classes-conceptual-unittype"><span class="std std-ref">UnitType</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">Universe uses Concept</p></td>
-<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Universe</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableCollection isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -689,7 +624,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">CategoryStatistic appliesTo InstanceVariable</p></td>
 <td></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -699,7 +634,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">DataPoint isDescribedBy InstanceVariable</p></td>
 <td><p class="sd-card-text">The instance variable delimits the values which can populate a data point. Data point is described by one instance variable.</p></td>
 <td><p class="sd-card-text">1..1</p></td>
@@ -709,7 +644,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">Datum isBoundedBy InstanceVariable</p></td>
 <td><p class="sd-card-text">A datum is bounded by an instance variable. The datum is drawn from a set of values, either substantive or sentinel described by the value domain of the instance variable.</p></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -719,27 +654,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">InstanceVariable isBasedOn RepresentedVariable</p></td>
-<td><p class="sd-card-text">The represented variable that can be shared by multiple instance variables. Indicates comparability in substantive representation, universe, and (indirectly) conceptual domain. If a relationship to a represented variable is defined there should be no relationship to a conceptual variable.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">RepresentedVariable</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">InstanceVariable measures Population</p></td>
-<td><p class="sd-card-text">Set of specific units (people, entities, objects, events), usually in a given time and geography, being measured. Can be a specialization of the universe measured by a related represented variable.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Population.html#ddicdimodels-ddicdilibrary-classes-conceptual-population"><span class="std std-ref">Population</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">InstanceVariableMap hasSource InstanceVariable</p></td>
 <td><p class="sd-card-text">The source instance variable for the relationship.</p></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -749,7 +664,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">InstanceVariableMap hasTarget InstanceVariable</p></td>
 <td><p class="sd-card-text">Target instance variables if a directional relation is used.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -759,7 +674,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">LogicalRecord has InstanceVariable</p></td>
 <td></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -769,10 +684,22 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">PhysicalDataSet has InstanceVariable</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../FormatDescription/index.html#ddicdimodels-ddicdilibrary-classes-formatdescription"><span class="std std-ref">FormatDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../FormatDescription/PhysicalDataSet.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicaldataset"><span class="std std-ref">PhysicalDataSet</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+</tr>
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -817,116 +744,88 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 29</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Generalization&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 30</span>      <span class="nt">&lt;general</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-RepresentedVariable&quot;</span><span class="nt">/&gt;</span>
 <span class="linenos"> 31</span>   <span class="nt">&lt;/generalization&gt;</span>
-<span class="linenos"> 32</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_1&quot;</span>
-<span class="linenos"> 33</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_1&quot;</span>
+<span class="linenos"> 32</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType&quot;</span>
+<span class="linenos"> 33</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType&quot;</span>
 <span class="linenos"> 34</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 35</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_1-lowerValue&quot;</span>
-<span class="linenos"> 36</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_1-lowerValue&quot;</span>
-<span class="linenos"> 37</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 38</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_1-upperValue&quot;</span>
-<span class="linenos"> 39</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_1-upperValue&quot;</span>
-<span class="linenos"> 40</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 41</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos"> 42</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos"> 43</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_measures_Population&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 44</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-Population&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 45</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos"> 46</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_2&quot;</span>
-<span class="linenos"> 47</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_2&quot;</span>
-<span class="linenos"> 48</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 49</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_2-lowerValue&quot;</span>
-<span class="linenos"> 50</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_2-lowerValue&quot;</span>
-<span class="linenos"> 51</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 52</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_2-upperValue&quot;</span>
-<span class="linenos"> 53</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_2-upperValue&quot;</span>
-<span class="linenos"> 54</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 55</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos"> 56</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos"> 57</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_isBasedOn_RepresentedVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 58</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-RepresentedVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 59</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos"> 60</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType&quot;</span>
-<span class="linenos"> 61</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType&quot;</span>
-<span class="linenos"> 62</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 63</span>      <span class="nt">&lt;ownedComment</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType-ownedComment&quot;</span>
-<span class="linenos"> 64</span>                    <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType-ownedComment&quot;</span>
-<span class="linenos"> 65</span>                    <span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 66</span>         <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 67</span>         <span class="nt">&lt;body&gt;</span>The data type of this variable. Supports the optional use of an external controlled vocabulary.<span class="nt">&lt;/body&gt;</span>
-<span class="linenos"> 68</span>      <span class="nt">&lt;/ownedComment&gt;</span>
-<span class="linenos"> 69</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType-lowerValue&quot;</span>
-<span class="linenos"> 70</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType-lowerValue&quot;</span>
-<span class="linenos"> 71</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 72</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType-upperValue&quot;</span>
-<span class="linenos"> 73</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType-upperValue&quot;</span>
-<span class="linenos"> 74</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 75</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos"> 76</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos"> 77</span>      <span class="nt">&lt;name&gt;</span>physicalDataType<span class="nt">&lt;/name&gt;</span>
-<span class="linenos"> 78</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ControlledVocabularyEntry&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 79</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos"> 80</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType&quot;</span>
-<span class="linenos"> 81</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-platformType&quot;</span>
-<span class="linenos"> 82</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 83</span>      <span class="nt">&lt;ownedComment</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType-ownedComment&quot;</span>
-<span class="linenos"> 84</span>                    <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-platformType-ownedComment&quot;</span>
-<span class="linenos"> 85</span>                    <span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 86</span>         <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 87</span>         <span class="nt">&lt;body&gt;</span>Describes the application or technical system context in which the variable has been realized. Typically a statistical processing package or other processing environment.<span class="nt">&lt;/body&gt;</span>
-<span class="linenos"> 88</span>      <span class="nt">&lt;/ownedComment&gt;</span>
-<span class="linenos"> 89</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType-lowerValue&quot;</span>
-<span class="linenos"> 90</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-platformType-lowerValue&quot;</span>
-<span class="linenos"> 91</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 92</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType-upperValue&quot;</span>
-<span class="linenos"> 93</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-platformType-upperValue&quot;</span>
-<span class="linenos"> 94</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 95</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos"> 96</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos"> 97</span>      <span class="nt">&lt;name&gt;</span>platformType<span class="nt">&lt;/name&gt;</span>
-<span class="linenos"> 98</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ControlledVocabularyEntry&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 99</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">100</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source&quot;</span>
-<span class="linenos">101</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-source&quot;</span>
-<span class="linenos">102</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">103</span>      <span class="nt">&lt;ownedComment</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source-ownedComment&quot;</span>
-<span class="linenos">104</span>                    <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-source-ownedComment&quot;</span>
-<span class="linenos">105</span>                    <span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">106</span>         <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">107</span>         <span class="nt">&lt;body&gt;</span>Reference capturing provenance information.<span class="nt">&lt;/body&gt;</span>
-<span class="linenos">108</span>      <span class="nt">&lt;/ownedComment&gt;</span>
-<span class="linenos">109</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source-lowerValue&quot;</span>
-<span class="linenos">110</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-source-lowerValue&quot;</span>
-<span class="linenos">111</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">112</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source-upperValue&quot;</span>
-<span class="linenos">113</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-source-upperValue&quot;</span>
-<span class="linenos">114</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">115</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">116</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">117</span>      <span class="nt">&lt;name&gt;</span>source<span class="nt">&lt;/name&gt;</span>
-<span class="linenos">118</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Reference&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">119</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">120</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction&quot;</span>
-<span class="linenos">121</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-variableFunction&quot;</span>
-<span class="linenos">122</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">123</span>      <span class="nt">&lt;ownedComment</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction-ownedComment&quot;</span>
-<span class="linenos">124</span>                    <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-variableFunction-ownedComment&quot;</span>
-<span class="linenos">125</span>                    <span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">126</span>         <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">127</span>         <span class="nt">&lt;body&gt;</span>Immutable characteristic of the variable such as geographic designator, weight, temporal designation, etc.<span class="nt">&lt;/body&gt;</span>
-<span class="linenos">128</span>      <span class="nt">&lt;/ownedComment&gt;</span>
-<span class="linenos">129</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction-lowerValue&quot;</span>
-<span class="linenos">130</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-variableFunction-lowerValue&quot;</span>
-<span class="linenos">131</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">132</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction-upperValue&quot;</span>
-<span class="linenos">133</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-variableFunction-upperValue&quot;</span>
-<span class="linenos">134</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">135</span>         <span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">136</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">137</span>      <span class="nt">&lt;name&gt;</span>variableFunction<span class="nt">&lt;/name&gt;</span>
-<span class="linenos">138</span>      <span class="nt">&lt;isOrdered&gt;</span>true<span class="nt">&lt;/isOrdered&gt;</span>
-<span class="linenos">139</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ControlledVocabularyEntry&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">140</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">141</span><span class="nt">&lt;/packagedElement&gt;</span>
+<span class="linenos"> 35</span>      <span class="nt">&lt;ownedComment</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType-ownedComment&quot;</span>
+<span class="linenos"> 36</span>                    <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType-ownedComment&quot;</span>
+<span class="linenos"> 37</span>                    <span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 38</span>         <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 39</span>         <span class="nt">&lt;body&gt;</span>The data type of this variable. Supports the optional use of an external controlled vocabulary.<span class="nt">&lt;/body&gt;</span>
+<span class="linenos"> 40</span>      <span class="nt">&lt;/ownedComment&gt;</span>
+<span class="linenos"> 41</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType-lowerValue&quot;</span>
+<span class="linenos"> 42</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType-lowerValue&quot;</span>
+<span class="linenos"> 43</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 44</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType-upperValue&quot;</span>
+<span class="linenos"> 45</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType-upperValue&quot;</span>
+<span class="linenos"> 46</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 47</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+<span class="linenos"> 48</span>      <span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos"> 49</span>      <span class="nt">&lt;name&gt;</span>physicalDataType<span class="nt">&lt;/name&gt;</span>
+<span class="linenos"> 50</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ControlledVocabularyEntry&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 51</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos"> 52</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType&quot;</span>
+<span class="linenos"> 53</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-platformType&quot;</span>
+<span class="linenos"> 54</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 55</span>      <span class="nt">&lt;ownedComment</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType-ownedComment&quot;</span>
+<span class="linenos"> 56</span>                    <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-platformType-ownedComment&quot;</span>
+<span class="linenos"> 57</span>                    <span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 58</span>         <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 59</span>         <span class="nt">&lt;body&gt;</span>Describes the application or technical system context in which the variable has been realized. Typically a statistical processing package or other processing environment.<span class="nt">&lt;/body&gt;</span>
+<span class="linenos"> 60</span>      <span class="nt">&lt;/ownedComment&gt;</span>
+<span class="linenos"> 61</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType-lowerValue&quot;</span>
+<span class="linenos"> 62</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-platformType-lowerValue&quot;</span>
+<span class="linenos"> 63</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 64</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-platformType-upperValue&quot;</span>
+<span class="linenos"> 65</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-platformType-upperValue&quot;</span>
+<span class="linenos"> 66</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 67</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+<span class="linenos"> 68</span>      <span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos"> 69</span>      <span class="nt">&lt;name&gt;</span>platformType<span class="nt">&lt;/name&gt;</span>
+<span class="linenos"> 70</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ControlledVocabularyEntry&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 71</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos"> 72</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source&quot;</span>
+<span class="linenos"> 73</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-source&quot;</span>
+<span class="linenos"> 74</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 75</span>      <span class="nt">&lt;ownedComment</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source-ownedComment&quot;</span>
+<span class="linenos"> 76</span>                    <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-source-ownedComment&quot;</span>
+<span class="linenos"> 77</span>                    <span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 78</span>         <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 79</span>         <span class="nt">&lt;body&gt;</span>Reference capturing provenance information.<span class="nt">&lt;/body&gt;</span>
+<span class="linenos"> 80</span>      <span class="nt">&lt;/ownedComment&gt;</span>
+<span class="linenos"> 81</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source-lowerValue&quot;</span>
+<span class="linenos"> 82</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-source-lowerValue&quot;</span>
+<span class="linenos"> 83</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 84</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-source-upperValue&quot;</span>
+<span class="linenos"> 85</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-source-upperValue&quot;</span>
+<span class="linenos"> 86</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 87</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+<span class="linenos"> 88</span>      <span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos"> 89</span>      <span class="nt">&lt;name&gt;</span>source<span class="nt">&lt;/name&gt;</span>
+<span class="linenos"> 90</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Reference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 91</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos"> 92</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction&quot;</span>
+<span class="linenos"> 93</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-variableFunction&quot;</span>
+<span class="linenos"> 94</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 95</span>      <span class="nt">&lt;ownedComment</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction-ownedComment&quot;</span>
+<span class="linenos"> 96</span>                    <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-variableFunction-ownedComment&quot;</span>
+<span class="linenos"> 97</span>                    <span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 98</span>         <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 99</span>         <span class="nt">&lt;body&gt;</span>Immutable characteristic of the variable such as geographic designator, weight, temporal designation, etc.<span class="nt">&lt;/body&gt;</span>
+<span class="linenos">100</span>      <span class="nt">&lt;/ownedComment&gt;</span>
+<span class="linenos">101</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction-lowerValue&quot;</span>
+<span class="linenos">102</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-variableFunction-lowerValue&quot;</span>
+<span class="linenos">103</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">104</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-variableFunction-upperValue&quot;</span>
+<span class="linenos">105</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-variableFunction-upperValue&quot;</span>
+<span class="linenos">106</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">107</span>         <span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
+<span class="linenos">108</span>      <span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos">109</span>      <span class="nt">&lt;name&gt;</span>variableFunction<span class="nt">&lt;/name&gt;</span>
+<span class="linenos">110</span>      <span class="nt">&lt;isOrdered&gt;</span>true<span class="nt">&lt;/isOrdered&gt;</span>
+<span class="linenos">111</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ControlledVocabularyEntry&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">112</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos">113</span><span class="nt">&lt;/packagedElement&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -934,143 +833,88 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 XML Schema</label><div class="sd-tab-content encoding docutils">
 <p class="sd-card-text">Fragment for the class <strong>InstanceVariable</strong> (<a class="reference external" href="/encoding/xml-schema/ddi-cdi.xsd">entire XML Schema</a>)</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">  1</span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;InstanceVariable&quot;</span>
-</span><span class="linenos">  2</span>            <span class="na">type=</span><span class="s">&quot;InstanceVariableXsdType&quot;</span>
-<span class="linenos">  3</span>            <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">  4</span>  <span class="cm">&lt;!-- based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable --&gt;</span>
-<span class="linenos">  5</span>  <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">  6</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
-<span class="linenos">  7</span>          ==========
-<span class="linenos">  8</span>          Use of a represented variable within a data set.  
-<span class="linenos">  9</span>          
-<span class="linenos"> 10</span>          Examples
-<span class="linenos"> 11</span>          ======== 
-<span class="linenos"> 12</span>          1. Gender: Dan Gillman has gender <span class="ni">&amp;lt;</span>m, male<span class="ni">&amp;gt;</span>, Arofan Gregory has gender <span class="ni">&amp;lt;</span>m, male<span class="ni">&amp;gt;</span>, etc.
-<span class="linenos"> 13</span>          2. Number of employees: Microsoft has 90,000 employees; IBM has 433,000 employees, etc.
-<span class="linenos"> 14</span>          3. Endowment: Johns Hopkins has endowment of <span class="ni">&amp;lt;</span>3, $1,000,000 and above<span class="ni">&amp;gt;</span>, Yale has endowment of <span class="ni">&amp;lt;</span>3, $1,000,000 and above<span class="ni">&amp;gt;</span>, etc.
-<span class="linenos"> 15</span>          4. A tornado near Winterset, Iowa, had a peak wind speed of 170 mph. Two instance variables of a person&#39;s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable.
-<span class="linenos"> 16</span>          
-<span class="linenos"> 17</span>          Explanatory notes
-<span class="linenos"> 18</span>          ================= 
-<span class="linenos"> 19</span>          The instance variable class inherits all of the properties and relationships of the represented variable class and, in turn, the conceptual variable class. This means that an instance variable can be completely populated without the need to create an associated represented variable or conceptual variable. If, however, a user wishes to indicate that a particular instance variable is patterned after a particular represented variable or a particular conceptual variable that may be indicated by including a relationship to the represented variable and/or conceptual variable. Including these references is an important method of indicating that multiple instance variables have the same representation, measure the same concept, and are drawn from the same universe. If two instance variables of a person&#39;s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. The instance variable describes actual instances of data that have been collected.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 20</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 21</span><span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 22</span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;InstanceVariableXsdType&quot;</span>
-<span class="linenos"> 23</span>                <span class="na">xml:id=</span><span class="s">&quot;InstanceVariableXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 24</span>  <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 25</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
-<span class="linenos"> 26</span>          ==========
-<span class="linenos"> 27</span>          Use of a represented variable within a data set.  
-<span class="linenos"> 28</span>          
-<span class="linenos"> 29</span>          Examples
-<span class="linenos"> 30</span>          ======== 
-<span class="linenos"> 31</span>          1. Gender: Dan Gillman has gender <span class="ni">&amp;lt;</span>m, male<span class="ni">&amp;gt;</span>, Arofan Gregory has gender <span class="ni">&amp;lt;</span>m, male<span class="ni">&amp;gt;</span>, etc.
-<span class="linenos"> 32</span>          2. Number of employees: Microsoft has 90,000 employees; IBM has 433,000 employees, etc.
-<span class="linenos"> 33</span>          3. Endowment: Johns Hopkins has endowment of <span class="ni">&amp;lt;</span>3, $1,000,000 and above<span class="ni">&amp;gt;</span>, Yale has endowment of <span class="ni">&amp;lt;</span>3, $1,000,000 and above<span class="ni">&amp;gt;</span>, etc.
-<span class="linenos"> 34</span>          4. A tornado near Winterset, Iowa, had a peak wind speed of 170 mph. Two instance variables of a person&#39;s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable.
-<span class="linenos"> 35</span>          
-<span class="linenos"> 36</span>          Explanatory notes
-<span class="linenos"> 37</span>          ================= 
-<span class="linenos"> 38</span>          The instance variable class inherits all of the properties and relationships of the represented variable class and, in turn, the conceptual variable class. This means that an instance variable can be completely populated without the need to create an associated represented variable or conceptual variable. If, however, a user wishes to indicate that a particular instance variable is patterned after a particular represented variable or a particular conceptual variable that may be indicated by including a relationship to the represented variable and/or conceptual variable. Including these references is an important method of indicating that multiple instance variables have the same representation, measure the same concept, and are drawn from the same universe. If two instance variables of a person&#39;s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. The instance variable describes actual instances of data that have been collected.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 39</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 40</span>  <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 41</span>    <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;RepresentedVariableXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 42</span>      <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 43</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;physicalDataType&quot;</span>
-<span class="linenos"> 44</span>                    <span class="na">type=</span><span class="s">&quot;ControlledVocabularyEntryXsdType&quot;</span>
-<span class="linenos"> 45</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 46</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 47</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable-physicalDataType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 48</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 49</span>            <span class="nt">&lt;xs:documentation&gt;</span>The data type of this variable. Supports the optional use of an external controlled vocabulary.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 50</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 51</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 52</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;platformType&quot;</span>
-<span class="linenos"> 53</span>                    <span class="na">type=</span><span class="s">&quot;ControlledVocabularyEntryXsdType&quot;</span>
-<span class="linenos"> 54</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 55</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 56</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable-platformType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 57</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 58</span>            <span class="nt">&lt;xs:documentation&gt;</span>Describes the application or technical system context in which the variable has been realized. Typically a statistical processing package or other processing environment.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 59</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 60</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 61</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;source&quot;</span>
-<span class="linenos"> 62</span>                    <span class="na">type=</span><span class="s">&quot;ReferenceXsdType&quot;</span>
-<span class="linenos"> 63</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 64</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 65</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable-source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 66</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 67</span>            <span class="nt">&lt;xs:documentation&gt;</span>Reference capturing provenance information.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 68</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 69</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 70</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;variableFunction&quot;</span>
-<span class="linenos"> 71</span>                    <span class="na">type=</span><span class="s">&quot;ControlledVocabularyEntryXsdType&quot;</span>
-<span class="linenos"> 72</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 73</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 74</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable-variableFunction&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 75</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 76</span>            <span class="nt">&lt;xs:documentation&gt;</span>Immutable characteristic of the variable such as geographic designator, weight, temporal designation, etc.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 77</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 78</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 79</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;InstanceVariable_measures_Population-Target&quot;</span>
-<span class="linenos"> 80</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 81</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 82</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable_measures_Population-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 83</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 84</span>            <span class="nt">&lt;xs:documentation&gt;</span>Set of specific units (people, entities, objects, events), usually in a given time and geography, being measured. Can be a specialization of the universe measured by a related represented variable.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 85</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 86</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos"> 87</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 88</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 89</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 90</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos"> 91</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 92</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 93</span>                              <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable_measures_Population-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 94</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos"> 95</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 96</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Population&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 97</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos"> 98</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos"> 99</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">100</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">101</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">102</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">103</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">104</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">105</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;InstanceVariable_isBasedOn_RepresentedVariable-Target&quot;</span>
-<span class="linenos">106</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">107</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">108</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable_isBasedOn_RepresentedVariable-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">109</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">110</span>            <span class="nt">&lt;xs:documentation&gt;</span>The represented variable that can be shared by multiple instance variables. Indicates comparability in substantive representation, universe, and (indirectly) conceptual domain. If a relationship to a represented variable is defined there should be no relationship to a conceptual variable.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">111</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">112</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">113</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">114</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">115</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">116</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">117</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">118</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">119</span>                              <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable_isBasedOn_RepresentedVariable-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">120</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">121</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">122</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DescriptorVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">123</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;InstanceVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">124</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ReferenceVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">125</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;RepresentedVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">126</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">127</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">128</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">129</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">130</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">131</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">132</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">133</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">134</span>      <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">135</span>    <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">136</span>  <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">137</span><span class="nt">&lt;/xs:complexType&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;InstanceVariable&quot;</span>
+</span><span class="linenos"> 2</span>            <span class="na">type=</span><span class="s">&quot;InstanceVariableXsdType&quot;</span>
+<span class="linenos"> 3</span>            <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span>  <span class="cm">&lt;!-- based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable --&gt;</span>
+<span class="linenos"> 5</span>  <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 6</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
+<span class="linenos"> 7</span>          ==========
+<span class="linenos"> 8</span>          Use of a represented variable within a data set.  
+<span class="linenos"> 9</span>          
+<span class="linenos">10</span>          Examples
+<span class="linenos">11</span>          ======== 
+<span class="linenos">12</span>          1. Gender: Dan Gillman has gender <span class="ni">&amp;lt;</span>m, male<span class="ni">&amp;gt;</span>, Arofan Gregory has gender <span class="ni">&amp;lt;</span>m, male<span class="ni">&amp;gt;</span>, etc.
+<span class="linenos">13</span>          2. Number of employees: Microsoft has 90,000 employees; IBM has 433,000 employees, etc.
+<span class="linenos">14</span>          3. Endowment: Johns Hopkins has endowment of <span class="ni">&amp;lt;</span>3, $1,000,000 and above<span class="ni">&amp;gt;</span>, Yale has endowment of <span class="ni">&amp;lt;</span>3, $1,000,000 and above<span class="ni">&amp;gt;</span>, etc.
+<span class="linenos">15</span>          4. A tornado near Winterset, Iowa, had a peak wind speed of 170 mph. Two instance variables of a person&#39;s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable.
+<span class="linenos">16</span>          
+<span class="linenos">17</span>          Explanatory notes
+<span class="linenos">18</span>          ================= 
+<span class="linenos">19</span>          The instance variable class inherits all of the properties and relationships of the represented variable class and, in turn, the conceptual variable class. This means that an instance variable can be completely populated without the need to create an associated represented variable or conceptual variable. If, however, a user wishes to indicate that a particular instance variable is patterned after a particular represented variable or a particular conceptual variable that may be indicated by including a relationship to the represented variable and/or conceptual variable. Including these references is an important method of indicating that multiple instance variables have the same representation, measure the same concept, and are drawn from the same universe. If two instance variables of a person&#39;s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. The instance variable describes actual instances of data that have been collected.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">20</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">21</span><span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">22</span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;InstanceVariableXsdType&quot;</span>
+<span class="linenos">23</span>                <span class="na">xml:id=</span><span class="s">&quot;InstanceVariableXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">24</span>  <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">25</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
+<span class="linenos">26</span>          ==========
+<span class="linenos">27</span>          Use of a represented variable within a data set.  
+<span class="linenos">28</span>          
+<span class="linenos">29</span>          Examples
+<span class="linenos">30</span>          ======== 
+<span class="linenos">31</span>          1. Gender: Dan Gillman has gender <span class="ni">&amp;lt;</span>m, male<span class="ni">&amp;gt;</span>, Arofan Gregory has gender <span class="ni">&amp;lt;</span>m, male<span class="ni">&amp;gt;</span>, etc.
+<span class="linenos">32</span>          2. Number of employees: Microsoft has 90,000 employees; IBM has 433,000 employees, etc.
+<span class="linenos">33</span>          3. Endowment: Johns Hopkins has endowment of <span class="ni">&amp;lt;</span>3, $1,000,000 and above<span class="ni">&amp;gt;</span>, Yale has endowment of <span class="ni">&amp;lt;</span>3, $1,000,000 and above<span class="ni">&amp;gt;</span>, etc.
+<span class="linenos">34</span>          4. A tornado near Winterset, Iowa, had a peak wind speed of 170 mph. Two instance variables of a person&#39;s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable.
+<span class="linenos">35</span>          
+<span class="linenos">36</span>          Explanatory notes
+<span class="linenos">37</span>          ================= 
+<span class="linenos">38</span>          The instance variable class inherits all of the properties and relationships of the represented variable class and, in turn, the conceptual variable class. This means that an instance variable can be completely populated without the need to create an associated represented variable or conceptual variable. If, however, a user wishes to indicate that a particular instance variable is patterned after a particular represented variable or a particular conceptual variable that may be indicated by including a relationship to the represented variable and/or conceptual variable. Including these references is an important method of indicating that multiple instance variables have the same representation, measure the same concept, and are drawn from the same universe. If two instance variables of a person&#39;s height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. The instance variable describes actual instances of data that have been collected.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">39</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">40</span>  <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">41</span>    <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;RepresentedVariableXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">42</span>      <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">43</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;physicalDataType&quot;</span>
+<span class="linenos">44</span>                    <span class="na">type=</span><span class="s">&quot;ControlledVocabularyEntryXsdType&quot;</span>
+<span class="linenos">45</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">46</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">47</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable-physicalDataType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">48</span>          <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">49</span>            <span class="nt">&lt;xs:documentation&gt;</span>The data type of this variable. Supports the optional use of an external controlled vocabulary.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">50</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">51</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">52</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;platformType&quot;</span>
+<span class="linenos">53</span>                    <span class="na">type=</span><span class="s">&quot;ControlledVocabularyEntryXsdType&quot;</span>
+<span class="linenos">54</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">55</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">56</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable-platformType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">57</span>          <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">58</span>            <span class="nt">&lt;xs:documentation&gt;</span>Describes the application or technical system context in which the variable has been realized. Typically a statistical processing package or other processing environment.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">59</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">60</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">61</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;source&quot;</span>
+<span class="linenos">62</span>                    <span class="na">type=</span><span class="s">&quot;ReferenceXsdType&quot;</span>
+<span class="linenos">63</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">64</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">65</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable-source&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">66</span>          <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">67</span>            <span class="nt">&lt;xs:documentation&gt;</span>Reference capturing provenance information.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">68</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">69</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">70</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;variableFunction&quot;</span>
+<span class="linenos">71</span>                    <span class="na">type=</span><span class="s">&quot;ControlledVocabularyEntryXsdType&quot;</span>
+<span class="linenos">72</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">73</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">74</span>                    <span class="na">xml:id=</span><span class="s">&quot;InstanceVariable-variableFunction&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">75</span>          <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">76</span>            <span class="nt">&lt;xs:documentation&gt;</span>Immutable characteristic of the variable such as geographic designator, weight, temporal designation, etc.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">77</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">78</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">79</span>      <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">80</span>    <span class="nt">&lt;/xs:extension&gt;</span>
+<span class="linenos">81</span>  <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">82</span><span class="nt">&lt;/xs:complexType&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -1118,27 +962,6 @@ Ontology (Turtle)</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">38</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceVariable</span><span class="p">;</span>
 <span class="linenos">39</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">ControlledVocabularyEntry</span><span class="p">;</span>
 <span class="linenos">40</span><span class="p">.</span>
-<span class="linenos">41</span>
-<span class="linenos">42</span>
-<span class="linenos">43</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceVariable_isBasedOn_RepresentedVariable</span>
-<span class="linenos">44</span>  <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Association</span><span class="p">;</span>
-<span class="linenos">45</span>  <span class="c"># ASSOCIATION</span>
-<span class="linenos">46</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;isBasedOn&quot;</span><span class="p">;</span>
-<span class="linenos">47</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;InstanceVariable_isBasedOn_RepresentedVariable&quot;</span><span class="p">;</span>
-<span class="linenos">48</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;The represented variable that can be shared by multiple instance variables. Indicates comparability in substantive representation, universe, and (indirectly) conceptual domain. If a relationship to a represented variable is defined there should be no relationship to a conceptual variable.&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">;</span>
-<span class="linenos">49</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceVariable</span><span class="p">;</span>
-<span class="linenos">50</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">RepresentedVariable</span><span class="p">;</span>
-<span class="linenos">51</span><span class="p">.</span>
-<span class="linenos">52</span>
-<span class="linenos">53</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceVariable_measures_Population</span>
-<span class="linenos">54</span>  <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Association</span><span class="p">;</span>
-<span class="linenos">55</span>  <span class="c"># ASSOCIATION</span>
-<span class="linenos">56</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;measures&quot;</span><span class="p">;</span>
-<span class="linenos">57</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;InstanceVariable_measures_Population&quot;</span><span class="p">;</span>
-<span class="linenos">58</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Set of specific units (people, entities, objects, events), usually in a given time and geography, being measured. Can be a specialization of the universe measured by a related represented variable.&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">;</span>
-<span class="linenos">59</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceVariable</span><span class="p">;</span>
-<span class="linenos">60</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">Population</span><span class="p">;</span>
-<span class="linenos">61</span><span class="p">.</span>
 </pre></div>
 </div>
 </div>
@@ -1151,64 +974,63 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 3</span><span class="w">    </span><span class="s2">&quot;RepresentedVariable.jsonld&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;InstanceVariable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;physicalDataType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable-physicalDataType&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot;platformType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable-platformType&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">      </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable-source&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Reference.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">      </span><span class="nt">&quot;variableFunction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable-variableFunction&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">      </span>
-<span class="linenos">28</span><span class="w">      </span><span class="nt">&quot;isBasedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable_isBasedOn_RepresentedVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">      </span><span class="nt">&quot;measures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable_measures_Population&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">      </span><span class="nt">&quot;appliesTo_OF_CategoryStatistic&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryStatistic_appliesTo_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">      </span><span class="nt">&quot;isDescribedBy_OF_DataPoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">38</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataPoint_isDescribedBy_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">39</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">40</span><span class="w">      </span><span class="nt">&quot;isBoundedBy_OF_Datum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Datum_isBoundedBy_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">42</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">43</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_InstanceVariableMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariableMap_hasSource_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">45</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">46</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_InstanceVariableMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariableMap_hasTarget_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">48</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">49</span><span class="w">      </span><span class="nt">&quot;has_OF_LogicalRecord&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">50</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecord_has_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">51</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">52</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">53</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">54</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">55</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:25.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">56</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable&quot;</span><span class="w"></span>
-<span class="linenos">57</span><span class="p">}</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;InstanceVariable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">      </span><span class="nt">&quot;physicalDataType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable-physicalDataType&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">      </span><span class="nt">&quot;platformType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable-platformType&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">      </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable-source&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Reference.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">      </span><span class="nt">&quot;variableFunction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariable-variableFunction&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">      </span>
+<span class="linenos">29</span><span class="w">      </span><span class="nt">&quot;appliesTo_OF_CategoryStatistic&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryStatistic_appliesTo_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">      </span><span class="nt">&quot;isDescribedBy_OF_DataPoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataPoint_isDescribedBy_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">      </span><span class="nt">&quot;isBoundedBy_OF_Datum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Datum_isBoundedBy_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_InstanceVariableMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariableMap_hasSource_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_InstanceVariableMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceVariableMap_hasTarget_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">44</span><span class="w">      </span><span class="nt">&quot;has_OF_LogicalRecord&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">45</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecord_has_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">46</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">47</span><span class="w">      </span><span class="nt">&quot;has_OF_PhysicalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">48</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalDataSet_has_InstanceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">49</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">50</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">51</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">52</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">53</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:49.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">54</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable&quot;</span><span class="w"></span>
+<span class="linenos">55</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 

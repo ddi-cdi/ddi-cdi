@@ -128,6 +128,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <h2>Explanatory notes<a class="headerlink" href="#explanatory-notes" title="Permalink to this headline">¶</a></h2>
 <p>This PIDs either complement or replace identifier and dimension components.
 They complement them when there is a need for having a globally unique identifier as part of an instance key. They replace them when identier components are not available (e.g. after de-identification for confidentiality).</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -135,12 +136,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../../_images/plantuml-ea324cc57bc650c002496afa5d151aa69dfc5efd.svg" type="image/svg+xml" style="width:989px;height:667px;background:#FFFFFF;"></object></p>
+<object data="../../../../_images/plantuml-194a039ab05d71c6a1c081ce02668e55bf27de6b.svg" type="image/svg+xml" style="width:989px;height:658px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="inheritance">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Inheritance<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -154,7 +155,9 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="line">  ᐊ── <span class="focus">KeyValue::SyntheticIdComponent</span></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -204,7 +207,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -262,21 +267,31 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../index.html#ddicdimodels-ddicdilibrary-classes-datadescription"><span class="std std-ref">DataDescription</span></a></p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../DataStructure.html#ddicdimodels-ddicdilibrary-classes-datadescription-datastructure"><span class="std std-ref">DataStructure</span></a></p></td>
-<td><p class="sd-card-text">1..1</p></td>
+<td><p class="sd-card-text">0..1</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/DataStructureComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-datastructurecomponent"><span class="std std-ref">Components::DataStructureComponent</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">KeyMember isBasedOn DataStructureComponent</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../index.html#ddicdimodels-ddicdilibrary-classes-datadescription"><span class="std std-ref">DataDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../KeyMember.html#ddicdimodels-ddicdilibrary-classes-datadescription-keymember"><span class="std std-ref">KeyMember</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../Components/DataStructureComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-datastructurecomponent"><span class="std std-ref">Components::DataStructureComponent</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">AttributeComponent qualifies DataStructureComponent</p></td>
 <td></td>
-<td><p class="sd-card-text">1..*</p></td>
+<td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/index.html#ddicdimodels-ddicdilibrary-classes-datadescription-components"><span class="std std-ref">Components</span></a></p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/AttributeComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-attributecomponent"><span class="std std-ref">AttributeComponent</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/DataStructureComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-datastructurecomponent"><span class="std std-ref">Components::DataStructureComponent</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ComponentPosition indexes DataStructureComponent</p></td>
 <td></td>
 <td><p class="sd-card-text">0..1</p></td>
@@ -286,23 +301,13 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/DataStructureComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-datastructurecomponent"><span class="std std-ref">Components::DataStructureComponent</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ForeignKeyComponent correspondsTo DataStructureComponent</p></td>
 <td></td>
 <td><p class="sd-card-text">1..1</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/index.html#ddicdimodels-ddicdilibrary-classes-datadescription-components"><span class="std std-ref">Components</span></a></p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/ForeignKeyComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-foreignkeycomponent"><span class="std std-ref">ForeignKeyComponent</span></a></p></td>
 <td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../Components/DataStructureComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-datastructurecomponent"><span class="std std-ref">Components::DataStructureComponent</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">KeyMember isBasedOn DataStructureComponent</p></td>
-<td></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../../../DesignPatterns/DataDescriptionPattern/index.html#ddicdimodels-designpatterns-datadescriptionpattern"><span class="std std-ref">DataDescriptionPattern</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../../../DesignPatterns/DataDescriptionPattern/KeyMember.html#ddicdimodels-designpatterns-datadescriptionpattern-keymember"><span class="std std-ref">KeyMember</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/DataStructureComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-datastructurecomponent"><span class="std std-ref">Components::DataStructureComponent</span></a></p></td>
 </tr>
@@ -316,20 +321,12 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../Components/DataStructureComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-datastructurecomponent"><span class="std std-ref">Components::DataStructureComponent</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">MainKeyMember isBasedOn SyntheticIdComponent</p></td>
-<td></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="MainKeyMember.html#ddicdimodels-ddicdilibrary-classes-datadescription-keyvalue-mainkeymember"><span class="std std-ref">MainKeyMember</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -448,23 +445,22 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 3</span><span class="w">    </span><span class="s2">&quot;DataStructureComponent.jsonld&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;SyntheticIdComponent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SyntheticIdComponent&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">      </span>
-<span class="linenos"> 8</span><span class="w">      </span><span class="nt">&quot;isBasedOn_OF_MainKeyMember&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_isBasedOn_SyntheticIdComponent&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:27.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::SyntheticIdComponent&quot;</span><span class="w"></span>
-<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;SyntheticIdComponent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SyntheticIdComponent&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">      </span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:51.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::SyntheticIdComponent&quot;</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 
@@ -519,6 +515,10 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <li class="toctree-l4"><a class="reference internal" href="../DataStructure.html">DataStructure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Datum.html">Datum</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../InstanceValue.html">InstanceValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Key.html">Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyDefinition.html">KeyDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyDefinitionMember.html">KeyDefinitionMember</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyMember.html">KeyMember</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Notation.html">Notation</a></li>
 </ul>
 </li>

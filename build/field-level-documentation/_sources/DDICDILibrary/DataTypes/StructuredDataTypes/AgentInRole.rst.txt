@@ -17,132 +17,141 @@ Examples
 Reference to John Doe as the lead author.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/AgentInRole.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - agentName
-        - \- *own datatype* \-
-        - Full name of the contributor. Language equivalents should be expressed within the international string structure.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::BibliographicName` 
-        - 0..1
-        - 
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-      * - reference
-        - \- *own datatype* \-
-        - Reference to an agent described in DDI or some other platform.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference` 
-        - 0..1
-        - 
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - agentName
+           - \- *own datatype* \-
+           - Full name of the contributor. Language equivalents should be expressed within the international string structure.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::BibliographicName` 
+           - 0..1
+           - 
 
-      * - role
-        - \- *own datatype* \-
-        - Role of the of the agent within the context of the parent property name.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::PairedControlledVocabularyEntry` 
-        - 0..*
-        - 
+         * - reference
+           - \- *own datatype* \-
+           - Reference to an agent described in DDI or some other platform.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference` 
+           - 0..1
+           - 
+
+         * - role
+           - \- *own datatype* \-
+           - Role of the of the agent within the context of the parent property name.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::PairedControlledVocabularyEntry` 
+           - 0..*
+           - 
 
 
-.. dropdown:: Usage
+.. container::
+   :name: usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+   .. dropdown:: Usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails`
-        - contributor
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails`
-        - creator
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails`
-        - publisher
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::FundingInformation`
-        - fundingAgent
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier`
-        - versionResponsibility
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LicenseInformation`
-        - licenseAgent
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-.. dropdown:: Syntax representations / encodings
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails`
+           - contributor
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails`
+           - creator
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails`
+           - publisher
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::FundingInformation`
+           - fundingAgent
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier`
+           - versionResponsibility
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LicenseInformation`
+           - licenseAgent
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: encodings
 
-   .. tab-set::
+   .. dropdown:: Syntax representations / encodings
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         Fragment for the data type **AgentInRole** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+      .. tab-set::
 
-         .. literalinclude:: /xmi/AgentInRole.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            Fragment for the data type **AgentInRole** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         Fragment for the data type **AgentInRole** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            .. literalinclude:: /xmi/AgentInRole.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/AgentInRole_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the data type **AgentInRole** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         Fragment for the data type **AgentInRole** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/AgentInRole_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/AgentInRole.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the data type **AgentInRole** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         Fragment for the data type **AgentInRole** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/AgentInRole.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/AgentInRole.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **AgentInRole** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/AgentInRole.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

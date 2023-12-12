@@ -13,105 +13,114 @@ Definition
 Provides the following information on the command: The content of the command and the programming language used.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/Command.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - commandContent
-        - \- *own datatype* \-
-        - Content of the command itself expressed in the language designated in programming language.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TypedString` 
-        - 0..1
-        - 
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-      * - programLanguage
-        - \- *own datatype* \-
-        - Designates the programming language used for the command. Supports the use of a controlled vocabulary.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
-        - 0..1
-        - 
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - commandContent
+           - \- *own datatype* \-
+           - Content of the command itself expressed in the language designated in programming language.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TypedString` 
+           - 0..1
+           - 
+
+         * - programLanguage
+           - \- *own datatype* \-
+           - Designates the programming language used for the command. Supports the use of a controlled vocabulary.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
 
 
-.. dropdown:: Usage
+.. container::
+   :name: usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+   .. dropdown:: Usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CommandCode`
-        - command
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-.. dropdown:: Syntax representations / encodings
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CommandCode`
+           - command
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: encodings
 
-   .. tab-set::
+   .. dropdown:: Syntax representations / encodings
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         Fragment for the data type **Command** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+      .. tab-set::
 
-         .. literalinclude:: /xmi/Command.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            Fragment for the data type **Command** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         Fragment for the data type **Command** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            .. literalinclude:: /xmi/Command.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Command_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the data type **Command** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         Fragment for the data type **Command** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Command_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Command.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the data type **Command** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         Fragment for the data type **Command** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Command.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Command.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **Command** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Command.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

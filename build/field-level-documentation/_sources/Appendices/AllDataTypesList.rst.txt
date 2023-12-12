@@ -141,16 +141,6 @@ All Data Types (list)
      - 0
      - 0
      - 0
-   * - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ComplexLanguageString`
-     - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes`
-     - DataType
-     - 1
-     - no
-     - 0 
-     - 0
-     - 1
-     - 6
-     - 2
    * - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::ComputationBaseList`
      - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations`
      - Enumeration
@@ -188,7 +178,7 @@ All Data Types (list)
      - no
      - 0 
      - 62
-     - 37
+     - 36
      - 5
      - 0
    * - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CorrespondenceDefinition`
@@ -267,7 +257,7 @@ All Data Types (list)
      - 0
      - no
      - 0 
-     - 90
+     - 89
      - 0
      - 8
      - 0
@@ -317,29 +307,19 @@ All Data Types (list)
      - 1
      - no
      - 0 
-     - 11
+     - 12
      - 0
      - 3
      - 1
-   * - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageSpecificString`
+   * - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString`
      - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes`
      - DataType
      - 0
      - no
      - 0 
      - 0
-     - 0
-     - 8
-     - 0
-   * - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString`
-     - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes`
-     - DataType
-     - 0
-     - no
-     - 1 
-     - 0
-     - 0
-     - 2
+     - 1
+     - 7
      - 0
    * - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LicenseInformation`
      - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes`
@@ -708,7 +688,7 @@ All Data Types (list)
      - no
      - 0 
      - 0
-     - 6
+     - 5
      - 0
      - 0
    * - :ref:`DDICDIModels::DDICDILibrary::DataTypes::XMLSchemaDataTypes::XsdLanguage`
@@ -718,7 +698,7 @@ All Data Types (list)
      - no
      - 0 
      - 2
-     - 5
+     - 2
      - 0
      - 0
    * - :ref:`DDICDIModels::Context::DCTerms::abstract`

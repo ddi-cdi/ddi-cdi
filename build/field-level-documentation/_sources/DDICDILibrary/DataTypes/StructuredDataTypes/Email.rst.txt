@@ -17,126 +17,135 @@ Examples
 info@ddialliance.org; ex.ample@somewhere.org
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/Email.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - effectiveDates
-        - \- *own datatype* \-
-        - Time period for which the e-mail address is valid.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::DateRange` 
-        - 0..1
-        - 
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-      * - internetEmail
-        - \- *own datatype* \-
-        - The email address expressed as a string (should follow the Internet format specification - RFC 5322) e.g. user@server.ext, more complex and flexible examples are also supported by the format.
-        - String 
-        - 0..1
-        - 
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - effectiveDates
+           - \- *own datatype* \-
+           - Time period for which the e-mail address is valid.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::DateRange` 
+           - 0..1
+           - 
 
-      * - isPreferred
-        - \- *own datatype* \-
-        - Set to True if this is the preferred email.
-        - Boolean 
-        - 0..1
-        - 
+         * - internetEmail
+           - \- *own datatype* \-
+           - The email address expressed as a string (should follow the Internet format specification - RFC 5322) e.g. user@server.ext, more complex and flexible examples are also supported by the format.
+           - String 
+           - 0..1
+           - 
 
-      * - privacy
-        - \- *own datatype* \-
-        - Indicates the level of privacy.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
-        - 0..1
-        - 
+         * - isPreferred
+           - \- *own datatype* \-
+           - Set to True if this is the preferred email.
+           - Boolean 
+           - 0..1
+           - 
 
-      * - typeOfEmail
-        - \- *own datatype* \-
-        - Code indicating the type of e-mail address. Supports the use of an external controlled vocabulary. (e.g. home, office).
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
-        - 0..1
-        - 
+         * - privacy
+           - \- *own datatype* \-
+           - Indicates the level of privacy.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
+
+         * - typeOfEmail
+           - \- *own datatype* \-
+           - Code indicating the type of e-mail address. Supports the use of an external controlled vocabulary. (e.g. home, office).
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
 
 
-.. dropdown:: Usage
+.. container::
+   :name: usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+   .. dropdown:: Usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ContactInformation`
-        - email
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-.. dropdown:: Syntax representations / encodings
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ContactInformation`
+           - email
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: encodings
 
-   .. tab-set::
+   .. dropdown:: Syntax representations / encodings
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         Fragment for the data type **Email** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+      .. tab-set::
 
-         .. literalinclude:: /xmi/Email.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            Fragment for the data type **Email** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         Fragment for the data type **Email** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            .. literalinclude:: /xmi/Email.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Email_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the data type **Email** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         Fragment for the data type **Email** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Email_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Email.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the data type **Email** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         Fragment for the data type **Email** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Email.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Email.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **Email** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Email.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

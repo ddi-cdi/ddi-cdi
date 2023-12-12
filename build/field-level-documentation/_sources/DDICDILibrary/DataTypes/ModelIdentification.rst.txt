@@ -13,125 +13,131 @@ Definition
 Attributes for the model identification with constant values.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/ModelIdentification.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - acronym
-        - \- *own datatype* \-
-        - Acronym of the model.
-        - String 
-        - 1..1
-        - DDI-CDI
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-      * - language
-        - \- *own datatype* \-
-        - Language of the model.
-        - String 
-        - 1..1
-        - en
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - acronym
+           - \- *own datatype* \-
+           - Acronym of the model.
+           - String 
+           - 1..1
+           - DDI-CDI
 
-      * - majorVersion
-        - \- *own datatype* \-
-        - Major version number of the model.
-        - Integer 
-        - 1..1
-        - 1
+         * - language
+           - \- *own datatype* \-
+           - Language of the model.
+           - String 
+           - 1..1
+           - en
 
-      * - minorVersion
-        - \- *own datatype* \-
-        - Minor version number of the model.
-        - Integer 
-        - 1..1
-        - 0
+         * - majorVersion
+           - \- *own datatype* \-
+           - Major version number of the model.
+           - Integer 
+           - 1..1
+           - 1
 
-      * - subtitle
-        - \- *own datatype* \-
-        - Subtitle of the model.
-        - String 
-        - 1..1
-        - Release
+         * - minorVersion
+           - \- *own datatype* \-
+           - Minor version number of the model.
+           - Integer 
+           - 1..1
+           - 0
 
-      * - title
-        - \- *own datatype* \-
-        - Title of the model.
-        - String 
-        - 1..1
-        - DDI Cross Domain Integration
+         * - subtitle
+           - \- *own datatype* \-
+           - Subtitle of the model.
+           - String 
+           - 1..1
+           - Release
 
-      * - uri
-        - \- *own datatype* \-
-        - URI of the specification.
-        - String 
-        - 1..1
-        - http://ddialliance.org/Specification/DDI-CDI/1.0/
+         * - title
+           - \- *own datatype* \-
+           - Title of the model.
+           - String 
+           - 1..1
+           - DDI Cross Domain Integration
+
+         * - uri
+           - \- *own datatype* \-
+           - URI of the specification.
+           - String 
+           - 1..1
+           - http://ddialliance.org/Specification/DDI-CDI/1.0/
 
 
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: encodings
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Syntax representations / encodings
 
-   .. tab-set::
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      .. tab-set::
 
-         Fragment for the data type **ModelIdentification** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-         .. literalinclude:: /xmi/ModelIdentification.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+            Fragment for the data type **ModelIdentification** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            .. literalinclude:: /xmi/ModelIdentification.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         Fragment for the data type **ModelIdentification** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/ModelIdentification_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+            Fragment for the data type **ModelIdentification** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            .. literalinclude:: /DDICDILibrary/DataTypes/ModelIdentification_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         Fragment for the data type **ModelIdentification** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/ModelIdentification.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+            Fragment for the data type **ModelIdentification** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            .. literalinclude:: /DDICDILibrary/DataTypes/ModelIdentification.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         Fragment for the data type **ModelIdentification** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+         .. tab-item:: JSON-LD
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/ModelIdentification.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+            Fragment for the data type **ModelIdentification** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/ModelIdentification.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

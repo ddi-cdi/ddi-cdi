@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegment:
 
-
 PhysicalRecordSegment
 *********************
 
@@ -28,238 +27,247 @@ Explanatory notes
 A logical record may be stored in one or more segments housed hierarchically in a single file or in separate data files. All logical records have at least one segment.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/Classes/FormatDescription/PhysicalRecordSegment.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - allowsDuplicates
+           - \- *own class* \-
+           - If value is False, the members are unique within the collection - if True, there may be duplicates. (Note that a mathematical “bag” permits duplicates and is unordered - a “set” does not have duplicates and may be ordered.)
+           - Boolean 
+           - 1..1
+           - 
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - allowsDuplicates
-        - \- *own class* \-
-        - If value is False, the members are unique within the collection - if True, there may be duplicates. (Note that a mathematical “bag” permits duplicates and is unordered - a “set” does not have duplicates and may be ordered.)
-        - Boolean 
-        - 1..1
-        - 
+         * - catalogDetails
+           - \- *own class* \-
+           - Bundles the information useful for a data catalog entry. 
+             
+             Examples would be creator, contributor, title, copyright, embargo, and license information
+             
+             A set of information useful for attribution, data discovery, and access.
+             This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails` 
+           - 0..1
+           - 
 
-      * - catalogDetails
-        - \- *own class* \-
-        - Bundles the information useful for a data catalog entry. 
-          
-          Examples would be creator, contributor, title, copyright, embargo, and license information
-          
-          A set of information useful for attribution, data discovery, and access.
-          This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails` 
-        - 0..1
-        - 
+         * - identifier
+           - \- *own class* \-
+           - Identifier for objects requiring short- or long-lasting referencing and management.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
+           - 0..1
+           - 
 
-      * - identifier
-        - \- *own class* \-
-        - Identifier for objects requiring short- or long-lasting referencing and management.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
-        - 0..1
-        - 
+         * - name
+           - \- *own class* \-
+           - Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectName` 
+           - 0..*
+           - 
 
-      * - name
-        - \- *own class* \-
-        - Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectName` 
-        - 0..*
-        - 
+         * - physicalFileName
+           - \- *own class* \-
+           - Use when each physical segment is stored in its own file.
+           - String 
+           - 0..1
+           - 
 
-      * - physicalFileName
-        - \- *own class* \-
-        - Use when each physical segment is stored in its own file.
-        - String 
-        - 0..1
-        - 
-
-      * - purpose
-        - \- *own class* \-
-        - Intent or reason for the object/the description of the object.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
-        - 0..1
-        - 
+         * - purpose
+           - \- *own class* \-
+           - Intent or reason for the object/the description of the object.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
+           - 0..1
+           - 
 
 
-.. dropdown:: Associations
+.. container::
+   :name: associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of PhysicalRecordSegment
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - from
-        - PhysicalRecordSegment isDefinedBy Concept
-        - The conceptual basis for the collection of members.
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - from
-        - PhysicalRecordSegment represents Population
-        - A record segment may represent a specific population or sub-population within a larger set of segments. Allows for the identification of this filter for membership in the segment.
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Population`
-        - 0..1
-        - none
-        - \- *own class* \-
-      * - from
-        - PhysicalRecordSegment has DataPoint
-        - 
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
-        - 0..*
-        - shared
-        - \- *own class* \-
-      * - to
-        - PhysicalDataSet has PhysicalRecordSegment
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSet`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - from
-        - PhysicalRecordSegment has DataPointPosition
-        - 
-        - 1..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataPointPosition`
-        - 0..*
-        - composite
-        - \- *own class* \-
-      * - from
-        - PhysicalRecordSegment has PhysicalSegmentLayout
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout`
-        - 0..1
-        - none
-        - \- *own class* \-
-      * - from
-        - PhysicalRecordSegment mapsTo LogicalRecord
-        - Every data record has zero to many physical record segments. It is possible to describe a physical data product and its record segment(s) without reference to a data record.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord`
-        - 0..1
-        - none
-        - \- *own class* \-
-      * - to
-        - PhysicalRecordSegmentPosition indexes PhysicalRecordSegment
-        - Assigns a position to a physical record segment within a physical record.
-        - 1..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentPosition`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - to
-        - PhysicalRecordSegmentRelationship hasSource PhysicalRecordSegment
-        - 
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentRelationship`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - to
-        - PhysicalRecordSegmentRelationship hasTarget PhysicalRecordSegment
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentRelationship`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - to
-        - PhysicalRecordSegmentStructure structures PhysicalRecordSegment
-        - There may be cases where there is a more complex structure to a sequence of data points. A cell containing a list, for example, might be considered to have nested data points that are the elements of the list. (For simplicity's sake, each element of the list should be modeled as a data point if this is possible.)
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentStructure`
-        - 0..*
-        - none
-        - \- *own class* \-
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of PhysicalRecordSegment
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - from
+           - PhysicalRecordSegment isDefinedBy Concept
+           - The conceptual basis for the collection of members.
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - from
+           - PhysicalRecordSegment represents Population
+           - A record segment may represent a specific population or sub-population within a larger set of segments. Allows for the identification of this filter for membership in the segment.
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Population`
+           - 0..1
+           - none
+           - \- *own class* \-
+         * - from
+           - PhysicalRecordSegment has DataPoint
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
+           - 0..*
+           - shared
+           - \- *own class* \-
+         * - to
+           - PhysicalDataSet has PhysicalRecordSegment
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSet`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - from
+           - PhysicalRecordSegment has DataPointPosition
+           - 
+           - 1..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataPointPosition`
+           - 0..*
+           - composite
+           - \- *own class* \-
+         * - from
+           - PhysicalRecordSegment has PhysicalSegmentLayout
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout`
+           - 0..1
+           - none
+           - \- *own class* \-
+         * - from
+           - PhysicalRecordSegment mapsTo LogicalRecord
+           - Every data record has zero to many physical record segments. It is possible to describe a physical data product and its record segment(s) without reference to a data record.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord`
+           - 0..1
+           - none
+           - \- *own class* \-
+         * - to
+           - PhysicalRecordSegmentPosition indexes PhysicalRecordSegment
+           - Assigns a position to a physical record segment within a physical record.
+           - 1..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentPosition`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - to
+           - PhysicalRecordSegmentRelationship hasSource PhysicalRecordSegment
+           - 
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentRelationship`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - to
+           - PhysicalRecordSegmentRelationship hasTarget PhysicalRecordSegment
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentRelationship`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - to
+           - PhysicalRecordSegmentStructure structures PhysicalRecordSegment
+           - There may be cases where there is a more complex structure to a sequence of data points. A cell containing a list, for example, might be considered to have nested data points that are the elements of the list. (For simplicity's sake, each element of the list should be modeled as a data point if this is possible.)
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentStructure`
+           - 0..*
+           - none
+           - \- *own class* \-
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: encodings
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Syntax representations / encodings
+    
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
+    
+      .. tab-set::
+    
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
+    
+            Fragment for the class **PhysicalRecordSegment** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+    
+            .. literalinclude:: /xmi/PhysicalRecordSegment.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-   .. tab-set::
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+            Fragment for the class **PhysicalRecordSegment** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/FormatDescription/PhysicalRecordSegment_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         Fragment for the class **PhysicalRecordSegment** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         .. literalinclude:: /xmi/PhysicalRecordSegment.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+            Fragment for the class **PhysicalRecordSegment** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/FormatDescription/PhysicalRecordSegment.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+         .. tab-item:: JSON-LD
+            :class-content: encoding
 
-         Fragment for the class **PhysicalRecordSegment** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
-
-         .. literalinclude:: /DDICDILibrary/Classes/FormatDescription/PhysicalRecordSegment_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
-
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
-
-         Fragment for the class **PhysicalRecordSegment** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
-
-         .. literalinclude:: /DDICDILibrary/Classes/FormatDescription/PhysicalRecordSegment.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
-
-      .. tab-item:: JSON-LD
-         :class-content: encoding
-
-         Fragment for the class **PhysicalRecordSegment** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
-
-         .. literalinclude:: /DDICDILibrary/Classes/FormatDescription/PhysicalRecordSegment.jsonld 
-            :language: JSON-LD
-            :linenos:
-            :emphasize-lines: 5
+            Fragment for the class **PhysicalRecordSegment** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/FormatDescription/PhysicalRecordSegment.jsonld 
+               :language: JSON-LD
+               :linenos:
+               :emphasize-lines: 5
 

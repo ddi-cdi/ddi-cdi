@@ -16,102 +16,96 @@ Definition from XML Schema Part 2: Datatypes Second Edition:
 "language" represents natural language identifiers as defined by by [RFC 3066]. The value space of "language" is the set of all strings that are valid language identifiers as defined [RFC 3066] . The lexical space of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*. The base type of "language" is token. https://www.w3.org/TR/xmlschema-2/#language.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdLanguage.pu
 
 
 
-.. dropdown:: Usage
+.. container::
+   :name: usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+   .. dropdown:: Usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationIndex`
-        - availableLanguage
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification`
-        - availableLanguage
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails`
-        - languageOfObject
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ComplexLanguageString`
-        - translationSourceLanguage
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageSpecificString`
-        - language
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageSpecificString`
-        - translationSourceLanguage
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString`
-        - language
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-.. dropdown:: Syntax representations / encodings
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationIndex`
+           - availableLanguage
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification`
+           - availableLanguage
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails`
+           - languageOfObject
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString`
+           - translationSourceLanguage
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: encodings
 
-   .. tab-set::
+   .. dropdown:: Syntax representations / encodings
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         Fragment for the data type **XsdLanguage** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+      .. tab-set::
 
-         .. literalinclude:: /xmi/XsdLanguage.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            Fragment for the data type **XsdLanguage** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         Fragment for the data type **XsdLanguage** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            .. literalinclude:: /xmi/XsdLanguage.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdLanguage_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the data type **XsdLanguage** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         Fragment for the data type **XsdLanguage** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdLanguage_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdLanguage.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the data type **XsdLanguage** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         Fragment for the data type **XsdLanguage** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdLanguage.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdLanguage.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **XsdLanguage** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/XMLSchemaDataTypes/XsdLanguage.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

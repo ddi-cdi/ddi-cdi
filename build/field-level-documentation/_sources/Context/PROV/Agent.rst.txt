@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::Context::PROV::Agent:
 
-
 Agent
 *****
 
@@ -15,11 +14,11 @@ Definition
 Something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. (See the W3C PROV-O ontology, https://www.w3.org/TR/prov-dm/#term-agent)
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /Context/PROV/Agent.pu
 

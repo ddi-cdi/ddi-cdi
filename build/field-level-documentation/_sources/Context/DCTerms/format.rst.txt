@@ -13,11 +13,11 @@ Definition
 The file format, physical medium, or dimensions of the resource. Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [MIME]. Examples of dimensions include size and duration. (See DCMI Metadata Terms - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format.)
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /Context/DCTerms/format.pu
 

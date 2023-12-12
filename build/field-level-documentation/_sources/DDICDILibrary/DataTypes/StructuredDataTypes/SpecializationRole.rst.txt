@@ -13,98 +13,107 @@ Definition
 Specific roles played by represented variables in terms of time, geography, and other concepts which are important for the harmonization and integration of data.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :focus:`StructuredDataTypes::SpecializationRole`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :focus:`StructuredDataTypes::SpecializationRole`
 
-   |    ᐊ── :ref:`StructuredDataTypes::GeoRole<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::GeoRole>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      |    ᐊ── :ref:`StructuredDataTypes::GeoRole<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::GeoRole>`
 
-   |    ᐊ── :ref:`StructuredDataTypes::TimeRole<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole>`
+      .. cssclass:: regular
+
+      |    ᐊ── :ref:`StructuredDataTypes::TimeRole<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole>`
 
 
 
 
 
-.. dropdown:: Usage
+.. container::
+   :name: usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+   .. dropdown:: Usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - Class
-        - Components
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent`
-        - specialization
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-.. dropdown:: Syntax representations / encodings
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - Class
+           - Components
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent`
+           - specialization
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: encodings
 
-   .. tab-set::
+   .. dropdown:: Syntax representations / encodings
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         Fragment for the data type **SpecializationRole** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+      .. tab-set::
 
-         .. literalinclude:: /xmi/SpecializationRole.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            Fragment for the data type **SpecializationRole** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         Fragment for the data type **SpecializationRole** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            .. literalinclude:: /xmi/SpecializationRole.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the data type **SpecializationRole** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         Fragment for the data type **SpecializationRole** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the data type **SpecializationRole** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         Fragment for the data type **SpecializationRole** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **SpecializationRole** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/SpecializationRole.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

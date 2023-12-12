@@ -125,6 +125,7 @@ Variable playing the role of a variable value component.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>Consider two variables, i.e. income and age, with values appearing in the same column, e.g. 100000, 45, 85000, 34, etc.
 Values 100000, 45, 85000, 34 are reference values in the reference value domain corresponding to the reference variable.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -132,12 +133,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../../_images/plantuml-bc93e5d5f0ac716223a07a3bf45df23f8fc3b980.svg" type="image/svg+xml" style="width:1374px;height:870px;background:#FFFFFF;"></object></p>
+<object data="../../../../_images/plantuml-502df07ee42e2183217d941c07e2c5ed845c5261.svg" type="image/svg+xml" style="width:1346px;height:873px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="inheritance">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Inheritance<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -157,7 +158,9 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="line">      ᐊ── <span class="focus">Long::ReferenceVariable</span></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -263,7 +266,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -305,37 +310,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">InstanceVariable isBasedOn RepresentedVariable</p></td>
-<td><p class="sd-card-text">The represented variable that can be shared by multiple instance variables. Indicates comparability in substantive representation, universe, and (indirectly) conceptual domain. If a relationship to a represented variable is defined there should be no relationship to a conceptual variable.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/InstanceVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-instancevariable"><span class="std std-ref">InstanceVariable</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">RepresentedVariable isBasedOn ConceptualVariable</p></td>
-<td><p class="sd-card-text">The conceptual variable that can be shared by a set of represented variables. Indicates comparability in conceptual domain and unit type.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">ConceptualVariable</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
-</tr>
 <tr class="row-odd"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">RepresentedVariable measures Universe</p></td>
-<td><p class="sd-card-text">The defined class of people, entities, events, or objects to be measured by the represented variable.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Universe</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">RepresentedVariable takesSentinelValuesFrom SentinelValueDomain</p></td>
 <td><p class="sd-card-text">A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -345,7 +320,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
+<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">RepresentedVariable takesSubstantiveValuesFrom SubstantiveValueDomain</p></td>
 <td><p class="sd-card-text">The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship “Measures” in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -355,7 +330,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">Conceptual::RepresentedVariable</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">ConceptualVariable measures UnitType</p></td>
 <td><p class="sd-card-text">Identifies the unit type associated with the conceptual variable.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -365,7 +340,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
+<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">ConceptualVariable takesSentinelConceptsFrom SentinelConceptualDomain</p></td>
 <td><p class="sd-card-text">Identifies the conceptual domain containing the set of sentinel concepts used to describe the conceptual variable.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -375,7 +350,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">ConceptualVariable takesSubstantiveConceptsFrom SubstantiveConceptualDomain</p></td>
 <td><p class="sd-card-text">Identifies the substantive conceptual domain containing the set of substantive concepts used to describe the conceptual variable.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -385,27 +360,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">ConceptualVariable uses Concept</p></td>
-<td><p class="sd-card-text">Reference to a concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Concept</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
-</tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">RepresentedVariable isBasedOn ConceptualVariable</p></td>
-<td><p class="sd-card-text">The conceptual variable that can be shared by a set of represented variables. Indicates comparability in conceptual domain and unit type.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/RepresentedVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-representedvariable"><span class="std std-ref">RepresentedVariable</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableCollection has ConceptualVariable</p></td>
 <td><p class="sd-card-text">Variable collection has zero to many conceptual variables.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -415,7 +370,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariablePosition indexes ConceptualVariable</p></td>
 <td><p class="sd-card-text">Variable position indexes a conceptual variable.</p></td>
 <td><p class="sd-card-text">1..1</p></td>
@@ -425,7 +380,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableRelationship hasSource ConceptualVariable</p></td>
 <td></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -435,7 +390,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableRelationship hasTarget ConceptualVariable</p></td>
 <td><p class="sd-card-text">Note that this can be realized as a collection to support tuples.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -445,7 +400,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">AgentListing isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -455,7 +410,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ClassificationFamily isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -465,7 +420,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ClassificationIndex isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -475,12 +430,22 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ClassificationSeries isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Representations/index.html#ddicdimodels-ddicdilibrary-classes-representations"><span class="std std-ref">Representations</span></a></p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Representations/ClassificationSeries.html#ddicdimodels-ddicdilibrary-classes-representations-classificationseries"><span class="std std-ref">ClassificationSeries</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">Concept uses Concept</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Concept</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
@@ -546,16 +511,6 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">ConceptualVariable uses Concept</p></td>
-<td><p class="sd-card-text">Reference to a concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">ConceptualVariable</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">DataStore isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -565,7 +520,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">EnumerationDomain isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -575,7 +530,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">Level isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">A concept or concept sub-type which describes the level.</p></td>
 <td><p class="sd-card-text">0..1</p></td>
@@ -585,7 +540,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">LogicalRecord isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -595,7 +550,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">PhysicalDataSet isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -605,7 +560,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">PhysicalRecordSegment isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -615,7 +570,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">PhysicalSegmentLayout isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -625,27 +580,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">UnitType uses Concept</p></td>
-<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/UnitType.html#ddicdimodels-ddicdilibrary-classes-conceptual-unittype"><span class="std std-ref">UnitType</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">Universe uses Concept</p></td>
-<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/index.html#ddicdimodels-ddicdilibrary-classes-conceptual"><span class="std std-ref">Conceptual</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Universe</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableCollection isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -655,7 +590,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">Descriptor identifies ReferenceVariable</p></td>
 <td></td>
 <td><p class="sd-card-text">1..1</p></td>
@@ -665,7 +600,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
+<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">ReferenceVariable takesValuesFrom ReferenceValueDomain</p></td>
 <td><p class="sd-card-text">Points to a value domain that contains values that may be drawn from the domains of multiple simple variables.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -678,7 +613,9 @@ Associations<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -772,36 +709,41 @@ XML Schema</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">30</span>  <span class="nt">&lt;xs:complexContent&gt;</span>
 <span class="linenos">31</span>    <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;RepresentedVariableXsdType&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">32</span>      <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">33</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ReferenceVariable_takesValuesFrom_ReferenceValueDomain-Target&quot;</span>
+<span class="linenos">33</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ReferenceVariable_takesValuesFrom_ReferenceValueDomain&quot;</span>
 <span class="linenos">34</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
 <span class="linenos">35</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">36</span>                    <span class="na">xml:id=</span><span class="s">&quot;ReferenceVariable_takesValuesFrom_ReferenceValueDomain-Target&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">36</span>                    <span class="na">xml:id=</span><span class="s">&quot;ReferenceVariable_takesValuesFrom_ReferenceValueDomain&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">37</span>          <span class="nt">&lt;xs:annotation&gt;</span>
 <span class="linenos">38</span>            <span class="nt">&lt;xs:documentation&gt;</span>Points to a value domain that contains values that may be drawn from the domains of multiple simple variables.<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos">39</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos">40</span>          <span class="nt">&lt;xs:complexType&gt;</span>
 <span class="linenos">41</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">42</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">42</span>              <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">43</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">44</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">45</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">46</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">47</span>                              <span class="na">xml:id=</span><span class="s">&quot;ReferenceVariable_takesValuesFrom_ReferenceValueDomain-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">48</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">49</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">50</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ReferenceValueDomain&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">51</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">52</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">53</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">54</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">55</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">56</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">57</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">58</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">59</span>      <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">60</span>    <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">61</span>  <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">62</span><span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">44</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">45</span>                              <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">46</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">47</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">48</span>                              <span class="na">xml:id=</span><span class="s">&quot;ReferenceVariable_takesValuesFrom_ReferenceValueDomain-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">49</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">50</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">51</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">52</span>                              <span class="na">xml:id=</span><span class="s">&quot;ReferenceVariable_takesValuesFrom_ReferenceValueDomain-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">53</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">54</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">55</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ReferenceValueDomain&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">56</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">57</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">58</span>                  <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">59</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">60</span>              <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">61</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">62</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">63</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">64</span>      <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">65</span>    <span class="nt">&lt;/xs:extension&gt;</span>
+<span class="linenos">66</span>  <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">67</span><span class="nt">&lt;/xs:complexType&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -840,26 +782,28 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 3</span><span class="w">    </span><span class="s2">&quot;RepresentedVariable.jsonld&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;ReferenceVariable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ReferenceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">      </span>
-<span class="linenos"> 8</span><span class="w">      </span><span class="nt">&quot;takesValuesFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ReferenceVariable_takesValuesFrom_ReferenceValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="nt">&quot;identifies_OF_Descriptor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Descriptor_identifies_ReferenceVariable&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:28.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceVariable&quot;</span><span class="w"></span>
-<span class="linenos">19</span><span class="p">}</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;ReferenceVariable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ReferenceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">      </span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="nt">&quot;takesValuesFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ReferenceVariable_takesValuesFrom_ReferenceValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot;identifies_OF_Descriptor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Descriptor_identifies_ReferenceVariable&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:51.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceVariable&quot;</span><span class="w"></span>
+<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 
@@ -917,6 +861,10 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <li class="toctree-l4"><a class="reference internal" href="../DataStructure.html">DataStructure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Datum.html">Datum</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../InstanceValue.html">InstanceValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Key.html">Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyDefinition.html">KeyDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyDefinitionMember.html">KeyDefinitionMember</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyMember.html">KeyMember</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Notation.html">Notation</a></li>
 </ul>
 </li>

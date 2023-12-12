@@ -128,6 +128,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <p>In DDI-CDI the value domain for a variable is separated into “substantive” and “sentinel” values. Substantive values are the values of primary interest. Sentinel values are additional values that may carry supplementary information, such as reasons for missing. This duality is described in ISO 11404. Substantive values for height might be real numbers expressed in meters. The full value domain might also include codes for different kinds of missing values - one code for “refused” and another for “don’t know”. Sentinel values may also convey some substantive information and at the same time represent missing values.</p>
 <p>An example might be where a numeric variable like number of employees be sometimes a count and sometimes a code representing a range of counts in order to avoid disclosure of information about a specific entity. The substantive value domain may use either a value description, for described values, or a codelist for enumerated values, or both. A value domain may consist of substantive values or sentinel values. Substantive values are those associated directly with some subject matter area. They do not address concerns around processing, such as missing values. Substantive values are called “regular values” in ISO/IEC 11404 - General Purpose Datatypes. The enumerated case is one where all values are listed.</p>
 <p>An example is the categorical values for gender: the conceptual domain could consist of the concept of male and the concept of female. These might be represented in codes and associated labels as 1 (“Male”) 2 (“Female”). The described case is one where some description is needed to define the set of values. Take the following description for height in meters: “a real number between 0 and 3, represented to two Arabic decimal places”. This description might be structured in some way to be machine actionable (datatype=”double”, min=”0”, max=”3”, decimals=”2”).</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -135,12 +136,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-1811e9ecd003ba8909127ed086f299bcda74920d.svg" type="image/svg+xml" style="width:1049px;height:727px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-a9e0089e4fbd83f7d732c936c31a2b28e07123db.svg" type="image/svg+xml" style="width:1013px;height:701px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="inheritance">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Inheritance<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -157,7 +158,9 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="line">    ᐊ── <a class="reference internal" href="../DataDescription/Long/DescriptorValueDomain.html#ddicdimodels-ddicdilibrary-classes-datadescription-long-descriptorvaluedomain"><span class="std std-ref">Long::DescriptorValueDomain</span></a></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -218,7 +221,9 @@ This is information that is tied to the identity of the object. If this informat
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -323,7 +328,9 @@ Associations<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -463,90 +470,105 @@ XML Schema</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 42</span>  <span class="nt">&lt;xs:complexContent&gt;</span>
 <span class="linenos"> 43</span>    <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ValueDomainXsdType&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 44</span>      <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 45</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;SubstantiveValueDomain_takesValuesFrom_EnumerationDomain-Target&quot;</span>
+<span class="linenos"> 45</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;SubstantiveValueDomain_takesValuesFrom_EnumerationDomain&quot;</span>
 <span class="linenos"> 46</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
 <span class="linenos"> 47</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 48</span>                    <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesValuesFrom_EnumerationDomain-Target&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 48</span>                    <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesValuesFrom_EnumerationDomain&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 49</span>          <span class="nt">&lt;xs:annotation&gt;</span>
 <span class="linenos"> 50</span>            <span class="nt">&lt;xs:documentation&gt;</span>Any subtype of an enumeration domain enumerating the set of valid values.<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos"> 51</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos"> 52</span>          <span class="nt">&lt;xs:complexType&gt;</span>
 <span class="linenos"> 53</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 54</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 54</span>              <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 55</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 56</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos"> 57</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 58</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 59</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesValuesFrom_EnumerationDomain-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 60</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos"> 61</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 62</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;CodeList&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 63</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;EnumerationDomain&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 64</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;StatisticalClassification&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 65</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos"> 66</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos"> 67</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 68</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos"> 69</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos"> 70</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos"> 71</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos"> 72</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 73</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription-Target&quot;</span>
-<span class="linenos"> 74</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 75</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 76</span>                    <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 77</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 78</span>            <span class="nt">&lt;xs:documentation&gt;</span>A formal description of the set of valid values - for described value domains.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 79</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 80</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos"> 81</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 82</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 83</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 84</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos"> 85</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 86</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 87</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 88</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos"> 89</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 90</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ValueAndConceptDescription&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 91</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos"> 92</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos"> 93</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 94</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos"> 95</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos"> 96</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos"> 97</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos"> 98</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 99</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain-Target&quot;</span>
-<span class="linenos">100</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">101</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">102</span>                    <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">103</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">104</span>            <span class="nt">&lt;xs:documentation&gt;</span>Corresponding conceptual definition given by an substantive conceptual domain.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">105</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">106</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">107</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">108</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">109</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">110</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">111</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">112</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">113</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">114</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">115</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">116</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;SubstantiveConceptualDomain&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">117</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">118</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">119</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">120</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">121</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">122</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">123</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">124</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">125</span>      <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">126</span>    <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">127</span>  <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">128</span><span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos"> 56</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos"> 57</span>                              <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos"> 58</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 59</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 60</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesValuesFrom_EnumerationDomain-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 61</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos"> 62</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 63</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos"> 64</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesValuesFrom_EnumerationDomain-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 65</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos"> 66</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 67</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;CodeList&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 68</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;EnumerationDomain&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 69</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;StatisticalClassification&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 70</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos"> 71</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos"> 72</span>                  <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 73</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos"> 74</span>              <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos"> 75</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos"> 76</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos"> 77</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 78</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription&quot;</span>
+<span class="linenos"> 79</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 80</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 81</span>                    <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 82</span>          <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 83</span>            <span class="nt">&lt;xs:documentation&gt;</span>A formal description of the set of valid values - for described value domains.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 84</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 85</span>          <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos"> 86</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos"> 87</span>              <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 88</span>                <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos"> 89</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos"> 90</span>                              <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos"> 91</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 92</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 93</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 94</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos"> 95</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 96</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos"> 97</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 98</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos"> 99</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">100</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ValueAndConceptDescription&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">101</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">102</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">103</span>                  <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">104</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">105</span>              <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">106</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">107</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">108</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">109</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain&quot;</span>
+<span class="linenos">110</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">111</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">112</span>                    <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">113</span>          <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">114</span>            <span class="nt">&lt;xs:documentation&gt;</span>Corresponding conceptual definition given by an substantive conceptual domain.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">115</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">116</span>          <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos">117</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">118</span>              <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">119</span>                <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">120</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">121</span>                              <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">122</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">123</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">124</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">125</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">126</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">127</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">128</span>                              <span class="na">xml:id=</span><span class="s">&quot;SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">129</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">130</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">131</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;SubstantiveConceptualDomain&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">132</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">133</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">134</span>                  <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">135</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">136</span>              <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">137</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">138</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">139</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">140</span>      <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">141</span>    <span class="nt">&lt;/xs:extension&gt;</span>
+<span class="linenos">142</span>  <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">143</span><span class="nt">&lt;/xs:complexType&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -605,35 +627,37 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 3</span><span class="w">    </span><span class="s2">&quot;ValueDomain.jsonld&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;SubstantiveValueDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">      </span>
-<span class="linenos"> 8</span><span class="w">      </span><span class="nt">&quot;takesConceptsFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="nt">&quot;isDescribedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">      </span><span class="nt">&quot;takesValuesFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain_takesValuesFrom_EnumerationDomain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">      </span><span class="nt">&quot;takesSubstantiveValuesFrom_OF_RepresentedVariable&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">      </span><span class="nt">&quot;hasValueFrom_OF_MainKeyMember&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">24</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:31.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain&quot;</span><span class="w"></span>
-<span class="linenos">28</span><span class="p">}</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;SubstantiveValueDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">      </span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="nt">&quot;takesConceptsFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot;isDescribedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">      </span><span class="nt">&quot;takesValuesFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain_takesValuesFrom_EnumerationDomain&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">      </span><span class="nt">&quot;takesSubstantiveValuesFrom_OF_RepresentedVariable&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">      </span><span class="nt">&quot;hasValueFrom_OF_MainKeyMember&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:54.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain&quot;</span><span class="w"></span>
+<span class="linenos">29</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 

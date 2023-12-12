@@ -14,11 +14,11 @@ Definition
 "language" represents natural language identifiers as defined by by [RFC 3066]. The value space of "language" is the set of all strings that are valid language identifiers as defined [RFC 3066] . The lexical space of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*. The base type of "language" is token. https://www.w3.org/TR/xmlschema-2/#language.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /Context/XMLSchema/language.pu
 

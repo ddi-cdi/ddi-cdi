@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DDICDILibrary::Classes::Process::TemporalControlConstruct:
 
-
 TemporalControlConstruct
 ************************
 
@@ -20,189 +19,201 @@ Definition
 - ANDSplit: Given three activities A, B and C, if ANDSplit(A) -> (B, C), then both B and C are executed after A finishes executing.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/Classes/Process/TemporalControlConstruct.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
 
-   | |_| ᐊ── :ref:`Process::NonDeterministicDeclarative<DDICDIModels::DDICDILibrary::Classes::Process::NonDeterministicDeclarative>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | |_| ᐊ── :ref:`Process::NonDeterministicDeclarative<DDICDIModels::DDICDILibrary::Classes::Process::NonDeterministicDeclarative>`
 
-   | |_| |_| ᐊ── :ref:`Process::TemporalConstraints<DDICDIModels::DDICDILibrary::Classes::Process::TemporalConstraints>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | |_| |_| ᐊ── :ref:`Process::TemporalConstraints<DDICDIModels::DDICDILibrary::Classes::Process::TemporalConstraints>`
 
-   | |_| |_| |_| ᐊ── :focus:`Process::TemporalControlConstruct`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - temporalControl
-        - \- *own class* \-
-        - TemporalControl is a property of type TemporalControlConstructType. There are four members of this enumeration: AND-split, XOR-split, AND-join and XOR-join.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::TemporalOperator` 
-        - 1..1
-        - 
-
-      * - description
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-        - A desription of the control logic in human-readable language.
-        - String 
-        - 0..1
-        - 
-
-      * - identifier
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-        - Identifier for objects requiring short- or long-lasting referencing and management.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
-        - 0..1
-        - 
-
-      * - workflow
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-        - Reference to the system or standard from which the workflow was taken.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
-        - 0..1
-        - 
+      | |_| |_| |_| ᐊ── :focus:`Process::TemporalControlConstruct`
 
 
-.. dropdown:: Associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of TemporalControlConstruct
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - to
-        - Activity hasInternal ControlLogic
-        - An activity is embedded in the control construct which launches it.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
-        - 0..*
-        - none
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - from
-        - ControlLogic has InformationFlowDefinition
-        - A control construct has zero or more information flow definitions each of which provides the control construct with zero or more input and output parameters used or produced in the step/sub-step with which it is associated.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition`
-        - 0..*
-        - shared
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - to
-        - ControlLogic hasSubControlLogic ControlLogic
-        - Control logic is a container of control logic which is in turn a container of control logic ad infinitum so that it is able to represent the structure of a program.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic`
-        - 0..1
-        - none
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - from
-        - ControlLogic informs ProcessingAgent
-        - Control logic informs a processing agent. The information may be deterministic or non-deterministic.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent`
-        - 0..*
-        - none
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
-      * - from
-        - ControlLogic invokes Activity
-        - Control logic invokes an activity deterministically (either conditionally or unconditionally) or non-derministically (based on temporal constraints or rule-based scheduling).
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
-        - 1..*
-        - none
-        - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: attributes
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - temporalControl
+           - \- *own class* \-
+           - TemporalControl is a property of type TemporalControlConstructType. There are four members of this enumeration: AND-split, XOR-split, AND-join and XOR-join.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::TemporalOperator` 
+           - 1..1
+           - 
 
-   .. tab-set::
+         * - description
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+           - A desription of the control logic in human-readable language.
+           - String 
+           - 0..1
+           - 
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+         * - identifier
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+           - Identifier for objects requiring short- or long-lasting referencing and management.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
+           - 0..1
+           - 
 
-         Fragment for the class **TemporalControlConstruct** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+         * - workflow
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+           - Reference to the system or standard from which the workflow was taken.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
 
-         .. literalinclude:: /xmi/TemporalControlConstruct.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+.. container::
+   :name: associations
 
-         Fragment for the class **TemporalControlConstruct** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of TemporalControlConstruct
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - to
+           - Activity hasInternal ControlLogic
+           - An activity is embedded in the control construct which launches it.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
+           - 0..*
+           - none
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - from
+           - ControlLogic has InformationFlowDefinition
+           - A control construct has zero or more information flow definitions each of which provides the control construct with zero or more input and output parameters used or produced in the step/sub-step with which it is associated.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition`
+           - 0..*
+           - shared
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - to
+           - ControlLogic hasSubControlLogic ControlLogic
+           - Control logic is a container of control logic which is in turn a container of control logic ad infinitum so that it is able to represent the structure of a program.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic`
+           - 0..1
+           - none
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - from
+           - ControlLogic informs ProcessingAgent
+           - Control logic informs a processing agent. The information may be deterministic or non-deterministic.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent`
+           - 0..*
+           - none
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
+         * - from
+           - ControlLogic invokes Activity
+           - Control logic invokes an activity deterministically (either conditionally or unconditionally) or non-derministically (based on temporal constraints or rule-based scheduling).
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
+           - 1..*
+           - none
+           - :ref:`Process::ControlLogic<DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic>`
 
-         .. literalinclude:: /DDICDILibrary/Classes/Process/TemporalControlConstruct_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+.. container::
+   :name: encodings
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+   .. dropdown:: Syntax representations / encodings
+    
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
+    
+      .. tab-set::
+    
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
+    
+            Fragment for the class **TemporalControlConstruct** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+    
+            .. literalinclude:: /xmi/TemporalControlConstruct.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         Fragment for the class **TemporalControlConstruct** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/Classes/Process/TemporalControlConstruct.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+            Fragment for the class **TemporalControlConstruct** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Process/TemporalControlConstruct_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         Fragment for the class **TemporalControlConstruct** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+            Fragment for the class **TemporalControlConstruct** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Process/TemporalControlConstruct.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/Classes/Process/TemporalControlConstruct.jsonld 
-            :language: JSON-LD
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the class **TemporalControlConstruct** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Process/TemporalControlConstruct.jsonld 
+               :language: JSON-LD
+               :linenos:
+               :emphasize-lines: 5
 

@@ -124,6 +124,7 @@ If neither identifier nor dimension components are present, then a synthetic id 
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>The string “income_distribution:male:Ontario:married” in a dimensional key-value datastore, where instance key members are defined by context plus Sex, Province and Marital Status dimensions.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -131,12 +132,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../../_images/plantuml-bca4b4a2594efc3ce2bc70e85e1ceab459360db7.svg" type="image/svg+xml" style="width:1246px;height:819px;background:#FFFFFF;"></object></p>
+<object data="../../../../_images/plantuml-024208760401220c7b4d92f134716a5ba665382a.svg" type="image/svg+xml" style="width:964px;height:675px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="inheritance">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Inheritance<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -147,10 +148,15 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="line"><a class="reference internal" href="../InstanceValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-instancevalue"><span class="std std-ref">DataDescription::InstanceValue</span></a></div>
 </div>
 <div class="regular line-block">
-<div class="line">  ᐊ── <span class="focus">KeyValue::MainKeyMember</span></div>
+<div class="line">  ᐊ── <a class="reference internal" href="../KeyMember.html#ddicdimodels-ddicdilibrary-classes-datadescription-keymember"><span class="std std-ref">DataDescription::KeyMember</span></a></div>
+</div>
+<div class="regular line-block">
+<div class="line">    ᐊ── <span class="focus">KeyValue::MainKeyMember</span></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -200,7 +206,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -233,6 +241,26 @@ Associations<div class="sd-summary-down docutils">
 </thead>
 <tbody>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">Key has KeyMember</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../index.html#ddicdimodels-ddicdilibrary-classes-datadescription"><span class="std std-ref">DataDescription</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../Key.html#ddicdimodels-ddicdilibrary-classes-datadescription-key"><span class="std std-ref">Key</span></a></p></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../KeyMember.html#ddicdimodels-ddicdilibrary-classes-datadescription-keymember"><span class="std std-ref">DataDescription::KeyMember</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
+<td><p class="sd-card-text">KeyMember isBasedOn DataStructureComponent</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../Components/index.html#ddicdimodels-ddicdilibrary-classes-datadescription-components"><span class="std std-ref">Components</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../Components/DataStructureComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-datastructurecomponent"><span class="std std-ref">DataStructureComponent</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../KeyMember.html#ddicdimodels-ddicdilibrary-classes-datadescription-keymember"><span class="std std-ref">DataDescription::KeyMember</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">Datum uses InstanceValue</p></td>
 <td></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -242,7 +270,17 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../InstanceValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-instancevalue"><span class="std std-ref">DataDescription::InstanceValue</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">InstanceKey has InstanceValue</p></td>
+<td></td>
+<td><p class="sd-card-text">0..1</p></td>
+<td><p class="sd-card-text">- <em>own package</em> -</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="InstanceKey.html#ddicdimodels-ddicdilibrary-classes-datadescription-keyvalue-instancekey"><span class="std std-ref">InstanceKey</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../InstanceValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-instancevalue"><span class="std std-ref">DataDescription::InstanceValue</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">InstanceValue hasValueFrom ValueDomain</p></td>
 <td></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -252,7 +290,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../InstanceValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-instancevalue"><span class="std std-ref">DataDescription::InstanceValue</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">InstanceValue isStoredIn DataPoint</p></td>
 <td></td>
 <td><p class="sd-card-text">0..1</p></td>
@@ -262,7 +300,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../InstanceValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-instancevalue"><span class="std std-ref">DataDescription::InstanceValue</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
+<tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">InstanceValue represents ConceptualValue</p></td>
 <td></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -271,36 +309,6 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">0..1</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../InstanceValue.html#ddicdimodels-ddicdilibrary-classes-datadescription-instancevalue"><span class="std std-ref">DataDescription::InstanceValue</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">MainKeyMember isBasedOn DimensionComponent</p></td>
-<td></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../Components/index.html#ddicdimodels-ddicdilibrary-classes-datadescription-components"><span class="std std-ref">Components</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../Components/DimensionComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-dimensioncomponent"><span class="std std-ref">DimensionComponent</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">MainKeyMember isBasedOn IdentifierComponent</p></td>
-<td></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../Components/index.html#ddicdimodels-ddicdilibrary-classes-datadescription-components"><span class="std std-ref">Components</span></a></p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../Components/IdentifierComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-components-identifiercomponent"><span class="std std-ref">IdentifierComponent</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">InstanceKey has MainKeyMember</p></td>
-<td></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="InstanceKey.html#ddicdimodels-ddicdilibrary-classes-datadescription-keyvalue-instancekey"><span class="std std-ref">InstanceKey</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">MainKeyMember hasValueFrom SubstantiveValueDomain</p></td>
@@ -312,30 +320,12 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">MainKeyMember isBasedOn ContextualComponent</p></td>
-<td></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="ContextualComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-keyvalue-contextualcomponent"><span class="std std-ref">ContextualComponent</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">from</p></td>
-<td><p class="sd-card-text">MainKeyMember isBasedOn SyntheticIdComponent</p></td>
-<td></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="SyntheticIdComponent.html#ddicdimodels-ddicdilibrary-classes-datadescription-keyvalue-syntheticidcomponent"><span class="std std-ref">SyntheticIdComponent</span></a></p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -372,79 +362,23 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">21</span>   <span class="nt">&lt;generalization</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-generalization&quot;</span>
 <span class="linenos">22</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-generalization&quot;</span>
 <span class="linenos">23</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Generalization&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">24</span>      <span class="nt">&lt;general</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-InstanceValue&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">24</span>      <span class="nt">&lt;general</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyMember&quot;</span><span class="nt">/&gt;</span>
 <span class="linenos">25</span>   <span class="nt">&lt;/generalization&gt;</span>
-<span class="linenos">26</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_1&quot;</span>
-<span class="linenos">27</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_1&quot;</span>
+<span class="linenos">26</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute&quot;</span>
+<span class="linenos">27</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute&quot;</span>
 <span class="linenos">28</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">29</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_1-lowerValue&quot;</span>
-<span class="linenos">30</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_1-lowerValue&quot;</span>
+<span class="linenos">29</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute-lowerValue&quot;</span>
+<span class="linenos">30</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute-lowerValue&quot;</span>
 <span class="linenos">31</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">32</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_1-upperValue&quot;</span>
-<span class="linenos">33</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_1-upperValue&quot;</span>
+<span class="linenos">32</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute-upperValue&quot;</span>
+<span class="linenos">33</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute-upperValue&quot;</span>
 <span class="linenos">34</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">35</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
 <span class="linenos">36</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">37</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember_isBasedOn_SyntheticIdComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">38</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-SyntheticIdComponent&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">37</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">38</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Representations-SubstantiveValueDomain&quot;</span><span class="nt">/&gt;</span>
 <span class="linenos">39</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">40</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_2&quot;</span>
-<span class="linenos">41</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_2&quot;</span>
-<span class="linenos">42</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">43</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_2-lowerValue&quot;</span>
-<span class="linenos">44</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_2-lowerValue&quot;</span>
-<span class="linenos">45</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">46</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_2-upperValue&quot;</span>
-<span class="linenos">47</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_2-upperValue&quot;</span>
-<span class="linenos">48</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">49</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">50</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">51</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember_isBasedOn_ContextualComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">52</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-ContextualComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">53</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">54</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_3&quot;</span>
-<span class="linenos">55</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_3&quot;</span>
-<span class="linenos">56</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">57</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_3-lowerValue&quot;</span>
-<span class="linenos">58</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_3-lowerValue&quot;</span>
-<span class="linenos">59</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">60</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_3-upperValue&quot;</span>
-<span class="linenos">61</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_3-upperValue&quot;</span>
-<span class="linenos">62</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">63</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">64</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">65</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-MainKeyMember_isBasedOn_IdentifierComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">66</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-IdentifierComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">67</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">68</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_4&quot;</span>
-<span class="linenos">69</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_4&quot;</span>
-<span class="linenos">70</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">71</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_4-lowerValue&quot;</span>
-<span class="linenos">72</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_4-lowerValue&quot;</span>
-<span class="linenos">73</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">74</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_4-upperValue&quot;</span>
-<span class="linenos">75</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_4-upperValue&quot;</span>
-<span class="linenos">76</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">77</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">78</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">79</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-MainKeyMember_isBasedOn_DimensionComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">80</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-DimensionComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">81</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">82</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_5&quot;</span>
-<span class="linenos">83</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_5&quot;</span>
-<span class="linenos">84</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">85</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_5-lowerValue&quot;</span>
-<span class="linenos">86</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_5-lowerValue&quot;</span>
-<span class="linenos">87</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">88</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember-ownedAttribute_5-upperValue&quot;</span>
-<span class="linenos">89</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MainKeyMember-ownedAttribute_5-upperValue&quot;</span>
-<span class="linenos">90</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">91</span>         <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">92</span>      <span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">93</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-KeyValue-MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">94</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Representations-SubstantiveValueDomain&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">95</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">96</span><span class="nt">&lt;/packagedElement&gt;</span>
+<span class="linenos">40</span><span class="nt">&lt;/packagedElement&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -452,171 +386,72 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 XML Schema</label><div class="sd-tab-content encoding docutils">
 <p class="sd-card-text">Fragment for the class <strong>MainKeyMember</strong> (<a class="reference external" href="/encoding/xml-schema/ddi-cdi.xsd">entire XML Schema</a>)</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">  1</span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;MainKeyMember&quot;</span>
-</span><span class="linenos">  2</span>            <span class="na">type=</span><span class="s">&quot;MainKeyMemberXsdType&quot;</span>
-<span class="linenos">  3</span>            <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">  4</span>  <span class="cm">&lt;!-- based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember --&gt;</span>
-<span class="linenos">  5</span>  <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">  6</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
-<span class="linenos">  7</span>          ============
-<span class="linenos">  8</span>          Identifies the unit of interest, either a statistical unit or a population, via identifier or dimension components, respectively, plus an optional contextual component. 
-<span class="linenos">  9</span>          If neither identifier nor dimension components are present, then a synthetic id component is used. 
-<span class="linenos"> 10</span>          
-<span class="linenos"> 11</span>          Examples
-<span class="linenos"> 12</span>          ==========
-<span class="linenos"> 13</span>          The string &quot;income_distribution:male:Ontario:married&quot; in a dimensional key-value datastore, where instance key members are defined by context plus Sex, Province and Marital Status dimensions.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 14</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 15</span><span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 16</span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;MainKeyMemberXsdType&quot;</span>
-<span class="linenos"> 17</span>                <span class="na">xml:id=</span><span class="s">&quot;MainKeyMemberXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 18</span>  <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 19</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
-<span class="linenos"> 20</span>          ============
-<span class="linenos"> 21</span>          Identifies the unit of interest, either a statistical unit or a population, via identifier or dimension components, respectively, plus an optional contextual component. 
-<span class="linenos"> 22</span>          If neither identifier nor dimension components are present, then a synthetic id component is used. 
-<span class="linenos"> 23</span>          
-<span class="linenos"> 24</span>          Examples
-<span class="linenos"> 25</span>          ==========
-<span class="linenos"> 26</span>          The string &quot;income_distribution:male:Ontario:married&quot; in a dimensional key-value datastore, where instance key members are defined by context plus Sex, Province and Marital Status dimensions.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 27</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 28</span>  <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 29</span>    <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;InstanceValueXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 30</span>      <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 31</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;MainKeyMember_isBasedOn_SyntheticIdComponent-Target&quot;</span>
-<span class="linenos"> 32</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 33</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 34</span>                    <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_isBasedOn_SyntheticIdComponent-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 35</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 36</span>            <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 37</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 38</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos"> 39</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 40</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 41</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 42</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos"> 43</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 44</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 45</span>                              <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_isBasedOn_SyntheticIdComponent-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 46</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos"> 47</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 48</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;SyntheticIdComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 49</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos"> 50</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos"> 51</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 52</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos"> 53</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos"> 54</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos"> 55</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos"> 56</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 57</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;MainKeyMember_isBasedOn_ContextualComponent-Target&quot;</span>
-<span class="linenos"> 58</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 59</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 60</span>                    <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_isBasedOn_ContextualComponent-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 61</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 62</span>            <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 63</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 64</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos"> 65</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 66</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 67</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 68</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos"> 69</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 70</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 71</span>                              <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_isBasedOn_ContextualComponent-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 72</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos"> 73</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 74</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ContextualComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 75</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos"> 76</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos"> 77</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 78</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos"> 79</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos"> 80</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos"> 81</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos"> 82</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 83</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;MainKeyMember_isBasedOn_IdentifierComponent-Target&quot;</span>
-<span class="linenos"> 84</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 85</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 86</span>                    <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_isBasedOn_IdentifierComponent-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 87</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 88</span>            <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 89</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 90</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos"> 91</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 92</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 93</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 94</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos"> 95</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 96</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 97</span>                              <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_isBasedOn_IdentifierComponent-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 98</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos"> 99</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">100</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;IdentifierComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">101</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">102</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">103</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">104</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">105</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">106</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">107</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">108</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">109</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;MainKeyMember_isBasedOn_DimensionComponent-Target&quot;</span>
-<span class="linenos">110</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">111</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">112</span>                    <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_isBasedOn_DimensionComponent-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">113</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">114</span>            <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
-<span class="linenos">115</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">116</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">117</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">118</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">119</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">120</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">121</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">122</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">123</span>                              <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_isBasedOn_DimensionComponent-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">124</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">125</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">126</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DimensionComponent&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">127</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">128</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">129</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">130</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">131</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">132</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">133</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">134</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">135</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain-Target&quot;</span>
-<span class="linenos">136</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">137</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">138</span>                    <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">139</span>          <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">140</span>            <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
-<span class="linenos">141</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">142</span>          <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">143</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">144</span>              <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">145</span>                <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">146</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">147</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">148</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">149</span>                              <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">150</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">151</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">152</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DescriptorValueDomain&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">153</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;SubstantiveValueDomain&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">154</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">155</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">156</span>                  <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">157</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">158</span>              <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">159</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">160</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">161</span>        <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">162</span>      <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">163</span>    <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">164</span>  <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">165</span><span class="nt">&lt;/xs:complexType&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;MainKeyMember&quot;</span>
+</span><span class="linenos"> 2</span>            <span class="na">type=</span><span class="s">&quot;MainKeyMemberXsdType&quot;</span>
+<span class="linenos"> 3</span>            <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 4</span>  <span class="cm">&lt;!-- based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember --&gt;</span>
+<span class="linenos"> 5</span>  <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 6</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
+<span class="linenos"> 7</span>          ============
+<span class="linenos"> 8</span>          Identifies the unit of interest, either a statistical unit or a population, via identifier or dimension components, respectively, plus an optional contextual component. 
+<span class="linenos"> 9</span>          If neither identifier nor dimension components are present, then a synthetic id component is used. 
+<span class="linenos">10</span>          
+<span class="linenos">11</span>          Examples
+<span class="linenos">12</span>          ==========
+<span class="linenos">13</span>          The string &quot;income_distribution:male:Ontario:married&quot; in a dimensional key-value datastore, where instance key members are defined by context plus Sex, Province and Marital Status dimensions.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">14</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">15</span><span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">16</span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;MainKeyMemberXsdType&quot;</span>
+<span class="linenos">17</span>                <span class="na">xml:id=</span><span class="s">&quot;MainKeyMemberXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">18</span>  <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">19</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
+<span class="linenos">20</span>          ============
+<span class="linenos">21</span>          Identifies the unit of interest, either a statistical unit or a population, via identifier or dimension components, respectively, plus an optional contextual component. 
+<span class="linenos">22</span>          If neither identifier nor dimension components are present, then a synthetic id component is used. 
+<span class="linenos">23</span>          
+<span class="linenos">24</span>          Examples
+<span class="linenos">25</span>          ==========
+<span class="linenos">26</span>          The string &quot;income_distribution:male:Ontario:married&quot; in a dimensional key-value datastore, where instance key members are defined by context plus Sex, Province and Marital Status dimensions.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">27</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">28</span>  <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">29</span>    <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;KeyMemberXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">30</span>      <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">31</span>        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span>
+<span class="linenos">32</span>                    <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">33</span>                    <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">34</span>                    <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">35</span>          <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">36</span>            <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
+<span class="linenos">37</span>          <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">38</span>          <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos">39</span>            <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">40</span>              <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">41</span>                <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">42</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">43</span>                              <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">44</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">45</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">46</span>                              <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">47</span>                  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">48</span>                              <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">49</span>                              <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">50</span>                              <span class="na">xml:id=</span><span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">51</span>                    <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">52</span>                      <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">53</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DescriptorValueDomain&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">54</span>                        <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;SubstantiveValueDomain&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">55</span>                      <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">56</span>                    <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">57</span>                  <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">58</span>                <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">59</span>              <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">60</span>            <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">61</span>          <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">62</span>        <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">63</span>      <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">64</span>    <span class="nt">&lt;/xs:extension&gt;</span>
+<span class="linenos">65</span>  <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">66</span><span class="nt">&lt;/xs:complexType&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -630,59 +465,19 @@ Ontology (Turtle)</label><div class="sd-tab-content encoding docutils">
 </span><span class="linenos"> 4</span>  <span class="kt">a</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">Class</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Class</span><span class="p">;</span>
 <span class="linenos"> 5</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;MainKeyMember&quot;</span><span class="p">;</span>
 <span class="linenos"> 6</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Definition\n============\nIdentifies the unit of interest, either a statistical unit or a population, via identifier or dimension components, respectively, plus an optional contextual component. \nIf neither identifier nor dimension components are present, then a synthetic id component is used. \n\nExamples\n==========\nThe string \&quot;income_distribution:male:Ontario:married\&quot; in a dimensional key-value datastore, where instance key members are defined by context plus Sex, Province and Marital Status dimensions.&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">;</span>
-<span class="linenos"> 7</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceValue</span><span class="p">;</span>
+<span class="linenos"> 7</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">KeyMember</span><span class="p">;</span>
 <span class="linenos"> 8</span><span class="p">.</span>
 <span class="linenos"> 9</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember_isBasedOn_DimensionComponent</span>
+<span class="linenos">11</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember_hasValueFrom_SubstantiveValueDomain</span>
 <span class="linenos">12</span>  <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Association</span><span class="p">;</span>
 <span class="linenos">13</span>  <span class="c"># ASSOCIATION</span>
-<span class="linenos">14</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;isBasedOn&quot;</span><span class="p">;</span>
-<span class="linenos">15</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;MainKeyMember_isBasedOn_DimensionComponent&quot;</span><span class="p">;</span>
+<span class="linenos">14</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;hasValueFrom&quot;</span><span class="p">;</span>
+<span class="linenos">15</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="p">;</span>
 <span class="linenos">16</span>  
 <span class="linenos">17</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember</span><span class="p">;</span>
-<span class="linenos">18</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">DimensionComponent</span><span class="p">;</span>
+<span class="linenos">18</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">SubstantiveValueDomain</span><span class="p">;</span>
 <span class="linenos">19</span><span class="p">.</span>
-<span class="linenos">20</span>
-<span class="linenos">21</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember_isBasedOn_IdentifierComponent</span>
-<span class="linenos">22</span>  <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Association</span><span class="p">;</span>
-<span class="linenos">23</span>  <span class="c"># ASSOCIATION</span>
-<span class="linenos">24</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;isBasedOn&quot;</span><span class="p">;</span>
-<span class="linenos">25</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;MainKeyMember_isBasedOn_IdentifierComponent&quot;</span><span class="p">;</span>
-<span class="linenos">26</span>  
-<span class="linenos">27</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember</span><span class="p">;</span>
-<span class="linenos">28</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">IdentifierComponent</span><span class="p">;</span>
-<span class="linenos">29</span><span class="p">.</span>
-<span class="linenos">30</span>
-<span class="linenos">31</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember_hasValueFrom_SubstantiveValueDomain</span>
-<span class="linenos">32</span>  <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Association</span><span class="p">;</span>
-<span class="linenos">33</span>  <span class="c"># ASSOCIATION</span>
-<span class="linenos">34</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;hasValueFrom&quot;</span><span class="p">;</span>
-<span class="linenos">35</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="p">;</span>
-<span class="linenos">36</span>  
-<span class="linenos">37</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember</span><span class="p">;</span>
-<span class="linenos">38</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">SubstantiveValueDomain</span><span class="p">;</span>
-<span class="linenos">39</span><span class="p">.</span>
-<span class="linenos">40</span>
-<span class="linenos">41</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember_isBasedOn_ContextualComponent</span>
-<span class="linenos">42</span>  <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Association</span><span class="p">;</span>
-<span class="linenos">43</span>  <span class="c"># ASSOCIATION</span>
-<span class="linenos">44</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;isBasedOn&quot;</span><span class="p">;</span>
-<span class="linenos">45</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;MainKeyMember_isBasedOn_ContextualComponent&quot;</span><span class="p">;</span>
-<span class="linenos">46</span>  
-<span class="linenos">47</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember</span><span class="p">;</span>
-<span class="linenos">48</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">ContextualComponent</span><span class="p">;</span>
-<span class="linenos">49</span><span class="p">.</span>
-<span class="linenos">50</span>
-<span class="linenos">51</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember_isBasedOn_SyntheticIdComponent</span>
-<span class="linenos">52</span>  <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Association</span><span class="p">;</span>
-<span class="linenos">53</span>  <span class="c"># ASSOCIATION</span>
-<span class="linenos">54</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;isBasedOn&quot;</span><span class="p">;</span>
-<span class="linenos">55</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;MainKeyMember_isBasedOn_SyntheticIdComponent&quot;</span><span class="p">;</span>
-<span class="linenos">56</span>  
-<span class="linenos">57</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">MainKeyMember</span><span class="p">;</span>
-<span class="linenos">58</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">SyntheticIdComponent</span><span class="p">;</span>
-<span class="linenos">59</span><span class="p">.</span>
 </pre></div>
 </div>
 </div>
@@ -692,41 +487,28 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <p class="sd-card-text">Fragment for the class <strong>MainKeyMember</strong> (<a class="reference external" href="/encoding/json-ld/ddi-cdi.jsonld">main JSON-LD</a>)</p>
 <div class="highlight-JSON-LD notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="s2">&quot;InstanceValue.jsonld&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="s2">&quot;KeyMember.jsonld&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;MainKeyMember&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">      </span>
-<span class="linenos"> 8</span><span class="w">      </span><span class="nt">&quot;isBasedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_isBasedOn_DimensionComponent&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="nt">&quot;isBasedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_isBasedOn_IdentifierComponent&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">      </span><span class="nt">&quot;hasValueFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">      </span><span class="nt">&quot;isBasedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_isBasedOn_ContextualComponent&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">      </span><span class="nt">&quot;isBasedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_isBasedOn_SyntheticIdComponent&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">      </span><span class="nt">&quot;has_OF_InstanceKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InstanceKey_has_MainKeyMember&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">27</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:27.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember&quot;</span><span class="w"></span>
-<span class="linenos">31</span><span class="p">}</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;MainKeyMember&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">      </span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="nt">&quot;hasValueFrom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:MainKeyMember_hasValueFrom_SubstantiveValueDomain&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:51.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember&quot;</span><span class="w"></span>
+<span class="linenos">17</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 
@@ -780,6 +562,10 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <li class="toctree-l4"><a class="reference internal" href="../DataStructure.html">DataStructure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Datum.html">Datum</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../InstanceValue.html">InstanceValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Key.html">Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyDefinition.html">KeyDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyDefinitionMember.html">KeyDefinitionMember</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyMember.html">KeyMember</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Notation.html">Notation</a></li>
 </ul>
 </li>

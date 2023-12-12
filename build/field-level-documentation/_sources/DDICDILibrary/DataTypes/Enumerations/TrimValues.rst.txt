@@ -12,85 +12,94 @@ Definition
 ============
 Specifies which spaces to remove from a data value (start, end, both, neither).
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/Enumerations/TrimValues.pu
 
-.. dropdown:: Enumeration literals
-   :open:
+.. container::
+   :name: literals
 
-   .. list-table::
-      :widths: 20 80
-      :header-rows: 1
-      :class: datatable-enumeration-literals
+   .. dropdown:: Enumeration literals
+      :open:
 
-      * - Name
-        - Description
-      * - Both
-        - Trim whitespace characters from both the start and the end of the value.
-      * - End
-        - Trim whitespace characters from the end of the value.
-      * - Neither
-        - Trim whitespace characters from neither the start nor the end of the value.
-      * - Start
-        - Trim whitespce characters from the start of the value.
+      .. list-table::
+         :widths: 20 80
+         :header-rows: 1
+         :class: datatable-enumeration-literals
 
-.. dropdown:: Usage
+         * - Name
+           - Description
+         * - Both
+           - Trim whitespace characters from both the start and the end of the value.
+         * - End
+           - Trim whitespace characters from the end of the value.
+         * - Neither
+           - Trim whitespace characters from neither the start nor the end of the value.
+         * - Start
+           - Trim whitespce characters from the start of the value.
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+.. container::
+   :name: usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout`
-        - trim
+   .. dropdown:: Usage
+
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
+
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout`
+           - trim
 
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: encodings
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Syntax representations / encodings
 
-   .. tab-set::
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      .. tab-set::
 
-         Fragment for the enumeration **TrimValues**
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-         .. literalinclude:: /xmi/TrimValues.xmi 
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+            Fragment for the enumeration **TrimValues**
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            .. literalinclude:: /xmi/TrimValues.xmi 
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         Fragment for the enumeration **TrimValues**
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/TrimValues_xsd.txt 
-            :language: xml
-            :linenos:
-            :dedent: 2
-            :emphasize-lines: 1
+            Fragment for the enumeration **TrimValues**
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/TrimValues_xsd.txt 
+               :language: xml
+               :linenos:
+               :dedent: 2
+               :emphasize-lines: 1
 
-         Fragment for the enumeration **TrimValues** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/TrimValues.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+            Fragment for the enumeration **TrimValues** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/TrimValues.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3

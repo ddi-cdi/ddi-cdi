@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DDICDILibrary::Classes::Representations::EnumerationDomain:
 
-
 EnumerationDomain
 *****************
 
@@ -15,178 +14,190 @@ Definition
 A base class acting as an extension point to allow all codifications (codelist, statistical classification, etc.) to be understood as enumerated value domains.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/Classes/Representations/EnumerationDomain.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :focus:`Representations::EnumerationDomain`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :focus:`Representations::EnumerationDomain`
 
-   |    ᐊ── :ref:`Representations::CodeList<DDICDIModels::DDICDILibrary::Classes::Representations::CodeList>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      |    ᐊ── :ref:`Representations::CodeList<DDICDIModels::DDICDILibrary::Classes::Representations::CodeList>`
 
-   |    ᐊ── :ref:`Representations::StatisticalClassification<DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification>`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - identifier
-        - \- *own class* \-
-        - Identifier for objects requiring short- or long-lasting referencing and management.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
-        - 0..1
-        - 
-
-      * - name
-        - \- *own class* \-
-        - Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectName` 
-        - 0..*
-        - 
-
-      * - purpose
-        - \- *own class* \-
-        - Intent or reason for the object/the description of the object.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
-        - 0..1
-        - 
+      |    ᐊ── :ref:`Representations::StatisticalClassification<DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification>`
 
 
-.. dropdown:: Associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of EnumerationDomain
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - from
-        - EnumerationDomain isDefinedBy Concept
-        - The conceptual basis for the collection of members.
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - from
-        - EnumerationDomain references CategorySet
-        - Category set associated with the enumeration.
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet`
-        - 0..1
-        - none
-        - \- *own class* \-
-      * - from
-        - EnumerationDomain uses LevelStructure
-        - Has meaningful level to which members belong.
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::LevelStructure`
-        - 0..1
-        - none
-        - \- *own class* \-
-      * - to
-        - SentinelValueDomain takesValuesFrom EnumerationDomain
-        - Any subtype of an enumeration domain enumerating the set of valid values.
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::SentinelValueDomain`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - to
-        - SubstantiveValueDomain takesValuesFrom EnumerationDomain
-        - Any subtype of an enumeration domain enumerating the set of valid values.
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain`
-        - 0..*
-        - none
-        - \- *own class* \-
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: attributes
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - identifier
+           - \- *own class* \-
+           - Identifier for objects requiring short- or long-lasting referencing and management.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
+           - 0..1
+           - 
 
-   .. tab-set::
+         * - name
+           - \- *own class* \-
+           - Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectName` 
+           - 0..*
+           - 
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+         * - purpose
+           - \- *own class* \-
+           - Intent or reason for the object/the description of the object.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
+           - 0..1
+           - 
 
-         Fragment for the class **EnumerationDomain** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         .. literalinclude:: /xmi/EnumerationDomain.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+.. container::
+   :name: associations
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of EnumerationDomain
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - from
+           - EnumerationDomain isDefinedBy Concept
+           - The conceptual basis for the collection of members.
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - from
+           - EnumerationDomain references CategorySet
+           - Category set associated with the enumeration.
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet`
+           - 0..1
+           - none
+           - \- *own class* \-
+         * - from
+           - EnumerationDomain uses LevelStructure
+           - Has meaningful level to which members belong.
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::LevelStructure`
+           - 0..1
+           - none
+           - \- *own class* \-
+         * - to
+           - SentinelValueDomain takesValuesFrom EnumerationDomain
+           - Any subtype of an enumeration domain enumerating the set of valid values.
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::SentinelValueDomain`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - to
+           - SubstantiveValueDomain takesValuesFrom EnumerationDomain
+           - Any subtype of an enumeration domain enumerating the set of valid values.
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain`
+           - 0..*
+           - none
+           - \- *own class* \-
 
-         Fragment for the class **EnumerationDomain** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+.. container::
+   :name: encodings
 
-         .. literalinclude:: /DDICDILibrary/Classes/Representations/EnumerationDomain_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+   .. dropdown:: Syntax representations / encodings
+    
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
+    
+      .. tab-set::
+    
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
+    
+            Fragment for the class **EnumerationDomain** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+    
+            .. literalinclude:: /xmi/EnumerationDomain.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         Fragment for the class **EnumerationDomain** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+            Fragment for the class **EnumerationDomain** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Representations/EnumerationDomain_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/Classes/Representations/EnumerationDomain.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the class **EnumerationDomain** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Representations/EnumerationDomain.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         Fragment for the class **EnumerationDomain** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+         .. tab-item:: JSON-LD
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/Classes/Representations/EnumerationDomain.jsonld 
-            :language: JSON-LD
-            :linenos:
-            :emphasize-lines: 5
+            Fragment for the class **EnumerationDomain** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/Representations/EnumerationDomain.jsonld 
+               :language: JSON-LD
+               :linenos:
+               :emphasize-lines: 5
 

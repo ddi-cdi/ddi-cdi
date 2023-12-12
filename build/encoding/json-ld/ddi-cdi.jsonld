@@ -1,8 +1,10 @@
 {
   "@context": {
     "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+ 	"xsd": "http://www.w3.org/2001/XMLSchema#",
     "iri": "@id",
     "type": "@type",
+    "DDICDIModels": "@included",
     "Agent": {
       "@id": "cdi:Agent",
       "@context": "Agent.jsonld"
@@ -158,6 +160,22 @@
     "InstanceValue": {
       "@id": "cdi:InstanceValue",
       "@context": "InstanceValue.jsonld"
+    }, 
+    "Key": {
+      "@id": "cdi:Key",
+      "@context": "Key.jsonld"
+    }, 
+    "KeyDefinition": {
+      "@id": "cdi:KeyDefinition",
+      "@context": "KeyDefinition.jsonld"
+    }, 
+    "KeyDefinitionMember": {
+      "@id": "cdi:KeyDefinitionMember",
+      "@context": "KeyDefinitionMember.jsonld"
+    }, 
+    "KeyMember": {
+      "@id": "cdi:KeyMember",
+      "@context": "KeyMember.jsonld"
     }, 
     "Notation": {
       "@id": "cdi:Notation",
@@ -483,6 +501,10 @@
       "@id": "cdi:Sequence",
       "@context": "Sequence.jsonld"
     }, 
+    "SequencePosition": {
+      "@id": "cdi:SequencePosition",
+      "@context": "SequencePosition.jsonld"
+    }, 
     "Service": {
       "@id": "cdi:Service",
       "@context": "Service.jsonld"
@@ -611,209 +633,57 @@
       "@id": "cdi:ValueDomain",
       "@context": "ValueDomain.jsonld"
     }, 
-    "ModelIdentification": {
-      "@id": "cdi:ModelIdentification",
-      "@context": "ModelIdentification.jsonld"
-    }, 
-    "AccessInformation": {
-      "@id": "cdi:AccessInformation",
-      "@context": "AccessInformation.jsonld"
-    }, 
-    "AccessLocation": {
-      "@id": "cdi:AccessLocation",
-      "@context": "AccessLocation.jsonld"
-    }, 
-    "Address": {
-      "@id": "cdi:Address",
-      "@context": "Address.jsonld"
-    }, 
-    "AgentInRole": {
-      "@id": "cdi:AgentInRole",
-      "@context": "AgentInRole.jsonld"
-    }, 
-    "BibliographicName": {
-      "@id": "cdi:BibliographicName",
-      "@context": "BibliographicName.jsonld"
-    }, 
-    "CatalogDetails": {
-      "@id": "cdi:CatalogDetails",
-      "@context": "CatalogDetails.jsonld"
-    }, 
-    "CombinedDate": {
-      "@id": "cdi:CombinedDate",
-      "@context": "CombinedDate.jsonld"
-    }, 
-    "Command": {
-      "@id": "cdi:Command",
-      "@context": "Command.jsonld"
-    }, 
-    "CommandCode": {
-      "@id": "cdi:CommandCode",
-      "@context": "CommandCode.jsonld"
-    }, 
-    "CommandFile": {
-      "@id": "cdi:CommandFile",
-      "@context": "CommandFile.jsonld"
-    }, 
-    "ComplexLanguageString": {
-      "@id": "cdi:ComplexLanguageString",
-      "@context": "ComplexLanguageString.jsonld"
-    }, 
-    "ContactInformation": {
-      "@id": "cdi:ContactInformation",
-      "@context": "ContactInformation.jsonld"
-    }, 
-    "ControlledVocabularyEntry": {
-      "@id": "cdi:ControlledVocabularyEntry",
-      "@context": "ControlledVocabularyEntry.jsonld"
-    }, 
-    "CorrespondenceDefinition": {
-      "@id": "cdi:CorrespondenceDefinition",
-      "@context": "CorrespondenceDefinition.jsonld"
-    }, 
-    "DateRange": {
-      "@id": "cdi:DateRange",
-      "@context": "DateRange.jsonld"
-    }, 
-    "ElectronicMessageSystem": {
-      "@id": "cdi:ElectronicMessageSystem",
-      "@context": "ElectronicMessageSystem.jsonld"
-    }, 
-    "Email": {
-      "@id": "cdi:Email",
-      "@context": "Email.jsonld"
-    }, 
-    "EmbargoInformation": {
-      "@id": "cdi:EmbargoInformation",
-      "@context": "EmbargoInformation.jsonld"
-    }, 
-    "FundingInformation": {
-      "@id": "cdi:FundingInformation",
-      "@context": "FundingInformation.jsonld"
-    }, 
-    "GeoRole": {
-      "@id": "cdi:GeoRole",
-      "@context": "GeoRole.jsonld"
-    }, 
-    "Identifier": {
-      "@id": "cdi:Identifier",
-      "@context": "Identifier.jsonld"
-    }, 
-    "IndividualName": {
-      "@id": "cdi:IndividualName",
-      "@context": "IndividualName.jsonld"
-    }, 
-    "InternationalIdentifier": {
-      "@id": "cdi:InternationalIdentifier",
-      "@context": "InternationalIdentifier.jsonld"
-    }, 
-    "InternationalRegistrationDataIdentifier": {
-      "@id": "cdi:InternationalRegistrationDataIdentifier",
-      "@context": "InternationalRegistrationDataIdentifier.jsonld"
-    }, 
-    "InternationalString": {
-      "@id": "cdi:InternationalString",
-      "@context": "InternationalString.jsonld"
-    }, 
-    "LabelForDisplay": {
-      "@id": "cdi:LabelForDisplay",
-      "@context": "LabelForDisplay.jsonld"
-    }, 
-    "LanguageSpecificString": {
-      "@id": "cdi:LanguageSpecificString",
-      "@context": "LanguageSpecificString.jsonld"
-    }, 
-    "LicenseInformation": {
-      "@id": "cdi:LicenseInformation",
-      "@context": "LicenseInformation.jsonld"
-    }, 
-    "NonDdiIdentifier": {
-      "@id": "cdi:NonDdiIdentifier",
-      "@context": "NonDdiIdentifier.jsonld"
-    }, 
-    "NonIsoDate": {
-      "@id": "cdi:NonIsoDate",
-      "@context": "NonIsoDate.jsonld"
-    }, 
-    "ObjectAttributeSelector": {
-      "@id": "cdi:ObjectAttributeSelector",
-      "@context": "ObjectAttributeSelector.jsonld"
-    }, 
-    "ObjectName": {
-      "@id": "cdi:ObjectName",
-      "@context": "ObjectName.jsonld"
-    }, 
-    "OrganizationName": {
-      "@id": "cdi:OrganizationName",
-      "@context": "OrganizationName.jsonld"
-    }, 
-    "PairedControlledVocabularyEntry": {
-      "@id": "cdi:PairedControlledVocabularyEntry",
-      "@context": "PairedControlledVocabularyEntry.jsonld"
-    }, 
-    "PrivateImage": {
-      "@id": "cdi:PrivateImage",
-      "@context": "PrivateImage.jsonld"
-    }, 
-    "ProvenanceInformation": {
-      "@id": "cdi:ProvenanceInformation",
-      "@context": "ProvenanceInformation.jsonld"
-    }, 
-    "RationaleDefinition": {
-      "@id": "cdi:RationaleDefinition",
-      "@context": "RationaleDefinition.jsonld"
-    }, 
-    "Reference": {
-      "@id": "cdi:Reference",
-      "@context": "Reference.jsonld"
-    }, 
-    "Selector": {
-      "@id": "cdi:Selector",
-      "@context": "Selector.jsonld"
-    }, 
-    "SpatialCoordinate": {
-      "@id": "cdi:SpatialCoordinate",
-      "@context": "SpatialCoordinate.jsonld"
-    }, 
-    "SpatialPoint": {
-      "@id": "cdi:SpatialPoint",
-      "@context": "SpatialPoint.jsonld"
-    }, 
-    "SpecializationRole": {
-      "@id": "cdi:SpecializationRole",
-      "@context": "SpecializationRole.jsonld"
-    }, 
-    "Statistic": {
-      "@id": "cdi:Statistic",
-      "@context": "Statistic.jsonld"
-    }, 
-    "StructureSpecification": {
-      "@id": "cdi:StructureSpecification",
-      "@context": "StructureSpecification.jsonld"
-    }, 
-    "Telephone": {
-      "@id": "cdi:Telephone",
-      "@context": "Telephone.jsonld"
-    }, 
-    "TextPositionSelector": {
-      "@id": "cdi:TextPositionSelector",
-      "@context": "TextPositionSelector.jsonld"
-    }, 
-    "TimeRole": {
-      "@id": "cdi:TimeRole",
-      "@context": "TimeRole.jsonld"
-    }, 
-    "TypedString": {
-      "@id": "cdi:TypedString",
-      "@context": "TypedString.jsonld"
-    }, 
-    "WebLink": {
-      "@id": "cdi:WebLink",
-      "@context": "WebLink.jsonld"
-    }, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "@vocab": "tag:DEBUG:UNRECOGNIZED_TERM:",
     " comment ": "tag:json-should-support-trailing-commas"
   },
-  "generatedBy": "This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:35.",
+  "generatedBy": "This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-11 12:30:48.",
   "basedOn": "based on the UML model DDICDIModels"
 }

@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::Context::PROV::Entity:
 
-
 Entity
 ******
 
@@ -15,11 +14,11 @@ Definition
 A physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary. (See the W3C PROV-O ontology, https://www.w3.org/TR/prov-dm/#term-entity)
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /Context/PROV/Entity.pu
 

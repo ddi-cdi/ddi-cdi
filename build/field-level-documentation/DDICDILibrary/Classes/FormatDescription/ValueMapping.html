@@ -126,6 +126,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <section id="explanatory-notes">
 <h2>Explanatory notes<a class="headerlink" href="#explanatory-notes" title="Permalink to this headline">¶</a></h2>
 <p>An instance variable has details of value domain and data type, but will not have the final details of how a value is physically represented in a data file. A variable for height, for example, may be represented as a real number, but may be represented as a string in multiple ways. The decimal separator might be, for example a period or a comma. The string representing the value of a payment might be preceded by a currency symbol. The same numeric value might be written as “1,234,567” or “1.234567”. A missing value might be written as “.”, “NA”, “.R” or as “R”. The value mapping describes how the value of an instance variable is physically expressed. The properties of the value mapping as intended to be compatible with the W3C Metadata Vocabulary for Tabular Data (<a class="reference external" href="https://www.w3.org/TR/tabular-metadata/">https://www.w3.org/TR/tabular-metadata/</a>) as well as common programming languages and statistical packages. The ‘format’ property, for example, can draw from an external controlled vocabulary such as the set of formats for Stata, SPSS, or SAS.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -133,12 +134,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-4df5ca43b4adef510554c01d6a66bbf2bf8b00a9.svg" type="image/svg+xml" style="width:1045px;height:764px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-5c1fb1ad551b0473384ceddced2a88a6ceabd7e0.svg" type="image/svg+xml" style="width:1111px;height:786px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -265,7 +266,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -360,7 +363,9 @@ Associations<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -897,61 +902,71 @@ XML Schema</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">158</span>        <span class="nt">&lt;xs:documentation&gt;</span>The scale of the number expressed as an integer. A multiplier to be used in combination with the value to determine the measurement. (E.g., a number expressed in 100&#39;s with a value of 5 and a scale of 100 would be 500).<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos">159</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos">160</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">161</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ValueMapping_formats_DataPoint-Target&quot;</span>
+<span class="linenos">161</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ValueMapping_formats_DataPoint&quot;</span>
 <span class="linenos">162</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
 <span class="linenos">163</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">164</span>                <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_formats_DataPoint-Target&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">164</span>                <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_formats_DataPoint&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">165</span>      <span class="nt">&lt;xs:annotation&gt;</span>
 <span class="linenos">166</span>        <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
 <span class="linenos">167</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos">168</span>      <span class="nt">&lt;xs:complexType&gt;</span>
 <span class="linenos">169</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">170</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">170</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">171</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">172</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">173</span>                          <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">174</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">175</span>                          <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_formats_DataPoint-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">176</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">177</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">178</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DataPoint&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">179</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">180</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">181</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">182</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">183</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">184</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">185</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">186</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">187</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ValueMapping_uses_PhysicalSegmentLocation-Target&quot;</span>
-<span class="linenos">188</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">189</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">190</span>                <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_uses_PhysicalSegmentLocation-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">191</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">192</span>        <span class="nt">&lt;xs:documentation&gt;</span>Uses a physical segment location to describe where in the physical record a segment representing the data point is. This could be, for example, described as a start position and end position value for characters in a text record via the segment by text extension of physical segment location.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">193</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">194</span>      <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">195</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">196</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">197</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">198</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">199</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">200</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">201</span>                          <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_uses_PhysicalSegmentLocation-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">202</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">203</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">204</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;PhysicalSegmentLocation&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">205</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;SegmentByText&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">206</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">207</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">208</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">209</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">210</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">211</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">212</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">213</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">214</span>  <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">215</span><span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">172</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">173</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">174</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">175</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">176</span>                          <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_formats_DataPoint-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">177</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">178</span>                          <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">179</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">180</span>                          <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_formats_DataPoint-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">181</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">182</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">183</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DataPoint&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">184</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">185</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">186</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">187</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">188</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">189</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">190</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">191</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">192</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ValueMapping_uses_PhysicalSegmentLocation&quot;</span>
+<span class="linenos">193</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">194</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">195</span>                <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_uses_PhysicalSegmentLocation&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">196</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">197</span>        <span class="nt">&lt;xs:documentation&gt;</span>Uses a physical segment location to describe where in the physical record a segment representing the data point is. This could be, for example, described as a start position and end position value for characters in a text record via the segment by text extension of physical segment location.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">198</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">199</span>      <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos">200</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">201</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">202</span>            <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">203</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">204</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">205</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">206</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">207</span>                          <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_uses_PhysicalSegmentLocation-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">208</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">209</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">210</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">211</span>                          <span class="na">xml:id=</span><span class="s">&quot;ValueMapping_uses_PhysicalSegmentLocation-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">212</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">213</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">214</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;PhysicalSegmentLocation&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">215</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;SegmentByText&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">216</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">217</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">218</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">219</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">220</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">221</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">222</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">223</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">224</span>  <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">225</span><span class="nt">&lt;/xs:complexType&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -1111,97 +1126,99 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;ValueMapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;decimalPositions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-decimalPositions&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">      </span><span class="nt">&quot;defaultDecimalSeparator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-defaultDecimalSeparator&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">      </span><span class="nt">&quot;defaultDigitGroupSeparator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-defaultDigitGroupSeparator&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">      </span><span class="nt">&quot;defaultValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-defaultValue&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">      </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-format&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-identifier&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">      </span><span class="nt">&quot;isRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-isRequired&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:boolean&quot;</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">      </span><span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-length&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">38</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
-<span class="linenos">39</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">40</span><span class="w">      </span><span class="nt">&quot;maximumLength&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-maximumLength&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">42</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
-<span class="linenos">43</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">      </span><span class="nt">&quot;minimumLength&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">45</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-minimumLength&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">46</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">48</span><span class="w">      </span><span class="nt">&quot;nullSequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">49</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-nullSequence&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">50</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">51</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">52</span><span class="w">      </span><span class="nt">&quot;numberPattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">53</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-numberPattern&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">54</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">55</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">56</span><span class="w">      </span><span class="nt">&quot;physicalDataType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">57</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-physicalDataType&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">58</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">59</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">60</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">61</span><span class="w">      </span><span class="nt">&quot;scale&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">62</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-scale&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">63</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
-<span class="linenos">64</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">65</span><span class="w">      </span>
-<span class="linenos">66</span><span class="w">      </span><span class="nt">&quot;formats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">67</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping_formats_DataPoint&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">68</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">69</span><span class="w">      </span><span class="nt">&quot;uses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">70</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping_uses_PhysicalSegmentLocation&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">71</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">72</span><span class="w">      </span><span class="nt">&quot;has_OF_PhysicalSegmentLayout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">73</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalSegmentLayout_has_ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">74</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">75</span><span class="w">      </span><span class="nt">&quot;indexes_OF_ValueMappingPosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">76</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMappingPosition_indexes_ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">77</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">78</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_ValueMappingRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">79</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMappingRelationship_hasSource_ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">80</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">81</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_ValueMappingRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">82</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMappingRelationship_hasTarget_ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">83</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">84</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">85</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">86</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">87</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:29.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">88</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::FormatDescription::ValueMapping&quot;</span><span class="w"></span>
-<span class="linenos">89</span><span class="p">}</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;ValueMapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;decimalPositions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-decimalPositions&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">      </span><span class="nt">&quot;defaultDecimalSeparator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-defaultDecimalSeparator&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">      </span><span class="nt">&quot;defaultDigitGroupSeparator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-defaultDigitGroupSeparator&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">      </span><span class="nt">&quot;defaultValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-defaultValue&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">      </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-format&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-identifier&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">      </span><span class="nt">&quot;isRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-isRequired&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:boolean&quot;</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">      </span><span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-length&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">      </span><span class="nt">&quot;maximumLength&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-maximumLength&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
+<span class="linenos">44</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">45</span><span class="w">      </span><span class="nt">&quot;minimumLength&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">46</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-minimumLength&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">47</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
+<span class="linenos">48</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">49</span><span class="w">      </span><span class="nt">&quot;nullSequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">50</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-nullSequence&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">51</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">52</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">53</span><span class="w">      </span><span class="nt">&quot;numberPattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">54</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-numberPattern&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">55</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">56</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">57</span><span class="w">      </span><span class="nt">&quot;physicalDataType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">58</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-physicalDataType&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">59</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">60</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">61</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">62</span><span class="w">      </span><span class="nt">&quot;scale&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">63</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping-scale&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">64</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
+<span class="linenos">65</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">66</span><span class="w">      </span>
+<span class="linenos">67</span><span class="w">      </span><span class="nt">&quot;formats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">68</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping_formats_DataPoint&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">69</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">70</span><span class="w">      </span><span class="nt">&quot;uses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">71</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMapping_uses_PhysicalSegmentLocation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">72</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">73</span><span class="w">      </span><span class="nt">&quot;has_OF_PhysicalSegmentLayout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">74</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalSegmentLayout_has_ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">75</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">76</span><span class="w">      </span><span class="nt">&quot;indexes_OF_ValueMappingPosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">77</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMappingPosition_indexes_ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">78</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">79</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_ValueMappingRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">80</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMappingRelationship_hasSource_ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">81</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">82</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_ValueMappingRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">83</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueMappingRelationship_hasTarget_ValueMapping&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">84</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">85</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">86</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">87</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">88</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:52.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">89</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::FormatDescription::ValueMapping&quot;</span><span class="w"></span>
+<span class="linenos">90</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 

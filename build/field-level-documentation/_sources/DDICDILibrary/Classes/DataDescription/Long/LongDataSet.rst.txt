@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongDataSet:
 
-
 LongDataSet
 ***********
 
@@ -19,167 +18,170 @@ Examples
 A unit dataset where each row corresponds to a set of data points capturing different characteristics of a unit, some of which can be transposed into variable descriptor and variable value components.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/Classes/DataDescription/Long/LongDataSet.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
 
-   | |_| ᐊ── :focus:`Long::LongDataSet`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - catalogDetails
-        - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
-        - Bundles the information useful for a data catalog entry. Examples would be creator, contributor, title, copyright, embargo, and license information. A set of information useful for attribution, data discovery, and access. This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails` 
-        - 0..1
-        - 
-
-      * - identifier
-        - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
-        - Identifier for objects requiring short- or long-lasting referencing and management.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
-        - 0..1
-        - 
+      | |_| ᐊ── :focus:`Long::LongDataSet`
 
 
-.. dropdown:: Associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of LongDataSet
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - from
-        - DataSet has DataPoint
-        - 
-        - 1..1
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
-        - 1..*
-        - composite
-        - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
-      * - from
-        - DataSet has Key
-        - 
-        - 1..1
-        - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-        - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::Key`
-        - 1..*
-        - composite
-        - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
-      * - from
-        - DataSet isStructuredBy DataStructure
-        - 
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure`
-        - 0..*
-        - none
-        - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
-      * - to
-        - LogicalRecord organizes DataSet
-        - 
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord`
-        - 0..*
-        - none
-        - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
-      * - from
-        - LongDataSet has LongKey
-        - 
-        - 1..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey`
-        - 0..*
-        - composite
-        - \- *own class* \-
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: attributes
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - catalogDetails
+           - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
+           - Bundles the information useful for a data catalog entry. Examples would be creator, contributor, title, copyright, embargo, and license information. A set of information useful for attribution, data discovery, and access. This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails` 
+           - 0..1
+           - 
 
-   .. tab-set::
+         * - identifier
+           - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
+           - Identifier for objects requiring short- or long-lasting referencing and management.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
+           - 0..1
+           - 
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
 
-         Fragment for the class **LongDataSet** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+.. container::
+   :name: associations
 
-         .. literalinclude:: /xmi/LongDataSet.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of LongDataSet
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - from
+           - DataSet has DataPoint
+           - 
+           - 1..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
+           - 0..*
+           - composite
+           - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
+         * - from
+           - DataSet has Key
+           - 
+           - 1..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Key`
+           - 0..*
+           - composite
+           - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
+         * - from
+           - DataSet isStructuredBy DataStructure
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure`
+           - 0..*
+           - none
+           - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
+         * - to
+           - LogicalRecord organizes DataSet
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord`
+           - 0..*
+           - none
+           - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+.. container::
+   :name: encodings
 
-         Fragment for the class **LongDataSet** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+   .. dropdown:: Syntax representations / encodings
+    
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
+    
+      .. tab-set::
+    
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
+    
+            Fragment for the class **LongDataSet** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+    
+            .. literalinclude:: /xmi/LongDataSet.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Long/LongDataSet_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the class **LongDataSet** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Long/LongDataSet_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         Fragment for the class **LongDataSet** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Long/LongDataSet.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+            Fragment for the class **LongDataSet** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Long/LongDataSet.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+         .. tab-item:: JSON-LD
+            :class-content: encoding
 
-         Fragment for the class **LongDataSet** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
-
-         .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Long/LongDataSet.jsonld 
-            :language: JSON-LD
-            :linenos:
-            :emphasize-lines: 5
+            Fragment for the class **LongDataSet** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Long/LongDataSet.jsonld 
+               :language: JSON-LD
+               :linenos:
+               :emphasize-lines: 5
 

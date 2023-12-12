@@ -13,175 +13,191 @@ Definition
 A structured display label. Label provides display content of a fully human readable display for the identification of the object.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :ref:`StructuredDataTypes::InternationalString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :ref:`StructuredDataTypes::InternationalString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString>`
 
-   | |_| ᐊ── :focus:`StructuredDataTypes::LabelForDisplay`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - locationVariant
-        - \- *own datatype* \-
-        - Indicate the locality specification for content that is specific to a geographic area. May be a country code, sub-country code, or area name.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
-        - 0..1
-        - 
-
-      * - maxLength
-        - \- *own datatype* \-
-        - A positive integer indicating the maximum number of characters in the label.
-        - Integer 
-        - 0..1
-        - 
-
-      * - validDates
-        - \- *own datatype* \-
-        - Allows for the specification of a starting date and ending date for the period that this label is valid.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::DateRange` 
-        - 0..1
-        - 
-
-      * - languageSpecificString
-        - :ref:`StructuredDataTypes::InternationalString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString>`
-        - A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ComplexLanguageString` 
-        - 0..*
-        - 
+      | |_| ᐊ── :focus:`StructuredDataTypes::LabelForDisplay`
 
 
-.. dropdown:: Usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
-        - displayLabel
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap`
-        - displayLabel
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence`
-        - displayLabel
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain`
-        - displayLabel
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
-        - displayLabel
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection`
-        - displayLabel
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation`
-        - displayLabel
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemStructure`
-        - displayLabel
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::Level`
-        - displayLabel
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification`
-        - displayLabel
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ValueDomain`
-        - displayLabel
+.. container::
+   :name: attributes
 
-.. dropdown:: Syntax representations / encodings
+   .. dropdown:: Attributes
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-   .. tab-set::
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - locationVariant
+           - \- *own datatype* \-
+           - Indicate the locality specification for content that is specific to a geographic area. May be a country code, sub-country code, or area name.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+         * - maxLength
+           - \- *own datatype* \-
+           - A positive integer indicating the maximum number of characters in the label.
+           - Integer 
+           - 0..1
+           - 
 
-         Fragment for the data type **LabelForDisplay** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+         * - validDates
+           - \- *own datatype* \-
+           - Allows for the specification of a starting date and ending date for the period that this label is valid.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::DateRange` 
+           - 0..1
+           - 
 
-         .. literalinclude:: /xmi/LabelForDisplay.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         * - languageSpecificString
+           - :ref:`StructuredDataTypes::InternationalString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString>`
+           - A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString` 
+           - 0..*
+           - 
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
 
-         Fragment for the data type **LabelForDisplay** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+.. container::
+   :name: usage
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+   .. dropdown:: Usage
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-         Fragment for the data type **LabelForDisplay** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
+           - displayLabel
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap`
+           - displayLabel
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence`
+           - displayLabel
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain`
+           - displayLabel
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
+           - displayLabel
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection`
+           - displayLabel
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::RecordRelation`
+           - displayLabel
+         * - Class
+           - Process
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
+           - displayLabel
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemStructure`
+           - displayLabel
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::Level`
+           - displayLabel
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification`
+           - displayLabel
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ValueDomain`
+           - displayLabel
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+.. container::
+   :name: encodings
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+   .. dropdown:: Syntax representations / encodings
 
-         Fragment for the data type **LabelForDisplay** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+      .. tab-set::
+
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
+
+            Fragment for the data type **LabelForDisplay** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+
+            .. literalinclude:: /xmi/LabelForDisplay.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
+
+         .. tab-item:: XML Schema
+            :class-content: encoding
+
+            Fragment for the data type **LabelForDisplay** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
+
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
+
+            Fragment for the data type **LabelForDisplay** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
+
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **LabelForDisplay** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LabelForDisplay.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

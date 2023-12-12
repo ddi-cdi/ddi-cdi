@@ -19,7 +19,7 @@ All Packages (list)
      - 8
    * - :ref:`DDICDIModels::DDICDILibrary::Classes`
      - :ref:`DDICDILibrary<DDICDIModels::DDICDILibrary>`
-     - 153
+     - 158
    * - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern`
      - :ref:`DesignPatterns<DDICDIModels::DesignPatterns>`
      - 9
@@ -37,19 +37,16 @@ All Packages (list)
      - 0
    * - :ref:`DDICDIModels::DDICDILibrary`
      - :ref:`DDICDIModels<DDICDIModels>`
-     - 153
+     - 158
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - :ref:`DDICDILibrary::Classes<DDICDIModels::DDICDILibrary::Classes>`
-     - 50
-   * - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - :ref:`DesignPatterns<DDICDIModels::DesignPatterns>`
-     - 4
+     - 54
    * - :ref:`DDICDIModels::DDICDILibrary::DataTypes`
      - :ref:`DDICDILibrary<DDICDIModels::DDICDILibrary>`
      - 0
    * - :ref:`DDICDIModels::DesignPatterns`
      - :ref:`DDICDIModels<DDICDIModels>`
-     - 16
+     - 12
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
      - :ref:`DDICDILibrary::Classes::DataDescription<DDICDIModels::DDICDILibrary::Classes::DataDescription>`
      - 11
@@ -70,7 +67,7 @@ All Packages (list)
      - 3
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
      - :ref:`DDICDILibrary::Classes<DDICDIModels::DDICDILibrary::Classes>`
-     - 19
+     - 20
    * - :ref:`DDICDIModels::Context::RDF`
      - :ref:`Context<DDICDIModels::Context>`
      - 0

@@ -13,156 +13,165 @@ Definition
 The mathematical properties of the structure.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - reflexive
-        - \- *own datatype* \-
-        - Members of the selected scope of the collection are related to themselves.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::MemberRelationshipScope` 
-        - 0..1
-        - 
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-      * - symmetric
-        - \- *own datatype* \-
-        - For pairs of members, a, b in the indicated scope of the associated collection, whenever a is related to b then also b is related to a.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::MemberRelationshipScope` 
-        - 0..1
-        - 
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - reflexive
+           - \- *own datatype* \-
+           - Members of the selected scope of the collection are related to themselves.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::MemberRelationshipScope` 
+           - 0..1
+           - 
 
-      * - transitive
-        - \- *own datatype* \-
-        - For members a, b, c in the indicated scope of the associated collection, whenever a is related to b and b is related to c then a is also related to c.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::MemberRelationshipScope` 
-        - 0..1
-        - 
+         * - symmetric
+           - \- *own datatype* \-
+           - For pairs of members, a, b in the indicated scope of the associated collection, whenever a is related to b then also b is related to a.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::MemberRelationshipScope` 
+           - 0..1
+           - 
+
+         * - transitive
+           - \- *own datatype* \-
+           - For members a, b, c in the indicated scope of the associated collection, whenever a is related to b and b is related to c then a is also related to c.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::MemberRelationshipScope` 
+           - 0..1
+           - 
 
 
-.. dropdown:: Usage
+.. container::
+   :name: usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+   .. dropdown:: Usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - Class
-        - Agents
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Agents::AgentStructure`
-        - specification
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryRelationStructure`
-        - specification
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptStructure`
-        - specification
-      * - Class
-        - Conceptual
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure`
-        - specification
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordRelationStructure`
-        - specification
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSetStructure`
-        - specification
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalLayoutRelationStructure`
-        - specification
-      * - Class
-        - FormatDescription
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentStructure`
-        - specification
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemStructure`
-        - specification
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure`
-        - specification
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CodeListStructure`
-        - specification
-      * - Class
-        - CollectionsPattern
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Structure`
-        - specification
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-.. dropdown:: Syntax representations / encodings
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - Class
+           - Agents
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Agents::AgentStructure`
+           - specification
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryRelationStructure`
+           - specification
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptStructure`
+           - specification
+         * - Class
+           - Conceptual
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableStructure`
+           - specification
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordRelationStructure`
+           - specification
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSetStructure`
+           - specification
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalLayoutRelationStructure`
+           - specification
+         * - Class
+           - FormatDescription
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalRecordSegmentStructure`
+           - specification
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemStructure`
+           - specification
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure`
+           - specification
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CodeListStructure`
+           - specification
+         * - Class
+           - CollectionsPattern
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Structure`
+           - specification
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: encodings
 
-   .. tab-set::
+   .. dropdown:: Syntax representations / encodings
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         Fragment for the data type **StructureSpecification** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+      .. tab-set::
 
-         .. literalinclude:: /xmi/StructureSpecification.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            Fragment for the data type **StructureSpecification** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         Fragment for the data type **StructureSpecification** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            .. literalinclude:: /xmi/StructureSpecification.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the data type **StructureSpecification** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         Fragment for the data type **StructureSpecification** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the data type **StructureSpecification** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         Fragment for the data type **StructureSpecification** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **StructureSpecification** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/StructureSpecification.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

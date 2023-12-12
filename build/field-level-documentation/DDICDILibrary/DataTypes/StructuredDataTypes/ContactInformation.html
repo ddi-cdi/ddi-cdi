@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="ControlledVocabularyEntry" href="ControlledVocabularyEntry.html" />
-    <link rel="prev" title="ComplexLanguageString" href="ComplexLanguageString.html" /> 
+    <link rel="prev" title="CommandFile" href="CommandFile.html" /> 
     <!-- geht nicht
     <link rel="stylesheet" type="text/css" href="_static/handsontable.full.min.css"/>
     <script type="text/javascript" src="_static/handsontable.full.min.js"></script>
@@ -97,7 +97,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
           <a href="ControlledVocabularyEntry.html" title="ControlledVocabularyEntry"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="ComplexLanguageString.html" title="ComplexLanguageString"
+          <a href="CommandFile.html" title="CommandFile"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >DDICDILibrary</a> &#187;</li>
@@ -118,6 +118,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <section id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
 <p>Contact information for the individual or organization including location specification, address, web site, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over time. Each major piece of contact information contains the element effectiveDates in order to date stamp the period for which the information is valid.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -125,12 +126,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-b368ba7bb834b613ec3876ae17e9421c379f70e6.svg" type="image/svg+xml" style="width:693px;height:702px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-c47c8f70e03a19b6e68d4fff387d1eb50da7657c.svg" type="image/svg+xml" style="width:693px;height:710px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -194,7 +195,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="usage">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Usage<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -239,7 +242,9 @@ Usage<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -513,45 +518,47 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;ContactInformation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-address&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Address.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-email&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Email.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">      </span><span class="nt">&quot;emessaging&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-emessaging&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElectronicMessageSystem.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">      </span><span class="nt">&quot;telephone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-telephone&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Telephone.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">      </span><span class="nt">&quot;website&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-website&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WebLink.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">      </span>
-<span class="linenos">32</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">33</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:32.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ContactInformation&quot;</span><span class="w"></span>
-<span class="linenos">37</span><span class="p">}</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">	  </span><span class="nt">&quot;ContactInformation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">	  </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">	    </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-address&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">	    </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">	    </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Address.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">	  </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">	  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">	    </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-email&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">	    </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">	    </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Email.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">	  </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">	  </span><span class="nt">&quot;emessaging&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">	    </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-emessaging&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">	    </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">	    </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElectronicMessageSystem.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">	  </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">	  </span><span class="nt">&quot;telephone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">	    </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-telephone&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">	    </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">	    </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Telephone.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">	  </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">	  </span><span class="nt">&quot;website&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">	    </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ContactInformation-website&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">	    </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">	    </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WebLink.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">	  </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">	  </span>
+<span class="linenos">33</span><span class="w">	  </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">34</span><span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:54.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ContactInformation&quot;</span><span class="w"></span>
+<span class="linenos">38</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 
@@ -592,7 +599,6 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <li class="toctree-l4"><a class="reference internal" href="Command.html">Command</a></li>
 <li class="toctree-l4"><a class="reference internal" href="CommandCode.html">CommandCode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="CommandFile.html">CommandFile</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ComplexLanguageString.html">ComplexLanguageString</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">ContactInformation</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#definition">Definition</a></li>
 </ul>
@@ -611,7 +617,6 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <li class="toctree-l4"><a class="reference internal" href="InternationalRegistrationDataIdentifier.html">InternationalRegistrationDataIdentifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="InternationalString.html">InternationalString</a></li>
 <li class="toctree-l4"><a class="reference internal" href="LabelForDisplay.html">LabelForDisplay</a></li>
-<li class="toctree-l4"><a class="reference internal" href="LanguageSpecificString.html">LanguageSpecificString</a></li>
 <li class="toctree-l4"><a class="reference internal" href="LanguageString.html">LanguageString</a></li>
 <li class="toctree-l4"><a class="reference internal" href="LicenseInformation.html">LicenseInformation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NonDdiIdentifier.html">NonDdiIdentifier</a></li>
@@ -662,7 +667,7 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
           <a href="ControlledVocabularyEntry.html" title="ControlledVocabularyEntry"
              >next</a> |</li>
         <li class="right" >
-          <a href="ComplexLanguageString.html" title="ComplexLanguageString"
+          <a href="CommandFile.html" title="CommandFile"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >DDICDILibrary</a> &#187;</li>

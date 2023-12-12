@@ -52,10 +52,6 @@ Conceptual
       }
       DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept <|-- DDICDIModels::DDICDILibrary::Classes::Conceptual::UnitType
       package Conceptual  {
-        class DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe as "<color:blue>Universe" [[../DDICDILibrary/Classes/Conceptual/Universe.html#super-class-hierarchy-generalization{ <U+2015> Universe:\nSpecialized unit type, with the specialization based upon characteristics other than time and geography.}]]
-      }
-      DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept <|-- DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe
-      package Conceptual  {
         class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem as "<color:blue>ConceptSystem" [[../DDICDILibrary/Classes/Conceptual/ConceptSystem.html#super-class-hierarchy-generalization{ <U+2015> ConceptSystem:\nSet of concepts structured by the relations among them [GSIM 1.1].}]]
       }
       package Conceptual  {

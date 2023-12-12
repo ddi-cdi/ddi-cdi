@@ -126,6 +126,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <section id="explanatory-notes">
 <h2>Explanatory notes<a class="headerlink" href="#explanatory-notes" title="Permalink to this headline">¶</a></h2>
 <p>Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable. This class realizes the pattern class signified and as such a concept can be denoted by a sign.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -133,12 +134,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-7fe5f1e2037cda9ab0b457d8693256cd743e86aa.svg" type="image/svg+xml" style="width:3585px;height:2000px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-10f3691ada7115c83b0e84327ca522b7268d8d86.svg" type="image/svg+xml" style="width:3348px;height:1896px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="inheritance">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Inheritance<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -157,8 +158,8 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="regular line-block">
 <div class="line">  ᐊ── <a class="reference internal" href="../DataDescription/Dimensional/DimensionalKeyDefinitionMember.html#ddicdimodels-ddicdilibrary-classes-datadescription-dimensional-dimensionalkeydefinitionmember"><span class="std std-ref">Dimensional::DimensionalKeyDefinitionMember</span></a></div>
 </div>
-<div class="abstract line-block">
-<div class="line">  ᐊ── <a class="reference internal" href="../../../DesignPatterns/DataDescriptionPattern/KeyDefinitionMember.html#ddicdimodels-designpatterns-datadescriptionpattern-keydefinitionmember"><span class="std std-ref">DataDescriptionPattern::KeyDefinitionMember</span></a></div>
+<div class="regular line-block">
+<div class="line">  ᐊ── <a class="reference internal" href="../DataDescription/KeyDefinitionMember.html#ddicdimodels-ddicdilibrary-classes-datadescription-keydefinitionmember"><span class="std std-ref">DataDescription::KeyDefinitionMember</span></a></div>
 </div>
 <div class="regular line-block">
 <div class="line">ᐊ── <a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">Conceptual::ConceptualVariable</span></a></div>
@@ -179,13 +180,15 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="line">ᐊ── <a class="reference internal" href="UnitType.html#ddicdimodels-ddicdilibrary-classes-conceptual-unittype"><span class="std std-ref">Conceptual::UnitType</span></a></div>
 </div>
 <div class="regular line-block">
-<div class="line">ᐊ── <a class="reference internal" href="Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Conceptual::Universe</span></a></div>
+<div class="line">  ᐊ── <a class="reference internal" href="Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Conceptual::Universe</span></a></div>
 </div>
 <div class="regular line-block">
-<div class="line">  ᐊ── <a class="reference internal" href="Population.html#ddicdimodels-ddicdilibrary-classes-conceptual-population"><span class="std std-ref">Conceptual::Population</span></a></div>
+<div class="line">    ᐊ── <a class="reference internal" href="Population.html#ddicdimodels-ddicdilibrary-classes-conceptual-population"><span class="std std-ref">Conceptual::Population</span></a></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -256,7 +259,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -329,6 +334,16 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">Concept uses Concept</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">- <em>own package</em> -</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Concept</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptMap hasSource Concept</p></td>
 <td><p class="sd-card-text">Concept map has one to many source concepts.</p></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -338,7 +353,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptMap hasTarget Concept</p></td>
 <td><p class="sd-card-text">Concept map has one to many target concepts.</p></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -348,7 +363,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptRelationship hasSource Concept</p></td>
 <td><p class="sd-card-text">Restricts source object to concept for the relationship.</p></td>
 <td><p class="sd-card-text">1..1</p></td>
@@ -358,7 +373,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptRelationship hasTarget Concept</p></td>
 <td><p class="sd-card-text">Restricts target object to concept for the relationship.</p></td>
 <td><p class="sd-card-text">1..1</p></td>
@@ -368,7 +383,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptSystem has Concept</p></td>
 <td><p class="sd-card-text">Concept system has zero to many concepts.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -378,22 +393,12 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptSystem isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">Concept system is defined by zero to many concepts. The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">- <em>own package</em> -</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptSystem.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptsystem"><span class="std std-ref">ConceptSystem</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">ConceptualVariable uses Concept</p></td>
-<td><p class="sd-card-text">Reference to a concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">ConceptualVariable</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
@@ -469,26 +474,6 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">- <em>own class</em> -</p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">UnitType uses Concept</p></td>
-<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="UnitType.html#ddicdimodels-ddicdilibrary-classes-conceptual-unittype"><span class="std std-ref">UnitType</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">Universe uses Concept</p></td>
-<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Universe</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">VariableCollection isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -501,7 +486,9 @@ Associations<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -662,7 +649,21 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">145</span>      <span class="nt">&lt;isOrdered&gt;</span>true<span class="nt">&lt;/isOrdered&gt;</span>
 <span class="linenos">146</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ObjectName&quot;</span><span class="nt">/&gt;</span>
 <span class="linenos">147</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">148</span><span class="nt">&lt;/packagedElement&gt;</span>
+<span class="linenos">148</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept-ownedAttribute&quot;</span>
+<span class="linenos">149</span>                   <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Concept-ownedAttribute&quot;</span>
+<span class="linenos">150</span>                   <span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">151</span>      <span class="nt">&lt;lowerValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept-ownedAttribute-lowerValue&quot;</span>
+<span class="linenos">152</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Concept-ownedAttribute-lowerValue&quot;</span>
+<span class="linenos">153</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">154</span>      <span class="nt">&lt;upperValue</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept-ownedAttribute-upperValue&quot;</span>
+<span class="linenos">155</span>                  <span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Concept-ownedAttribute-upperValue&quot;</span>
+<span class="linenos">156</span>                  <span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">157</span>         <span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
+<span class="linenos">158</span>      <span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos">159</span>      <span class="nt">&lt;association</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept_uses_Concept&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">160</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">161</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos">162</span><span class="nt">&lt;/packagedElement&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -670,98 +671,141 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 XML Schema</label><div class="sd-tab-content encoding docutils">
 <p class="sd-card-text">Fragment for the class <strong>Concept</strong> (<a class="reference external" href="/encoding/xml-schema/ddi-cdi.xsd">entire XML Schema</a>)</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;Concept&quot;</span>
-</span><span class="linenos"> 2</span>            <span class="na">type=</span><span class="s">&quot;ConceptXsdType&quot;</span>
-<span class="linenos"> 3</span>            <span class="na">xml:id=</span><span class="s">&quot;Concept&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 4</span>  <span class="cm">&lt;!-- based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept --&gt;</span>
-<span class="linenos"> 5</span>  <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 6</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition 
-<span class="linenos"> 7</span>          ============ 
-<span class="linenos"> 8</span>          Unit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).  
-<span class="linenos"> 9</span>          
-<span class="linenos">10</span>          Examples 
-<span class="linenos">11</span>          ========== 
-<span class="linenos">12</span>          Velocity, Distance, Poverty, Income, Household Relationship, Family, Gender, Business Establishment, Satisfaction, Mass, Air Quality, etc.
-<span class="linenos">13</span>          
-<span class="linenos">14</span>          
-<span class="linenos">15</span>          Explanatory notes 
-<span class="linenos">16</span>          =================== 
-<span class="linenos">17</span>          Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable. This class realizes the pattern class signified and as such a concept can be denoted by a sign.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">18</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">19</span><span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">20</span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;ConceptXsdType&quot;</span>
-<span class="linenos">21</span>                <span class="na">xml:id=</span><span class="s">&quot;ConceptXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">22</span>  <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">23</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition 
-<span class="linenos">24</span>          ============ 
-<span class="linenos">25</span>          Unit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).  
-<span class="linenos">26</span>          
-<span class="linenos">27</span>          Examples 
-<span class="linenos">28</span>          ========== 
-<span class="linenos">29</span>          Velocity, Distance, Poverty, Income, Household Relationship, Family, Gender, Business Establishment, Satisfaction, Mass, Air Quality, etc.
-<span class="linenos">30</span>          
-<span class="linenos">31</span>          
-<span class="linenos">32</span>          Explanatory notes 
-<span class="linenos">33</span>          =================== 
-<span class="linenos">34</span>          Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable. This class realizes the pattern class signified and as such a concept can be denoted by a sign.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">35</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">36</span>  <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">37</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;catalogDetails&quot;</span>
-<span class="linenos">38</span>                <span class="na">type=</span><span class="s">&quot;CatalogDetailsXsdType&quot;</span>
-<span class="linenos">39</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">40</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">41</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-catalogDetails&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">42</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">43</span>        <span class="nt">&lt;xs:documentation&gt;</span>Bundles the information useful for a data catalog entry. Examples would be creator, contributor, title, copyright, embargo, and license information. A set of information useful for attribution, data discovery, and access. This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">44</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">45</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">46</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;definition&quot;</span>
-<span class="linenos">47</span>                <span class="na">type=</span><span class="s">&quot;InternationalStringXsdType&quot;</span>
-<span class="linenos">48</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">49</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">50</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-definition&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">51</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">52</span>        <span class="nt">&lt;xs:documentation&gt;</span>Natural language statement conveying the meaning of a concept, differentiating it from other concepts. Supports the use of multiple languages and structured text. &#39;externalDefinition&#39; can&#39;t be used if &#39;definition&#39; is used.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">53</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">54</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">55</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;displayLabel&quot;</span>
-<span class="linenos">56</span>                <span class="na">type=</span><span class="s">&quot;LabelForDisplayXsdType&quot;</span>
-<span class="linenos">57</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">58</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">59</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-displayLabel&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">60</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">61</span>        <span class="nt">&lt;xs:documentation&gt;</span>A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">62</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">63</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">64</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;externalDefinition&quot;</span>
-<span class="linenos">65</span>                <span class="na">type=</span><span class="s">&quot;ReferenceXsdType&quot;</span>
-<span class="linenos">66</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">67</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">68</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-externalDefinition&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">69</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">70</span>        <span class="nt">&lt;xs:documentation&gt;</span>A reference to an external definition of a concept (that is, a concept which is described outside the content of the DDI-CDI metadata description). An example is a SKOS concept. The definition property is assumed to duplicate the external one referenced if externalDefinition is used. Other corresponding properties are assumed to be included unchanged if used.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">71</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">72</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">73</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;identifier&quot;</span>
-<span class="linenos">74</span>                <span class="na">type=</span><span class="s">&quot;IdentifierXsdType&quot;</span>
-<span class="linenos">75</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">76</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">77</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-identifier&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">78</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">79</span>        <span class="nt">&lt;xs:documentation&gt;</span>Identifier for objects requiring short- or long-lasting referencing and management.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">80</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">81</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">82</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span>
-<span class="linenos">83</span>                <span class="na">type=</span><span class="s">&quot;ObjectNameXsdType&quot;</span>
-<span class="linenos">84</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">85</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">86</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-name&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">87</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">88</span>        <span class="nt">&lt;xs:documentation&gt;</span>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">89</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">90</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">91</span>  <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">92</span><span class="nt">&lt;/xs:complexType&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">  1</span><span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;Concept&quot;</span>
+</span><span class="linenos">  2</span>            <span class="na">type=</span><span class="s">&quot;ConceptXsdType&quot;</span>
+<span class="linenos">  3</span>            <span class="na">xml:id=</span><span class="s">&quot;Concept&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">  4</span>  <span class="cm">&lt;!-- based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept --&gt;</span>
+<span class="linenos">  5</span>  <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">  6</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition 
+<span class="linenos">  7</span>          ============ 
+<span class="linenos">  8</span>          Unit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).  
+<span class="linenos">  9</span>          
+<span class="linenos"> 10</span>          Examples 
+<span class="linenos"> 11</span>          ========== 
+<span class="linenos"> 12</span>          Velocity, Distance, Poverty, Income, Household Relationship, Family, Gender, Business Establishment, Satisfaction, Mass, Air Quality, etc.
+<span class="linenos"> 13</span>          
+<span class="linenos"> 14</span>          
+<span class="linenos"> 15</span>          Explanatory notes 
+<span class="linenos"> 16</span>          =================== 
+<span class="linenos"> 17</span>          Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable. This class realizes the pattern class signified and as such a concept can be denoted by a sign.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 18</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 19</span><span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 20</span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;ConceptXsdType&quot;</span>
+<span class="linenos"> 21</span>                <span class="na">xml:id=</span><span class="s">&quot;ConceptXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 22</span>  <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 23</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition 
+<span class="linenos"> 24</span>          ============ 
+<span class="linenos"> 25</span>          Unit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).  
+<span class="linenos"> 26</span>          
+<span class="linenos"> 27</span>          Examples 
+<span class="linenos"> 28</span>          ========== 
+<span class="linenos"> 29</span>          Velocity, Distance, Poverty, Income, Household Relationship, Family, Gender, Business Establishment, Satisfaction, Mass, Air Quality, etc.
+<span class="linenos"> 30</span>          
+<span class="linenos"> 31</span>          
+<span class="linenos"> 32</span>          Explanatory notes 
+<span class="linenos"> 33</span>          =================== 
+<span class="linenos"> 34</span>          Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable. This class realizes the pattern class signified and as such a concept can be denoted by a sign.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 35</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 36</span>  <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos"> 37</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;catalogDetails&quot;</span>
+<span class="linenos"> 38</span>                <span class="na">type=</span><span class="s">&quot;CatalogDetailsXsdType&quot;</span>
+<span class="linenos"> 39</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 40</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 41</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-catalogDetails&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 42</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 43</span>        <span class="nt">&lt;xs:documentation&gt;</span>Bundles the information useful for a data catalog entry. Examples would be creator, contributor, title, copyright, embargo, and license information. A set of information useful for attribution, data discovery, and access. This is information that is tied to the identity of the object. If this information changes the version of the associated object changes.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 44</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 45</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 46</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;definition&quot;</span>
+<span class="linenos"> 47</span>                <span class="na">type=</span><span class="s">&quot;InternationalStringXsdType&quot;</span>
+<span class="linenos"> 48</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 49</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 50</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-definition&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 51</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 52</span>        <span class="nt">&lt;xs:documentation&gt;</span>Natural language statement conveying the meaning of a concept, differentiating it from other concepts. Supports the use of multiple languages and structured text. &#39;externalDefinition&#39; can&#39;t be used if &#39;definition&#39; is used.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 53</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 54</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 55</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;displayLabel&quot;</span>
+<span class="linenos"> 56</span>                <span class="na">type=</span><span class="s">&quot;LabelForDisplayXsdType&quot;</span>
+<span class="linenos"> 57</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 58</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos"> 59</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-displayLabel&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 60</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 61</span>        <span class="nt">&lt;xs:documentation&gt;</span>A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 62</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 63</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 64</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;externalDefinition&quot;</span>
+<span class="linenos"> 65</span>                <span class="na">type=</span><span class="s">&quot;ReferenceXsdType&quot;</span>
+<span class="linenos"> 66</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 67</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 68</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-externalDefinition&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 69</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 70</span>        <span class="nt">&lt;xs:documentation&gt;</span>A reference to an external definition of a concept (that is, a concept which is described outside the content of the DDI-CDI metadata description). An example is a SKOS concept. The definition property is assumed to duplicate the external one referenced if externalDefinition is used. Other corresponding properties are assumed to be included unchanged if used.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 71</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 72</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 73</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;identifier&quot;</span>
+<span class="linenos"> 74</span>                <span class="na">type=</span><span class="s">&quot;IdentifierXsdType&quot;</span>
+<span class="linenos"> 75</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 76</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 77</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-identifier&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 78</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 79</span>        <span class="nt">&lt;xs:documentation&gt;</span>Identifier for objects requiring short- or long-lasting referencing and management.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 80</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 81</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 82</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span>
+<span class="linenos"> 83</span>                <span class="na">type=</span><span class="s">&quot;ObjectNameXsdType&quot;</span>
+<span class="linenos"> 84</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 85</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos"> 86</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept-name&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 87</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 88</span>        <span class="nt">&lt;xs:documentation&gt;</span>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 89</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 90</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 91</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;Concept_uses_Concept&quot;</span>
+<span class="linenos"> 92</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 93</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos"> 94</span>                <span class="na">xml:id=</span><span class="s">&quot;Concept_uses_Concept&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 95</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 96</span>        <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 97</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 98</span>      <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos"> 99</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">100</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">101</span>            <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">102</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">103</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">104</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">105</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">106</span>                          <span class="na">xml:id=</span><span class="s">&quot;Concept_uses_Concept-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">107</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">108</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">109</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">110</span>                          <span class="na">xml:id=</span><span class="s">&quot;Concept_uses_Concept-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">111</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">112</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">113</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Category&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">114</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Concept&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">115</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ConceptualValue&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">116</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ConceptualVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">117</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DescriptorVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">118</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DimensionalKeyDefinitionMember&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">119</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;InstanceVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">120</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;KeyDefinitionMember&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">121</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Population&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">122</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ReferenceVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">123</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;RepresentedVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">124</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;UnitType&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">125</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Universe&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">126</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">127</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">128</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">129</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">130</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">131</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">132</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">133</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">134</span>  <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">135</span><span class="nt">&lt;/xs:complexType&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -825,6 +869,17 @@ Ontology (Turtle)</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">54</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">Concept</span><span class="p">;</span>
 <span class="linenos">55</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">ObjectName</span><span class="p">;</span>
 <span class="linenos">56</span><span class="p">.</span>
+<span class="linenos">57</span>
+<span class="linenos">58</span>
+<span class="linenos">59</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">Concept_uses_Concept</span>
+<span class="linenos">60</span>  <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">Association</span><span class="p">;</span>
+<span class="linenos">61</span>  <span class="c"># ASSOCIATION</span>
+<span class="linenos">62</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;uses&quot;</span><span class="p">;</span>
+<span class="linenos">63</span>  <span class="nn">skos</span><span class="p">:</span><span class="nt">altLabel</span> <span class="s">&quot;Concept_uses_Concept&quot;</span><span class="p">;</span>
+<span class="linenos">64</span>  
+<span class="linenos">65</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">Concept</span><span class="p">;</span>
+<span class="linenos">66</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">Concept</span><span class="p">;</span>
+<span class="linenos">67</span><span class="p">.</span>
 </pre></div>
 </div>
 </div>
@@ -836,113 +891,112 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">  2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="linenos">  3</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">  4</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="hll"><span class="linenos">  5</span><span class="w">      </span><span class="nt">&quot;Concept&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos">  6</span><span class="w">      </span><span class="nt">&quot;catalogDetails&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">  7</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-catalogDetails&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">  8</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">  9</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CatalogDetails.jsonld&quot;</span><span class="w"></span>
-<span class="linenos"> 10</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 11</span><span class="w">      </span><span class="nt">&quot;definition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 12</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-definition&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 13</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 14</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
-<span class="linenos"> 15</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 16</span><span class="w">      </span><span class="nt">&quot;displayLabel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 17</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-displayLabel&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 18</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 19</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LabelForDisplay.jsonld&quot;</span><span class="w"></span>
-<span class="linenos"> 20</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 21</span><span class="w">      </span><span class="nt">&quot;externalDefinition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 22</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-externalDefinition&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 23</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 24</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Reference.jsonld&quot;</span><span class="w"></span>
-<span class="linenos"> 25</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 26</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 27</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-identifier&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 28</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 29</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
-<span class="linenos"> 30</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 31</span><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 32</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-name&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 33</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 34</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ObjectName.jsonld&quot;</span><span class="w"></span>
-<span class="linenos"> 35</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 36</span><span class="w">      </span>
-<span class="linenos"> 37</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_AgentListing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 38</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:AgentListing_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 39</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 40</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_ClassificationFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 41</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ClassificationFamily_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 42</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 43</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_ClassificationIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 44</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ClassificationIndex_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 45</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 46</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_ClassificationSeries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 47</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ClassificationSeries_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 48</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 49</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_ConceptMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 50</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptMap_hasSource_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 51</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 52</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_ConceptMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 53</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptMap_hasTarget_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 54</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 55</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_ConceptRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 56</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptRelationship_hasSource_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 57</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 58</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_ConceptRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 59</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptRelationship_hasTarget_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 60</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 61</span><span class="w">      </span><span class="nt">&quot;has_OF_ConceptSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 62</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptSystem_has_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 63</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 64</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_ConceptSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 65</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptSystem_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 66</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 67</span><span class="w">      </span><span class="nt">&quot;uses_OF_ConceptualVariable&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 68</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptualVariable_uses_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 69</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 70</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_DataStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 71</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 72</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 73</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_EnumerationDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 74</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:EnumerationDomain_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 75</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 76</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_Level&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 77</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Level_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 78</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 79</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_LogicalRecord&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 80</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecord_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 81</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 82</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_PhysicalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 83</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalDataSet_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 84</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 85</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_PhysicalRecordSegment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 86</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalRecordSegment_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 87</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 88</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_PhysicalSegmentLayout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 89</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalSegmentLayout_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 90</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 91</span><span class="w">      </span><span class="nt">&quot;uses_OF_UnitType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 92</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:UnitType_uses_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 93</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 94</span><span class="w">      </span><span class="nt">&quot;uses_OF_Universe&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 95</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Universe_uses_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 96</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos"> 97</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_VariableCollection&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 98</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:VariableCollection_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 99</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">100</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">101</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">102</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">103</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:24.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">104</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept&quot;</span><span class="w"></span>
-<span class="linenos">105</span><span class="p">}</span><span class="w"></span>
+<span class="hll"><span class="linenos">  5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="linenos">  6</span><span class="w">      </span><span class="nt">&quot;Concept&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">  7</span><span class="w">      </span><span class="nt">&quot;catalogDetails&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">  8</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-catalogDetails&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">  9</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 10</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CatalogDetails.jsonld&quot;</span><span class="w"></span>
+<span class="linenos"> 11</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 12</span><span class="w">      </span><span class="nt">&quot;definition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 13</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-definition&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 14</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 15</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
+<span class="linenos"> 16</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 17</span><span class="w">      </span><span class="nt">&quot;displayLabel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 18</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-displayLabel&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 19</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 20</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LabelForDisplay.jsonld&quot;</span><span class="w"></span>
+<span class="linenos"> 21</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 22</span><span class="w">      </span><span class="nt">&quot;externalDefinition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 23</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-externalDefinition&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 24</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 25</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Reference.jsonld&quot;</span><span class="w"></span>
+<span class="linenos"> 26</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 27</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 28</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-identifier&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 29</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 30</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
+<span class="linenos"> 31</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 32</span><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 33</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept-name&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 34</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 35</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ObjectName.jsonld&quot;</span><span class="w"></span>
+<span class="linenos"> 36</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 37</span><span class="w">      </span>
+<span class="linenos"> 38</span><span class="w">      </span><span class="nt">&quot;uses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 39</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept_uses_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 40</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 41</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_AgentListing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 42</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:AgentListing_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 43</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 44</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_ClassificationFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 45</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ClassificationFamily_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 46</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 47</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_ClassificationIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 48</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ClassificationIndex_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 49</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 50</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_ClassificationSeries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 51</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ClassificationSeries_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 52</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 53</span><span class="w">      </span><span class="nt">&quot;uses_OF_Concept&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 54</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Concept_uses_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 55</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 56</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_ConceptMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 57</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptMap_hasSource_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 58</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 59</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_ConceptMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 60</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptMap_hasTarget_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 61</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 62</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_ConceptRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 63</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptRelationship_hasSource_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 64</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 65</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_ConceptRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 66</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptRelationship_hasTarget_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 67</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 68</span><span class="w">      </span><span class="nt">&quot;has_OF_ConceptSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 69</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptSystem_has_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 70</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 71</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_ConceptSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 72</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptSystem_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 73</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 74</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_DataStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 75</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 76</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 77</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_EnumerationDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 78</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:EnumerationDomain_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 79</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 80</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_Level&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 81</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Level_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 82</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 83</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_LogicalRecord&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 84</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecord_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 85</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 86</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_PhysicalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 87</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalDataSet_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 88</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 89</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_PhysicalRecordSegment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 90</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalRecordSegment_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 91</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 92</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_PhysicalSegmentLayout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 93</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalSegmentLayout_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 94</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 95</span><span class="w">      </span><span class="nt">&quot;isDefinedBy_OF_VariableCollection&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 96</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:VariableCollection_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 97</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 98</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos"> 99</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">100</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">101</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:48.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">102</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept&quot;</span><span class="w"></span>
+<span class="linenos">103</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 

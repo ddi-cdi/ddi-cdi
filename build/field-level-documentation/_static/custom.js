@@ -1,19 +1,17 @@
 $(document).ready(function() {
 	// adjust encoding urls
-	var customJsUrl = document.querySelector('script[src$="_static/custom.js"]').src;
-	var urlBasis = customJsUrl.substr(0, customJsUrl.indexOf('_static/custom.js'));
 	$('div.encoding > p > a.external').each(function(){
 		changeUrl(this);
 	});
 	function changeUrl (obj) {
 		var oldUrl = $(obj).attr("href");
-		var newUrl = urlBasis + '..' + oldUrl;
+        var newUrl = DOCUMENTATION_OPTIONS["URL_ROOT"] + ".." + oldUrl;
 		$(obj).attr("href", newUrl);
 	}
 	// end of adjust encoding urls
 	var svgUrl = $('div#diagram object').attr('data');
 //	var svgUrl = $('p.plantuml object').attr('data');
-	$( 'div#diagram > p.plantuml' ).prepend( '<a class="diagram-link" href="' + svgUrl + '" target="_blank">Open diagram in additional window</a>' );
+	$( 'div#diagram p.plantuml' ).prepend( '<a class="diagram-link" href="' + svgUrl + '" target="_blank">Open diagram in additional window</a>' );
 //	$( 'p.plantuml' ).prepend( '<a class="diagram-link" href="' + svgUrl + '" target="_blank">Open diagram in separate window</a>' );
 
 	// set logo link to external page
@@ -22,9 +20,10 @@ $(document).ready(function() {
 		$(this).attr('target', '_blank');
 	});
 
-	// add tool tips to internal references but not to TOC
+	// add tool tips to internal references
 	// definition is in additional definition.js created by modelQuery.mtl
-	$(":not(li) > a.reference.internal").each(function(){
+	$("a.reference.internal:not(.current)").each(function(){
+	//$(":not(li) > a.reference.internal").each(function(){ // but not to TOC
 		// strip package name
 		term = $(this).text().replace(/[^:]+::/, '');
 		tooltip = definition[term];

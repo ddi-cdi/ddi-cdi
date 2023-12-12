@@ -16,5 +16,4 @@ Packages that describe template classes and their relationships. These classes a
    :titlesonly:
 
    CollectionsPattern/index.rst
-   DataDescriptionPattern/index.rst
    SignificationPattern/index.rst

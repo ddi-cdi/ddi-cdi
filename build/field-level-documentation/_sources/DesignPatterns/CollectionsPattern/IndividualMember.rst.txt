@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DesignPatterns::CollectionsPattern::IndividualMember:
 
-
 *IndividualMember*
 ******************
 
@@ -15,100 +14,106 @@ Definition
 Distinct element that is not itself a collection (atomic).
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DesignPatterns/CollectionsPattern/IndividualMember.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: abstract
+      .. role:: focus
 
-   | :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
+      .. cssclass:: abstract
 
-   .. cssclass:: abstract
+      | :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
 
-   | |_| ᐊ── :focus:`CollectionsPattern::IndividualMember`
+      .. cssclass:: abstract
+
+      | |_| ᐊ── :focus:`CollectionsPattern::IndividualMember`
 
 
 
 
 
-.. dropdown:: Associations
+.. container::
+   :name: associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of IndividualMember
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - to
-        - Collection has Member
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Collection`
-        - 0..*
-        - none
-        - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
-      * - to
-        - Map hasSource Member
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Map`
-        - 0..*
-        - none
-        - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
-      * - to
-        - Map hasTarget Member
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Map`
-        - 0..*
-        - none
-        - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
-      * - to
-        - MemberRelationship hasSource Member
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship`
-        - 0..*
-        - none
-        - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
-      * - to
-        - MemberRelationship hasTarget Member
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship`
-        - 0..*
-        - none
-        - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
-      * - to
-        - Position indexes Member
-        - 
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Position`
-        - 0..*
-        - none
-        - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of IndividualMember
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - to
+           - Collection has Member
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Collection`
+           - 0..*
+           - none
+           - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
+         * - to
+           - Map hasSource Member
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Map`
+           - 0..*
+           - none
+           - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
+         * - to
+           - Map hasTarget Member
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Map`
+           - 0..*
+           - none
+           - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
+         * - to
+           - MemberRelationship hasSource Member
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship`
+           - 0..*
+           - none
+           - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
+         * - to
+           - MemberRelationship hasTarget Member
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::MemberRelationship`
+           - 0..*
+           - none
+           - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
+         * - to
+           - Position indexes Member
+           - 
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Position`
+           - 0..*
+           - none
+           - :ref:`CollectionsPattern::Member<DDICDIModels::DesignPatterns::CollectionsPattern::Member>`
 

@@ -13,113 +13,122 @@ Definition
 A resource which describes a specific attribute of an object. It is defined in the style of selectors of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/. The selector can be nested dependent on the structure of the referenced object.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/ObjectAttributeSelector.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :ref:`StructuredDataTypes::Selector<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :ref:`StructuredDataTypes::Selector<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector>`
 
-   | |_| ᐊ── :focus:`StructuredDataTypes::ObjectAttributeSelector`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - refinedBy
-        - \- *own datatype* \-
-        - Nested object attribute selector.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectAttributeSelector` 
-        - 0..1
-        - 
-
-      * - refinedByOrderNumber
-        - \- *own datatype* \-
-        - Order number of the specific attribute.
-        - Integer 
-        - 0..1
-        - 
-
-      * - value
-        - \- *own datatype* \-
-        - Name of the attribute.
-        - String 
-        - 0..1
-        - 
+      | |_| ᐊ── :focus:`StructuredDataTypes::ObjectAttributeSelector`
 
 
 
-.. dropdown:: Syntax representations / encodings
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: attributes
 
-   .. tab-set::
+   .. dropdown:: Attributes
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-         Fragment for the data type **ObjectAttributeSelector** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - refinedBy
+           - \- *own datatype* \-
+           - Nested object attribute selector.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectAttributeSelector` 
+           - 0..1
+           - 
 
-         .. literalinclude:: /xmi/ObjectAttributeSelector.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         * - refinedByOrderNumber
+           - \- *own datatype* \-
+           - Order number of the specific attribute.
+           - Integer 
+           - 0..1
+           - 
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+         * - value
+           - \- *own datatype* \-
+           - Name of the attribute.
+           - String 
+           - 0..1
+           - 
 
-         Fragment for the data type **ObjectAttributeSelector** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/ObjectAttributeSelector_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+.. container::
+   :name: encodings
 
-         Fragment for the data type **ObjectAttributeSelector** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+   .. dropdown:: Syntax representations / encodings
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/ObjectAttributeSelector.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+      .. tab-set::
 
-         Fragment for the data type **ObjectAttributeSelector** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/ObjectAttributeSelector.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+            Fragment for the data type **ObjectAttributeSelector** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+
+            .. literalinclude:: /xmi/ObjectAttributeSelector.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
+
+         .. tab-item:: XML Schema
+            :class-content: encoding
+
+            Fragment for the data type **ObjectAttributeSelector** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/ObjectAttributeSelector_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
+
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
+
+            Fragment for the data type **ObjectAttributeSelector** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/ObjectAttributeSelector.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
+
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **ObjectAttributeSelector** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/ObjectAttributeSelector.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

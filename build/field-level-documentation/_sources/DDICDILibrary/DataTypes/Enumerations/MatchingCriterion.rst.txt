@@ -12,83 +12,92 @@ Definition
 ============
 Supports mapping comparative relationships by type of match. Not used for causative, sequential, temporal or special relations.
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/Enumerations/MatchingCriterion.pu
 
-.. dropdown:: Enumeration literals
-   :open:
+.. container::
+   :name: literals
 
-   .. list-table::
-      :widths: 20 80
-      :header-rows: 1
-      :class: datatable-enumeration-literals
+   .. dropdown:: Enumeration literals
+      :open:
 
-      * - Name
-        - Description
-      * - CloseMatch
-        - The identified objects (source and target) are not exact but are similar. Equivalent to SKOS closeMatch - see the W3C Recommendation "SKOS Simple Knowledge Organization System Reference" - 10. Mapping Properties (https://www.w3.org/TR/skos-reference/#L4186).
-      * - Disjoint
-        - The identified objects are do not have a close or exact match. Equivalent to disjoint objects in SKOS  - see the W3C Recommendation "SKOS Simple Knowledge Organization System Reference" (https://www.w3.org/TR/skos-reference/#L4186).
-      * - ExactMatch
-        - The identified objects (source and target) are identical. Equivalent to SKOS exactMatch - see the W3C Recommendation "SKOS Simple Knowledge Organization System Reference" - 10. Mapping Properties (https://www.w3.org/TR/skos-reference/#L4186).
+      .. list-table::
+         :widths: 20 80
+         :header-rows: 1
+         :class: datatable-enumeration-literals
 
-.. dropdown:: Usage
+         * - Name
+           - Description
+         * - CloseMatch
+           - The identified objects (source and target) are not exact but are similar. Equivalent to SKOS closeMatch - see the W3C Recommendation "SKOS Simple Knowledge Organization System Reference" - 10. Mapping Properties (https://www.w3.org/TR/skos-reference/#L4186).
+         * - Disjoint
+           - The identified objects are do not have a close or exact match. Equivalent to disjoint objects in SKOS  - see the W3C Recommendation "SKOS Simple Knowledge Organization System Reference" (https://www.w3.org/TR/skos-reference/#L4186).
+         * - ExactMatch
+           - The identified objects (source and target) are identical. Equivalent to SKOS exactMatch - see the W3C Recommendation "SKOS Simple Knowledge Organization System Reference" - 10. Mapping Properties (https://www.w3.org/TR/skos-reference/#L4186).
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+.. container::
+   :name: usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CorrespondenceDefinition`
-        - matching
+   .. dropdown:: Usage
+
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
+
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CorrespondenceDefinition`
+           - matching
 
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: encodings
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Syntax representations / encodings
 
-   .. tab-set::
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      .. tab-set::
 
-         Fragment for the enumeration **MatchingCriterion**
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-         .. literalinclude:: /xmi/MatchingCriterion.xmi 
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+            Fragment for the enumeration **MatchingCriterion**
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            .. literalinclude:: /xmi/MatchingCriterion.xmi 
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         Fragment for the enumeration **MatchingCriterion**
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/MatchingCriterion_xsd.txt 
-            :language: xml
-            :linenos:
-            :dedent: 2
-            :emphasize-lines: 1
+            Fragment for the enumeration **MatchingCriterion**
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/MatchingCriterion_xsd.txt 
+               :language: xml
+               :linenos:
+               :dedent: 2
+               :emphasize-lines: 1
 
-         Fragment for the enumeration **MatchingCriterion** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/MatchingCriterion.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+            Fragment for the enumeration **MatchingCriterion** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/Enumerations/MatchingCriterion.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3

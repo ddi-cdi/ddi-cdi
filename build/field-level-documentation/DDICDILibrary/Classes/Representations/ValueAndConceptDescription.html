@@ -130,6 +130,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <section id="explanatory-notes">
 <h2>Explanatory notes<a class="headerlink" href="#explanatory-notes" title="Permalink to this headline">¶</a></h2>
 <p>The value and concept description may be used to describe either a value domain or a conceptual domain. For a value domain, the value and concept description contains the details for a described” domain (as opposed to an enumerated domain). There are a number of properties which can be used for the description. The description could be just text such as: “an even number greater than zero”, or a more formal logical expression like “x&gt;0 and mod(x,2)=0”. A regular expression might be useful for describing a textual domain. It could also employ a format pattern from the Unicode Locale Data Markup Language (LDML: <a class="reference external" href="http://www.unicode.org/reports/tr35/tr35.html">http://www.unicode.org/reports/tr35/tr35.html</a>). Some conceptual domains might be described with just a narrative. Others, though, might be described in much the same way as a value domain depending on the specificity of the concept. In ISO 11404 a value domain may be described either through enumeration or description, or both. This class provides the facility for that description. It may be just a text description, but a description through a logical expression is machine actionable and might, for example, be rendered as an integrity constraint. If both text and a logical expression are provided the logical expression is to be taken as the canonical description. The logical expression could conform to an expression syntax like that of the Validation and Transformation Language (VTL: <a class="reference external" href="https://sdmx.org/?page_id=5096">https://sdmx.org/?page_id=5096</a>) or the Structured Data Transformation Language (SDTL: <a class="reference external" href="https://ddialliance.org/products/sdtl/1.0">https://ddialliance.org/products/sdtl/1.0</a>).</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -137,12 +138,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-0fcba74ad851d47a9db21ad86fb5e996ffdac320.svg" type="image/svg+xml" style="width:544px;height:478px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-00502212f60a0bad1d23e10e553008f0f761bea3.svg" type="image/svg+xml" style="width:544px;height:482px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -241,7 +242,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -306,7 +309,9 @@ Associations<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -797,82 +802,84 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;ValueAndConceptDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;classificationLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-classificationLevel&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@vocab&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">          </span><span class="nt">&quot;Continuous&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Continuous&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">          </span><span class="nt">&quot;Interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Interval&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">          </span><span class="nt">&quot;Nominal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Nominal&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">          </span><span class="nt">&quot;Ordinal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Ordinal&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">          </span><span class="nt">&quot;Ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Ratio&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">          </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">16</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-description&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">      </span><span class="nt">&quot;formatPattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-formatPattern&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-identifier&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">      </span><span class="nt">&quot;logicalExpression&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-logicalExpression&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">38</span><span class="w">      </span><span class="nt">&quot;maximumValueExclusive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">39</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-maximumValueExclusive&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">40</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">42</span><span class="w">      </span><span class="nt">&quot;maximumValueInclusive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">43</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-maximumValueInclusive&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">45</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">46</span><span class="w">      </span><span class="nt">&quot;minimumValueExclusive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-minimumValueExclusive&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">48</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">49</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">50</span><span class="w">      </span><span class="nt">&quot;minimumValueInclusive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">51</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-minimumValueInclusive&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">52</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">53</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">54</span><span class="w">      </span><span class="nt">&quot;regularExpression&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">55</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-regularExpression&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">56</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">57</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TypedString.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">58</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">59</span><span class="w">      </span>
-<span class="linenos">60</span><span class="w">      </span><span class="nt">&quot;isDescribedBy_OF_ConceptualDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">61</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptualDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">62</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">63</span><span class="w">      </span><span class="nt">&quot;isDescribedBy_OF_SentinelValueDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">64</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SentinelValueDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">65</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">66</span><span class="w">      </span><span class="nt">&quot;isDescribedBy_OF_SubstantiveValueDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">67</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">68</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">69</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">70</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">71</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">72</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:31.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">73</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription&quot;</span><span class="w"></span>
-<span class="linenos">74</span><span class="p">}</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;ValueAndConceptDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;classificationLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-classificationLevel&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@vocab&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">          </span><span class="nt">&quot;Continuous&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Continuous&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">          </span><span class="nt">&quot;Interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Interval&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">          </span><span class="nt">&quot;Nominal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Nominal&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">          </span><span class="nt">&quot;Ordinal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Ordinal&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">          </span><span class="nt">&quot;Ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Ratio&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">          </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">17</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-description&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">      </span><span class="nt">&quot;formatPattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-formatPattern&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-identifier&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">      </span><span class="nt">&quot;logicalExpression&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-logicalExpression&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">      </span><span class="nt">&quot;maximumValueExclusive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-maximumValueExclusive&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">      </span><span class="nt">&quot;maximumValueInclusive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">44</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-maximumValueInclusive&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">45</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">46</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">47</span><span class="w">      </span><span class="nt">&quot;minimumValueExclusive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">48</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-minimumValueExclusive&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">49</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">50</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">51</span><span class="w">      </span><span class="nt">&quot;minimumValueInclusive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">52</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-minimumValueInclusive&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">53</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">54</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">55</span><span class="w">      </span><span class="nt">&quot;regularExpression&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">56</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ValueAndConceptDescription-regularExpression&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">57</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">58</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TypedString.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">59</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">60</span><span class="w">      </span>
+<span class="linenos">61</span><span class="w">      </span><span class="nt">&quot;isDescribedBy_OF_ConceptualDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">62</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ConceptualDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">63</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">64</span><span class="w">      </span><span class="nt">&quot;isDescribedBy_OF_SentinelValueDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">65</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SentinelValueDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">66</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">67</span><span class="w">      </span><span class="nt">&quot;isDescribedBy_OF_SubstantiveValueDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">68</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">69</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">70</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">71</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">72</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">73</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:54.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">74</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription&quot;</span><span class="w"></span>
+<span class="linenos">75</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 

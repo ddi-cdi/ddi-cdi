@@ -126,6 +126,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <section id="explanatory-notes">
 <h2>Explanatory notes<a class="headerlink" href="#explanatory-notes" title="Permalink to this headline">¶</a></h2>
 <p>Keep in mind that a logical records are definitions, not a “datasets”. Logical records organized in a structured collection is called a logical record relation structure. Instances of logical records instantiated as organizations of data points hosting data are described in format description. A data store is reusable across studies. Each study has at most one data store.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -133,12 +134,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-b0caa49565246aeb5cd490379be8547fbf8dae9e.svg" type="image/svg+xml" style="width:1146px;height:778px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-9ee2c691358911b8c6980567afb28fe3f5607b21.svg" type="image/svg+xml" style="width:1146px;height:783px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -230,7 +231,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -325,7 +328,9 @@ Associations<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -731,123 +736,144 @@ XML Schema</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">113</span>        <span class="nt">&lt;xs:documentation&gt;</span>The number of records in the Data Store.<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos">114</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos">115</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">116</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;DataStore_isDefinedBy_Concept-Target&quot;</span>
+<span class="linenos">116</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;DataStore_isDefinedBy_Concept&quot;</span>
 <span class="linenos">117</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
 <span class="linenos">118</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">119</span>                <span class="na">xml:id=</span><span class="s">&quot;DataStore_isDefinedBy_Concept-Target&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">119</span>                <span class="na">xml:id=</span><span class="s">&quot;DataStore_isDefinedBy_Concept&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">120</span>      <span class="nt">&lt;xs:annotation&gt;</span>
 <span class="linenos">121</span>        <span class="nt">&lt;xs:documentation&gt;</span>The conceptual basis for the collection of members.<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos">122</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos">123</span>      <span class="nt">&lt;xs:complexType&gt;</span>
 <span class="linenos">124</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">125</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">125</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">126</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">127</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">128</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">129</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">130</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_isDefinedBy_Concept-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">131</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">132</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">133</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Category&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">134</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Concept&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">135</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ConceptualValue&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">136</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ConceptualVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">137</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DescriptorVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">138</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DimensionalKeyDefinitionMember&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">139</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;InstanceVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">140</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Population&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">141</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ReferenceVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">142</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;RepresentedVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">143</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;UnitType&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">144</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Universe&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">145</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">146</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">147</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">148</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">149</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">150</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">151</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">152</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">153</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;DataStore_has_LogicalRecordPosition-Target&quot;</span>
-<span class="linenos">154</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">155</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">156</span>                <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecordPosition-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">157</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">158</span>        <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
-<span class="linenos">159</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">160</span>      <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">161</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">162</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">163</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">164</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">165</span>                          <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">166</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">167</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecordPosition-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">168</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">169</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">170</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;LogicalRecordPosition&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">171</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">172</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">173</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">174</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">175</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">176</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">177</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">178</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">179</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;DataStore_has_LogicalRecord-Target&quot;</span>
-<span class="linenos">180</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">181</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">182</span>                <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecord-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">183</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">184</span>        <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
-<span class="linenos">185</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">186</span>      <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">187</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">188</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">189</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">190</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">191</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">192</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">193</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecord-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">194</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">195</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">196</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;LogicalRecord&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">197</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">198</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">199</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">200</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">201</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">202</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">203</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">204</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">205</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;DataStore_has_RecordRelation-Target&quot;</span>
-<span class="linenos">206</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">207</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">208</span>                <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_RecordRelation-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">209</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">210</span>        <span class="nt">&lt;xs:documentation&gt;</span>The record relation that defines the relationship and linking requirements between logical records in the data store.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">211</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">212</span>      <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">213</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">214</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">215</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">216</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">217</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos">218</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos">219</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_RecordRelation-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">220</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">221</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">222</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;RecordRelation&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">223</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">224</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">225</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">226</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">227</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">228</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">229</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">230</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">231</span>  <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">232</span><span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">127</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">128</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">129</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">130</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">131</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_isDefinedBy_Concept-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">132</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">133</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">134</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">135</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_isDefinedBy_Concept-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">136</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">137</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">138</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Category&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">139</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Concept&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">140</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ConceptualValue&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">141</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ConceptualVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">142</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DescriptorVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">143</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DimensionalKeyDefinitionMember&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">144</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;InstanceVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">145</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;KeyDefinitionMember&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">146</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Population&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">147</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;ReferenceVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">148</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;RepresentedVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">149</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;UnitType&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">150</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Universe&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">151</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">152</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">153</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">154</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">155</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">156</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">157</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">158</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">159</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;DataStore_has_LogicalRecordPosition&quot;</span>
+<span class="linenos">160</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">161</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">162</span>                <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecordPosition&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">163</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">164</span>        <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
+<span class="linenos">165</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">166</span>      <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos">167</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">168</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">169</span>            <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">170</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">171</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">172</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">173</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">174</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecordPosition-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">175</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">176</span>                          <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">177</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">178</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecordPosition-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">179</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">180</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">181</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;LogicalRecordPosition&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">182</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">183</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">184</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">185</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">186</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">187</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">188</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">189</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">190</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;DataStore_has_LogicalRecord&quot;</span>
+<span class="linenos">191</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">192</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">193</span>                <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecord&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">194</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">195</span>        <span class="nt">&lt;xs:documentation&gt;&lt;/xs:documentation&gt;</span>
+<span class="linenos">196</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">197</span>      <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos">198</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">199</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">200</span>            <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">201</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">202</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">203</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">204</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">205</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecord-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">206</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">207</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">208</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">209</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_LogicalRecord-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">210</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">211</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">212</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;LogicalRecord&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">213</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">214</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">215</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">216</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">217</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">218</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">219</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">220</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">221</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;DataStore_has_RecordRelation&quot;</span>
+<span class="linenos">222</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">223</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">224</span>                <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_RecordRelation&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">225</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">226</span>        <span class="nt">&lt;xs:documentation&gt;</span>The record relation that defines the relationship and linking requirements between logical records in the data store.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">227</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">228</span>      <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos">229</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">230</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">231</span>            <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">232</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">233</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">234</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">235</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">236</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_RecordRelation-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">237</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">238</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">239</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos">240</span>                          <span class="na">xml:id=</span><span class="s">&quot;DataStore_has_RecordRelation-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">241</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">242</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">243</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;RecordRelation&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">244</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">245</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">246</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">247</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">248</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">249</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">250</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">251</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">252</span>  <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">253</span><span class="nt">&lt;/xs:complexType&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -987,80 +1013,82 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;DataStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;aboutMissing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-aboutMissing&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="nt">&quot;allowsDuplicates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-allowsDuplicates&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:boolean&quot;</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">      </span><span class="nt">&quot;catalogDetails&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-catalogDetails&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CatalogDetails.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">      </span><span class="nt">&quot;characterSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-characterSet&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">      </span><span class="nt">&quot;dataStoreType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-dataStoreType&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-identifier&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-name&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ObjectName.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">38</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">39</span><span class="w">      </span><span class="nt">&quot;purpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">40</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-purpose&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">42</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">43</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">      </span><span class="nt">&quot;recordCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">45</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-recordCount&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">46</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">48</span><span class="w">      </span>
-<span class="linenos">49</span><span class="w">      </span><span class="nt">&quot;isDefinedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">50</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">51</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">52</span><span class="w">      </span><span class="nt">&quot;has&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">53</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_has_LogicalRecord&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">54</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">55</span><span class="w">      </span><span class="nt">&quot;has&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">56</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_has_LogicalRecordPosition&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">57</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">58</span><span class="w">      </span><span class="nt">&quot;has&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">59</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_has_RecordRelation&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">60</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">61</span><span class="w">      </span><span class="nt">&quot;structures_OF_LogicalRecordRelationStructure&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">62</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecordRelationStructure_structures_DataStore&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">63</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">64</span><span class="w">      </span><span class="nt">&quot;formats_OF_PhysicalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">65</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalDataSet_formats_DataStore&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">66</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">67</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">68</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">69</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">70</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:28.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">71</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore&quot;</span><span class="w"></span>
-<span class="linenos">72</span><span class="p">}</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;DataStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;aboutMissing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-aboutMissing&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot;allowsDuplicates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-allowsDuplicates&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:boolean&quot;</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">      </span><span class="nt">&quot;catalogDetails&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-catalogDetails&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CatalogDetails.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">      </span><span class="nt">&quot;characterSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-characterSet&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:string&quot;</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">      </span><span class="nt">&quot;dataStoreType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-dataStoreType&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ControlledVocabularyEntry.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-identifier&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-name&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ObjectName.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">      </span><span class="nt">&quot;purpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-purpose&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">44</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">45</span><span class="w">      </span><span class="nt">&quot;recordCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">46</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore-recordCount&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">47</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xsd:integer&quot;</span><span class="w"></span>
+<span class="linenos">48</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">49</span><span class="w">      </span>
+<span class="linenos">50</span><span class="w">      </span><span class="nt">&quot;isDefinedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">51</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_isDefinedBy_Concept&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">52</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">53</span><span class="w">      </span><span class="nt">&quot;has&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">54</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_has_LogicalRecord&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">55</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">56</span><span class="w">      </span><span class="nt">&quot;has&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">57</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_has_LogicalRecordPosition&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">58</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">59</span><span class="w">      </span><span class="nt">&quot;has&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">60</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_has_RecordRelation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">61</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">62</span><span class="w">      </span><span class="nt">&quot;structures_OF_LogicalRecordRelationStructure&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">63</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecordRelationStructure_structures_DataStore&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">64</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">65</span><span class="w">      </span><span class="nt">&quot;formats_OF_PhysicalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">66</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalDataSet_formats_DataStore&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">67</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">68</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">69</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">70</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">71</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:52.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">72</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore&quot;</span><span class="w"></span>
+<span class="linenos">73</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 

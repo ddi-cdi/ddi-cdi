@@ -13,41 +13,44 @@ Definition
 The datatype of language-tagged string values. Defined according to the data type langString in RDF, see https://www.w3.org/TR/rdf-schema/#ch_langstring and https://www.w3.org/1999/02/22-rdf-syntax-ns#langString.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /Context/RDF/langString.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - language
-        - \- *own datatype* \-
-        - The optional language tag. The value of the language property MUST be well-formed according to section 2.2.9 of [BCP47].
-        - String 
-        - 0..1
-        - 
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-      * - lexicalForm
-        - \- *own datatype* \-
-        - Represents a Unicode string in Normal Form C.
-        - String 
-        - 1..1
-        - 
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - language
+           - \- *own datatype* \-
+           - The optional language tag. The value of the language property MUST be well-formed according to section 2.2.9 of [BCP47].
+           - String 
+           - 0..1
+           - 
+
+         * - lexicalForm
+           - \- *own datatype* \-
+           - Represents a Unicode string in Normal Form C.
+           - String 
+           - 1..1
+           - 
 
 
 

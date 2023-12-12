@@ -1,3 +1,44 @@
+Changes 2023-11-12
+PhysicalDataset - InstanceVariable
+- Added "has" association
+Variable Cascade 
+- Added "uses" association to Concept (self-referential)
+- Removed "narrows" associations (it's not captured by new "uses" association at the Concept level)
+- Removed "isBasedOn" associations (it's not captured by "uses" association at the Concept level)
+- Removed "uses" associations
+- Removed "measures" between RepresentedVariable and Universe and between InstanceVariable and Population (now inherited from ConceptualVariable and UnitType)
+Sequence (realized Collections Pattern)
+- Added SequencePosition class
+- Added "refines" dependency from SequencePosition to Position in Collections
+- Added "refines" dependency from Sequence to List in Collections
+- Added "has" association from Sequence to SequencePosition
+Activity
+- Added "definition" and "displayLabel" attributes
+ConceptualValue
+- Added "identifier" attribute
+Key pattern
+- Converted abstract pattern classes to concrete classes
+- Added "identifier" attribute to pattern classes (KeyDefinition and Key)
+- Changed refines to generalize
+- Removed redundant "identifier" attributes from sub-classes
+- Moved pattern classes to DDICDILibrary
+- Replaced "has" association by "uses" dependency" ("has" is now inherited)
+- Replaced "isRepresentedBy" by "uses" dependency" ("isRepresentedBy" is now inherited)
+- Replaced "isBasedOn" by "uses" dependency ("isBasedOn" is now inherited)
+- Removed associations to DataPoint, DataSet, Universe and Unit from Key sub-classes (they are now inherited)
+DataSet has Key
+- Changed cardinality to 0..* from 1..*
+DataSet has DataPoint
+- Changed cardinality to 0..* from 1..*
+DataStructure has DataStructureComponent
+- Changed cardinality to 0..1 from 1..*
+AttributeComponent qualifies DataStructureComponent
+- Changed cardinality to 0..* from 1..*
+LanguageString datatype
+- Merged LanguageString and ComplexLanguageString into new LanguageString
+- Updated definition
+
+
 Changes 2023-05-23
 Activity
 - added "name" attribute of type ObjectName and cardinality [0..*]

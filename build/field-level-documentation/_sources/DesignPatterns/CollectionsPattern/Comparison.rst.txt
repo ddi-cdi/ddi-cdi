@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DesignPatterns::CollectionsPattern::Comparison:
 
-
 *Comparison*
 ************
 
@@ -15,68 +14,74 @@ Definition
 The minimal pattern for a comparison including a mapping between members.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DesignPatterns/CollectionsPattern/Comparison.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - purpose
+           - \- *own class* \-
+           - Intent or reason for the object/the description of the object.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
+           - 0..1
+           - 
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - purpose
-        - \- *own class* \-
-        - Intent or reason for the object/the description of the object.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
-        - 0..1
-        - 
 
+.. container::
+   :name: associations
 
-.. dropdown:: Associations
-
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of Comparison
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - from
-        - Comparison has Map
-        - 
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Map`
-        - 0..*
-        - composite
-        - \- *own class* \-
-      * - from
-        - Comparison maps Collection
-        - 
-        - 0..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Collection`
-        - 2..*
-        - none
-        - \- *own class* \-
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of Comparison
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - from
+           - Comparison has Map
+           - 
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Map`
+           - 0..*
+           - composite
+           - \- *own class* \-
+         * - from
+           - Comparison maps Collection
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Collection`
+           - 2..*
+           - none
+           - \- *own class* \-
 

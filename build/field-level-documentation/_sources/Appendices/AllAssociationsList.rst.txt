@@ -397,6 +397,18 @@ All Associations (list)
      - Conceptual
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
+     - 
+     - none
+     - 0..*
+     - uses
+     - 0..*
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
+     - Conceptual
+   * - no
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap`
      - 
      - none
@@ -587,18 +599,6 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain`
      - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable`
-     - 
-     - none
-     - 0..*
-     - :abbr:`uses(Reference to a concept that is being used.)`
-     - 0..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
-     - Conceptual
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable`
@@ -660,30 +660,6 @@ All Associations (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
      - Conceptual
    * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey`
-     - 
-     - none
-     - 0..*
-     - :abbr:`correspondsTo(Dimensional key corresponds to zero to one universe.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
-     - Conceptual
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition`
-     - 
-     - none
-     - 0..*
-     - :abbr:`providesSemanticTo(Dimensional key definition provides semantic to zero to one universe.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
-     - Conceptual
-   * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::EnumerationDomain`
      - 
@@ -706,54 +682,6 @@ All Associations (list)
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet`
-     - Conceptual
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey`
-     - 
-     - none
-     - 0..*
-     - :abbr:`correspondsTo(Instance key corresponds to zero to one unit.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
-     - Conceptual
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey`
-     - 
-     - none
-     - 0..*
-     - :abbr:`correspondsTo(Instance key corresponds to zero to one universe.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
-     - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
-     - 
-     - none
-     - 0..*
-     - :abbr:`isBasedOn(The represented variable that can be shared by multiple instance variables. Indicates comparability in substantive representation, universe, and (indirectly) conceptual domain. If a relationship to a represented variable is defined there should be no relationship to a conceptual variable.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable`
-     - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
-     - 
-     - none
-     - 0..*
-     - :abbr:`measures(Set of specific units (people, entities, objects, events), usually in a given time and geography, being measured. Can be a specialization of the universe measured by a related represented variable.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Population`
      - Conceptual
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
@@ -780,8 +708,8 @@ All Associations (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
      - Conceptual
    * - yes
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::Key`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Key`
      - 
      - none
      - 0..*
@@ -792,8 +720,32 @@ All Associations (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
      - Conceptual
    * - yes
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::Key`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Key`
+     - 
+     - none
+     - 0..*
+     - correspondsTo
+     - 0..1
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
+     - Conceptual
+   * - yes
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition`
+     - 
+     - none
+     - 0..*
+     - correspondsTo
+     - 0..1
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
+     - Conceptual
+   * - yes
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition`
      - 
      - none
      - 0..*
@@ -840,18 +792,6 @@ All Associations (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
      - Conceptual
    * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey`
-     - 
-     - none
-     - 0..*
-     - correspondsTo
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
-     - Conceptual
-   * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation`
      - 
@@ -862,6 +802,18 @@ All Associations (list)
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Category`
+     - Conceptual
+   * - yes
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSet`
+     - 
+     - none
+     - 0..*
+     - has
+     - 0..*
+     - shared
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
      - Conceptual
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
@@ -923,42 +875,6 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
      - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Population`
-     - 
-     - none
-     - 0..*
-     - :abbr:`narrows(Reference to a universe that the population narrows.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
-     - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable`
-     - 
-     - none
-     - 0..*
-     - :abbr:`isBasedOn(The conceptual variable that can be shared by a set of represented variables. Indicates comparability in conceptual domain and unit type.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable`
-     - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable`
-     - 
-     - none
-     - 0..*
-     - :abbr:`measures(The defined class of people, entities, events, or objects to be measured by the represented variable.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
-     - Conceptual
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable`
@@ -1018,42 +934,6 @@ All Associations (list)
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::UnitType`
-     - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::UnitType`
-     - 
-     - none
-     - 0..*
-     - :abbr:`uses(Reference to the concept that is being used.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
-     - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
-     - 
-     - none
-     - 0..*
-     - :abbr:`narrows(Reference to the unit type that the universe definition narrows.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::UnitType`
-     - Conceptual
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe`
-     - 
-     - none
-     - 0..*
-     - :abbr:`uses(Reference to the concept that is being used.)`
-     - 0..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
      - Conceptual
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
@@ -1152,18 +1032,6 @@ All Associations (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection`
      - Conceptual
    * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey`
-     - 
-     - none
-     - 0..*
-     - :abbr:`correspondsTo(Wide key corresponds to zero to one unit.)`
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
-     - Conceptual
-   * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem`
      - 
@@ -1242,23 +1110,23 @@ All Associations (list)
      - none
      - 1..1
      - has
-     - 1..*
+     - 0..*
      - composite
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
      - DataDescription
-   * - yes
+   * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet`
      - 
      - none
      - 1..1
      - has
-     - 1..*
+     - 0..*
      - composite
      - x
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::Key`
-     - DataDescriptionPattern
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Key`
+     - DataDescription
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet`
@@ -1288,7 +1156,7 @@ All Associations (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure`
      - 
      - none
-     - 1..1
+     - 0..1
      - has
      - 0..*
      - composite
@@ -1356,28 +1224,16 @@ All Associations (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation`
      - DataDescription
    * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey`
-     - 
-     - none
-     - 0..1
-     - identifies
-     - 1..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
-     - DataDescription
-   * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey`
      - 
      - none
-     - 1..*
-     - :abbr:`identifies(InstanceKey identifies one DataPoint.)`
-     - 1..1
+     - 0..*
+     - has
+     - 0..1
      - none
      - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue`
      - DataDescription
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
@@ -1415,18 +1271,66 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue`
      - DataDescription
-   * - yes
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::Key`
+   * - no
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Key`
      - 
      - none
-     - 1..1
+     - 0..1
+     - has
+     - 0..*
+     - shared
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember`
+     - DataDescription
+   * - no
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Key`
+     - 
+     - none
+     - 0..1
      - identifies
      - 1..*
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
      - DataDescription
+   * - no
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Key`
+     - 
+     - none
+     - 1..*
+     - represents
+     - 0..1
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition`
+     - DataDescription
+   * - no
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition`
+     - 
+     - none
+     - 0..1
+     - has
+     - 0..*
+     - shared
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinitionMember`
+     - DataDescription
+   * - yes
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember`
+     - 
+     - none
+     - 0..*
+     - isBasedOn
+     - 0..*
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent`
+     - Components
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord`
@@ -1438,18 +1342,6 @@ All Associations (list)
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet`
-     - DataDescription
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey`
-     - 
-     - none
-     - 0..1
-     - identifies
-     - 1..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
      - DataDescription
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
@@ -1475,18 +1367,6 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
      - DataDescription
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey`
-     - 
-     - none
-     - 0..1
-     - identifies
-     - 1..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
-     - DataDescription
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent`
@@ -1494,7 +1374,7 @@ All Associations (list)
      - none
      - 0..*
      - qualifies
-     - 1..*
+     - 0..*
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent`
@@ -1510,30 +1390,6 @@ All Associations (list)
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent`
-     - Components
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 1..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::VariableDescriptorComponent`
-     - Components
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 1..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DimensionComponent`
      - Components
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components`
@@ -1594,78 +1450,6 @@ All Associations (list)
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent`
-     - Components
-   * - yes
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 0..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent`
-     - Components
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 0..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent`
-     - Components
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 0..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::IdentifierComponent`
-     - Components
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 0..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::MeasureComponent`
-     - Components
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DimensionComponent`
-     - Components
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::IdentifierComponent`
      - Components
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components`
@@ -1739,30 +1523,6 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::VariableValueComponent`
      - Components
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 1..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::IdentifierComponent`
-     - Components
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalDataSet`
-     - 
-     - none
-     - 1..1
-     - has
-     - 0..*
-     - composite
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey`
-     - Dimensional
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalDataSet`
@@ -1786,42 +1546,6 @@ All Associations (list)
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionGroup`
-     - Dimensional
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey`
-     - 
-     - none
-     - 0..*
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyMember`
-     - Dimensional
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition`
-     - 
-     - none
-     - 0..*
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember`
-     - Dimensional
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition`
-     - 
-     - none
-     - 0..1
-     - isRepresentedBy
-     - 1..*
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey`
      - Dimensional
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional`
@@ -1901,48 +1625,12 @@ All Associations (list)
      - 
      - none
      - 0..*
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor`
-     - Long
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey`
-     - 
-     - none
-     - 0..*
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember`
-     - KeyValue
-   * - yes
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey`
-     - 
-     - none
-     - 0..*
      - refersTo
      - 1..1
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue`
      - Long
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::KeyValueDataStore`
-     - 
-     - none
-     - 1..1
-     - has
-     - 0..*
-     - composite
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey`
-     - KeyValue
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember`
@@ -1955,30 +1643,6 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain`
      - Representations
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::ContextualComponent`
-     - KeyValue
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember`
-     - 
-     - none
-     - 0..*
-     - isBasedOn
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::SyntheticIdComponent`
-     - KeyValue
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor`
@@ -2029,42 +1693,6 @@ All Associations (list)
      - Long
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongDataSet`
-     - 
-     - none
-     - 1..1
-     - has
-     - 0..*
-     - composite
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey`
-     - Long
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey`
-     - 
-     - none
-     - 0..*
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor`
-     - Long
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey`
-     - 
-     - none
-     - 1..1
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember`
-     - Long
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue`
      - 
      - none
@@ -2087,30 +1715,6 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValueDomain`
      - Long
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideDataSet`
-     - 
-     - none
-     - 1..1
-     - has
-     - 0..*
-     - composite
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey`
-     - Wide
-   * - no
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide`
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey`
-     - 
-     - none
-     - 0..1
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKeyMember`
-     - Wide
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataStore`
@@ -2674,6 +2278,18 @@ All Associations (list)
      - composite
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Rule`
+     - Process
+   * - no
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Sequence`
+     - 
+     - none
+     - 1..1
+     - has
+     - 0..*
+     - composite
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::SequencePosition`
      - Process
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
@@ -3359,42 +2975,6 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DesignPatterns::CollectionsPattern::Collection`
      - CollectionsPattern
-   * - no
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::Key`
-     - 
-     - none
-     - 0..1
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyMember`
-     - DataDescriptionPattern
-   * - no
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::Key`
-     - 
-     - none
-     - 1..*
-     - represents
-     - 0..1
-     - none
-     - x
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition`
-     - DataDescriptionPattern
-   * - no
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinition`
-     - 
-     - none
-     - 0..1
-     - has
-     - 0..*
-     - shared
-     - x
-     - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyDefinitionMember`
-     - DataDescriptionPattern
    * - no
      - :ref:`DDICDIModels::DesignPatterns::SignificationPattern`
      - :ref:`DDICDIModels::DesignPatterns::SignificationPattern::Sign`

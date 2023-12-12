@@ -123,6 +123,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>Seasonally adjusted income for Single, Ontarians, Females.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -130,12 +131,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../../_images/plantuml-6d57ca8e17763b9a63812d844a8213a5fb569f3d.svg" type="image/svg+xml" style="width:660px;height:463px;background:#FFFFFF;"></object></p>
+<object data="../../../../_images/plantuml-398db2d8a7dbec4151089099933b8e3e62b888e0.svg" type="image/svg+xml" style="width:660px;height:474px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -178,7 +179,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -253,7 +256,9 @@ Associations<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -423,86 +428,101 @@ XML Schema</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 42</span>        <span class="nt">&lt;xs:documentation&gt;</span>Identifier for objects requiring short- or long-lasting referencing and management.<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos"> 43</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos"> 44</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 45</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ScopedMeasure_circumscribes_DimensionalKeyDefinition-Target&quot;</span>
+<span class="linenos"> 45</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ScopedMeasure_circumscribes_DimensionalKeyDefinition&quot;</span>
 <span class="linenos"> 46</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
 <span class="linenos"> 47</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 48</span>                <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_circumscribes_DimensionalKeyDefinition-Target&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 48</span>                <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_circumscribes_DimensionalKeyDefinition&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 49</span>      <span class="nt">&lt;xs:annotation&gt;</span>
 <span class="linenos"> 50</span>        <span class="nt">&lt;xs:documentation&gt;</span>A universe is specific to the specific cell associated with a scoped measure.<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos"> 51</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos"> 52</span>      <span class="nt">&lt;xs:complexType&gt;</span>
 <span class="linenos"> 53</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 54</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 54</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 55</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 56</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos"> 57</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 58</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 59</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_circumscribes_DimensionalKeyDefinition-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 60</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos"> 61</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 62</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DimensionalKeyDefinition&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 63</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos"> 64</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos"> 65</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 66</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos"> 67</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos"> 68</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos"> 69</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos"> 70</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 71</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ScopedMeasure_restricts_QualifiedMeasure-Target&quot;</span>
-<span class="linenos"> 72</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 73</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 74</span>                <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_restricts_QualifiedMeasure-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 75</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos"> 76</span>        <span class="nt">&lt;xs:documentation&gt;</span>A scoped measure resticts a qualified measure to a particular cell.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos"> 77</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos"> 78</span>      <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos"> 79</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos"> 80</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 81</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos"> 82</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos"> 83</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
-<span class="linenos"> 84</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
-<span class="linenos"> 85</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_restricts_QualifiedMeasure-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 86</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos"> 87</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos"> 88</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;QualifiedMeasure&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos"> 89</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos"> 90</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos"> 91</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 92</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos"> 93</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos"> 94</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos"> 95</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos"> 96</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos"> 97</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ScopedMeasure_generates_RevisableDatum-Target&quot;</span>
-<span class="linenos"> 98</span>                <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos"> 99</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">100</span>                <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_generates_RevisableDatum-Target&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">101</span>      <span class="nt">&lt;xs:annotation&gt;</span>
-<span class="linenos">102</span>        <span class="nt">&lt;xs:documentation&gt;</span>Scoped measure generates one revisable datum.<span class="nt">&lt;/xs:documentation&gt;</span>
-<span class="linenos">103</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
-<span class="linenos">104</span>      <span class="nt">&lt;xs:complexType&gt;</span>
-<span class="linenos">105</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
-<span class="linenos">106</span>          <span class="nt">&lt;xs:extension</span> <span class="na">base=</span><span class="s">&quot;ReferenceXsdType&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">107</span>            <span class="nt">&lt;xs:sequence&gt;</span>
-<span class="linenos">108</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;typeOfClass&quot;</span>
-<span class="linenos">109</span>                          <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">110</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
-<span class="linenos">111</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_generates_RevisableDatum-Source&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">112</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
-<span class="linenos">113</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">114</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;RevisableDatum&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">115</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
-<span class="linenos">116</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
-<span class="linenos">117</span>              <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">118</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">119</span>          <span class="nt">&lt;/xs:extension&gt;</span>
-<span class="linenos">120</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
-<span class="linenos">121</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
-<span class="linenos">122</span>    <span class="nt">&lt;/xs:element&gt;</span>
-<span class="linenos">123</span>  <span class="nt">&lt;/xs:sequence&gt;</span>
-<span class="linenos">124</span><span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos"> 56</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos"> 57</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos"> 58</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 59</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 60</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_circumscribes_DimensionalKeyDefinition-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 61</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos"> 62</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 63</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos"> 64</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_circumscribes_DimensionalKeyDefinition-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 65</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos"> 66</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 67</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;DimensionalKeyDefinition&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 68</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos"> 69</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos"> 70</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 71</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos"> 72</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos"> 73</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos"> 74</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos"> 75</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos"> 76</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ScopedMeasure_restricts_QualifiedMeasure&quot;</span>
+<span class="linenos"> 77</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 78</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 79</span>                <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_restricts_QualifiedMeasure&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 80</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos"> 81</span>        <span class="nt">&lt;xs:documentation&gt;</span>A scoped measure resticts a qualified measure to a particular cell.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 82</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos"> 83</span>      <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos"> 84</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos"> 85</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 86</span>            <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos"> 87</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos"> 88</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos"> 89</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 90</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos"> 91</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_restricts_QualifiedMeasure-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 92</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos"> 93</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos"> 94</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
+<span class="linenos"> 95</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_restricts_QualifiedMeasure-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 96</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos"> 97</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 98</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;QualifiedMeasure&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos"> 99</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">100</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">101</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">102</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">103</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">104</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">105</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">106</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">107</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ScopedMeasure_generates_RevisableDatum&quot;</span>
+<span class="linenos">108</span>                <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">109</span>                <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">110</span>                <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_generates_RevisableDatum&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">111</span>      <span class="nt">&lt;xs:annotation&gt;</span>
+<span class="linenos">112</span>        <span class="nt">&lt;xs:documentation&gt;</span>Scoped measure generates one revisable datum.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">113</span>      <span class="nt">&lt;/xs:annotation&gt;</span>
+<span class="linenos">114</span>      <span class="nt">&lt;xs:complexType&gt;</span>
+<span class="linenos">115</span>        <span class="nt">&lt;xs:complexContent&gt;</span>
+<span class="linenos">116</span>          <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;AssociationReferenceXsdType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">117</span>            <span class="nt">&lt;xs:sequence&gt;</span>
+<span class="linenos">118</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;ddiReference&quot;</span>
+<span class="linenos">119</span>                          <span class="na">type=</span><span class="s">&quot;InternationalRegistrationDataIdentifierXsdType&quot;</span>
+<span class="linenos">120</span>                          <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
+<span class="linenos">121</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">122</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_generates_RevisableDatum-ddiReference&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">123</span>              <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;validType&quot;</span>
+<span class="linenos">124</span>                          <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">125</span>                          <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span>
+<span class="linenos">126</span>                          <span class="na">xml:id=</span><span class="s">&quot;ScopedMeasure_generates_RevisableDatum-validType&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">127</span>                <span class="nt">&lt;xs:simpleType&gt;</span>
+<span class="linenos">128</span>                  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:NMTOKEN&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">129</span>                    <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;RevisableDatum&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">130</span>                  <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">131</span>                <span class="nt">&lt;/xs:simpleType&gt;</span>
+<span class="linenos">132</span>              <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">133</span>            <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">134</span>          <span class="nt">&lt;/xs:restriction&gt;</span>
+<span class="linenos">135</span>        <span class="nt">&lt;/xs:complexContent&gt;</span>
+<span class="linenos">136</span>      <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="linenos">137</span>    <span class="nt">&lt;/xs:element&gt;</span>
+<span class="linenos">138</span>  <span class="nt">&lt;/xs:sequence&gt;</span>
+<span class="linenos">139</span><span class="nt">&lt;/xs:complexType&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -576,42 +596,44 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;ScopedMeasure&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;frequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure-frequency&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure-identifier&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">      </span>
-<span class="linenos">17</span><span class="w">      </span><span class="nt">&quot;circumscribes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure_circumscribes_DimensionalKeyDefinition&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">      </span><span class="nt">&quot;generates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure_generates_RevisableDatum&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">      </span><span class="nt">&quot;restricts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure_restricts_QualifiedMeasure&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">      </span><span class="nt">&quot;represents_OF_DimensionalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DimensionalDataSet_represents_ScopedMeasure&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">30</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:27.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure&quot;</span><span class="w"></span>
-<span class="linenos">34</span><span class="p">}</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;ScopedMeasure&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;frequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure-frequency&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure-identifier&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">      </span>
+<span class="linenos">18</span><span class="w">      </span><span class="nt">&quot;circumscribes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure_circumscribes_DimensionalKeyDefinition&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">      </span><span class="nt">&quot;generates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure_generates_RevisableDatum&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">      </span><span class="nt">&quot;restricts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ScopedMeasure_restricts_QualifiedMeasure&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">      </span><span class="nt">&quot;represents_OF_DimensionalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DimensionalDataSet_represents_ScopedMeasure&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">31</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:50.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure&quot;</span><span class="w"></span>
+<span class="linenos">35</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 
@@ -670,6 +692,10 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <li class="toctree-l4"><a class="reference internal" href="../DataStructure.html">DataStructure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Datum.html">Datum</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../InstanceValue.html">InstanceValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Key.html">Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyDefinition.html">KeyDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyDefinitionMember.html">KeyDefinitionMember</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../KeyMember.html">KeyMember</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Notation.html">Notation</a></li>
 </ul>
 </li>

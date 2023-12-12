@@ -117,7 +117,8 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <p><strong>Fully qualified datatype name</strong>: DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::<span class="target" id="index-0"></span>InternationalString</p>
 <section id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
-<p>Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String.</p>
+<p>Packaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -125,12 +126,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-972330d58aa17511fd37d0e828ffcfe88b9aa7f8.svg" type="image/svg+xml" style="width:791px;height:10260px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-2da76756a0b8c8f9449bda1e2f14ce99ca73374c.svg" type="image/svg+xml" style="width:757px;height:10629px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="inheritance">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Inheritance<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -147,7 +148,9 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="line">ᐊ── <a class="reference internal" href="LabelForDisplay.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-labelfordisplay"><span class="std std-ref">StructuredDataTypes::LabelForDisplay</span></a></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -176,14 +179,16 @@ Attributes<div class="sd-summary-down docutils">
 <tr class="row-even"><td><p class="sd-card-text">languageSpecificString</p></td>
 <td><p class="sd-card-text">- <em>own datatype</em> -</p></td>
 <td><p class="sd-card-text">A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language.</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="ComplexLanguageString.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-complexlanguagestring"><span class="std std-ref">ComplexLanguageString</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="LanguageString.html#ddicdimodels-ddicdilibrary-datatypes-structureddatatypes-languagestring"><span class="std std-ref">LanguageString</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="usage">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Usage<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -277,103 +282,103 @@ Usage<div class="sd-summary-down docutils">
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">Conceptual</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Classes/Conceptual/Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Universe</span></a></p></td>
-<td><p class="sd-card-text">descriptiveText</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
-<td><p class="sd-card-text">Conceptual</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/Conceptual/VariableCollection.html#ddicdimodels-ddicdilibrary-classes-conceptual-variablecollection"><span class="std std-ref">VariableCollection</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">Conceptual</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/Conceptual/VariableCollection.html#ddicdimodels-ddicdilibrary-classes-conceptual-variablecollection"><span class="std std-ref">VariableCollection</span></a></p></td>
 <td><p class="sd-card-text">usage</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">Conceptual</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/Conceptual/VariableStructure.html#ddicdimodels-ddicdilibrary-classes-conceptual-variablestructure"><span class="std std-ref">VariableStructure</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">Dimensional</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/DataDescription/Dimensional/Revision.html#ddicdimodels-ddicdilibrary-classes-datadescription-dimensional-revision"><span class="std std-ref">Revision</span></a></p></td>
 <td><p class="sd-card-text">overview</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">Dimensional</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/DataDescription/Dimensional/ScopedMeasure.html#ddicdimodels-ddicdilibrary-classes-datadescription-dimensional-scopedmeasure"><span class="std std-ref">ScopedMeasure</span></a></p></td>
 <td><p class="sd-card-text">frequency</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/DataStore.html#ddicdimodels-ddicdilibrary-classes-formatdescription-datastore"><span class="std std-ref">DataStore</span></a></p></td>
 <td><p class="sd-card-text">aboutMissing</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/DataStore.html#ddicdimodels-ddicdilibrary-classes-formatdescription-datastore"><span class="std std-ref">DataStore</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/LogicalRecordRelationStructure.html#ddicdimodels-ddicdilibrary-classes-formatdescription-logicalrecordrelationstructure"><span class="std std-ref">LogicalRecordRelationStructure</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalDataSet.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicaldataset"><span class="std std-ref">PhysicalDataSet</span></a></p></td>
 <td><p class="sd-card-text">overview</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalDataSet.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicaldataset"><span class="std std-ref">PhysicalDataSet</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalDataSetStructure.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicaldatasetstructure"><span class="std std-ref">PhysicalDataSetStructure</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalLayoutRelationStructure.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicallayoutrelationstructure"><span class="std std-ref">PhysicalLayoutRelationStructure</span></a></p></td>
 <td><p class="sd-card-text">criteria</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalLayoutRelationStructure.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicallayoutrelationstructure"><span class="std std-ref">PhysicalLayoutRelationStructure</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalRecordSegment.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalrecordsegment"><span class="std std-ref">PhysicalRecordSegment</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalRecordSegmentStructure.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalrecordsegmentstructure"><span class="std std-ref">PhysicalRecordSegmentStructure</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalSegmentLayout.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalsegmentlayout"><span class="std std-ref">PhysicalSegmentLayout</span></a></p></td>
 <td><p class="sd-card-text">overview</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/PhysicalSegmentLayout.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalsegmentlayout"><span class="std std-ref">PhysicalSegmentLayout</span></a></p></td>
+<td><p class="sd-card-text">purpose</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
+<td><p class="sd-card-text">FormatDescription</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/RecordRelation.html#ddicdimodels-ddicdilibrary-classes-formatdescription-recordrelation"><span class="std std-ref">RecordRelation</span></a></p></td>
 <td><p class="sd-card-text">purpose</p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">FormatDescription</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/RecordRelation.html#ddicdimodels-ddicdilibrary-classes-formatdescription-recordrelation"><span class="std std-ref">RecordRelation</span></a></p></td>
-<td><p class="sd-card-text">purpose</p></td>
+<td><p class="sd-card-text">usage</p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">Class</p></td>
-<td><p class="sd-card-text">FormatDescription</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="../../Classes/FormatDescription/RecordRelation.html#ddicdimodels-ddicdilibrary-classes-formatdescription-recordrelation"><span class="std std-ref">RecordRelation</span></a></p></td>
-<td><p class="sd-card-text">usage</p></td>
+<td><p class="sd-card-text">Process</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="../../Classes/Process/Activity.html#ddicdimodels-ddicdilibrary-classes-process-activity"><span class="std std-ref">Activity</span></a></p></td>
+<td><p class="sd-card-text">definition</p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">Class</p></td>
 <td><p class="sd-card-text">Representations</p></td>
@@ -613,7 +618,9 @@ Usage<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -639,7 +646,7 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">10</span>      <span class="nt">&lt;annotatedElement</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-InternationalString&quot;</span><span class="nt">/&gt;</span>
 <span class="linenos">11</span>      <span class="nt">&lt;body&gt;</span>Definition
 <span class="linenos">12</span>============
-<span class="linenos">13</span>Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String.<span class="nt">&lt;/body&gt;</span>
+<span class="linenos">13</span>Packaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages.<span class="nt">&lt;/body&gt;</span>
 <span class="linenos">14</span>   <span class="nt">&lt;/ownedComment&gt;</span>
 <span class="linenos">15</span>   <span class="nt">&lt;name&gt;</span>InternationalString<span class="nt">&lt;/name&gt;</span>
 <span class="linenos">16</span>   <span class="nt">&lt;ownedAttribute</span> <span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-InternationalString-languageSpecificString&quot;</span>
@@ -661,7 +668,7 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">32</span>      <span class="nt">&lt;/upperValue&gt;</span>
 <span class="linenos">33</span>      <span class="nt">&lt;name&gt;</span>languageSpecificString<span class="nt">&lt;/name&gt;</span>
 <span class="linenos">34</span>      <span class="nt">&lt;isOrdered&gt;</span>true<span class="nt">&lt;/isOrdered&gt;</span>
-<span class="linenos">35</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ComplexLanguageString&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">35</span>      <span class="nt">&lt;type</span> <span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString&quot;</span><span class="nt">/&gt;</span>
 <span class="linenos">36</span>   <span class="nt">&lt;/ownedAttribute&gt;</span>
 <span class="linenos">37</span><span class="nt">&lt;/packagedElement&gt;</span>
 </pre></div>
@@ -678,7 +685,7 @@ XML Schema</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 5</span>  <span class="nt">&lt;xs:annotation&gt;</span>
 <span class="linenos"> 6</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
 <span class="linenos"> 7</span>          ============
-<span class="linenos"> 8</span>          Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos"> 8</span>          Packaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages.<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos"> 9</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos">10</span><span class="nt">&lt;/xs:element&gt;</span>
 <span class="linenos">11</span><span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;InternationalStringXsdType&quot;</span>
@@ -686,11 +693,11 @@ XML Schema</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">13</span>  <span class="nt">&lt;xs:annotation&gt;</span>
 <span class="linenos">14</span>    <span class="nt">&lt;xs:documentation&gt;</span>Definition
 <span class="linenos">15</span>          ============
-<span class="linenos">16</span>          Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String.<span class="nt">&lt;/xs:documentation&gt;</span>
+<span class="linenos">16</span>          Packaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages.<span class="nt">&lt;/xs:documentation&gt;</span>
 <span class="linenos">17</span>  <span class="nt">&lt;/xs:annotation&gt;</span>
 <span class="linenos">18</span>  <span class="nt">&lt;xs:sequence&gt;</span>
 <span class="linenos">19</span>    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;languageSpecificString&quot;</span>
-<span class="linenos">20</span>                <span class="na">type=</span><span class="s">&quot;ComplexLanguageStringXsdType&quot;</span>
+<span class="linenos">20</span>                <span class="na">type=</span><span class="s">&quot;LanguageStringXsdType&quot;</span>
 <span class="linenos">21</span>                <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span>
 <span class="linenos">22</span>                <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span>
 <span class="linenos">23</span>                <span class="na">xml:id=</span><span class="s">&quot;InternationalString-languageSpecificString&quot;</span><span class="nt">&gt;</span>
@@ -712,7 +719,7 @@ Ontology (Turtle)</label><div class="sd-tab-content encoding docutils">
 <span class="hll"><span class="linenos"> 3</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">InternationalString</span>
 </span><span class="linenos"> 4</span>  <span class="kt">a</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">Class</span><span class="p">,</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span><span class="p">,</span> <span class="nn">ucmis</span><span class="p">:</span><span class="nt">StructuredDataType</span><span class="p">;</span>
 <span class="linenos"> 5</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;InternationalString&quot;</span><span class="p">;</span>
-<span class="linenos"> 6</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Definition\n============\nPackaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String.&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">;</span>
+<span class="linenos"> 6</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Definition\n============\nPackaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages.&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">;</span>
 <span class="linenos"> 7</span>  
 <span class="linenos"> 8</span>  <span class="nn">owl</span><span class="p">:</span><span class="nt">hasKey</span> <span class="p">(</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">InternationalString-languageSpecificString</span><span class="p">);</span>
 <span class="linenos"> 9</span><span class="p">.</span>
@@ -722,7 +729,7 @@ Ontology (Turtle)</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">13</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;languageSpecificString&quot;</span><span class="p">;</span>
 <span class="linenos">14</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language.&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">;</span>
 <span class="linenos">15</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">InternationalString</span><span class="p">;</span>
-<span class="linenos">16</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">ComplexLanguageString</span><span class="p">;</span>
+<span class="linenos">16</span>  <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">langString</span><span class="p">;</span>
 <span class="linenos">17</span><span class="p">.</span>
 </pre></div>
 </div>
@@ -735,25 +742,27 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;InternationalString&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InternationalString&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;languageSpecificString&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InternationalString-languageSpecificString&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ComplexLanguageString.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span>
-<span class="linenos">12</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:32.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString&quot;</span><span class="w"></span>
-<span class="linenos">17</span><span class="p">}</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">	  </span><span class="nt">&quot;InternationalString&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InternationalString&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">	  </span><span class="nt">&quot;languageSpecificString&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">	    </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:InternationalString-languageSpecificString&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">	    </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">	    </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LanguageString.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">	  </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">	  </span>
+<span class="linenos">13</span><span class="w">	  </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">14</span><span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:55.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString&quot;</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 
@@ -794,7 +803,6 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <li class="toctree-l4"><a class="reference internal" href="Command.html">Command</a></li>
 <li class="toctree-l4"><a class="reference internal" href="CommandCode.html">CommandCode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="CommandFile.html">CommandFile</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ComplexLanguageString.html">ComplexLanguageString</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ContactInformation.html">ContactInformation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ControlledVocabularyEntry.html">ControlledVocabularyEntry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="CorrespondenceDefinition.html">CorrespondenceDefinition</a></li>
@@ -813,7 +821,6 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="LabelForDisplay.html">LabelForDisplay</a></li>
-<li class="toctree-l4"><a class="reference internal" href="LanguageSpecificString.html">LanguageSpecificString</a></li>
 <li class="toctree-l4"><a class="reference internal" href="LanguageString.html">LanguageString</a></li>
 <li class="toctree-l4"><a class="reference internal" href="LicenseInformation.html">LicenseInformation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="NonDdiIdentifier.html">NonDdiIdentifier</a></li>

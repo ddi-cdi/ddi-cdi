@@ -126,6 +126,7 @@ body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0px !imp
 <section id="explanatory-notes">
 <h2>Explanatory notes<a class="headerlink" href="#explanatory-notes" title="Permalink to this headline">¶</a></h2>
 <p>A category is a concept, typically associated with a code in the representation of a variable value. Categories are most often used in the allowed values for qualitative, i.e., nominal and ordinal, variables. A set of categories, say “Male” and “Female” for characteristics “Sex” or “Gender,” helps define those characteristics. For describing location of measurement station, you might have categories “Urban”, “Suburban”, “Rural”, etc.</p>
+<div class="docutils container" id="diagram">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Diagram<div class="sd-summary-down docutils">
@@ -133,12 +134,12 @@ Diagram<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="docutils container" id="diagram">
 <p class="plantuml">
-<object data="../../../_images/plantuml-0ecfbc198d0e3240df810ac53e5c5978befd2212.svg" type="image/svg+xml" style="width:1399px;height:894px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-a88c92bd3d5eb81bfd3d2586a648288b7616e870.svg" type="image/svg+xml" style="width:1537px;height:971px;background:#FFFFFF;"></object></p>
 </div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="inheritance">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Inheritance<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -152,7 +153,9 @@ Inheritance<div class="sd-summary-down docutils">
 <div class="line">  ᐊ── <span class="focus">Conceptual::Category</span></div>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="attributes">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -230,7 +233,9 @@ Attributes<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="associations">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Associations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -303,6 +308,16 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<td><p class="sd-card-text">Concept uses Concept</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">- <em>own package</em> -</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Concept</span></a></p></td>
+<td><p class="sd-card-text">0..*</p></td>
+<td><p class="sd-card-text">none</p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptMap hasSource Concept</p></td>
 <td><p class="sd-card-text">Concept map has one to many source concepts.</p></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -312,7 +327,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptMap hasTarget Concept</p></td>
 <td><p class="sd-card-text">Concept map has one to many target concepts.</p></td>
 <td><p class="sd-card-text">1..*</p></td>
@@ -322,7 +337,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptRelationship hasSource Concept</p></td>
 <td><p class="sd-card-text">Restricts source object to concept for the relationship.</p></td>
 <td><p class="sd-card-text">1..1</p></td>
@@ -332,7 +347,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptRelationship hasTarget Concept</p></td>
 <td><p class="sd-card-text">Restricts target object to concept for the relationship.</p></td>
 <td><p class="sd-card-text">1..1</p></td>
@@ -342,7 +357,7 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptSystem has Concept</p></td>
 <td><p class="sd-card-text">Concept system has zero to many concepts.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
@@ -352,22 +367,12 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
+<tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">ConceptSystem isDefinedBy Concept</p></td>
 <td><p class="sd-card-text">Concept system is defined by zero to many concepts. The conceptual basis for the collection of members.</p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">- <em>own package</em> -</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="ConceptSystem.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptsystem"><span class="std std-ref">ConceptSystem</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">ConceptualVariable uses Concept</p></td>
-<td><p class="sd-card-text">Reference to a concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="ConceptualVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-conceptualvariable"><span class="std std-ref">ConceptualVariable</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
@@ -438,26 +443,6 @@ Associations<div class="sd-summary-down docutils">
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../FormatDescription/index.html#ddicdimodels-ddicdilibrary-classes-formatdescription"><span class="std std-ref">FormatDescription</span></a></p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="../FormatDescription/PhysicalSegmentLayout.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalsegmentlayout"><span class="std std-ref">PhysicalSegmentLayout</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">UnitType uses Concept</p></td>
-<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="UnitType.html#ddicdimodels-ddicdilibrary-classes-conceptual-unittype"><span class="std std-ref">UnitType</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">Universe uses Concept</p></td>
-<td><p class="sd-card-text">Reference to the concept that is being used.</p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="Universe.html#ddicdimodels-ddicdilibrary-classes-conceptual-universe"><span class="std std-ref">Universe</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
 <td><p class="sd-card-text"><a class="reference internal" href="Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Conceptual::Concept</span></a></p></td>
@@ -555,7 +540,9 @@ Associations<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details></div>
+<div class="docutils container" id="encodings">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Syntax representations / encodings<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -712,49 +699,51 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos"> 3</span><span class="w">    </span><span class="s2">&quot;Concept.jsonld&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span><span class="w"></span>
-</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;Category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;descriptiveText&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Category-descriptiveText&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">      </span>
-<span class="linenos">13</span><span class="w">      </span><span class="nt">&quot;indexes_OF_CategoryPosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryPosition_indexes_Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_CategoryRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryRelationship_hasSource_Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_CategoryRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryRelationship_hasTarget_Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">      </span><span class="nt">&quot;has_OF_CategorySet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategorySet_has_Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">      </span><span class="nt">&quot;for_OF_CategoryStatistic&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryStatistic_for_Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">      </span><span class="nt">&quot;denotes_OF_ClassificationItem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ClassificationItem_denotes_Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">      </span><span class="nt">&quot;denotes_OF_Code&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Code_denotes_Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">      </span><span class="nt">&quot;represents_OF_Notation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Notation_represents_Category&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
-<span class="linenos">38</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">39</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="linenos">40</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-05-25 10:41:23.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Conceptual::Category&quot;</span><span class="w"></span>
-<span class="linenos">42</span><span class="p">}</span><span class="w"></span>
+</span><span class="linenos"> 6</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;Category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">      </span><span class="nt">&quot;descriptiveText&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Category-descriptiveText&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;InternationalString.jsonld&quot;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">      </span>
+<span class="linenos">14</span><span class="w">      </span><span class="nt">&quot;indexes_OF_CategoryPosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryPosition_indexes_Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_CategoryRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryRelationship_hasSource_Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_CategoryRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryRelationship_hasTarget_Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">      </span><span class="nt">&quot;has_OF_CategorySet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategorySet_has_Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">      </span><span class="nt">&quot;for_OF_CategoryStatistic&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:CategoryStatistic_for_Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">      </span><span class="nt">&quot;denotes_OF_ClassificationItem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:ClassificationItem_denotes_Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">      </span><span class="nt">&quot;denotes_OF_Code&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Code_denotes_Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">      </span><span class="nt">&quot;represents_OF_Notation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Notation_represents_Category&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span><span class="w"> </span>
+<span class="linenos">39</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2023-12-12 16:04:48.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::Conceptual::Category&quot;</span><span class="w"></span>
+<span class="linenos">43</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></section>
+</details></div>
+</section>
 </section>
 
 

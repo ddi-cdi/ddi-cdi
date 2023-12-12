@@ -10,110 +10,152 @@ LanguageString
 
 Definition
 ============
-A character string and associated specification of the string's natural language.
+A language/scope-type specific variant of an InternationalString. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/LanguageString.pu
 
-.. dropdown:: Inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+.. container::
+   :name: attributes
 
-   .. role:: focus
+   .. dropdown:: Attributes
 
-   .. cssclass:: regular
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-   | :focus:`StructuredDataTypes::LanguageString`
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - content
+           - \- *own datatype* \-
+           - The content of the string.
+           - String 
+           - 1..1
+           - 
 
-   .. cssclass:: regular
+         * - isTranslatable
+           - \- *own datatype* \-
+           - Indicates whether content is translatable (True) or not (False). An example of something that is not translatable would be a MNEMONIC of an object or a number.
+           - Boolean 
+           - 0..1
+           - true
 
-   |    ᐊ── :ref:`StructuredDataTypes::ComplexLanguageString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ComplexLanguageString>`
+         * - isTranslated
+           - \- *own datatype* \-
+           - Indicates whether content is a translation (True) or an original (False).
+           - Boolean 
+           - 0..1
+           - false
+
+         * - scope
+           - \- *own datatype* \-
+           - Supports specification of scope for the contained content. Use with the language specification to filter application of content.
+           - String 
+           - 0..1
+           - 
+
+         * - structureUsed
+           - \- *own datatype* \-
+           - The structure type used. Examples are HTML or restructured text.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
+
+         * - translationDate
+           - \- *own datatype* \-
+           - The date the content was translated. Provision of translation date allows user to verify if translation was available during data collection or other time linked activity.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::XMLSchemaDataTypes::XsdDate` 
+           - 0..1
+           - 
+
+         * - translationSourceLanguage
+           - \- *own datatype* \-
+           - List the language code of the source. Repeat of multiple language sources are used.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::XMLSchemaDataTypes::XsdLanguage` 
+           - 0..*
+           - 
 
 
+.. container::
+   :name: usage
 
+   .. dropdown:: Usage
 
-.. dropdown:: Attributes
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString`
+           - languageSpecificString
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - content
-        - \- *own datatype* \-
-        - The content of the string.
-        - String 
-        - 1..1
-        - 
+.. container::
+   :name: encodings
 
-      * - language
-        - \- *own datatype* \-
-        - Definition from XML Schema Part 2: Datatypes Second Edition:
-          "language" represents natural language identifiers as defined by by [RFC 3066]. The value space of "language" is the set of all strings that are valid language identifiers as defined [RFC 3066] . The lexical space of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*. The base type of "language" is token. https://www.w3.org/TR/xmlschema-2/#language.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::XMLSchemaDataTypes::XsdLanguage` 
-        - 0..1
-        - 
+   .. dropdown:: Syntax representations / encodings
 
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
+      .. tab-set::
 
-.. dropdown:: Syntax representations / encodings
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+            Fragment for the data type **LanguageString** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-   .. tab-set::
+            .. literalinclude:: /xmi/LanguageString.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         Fragment for the data type **LanguageString** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+            Fragment for the data type **LanguageString** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         .. literalinclude:: /xmi/LanguageString.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LanguageString_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-         Fragment for the data type **LanguageString** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            Fragment for the data type **LanguageString** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LanguageString_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LanguageString.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+         .. tab-item:: JSON-LD
+            :class-content: encoding
 
-         Fragment for the data type **LanguageString** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            Fragment for the data type **LanguageString** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LanguageString.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
-
-      .. tab-item:: JSON-LD
-         :class-content: encoding
-
-         Fragment for the data type **LanguageString** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
-
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LanguageString.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/LanguageString.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

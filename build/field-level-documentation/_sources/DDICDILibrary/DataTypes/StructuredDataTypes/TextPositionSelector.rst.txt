@@ -13,106 +13,115 @@ Definition
 Describes a range of text by recording the start and end positions of the selection in the object. Position 0 would be immediately before the first character, position 1 would be immediately before the second character, and so on. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#textpositionselector.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/TextPositionSelector.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :ref:`StructuredDataTypes::Selector<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :ref:`StructuredDataTypes::Selector<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector>`
 
-   | |_| ᐊ── :focus:`StructuredDataTypes::TextPositionSelector`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - end
-        - \- *own datatype* \-
-        - Position of the last character of the selection. Position 8 would be the end of the word "Position" of the previous sentence.
-        - Integer 
-        - 1..1
-        - 
-
-      * - start
-        - \- *own datatype* \-
-        - Position of the first character of the selection. Position 0 would be the start of the word "Position" of the previous sentence.
-        - Integer 
-        - 1..1
-        - 
+      | |_| ᐊ── :focus:`StructuredDataTypes::TextPositionSelector`
 
 
 
-.. dropdown:: Syntax representations / encodings
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: attributes
 
-   .. tab-set::
+   .. dropdown:: Attributes
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-         Fragment for the data type **TextPositionSelector** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - end
+           - \- *own datatype* \-
+           - Position of the last character of the selection. Position 8 would be the end of the word "Position" of the previous sentence.
+           - Integer 
+           - 1..1
+           - 
 
-         .. literalinclude:: /xmi/TextPositionSelector.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         * - start
+           - \- *own datatype* \-
+           - Position of the first character of the selection. Position 0 would be the start of the word "Position" of the previous sentence.
+           - Integer 
+           - 1..1
+           - 
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
 
-         Fragment for the data type **TextPositionSelector** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/TextPositionSelector_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+.. container::
+   :name: encodings
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+   .. dropdown:: Syntax representations / encodings
 
-         Fragment for the data type **TextPositionSelector** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/TextPositionSelector.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+      .. tab-set::
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-         Fragment for the data type **TextPositionSelector** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            Fragment for the data type **TextPositionSelector** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/TextPositionSelector.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+            .. literalinclude:: /xmi/TextPositionSelector.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
+
+         .. tab-item:: XML Schema
+            :class-content: encoding
+
+            Fragment for the data type **TextPositionSelector** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/TextPositionSelector_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
+
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
+
+            Fragment for the data type **TextPositionSelector** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/TextPositionSelector.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
+
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **TextPositionSelector** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/TextPositionSelector.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

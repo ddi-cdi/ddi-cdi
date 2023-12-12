@@ -3,7 +3,6 @@
 
 .. _DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::VariableValueComponent:
 
-
 VariableValueComponent
 **********************
 
@@ -23,219 +22,231 @@ Explanatory notes
 A variable value component captures the values of multiple variables that have been transposed into a single column.  The variable descriptor component provides a mechanism to identify which of those values correspond to which variable.   This structure provides a flexible mechanism avoiding the need for a formal pointer.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/Classes/DataDescription/Components/VariableValueComponent.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
 
-   | |_| ᐊ── :focus:`Components::VariableValueComponent`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - identifier
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-        - Identifier for objects requiring short- or long-lasting referencing and management.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
-        - 0..1
-        - 
-
-      * - semantic
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-        - Qualifies the purpose or use expressed as a paired external controlled vocabulary.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::PairedControlledVocabularyEntry` 
-        - 0..*
-        - 
-
-      * - specialization
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-        - The role played by the component for the data set for purposes of harmonization and integration, typically regarding geography, time, etc.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole` 
-        - 0..1
-        - 
+      | |_| ᐊ── :focus:`Components::VariableValueComponent`
 
 
-.. dropdown:: Associations
 
-   .. list-table::
-      :widths: 5 10 30 5 10 10 5 5 15
-      :header-rows: 1
-      :class: datatable-associations
-   
-      * - Direction
-        - Association
-        - Description
-        - Multiplicity of VariableValueComponent
-        - Package of Other Class
-        - Other Class
-        - Multiplicity of other class
-        - Aggregation Kind
-        - Inherited from
-      * - from
-        - DataStructureComponent isDefinedBy RepresentedVariable
-        - Data structure component is defined by zero to one represented variable.
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable`
-        - 0..1
-        - none
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-      * - to
-        - DataPoint correspondsTo DataStructureComponent
-        - 
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
-        - 0..*
-        - none
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-      * - to
-        - DataStructure has DataStructureComponent
-        - 
-        - 0..*
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure`
-        - 1..1
-        - none
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-      * - to
-        - AttributeComponent qualifies DataStructureComponent
-        - 
-        - 1..*
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent`
-        - 0..*
-        - none
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-      * - to
-        - ComponentPosition indexes DataStructureComponent
-        - 
-        - 0..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ComponentPosition`
-        - 0..*
-        - none
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-      * - to
-        - ForeignKeyComponent correspondsTo DataStructureComponent
-        - 
-        - 1..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent`
-        - 0..1
-        - none
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-      * - to
-        - KeyMember isBasedOn DataStructureComponent
-        - 
-        - 0..*
-        - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern`
-        - :ref:`DDICDIModels::DesignPatterns::DataDescriptionPattern::KeyMember`
-        - 0..*
-        - none
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-      * - to
-        - PrimaryKeyComponent correspondsTo DataStructureComponent
-        - 
-        - 1..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent`
-        - 0..1
-        - none
-        - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
-      * - to
-        - ReferenceValue correspondsTo VariableValueComponent
-        - 
-        - 1..1
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue`
-        - 0..*
-        - none
-        - \- *own class* \-
-      * - to
-        - VariableDescriptorComponent refersTo VariableValueComponent
-        - 
-        - 1..1
-        - \- *own package* \-
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::VariableDescriptorComponent`
-        - 1..1
-        - none
-        - \- *own class* \-
 
-.. dropdown:: Syntax representations / encodings
+.. container::
+   :name: attributes
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+   .. dropdown:: Attributes
+    
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
+    
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - identifier
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+           - Identifier for objects requiring short- or long-lasting referencing and management.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
+           - 0..1
+           - 
 
-   .. tab-set::
+         * - semantic
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+           - Qualifies the purpose or use expressed as a paired external controlled vocabulary.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::PairedControlledVocabularyEntry` 
+           - 0..*
+           - 
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+         * - specialization
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+           - The role played by the component for the data set for purposes of harmonization and integration, typically regarding geography, time, etc.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole` 
+           - 0..1
+           - 
 
-         Fragment for the class **VariableValueComponent** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         .. literalinclude:: /xmi/VariableValueComponent.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+.. container::
+   :name: associations
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+   .. dropdown:: Associations
+    
+      .. list-table::
+         :widths: 5 10 30 5 10 10 5 5 15
+         :header-rows: 1
+         :class: datatable-associations
+       
+         * - Direction
+           - Association
+           - Description
+           - Multiplicity of VariableValueComponent
+           - Package of Other Class
+           - Other Class
+           - Multiplicity of other class
+           - Aggregation Kind
+           - Inherited from
+         * - from
+           - DataStructureComponent isDefinedBy RepresentedVariable
+           - Data structure component is defined by zero to one represented variable.
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable`
+           - 0..1
+           - none
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+         * - to
+           - DataPoint correspondsTo DataStructureComponent
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
+           - 0..*
+           - none
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+         * - to
+           - DataStructure has DataStructureComponent
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure`
+           - 0..1
+           - none
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+         * - to
+           - KeyMember isBasedOn DataStructureComponent
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember`
+           - 0..*
+           - none
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+         * - to
+           - AttributeComponent qualifies DataStructureComponent
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent`
+           - 0..*
+           - none
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+         * - to
+           - ComponentPosition indexes DataStructureComponent
+           - 
+           - 0..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ComponentPosition`
+           - 0..*
+           - none
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+         * - to
+           - ForeignKeyComponent correspondsTo DataStructureComponent
+           - 
+           - 1..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent`
+           - 0..1
+           - none
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+         * - to
+           - PrimaryKeyComponent correspondsTo DataStructureComponent
+           - 
+           - 1..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent`
+           - 0..1
+           - none
+           - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
+         * - to
+           - ReferenceValue correspondsTo VariableValueComponent
+           - 
+           - 1..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - to
+           - VariableDescriptorComponent refersTo VariableValueComponent
+           - 
+           - 1..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::VariableDescriptorComponent`
+           - 1..1
+           - none
+           - \- *own class* \-
 
-         Fragment for the class **VariableValueComponent** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+.. container::
+   :name: encodings
 
-         .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Components/VariableValueComponent_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+   .. dropdown:: Syntax representations / encodings
+    
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
+    
+      .. tab-set::
+    
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
+    
+            Fragment for the class **VariableValueComponent** (`entire model as XMI </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+    
+            .. literalinclude:: /xmi/VariableValueComponent.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-         Fragment for the class **VariableValueComponent** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+            Fragment for the class **VariableValueComponent** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Components/VariableValueComponent_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Components/VariableValueComponent.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the class **VariableValueComponent** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Components/VariableValueComponent.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         Fragment for the class **VariableValueComponent** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+         .. tab-item:: JSON-LD
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Components/VariableValueComponent.jsonld 
-            :language: JSON-LD
-            :linenos:
-            :emphasize-lines: 5
+            Fragment for the class **VariableValueComponent** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_)
+    
+            .. literalinclude:: /DDICDILibrary/Classes/DataDescription/Components/VariableValueComponent.jsonld 
+               :language: JSON-LD
+               :linenos:
+               :emphasize-lines: 5
 

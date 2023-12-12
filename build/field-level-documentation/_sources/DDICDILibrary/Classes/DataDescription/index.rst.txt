@@ -26,4 +26,8 @@ This package contains a number of sub-packages, looking at the variety of logica
    DataStructure.rst
    Datum.rst
    InstanceValue.rst
+   Key.rst
+   KeyDefinition.rst
+   KeyDefinitionMember.rst
+   KeyMember.rst
    Notation.rst

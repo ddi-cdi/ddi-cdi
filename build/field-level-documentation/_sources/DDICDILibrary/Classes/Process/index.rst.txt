@@ -30,6 +30,7 @@ This package contains classes for describing the high-level processes and their 
    RuleBasedScheduling.rst
    RuleSet.rst
    Sequence.rst
+   SequencePosition.rst
    Service.rst
    Step.rst
    TemporalConstraints.rst

@@ -13,121 +13,133 @@ Definition
 Personal names should be listed surname or family name first, followed by forename or given name. When in doubt, give the name as it appears, and do not invert. In the case of organizations where there is clearly a hierarchy present, list the parts of the hierarchy from largest to smallest, separated by full stops and a space. If it is not clear whether there is a hierarchy present, or unclear which is the larger or smaller portion of the body, give the name as it appears in the item. The name may be provided in one or more languages.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/BibliographicName.pu
 
-.. dropdown:: Inheritance
+.. container::
+   :name: inheritance
 
-   .. |_| unicode:: U+2003 .. em space
+   .. dropdown:: Inheritance
 
-   .. role:: focus
+      .. |_| unicode:: U+2003 .. em space
 
-   .. cssclass:: regular
+      .. role:: focus
 
-   | :ref:`StructuredDataTypes::InternationalString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString>`
+      .. cssclass:: regular
 
-   .. cssclass:: regular
+      | :ref:`StructuredDataTypes::InternationalString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString>`
 
-   | |_| ᐊ── :focus:`StructuredDataTypes::BibliographicName`
+      .. cssclass:: regular
 
-
-
-
-.. dropdown:: Attributes
-
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
-
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - affiliation
-        - \- *own datatype* \-
-        - The affiliation of this person to an organization. This is generally an organization or sub-organization name and should be related to the specific role within which the individual is being listed.
-        - String 
-        - 0..1
-        - 
-
-      * - languageSpecificString
-        - :ref:`StructuredDataTypes::InternationalString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString>`
-        - A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ComplexLanguageString` 
-        - 0..*
-        - 
+      | |_| ᐊ── :focus:`StructuredDataTypes::BibliographicName`
 
 
-.. dropdown:: Usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - DataType
-        - StructuredDataTypes
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::AgentInRole`
-        - agentName
+.. container::
+   :name: attributes
 
-.. dropdown:: Syntax representations / encodings
+   .. dropdown:: Attributes
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-   .. tab-set::
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - affiliation
+           - \- *own datatype* \-
+           - The affiliation of this person to an organization. This is generally an organization or sub-organization name and should be related to the specific role within which the individual is being listed.
+           - String 
+           - 0..1
+           - 
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+         * - languageSpecificString
+           - :ref:`StructuredDataTypes::InternationalString<DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString>`
+           - A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString` 
+           - 0..*
+           - 
 
-         Fragment for the data type **BibliographicName** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         .. literalinclude:: /xmi/BibliographicName.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+.. container::
+   :name: usage
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+   .. dropdown:: Usage
 
-         Fragment for the data type **BibliographicName** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/BibliographicName_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::AgentInRole`
+           - agentName
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+.. container::
+   :name: encodings
 
-         Fragment for the data type **BibliographicName** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+   .. dropdown:: Syntax representations / encodings
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/BibliographicName.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+      .. tab-set::
 
-         Fragment for the data type **BibliographicName** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/BibliographicName.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+            Fragment for the data type **BibliographicName** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+
+            .. literalinclude:: /xmi/BibliographicName.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
+
+         .. tab-item:: XML Schema
+            :class-content: encoding
+
+            Fragment for the data type **BibliographicName** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/BibliographicName_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
+
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
+
+            Fragment for the data type **BibliographicName** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/BibliographicName.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
+
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **BibliographicName** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/BibliographicName.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 

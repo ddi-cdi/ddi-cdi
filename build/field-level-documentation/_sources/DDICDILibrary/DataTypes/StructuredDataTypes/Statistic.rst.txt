@@ -13,119 +13,128 @@ Definition
 The value of the statistic expressed as a decimal, float and/or double. Indicates whether it is weighted value and the computation base.
 
 
-.. dropdown:: Diagram
-   :open:
+.. container::
+   :name: diagram
 
-   .. container::
-      :name: diagram
+   .. dropdown:: Diagram
+      :open:
 
       .. uml:: /DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.pu
 
 
-.. dropdown:: Attributes
+.. container::
+   :name: attributes
 
-   .. list-table::
-      :widths: 10 10 60 10 10 10
-      :header-rows: 1
-      :class: datatable-attributes
+   .. dropdown:: Attributes
 
-      * - Name
-        - Inherited from
-        - Description
-        - Data Type
-        - Multiplicity
-        - Default value
-      * - computationBase
-        - \- *own datatype* \-
-        - Defines the cases included in determining the statistic. The options are total = all cases, valid and missing (invalid); validOnly = Only valid values, missing (invalid) are not included in the calculation; missingOnly = Only missing (invalid) cases included in the calculation.
-        - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::ComputationBaseList` 
-        - 0..1
-        - 
+      .. list-table::
+         :widths: 10 10 60 10 10 10
+         :header-rows: 1
+         :class: datatable-attributes
 
-      * - content
-        - \- *own datatype* \-
-        - The value of the statistic expressed as a real number.
-        - Real 
-        - 0..1
-        - 
+         * - Name
+           - Inherited from
+           - Description
+           - Data Type
+           - Multiplicity
+           - Default value
+         * - computationBase
+           - \- *own datatype* \-
+           - Defines the cases included in determining the statistic. The options are total = all cases, valid and missing (invalid); validOnly = Only valid values, missing (invalid) are not included in the calculation; missingOnly = Only missing (invalid) cases included in the calculation.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::Enumerations::ComputationBaseList` 
+           - 0..1
+           - 
 
-      * - isWeighted
-        - \- *own datatype* \-
-        - Set to True if the statistic is weighted.
-        - Boolean 
-        - 0..1
-        - 
+         * - content
+           - \- *own datatype* \-
+           - The value of the statistic expressed as a real number.
+           - Real 
+           - 0..1
+           - 
 
-      * - typeOfNumericValue
-        - \- *own datatype* \-
-        - Indicate the type of numeric value as decimal, float, double.
-        - String 
-        - 0..1
-        - 
+         * - isWeighted
+           - \- *own datatype* \-
+           - Set to True if the statistic is weighted.
+           - Boolean 
+           - 0..1
+           - 
+
+         * - typeOfNumericValue
+           - \- *own datatype* \-
+           - Indicate the type of numeric value as decimal, float, double.
+           - String 
+           - 0..1
+           - 
 
 
-.. dropdown:: Usage
+.. container::
+   :name: usage
 
-   .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 1
-      :class: datatable-usage
+   .. dropdown:: Usage
 
-      * - Type
-        - Package
-        - Classifier
-        - Attribute
-      * - Class
-        - Representations
-        - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic`
-        - statistic
+      .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+         :class: datatable-usage
 
-.. dropdown:: Syntax representations / encodings
+         * - Type
+           - Package
+           - Classifier
+           - Attribute
+         * - Class
+           - Representations
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic`
+           - statistic
 
-   All syntax representations except the Canonical XMI are provided as reference points
-   for specific implementations, or for use as defaults if sufficient in the form presented.
+.. container::
+   :name: encodings
 
-   .. tab-set::
+   .. dropdown:: Syntax representations / encodings
 
-      .. tab-item:: Canonical XMI
-         :class-content: encoding
+      All syntax representations except the Canonical XMI are provided as reference points
+      for specific implementations, or for use as defaults if sufficient in the form presented.
 
-         Fragment for the data type **Statistic** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
+      .. tab-set::
 
-         .. literalinclude:: /xmi/Statistic.xmi
-            :lines: 2-
-            :language: xml
-            :linenos:
-            :emphasize-lines: 4
+         .. tab-item:: Canonical XMI
+            :class-content: encoding
 
-      .. tab-item:: XML Schema
-         :class-content: encoding
+            Fragment for the data type **Statistic** (`entire XMI model </encoding/xmi/ddi-cdi_canonical-unique-names.xmi>`_)
 
-         Fragment for the data type **Statistic** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
+            .. literalinclude:: /xmi/Statistic.xmi
+               :lines: 2-
+               :language: xml
+               :linenos:
+               :emphasize-lines: 4
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Statistic_xsd.txt 
-            :language: xml
-            :linenos:
-            :emphasize-lines: 1
-            :dedent: 2
+         .. tab-item:: XML Schema
+            :class-content: encoding
 
-      .. tab-item:: Ontology (Turtle)
-         :class-content: encoding
+            Fragment for the data type **Statistic** (`entire XML Schema </encoding/xml-schema/ddi-cdi.xsd>`_)
 
-         Fragment for the data type **Statistic** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Statistic_xsd.txt 
+               :language: xml
+               :linenos:
+               :emphasize-lines: 1
+               :dedent: 2
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.onto.ttl 
-            :language: turtle
-            :linenos:
-            :emphasize-lines: 3
+         .. tab-item:: Ontology (Turtle)
+            :class-content: encoding
 
-      .. tab-item:: JSON-LD
-         :class-content: encoding
+            Fragment for the data type **Statistic** (`main ontology </encoding/ontology/ddi-cdi.onto.ttl>`_, `entire ontology as zip </encoding/ontology/ddi-cdi.onto.ttl.zip>`_)
 
-         Fragment for the data type **Statistic** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.onto.ttl 
+               :language: turtle
+               :linenos:
+               :emphasize-lines: 3
 
-         .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.jsonld 
-            :language: jsonld
-            :linenos:
-            :emphasize-lines: 5
+         .. tab-item:: JSON-LD
+            :class-content: encoding
+
+            Fragment for the data type **Statistic** (`main JSON-LD </encoding/json-ld/ddi-cdi.jsonld>`_ `entire JSON-LD as zip </encoding/json-ld/ddi-cdi.jsonld.zip>`_)
+
+            .. literalinclude:: /DDICDILibrary/DataTypes/StructuredDataTypes/Statistic.jsonld 
+               :language: jsonld
+               :linenos:
+               :emphasize-lines: 5
 
