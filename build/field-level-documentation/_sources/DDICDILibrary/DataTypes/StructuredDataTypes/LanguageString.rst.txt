@@ -10,7 +10,7 @@ LanguageString
 
 Definition
 ============
-A language/scope-type specific variant of an InternationalString. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc.
+A data type which describes a string specific to a language/scope combination. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc.
 
 
 .. container::
@@ -59,6 +59,13 @@ Definition
            - 0..1
            - false
 
+         * - language
+           - \- *own datatype* \-
+           - Indicates the natural language of content.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::XMLSchemaDataTypes::XsdLanguage` 
+           - 0..1
+           - 
+
          * - scope
            - \- *own datatype* \-
            - Supports specification of scope for the contained content. Use with the language specification to filter application of content.
@@ -82,7 +89,7 @@ Definition
 
          * - translationSourceLanguage
            - \- *own datatype* \-
-           - List the language code of the source. Repeat of multiple language sources are used.
+           - Lists the natural language(s) of the source. Repeat if source is in multiple languages.
            - :ref:`DDICDIModels::DDICDILibrary::DataTypes::XMLSchemaDataTypes::XsdLanguage` 
            - 0..*
            - 

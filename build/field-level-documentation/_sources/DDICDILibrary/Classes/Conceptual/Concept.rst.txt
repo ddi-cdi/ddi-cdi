@@ -20,7 +20,7 @@ Velocity, Distance, Poverty, Income, Household Relationship, Family, Gender, Bus
 
 Explanatory notes 
 =================== 
-Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable. This class realizes the pattern class signified and as such a concept can be denoted by a sign.
+Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable.
 
 
 .. container::
@@ -211,7 +211,7 @@ Many DDI-CDI classes are subtypes of the concept class including category, unive
            - \- *own class* \-
          * - to
            - Concept uses Concept
-           - 
+           - The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
            - 0..*
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`

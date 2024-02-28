@@ -133,7 +133,7 @@ The curator assists in identifying the rules that are currently in play in the r
            - 0..*
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment`
-           - 1..*
+           - 0..*
            - none
            - :ref:`Process::ProcessingAgent<DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent>`
          * - from

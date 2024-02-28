@@ -133,6 +133,10 @@ Definition
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
            - displayLabel
          * - Class
+           - Process
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment`
+           - displayLabel
+         * - Class
            - Representations
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemStructure`
            - displayLabel

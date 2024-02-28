@@ -82,6 +82,15 @@ Definition
            - 1..1
            - none
            - \- *own class* \-
+         * - from
+           - SequencePosition indexes Activity
+           - 
+           - 0..*
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
+           - 1..1
+           - none
+           - \- *own class* \-
 
 .. container::
    :name: encodings

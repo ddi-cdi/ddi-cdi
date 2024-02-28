@@ -55,6 +55,10 @@ Definition from XML Schema Part 2: Datatypes Second Edition:
          * - DataType
            - StructuredDataTypes
            - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString`
+           - language
+         * - DataType
+           - StructuredDataTypes
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString`
            - translationSourceLanguage
 
 .. container::

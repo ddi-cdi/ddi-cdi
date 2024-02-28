@@ -286,6 +286,15 @@ Explanatory notes
            - Multiplicity of other class
            - Aggregation Kind
            - Inherited from
+         * - to
+           - InstanceVariable has PhysicalSegmentLayout
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
+           - 0..*
+           - shared
+           - :ref:`FormatDescription::PhysicalSegmentLayout<DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout>`
          * - from
            - PhysicalSegmentLayout isDefinedBy Concept
            - The conceptual basis for the collection of members.

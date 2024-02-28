@@ -2586,6 +2586,12 @@ Many of these classes are reused in other packages for specific purposes.</body>
                <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept_uses_Concept"
                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Concept_uses_Concept"
                                 xmi:type="uml:Association">
+                  <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept_uses_Concept-ownedComment"
+                                xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Concept_uses_Concept-ownedComment"
+                                xmi:type="uml:Comment">
+                     <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept_uses_Concept"/>
+                     <body>The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.</body>
+                  </ownedComment>
                   <name>Concept_uses_Concept</name>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept-ownedAttribute"/>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept_uses_Concept-ownedEnd"/>
@@ -2964,7 +2970,7 @@ Many of these classes are reused in other packages for specific purposes.</body>
                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ConceptualVariable_measures_UnitType-ownedComment"
                                 xmi:type="uml:Comment">
                      <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptualVariable_measures_UnitType"/>
-                     <body>Identifies the unit type associated with the conceptual variable.</body>
+                     <body>The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.</body>
                   </ownedComment>
                   <name>ConceptualVariable_measures_UnitType</name>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptualVariable-ownedAttribute_3"/>
@@ -3227,6 +3233,49 @@ Many of these classes are reused in other packages for specific purposes.</body>
                      <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-EnumerationDomain"/>
                   </ownedEnd>
                </packagedElement>
+               <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_PhysicalSegmentLayout"
+                                xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable_has_PhysicalSegmentLayout"
+                                xmi:type="uml:Association">
+                  <name>InstanceVariable_has_PhysicalSegmentLayout</name>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_1"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_PhysicalSegmentLayout-ownedEnd"/>
+                  <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_PhysicalSegmentLayout-ownedEnd"
+                            xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable_has_PhysicalSegmentLayout-ownedEnd"
+                            xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_PhysicalSegmentLayout-ownedEnd-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable_has_PhysicalSegmentLayout-ownedEnd-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_PhysicalSegmentLayout-ownedEnd-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable_has_PhysicalSegmentLayout-ownedEnd-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <aggregation>shared</aggregation>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_PhysicalSegmentLayout"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable"/>
+                  </ownedEnd>
+               </packagedElement>
+               <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_ValueMapping"
+                                xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable_has_ValueMapping"
+                                xmi:type="uml:Association">
+                  <name>InstanceVariable_has_ValueMapping</name>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_ValueMapping-ownedEnd"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_2"/>
+                  <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_ValueMapping-ownedEnd"
+                            xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable_has_ValueMapping-ownedEnd"
+                            xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_ValueMapping-ownedEnd-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable_has_ValueMapping-ownedEnd-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_ValueMapping-ownedEnd-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable_has_ValueMapping-ownedEnd-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_ValueMapping"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable"/>
+                  </ownedEnd>
+               </packagedElement>
                <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariableMap_hasSource_InstanceVariable"
                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariableMap_hasSource_InstanceVariable"
                                 xmi:type="uml:Association">
@@ -3474,7 +3523,7 @@ Many of these classes are reused in other packages for specific purposes.</body>
                                 xmi:type="uml:Association">
                   <name>PhysicalDataSet_has_InstanceVariable</name>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-PhysicalDataSet_has_InstanceVariable-ownedEnd"/>
-                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_3"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_4"/>
                   <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-PhysicalDataSet_has_InstanceVariable-ownedEnd"
                             xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_has_InstanceVariable-ownedEnd"
                             xmi:type="uml:Property">
@@ -3500,7 +3549,7 @@ Many of these classes are reused in other packages for specific purposes.</body>
                      <body>The conceptual basis for the collection of members.</body>
                   </ownedComment>
                   <name>PhysicalDataSet_isDefinedBy_Concept</name>
-                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_1"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_2"/>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-PhysicalDataSet_isDefinedBy_Concept-ownedEnd"/>
                   <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-PhysicalDataSet_isDefinedBy_Concept-ownedEnd"
                             xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_isDefinedBy_Concept-ownedEnd"
@@ -4445,7 +4494,7 @@ Velocity, Distance, Poverty, Income, Household Relationship, Family, Gender, Bus
 
 Explanatory notes 
 =================== 
-Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable. This class realizes the pattern class signified and as such a concept can be denoted by a sign.</body>
+Many DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable.</body>
                   </ownedComment>
                   <name>Concept</name>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept-catalogDetails"
@@ -5603,6 +5652,35 @@ The instance variable class inherits all of the properties and relationships of 
                                   xmi:type="uml:Generalization">
                      <general xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-RepresentedVariable"/>
                   </generalization>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_1"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_1"
+                                  xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_1-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_1-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_1-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_1-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_PhysicalSegmentLayout"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalSegmentLayout"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_2"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_2"
+                                  xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_2-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_2-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-ownedAttribute_2-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-ownedAttribute_2-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>1</value>
+                     </upperValue>
+                     <aggregation>shared</aggregation>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_has_ValueMapping"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMapping"/>
+                  </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable-physicalDataType"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable-physicalDataType"
                                   xmi:type="uml:Property">
@@ -7360,6 +7438,48 @@ Relation structure for use with any set of variables in the variable cascade (co
                      </upperValue>
                      <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-LogicalRecord_organizes_DataSet"/>
                      <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord"/>
+                  </ownedEnd>
+               </packagedElement>
+               <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSet_correspondsTo_DataSet"
+                                xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_correspondsTo_DataSet"
+                                xmi:type="uml:Association">
+                  <name>PhysicalDataSet_correspondsTo_DataSet</name>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_1"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSet_correspondsTo_DataSet-ownedEnd"/>
+                  <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSet_correspondsTo_DataSet-ownedEnd"
+                            xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_correspondsTo_DataSet-ownedEnd"
+                            xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSet_correspondsTo_DataSet-ownedEnd-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_correspondsTo_DataSet-ownedEnd-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSet_correspondsTo_DataSet-ownedEnd-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_correspondsTo_DataSet-ownedEnd-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSet_correspondsTo_DataSet"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet"/>
+                  </ownedEnd>
+               </packagedElement>
+               <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSetStructure_correspondsTo_DataStructure"
+                                xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure_correspondsTo_DataStructure"
+                                xmi:type="uml:Association">
+                  <name>PhysicalDataSetStructure_correspondsTo_DataStructure</name>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_1"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSetStructure_correspondsTo_DataStructure-ownedEnd"/>
+                  <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSetStructure_correspondsTo_DataStructure-ownedEnd"
+                            xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure_correspondsTo_DataStructure-ownedEnd"
+                            xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSetStructure_correspondsTo_DataStructure-ownedEnd-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure_correspondsTo_DataStructure-ownedEnd-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSetStructure_correspondsTo_DataStructure-ownedEnd-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure_correspondsTo_DataStructure-ownedEnd-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSetStructure_correspondsTo_DataStructure"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure"/>
                   </ownedEnd>
                </packagedElement>
                <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalRecordSegment_has_DataPoint"
@@ -11222,7 +11342,7 @@ The "1A2B3C" string in a wide dataset where rows are identified by postal code r
                      <body>Data store physically represented by the structure description.</body>
                   </ownedComment>
                   <name>PhysicalDataSet_formats_DataStore</name>
-                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_2"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_3"/>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_formats_DataStore-ownedEnd"/>
                   <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_formats_DataStore-ownedEnd"
                             xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_formats_DataStore-ownedEnd"
@@ -11244,7 +11364,7 @@ The "1A2B3C" string in a wide dataset where rows are identified by postal code r
                                 xmi:type="uml:Association">
                   <name>PhysicalDataSet_has_PhysicalRecordSegment</name>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_has_PhysicalRecordSegment-ownedEnd"/>
-                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_4"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_5"/>
                   <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_has_PhysicalRecordSegment-ownedEnd"
                             xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_has_PhysicalRecordSegment-ownedEnd"
                             xmi:type="uml:Property">
@@ -11265,7 +11385,7 @@ The "1A2B3C" string in a wide dataset where rows are identified by postal code r
                                 xmi:type="uml:Association">
                   <name>PhysicalDataSet_has_PhysicalRecordSegmentPosition</name>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_has_PhysicalRecordSegmentPosition-ownedEnd"/>
-                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_5"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_6"/>
                   <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_has_PhysicalRecordSegmentPosition-ownedEnd"
                             xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet_has_PhysicalRecordSegmentPosition-ownedEnd"
                             xmi:type="uml:Property">
@@ -11288,7 +11408,7 @@ The "1A2B3C" string in a wide dataset where rows are identified by postal code r
                                 xmi:type="uml:Association">
                   <name>PhysicalDataSetStructure_has_PhysicalRecordSegmentRelationship</name>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_has_PhysicalRecordSegmentRelationship-ownedEnd"/>
-                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_2"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_3"/>
                   <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_has_PhysicalRecordSegmentRelationship-ownedEnd"
                             xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure_has_PhysicalRecordSegmentRelationship-ownedEnd"
                             xmi:type="uml:Property">
@@ -11310,7 +11430,7 @@ The "1A2B3C" string in a wide dataset where rows are identified by postal code r
                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure_structures_PhysicalDataSet"
                                 xmi:type="uml:Association">
                   <name>PhysicalDataSetStructure_structures_PhysicalDataSet</name>
-                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_1"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_2"/>
                   <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_structures_PhysicalDataSet-ownedEnd"/>
                   <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_structures_PhysicalDataSet-ownedEnd"
                             xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure_structures_PhysicalDataSet-ownedEnd"
@@ -12355,27 +12475,6 @@ The instance variable map identifies the variables which are used to connect two
 Collection of instance variables.</body>
                   </ownedComment>
                   <name>LogicalRecord</name>
-                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier"
-                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier"
-                                  xmi:type="uml:Property">
-                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-ownedComment"
-                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-ownedComment"
-                                   xmi:type="uml:Comment">
-                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier"/>
-                        <body>Identifier for objects requiring short- or long-lasting referencing and management.</body>
-                     </ownedComment>
-                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-lowerValue"
-                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-lowerValue"
-                                 xmi:type="uml:LiteralInteger"/>
-                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-upperValue"
-                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-upperValue"
-                                 xmi:type="uml:LiteralUnlimitedNatural">
-                        <value>1</value>
-                     </upperValue>
-                     <name>identifier</name>
-                     <isID>true</isID>
-                     <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Identifier"/>
-                  </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_1"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_1"
                                   xmi:type="uml:Property">
@@ -12922,10 +13021,10 @@ This is information that is tied to the identity of the object. If this informat
                      <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_1-upperValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_1-upperValue"
                                  xmi:type="uml:LiteralUnlimitedNatural">
-                        <value>*</value>
+                        <value>1</value>
                      </upperValue>
-                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-PhysicalDataSet_isDefinedBy_Concept"/>
-                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept"/>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSet_correspondsTo_DataSet"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-DataSet"/>
                   </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_2"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_2"
@@ -12938,8 +13037,8 @@ This is information that is tied to the identity of the object. If this informat
                                  xmi:type="uml:LiteralUnlimitedNatural">
                         <value>*</value>
                      </upperValue>
-                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_formats_DataStore"/>
-                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataStore"/>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-PhysicalDataSet_isDefinedBy_Concept"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept"/>
                   </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_3"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_3"
@@ -12952,9 +13051,8 @@ This is information that is tied to the identity of the object. If this informat
                                  xmi:type="uml:LiteralUnlimitedNatural">
                         <value>*</value>
                      </upperValue>
-                     <aggregation>shared</aggregation>
-                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-PhysicalDataSet_has_InstanceVariable"/>
-                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable"/>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_formats_DataStore"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataStore"/>
                   </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_4"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_4"
@@ -12968,8 +13066,8 @@ This is information that is tied to the identity of the object. If this informat
                         <value>*</value>
                      </upperValue>
                      <aggregation>shared</aggregation>
-                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_has_PhysicalRecordSegment"/>
-                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment"/>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-PhysicalDataSet_has_InstanceVariable"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable"/>
                   </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_5"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_5"
@@ -12979,6 +13077,21 @@ This is information that is tied to the identity of the object. If this informat
                                  xmi:type="uml:LiteralInteger"/>
                      <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_5-upperValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_5-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <aggregation>shared</aggregation>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_has_PhysicalRecordSegment"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_6"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_6"
+                                  xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_6-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_6-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-ownedAttribute_6-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-ownedAttribute_6-upperValue"
                                  xmi:type="uml:LiteralUnlimitedNatural">
                         <value>*</value>
                      </upperValue>
@@ -13096,8 +13209,8 @@ The same logical record layout may be the source member in several adjacency lis
                                  xmi:type="uml:LiteralUnlimitedNatural">
                         <value>1</value>
                      </upperValue>
-                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_structures_PhysicalDataSet"/>
-                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet"/>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-PhysicalDataSetStructure_correspondsTo_DataStructure"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-DataStructure"/>
                   </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_2"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure-ownedAttribute_2"
@@ -13107,6 +13220,20 @@ The same logical record layout may be the source member in several adjacency lis
                                  xmi:type="uml:LiteralInteger"/>
                      <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_2-upperValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure-ownedAttribute_2-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>1</value>
+                     </upperValue>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_structures_PhysicalDataSet"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_3"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure-ownedAttribute_3"
+                                  xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_3-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure-ownedAttribute_3-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure-ownedAttribute_3-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSetStructure-ownedAttribute_3-upperValue"
                                  xmi:type="uml:LiteralUnlimitedNatural">
                         <value>*</value>
                      </upperValue>
@@ -16097,6 +16224,27 @@ Relationships among data points in a physical layout.</body>
                      <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Sequence"/>
                   </ownedEnd>
                </packagedElement>
+               <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_indexes_Activity"
+                                xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SequencePosition_indexes_Activity"
+                                xmi:type="uml:Association">
+                  <name>SequencePosition_indexes_Activity</name>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition-ownedAttribute"/>
+                  <memberEnd xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_indexes_Activity-ownedEnd"/>
+                  <ownedEnd xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_indexes_Activity-ownedEnd"
+                            xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SequencePosition_indexes_Activity-ownedEnd"
+                            xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_indexes_Activity-ownedEnd-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SequencePosition_indexes_Activity-ownedEnd-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_indexes_Activity-ownedEnd-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SequencePosition_indexes_Activity-ownedEnd-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_indexes_Activity"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition"/>
+                  </ownedEnd>
+               </packagedElement>
                <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-Step_hasSubStep_Step"
                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Step_hasSubStep_Step"
                                 xmi:type="uml:Association">
@@ -16935,9 +17083,7 @@ A processing agent initiates a data capture sequence, obtaining readings from a 
                                   xmi:type="uml:Property">
                      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProcessingAgent-ownedAttribute_2-lowerValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProcessingAgent-ownedAttribute_2-lowerValue"
-                                 xmi:type="uml:LiteralInteger">
-                        <value>1</value>
-                     </lowerValue>
+                                 xmi:type="uml:LiteralInteger"/>
                      <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProcessingAgent-ownedAttribute_2-upperValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProcessingAgent-ownedAttribute_2-upperValue"
                                  xmi:type="uml:LiteralUnlimitedNatural">
@@ -16963,6 +17109,36 @@ Examples
 Data processing platforms and data analysis platforms are types of production environments. Each of these platforms may have subtypes.</body>
                   </ownedComment>
                   <name>ProductionEnvironment</name>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-description"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-description"
+                                  xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-description-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-description-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-description-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-description-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>1</value>
+                     </upperValue>
+                     <name>description</name>
+                     <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"
+                           xmi:type="uml:PrimitiveType"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-displayLabel"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-displayLabel"
+                                  xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-displayLabel-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-displayLabel-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-displayLabel-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-displayLabel-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <name>displayLabel</name>
+                     <isOrdered>true</isOrdered>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LabelForDisplay"/>
+                  </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-identifier"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-identifier"
                                   xmi:type="uml:Property">
@@ -16983,6 +17159,21 @@ Data processing platforms and data analysis platforms are types of production en
                      <name>identifier</name>
                      <isID>true</isID>
                      <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Identifier"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-name"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-name"
+                                  xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-name-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-name-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-name-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-name-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <name>name</name>
+                     <isOrdered>true</isOrdered>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ObjectName"/>
                   </ownedAttribute>
                </packagedElement>
                <packagedElement xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-Rule"
@@ -17245,6 +17436,22 @@ Assigns a sequence number to an activity within a sequence.</body>
                      <name>identifier</name>
                      <isID>true</isID>
                      <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Identifier"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition-ownedAttribute"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SequencePosition-ownedAttribute"
+                                  xmi:type="uml:Property">
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition-ownedAttribute-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SequencePosition-ownedAttribute-lowerValue"
+                                 xmi:type="uml:LiteralInteger">
+                        <value>1</value>
+                     </lowerValue>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition-ownedAttribute-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SequencePosition-ownedAttribute-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>1</value>
+                     </upperValue>
+                     <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_indexes_Activity"/>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Activity"/>
                   </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition-value"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SequencePosition-value"
@@ -26814,7 +27021,7 @@ A structured display label. Label provides display content of a fully human read
                      <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString"/>
                      <body>Definition
 ============
-A language/scope-type specific variant of an InternationalString. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc.</body>
+A data type which describes a string specific to a language/scope combination. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc.</body>
                   </ownedComment>
                   <name>LanguageString</name>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-content"
@@ -26892,6 +27099,26 @@ A language/scope-type specific variant of an InternationalString. It contains th
                      <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-language"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LanguageString-language"
+                                  xmi:type="uml:Property">
+                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-language-ownedComment"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LanguageString-language-ownedComment"
+                                   xmi:type="uml:Comment">
+                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-language"/>
+                        <body>Indicates the natural language of content.</body>
+                     </ownedComment>
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-language-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LanguageString-language-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-language-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LanguageString-language-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>1</value>
+                     </upperValue>
+                     <name>language</name>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdLanguage"/>
+                  </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-scope"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LanguageString-scope"
                                   xmi:type="uml:Property">
@@ -26960,7 +27187,7 @@ A language/scope-type specific variant of an InternationalString. It contains th
                                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LanguageString-translationSourceLanguage-ownedComment"
                                    xmi:type="uml:Comment">
                         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-translationSourceLanguage"/>
-                        <body>List the language code of the source. Repeat of multiple language sources are used.</body>
+                        <body>Lists the natural language(s) of the source. Repeat if source is in multiple languages.</body>
                      </ownedComment>
                      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString-translationSourceLanguage-lowerValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LanguageString-translationSourceLanguage-lowerValue"
@@ -29801,424 +30028,424 @@ A signifier has the potential to refer to an object. In this case, the referring
          </packagedElement>
       </packagedElement>
    </uml:Model>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCD3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCD3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE59"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE59">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCD7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCD7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE5D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE5D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCDB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCDB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE61"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE61">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentListing_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCDF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCDF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE65"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE65">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCE3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCE3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE69"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE69">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCE7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCE7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE6D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE6D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCEB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCEB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE71"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE71">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCEF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCEF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE75"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE75">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCF3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCF3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE79"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE79">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_Signified"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCF7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCF7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE7D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE7D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCFB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCFB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE81"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE81">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BCFF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BCFF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE85"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE85">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD03"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD03">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE89"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE89">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategorySet_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD07"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD07">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE8D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE8D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD0B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD0B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE91"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE91">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptMap_refines_Map"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD0F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD0F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE95"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE95">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD13"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD13">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE99"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE99">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD17"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD17">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE9D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE9D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptSystem_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD1B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD1B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEA1"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEA1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptSystemCorrespondence_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD1F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD1F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEA5"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEA5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptualVariable_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD23"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD23">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEA9"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEA9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptualVariable_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD27"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD27">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEAD"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEAD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD2B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD2B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEB1"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEB1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableCollection_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD2F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD2F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEB5"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEB5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariablePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD33"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD33">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEB9"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEB9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD37"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD37">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEBD"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEBD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD3B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD3B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEC1"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEC1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-ConceptualValue_refines_Signified"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD3F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD3F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEC5"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEC5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-DataPoint_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD43"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD43">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEC9"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEC9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-DataStructure_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD47"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD47">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BECD"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BECD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Datum_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD4B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD4B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED1"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-InstanceValue_refines_Signifier"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD4F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD4F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED5"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Notation_refines_Signifier"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD53"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD53">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED9"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-ComponentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD57"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD57">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEDD"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEDD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-DataStructureComponent_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD5B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD5B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE1"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Dimensional-DimensionalKeyDefinitionMember_refines_KeyDefinitionMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD5F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD5F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE5"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Dimensional-DimensionGroup_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD63"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD63">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE9"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataPointRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD67"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD67">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEED"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEED">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataStore_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD6B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD6B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF1"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-InstanceVariableMap_refines_Map"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD6F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD6F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF5"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD73"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD73">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF9"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD77"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD77">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEFD"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEFD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD7B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD7B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF01"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF01">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD7F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD7F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF05"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF05">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD83"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD83">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF09"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF09">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD87"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD87">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF0D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF0D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalLayoutRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD8B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD8B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF11"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF11">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD8F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD8F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF15"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF15">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD93"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD93">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF19"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF19">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD97"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD97">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF1D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF1D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD9B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD9B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF21"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF21">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BD9F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BD9F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF25"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF25">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalSegmentLayout_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDA3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDA3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF29"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF29">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-RecordRelation_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDA7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDA7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF2D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF2D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMapping_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDAB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDAB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF31"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF31">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMapping_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDAF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDAF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF35"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF35">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMappingPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDB3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDB3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF39"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF39">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMappingRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDB7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDB7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF3D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF3D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Activity_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDBB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDBB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF41"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF41">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Sequence_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDBF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDBF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF45"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF45">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDC3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDC3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF49"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF49">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndex_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDC7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDC7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF4D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF4D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntry_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDCB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDCB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF51"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF51">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntry_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDCF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDCF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF55"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF55">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntryPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDD3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDD3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF59"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF59">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDD7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDD7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF5D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF5D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDDB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDDB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF61"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF61">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDDF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDDF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF65"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF65">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDE3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDE3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF69"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF69">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDE7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDE7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF6D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF6D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDEB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDEB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF71"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF71">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDEF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDEF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF75"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF75">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationSeries_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDF3"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDF3">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF79"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF79">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationSeriesStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDF7"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDF7">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF7D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF7D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDFB"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDFB">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF81"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF81">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BDFF"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BDFF">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF85"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF85">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE03"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE03">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF89"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF89">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeList_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE07"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE07">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF8D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF8D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeListStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE0B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE0B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF91"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF91">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE0F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE0F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF95"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF95">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE13"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE13">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF99"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF99">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CorrespondenceTable_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE17"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE17">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF9D"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF9D">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE1B"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE1B">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA1"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE1F"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE1F">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA5"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassificationRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE23"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE23">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFA9"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFA9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_tracesTo_Agent"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE27"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE27">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFAD"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFAD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Activity_tracesTo_Activity"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE2B"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE2B">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFB1"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFB1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_format"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE2F"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE2F">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFB5"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFB5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_type"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE33"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE33">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFB9"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFB9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_contributor"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE37"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE37">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFBD"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFBD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_alternative"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE3B"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE3B">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFC1"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFC1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_abstract"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE3F"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE3F">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFC5"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFC5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_publisher"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE43"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE43">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFC9"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFC9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_relation"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE47"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE47">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFCD"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFCD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_source"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE4B"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE4B">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFD1"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFD1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_creator"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE4F"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE4F">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFD5"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFD5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_title"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE53"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE53">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFD9"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFD9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_accessRights"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE57"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE57">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFDD"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFDD">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_provenance"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE5B"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE5B">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFE1"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFE1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_language"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE5F"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE5F">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFE5"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFE5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_date"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE63"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE63">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFE9"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFE9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_identifier"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE67"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE67">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFED"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFED">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString_tracesTo_langString"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE6B"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE6B">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFF1"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFF1">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdAnyUri_tracesTo_anyURI"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE6F"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE6F">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFF5"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFF5">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdDate_tracesTo_date"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BE73"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BE73">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFF9"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFF9">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdLanguage_tracesTo_language"/>
    </StandardProfile:Trace>
 </xmi:XMI>

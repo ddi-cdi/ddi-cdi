@@ -165,6 +165,15 @@ Explanatory notes
            - Multiplicity of other class
            - Aggregation Kind
            - Inherited from
+         * - to
+           - InstanceVariable has ValueMapping
+           - 
+           - 0..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
+           - 0..*
+           - none
+           - \- *own class* \-
          * - from
            - ValueMapping formats DataPoint
            - 

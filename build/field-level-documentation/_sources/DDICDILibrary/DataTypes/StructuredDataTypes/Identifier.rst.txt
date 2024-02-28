@@ -271,10 +271,6 @@ Definition
            - identifier
          * - Class
            - FormatDescription
-           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord`
-           - identifier
-         * - Class
-           - FormatDescription
            - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordPosition`
            - identifier
          * - Class

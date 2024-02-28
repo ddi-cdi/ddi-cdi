@@ -152,6 +152,15 @@ Examples
            - 0..1
            - composite
            - :ref:`DataDescription::DataStructure<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure>`
+         * - to
+           - PhysicalDataSetStructure correspondsTo DataStructure
+           - 
+           - 0..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSetStructure`
+           - 0..*
+           - none
+           - :ref:`DataDescription::DataStructure<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure>`
          * - from
            - DataStructureComponent isDefinedBy RepresentedVariable
            - Data structure component is defined by zero to one represented variable.

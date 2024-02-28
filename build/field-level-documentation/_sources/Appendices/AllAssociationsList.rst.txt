@@ -401,7 +401,7 @@ All Associations (list)
      - 
      - none
      - 0..*
-     - uses
+     - :abbr:`uses(The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.)`
      - 0..*
      - none
      - x
@@ -569,7 +569,7 @@ All Associations (list)
      - 
      - none
      - 0..*
-     - :abbr:`measures(Identifies the unit type associated with the conceptual variable.)`
+     - :abbr:`measures(The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.)`
      - 0..1
      - none
      - x
@@ -683,6 +683,30 @@ All Associations (list)
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet`
      - Conceptual
+   * - yes
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
+     - 
+     - shared
+     - 0..*
+     - has
+     - 0..*
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout`
+     - FormatDescription
+   * - yes
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
+     - 
+     - none
+     - 0..*
+     - has
+     - 0..1
+     - shared
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::ValueMapping`
+     - FormatDescription
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap`
@@ -1342,6 +1366,30 @@ All Associations (list)
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet`
+     - DataDescription
+   * - yes
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSet`
+     - 
+     - none
+     - 0..*
+     - correspondsTo
+     - 0..1
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet`
+     - DataDescription
+   * - yes
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSetStructure`
+     - 
+     - none
+     - 0..*
+     - correspondsTo
+     - 0..1
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure`
      - DataDescription
    * - yes
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
@@ -2214,7 +2262,7 @@ All Associations (list)
      - none
      - 0..*
      - operatesOn
-     - 1..*
+     - 0..*
      - none
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment`
@@ -2290,6 +2338,18 @@ All Associations (list)
      - composite
      - x
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::SequencePosition`
+     - Process
+   * - no
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::SequencePosition`
+     - 
+     - none
+     - 0..*
+     - indexes
+     - 1..1
+     - none
+     - x
+     - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Activity`
      - Process
    * - no
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`

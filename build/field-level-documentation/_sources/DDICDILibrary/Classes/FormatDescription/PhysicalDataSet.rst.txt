@@ -147,6 +147,15 @@ Explanatory notes
            - none
            - \- *own class* \-
          * - from
+           - PhysicalDataSet correspondsTo DataSet
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet`
+           - 0..1
+           - none
+           - \- *own class* \-
+         * - from
            - PhysicalDataSet formats DataStore
            - Data store physically represented by the structure description.
            - 0..*

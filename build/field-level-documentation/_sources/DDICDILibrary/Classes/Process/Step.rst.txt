@@ -202,6 +202,15 @@ Explanatory notes
            - none
            - :ref:`Process::Activity<DDICDIModels::DDICDILibrary::Classes::Process::Activity>`
          * - to
+           - SequencePosition indexes Activity
+           - 
+           - 1..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::SequencePosition`
+           - 0..*
+           - none
+           - :ref:`Process::Activity<DDICDIModels::DDICDILibrary::Classes::Process::Activity>`
+         * - to
            - Activity has Step
            - Activities may be broken out into Steps. Steps are also a subtype of Activity.
            - 0..*

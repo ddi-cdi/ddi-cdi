@@ -280,6 +280,15 @@ A physical segment layout is a physical description (e.g. unit segment layout) o
            - Multiplicity of other class
            - Aggregation Kind
            - Inherited from
+         * - to
+           - InstanceVariable has PhysicalSegmentLayout
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable`
+           - 0..*
+           - shared
+           - \- *own class* \-
          * - from
            - PhysicalSegmentLayout isDefinedBy Concept
            - The conceptual basis for the collection of members.

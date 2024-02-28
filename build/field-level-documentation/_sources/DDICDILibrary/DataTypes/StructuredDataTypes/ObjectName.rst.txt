@@ -179,6 +179,10 @@ Explanatory notes
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Parameter`
            - name
          * - Class
+           - Process
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment`
+           - name
+         * - Class
            - Representations
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationFamily`
            - name

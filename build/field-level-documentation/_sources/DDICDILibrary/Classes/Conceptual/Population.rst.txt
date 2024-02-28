@@ -179,7 +179,7 @@ Explanatory notes
            - :ref:`Conceptual::Universe<DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe>`
          * - to
            - ConceptualVariable measures UnitType
-           - Identifies the unit type associated with the conceptual variable.
+           - The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
            - 0..1
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable`
@@ -233,7 +233,7 @@ Explanatory notes
            - :ref:`Conceptual::Concept<DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept>`
          * - to
            - Concept uses Concept
-           - 
+           - The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
            - 0..*
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`

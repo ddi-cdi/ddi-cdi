@@ -189,7 +189,7 @@ Single concept that is part of the structure of a key definition.
            - :ref:`Conceptual::Concept<DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept>`
          * - to
            - Concept uses Concept
-           - 
+           - The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
            - 0..*
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`

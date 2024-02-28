@@ -113,6 +113,15 @@ The same logical record layout may be the source member in several adjacency lis
            - Aggregation Kind
            - Inherited from
          * - from
+           - PhysicalDataSetStructure correspondsTo DataStructure
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure`
+           - 0..1
+           - none
+           - \- *own class* \-
+         * - from
            - PhysicalDataSetStructure has PhysicalRecordSegmentRelationship
            - 
            - 1..1

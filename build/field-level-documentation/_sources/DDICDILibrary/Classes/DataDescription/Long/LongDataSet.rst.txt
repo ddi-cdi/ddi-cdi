@@ -132,6 +132,15 @@ Examples
            - 0..*
            - none
            - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
+         * - to
+           - PhysicalDataSet correspondsTo DataSet
+           - 
+           - 0..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSet`
+           - 0..*
+           - none
+           - :ref:`DataDescription::DataSet<DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet>`
 
 .. container::
    :name: encodings

@@ -232,6 +232,15 @@ Definition
            - 0..1
            - composite
            - \- *own class* \-
+         * - to
+           - PhysicalDataSetStructure correspondsTo DataStructure
+           - 
+           - 0..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSetStructure`
+           - 0..*
+           - none
+           - \- *own class* \-
 
 .. container::
    :name: encodings

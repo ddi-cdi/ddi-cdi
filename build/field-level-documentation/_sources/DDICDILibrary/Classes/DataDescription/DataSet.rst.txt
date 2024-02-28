@@ -140,6 +140,15 @@ Organized collection of data based on keys.
            - 0..*
            - none
            - \- *own class* \-
+         * - to
+           - PhysicalDataSet correspondsTo DataSet
+           - 
+           - 0..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSet`
+           - 0..*
+           - none
+           - \- *own class* \-
 
 .. container::
    :name: encodings

@@ -4,7 +4,7 @@
  *
  * Sphinx stylesheet -- classic theme.
  *
- * :copyright: Copyright 2007-2022 by the Sphinx team, see AUTHORS.
+ * :copyright: Copyright 2007-2023 by the Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -28,6 +28,7 @@ body {
 }
 
 div.document {
+    display: flex;
     background-color: #1c4e63;
 }
 
@@ -119,9 +120,36 @@ div.sphinxsidebar input {
 }
 
 
+
+    
+    
+
 /* for collapsible sidebar */
-div#sidebarbutton {
+#sidebarbutton {
+    height: 100%;
     background-color: #3c6e83;
+    margin-left: 0;
+    color: #FFFFFF;
+    border-left: 1px solid #133f52;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding-top: 1px;
+    float: right;
+    display: table; /* for vertically centering the <span> */
+}
+
+#sidebarbutton:hover {
+    background-color: #133f52;
+}
+
+#sidebarbutton span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.sphinxsidebarwrapper {
+    float: left;
+    margin-right: 0;
 }
 
 
@@ -133,7 +161,7 @@ a {
 }
 
 a:visited {
-    color: #355f7c;
+    color: #551a8b;
     text-decoration: none;
 }
 
@@ -154,7 +182,7 @@ a.external:hover {
 
 a.external:visited {
     text-decoration: none;
-    border-bottom: 1px dashed #355f7c;
+    border-bottom: 1px dashed #551a8b;
 }
 
 
@@ -225,6 +253,8 @@ div.seealso {
     border: 1px solid #ff6;
 }
 
+nav.contents,
+aside.topic,
 div.topic {
     background-color: #eee;
 }

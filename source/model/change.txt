@@ -1,3 +1,28 @@
+Changes 2024-02-22
+PhysicalDataSetStructure - DataStructure
+- Added correspondsTo association
+PhysicalDataSet - DataSet
+- Added correspondsTo association
+PhysicalSegmentLayout - InstanceVariable
+- Added has association
+
+LanguageString
+- Updated definition of class
+- Updated definition of language attribute
+- Updated definition of translationSourceLanguage attribute
+Concept
+- Removed incorrect reference to the signification pattern from the definition
+Concept (self-referential) uses association 
+- Added description
+ConceptualVariable measures UnitType association
+- Added description
+LanguageString
+- Added language attribute 
+ProcessingAgent - ProductionEnvironment
+- Changed cardinality of operatesOn from 1..* to 0..*
+ProductionEnvironment
+- Added name, displayLabel and description
+
 Changes 2023-11-12
 PhysicalDataset - InstanceVariable
 - Added "has" association
@@ -12,6 +37,7 @@ Sequence (realized Collections Pattern)
 - Added "refines" dependency from SequencePosition to Position in Collections
 - Added "refines" dependency from Sequence to List in Collections
 - Added "has" association from Sequence to SequencePosition
+- Added "indexes" association from SequencePosition to Activity
 Activity
 - Added "definition" and "displayLabel" attributes
 ConceptualValue
@@ -37,6 +63,13 @@ AttributeComponent qualifies DataStructureComponent
 LanguageString datatype
 - Merged LanguageString and ComplexLanguageString into new LanguageString
 - Updated definition
+InstanceVariable - ValueMapping
+- Added "has" association
+ConceptualValue
+- Removed "identifier" attribute (inherited from Concept)
+Universe
+- Removed "descriptiveText" attribute
+
 
 
 Changes 2023-05-23

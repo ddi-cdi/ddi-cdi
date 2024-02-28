@@ -23,29 +23,6 @@ Definition
       .. uml:: /DDICDILibrary/Classes/FormatDescription/LogicalRecord.pu
 
 
-.. container::
-   :name: attributes
-
-   .. dropdown:: Attributes
-    
-      .. list-table::
-         :widths: 10 10 60 10 10 10
-         :header-rows: 1
-         :class: datatable-attributes
-    
-         * - Name
-           - Inherited from
-           - Description
-           - Data Type
-           - Multiplicity
-           - Default value
-         * - identifier
-           - \- *own class* \-
-           - Identifier for objects requiring short- or long-lasting referencing and management.
-           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
-           - 0..1
-           - 
-
 
 .. container::
    :name: associations

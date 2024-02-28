@@ -231,7 +231,7 @@ The instance variable class inherits all of the properties and relationships of 
            - :ref:`Conceptual::RepresentedVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable>`
          * - from
            - ConceptualVariable measures UnitType
-           - Identifies the unit type associated with the conceptual variable.
+           - The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
            - 0..*
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::UnitType`
@@ -330,7 +330,7 @@ The instance variable class inherits all of the properties and relationships of 
            - :ref:`Conceptual::Concept<DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept>`
          * - to
            - Concept uses Concept
-           - 
+           - The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
            - 0..*
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`
@@ -489,6 +489,24 @@ The instance variable class inherits all of the properties and relationships of 
            - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Datum`
            - 0..*
            - none
+           - \- *own class* \-
+         * - from
+           - InstanceVariable has PhysicalSegmentLayout
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout`
+           - 0..*
+           - none
+           - \- *own class* \-
+         * - from
+           - InstanceVariable has ValueMapping
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::ValueMapping`
+           - 0..1
+           - shared
            - \- *own class* \-
          * - to
            - InstanceVariableMap hasSource InstanceVariable

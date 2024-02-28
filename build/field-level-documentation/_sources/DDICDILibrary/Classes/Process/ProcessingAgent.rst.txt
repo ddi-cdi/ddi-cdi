@@ -241,7 +241,7 @@ A processing agent initiates a data capture sequence, obtaining readings from a 
            - 0..*
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment`
-           - 1..*
+           - 0..*
            - none
            - \- *own class* \-
          * - from

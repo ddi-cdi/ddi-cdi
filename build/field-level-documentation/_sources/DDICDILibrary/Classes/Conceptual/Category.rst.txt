@@ -174,7 +174,7 @@ A category is a concept, typically associated with a code in the representation 
            - :ref:`Conceptual::Concept<DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept>`
          * - to
            - Concept uses Concept
-           - 
+           - The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
            - 0..*
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept`

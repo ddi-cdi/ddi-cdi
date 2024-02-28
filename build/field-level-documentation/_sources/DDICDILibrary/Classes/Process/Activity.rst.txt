@@ -187,6 +187,15 @@ An activity is invoked by control logic. It may use and/or produce information o
            - 0..*
            - none
            - \- *own class* \-
+         * - to
+           - SequencePosition indexes Activity
+           - 
+           - 1..1
+           - \- *own package* \-
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::SequencePosition`
+           - 0..*
+           - none
+           - \- *own class* \-
 
 .. container::
    :name: encodings
