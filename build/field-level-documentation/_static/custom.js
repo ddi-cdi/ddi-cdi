@@ -1,3 +1,4 @@
+var script_folder = document.currentScript.src.split('/').slice(0, -1).join('/'); // must be before $ ...
 $(document).ready(function() {
 	// adjust encoding urls
 	$('div.encoding > p > a.external').each(function(){
@@ -5,7 +6,8 @@ $(document).ready(function() {
 	});
 	function changeUrl (obj) {
 		var oldUrl = $(obj).attr("href");
-        var newUrl = DOCUMENTATION_OPTIONS["URL_ROOT"] + ".." + oldUrl;
+        // var newUrl = DOCUMENTATION_OPTIONS["URL_ROOT"] + ".." + oldUrl; URL_ROOT not available anymore 
+        var newUrl = script_folder + "/../.." + oldUrl;
 		$(obj).attr("href", newUrl);
 	}
 	// end of adjust encoding urls

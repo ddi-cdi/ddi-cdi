@@ -131,7 +131,7 @@ button.toggle-button {
 */
 
 div#diagram {
-    display: flex; /* disable for pydata? */
+    /* display: flex;  disable for classic, pydata? */
 	justify-content: center;
 	max-width: 100%;
 }
