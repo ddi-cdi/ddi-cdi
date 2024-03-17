@@ -134,6 +134,10 @@ Definition
            - displayLabel
          * - Class
            - Process
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic`
+           - displayLabel
+         * - Class
+           - Process
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment`
            - displayLabel
          * - Class

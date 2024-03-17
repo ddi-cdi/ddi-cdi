@@ -120,7 +120,7 @@ All Classes (list)
      - 0
      - 4
      - 1
-     - 3
+     - 5
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components`
      - 1
@@ -527,7 +527,7 @@ All Classes (list)
      - 1
      - 4
      - 2
-     - 3
+     - 5
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::ContextualComponent`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue`
      - 1
@@ -548,7 +548,7 @@ All Classes (list)
      - 8 
      - 5
      - 0
-     - 3
+     - 5
      - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations`
@@ -703,7 +703,7 @@ All Classes (list)
      - 0
      - 4
      - 0
-     - 3
+     - 5
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DimensionComponent`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components`
      - 1
@@ -1032,7 +1032,7 @@ All Classes (list)
      - 0 
      - 10
      - 0
-     - 0
+     - 1
      - 0
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordPosition`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
@@ -1187,7 +1187,7 @@ All Classes (list)
      - 0
      - 4
      - 0
-     - 3
+     - 5
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
      - 0
@@ -1495,7 +1495,7 @@ All Classes (list)
      - 2
      - 4
      - 1
-     - 3
+     - 5
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::RuleSet`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
      - 0
@@ -1561,7 +1561,7 @@ All Classes (list)
      - 1
      - 4
      - 0
-     - 3
+     - 5
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::SequencePosition`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
      - 0
@@ -1704,7 +1704,7 @@ All Classes (list)
      - 0
      - 4
      - 0
-     - 3
+     - 5
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::TemporalControlConstruct`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Process`
      - 3
@@ -1715,7 +1715,7 @@ All Classes (list)
      - 0
      - 4
      - 1
-     - 3
+     - 5
    * - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit`
      - :ref:`DDICDIModels::DDICDILibrary::Classes::Conceptual`
      - 0

@@ -176,6 +176,10 @@ Explanatory notes
            - name
          * - Class
            - Process
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic`
+           - name
+         * - Class
+           - Process
            - :ref:`DDICDIModels::DDICDILibrary::Classes::Process::Parameter`
            - name
          * - Class

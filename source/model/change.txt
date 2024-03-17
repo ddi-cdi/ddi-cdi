@@ -1,3 +1,7 @@
+Changes 2024-03-11
+- Added identifier attibute to LogicalRecord
+- Added name and displayLabel attributes to ControlLogic
+
 Changes 2024-02-22
 PhysicalDataSetStructure - DataStructure
 - Added correspondsTo association

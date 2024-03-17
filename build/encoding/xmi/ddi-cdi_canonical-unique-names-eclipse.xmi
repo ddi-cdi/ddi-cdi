@@ -12475,6 +12475,27 @@ The instance variable map identifies the variables which are used to connect two
 Collection of instance variables.</body>
                   </ownedComment>
                   <name>LogicalRecord</name>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier"
+                                  xmi:type="uml:Property">
+                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-ownedComment"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-ownedComment"
+                                   xmi:type="uml:Comment">
+                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier"/>
+                        <body>Identifier for objects requiring short- or long-lasting referencing and management.</body>
+                     </ownedComment>
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>1</value>
+                     </upperValue>
+                     <name>identifier</name>
+                     <isID>true</isID>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Identifier"/>
+                  </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_1"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_1"
                                   xmi:type="uml:Property">
@@ -16699,7 +16720,7 @@ DDI-CDI has extended control logic to include non-deterministic activity and ste
                                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-description-ownedComment"
                                    xmi:type="uml:Comment">
                         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-description"/>
-                        <body>A desription of the control logic in human-readable language.</body>
+                        <body>A description of the control logic in human-readable language.</body>
                      </ownedComment>
                      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-description-lowerValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-description-lowerValue"
@@ -16712,6 +16733,27 @@ DDI-CDI has extended control logic to include non-deterministic activity and ste
                      <name>description</name>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#String"
                            xmi:type="uml:PrimitiveType"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-displayLabel"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-displayLabel"
+                                  xmi:type="uml:Property">
+                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-displayLabel-ownedComment"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-displayLabel-ownedComment"
+                                   xmi:type="uml:Comment">
+                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-displayLabel"/>
+                        <body>A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.</body>
+                     </ownedComment>
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-displayLabel-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-displayLabel-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-displayLabel-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-displayLabel-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <name>displayLabel</name>
+                     <isOrdered>true</isOrdered>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LabelForDisplay"/>
                   </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-identifier"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-identifier"
@@ -16733,6 +16775,27 @@ DDI-CDI has extended control logic to include non-deterministic activity and ste
                      <name>identifier</name>
                      <isID>true</isID>
                      <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Identifier"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-name"
+                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-name"
+                                  xmi:type="uml:Property">
+                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-name-ownedComment"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-name-ownedComment"
+                                   xmi:type="uml:Comment">
+                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-name"/>
+                        <body>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+                     </ownedComment>
+                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-name-lowerValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-name-lowerValue"
+                                 xmi:type="uml:LiteralInteger"/>
+                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-name-upperValue"
+                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-name-upperValue"
+                                 xmi:type="uml:LiteralUnlimitedNatural">
+                        <value>*</value>
+                     </upperValue>
+                     <name>name</name>
+                     <isOrdered>true</isOrdered>
+                     <type xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ObjectName"/>
                   </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ControlLogic-ownedAttribute_1"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ControlLogic-ownedAttribute_1"
@@ -30028,424 +30091,424 @@ A signifier has the potential to refer to an object. In this case, the referring
          </packagedElement>
       </packagedElement>
    </uml:Model>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE59"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE59">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEC8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEC8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE5D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE5D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BECC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BECC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE61"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE61">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentListing_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE65"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE65">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE69"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE69">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE6D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE6D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEDC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEDC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE71"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE71">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE75"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE75">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE79"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE79">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_Signified"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE7D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE7D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEEC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEEC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE81"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE81">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE85"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE85">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE89"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE89">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategorySet_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE8D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE8D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEFC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEFC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE91"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE91">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF00"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF00">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptMap_refines_Map"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE95"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE95">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF04"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF04">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE99"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE99">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF08"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF08">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BE9D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BE9D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF0C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF0C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptSystem_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEA1"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEA1">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF10"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF10">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptSystemCorrespondence_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEA5"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEA5">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF14"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF14">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptualVariable_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEA9"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEA9">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF18"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF18">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptualVariable_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEAD"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEAD">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF1C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF1C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEB1"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEB1">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF20"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF20">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableCollection_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEB5"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEB5">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF24"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF24">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariablePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEB9"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEB9">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF28"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF28">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEBD"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEBD">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF2C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF2C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEC1"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEC1">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF30"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF30">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-ConceptualValue_refines_Signified"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEC5"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEC5">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF34"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF34">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-DataPoint_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEC9"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEC9">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF38"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF38">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-DataStructure_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BECD"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BECD">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF3C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF3C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Datum_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED1"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED1">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF40"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF40">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-InstanceValue_refines_Signifier"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED5"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED5">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF44"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF44">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Notation_refines_Signifier"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED9"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED9">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF48"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF48">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-ComponentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEDD"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEDD">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF4C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF4C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-DataStructureComponent_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE1"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE1">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF50"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF50">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Dimensional-DimensionalKeyDefinitionMember_refines_KeyDefinitionMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE5"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE5">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF54"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF54">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Dimensional-DimensionGroup_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE9"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE9">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF58"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF58">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataPointRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEED"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEED">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF5C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF5C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataStore_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF1"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF1">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF60"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF60">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-InstanceVariableMap_refines_Map"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF5"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF5">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF64"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF64">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF9"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF9">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF68"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF68">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEFD"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEFD">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF6C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF6C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF01"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF01">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF70"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF70">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF05"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF05">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF74"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF74">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF09"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF09">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF78"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF78">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF0D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF0D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF7C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF7C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalLayoutRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF11"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF11">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF80"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF80">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF15"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF15">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF84"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF84">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF19"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF19">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF88"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF88">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF1D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF1D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF8C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF8C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF21"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF21">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF90"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF90">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF25"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF25">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF94"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF94">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalSegmentLayout_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF29"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF29">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF98"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF98">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-RecordRelation_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF2D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF2D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF9C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF9C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMapping_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF31"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF31">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMapping_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF35"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF35">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMappingPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF39"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF39">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMappingRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF3D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF3D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFAC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFAC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Activity_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF41"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF41">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFB0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFB0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Sequence_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF45"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF45">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFB4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFB4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF49"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF49">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFB8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFB8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndex_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF4D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF4D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFBC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFBC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntry_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF51"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF51">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFC0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFC0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntry_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF55"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF55">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFC4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFC4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntryPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF59"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF59">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFC8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFC8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF5D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF5D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFCC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFCC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF61"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF61">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFD0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFD0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF65"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF65">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFD4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFD4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF69"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF69">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFD8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFD8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF6D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF6D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFDC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFDC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF71"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF71">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFE0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFE0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF75"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF75">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFE4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFE4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationSeries_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF79"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF79">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFE8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFE8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationSeriesStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF7D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF7D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFEC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFEC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF81"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF81">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFF0"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFF0">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF85"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF85">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFF4"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFF4">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF89"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF89">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFF8"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFF8">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeList_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF8D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF8D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFFC"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFFC">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeListStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF91"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF91">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C000"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C000">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF95"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF95">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C004"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C004">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF99"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF99">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C008"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C008">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CorrespondenceTable_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF9D"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF9D">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C00C"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C00C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA1"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA1">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C010"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C010">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA5"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA5">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C014"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C014">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassificationRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFA9"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFA9">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C018"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C018">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_tracesTo_Agent"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFAD"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFAD">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C01C"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C01C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Activity_tracesTo_Activity"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFB1"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFB1">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C020"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C020">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_format"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFB5"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFB5">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C024"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C024">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_type"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFB9"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFB9">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C028"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C028">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_contributor"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFBD"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFBD">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C02C"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C02C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_alternative"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFC1"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFC1">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C030"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C030">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_abstract"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFC5"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFC5">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C034"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C034">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_publisher"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFC9"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFC9">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C038"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C038">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_relation"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFCD"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFCD">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C03C"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C03C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_source"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFD1"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFD1">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C040"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C040">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_creator"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFD5"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFD5">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C044"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C044">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_title"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFD9"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFD9">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C048"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C048">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_accessRights"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFDD"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFDD">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C04C"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C04C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_provenance"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFE1"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFE1">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C050"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C050">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_language"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFE5"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFE5">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C054"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C054">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_date"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFE9"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFE9">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C058"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C058">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_identifier"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFED"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFED">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C05C"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C05C">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString_tracesTo_langString"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFF1"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFF1">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C060"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C060">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdAnyUri_tracesTo_anyURI"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFF5"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFF5">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C064"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C064">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdDate_tracesTo_date"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1BFF9"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1BFF9">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C068"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C068">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdLanguage_tracesTo_language"/>
    </StandardProfile:Trace>
 </xmi:XMI>

@@ -96,9 +96,16 @@ DDI-CDI has extended control logic to include non-deterministic activity and ste
            - Default value
          * - description
            - \- *own class* \-
-           - A desription of the control logic in human-readable language.
+           - A description of the control logic in human-readable language.
            - String 
            - 0..1
+           - 
+
+         * - displayLabel
+           - \- *own class* \-
+           - A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LabelForDisplay` 
+           - 0..*
            - 
 
          * - identifier
@@ -106,6 +113,13 @@ DDI-CDI has extended control logic to include non-deterministic activity and ste
            - Identifier for objects requiring short- or long-lasting referencing and management.
            - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier` 
            - 0..1
+           - 
+
+         * - name
+           - \- *own class* \-
+           - Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectName` 
+           - 0..*
            - 
 
          * - workflow
