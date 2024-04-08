@@ -6,14 +6,14 @@ DDI-CDI Specification
 **For the impatient:**
 
 -  The complete download package can be found under
-   '`Downloads <https://bitbucket.org/ddi-alliance/ddi-cdi/downloads/>`_'
+   '`Downloads <https://bitbucket.org/ddi-cdi-resources/ddi-cdi/downloads/>`_'
    in the left navigation bar of Bitbucket. Specific releases are available
-   below '`Tags <https://bitbucket.org/ddi-alliance/ddi-cdi/downloads/?tab=tags>`_'.
+   below '`Tags <https://bitbucket.org/ddi-cdi-resources/ddi-cdi/downloads/?tab=tags>`_'.
    
 -  The model in syntax representations/encodings, the high-level and
    field-level documentation are available in the folder build.
    A browsable version of the
-   '`field-level documentation <https://ddi-alliance.bitbucket.io/DDI-CDI/DDI-CDI_v1.0-rc1/field-level-documentation/>`_'
+   '`field-level documentation <https://ddi-cdi-resources.bitbucket.io/2024-03-12/field-level-documentation/>`_'
    is available.
    
 -  The core model field-level documentation is available in the section
@@ -223,7 +223,7 @@ Members of the Cross Domain Integration (CDI) Working Group shepherded the stand
 -  Oliver Hopt
 -  Wendy Lee Thomas (Technical Committee contact)
 
-Over 100 people have contributed to the development of the Data Documentation Initiative Cross Domain Integration (DDI-CDI) specification. A more complete description of their contribution to the work can be found at https://bitbucket.org/ddi-alliance/ddi-cdi/src/master/CREDITS.md.
+Over 100 people have contributed to the development of the Data Documentation Initiative Cross Domain Integration (DDI-CDI) specification. A more complete description of their contribution to the work can be found at https://bitbucket.org/ddi-cdi-resources/ddi-cdi/src/master/CREDITS.md.
 
 -----
 
