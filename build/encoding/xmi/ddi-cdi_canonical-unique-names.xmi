@@ -50,7 +50,7 @@ The core model field-level documentation is available in the section
 :ref:`DDICDIModels::DDICDILibrary`.
 
 The corresponding Git repository can be found at
-https://bitbucket.org/ddi-alliance/ddi-cdi/.
+https://github.com/ddi-cdi/ddi-cdi.
 
 Further information on DDI-CDI is available at the
 related DDI Alliance web page https://ddialliance.org/Specification/DDI-CDI/.
@@ -230,7 +230,7 @@ Members of the Cross Domain Integration (CDI) Working Group shepherded the stand
 -  Oliver Hopt
 -  Wendy Lee Thomas (Technical Committee contact)
 
-Over 100 people have contributed to the development of the Data Documentation Initiative Cross Domain Integration (DDI-CDI) specification. A more complete description of their contribution to the work can be found at https://bitbucket.org/ddi-alliance/ddi-cdi/src/master/CREDITS.md.</body>
+Over 100 people have contributed to the development of the Data Documentation Initiative Cross Domain Integration (DDI-CDI) specification. A more complete description of their contribution to the work can be found at https://github.com/ddi-cdi/ddi-cdi/blob/main/CREDITS.md.</body>
       </ownedComment>
       <name>DDICDIModels</name>
       <packagedElement xmi:id="DDICDIModels-Context"

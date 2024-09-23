@@ -1,3 +1,6 @@
+Changes 2024-09-23
+- description of root item DDICDIModels updated (github repository instead of Bitbucket)
+
 Changes 2024-03-11
 - Added identifier attibute to LogicalRecord
 - Added name and displayLabel attributes to ControlLogic
