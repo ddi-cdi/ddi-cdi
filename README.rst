@@ -13,7 +13,7 @@ DDI-CDI Specification
 -  The model in syntax representations/encodings, the high-level and
    field-level documentation are available in the folder build.
    A browsable version of the
-   '`field-level documentation <https://ddi-cdi-resources.bitbucket.io/2024-03-12/field-level-documentation/>`_'
+   '`field-level documentation <https://ddi-cdi.github.io/ddi-cdi_v1.0-rc3/field-level-documentation/>`_'
    is available.
    
 -  The core model field-level documentation is available in the section
