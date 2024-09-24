@@ -5,10 +5,10 @@ DDI-CDI Specification
 
 **For the impatient:**
 
--  The complete download package can be found under
-   '`Downloads <https://bitbucket.org/ddi-cdi-resources/ddi-cdi/downloads/>`_'
-   in the left navigation bar of Bitbucket. Specific releases are available
-   below '`Tags <https://bitbucket.org/ddi-cdi-resources/ddi-cdi/downloads/?tab=tags>`_'.
+-  The complete download package can be found at
+   https://github.com/ddi-cdi/ddi-cdi/archive/refs/tags/v1.0-rc3.zip.
+   Specific tagged download packages are available
+   below '`Releases / tags <https://github.com/ddi-cdi/ddi-cdi/tags>`_'.
    
 -  The model in syntax representations/encodings, the high-level and
    field-level documentation are available in the folder build.
