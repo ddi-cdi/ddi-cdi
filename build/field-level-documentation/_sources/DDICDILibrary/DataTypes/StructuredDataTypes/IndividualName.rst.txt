@@ -78,14 +78,14 @@ Definition
            - The legal or formal name of the individual should have the isFormal attribute set to True. To avoid confusion only one individual name should have the isFormal attribute set to True. Use the TypeOfIndividualName to further differentiate the type and applied usage when multiple names are provided.
            - Boolean 
            - 0..1
-           - 
+           - true
 
          * - isPreferred
            - \- *own datatype* \-
            - If more than one name for the object is provided, use the isPreferred attribute to indicate which is the preferred name content. All other names should be set to isPreferred=False.
            - Boolean 
            - 0..1
-           - 
+           - false
 
          * - lastFamily
            - \- *own datatype* \-
@@ -181,6 +181,7 @@ Definition
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -200,4 +201,6 @@ Definition
                :language: jsonld
                :linenos:
                :emphasize-lines: 5
+
+
 

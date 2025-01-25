@@ -171,6 +171,7 @@ Intent of a conceptual domain is defining a set of concepts used to measure a br
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -190,4 +191,5 @@ Intent of a conceptual domain is defining a set of concepts used to measure a br
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

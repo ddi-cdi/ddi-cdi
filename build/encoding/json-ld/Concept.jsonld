@@ -3,7 +3,7 @@
     {
       "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "Concept": "cdi:Concept",
+
       "catalogDetails": {
         "@id": "cdi:Concept-catalogDetails",
         "@type": "@id",
@@ -35,88 +35,109 @@
         "@context": "ObjectName.jsonld"
       },
       
-      "uses": {
+      "uses_Concept": {
         "@id": "cdi:Concept_uses_Concept",
-        "@type": "@id"      },
-      "isDefinedBy_OF_AgentListing": {
+        "@type": "@id",
+        "@context": "Concept.jsonld"
+      },
+      "isDefinedBy_Concept_OF_AgentListing": {
         "@reverse": "cdi:AgentListing_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "AgentListing.jsonld"
       },
-      "isDefinedBy_OF_ClassificationFamily": {
+      "isDefinedBy_Concept_OF_ClassificationFamily": {
         "@reverse": "cdi:ClassificationFamily_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ClassificationFamily.jsonld"
       },
-      "isDefinedBy_OF_ClassificationIndex": {
+      "isDefinedBy_Concept_OF_ClassificationIndex": {
         "@reverse": "cdi:ClassificationIndex_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ClassificationIndex.jsonld"
       },
-      "isDefinedBy_OF_ClassificationSeries": {
+      "isDefinedBy_Concept_OF_ClassificationSeries": {
         "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ClassificationSeries.jsonld"
       },
-      "uses_OF_Concept": {
+      "uses_Concept_OF_Concept": {
         "@reverse": "cdi:Concept_uses_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "Concept.jsonld"
       },
       "hasSource_OF_ConceptMap": {
         "@reverse": "cdi:ConceptMap_hasSource_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ConceptMap.jsonld"
       },
       "hasTarget_OF_ConceptMap": {
         "@reverse": "cdi:ConceptMap_hasTarget_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ConceptMap.jsonld"
       },
       "hasSource_OF_ConceptRelationship": {
         "@reverse": "cdi:ConceptRelationship_hasSource_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ConceptRelationship.jsonld"
       },
       "hasTarget_OF_ConceptRelationship": {
         "@reverse": "cdi:ConceptRelationship_hasTarget_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ConceptRelationship.jsonld"
       },
-      "has_OF_ConceptSystem": {
+      "has_Concept_OF_ConceptSystem": {
         "@reverse": "cdi:ConceptSystem_has_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ConceptSystem.jsonld"
       },
-      "isDefinedBy_OF_ConceptSystem": {
+      "isDefinedBy_Concept_OF_ConceptSystem": {
         "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "ConceptSystem.jsonld"
       },
-      "isDefinedBy_OF_DataStore": {
+      "isDefinedBy_Concept_OF_DataStore": {
         "@reverse": "cdi:DataStore_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "DataStore.jsonld"
       },
-      "isDefinedBy_OF_EnumerationDomain": {
+      "isDefinedBy_Concept_OF_EnumerationDomain": {
         "@reverse": "cdi:EnumerationDomain_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "EnumerationDomain.jsonld"
       },
-      "isDefinedBy_OF_Level": {
+      "isDefinedBy_Concept_OF_Level": {
         "@reverse": "cdi:Level_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "Level.jsonld"
       },
-      "isDefinedBy_OF_LogicalRecord": {
+      "isDefinedBy_Concept_OF_LogicalRecord": {
         "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "LogicalRecord.jsonld"
       },
-      "isDefinedBy_OF_PhysicalDataSet": {
+      "isDefinedBy_Concept_OF_PhysicalDataSet": {
         "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "PhysicalDataSet.jsonld"
       },
-      "isDefinedBy_OF_PhysicalRecordSegment": {
+      "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
         "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "PhysicalRecordSegment.jsonld"
       },
-      "isDefinedBy_OF_PhysicalSegmentLayout": {
+      "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
         "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "PhysicalSegmentLayout.jsonld"
       },
-      "isDefinedBy_OF_VariableCollection": {
+      "isDefinedBy_Concept_OF_VariableCollection": {
         "@reverse": "cdi:VariableCollection_isDefinedBy_Concept",
-        "@type": "@id"
+        "@type": "@id",
+        "@context": "VariableCollection.jsonld"
       },
-      " comment ": "tag:json-should-support-trailing-commas" 
+      " comment ": "tag:json-should-support-trailing-commas"
     }
   ],
-  "generatedBy": "This code was generated by the Eclipse Acceleo project UCMIS M2T on 2024-09-23 21:52:54.",
+  "generatedBy": "This code was generated by the Eclipse Acceleo project UCMIS M2T on 2025-01-25 15:34:43.",
   "basedOn": "based on the UML data type DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept"
 }

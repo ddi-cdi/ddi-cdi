@@ -168,6 +168,7 @@ The category relation structure employs a set of category relations to describe 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -187,4 +188,5 @@ The category relation structure employs a set of category relations to describe 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

@@ -87,14 +87,14 @@ A classification item defines the content and the borders of the category. A uni
            - Indicates whether or not the item has been generated to make the level to which it belongs complete.
            - Boolean 
            - 0..1
-           - 
+           - false
 
          * - isValid
            - \- *own class* \-
            - Indicates whether or not the item is currently valid. If updates are allowed in the Statistical Classification, an item may be restricted in its validity, i.e. it may become valid or invalid after the Statistical Classification has been released.
            - Boolean 
            - 0..1
-           - 
+           - true
 
          * - name
            - \- *own class* \-
@@ -244,6 +244,7 @@ A classification item defines the content and the borders of the category. A uni
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -263,4 +264,5 @@ A classification item defines the content and the borders of the category. A uni
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

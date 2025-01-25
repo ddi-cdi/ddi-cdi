@@ -121,6 +121,7 @@ If Exists [InformationObject] Then Perform [Activity]
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -140,4 +141,5 @@ If Exists [InformationObject] Then Perform [Activity]
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

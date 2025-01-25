@@ -171,6 +171,7 @@ The datum is reusable, and may appear in more than one data set, carrying with i
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -190,4 +191,5 @@ The datum is reusable, and may appear in more than one data set, carrying with i
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

@@ -209,6 +209,7 @@ This is the actual instance of data that populates a data point (the signifier o
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -228,4 +229,5 @@ This is the actual instance of data that populates a data point (the signifier o
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

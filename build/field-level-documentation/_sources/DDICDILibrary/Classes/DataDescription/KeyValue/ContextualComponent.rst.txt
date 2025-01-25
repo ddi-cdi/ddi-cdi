@@ -216,6 +216,7 @@ When a key-value datastore is organized in contextual components, a contextual c
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -235,4 +236,5 @@ When a key-value datastore is organized in contextual components, a contextual c
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

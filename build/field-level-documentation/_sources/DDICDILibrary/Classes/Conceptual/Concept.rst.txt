@@ -70,15 +70,15 @@ Many DDI-CDI classes are subtypes of the concept class including category, unive
 
       .. cssclass:: regular
 
-      |    |_| |_| ᐊ── :ref:`Long::DescriptorVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::DescriptorVariable>`
-
-      .. cssclass:: regular
-
       |    |_| |_| ᐊ── :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
 
       .. cssclass:: regular
 
-      |    |_| |_| ᐊ── :ref:`Long::ReferenceVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceVariable>`
+      |    |_| |_| |_| ᐊ── :ref:`Long::DescriptorVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::DescriptorVariable>`
+
+      .. cssclass:: regular
+
+      |    |_| |_| |_| ᐊ── :ref:`Long::ReferenceVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceVariable>`
 
       .. cssclass:: regular
 
@@ -377,6 +377,7 @@ Many DDI-CDI classes are subtypes of the concept class including category, unive
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -396,4 +397,5 @@ Many DDI-CDI classes are subtypes of the concept class including category, unive
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

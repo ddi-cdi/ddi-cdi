@@ -141,6 +141,7 @@ The idea is similar to category relationship, except it applies generally and no
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -160,4 +161,5 @@ The idea is similar to category relationship, except it applies generally and no
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

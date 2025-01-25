@@ -286,6 +286,7 @@ A service binds information objects to parameters at runtime.
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -305,4 +306,5 @@ A service binds information objects to parameters at runtime.
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

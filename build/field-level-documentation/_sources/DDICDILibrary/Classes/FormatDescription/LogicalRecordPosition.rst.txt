@@ -124,6 +124,7 @@ Assigns a position of the logical record within the data store.
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -143,4 +144,5 @@ Assigns a position of the logical record within the data store.
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

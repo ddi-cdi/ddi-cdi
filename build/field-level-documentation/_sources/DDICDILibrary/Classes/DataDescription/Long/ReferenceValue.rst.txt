@@ -219,6 +219,7 @@ Codes "income" and "age" are descriptors whereas 100000, 45, 85000, 34 are refer
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -238,4 +239,5 @@ Codes "income" and "age" are descriptors whereas 100000, 45, 85000, 34 are refer
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

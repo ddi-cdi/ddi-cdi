@@ -369,6 +369,7 @@ It concerns not only unit types used in dissemination, but anywhere in the stati
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -388,4 +389,5 @@ It concerns not only unit types used in dissemination, but anywhere in the stati
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

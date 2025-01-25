@@ -5,6 +5,11 @@ div.body {
 	min-height: 73vh;
 }
 
+/* 2025-01 */
+div.sphinxsidebarwrapper {
+	width: 270px;
+}
+
 div.sphinxsidebar {
 	font-size: 70%;
 }
@@ -146,7 +151,8 @@ div#sidebarbutton {
 }
 
 div#sidebarbutton span {
-	font-size: 1.8em;
+	width: 10px; /* 2025-01 */
+	/* font-size: 1.8em; */
 }
 
 div.figure {

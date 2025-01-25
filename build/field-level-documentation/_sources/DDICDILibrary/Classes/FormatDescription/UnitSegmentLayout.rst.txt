@@ -77,7 +77,7 @@ Explanatory notes
            - If value is False, the members are unique within the collection - if True, there may be duplicates. (Note that a mathematical “bag” permits duplicates and is unordered - a “set” does not have duplicates and may be ordered.)
            - Boolean 
            - 1..1
-           - 
+           - true
 
          * - arrayBase
            - :ref:`FormatDescription::PhysicalSegmentLayout<DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout>`
@@ -159,14 +159,14 @@ Explanatory notes
            - Indicates whether the data are in a delimited format. If "true," the format is delimited, and the isFixedWidth property must be set to "false." If not set to "true," the property isFixedWitdh must be set to "true."
            - Boolean 
            - 1..1
-           - 
+           - true
 
          * - isFixedWidth
            - :ref:`FormatDescription::PhysicalSegmentLayout<DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout>`
            - Set to true if the file is fixed-width. If true, isDelimited must be set to false.
            - Boolean 
            - 1..1
-           - 
+           - false
 
          * - lineTerminator
            - :ref:`FormatDescription::PhysicalSegmentLayout<DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout>`
@@ -257,7 +257,7 @@ Explanatory notes
            - If the value is True, consecutive (adjacent) delimiters are treated as a single delimiter; if the value is False consecutive (adjacent) delimiters indicate a missing value.
            - Boolean 
            - 0..1
-           - 
+           - false
 
          * - trim
            - :ref:`FormatDescription::PhysicalSegmentLayout<DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout>`
@@ -382,6 +382,7 @@ Explanatory notes
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -401,4 +402,5 @@ Explanatory notes
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

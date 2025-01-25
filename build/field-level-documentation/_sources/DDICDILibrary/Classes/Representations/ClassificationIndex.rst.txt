@@ -52,7 +52,7 @@ A classification index shows the relationship between text found in statistical 
            - If value is False, the members are unique within the collection - if True, there may be duplicates. (Note that a mathematical “bag” permits duplicates and is unordered - a “set” does not have duplicates and may be ordered.)
            - Boolean 
            - 1..1
-           - 
+           - true
 
          * - availableLanguage
            - \- *own class* \-
@@ -231,6 +231,7 @@ A classification index shows the relationship between text found in statistical 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -250,4 +251,5 @@ A classification index shows the relationship between text found in statistical 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

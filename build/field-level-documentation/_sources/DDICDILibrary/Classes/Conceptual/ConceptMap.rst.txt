@@ -171,6 +171,7 @@ A concept map is the pairing of similar concepts. Each concept in the map belong
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -190,4 +191,5 @@ A concept map is the pairing of similar concepts. Each concept in the map belong
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

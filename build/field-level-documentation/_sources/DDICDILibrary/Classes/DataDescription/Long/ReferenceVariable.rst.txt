@@ -51,7 +51,11 @@ Values 100000, 45, 85000, 34 are reference values in the reference value domain 
 
       .. cssclass:: regular
 
-      | |_| |_| |_| ᐊ── :focus:`Long::ReferenceVariable`
+      | |_| |_| |_| ᐊ── :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+
+      .. cssclass:: regular
+
+      | |_| |_| |_| |_| ᐊ── :focus:`Long::ReferenceVariable`
 
 
 
@@ -72,6 +76,34 @@ Values 100000, 45, 85000, 34 are reference values in the reference value domain 
            - Data Type
            - Multiplicity
            - Default value
+         * - physicalDataType
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+           - The data type of this variable. Supports the optional use of an external controlled vocabulary.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
+
+         * - platformType
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+           - Describes the application or technical system context in which the variable has been realized. Typically a statistical processing package or other processing environment.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..1
+           - 
+
+         * - source
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+           - Reference capturing provenance information.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference` 
+           - 0..1
+           - 
+
+         * - variableFunction
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+           - Immutable characteristic of the variable such as geographic designator, weight, temporal designation, etc.
+           - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry` 
+           - 0..*
+           - 
+
          * - describedUnitOfMeasure
            - :ref:`Conceptual::RepresentedVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable>`
            - The unit in which the data values are measured (kg, pound, euro), expressed as a value from a controlled system of entries (i.e., QDT). Supports the provision of an identifier for the entry in the authoritative source (a URI, etc.), and the specific vocabulary.
@@ -169,6 +201,87 @@ Values 100000, 45, 85000, 34 are reference values in the reference value domain 
            - Multiplicity of other class
            - Aggregation Kind
            - Inherited from
+         * - to
+           - CategoryStatistic appliesTo InstanceVariable
+           - 
+           - 1..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::Representations::CategoryStatistic`
+           - 0..*
+           - none
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+         * - to
+           - DataPoint isDescribedBy InstanceVariable
+           - The instance variable delimits the values which can populate a data point. Data point is described by one instance variable.
+           - 1..1
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint`
+           - 0..*
+           - none
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+         * - to
+           - Datum isBoundedBy InstanceVariable
+           - A datum is bounded by an instance variable. The datum is drawn from a set of values, either substantive or sentinel described by the value domain of the instance variable.
+           - 1..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Datum`
+           - 0..*
+           - none
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+         * - from
+           - InstanceVariable has PhysicalSegmentLayout
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalSegmentLayout`
+           - 0..*
+           - none
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+         * - from
+           - InstanceVariable has ValueMapping
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::ValueMapping`
+           - 0..1
+           - shared
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+         * - to
+           - InstanceVariableMap hasSource InstanceVariable
+           - The source instance variable for the relationship.
+           - 1..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap`
+           - 0..*
+           - none
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+         * - to
+           - InstanceVariableMap hasTarget InstanceVariable
+           - Target instance variables if a directional relation is used.
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap`
+           - 0..*
+           - none
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+         * - to
+           - LogicalRecord has InstanceVariable
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord`
+           - 0..*
+           - none
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
+         * - to
+           - PhysicalDataSet has InstanceVariable
+           - 
+           - 0..*
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription`
+           - :ref:`DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSet`
+           - 0..*
+           - none
+           - :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
          * - to
            - DataStructureComponent isDefinedBy RepresentedVariable
            - Data structure component is defined by zero to one represented variable.
@@ -481,6 +594,7 @@ Values 100000, 45, 85000, 34 are reference values in the reference value domain 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -500,4 +614,5 @@ Values 100000, 45, 85000, 34 are reference values in the reference value domain 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

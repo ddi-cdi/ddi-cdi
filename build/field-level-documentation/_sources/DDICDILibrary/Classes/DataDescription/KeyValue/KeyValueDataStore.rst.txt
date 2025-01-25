@@ -179,6 +179,7 @@ Each instance key encodes all relevant information about the context, the unit o
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -198,4 +199,5 @@ Each instance key encodes all relevant information about the context, the unit o
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

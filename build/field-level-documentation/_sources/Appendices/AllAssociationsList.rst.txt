@@ -1492,7 +1492,7 @@ All Associations (list)
      - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent`
      - 
      - none
-     - 0..1
+     - 0..*
      - references
      - 1..1
      - none

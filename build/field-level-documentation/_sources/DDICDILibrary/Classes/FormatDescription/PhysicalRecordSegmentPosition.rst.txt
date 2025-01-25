@@ -124,6 +124,7 @@ Assigns a position of the physical record segment within the whole physical reco
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -143,4 +144,5 @@ Assigns a position of the physical record segment within the whole physical reco
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

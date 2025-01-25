@@ -108,6 +108,7 @@ Definition
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -127,4 +128,6 @@ Definition
                :language: jsonld
                :linenos:
                :emphasize-lines: 5
+
+
 

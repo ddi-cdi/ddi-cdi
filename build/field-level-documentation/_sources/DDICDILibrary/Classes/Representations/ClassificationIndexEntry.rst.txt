@@ -160,6 +160,7 @@ CIEs typically come from responses to survey questions or are verbatim descripti
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -179,4 +180,5 @@ CIEs typically come from responses to survey questions or are verbatim descripti
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

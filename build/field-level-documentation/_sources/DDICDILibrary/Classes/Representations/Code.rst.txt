@@ -161,6 +161,7 @@ A non-linguistic alphanumeric string is one which does not correspond to a word 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -180,4 +181,5 @@ A non-linguistic alphanumeric string is one which does not correspond to a word 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

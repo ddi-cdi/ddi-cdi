@@ -30,7 +30,7 @@ The core model field-level documentation is available in the section
 :ref:`DDICDIModels::DDICDILibrary`.
 
 The corresponding Git repository can be found at
-https://github.com/ddi-cdi/ddi-cdi.
+https://github.com/ddi-cdi/ddi-cdi. 
 
 Further information on DDI-CDI is available at the
 related DDI Alliance web page https://ddialliance.org/Specification/DDI-CDI/.
@@ -194,6 +194,10 @@ where appropriate. This is shown in the model itself, where
 formalizations from other models and specifications are refined,
 extended, or directly used. The specification includes a description of
 what these other standards and models are, and how they are used in DDI-CDI.
+
+High-Level Documentation
+------------------------
+Further details are described in the `high-level documentation </high-level-documentation/DDI-CDI_Model_Specification.pdf>`_, which is also available on the corresponding DDI Alliance webpage https://ddialliance.org/Specification/DDI-CDI/.
 
 Credits
 -------

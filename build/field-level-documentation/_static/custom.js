@@ -4,6 +4,9 @@ $(document).ready(function() {
 	$('div.encoding > p > a.external').each(function(){
 		changeUrl(this);
 	});
+	$('section#high-level-documentation > p > a.external').each(function(){
+		changeUrl(this);
+	});
 	function changeUrl (obj) {
 		var oldUrl = $(obj).attr("href");
         // var newUrl = DOCUMENTATION_OPTIONS["URL_ROOT"] + ".." + oldUrl; URL_ROOT not available anymore 

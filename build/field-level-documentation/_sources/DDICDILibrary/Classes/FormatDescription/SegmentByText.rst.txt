@@ -182,6 +182,7 @@ An adequate description will always include a startCharacterPosition and then ma
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -201,4 +202,5 @@ An adequate description will always include a startCharacterPosition and then ma
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

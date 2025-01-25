@@ -234,6 +234,7 @@ Codes "income" and "age" are descriptors that appear in the descriptor value dom
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -253,4 +254,5 @@ Codes "income" and "age" are descriptors that appear in the descriptor value dom
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

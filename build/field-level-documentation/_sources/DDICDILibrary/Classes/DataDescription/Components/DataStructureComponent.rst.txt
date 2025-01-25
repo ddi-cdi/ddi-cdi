@@ -260,6 +260,7 @@ A represented variable can have different roles in different data structures. Fo
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -279,4 +280,5 @@ A represented variable can have different roles in different data structures. Fo
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

@@ -269,6 +269,7 @@ Describes people referred to in the description of data and process. Similar to 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -288,4 +289,5 @@ Describes people referred to in the description of data and process. Similar to 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

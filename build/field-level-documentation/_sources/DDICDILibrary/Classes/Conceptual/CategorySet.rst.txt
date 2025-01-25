@@ -71,7 +71,7 @@ Explanatory notes
            - If value is False, the members are unique within the collection - if True, there may be duplicates. (Note that a mathematical “bag” permits duplicates and is unordered - a “set” does not have duplicates and may be ordered.)
            - Boolean 
            - 1..1
-           - 
+           - false
 
          * - catalogDetails
            - :ref:`Conceptual::ConceptSystem<DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem>`
@@ -242,6 +242,7 @@ Explanatory notes
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -261,4 +262,5 @@ Explanatory notes
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

@@ -367,6 +367,7 @@ This is the concept associated to the actual instance of data that is stored in 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -386,4 +387,5 @@ This is the concept associated to the actual instance of data that is stored in 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

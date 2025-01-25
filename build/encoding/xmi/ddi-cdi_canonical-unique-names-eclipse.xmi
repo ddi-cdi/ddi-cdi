@@ -50,7 +50,7 @@ The core model field-level documentation is available in the section
 :ref:`DDICDIModels::DDICDILibrary`.
 
 The corresponding Git repository can be found at
-https://github.com/ddi-cdi/ddi-cdi.
+https://github.com/ddi-cdi/ddi-cdi. 
 
 Further information on DDI-CDI is available at the
 related DDI Alliance web page https://ddialliance.org/Specification/DDI-CDI/.
@@ -214,6 +214,10 @@ where appropriate. This is shown in the model itself, where
 formalizations from other models and specifications are refined,
 extended, or directly used. The specification includes a description of
 what these other standards and models are, and how they are used in DDI-CDI.
+
+High-Level Documentation
+------------------------
+Further details are described in the `high-level documentation &lt;/high-level-documentation/DDI-CDI_Model_Specification.pdf&gt;`_, which is also available on the corresponding DDI Alliance webpage https://ddialliance.org/Specification/DDI-CDI/.
 
 Credits
 -------
@@ -1271,6 +1275,11 @@ Relationships between agents are fluid and reflect effective dates of the relati
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Agents-AgentListing-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#AgentListing-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -5116,6 +5125,11 @@ Note that this class can be used with concepts, classifications, universes, popu
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptSystem-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ConceptSystem-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -6295,6 +6309,11 @@ A simple ordered or unordered list of variables can be described via a set of va
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableCollection-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#VariableCollection-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -8581,7 +8600,7 @@ The number "334" used as a code for the "Computer and electronic product manufac
                         <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-ForeignKeyComponent_references_PrimaryKeyComponent-ownedEnd-upperValue"
                                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ForeignKeyComponent_references_PrimaryKeyComponent-ownedEnd-upperValue"
                                     xmi:type="uml:LiteralUnlimitedNatural">
-                           <value>1</value>
+                           <value>*</value>
                         </upperValue>
                         <association xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-ForeignKeyComponent_references_PrimaryKeyComponent"/>
                         <type xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-ForeignKeyComponent"/>
@@ -8958,6 +8977,11 @@ An example would be age categories. Five-year age categories can be collapsed in
                            <value>1</value>
                         </upperValue>
                         <name>categoricalAdditivity</name>
+                        <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-DimensionComponent-categoricalAdditivity-defaultValue"
+                                      xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DimensionComponent-categoricalAdditivity-defaultValue"
+                                      xmi:type="uml:LiteralBoolean">
+                           <value>False</value>
+                        </defaultValue>
                         <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                               xmi:type="uml:PrimitiveType"/>
                      </ownedAttribute>
@@ -10657,7 +10681,7 @@ Codes "income" and "age" are descriptors that appear in the descriptor value dom
                      <generalization xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-Long-DescriptorVariable-generalization"
                                      xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DescriptorVariable-generalization"
                                      xmi:type="uml:Generalization">
-                        <general xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-RepresentedVariable"/>
+                        <general xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable"/>
                      </generalization>
                      <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-Long-DescriptorVariable-ownedAttribute"
                                      xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DescriptorVariable-ownedAttribute"
@@ -10861,7 +10885,7 @@ Values 100000, 45, 85000, 34 are reference values in the reference value domain 
                      <generalization xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-Long-ReferenceVariable-generalization"
                                      xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ReferenceVariable-generalization"
                                      xmi:type="uml:Generalization">
-                        <general xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-RepresentedVariable"/>
+                        <general xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable"/>
                      </generalization>
                      <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-DataDescription-Long-ReferenceVariable-ownedAttribute"
                                      xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ReferenceVariable-ownedAttribute"
@@ -12121,6 +12145,11 @@ Keep in mind that a logical records are definitions, not a "datasets". Logical r
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataStore-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DataStore-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -12923,6 +12952,11 @@ Multiple styles of structural description are supported: including describing fi
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -13608,29 +13642,6 @@ Explanatory notes
 A logical record may be stored in one or more segments housed hierarchically in a single file or in separate data files. All logical records have at least one segment.</body>
                   </ownedComment>
                   <name>PhysicalRecordSegment</name>
-                  <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment-allowsDuplicates"
-                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalRecordSegment-allowsDuplicates"
-                                  xmi:type="uml:Property">
-                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment-allowsDuplicates-ownedComment"
-                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalRecordSegment-allowsDuplicates-ownedComment"
-                                   xmi:type="uml:Comment">
-                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment-allowsDuplicates"/>
-                        <body>If value is False, the members are unique within the collection - if True, there may be duplicates. (Note that a mathematical “bag” permits duplicates and is unordered - a “set” does not have duplicates and may be ordered.)</body>
-                     </ownedComment>
-                     <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment-allowsDuplicates-lowerValue"
-                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalRecordSegment-allowsDuplicates-lowerValue"
-                                 xmi:type="uml:LiteralInteger">
-                        <value>1</value>
-                     </lowerValue>
-                     <upperValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment-allowsDuplicates-upperValue"
-                                 xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalRecordSegment-allowsDuplicates-upperValue"
-                                 xmi:type="uml:LiteralUnlimitedNatural">
-                        <value>1</value>
-                     </upperValue>
-                     <name>allowsDuplicates</name>
-                     <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
-                           xmi:type="uml:PrimitiveType"/>
-                  </ownedAttribute>
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment-catalogDetails"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalRecordSegment-catalogDetails"
                                   xmi:type="uml:Property">
@@ -14204,6 +14215,11 @@ A physical segment layout is a physical description (e.g. unit segment layout) o
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalSegmentLayout-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalSegmentLayout-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>True</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -14465,6 +14481,11 @@ This is information that is tied to the identity of the object. If this informat
                         <value>1</value>
                      </upperValue>
                      <name>isDelimited</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalSegmentLayout-isDelimited-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalSegmentLayout-isDelimited-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>True</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -14488,6 +14509,11 @@ This is information that is tied to the identity of the object. If this informat
                         <value>1</value>
                      </upperValue>
                      <name>isFixedWidth</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalSegmentLayout-isFixedWidth-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalSegmentLayout-isFixedWidth-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -14851,6 +14877,11 @@ This is information that is tied to the identity of the object. If this informat
                         <value>1</value>
                      </upperValue>
                      <name>treatConsecutiveDelimitersAsOne</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalSegmentLayout-treatConsecutiveDelimitersAsOne-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalSegmentLayout-treatConsecutiveDelimitersAsOne-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -17175,6 +17206,12 @@ Data processing platforms and data analysis platforms are types of production en
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-description"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-description"
                                   xmi:type="uml:Property">
+                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-description-ownedComment"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-description-ownedComment"
+                                   xmi:type="uml:Comment">
+                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-description"/>
+                        <body>A description of the control logic in human-readable language.</body>
+                     </ownedComment>
                      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-description-lowerValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-description-lowerValue"
                                  xmi:type="uml:LiteralInteger"/>
@@ -17190,6 +17227,12 @@ Data processing platforms and data analysis platforms are types of production en
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-displayLabel"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-displayLabel"
                                   xmi:type="uml:Property">
+                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-displayLabel-ownedComment"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-displayLabel-ownedComment"
+                                   xmi:type="uml:Comment">
+                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-displayLabel"/>
+                        <body>A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.</body>
+                     </ownedComment>
                      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-displayLabel-lowerValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-displayLabel-lowerValue"
                                  xmi:type="uml:LiteralInteger"/>
@@ -17226,6 +17269,12 @@ Data processing platforms and data analysis platforms are types of production en
                   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-name"
                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-name"
                                   xmi:type="uml:Property">
+                     <ownedComment xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-name-ownedComment"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-name-ownedComment"
+                                   xmi:type="uml:Comment">
+                        <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-name"/>
+                        <body>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+                     </ownedComment>
                      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Process-ProductionEnvironment-name-lowerValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ProductionEnvironment-name-lowerValue"
                                  xmi:type="uml:LiteralInteger"/>
@@ -19413,6 +19462,11 @@ A classification index shows the relationship between text found in statistical 
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndex-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ClassificationIndex-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>True</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -20002,6 +20056,11 @@ A classification item defines the content and the borders of the category. A uni
                         <value>1</value>
                      </upperValue>
                      <name>isGenerated</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem-isGenerated-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ClassificationItem-isGenerated-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -20023,6 +20082,11 @@ A classification item defines the content and the borders of the category. A uni
                         <value>1</value>
                      </upperValue>
                      <name>isValid</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem-isValid-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ClassificationItem-isValid-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>True</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -20606,6 +20670,11 @@ Typically, these statistical classifications have the same name.</body>
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationSeries-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ClassificationSeries-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -21148,6 +21217,11 @@ List may be flat or hierarchical. A hierarchical structure may have an indexed o
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Representations-CodeList-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#CodeList-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -22229,6 +22303,11 @@ Each classification item represents a category. Every category is a member of a 
                         <value>1</value>
                      </upperValue>
                      <name>allowsDuplicates</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification-allowsDuplicates-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#StatisticalClassification-allowsDuplicates-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -22358,6 +22437,11 @@ This is information that is tied to the identity of the object. If this informat
                         <value>1</value>
                      </upperValue>
                      <name>isCurrent</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification-isCurrent-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#StatisticalClassification-isCurrent-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>True</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -22379,6 +22463,11 @@ This is information that is tied to the identity of the object. If this informat
                         <value>1</value>
                      </upperValue>
                      <name>isFloating</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification-isFloating-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#StatisticalClassification-isFloating-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -24668,6 +24757,11 @@ For example:
                         <value>1</value>
                      </upperValue>
                      <name>isPreferred</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Address-isPreferred-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Address-isPreferred-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -26019,6 +26113,11 @@ Skype account, etc.</body>
                         <value>1</value>
                      </upperValue>
                      <name>isPreferred</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-ElectronicMessageSystem-isPreferred-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ElectronicMessageSystem-isPreferred-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -26138,6 +26237,11 @@ info@ddialliance.org; ex.ample@somewhere.org</body>
                         <value>1</value>
                      </upperValue>
                      <name>isPreferred</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Email-isPreferred-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Email-isPreferred-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -26201,7 +26305,7 @@ Specific information about any relevant embargo.</body>
                                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#EmbargoInformation-description-ownedComment"
                                    xmi:type="uml:Comment">
                         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-EmbargoInformation-description"/>
-                        <body>A text desription of the terms of an embarog on the object.</body>
+                        <body>A text description of the terms of an embargo on the object.</body>
                      </ownedComment>
                      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-EmbargoInformation-description-lowerValue"
                                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#EmbargoInformation-description-lowerValue"
@@ -26647,6 +26751,11 @@ The name of an individual broken out into its component parts of prefix, first/g
                         <value>1</value>
                      </upperValue>
                      <name>isFormal</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-IndividualName-isFormal-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#IndividualName-isFormal-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>True</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -26668,6 +26777,11 @@ The name of an individual broken out into its component parts of prefix, first/g
                         <value>1</value>
                      </upperValue>
                      <name>isPreferred</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-IndividualName-isPreferred-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#IndividualName-isPreferred-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -26852,6 +26966,11 @@ For use in annotation or other citation format.</body>
                         <value>1</value>
                      </upperValue>
                      <name>isURI</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-InternationalIdentifier-isURI-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InternationalIdentifier-isURI-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -27756,6 +27875,11 @@ Names by which the organization is known. Use the attribute isFormal with a valu
                         <value>1</value>
                      </upperValue>
                      <name>isFormal</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-OrganizationName-isFormal-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#OrganizationName-isFormal-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>True</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -28423,6 +28547,11 @@ The value of the statistic expressed as a decimal, float and/or double. Indicate
                         <value>1</value>
                      </upperValue>
                      <name>isWeighted</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Statistic-isWeighted-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Statistic-isWeighted-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -28575,6 +28704,11 @@ Examples
                         <value>1</value>
                      </upperValue>
                      <name>isPreferred</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Telephone-isPreferred-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Telephone-isPreferred-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -28856,6 +28990,11 @@ A web site (normally a URL) with information on type of site, privacy flag, and 
                         <value>1</value>
                      </upperValue>
                      <name>isPreferred</name>
+                     <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-WebLink-isPreferred-defaultValue"
+                                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#WebLink-isPreferred-defaultValue"
+                                   xmi:type="uml:LiteralBoolean">
+                        <value>False</value>
+                     </defaultValue>
                      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Boolean"
                            xmi:type="uml:PrimitiveType"/>
                   </ownedAttribute>
@@ -30091,424 +30230,424 @@ A signifier has the potential to refer to an object. In this case, the referring
          </packagedElement>
       </packagedElement>
    </uml:Model>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEC8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEC8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BECC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BECC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFAA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFAA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentListing_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFAE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFAE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BED8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BED8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFB2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFB2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEDC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEDC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFB6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFB6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-AgentStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFBA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFBA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFBE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFBE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEE8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEE8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFC2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFC2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Category_refines_Signified"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEEC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEEC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFC6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFC6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFCA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFCA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFCE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFCE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategoryRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEF8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEF8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFD2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFD2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-CategorySet_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BEFC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BEFC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFD6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFD6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF00"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF00">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFDA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFDA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptMap_refines_Map"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF04"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF04">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFDE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFDE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF08"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF08">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFE2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFE2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF0C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF0C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFE6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFE6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptSystem_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF10"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF10">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFEA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFEA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptSystemCorrespondence_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF14"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF14">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFEE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFEE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptualVariable_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF18"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF18">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFF2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFF2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-ConceptualVariable_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF1C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF1C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFF6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFF6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF20"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF20">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFFA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFFA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableCollection_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF24"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF24">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFFE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFFE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariablePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF28"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF28">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C002"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C002">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF2C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF2C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C006"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C006">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Conceptual-VariableStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF30"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF30">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C00A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C00A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-ConceptualValue_refines_Signified"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF34"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF34">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C00E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C00E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-DataPoint_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF38"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF38">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C012"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C012">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-DataStructure_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF3C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF3C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C016"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C016">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Datum_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF40"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF40">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C01A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C01A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-InstanceValue_refines_Signifier"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF44"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF44">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C01E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C01E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Notation_refines_Signifier"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF48"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF48">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C022"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C022">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-ComponentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF4C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF4C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C026"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C026">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Components-DataStructureComponent_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF50"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF50">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C02A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C02A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Dimensional-DimensionalKeyDefinitionMember_refines_KeyDefinitionMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF54"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF54">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C02E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C02E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-DataDescription-Dimensional-DimensionGroup_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF58"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF58">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C032"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C032">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataPointRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF5C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF5C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C036"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C036">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-DataStore_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF60"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF60">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C03A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C03A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-InstanceVariableMap_refines_Map"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF64"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF64">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C03E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C03E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord_refines_Collection"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF68"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF68">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C042"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C042">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF6C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF6C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C046"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C046">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF70"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF70">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C04A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C04A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecordRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF74"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF74">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C04E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C04E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSet_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF78"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF78">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C052"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C052">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalDataSetStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF7C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF7C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C056"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C056">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalLayoutRelationStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF80"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF80">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C05A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C05A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF84"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF84">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C05E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C05E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegment_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF88"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF88">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C062"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C062">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF8C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF8C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C066"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C066">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF90"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF90">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C06A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C06A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalRecordSegmentStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF94"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF94">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C06E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C06E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-PhysicalSegmentLayout_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF98"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF98">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C072"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C072">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-RecordRelation_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BF9C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BF9C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C076"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C076">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMapping_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C07A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C07A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMapping_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C07E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C07E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMappingPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFA8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFA8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C082"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C082">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-FormatDescription-ValueMappingRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFAC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFAC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C086"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C086">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Activity_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFB0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFB0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C08A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C08A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Sequence_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFB4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFB4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C08E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C08E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-SequencePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFB8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFB8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C092"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C092">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndex_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFBC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFBC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C096"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C096">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntry_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFC0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFC0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C09A"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C09A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntry_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFC4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFC4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C09E"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C09E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationIndexEntryPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFC8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFC8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0A2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0A2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFCC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFCC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0A6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0A6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFD0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFD0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0AA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0AA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItem_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFD4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFD4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0AE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0AE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFD8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFD8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0B2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0B2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFDC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFDC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0B6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0B6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationItemStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFE0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFE0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0BA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0BA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationPosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFE4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFE4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0BE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0BE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationSeries_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFE8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFE8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0C2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0C2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-ClassificationSeriesStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFEC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFEC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0C6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0C6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_Sign"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFF0"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFF0">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0CA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0CA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_IndividualMember"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFF4"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFF4">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0CE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0CE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-Code_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFF8"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFF8">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0D2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0D2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeList_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1BFFC"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1BFFC">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0D6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0D6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeListStructure_refines_Structure"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C000"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C000">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0DA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0DA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodePosition_refines_Position"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C004"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C004">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0DE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0DE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CodeRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C008"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C008">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0E2"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0E2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-CorrespondenceTable_refines_Comparison"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C00C"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C00C">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0E6"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0E6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification_refines_List"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C010"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C010">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0EA"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0EA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassification_refines_Member"/>
    </StandardProfile:Refine>
-   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C014"
-                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C014">
+   <StandardProfile:Refine xmi:id="_-Abstraction-Refine-N1C0EE"
+                           xmi:uuid="DDICDIModels_-Abstraction-Refine-N1C0EE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Representations-StatisticalClassificationRelationship_refines_MemberRelationship"/>
    </StandardProfile:Refine>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C018"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C018">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C0F2"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C0F2">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Agents-Agent_tracesTo_Agent"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C01C"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C01C">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C0F6"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C0F6">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-Classes-Process-Activity_tracesTo_Activity"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C020"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C020">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C0FA"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C0FA">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_format"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C024"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C024">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C0FE"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C0FE">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_type"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C028"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C028">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C102"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C102">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_contributor"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C02C"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C02C">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C106"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C106">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_alternative"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C030"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C030">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C10A"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C10A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_abstract"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C034"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C034">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C10E"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C10E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_publisher"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C038"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C038">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C112"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C112">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_relation"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C03C"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C03C">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C116"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C116">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_source"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C040"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C040">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C11A"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C11A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_creator"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C044"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C044">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C11E"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C11E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_title"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C048"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C048">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C122"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C122">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_accessRights"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C04C"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C04C">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C126"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C126">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_provenance"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C050"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C050">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C12A"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C12A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_language"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C054"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C054">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C12E"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C12E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_date"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C058"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C058">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C132"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C132">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-CatalogDetails_tracesTo_identifier"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C05C"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C05C">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C136"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C136">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-LanguageString_tracesTo_langString"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C060"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C060">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C13A"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C13A">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdAnyUri_tracesTo_anyURI"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C064"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C064">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C13E"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C13E">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdDate_tracesTo_date"/>
    </StandardProfile:Trace>
-   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C068"
-                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C068">
+   <StandardProfile:Trace xmi:id="_-Abstraction-Trace-N1C142"
+                          xmi:uuid="DDICDIModels_-Abstraction-Trace-N1C142">
       <base_Abstraction xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-XMLSchemaDataTypes-XsdLanguage_tracesTo_language"/>
    </StandardProfile:Trace>
 </xmi:XMI>

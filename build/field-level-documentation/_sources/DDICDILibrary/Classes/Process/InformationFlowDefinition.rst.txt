@@ -134,6 +134,7 @@ In DDI Lifecycle an information flow definition was referred to in terms of a "b
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -153,4 +154,5 @@ In DDI Lifecycle an information flow definition was referred to in terms of a "b
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

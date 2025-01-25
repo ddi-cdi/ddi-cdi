@@ -133,6 +133,7 @@ Specifies the statistical classifications for the source and target of a complex
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -152,4 +153,5 @@ Specifies the statistical classifications for the source and target of a complex
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

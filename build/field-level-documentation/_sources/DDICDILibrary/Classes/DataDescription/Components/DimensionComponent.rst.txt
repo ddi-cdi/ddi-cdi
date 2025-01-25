@@ -69,7 +69,7 @@ The categories from each dimension often are used in combination to identify a c
              An example would be age categories. Five-year age categories can be collapsed into 10-year age categories.
            - Boolean 
            - 0..1
-           - 
+           - false
 
          * - identifier
            - :ref:`Components::DataStructureComponent<DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent>`
@@ -235,6 +235,7 @@ The categories from each dimension often are used in combination to identify a c
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -254,4 +255,5 @@ The categories from each dimension often are used in combination to identify a c
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

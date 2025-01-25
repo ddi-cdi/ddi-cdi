@@ -220,6 +220,7 @@ Sentinel values are defined in ISO 11404 as "element of a value space that is no
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -239,4 +240,5 @@ Sentinel values are defined in ISO 11404 as "element of a value space that is no
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

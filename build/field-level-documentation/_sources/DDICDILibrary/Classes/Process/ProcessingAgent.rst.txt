@@ -286,6 +286,7 @@ A processing agent initiates a data capture sequence, obtaining readings from a 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -305,4 +306,5 @@ A processing agent initiates a data capture sequence, obtaining readings from a 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

@@ -45,14 +45,14 @@ Data processing platforms and data analysis platforms are types of production en
            - Default value
          * - description
            - \- *own class* \-
-           - 
+           - A description of the control logic in human-readable language.
            - String 
            - 0..1
            - 
 
          * - displayLabel
            - \- *own class* \-
-           - 
+           - A human-readable display label for the object. Supports the use of multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.
            - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LabelForDisplay` 
            - 0..*
            - 
@@ -66,7 +66,7 @@ Data processing platforms and data analysis platforms are types of production en
 
          * - name
            - \- *own class* \-
-           - 
+           - Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.
            - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectName` 
            - 0..*
            - 
@@ -133,6 +133,7 @@ Data processing platforms and data analysis platforms are types of production en
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -152,4 +153,5 @@ Data processing platforms and data analysis platforms are types of production en
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

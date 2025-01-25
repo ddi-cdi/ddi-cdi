@@ -58,6 +58,14 @@ The instance variable class inherits all of the properties and relationships of 
 
       | |_| |_| |_| ᐊ── :focus:`Conceptual::InstanceVariable`
 
+      .. cssclass:: regular
+
+      | |_| |_| |_| |_| ᐊ── :ref:`Long::DescriptorVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::DescriptorVariable>`
+
+      .. cssclass:: regular
+
+      | |_| |_| |_| |_| ᐊ── :ref:`Long::ReferenceVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceVariable>`
+
 
 
 
@@ -577,6 +585,7 @@ The instance variable class inherits all of the properties and relationships of 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -596,4 +605,5 @@ The instance variable class inherits all of the properties and relationships of 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

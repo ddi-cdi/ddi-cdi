@@ -54,7 +54,7 @@ Examples
            - Set to True if this is the preferred telephone number for contact.
            - Boolean 
            - 0..1
-           - 
+           - false
 
          * - privacy
            - \- *own datatype* \-
@@ -129,6 +129,7 @@ Examples
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -148,4 +149,6 @@ Examples
                :language: jsonld
                :linenos:
                :emphasize-lines: 5
+
+
 

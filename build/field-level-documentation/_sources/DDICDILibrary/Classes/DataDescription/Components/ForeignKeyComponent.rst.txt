@@ -92,7 +92,7 @@ It can be used in conjunction with a primary key component to link data structur
          * - from
            - ForeignKeyComponent references PrimaryKeyComponent
            - 
-           - 0..1
+           - 0..*
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent`
            - 1..1
@@ -131,6 +131,7 @@ It can be used in conjunction with a primary key component to link data structur
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -150,4 +151,5 @@ It can be used in conjunction with a primary key component to link data structur
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

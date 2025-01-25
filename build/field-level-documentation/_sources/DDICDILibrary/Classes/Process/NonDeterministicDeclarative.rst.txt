@@ -215,6 +215,7 @@ Unlike DDI Lifecycle, DDI-CDI describes non-deterministic activity and step cont
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -234,4 +235,5 @@ Unlike DDI Lifecycle, DDI-CDI describes non-deterministic activity and step cont
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

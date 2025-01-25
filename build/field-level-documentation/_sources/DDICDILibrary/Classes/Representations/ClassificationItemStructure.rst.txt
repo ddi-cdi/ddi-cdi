@@ -174,6 +174,7 @@ The classification item structure has a set of classification item relationships
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -193,4 +194,5 @@ The classification item structure has a set of classification item relationships
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

@@ -114,6 +114,7 @@ Alternatively the term might be a controlled vocabulary from a list of controlle
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -133,4 +134,6 @@ Alternatively the term might be a controlled vocabulary from a list of controlle
                :language: jsonld
                :linenos:
                :emphasize-lines: 5
+
+
 

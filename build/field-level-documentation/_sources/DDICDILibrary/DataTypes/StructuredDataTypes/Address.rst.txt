@@ -78,7 +78,7 @@ Examples
            - Set to True if this is the preferred location for contacting the organization or individual.
            - Boolean 
            - 0..1
-           - 
+           - false
 
          * - line
            - \- *own datatype* \-
@@ -195,6 +195,7 @@ Examples
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -214,4 +215,6 @@ Examples
                :language: jsonld
                :linenos:
                :emphasize-lines: 5
+
+
 

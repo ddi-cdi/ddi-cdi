@@ -230,6 +230,7 @@ Whenever more than one variable appears in the same column, we need a mechanism 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -249,4 +250,5 @@ Whenever more than one variable appears in the same column, we need a mechanism 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

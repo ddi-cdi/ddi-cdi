@@ -141,6 +141,7 @@ Relationships between pairs of categories are linkages between them. The meaning
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -160,4 +161,5 @@ Relationships between pairs of categories are linkages between them. The meaning
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

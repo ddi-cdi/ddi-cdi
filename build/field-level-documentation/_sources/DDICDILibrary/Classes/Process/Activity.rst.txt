@@ -229,6 +229,7 @@ An activity is invoked by control logic. It may use and/or produce information o
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -248,4 +249,5 @@ An activity is invoked by control logic. It may use and/or produce information o
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

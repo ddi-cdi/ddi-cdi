@@ -295,6 +295,7 @@ The curator assists in identifying the rules that are currently in play in the r
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -314,4 +315,5 @@ The curator assists in identifying the rules that are currently in play in the r
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

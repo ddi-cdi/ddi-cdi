@@ -230,6 +230,7 @@ A variable value component captures the values of multiple variables that have b
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -249,4 +250,5 @@ A variable value component captures the values of multiple variables that have b
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

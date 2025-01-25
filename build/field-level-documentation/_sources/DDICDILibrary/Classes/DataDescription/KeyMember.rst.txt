@@ -215,6 +215,7 @@ Single data instance that is part of a key.
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -234,4 +235,5 @@ Single data instance that is part of a key.
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

@@ -151,6 +151,7 @@ The instance variable map identifies the variables which are used to connect two
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -170,4 +171,5 @@ The instance variable map identifies the variables which are used to connect two
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

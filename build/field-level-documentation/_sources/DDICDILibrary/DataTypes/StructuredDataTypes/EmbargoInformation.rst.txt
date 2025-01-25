@@ -40,7 +40,7 @@ Definition
            - Default value
          * - description
            - \- *own datatype* \-
-           - A text desription of the terms of an embarog on the object.
+           - A text description of the terms of an embargo on the object.
            - :ref:`DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString` 
            - 0..1
            - 
@@ -104,6 +104,7 @@ Definition
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -123,4 +124,6 @@ Definition
                :language: jsonld
                :linenos:
                :emphasize-lines: 5
+
+
 

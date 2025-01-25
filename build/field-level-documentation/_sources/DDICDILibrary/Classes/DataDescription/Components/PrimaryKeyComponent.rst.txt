@@ -77,7 +77,7 @@ It can be used in conjunction with a foreign key component to link data structur
            - 1..1
            - \- *own package* \-
            - :ref:`DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent`
-           - 0..1
+           - 0..*
            - none
            - \- *own class* \-
          * - to
@@ -131,6 +131,7 @@ It can be used in conjunction with a foreign key component to link data structur
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -150,4 +151,5 @@ It can be used in conjunction with a foreign key component to link data structur
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

@@ -189,6 +189,7 @@ Correspondence tables are used with statistical classifications. For instance, i
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -208,4 +209,5 @@ Correspondence tables are used with statistical classifications. For instance, i
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

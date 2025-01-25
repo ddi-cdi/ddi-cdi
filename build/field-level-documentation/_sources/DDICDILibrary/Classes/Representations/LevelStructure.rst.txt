@@ -167,6 +167,7 @@ The levels within the structure begin at the root level '1' and continue as an o
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -186,4 +187,5 @@ The levels within the structure begin at the root level '1' and continue as an o
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

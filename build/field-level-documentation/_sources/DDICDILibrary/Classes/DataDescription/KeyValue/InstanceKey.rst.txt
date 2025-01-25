@@ -200,6 +200,7 @@ For other classes, an appropriate merge representation can be defined.
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -219,4 +220,5 @@ For other classes, an appropriate merge representation can be defined.
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

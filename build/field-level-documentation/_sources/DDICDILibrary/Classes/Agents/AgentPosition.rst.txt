@@ -124,6 +124,7 @@ Assigns a sequence number to an agent in an agent listing.
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -143,4 +144,5 @@ Assigns a sequence number to an agent in an agent listing.
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

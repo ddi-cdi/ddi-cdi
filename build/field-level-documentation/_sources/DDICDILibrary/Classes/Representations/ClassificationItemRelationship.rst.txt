@@ -133,6 +133,7 @@ Source-target relationship between classification items in a classification item
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -152,4 +153,5 @@ Source-target relationship between classification items in a classification item
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

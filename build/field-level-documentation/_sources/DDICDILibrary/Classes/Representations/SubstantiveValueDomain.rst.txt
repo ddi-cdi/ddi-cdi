@@ -223,6 +223,7 @@ An example is the categorical values for gender: the conceptual domain could con
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -242,4 +243,5 @@ An example is the categorical values for gender: the conceptual domain could con
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

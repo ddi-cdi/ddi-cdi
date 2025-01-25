@@ -122,6 +122,7 @@ It can be used in conjunction with primary key to link data structures and their
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -141,4 +142,5 @@ It can be used in conjunction with primary key to link data structures and their
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

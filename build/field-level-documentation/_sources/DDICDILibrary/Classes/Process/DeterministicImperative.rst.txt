@@ -207,6 +207,7 @@ Because control logic covers both deterministic and non-deterministic forms, it 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -226,4 +227,5 @@ Because control logic covers both deterministic and non-deterministic forms, it 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

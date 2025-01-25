@@ -364,6 +364,7 @@ Single concept that is part of the structure of a key definition.
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -383,4 +384,5 @@ Single concept that is part of the structure of a key definition.
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

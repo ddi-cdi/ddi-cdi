@@ -53,15 +53,15 @@ Extends from conceptual variable and can contain all descriptive fields without 
 
       .. cssclass:: regular
 
-      | |_| |_| |_| ᐊ── :ref:`Long::DescriptorVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::DescriptorVariable>`
-
-      .. cssclass:: regular
-
       | |_| |_| |_| ᐊ── :ref:`Conceptual::InstanceVariable<DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable>`
 
       .. cssclass:: regular
 
-      | |_| |_| |_| ᐊ── :ref:`Long::ReferenceVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceVariable>`
+      | |_| |_| |_| |_| ᐊ── :ref:`Long::DescriptorVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::DescriptorVariable>`
+
+      .. cssclass:: regular
+
+      | |_| |_| |_| |_| ᐊ── :ref:`Long::ReferenceVariable<DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceVariable>`
 
 
 
@@ -473,6 +473,7 @@ Extends from conceptual variable and can contain all descriptive fields without 
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -492,4 +493,5 @@ Extends from conceptual variable and can contain all descriptive fields without 
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 

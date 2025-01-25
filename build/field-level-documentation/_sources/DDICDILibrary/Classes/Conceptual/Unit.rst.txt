@@ -181,6 +181,7 @@ A big data table is sometimes referred to as a column-oriented data store wherea
                :emphasize-lines: 1
                :dedent: 2
 
+
          .. tab-item:: Ontology (Turtle)
             :class-content: encoding
 
@@ -200,4 +201,5 @@ A big data table is sometimes referred to as a column-oriented data store wherea
                :language: JSON-LD
                :linenos:
                :emphasize-lines: 5
+
 
