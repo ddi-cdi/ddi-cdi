@@ -61,6 +61,13 @@ allows for describing data at the Datum level, and along with that,
 allows for tracking individual data observations across multiple
 representations in varying structures.
 
+## Members of the Cross Domain Integration (CDI) Working Group since 2023
+
+Benjamin Beuster
+Darren Bell
+Deirdre Lungley
+John Kunze
+
 A spreadsheet containing a listing of all participants by event can be
 found at
 https://github.com/ddi-cdi/ddi-cdi/blob/main/DDI-MovingForward_DDI-CDI_Contributors.xlsx.
@@ -209,6 +216,7 @@ in-person development event (sprint).
 -   Consortium for Ocean Leadership
 -   Danish Data Archive
 -   Danish National Archives
+-   Drexel University Metadata Research Center
 -   Ecrucial Consulting Group, SDMX?
 -   Environment Agency Austria
 -   Eurostat
