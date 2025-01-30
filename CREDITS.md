@@ -63,10 +63,12 @@ representations in varying structures.
 
 ## Members of the Cross Domain Integration (CDI) Working Group since 2023
 
-Benjamin Beuster
-Darren Bell
-Deirdre Lungley
-John Kunze
+-   Benjamin Beuster
+-   Darren Bell
+-   Deirdre Lungley
+-   John Kunze
+
+---
 
 A spreadsheet containing a listing of all participants by event can be
 found at

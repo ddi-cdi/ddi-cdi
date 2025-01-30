@@ -6,19 +6,20 @@ DDI-CDI Specification
 **For the impatient:**
 
 -  The complete download package can be found at
-   https://github.com/ddi-cdi/ddi-cdi/archive/refs/tags/v1.0-rc3.zip.
+   https://github.com/ddi-cdi/ddi-cdi/releases/download/v1.0/ddi-cdi.zip.
    Specific tagged download packages are available
-   below '`Releases / tags <https://github.com/ddi-cdi/ddi-cdi/tags>`_'.
-   
--  The model in syntax representations/encodings, the high-level and
-   field-level documentation are available in the folder build.
-   A browsable version of the
-   '`field-level documentation <https://ddi-cdi.github.io/ddi-cdi_v1.0-rc3/field-level-documentation/>`_'
+   below '`Releases / Tags <https://github.com/ddi-cdi/ddi-cdi/tags>`_'.
+
+-  The model as portable Canonical XMI, syntax representations/encodings, the specification overview, and
+   the field-level documentation are available in the folder build.
+
+-  A browsable version of the
+   '`field-level documentation <https://ddi-cdi.github.io/ddi-cdi_v1.0/field-level-documentation/>`_'
    is available.
-   
+
 -  The core model field-level documentation is available in the section
    DDICDIModels::DDICDILibrary.
-   
+
 -  Examples are available in the folder source/example.
 
 -----
@@ -223,15 +224,4 @@ Members of the Cross Domain Integration (CDI) Working Group shepherded the stand
 -  Oliver Hopt
 -  Wendy Lee Thomas (Technical Committee contact)
 
-Over 100 people have contributed to the development of the Data Documentation Initiative Cross Domain Integration (DDI-CDI) specification. A more complete description of their contribution to the work can be found at https://bitbucket.org/ddi-cdi-resources/ddi-cdi/src/master/CREDITS.md.
-
------
-
-.. toctree::
-   :hidden:
-
-   Context/index.rst
-   DDICDILibrary/index.rst
-   DesignPatterns/index.rst
-   Appendices/index.rst
-   about/index.rst
+Over 100 people have contributed to the development of the Data Documentation Initiative Cross Domain Integration (DDI-CDI) specification. A more complete description of their contribution to the work can be found at https://github.com/ddi-cdi/ddi-cdi/blob/main/CREDITS.md.
