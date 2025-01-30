@@ -5,9 +5,10 @@ DDI-CDI Specification
 
 **For the impatient:**
 
--  The complete download package can be found at
-   https://github.com/ddi-cdi/ddi-cdi/releases/download/v1.0/ddi-cdi.zip.
-   Specific tagged download packages are available
+-  Released download packages can be found at
+   '`Releases <https://github.com/ddi-cdi/ddi-cdi/releases>`_'.
+
+-  Specific tagged download packages are available
    below '`Releases / Tags <https://github.com/ddi-cdi/ddi-cdi/tags>`_'.
 
 -  The model as portable Canonical XMI, syntax representations/encodings, the specification overview, and
