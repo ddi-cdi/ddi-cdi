@@ -1,3 +1,11 @@
+Changes 2026-04-15
+version number changed at ModelIdentification::minorVersion to '1beta'.
+ModelIdentification::minorVersion type changed to String
+ModelIdentification::majorVersion type changed to String
+several heading lines according to restructuredText rules changed (number of '=' changed)
+XMLSchemaDataTypes::XsdDateTime added for use with Process::Activity::start/end
+Filename changed: from ddi-cdi_ea15.feap to ddi-cdi.feap (feap shouldn't be version dependent)
+
 Changes 2026-03-12
 DataStore renamed LogicalRecordRepository
 LogicalRecordRepository refines Collection (instead of List)

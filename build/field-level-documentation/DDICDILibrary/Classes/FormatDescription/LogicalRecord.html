@@ -1,107 +1,506 @@
 
-
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../../../">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>LogicalRecord &#8212; UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/classic.css?v=4d097c01" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <title>LogicalRecord &#8212; DDI Cross Domain Integration (DDI-CDI 1.1beta)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e6a9d92b" />
-    
-    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=90ec1f7c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/diagramModal.css?v=f32f5540" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=351a2e83"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
-    <script src="../../../_static/custom.js?v=5de7d6e5"></script>
-    <script src="../../../_static/definition.js?v=897f6d42"></script>
-    
-    <script src="../../../_static/sidebar.js"></script>
-    
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/custom.js?v=630073b2"></script>
+    <script src="../../../_static/_modelInformation.js?v=886d4a72"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'DDICDILibrary/Classes/FormatDescription/LogicalRecord';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="LogicalRecordPosition" href="LogicalRecordPosition.html" />
-    <link rel="prev" title="InstanceVariableMap" href="InstanceVariableMap.html" /> 
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://cdn.datatables.net/ https://code.jquery.com/; style-src 'self' 'unsafe-inline' https://cdn.datatables.net/ https://code.jquery.com/; img-src 'self' https://cdn.datatables.net/;">
-    <!-- loaded before custom.js required. Done now with sphinxcontrib-jquery. See example Agent.html.
-    <script
-              src="https://code.jquery.com/jquery-3.7.1.min.js"
-              integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-              crossorigin="anonymous"></script>
-    -->
-    <script
-              src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
-              integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
-              crossorigin="anonymous"></script>
+    <link rel="next" title="LogicalRecordRelationship" href="LogicalRecordRelationship.html" />
+    <link rel="prev" title="LocatorMapping" href="LocatorMapping.html" /> 
+    <meta http-equiv="Content-Security-Policy"
+    content="script-src 'self' 'unsafe-inline' https://cdn.datatables.net/ https://unpkg.com/ https://cdnjs.cloudflare.com/ https://cdn.jsdelivr.net/;
+              style-src 'self' 'unsafe-inline' https://cdn.datatables.net/ ;
+                img-src 'self' data: ; " />
 	<!--
 		Combined css and js downloads created with https://datatables.net/download/.
-		DataTables, Buttons (HTML5 export, JSZip, Print view), Search panes, Select, Minify, Concatenate
+		Options: Bootstrap 5, DataTables, SearchPanes, Select, Minify, Concatenate
 	-->
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/sp-1.2.2/sl-1.3.3/datatables.min.css"/>
-	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/sp-1.2.2/sl-1.3.3/datatables.min.js"></script>
-	<!-- For jquery tooltip. See: https://jqueryui.com/tooltip/ -->
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-    <!--
-    already loaded by sphinx
-	<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript" language="javascript"></script>
-	-->
+	<link href="https://cdn.datatables.net/v/bs5/dt-2.3.2/sp-2.3.4/sl-3.0.1/datatables.min.css"
+	      rel="stylesheet"
+	      integrity="sha384-h7m53mmJL0KEQkDui56fPxSnPjuEavXjU+34pfXMjrOu4olRAwJRVX0Xn1xNNWUH"
+	      crossorigin="anonymous">
+ 
+    <script src="https://cdn.datatables.net/v/bs5/dt-2.3.2/sp-2.3.4/sl-3.0.1/datatables.min.js"
+            integrity="sha384-A4z2JTmKuCIgpL7FWMQCxpUB/VyzJllBRjl4R6TwgkCrKzGzSTol7IsajUmg8y4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.6.0/dist/panzoom.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.1/canvg.js"
+      integrity="sha512-Qw1+j4vl/AjCqxrx/omDzobdEepDHathD3Z0bwulQSrLlaTtTWhiH3sMSDU4oK2TP2EfyzHgg33gh2zxUAI3EQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
 
-  </head><body>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="LogicalRecordPosition.html" title="LogicalRecordPosition"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="InstanceVariableMap.html" title="InstanceVariableMap"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../../index.html" >DDICDILibrary</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >Classes</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">FormatDescription</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">LogicalRecord</a></li> 
-      </ul>
-    </div>  
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="logicalrecord">
-<span id="ddicdimodels-ddicdilibrary-classes-formatdescription-logicalrecord"></span><h1>LogicalRecord<a class="headerlink" href="#logicalrecord" title="Link to this heading">¶</a></h1>
-<p><strong>Fully qualified class name</strong>: DDICDIModels::DDICDILibrary::Classes::FormatDescription::<span class="target" id="index-0"></span>LogicalRecord</p>
-<section id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Link to this heading">¶</a></h2>
-<p><a class="reference internal" href="../../../DesignPatterns/CollectionsPattern/Collection.html#ddicdimodels-designpatterns-collectionspattern-collection"><span class="std std-ref">Collection</span></a> of instance variables.</p>
-<div class="docutils container" id="diagram">
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Diagram</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="plantuml">
-<object data="../../../_images/plantuml-4c1ba6353520afbe9e10d08a076b99552c20f5a8.svg" type="image/svg+xml" style="width:1632px;height:1005px;background:#FFFFFF;"></object></p>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+   
+
+<a class="navbar-brand logo" href="http://ddialliance.org/Specification/DDI-CDI/1.0/">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/cdi.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../../_static/cdi.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">DDI Cross Domain Integration</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><div class="model-title">
+<h3>DDI-CDI 1.1beta UML Model Documentation</h3>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"></span>
+
+
+</form></div>
+        <div class="sidebar-primary-item">
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../Context/index.html">Context</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">DDICDILibrary</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Agents/index.html">Agents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Conceptual/index.html">Conceptual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DataDescription/index.html">DataDescription</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">FormatDescription</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DataPointPosition.html">DataPointPosition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DataPointRelationship.html">DataPointRelationship</a></li>
+<li class="toctree-l4"><a class="reference internal" href="InstanceVariableMap.html">InstanceVariableMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LocatorMapping.html">LocatorMapping</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">LogicalRecord</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#definition">Definition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#diagram">Diagram</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#associations">Associations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#encodings">Encodings</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="LogicalRecordRelationship.html">LogicalRecordRelationship</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LogicalRecordRepository.html">LogicalRecordRepository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LogicalRecordRepositoryStructure.html">LogicalRecordRepositoryStructure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PhysicalDataSet.html"><em>PhysicalDataSet</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="PhysicalMapping.html">PhysicalMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PhysicalMappingPosition.html">PhysicalMappingPosition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Segment.html">Segment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SegmentPosition.html">SegmentPosition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SegmentStructure.html">SegmentStructure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="StatisticsCollection.html">StatisticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="StructuredDataSet.html">StructuredDataSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TabularTextDataSet.html">TabularTextDataSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TextMapping.html">TextMapping</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Process/index.html">Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Representations/index.html">Representations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../DataTypes/index.html">DataTypes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../DesignPatterns/index.html">DesignPatterns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Appendices/index.html">Appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About</a></li>
+</ul>
 </div>
-</details></div>
-<div class="docutils container" id="attributes">
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+        <div class="sidebar-primary-item">
+<nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+  </ul>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+        <div class="header-article-item">
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">DDICDILibrary</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Classes</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">FormatDescription</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">LogicalRecord</li>
+
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ddi-cdi/ddi-cdi" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ddi-cdi/ddi-cdi/issues/new?title=Issue%20on%20page%20%2FDDICDILibrary/Classes/FormatDescription/LogicalRecord.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>LogicalRecord</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram">Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#associations">Associations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#encodings">Encodings</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="logicalrecord">
+<span id="ddicdimodels-ddicdilibrary-classes-formatdescription-logicalrecord"></span><h1>LogicalRecord<a class="headerlink" href="#logicalrecord" title="Permalink to this heading">#</a></h1>
+<p id="index-0">Fully qualified class name of the UML model DDI-CDI 1.1beta: <strong>DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord</strong></p>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="../../../DesignPatterns/CollectionsPattern/Collection.html#ddicdimodels-designpatterns-collectionspattern-collection"><span class="std std-ref">Collection</span></a> of instance variables.</p>
+</section>
+<section id="diagram">
+<h2>Diagram<a class="headerlink" href="#diagram" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 diagram-dropdown" open="open">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<table class="datatable-attributes docutils align-default">
+Diagram<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div id="svgDiagram">
+  <span id="openModal" class="noprint" title="Enlarge diagram">&#x2922;</span><p class="plantuml">
+<object data="../../../_images/plantuml-741a83c8ef1330a411197344ad789cd9008fb89a.svg" type="image/svg+xml" style="width:1325px;height:794px;background:#FFFFFF;"></object></p>
+</div>
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div id="buttons">
+      <span id="resetDiagram" title="Reset pan/zoom">&circlearrowleft;</span>
+      <div class="dropdown dropdown-download-buttons">
+        <span id="downloadDiagram" title="Download diagram"  data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download diagram">&DownArrowBar;</span>
+        <ul class="dropdown-menu">
+          <li>
+            <span id="downloadDiagramPng" title="Download diagram as PNG">
+              <span class="btn__icon-container">
+                <svg class="svg-inline--fa fa-file" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"></path>
+                </svg>
+              </span>
+              <span class="btn__text-container">Download as PNG</span>
+            </span>
+          </li>
+          <li>
+            <span id="downloadDiagramSvg" title="Download diagram as SVG">
+              <span class="btn__icon-container">
+                <svg class="svg-inline--fa fa-file" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                  <path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"></path>
+                </svg>
+              </span>
+              <span class="btn__text-container">Download as SVG</span>
+            </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <span id="closeModal" title="Close diagram view">&#x2715;</span>
+    </div>
+    <div id="panzoom-wrapper">
+      <div id="panzoom-area">
+      </div>
+    </div>
+  </div>
+</div></div>
+</details></section>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 attributes-dropdown">
+<summary class="sd-summary-title sd-card-header">
+Attributes<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="docutils container" id="attributes-responsive">
+<table class="table table-striped table-hover main-table" id="id1">
+<caption><span class="caption-text">Attributes</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 9.1%" />
 <col style="width: 9.1%" />
@@ -130,12 +529,20 @@
 </tbody>
 </table>
 </div>
-</details></div>
-<div class="docutils container" id="associations">
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</div>
+</details></section>
+<section id="associations">
+<h2>Associations<a class="headerlink" href="#associations" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 associations-dropdown">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Associations</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<table class="datatable-associations docutils align-default">
+Associations<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="docutils container" id="associations-responsive">
+<table class="table table-striped table-hover main-table" id="id2">
+<caption><span class="caption-text">Associations</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 5.3%" />
 <col style="width: 10.5%" />
@@ -168,7 +575,7 @@
 <td><p class="sd-card-text"><a class="reference internal" href="../Conceptual/InstanceVariable.html#ddicdimodels-ddicdilibrary-classes-conceptual-instancevariable"><span class="std std-ref">InstanceVariable</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">shared</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+<td><p class="sd-card-text"><em>own class</em></p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">LogicalRecord isDefinedBy Concept</p></td>
@@ -178,7 +585,7 @@
 <td><p class="sd-card-text"><a class="reference internal" href="../Conceptual/Concept.html#ddicdimodels-ddicdilibrary-classes-conceptual-concept"><span class="std std-ref">Concept</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+<td><p class="sd-card-text"><em>own class</em></p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">from</p></td>
 <td><p class="sd-card-text">LogicalRecord organizes DataSet</p></td>
@@ -188,27 +595,7 @@
 <td><p class="sd-card-text"><a class="reference internal" href="../DataDescription/DataSet.html#ddicdimodels-ddicdilibrary-classes-datadescription-dataset"><span class="std std-ref">DataSet</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">DataStore has LogicalRecord</p></td>
-<td></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="DataStore.html#ddicdimodels-ddicdilibrary-classes-formatdescription-datastore"><span class="std std-ref">DataStore</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">LogicalRecordPosition indexes LogicalRecord</p></td>
-<td><p class="sd-card-text">Logical record position indexes a logical record.</p></td>
-<td><p class="sd-card-text">1..1</p></td>
-<td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="LogicalRecordPosition.html#ddicdimodels-ddicdilibrary-classes-formatdescription-logicalrecordposition"><span class="std std-ref">LogicalRecordPosition</span></a></p></td>
-<td><p class="sd-card-text">0..*</p></td>
-<td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+<td><p class="sd-card-text"><em>own class</em></p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">LogicalRecordRelationship hasSource LogicalRecord</p></td>
@@ -218,7 +605,7 @@
 <td><p class="sd-card-text"><a class="reference internal" href="LogicalRecordRelationship.html#ddicdimodels-ddicdilibrary-classes-formatdescription-logicalrecordrelationship"><span class="std std-ref">LogicalRecordRelationship</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+<td><p class="sd-card-text"><em>own class</em></p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
 <td><p class="sd-card-text">LogicalRecordRelationship hasTarget LogicalRecord</p></td>
@@ -228,62 +615,68 @@
 <td><p class="sd-card-text"><a class="reference internal" href="LogicalRecordRelationship.html#ddicdimodels-ddicdilibrary-classes-formatdescription-logicalrecordrelationship"><span class="std std-ref">LogicalRecordRelationship</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+<td><p class="sd-card-text"><em>own class</em></p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">PhysicalRecordSegment mapsTo LogicalRecord</p></td>
-<td><p class="sd-card-text">Every data record has zero to many physical record segments. It is possible to describe a physical data product and its record segment(s) without reference to a data record.</p></td>
-<td><p class="sd-card-text">0..1</p></td>
+<td><p class="sd-card-text">LogicalRecordRepository has LogicalRecord</p></td>
+<td></td>
+<td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="PhysicalRecordSegment.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalrecordsegment"><span class="std std-ref">PhysicalRecordSegment</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="LogicalRecordRepository.html#ddicdimodels-ddicdilibrary-classes-formatdescription-logicalrecordrepository"><span class="std std-ref">LogicalRecordRepository</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+<td><p class="sd-card-text"><em>own class</em></p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">PhysicalSegmentLayout formats LogicalRecord</p></td>
-<td><p class="sd-card-text">Logical record physically represented by the physical layout.</p></td>
+<td><p class="sd-card-text">PhysicalDataSet uses LogicalRecord</p></td>
+<td></td>
 <td><p class="sd-card-text">0..1</p></td>
 <td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="PhysicalSegmentLayout.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicalsegmentlayout"><span class="std std-ref">PhysicalSegmentLayout</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="PhysicalDataSet.html#ddicdimodels-ddicdilibrary-classes-formatdescription-physicaldataset"><span class="std std-ref">PhysicalDataSet</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+<td><p class="sd-card-text"><em>own class</em></p></td>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">to</p></td>
-<td><p class="sd-card-text">RecordRelation maps LogicalRecord</p></td>
+<td><p class="sd-card-text">Segment mapsTo LogicalRecord</p></td>
 <td></td>
-<td><p class="sd-card-text">2..*</p></td>
+<td><p class="sd-card-text">0..1</p></td>
 <td><p class="sd-card-text">- <em>own package</em> -</p></td>
-<td><p class="sd-card-text"><a class="reference internal" href="RecordRelation.html#ddicdimodels-ddicdilibrary-classes-formatdescription-recordrelation"><span class="std std-ref">RecordRelation</span></a></p></td>
+<td><p class="sd-card-text"><a class="reference internal" href="Segment.html#ddicdimodels-ddicdilibrary-classes-formatdescription-segment"><span class="std std-ref">Segment</span></a></p></td>
 <td><p class="sd-card-text">0..*</p></td>
 <td><p class="sd-card-text">none</p></td>
-<td><p class="sd-card-text">- <em>own class</em> -</p></td>
+<td><p class="sd-card-text"><em>own class</em></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</details></div>
-<div class="docutils container" id="encodings">
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</div>
+</details></section>
+<section id="encodings">
+<h2>Encodings<a class="headerlink" href="#encodings" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 encodings-dropdown">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Syntax representations / encodings</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+Syntax representations / encodings<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">All syntax representations except the Canonical XMI are provided as reference points
 for specific implementations, or for use as defaults if sufficient in the form presented.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
 Canonical XMI</label><div class="sd-tab-content encoding docutils">
 <p class="sd-card-text">Fragment for the class <strong>LogicalRecord</strong> (<a class="reference external" href="/encoding/xmi/ddi-cdi_canonical-unique-names.xmi">entire model as XMI</a>)</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;packagedElement</span><span class="w"> </span><span class="na">xmlns:StandardProfile=</span><span class="s">&quot;http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard&quot;</span>
-<span class="linenos"> 2</span><span class="w">                 </span><span class="na">xmlns:uml=</span><span class="s">&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;</span>
-<span class="linenos"> 3</span><span class="w">                 </span><span class="na">xmlns:xmi=</span><span class="s">&quot;http://www.omg.org/spec/XMI/20131001&quot;</span>
-<span class="hll"><span class="linenos"> 4</span><span class="w">                 </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord&quot;</span>
-</span><span class="linenos"> 5</span><span class="w">                 </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord&quot;</span>
-<span class="linenos"> 6</span><span class="w">                 </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Class&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">&lt;packagedElement</span><span class="w"> </span><span class="na">xmlns:StandardProfile=</span><span class="s">&quot;http://www.omg.org/spec/UML/20131001/StandardProfile&quot;</span>
+<span class="linenos"> 2</span><span class="w">                  </span><span class="na">xmlns:uml=</span><span class="s">&quot;http://www.omg.org/spec/UML/20131001&quot;</span>
+<span class="linenos"> 3</span><span class="w">                  </span><span class="na">xmlns:xmi=</span><span class="s">&quot;http://www.omg.org/spec/XMI/20131001&quot;</span>
+<span class="hll"><span class="linenos"> 4</span><span class="w">                  </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord&quot;</span>
+</span><span class="linenos"> 5</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord&quot;</span>
+<span class="linenos"> 6</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Class&quot;</span><span class="nt">&gt;</span>
 <span class="linenos"> 7</span><span class="w">   </span><span class="nt">&lt;ownedComment</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedComment&quot;</span>
-<span class="linenos"> 8</span><span class="w">                 </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedComment&quot;</span>
-<span class="linenos"> 9</span><span class="w">                 </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
+<span class="linenos"> 8</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedComment&quot;</span>
+<span class="linenos"> 9</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">10</span><span class="w">      </span><span class="nt">&lt;annotatedElement</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord&quot;</span><span class="nt">/&gt;</span>
 <span class="linenos">11</span><span class="w">      </span><span class="nt">&lt;body&gt;</span>Definition<span class="w"> </span>
 <span class="linenos">12</span>============<span class="w"> </span>
@@ -291,75 +684,77 @@ Canonical XMI</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">14</span><span class="w">   </span><span class="nt">&lt;/ownedComment&gt;</span>
 <span class="linenos">15</span><span class="w">   </span><span class="nt">&lt;name&gt;</span>LogicalRecord<span class="nt">&lt;/name&gt;</span>
 <span class="linenos">16</span><span class="w">   </span><span class="nt">&lt;ownedAttribute</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier&quot;</span>
-<span class="linenos">17</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier&quot;</span>
-<span class="linenos">18</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">17</span><span class="w">                    </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier&quot;</span>
+<span class="linenos">18</span><span class="w">                    </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">19</span><span class="w">      </span><span class="nt">&lt;ownedComment</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-ownedComment&quot;</span>
-<span class="linenos">20</span><span class="w">                    </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-ownedComment&quot;</span>
-<span class="linenos">21</span><span class="w">                    </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">20</span><span class="w">                     </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-ownedComment&quot;</span>
+<span class="linenos">21</span><span class="w">                     </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Comment&quot;</span><span class="nt">&gt;</span>
 <span class="linenos">22</span><span class="w">         </span><span class="nt">&lt;annotatedElement</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">23</span><span class="w">         </span><span class="nt">&lt;body&gt;</span>Identifier<span class="w"> </span>for<span class="w"> </span>objects<span class="w"> </span>requiring<span class="w"> </span>short-<span class="w"> </span>or<span class="w"> </span>long-lasting<span class="w"> </span>referencing<span class="w"> </span>and<span class="w"> </span>management.<span class="nt">&lt;/body&gt;</span>
-<span class="linenos">24</span><span class="w">      </span><span class="nt">&lt;/ownedComment&gt;</span>
-<span class="linenos">25</span><span class="w">      </span><span class="nt">&lt;lowerValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-lowerValue&quot;</span>
-<span class="linenos">26</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-lowerValue&quot;</span>
-<span class="linenos">27</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">28</span><span class="w">      </span><span class="nt">&lt;upperValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-upperValue&quot;</span>
-<span class="linenos">29</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-upperValue&quot;</span>
-<span class="linenos">30</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">31</span><span class="w">         </span><span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">32</span><span class="w">      </span><span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">33</span><span class="w">      </span><span class="nt">&lt;name&gt;</span>identifier<span class="nt">&lt;/name&gt;</span>
-<span class="linenos">34</span><span class="w">      </span><span class="nt">&lt;isID&gt;</span>true<span class="nt">&lt;/isID&gt;</span>
-<span class="linenos">35</span><span class="w">      </span><span class="nt">&lt;type</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Identifier&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">36</span><span class="w">   </span><span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">37</span><span class="w">   </span><span class="nt">&lt;ownedAttribute</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_1&quot;</span>
-<span class="linenos">38</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_1&quot;</span>
-<span class="linenos">39</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">40</span><span class="w">      </span><span class="nt">&lt;lowerValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_1-lowerValue&quot;</span>
-<span class="linenos">41</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_1-lowerValue&quot;</span>
-<span class="linenos">42</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">43</span><span class="w">      </span><span class="nt">&lt;upperValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_1-upperValue&quot;</span>
-<span class="linenos">44</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_1-upperValue&quot;</span>
-<span class="linenos">45</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">46</span><span class="w">         </span><span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">47</span><span class="w">      </span><span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">48</span><span class="w">      </span><span class="nt">&lt;association</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-LogicalRecord_organizes_DataSet&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">49</span><span class="w">      </span><span class="nt">&lt;type</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-DataSet&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">50</span><span class="w">   </span><span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">51</span><span class="w">   </span><span class="nt">&lt;ownedAttribute</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_2&quot;</span>
-<span class="linenos">52</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_2&quot;</span>
-<span class="linenos">53</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">54</span><span class="w">      </span><span class="nt">&lt;lowerValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_2-lowerValue&quot;</span>
-<span class="linenos">55</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_2-lowerValue&quot;</span>
-<span class="linenos">56</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">57</span><span class="w">      </span><span class="nt">&lt;upperValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_2-upperValue&quot;</span>
-<span class="linenos">58</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_2-upperValue&quot;</span>
-<span class="linenos">59</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">60</span><span class="w">         </span><span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">61</span><span class="w">      </span><span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">62</span><span class="w">      </span><span class="nt">&lt;association</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-LogicalRecord_isDefinedBy_Concept&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">63</span><span class="w">      </span><span class="nt">&lt;type</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">64</span><span class="w">   </span><span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">65</span><span class="w">   </span><span class="nt">&lt;ownedAttribute</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_3&quot;</span>
-<span class="linenos">66</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_3&quot;</span>
-<span class="linenos">67</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">68</span><span class="w">      </span><span class="nt">&lt;lowerValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_3-lowerValue&quot;</span>
-<span class="linenos">69</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_3-lowerValue&quot;</span>
-<span class="linenos">70</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">71</span><span class="w">      </span><span class="nt">&lt;upperValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_3-upperValue&quot;</span>
-<span class="linenos">72</span><span class="w">                  </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_3-upperValue&quot;</span>
-<span class="linenos">73</span><span class="w">                  </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
-<span class="linenos">74</span><span class="w">         </span><span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
-<span class="linenos">75</span><span class="w">      </span><span class="nt">&lt;/upperValue&gt;</span>
-<span class="linenos">76</span><span class="w">      </span><span class="nt">&lt;aggregation&gt;</span>shared<span class="nt">&lt;/aggregation&gt;</span>
-<span class="linenos">77</span><span class="w">      </span><span class="nt">&lt;association</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-LogicalRecord_has_InstanceVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">78</span><span class="w">      </span><span class="nt">&lt;type</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable&quot;</span><span class="nt">/&gt;</span>
-<span class="linenos">79</span><span class="w">   </span><span class="nt">&lt;/ownedAttribute&gt;</span>
-<span class="linenos">80</span><span class="nt">&lt;/packagedElement&gt;</span>
+<span class="linenos">23</span><span class="w">         </span><span class="nt">&lt;body&gt;</span>Identifier<span class="w"> </span>for<span class="w"> </span>objects<span class="w"> </span>requiring<span class="w"> </span>short-<span class="w"> </span>or<span class="w"> </span>long-lasting<span class="w"> </span>referencing<span class="w"> </span>and<span class="w"> </span>management.
+<span class="linenos">24</span><span class="nt">&lt;/body&gt;</span>
+<span class="linenos">25</span><span class="w">      </span><span class="nt">&lt;/ownedComment&gt;</span>
+<span class="linenos">26</span><span class="w">      </span><span class="nt">&lt;lowerValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-lowerValue&quot;</span>
+<span class="linenos">27</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-lowerValue&quot;</span>
+<span class="linenos">28</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">29</span><span class="w">      </span><span class="nt">&lt;upperValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-identifier-upperValue&quot;</span>
+<span class="linenos">30</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-identifier-upperValue&quot;</span>
+<span class="linenos">31</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">32</span><span class="w">         </span><span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+<span class="linenos">33</span><span class="w">      </span><span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos">34</span><span class="w">      </span><span class="nt">&lt;name&gt;</span>identifier<span class="nt">&lt;/name&gt;</span>
+<span class="linenos">35</span><span class="w">      </span><span class="nt">&lt;isID&gt;</span>true<span class="nt">&lt;/isID&gt;</span>
+<span class="linenos">36</span><span class="w">      </span><span class="nt">&lt;isID&gt;</span>true<span class="nt">&lt;/isID&gt;</span>
+<span class="linenos">37</span><span class="w">      </span><span class="nt">&lt;type</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-DataTypes-StructuredDataTypes-Identifier&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">38</span><span class="w">   </span><span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos">39</span><span class="w">   </span><span class="nt">&lt;ownedAttribute</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_1&quot;</span>
+<span class="linenos">40</span><span class="w">                    </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_1&quot;</span>
+<span class="linenos">41</span><span class="w">                    </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">42</span><span class="w">      </span><span class="nt">&lt;lowerValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_1-lowerValue&quot;</span>
+<span class="linenos">43</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_1-lowerValue&quot;</span>
+<span class="linenos">44</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">45</span><span class="w">      </span><span class="nt">&lt;upperValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_1-upperValue&quot;</span>
+<span class="linenos">46</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_1-upperValue&quot;</span>
+<span class="linenos">47</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">48</span><span class="w">         </span><span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
+<span class="linenos">49</span><span class="w">      </span><span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos">50</span><span class="w">      </span><span class="nt">&lt;association</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-LogicalRecord_organizes_DataSet&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">51</span><span class="w">      </span><span class="nt">&lt;type</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-DataDescription-DataSet&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">52</span><span class="w">   </span><span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos">53</span><span class="w">   </span><span class="nt">&lt;ownedAttribute</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_2&quot;</span>
+<span class="linenos">54</span><span class="w">                    </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_2&quot;</span>
+<span class="linenos">55</span><span class="w">                    </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">56</span><span class="w">      </span><span class="nt">&lt;lowerValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_2-lowerValue&quot;</span>
+<span class="linenos">57</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_2-lowerValue&quot;</span>
+<span class="linenos">58</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">59</span><span class="w">      </span><span class="nt">&lt;upperValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_2-upperValue&quot;</span>
+<span class="linenos">60</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_2-upperValue&quot;</span>
+<span class="linenos">61</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">62</span><span class="w">         </span><span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
+<span class="linenos">63</span><span class="w">      </span><span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos">64</span><span class="w">      </span><span class="nt">&lt;association</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-LogicalRecord_isDefinedBy_Concept&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">65</span><span class="w">      </span><span class="nt">&lt;type</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-Concept&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">66</span><span class="w">   </span><span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos">67</span><span class="w">   </span><span class="nt">&lt;ownedAttribute</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_3&quot;</span>
+<span class="linenos">68</span><span class="w">                    </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_3&quot;</span>
+<span class="linenos">69</span><span class="w">                    </span><span class="na">xmi:type=</span><span class="s">&quot;uml:Property&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">70</span><span class="w">      </span><span class="nt">&lt;lowerValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_3-lowerValue&quot;</span>
+<span class="linenos">71</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_3-lowerValue&quot;</span>
+<span class="linenos">72</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralInteger&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">73</span><span class="w">      </span><span class="nt">&lt;upperValue</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-FormatDescription-LogicalRecord-ownedAttribute_3-upperValue&quot;</span>
+<span class="linenos">74</span><span class="w">                   </span><span class="na">xmi:uuid=</span><span class="s">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord-ownedAttribute_3-upperValue&quot;</span>
+<span class="linenos">75</span><span class="w">                   </span><span class="na">xmi:type=</span><span class="s">&quot;uml:LiteralUnlimitedNatural&quot;</span><span class="nt">&gt;</span>
+<span class="linenos">76</span><span class="w">         </span><span class="nt">&lt;value&gt;</span>*<span class="nt">&lt;/value&gt;</span>
+<span class="linenos">77</span><span class="w">      </span><span class="nt">&lt;/upperValue&gt;</span>
+<span class="linenos">78</span><span class="w">      </span><span class="nt">&lt;aggregation&gt;</span>shared<span class="nt">&lt;/aggregation&gt;</span>
+<span class="linenos">79</span><span class="w">      </span><span class="nt">&lt;association</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-LogicalRecord_has_InstanceVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">80</span><span class="w">      </span><span class="nt">&lt;type</span><span class="w"> </span><span class="na">xmi:idref=</span><span class="s">&quot;DDICDIModels-DDICDILibrary-Classes-Conceptual-InstanceVariable&quot;</span><span class="nt">/&gt;</span>
+<span class="linenos">81</span><span class="w">   </span><span class="nt">&lt;/ownedAttribute&gt;</span>
+<span class="linenos">82</span><span class="nt">&lt;/packagedElement&gt;</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
 XML Schema</label><div class="sd-tab-content encoding docutils">
 <p class="sd-card-text">Fragment for the class <strong>LogicalRecord</strong> (<a class="reference external" href="/encoding/xml-schema/ddi-cdi.xsd">entire XML Schema</a>)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">  1</span><span class="nt">&lt;xs:element</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;LogicalRecord&quot;</span>
@@ -506,7 +901,166 @@ XML Schema</label><div class="sd-tab-content encoding docutils">
 </div>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+JSON Schema</label><div class="sd-tab-content encoding docutils">
+<p class="sd-card-text">Fragment for the class <strong>LogicalRecord</strong> (<a class="reference external" href="/encoding/json-schema/ddi-cdi.schema.json">entire JSON Schema</a>)</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">  1</span><span class="nt">&quot;cls-LogicalRecord&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span class="linenos">  2</span><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">  3</span><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="linenos">  4</span><span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">  5</span><span class="w">    </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">  6</span><span class="w">      </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/at-context&quot;</span>
+<span class="linenos">  7</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos">  8</span><span class="w">    </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">  9</span><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="linenos"> 10</span><span class="w">      </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;iri-reference&quot;</span>
+<span class="linenos"> 11</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 12</span><span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 13</span><span class="w">      </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecord&quot;</span>
+<span class="linenos"> 14</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 15</span><span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 16</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..1 – from cdi:LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos"> 17</span><span class="w">      </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/dt-Identifier&quot;</span>
+<span class="linenos"> 18</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 19</span><span class="w">    </span><span class="nt">&quot;has_InstanceVariable&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 20</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecord_has_InstanceVariable&quot;</span><span class="p">,</span>
+<span class="linenos"> 21</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..-1&quot;</span><span class="p">,</span>
+<span class="linenos"> 22</span><span class="w">      </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 23</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 24</span><span class="w">          </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-InstanceVariable&quot;</span>
+<span class="linenos"> 25</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos"> 26</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 27</span><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="linenos"> 28</span><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 29</span><span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-InstanceVariable&quot;</span>
+<span class="linenos"> 30</span><span class="w">          </span><span class="p">}</span>
+<span class="linenos"> 31</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos"> 32</span><span class="w">      </span><span class="p">]</span>
+<span class="linenos"> 33</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 34</span><span class="w">    </span><span class="nt">&quot;isDefinedBy_Concept&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 35</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecord_isDefinedBy_Concept&quot;</span><span class="p">,</span>
+<span class="linenos"> 36</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..-1&quot;</span><span class="p">,</span>
+<span class="linenos"> 37</span><span class="w">      </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 38</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 39</span><span class="w">          </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-Concept&quot;</span>
+<span class="linenos"> 40</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos"> 41</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 42</span><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="linenos"> 43</span><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 44</span><span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-Concept&quot;</span>
+<span class="linenos"> 45</span><span class="w">          </span><span class="p">}</span>
+<span class="linenos"> 46</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos"> 47</span><span class="w">      </span><span class="p">]</span>
+<span class="linenos"> 48</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 49</span><span class="w">    </span><span class="nt">&quot;organizes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 50</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecord_organizes_DataSet&quot;</span><span class="p">,</span>
+<span class="linenos"> 51</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..-1&quot;</span><span class="p">,</span>
+<span class="linenos"> 52</span><span class="w">      </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 53</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 54</span><span class="w">          </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-DataSet&quot;</span>
+<span class="linenos"> 55</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos"> 56</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 57</span><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="linenos"> 58</span><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 59</span><span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-DataSet&quot;</span>
+<span class="linenos"> 60</span><span class="w">          </span><span class="p">}</span>
+<span class="linenos"> 61</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos"> 62</span><span class="w">      </span><span class="p">]</span>
+<span class="linenos"> 63</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 64</span><span class="w">    </span><span class="nt">&quot;hasSource_OF_LogicalRecordRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 65</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordRelationship_hasSource_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos"> 66</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..-1&quot;</span><span class="p">,</span>
+<span class="linenos"> 67</span><span class="w">      </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 68</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 69</span><span class="w">          </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-LogicalRecordRelationship&quot;</span>
+<span class="linenos"> 70</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos"> 71</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 72</span><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="linenos"> 73</span><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 74</span><span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-LogicalRecordRelationship&quot;</span>
+<span class="linenos"> 75</span><span class="w">          </span><span class="p">}</span>
+<span class="linenos"> 76</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos"> 77</span><span class="w">      </span><span class="p">]</span>
+<span class="linenos"> 78</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 79</span><span class="w">    </span><span class="nt">&quot;hasTarget_OF_LogicalRecordRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 80</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordRelationship_hasTarget_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos"> 81</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..-1&quot;</span><span class="p">,</span>
+<span class="linenos"> 82</span><span class="w">      </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 83</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 84</span><span class="w">          </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-LogicalRecordRelationship&quot;</span>
+<span class="linenos"> 85</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos"> 86</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 87</span><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="linenos"> 88</span><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 89</span><span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-LogicalRecordRelationship&quot;</span>
+<span class="linenos"> 90</span><span class="w">          </span><span class="p">}</span>
+<span class="linenos"> 91</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos"> 92</span><span class="w">      </span><span class="p">]</span>
+<span class="linenos"> 93</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos"> 94</span><span class="w">    </span><span class="nt">&quot;has_LogicalRecord_OF_LogicalRecordRepository&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 95</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordRepository_has_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos"> 96</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..-1&quot;</span><span class="p">,</span>
+<span class="linenos"> 97</span><span class="w">      </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos"> 98</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos"> 99</span><span class="w">          </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-LogicalRecordRepository&quot;</span>
+<span class="linenos">100</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos">101</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos">102</span><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="linenos">103</span><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">104</span><span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-LogicalRecordRepository&quot;</span>
+<span class="linenos">105</span><span class="w">          </span><span class="p">}</span>
+<span class="linenos">106</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">107</span><span class="w">      </span><span class="p">]</span>
+<span class="linenos">108</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos">109</span><span class="w">    </span><span class="nt">&quot;uses_LogicalRecord_OF_PhysicalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">110</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PhysicalDataSet_uses_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">111</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..-1&quot;</span><span class="p">,</span>
+<span class="linenos">112</span><span class="w">      </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">113</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos">114</span><span class="w">          </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-PhysicalDataSet&quot;</span>
+<span class="linenos">115</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos">116</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos">117</span><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="linenos">118</span><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">119</span><span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-PhysicalDataSet&quot;</span>
+<span class="linenos">120</span><span class="w">          </span><span class="p">}</span>
+<span class="linenos">121</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">122</span><span class="w">      </span><span class="p">]</span>
+<span class="linenos">123</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos">124</span><span class="w">    </span><span class="nt">&quot;mapsTo_OF_Segment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">125</span><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Segment_mapsTo_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">126</span><span class="w">      </span><span class="nt">&quot;$comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cardinality 0..-1&quot;</span><span class="p">,</span>
+<span class="linenos">127</span><span class="w">      </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">128</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos">129</span><span class="w">          </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-Segment&quot;</span>
+<span class="linenos">130</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos">131</span><span class="w">        </span><span class="p">{</span>
+<span class="linenos">132</span><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="linenos">133</span><span class="w">          </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">134</span><span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/target-Segment&quot;</span>
+<span class="linenos">135</span><span class="w">          </span><span class="p">}</span>
+<span class="linenos">136</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">137</span><span class="w">      </span><span class="p">]</span>
+<span class="linenos">138</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos">139</span><span class="w">    </span><span class="nt">&quot;sameAs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">140</span><span class="w">      </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/owl:sameAs&quot;</span>
+<span class="linenos">141</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">142</span><span class="w">  </span><span class="p">},</span>
+<span class="linenos">143</span><span class="w">  </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;@type&quot;</span><span class="p">],</span>
+<span class="linenos">144</span><span class="w">  </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="linenos">145</span><span class="p">},</span>
+<span class="linenos">146</span><span class="nt">&quot;target-LogicalRecord&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">147</span><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;all subclasses of http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">148</span><span class="w">  </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos">149</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/defs/cls-LogicalRecord&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="linenos">150</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;iri-reference&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos">151</span><span class="w">  </span><span class="p">]</span>
+<span class="linenos">152</span><span class="p">},</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
 Ontology (Turtle)</label><div class="sd-tab-content encoding docutils">
 <p class="sd-card-text">Fragment for the class <strong>LogicalRecord</strong> (<a class="reference external" href="/encoding/ontology/ddi-cdi.onto.ttl">main ontology</a>)</p>
 <div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c"># class LogicalRecord</span>
@@ -559,16 +1113,16 @@ Ontology (Turtle)</label><div class="sd-tab-content encoding docutils">
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
 JSON-LD</label><div class="sd-tab-content encoding docutils">
-<p class="sd-card-text">Fragment for the class <strong>LogicalRecord</strong> (<a class="reference external" href="/encoding/json-ld/ddi-cdi.jsonld">main JSON-LD</a>)</p>
+<p class="sd-card-text">Fragment for the class <strong>LogicalRecord</strong> (<a class="reference external" href="/encoding/json-ld/ddi-cdi.jsonld">entire JSON-LD</a>)</p>
 <div class="highlight-JSON-LD notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span>
+<span class="hll"><span class="linenos"> 2</span><span class="w">  </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span class="linenos"> 3</span><span class="w">    </span><span class="p">{</span>
 <span class="linenos"> 4</span><span class="w">      </span><span class="nt">&quot;cdi&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span>
-</span><span class="linenos"> 6</span>
+<span class="linenos"> 5</span><span class="w">      </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>
 <span class="linenos"> 7</span><span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos"> 8</span><span class="w">        </span><span class="nd">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecord-identifier&quot;</span><span class="p">,</span>
 <span class="linenos"> 9</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
@@ -590,154 +1144,241 @@ JSON-LD</label><div class="sd-tab-content encoding docutils">
 <span class="linenos">25</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
 <span class="linenos">26</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DataSet.jsonld&quot;</span>
 <span class="linenos">27</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">28</span><span class="w">      </span><span class="nt">&quot;has_LogicalRecord_OF_DataStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:DataStore_has_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">28</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_LogicalRecordRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">29</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecordRelationship_hasSource_LogicalRecord&quot;</span><span class="p">,</span>
 <span class="linenos">30</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
-<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DataStore.jsonld&quot;</span>
+<span class="linenos">31</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordRelationship.jsonld&quot;</span>
 <span class="linenos">32</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">33</span><span class="w">      </span><span class="nt">&quot;indexes_OF_LogicalRecordPosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">34</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecordPosition_indexes_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">33</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_LogicalRecordRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">34</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecordRelationship_hasTarget_LogicalRecord&quot;</span><span class="p">,</span>
 <span class="linenos">35</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
-<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordPosition.jsonld&quot;</span>
+<span class="linenos">36</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordRelationship.jsonld&quot;</span>
 <span class="linenos">37</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">38</span><span class="w">      </span><span class="nt">&quot;hasSource_OF_LogicalRecordRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">39</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecordRelationship_hasSource_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">38</span><span class="w">      </span><span class="nt">&quot;has_LogicalRecord_OF_LogicalRecordRepository&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">39</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecordRepository_has_LogicalRecord&quot;</span><span class="p">,</span>
 <span class="linenos">40</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
-<span class="linenos">41</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordRelationship.jsonld&quot;</span>
+<span class="linenos">41</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordRepository.jsonld&quot;</span>
 <span class="linenos">42</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">43</span><span class="w">      </span><span class="nt">&quot;hasTarget_OF_LogicalRecordRelationship&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">44</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:LogicalRecordRelationship_hasTarget_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">43</span><span class="w">      </span><span class="nt">&quot;uses_LogicalRecord_OF_PhysicalDataSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">44</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalDataSet_uses_LogicalRecord&quot;</span><span class="p">,</span>
 <span class="linenos">45</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
-<span class="linenos">46</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LogicalRecordRelationship.jsonld&quot;</span>
+<span class="linenos">46</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PhysicalDataSet.jsonld&quot;</span>
 <span class="linenos">47</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">48</span><span class="w">      </span><span class="nt">&quot;mapsTo_OF_PhysicalRecordSegment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">49</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalRecordSegment_mapsTo_LogicalRecord&quot;</span><span class="p">,</span>
+<span class="linenos">48</span><span class="w">      </span><span class="nt">&quot;mapsTo_OF_Segment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">49</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:Segment_mapsTo_LogicalRecord&quot;</span><span class="p">,</span>
 <span class="linenos">50</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
-<span class="linenos">51</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PhysicalRecordSegment.jsonld&quot;</span>
+<span class="linenos">51</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Segment.jsonld&quot;</span>
 <span class="linenos">52</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">53</span><span class="w">      </span><span class="nt">&quot;formats_OF_PhysicalSegmentLayout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">54</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:PhysicalSegmentLayout_formats_LogicalRecord&quot;</span><span class="p">,</span>
-<span class="linenos">55</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
-<span class="linenos">56</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PhysicalSegmentLayout.jsonld&quot;</span>
-<span class="linenos">57</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">58</span><span class="w">      </span><span class="nt">&quot;maps_OF_RecordRelation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">59</span><span class="w">        </span><span class="nd">&quot;@reverse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cdi:RecordRelation_maps_LogicalRecord&quot;</span><span class="p">,</span>
-<span class="linenos">60</span><span class="w">        </span><span class="nd">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@id&quot;</span><span class="p">,</span>
-<span class="linenos">61</span><span class="w">        </span><span class="nd">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RecordRelation.jsonld&quot;</span>
-<span class="linenos">62</span><span class="w">      </span><span class="p">},</span>
-<span class="linenos">63</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span>
-<span class="linenos">64</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">65</span><span class="w">  </span><span class="p">],</span>
-<span class="linenos">66</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2025-01-25 16:58:31.&quot;</span><span class="p">,</span>
-<span class="linenos">67</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord&quot;</span>
-<span class="linenos">68</span><span class="p">}</span>
+<span class="linenos">53</span><span class="w">      </span><span class="nt">&quot; comment &quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tag:json-should-support-trailing-commas&quot;</span>
+<span class="linenos">54</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">55</span><span class="w">  </span><span class="p">],</span>
+<span class="linenos">56</span><span class="w">  </span><span class="nt">&quot;generatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This code was generated by the Eclipse Acceleo project UCMIS M2T on 2026-04-15 14:38:41.&quot;</span><span class="p">,</span>
+<span class="linenos">57</span><span class="w">  </span><span class="nt">&quot;basedOn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;based on the UML data type DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord&quot;</span>
+<span class="linenos">58</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+SHACL</label><div class="sd-tab-content encoding docutils">
+<p class="sd-card-text">Fragment for the class <strong>LogicalRecord</strong> (<a class="reference external" href="/encoding/shacl/ddi-cdi.shacl.ttl">entire SHACL - Shapes Constraint Language</a>)</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c"># class LogicalRecord</span>
+<span class="linenos"> 2</span><span class="c"># based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord</span>
+<span class="linenos"> 3</span><span class="nv">&lt;#LogicalRecord&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">NodeShape</span><span class="p">;</span>
+<span class="hll"><span class="linenos"> 4</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord</span><span class="p">;</span>
+</span><span class="linenos"> 5</span>	<span class="nn">sh</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;See http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LogicalRecord&quot;</span><span class="p">;</span>
+<span class="linenos"> 6</span>	<span class="nn">sh</span><span class="p">:</span><span class="nt">closed</span> <span class="l">true</span><span class="p">;</span>
+<span class="linenos"> 7</span>	<span class="nn">sh</span><span class="p">:</span><span class="nt">ignoredProperties</span> <span class="p">(</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">sameAs</span> <span class="p">);</span>
+<span class="linenos"> 8</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span>
+<span class="linenos"> 9</span>			<span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span><span class="p">;</span>
+<span class="linenos">10</span>			<span class="nn">sh</span><span class="p">:</span><span class="nt">in</span> <span class="p">(</span>   <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord</span>
+<span class="linenos">11</span>			 <span class="p">)</span> <span class="p">;</span>
+<span class="linenos">12</span>    <span class="p">];</span>
+<span class="linenos">13</span>    <span class="c"># attributes</span>
+<span class="linenos">14</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#LogicalRecord-identifier&gt;</span><span class="p">;</span>
+<span class="linenos">15</span>    <span class="c"># associations from LogicalRecord</span>
+<span class="linenos">16</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#LogicalRecord_has_InstanceVariable&gt;</span><span class="p">;</span>
+<span class="linenos">17</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#LogicalRecord_isDefinedBy_Concept&gt;</span><span class="p">;</span>
+<span class="linenos">18</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#LogicalRecord_organizes_DataSet&gt;</span><span class="p">;</span>
+<span class="linenos">19</span>    <span class="c"># associations to LogicalRecord</span>
+<span class="linenos">20</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#rev_LogicalRecordRelationship_hasSource_LogicalRecord&gt;</span><span class="p">;</span>
+<span class="linenos">21</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#rev_LogicalRecordRelationship_hasTarget_LogicalRecord&gt;</span><span class="p">;</span>
+<span class="linenos">22</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#rev_LogicalRecordRepository_has_LogicalRecord&gt;</span><span class="p">;</span>
+<span class="linenos">23</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#rev_PhysicalDataSet_uses_LogicalRecord&gt;</span><span class="p">;</span>
+<span class="linenos">24</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="nv">&lt;#rev_Segment_mapsTo_LogicalRecord&gt;</span><span class="p">;</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="p">.</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="nv">&lt;#LogicalRecord-identifier&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+<span class="linenos">31</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord-identifier</span><span class="p">;</span>
+<span class="linenos">32</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span><span class="p">;</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span><span class="p">;</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">in</span> <span class="p">(</span>
+<span class="linenos">33</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">Identifier</span>
+<span class="linenos">34</span>      
+<span class="linenos">35</span>    <span class="p">)</span> <span class="p">]];</span>
+<span class="linenos">36</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span><span class="p">;</span>
+<span class="linenos">37</span><span class="p">.</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="nv">&lt;#LogicalRecord_has_InstanceVariable&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+<span class="linenos">40</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_has_InstanceVariable</span><span class="p">;</span>
+<span class="linenos">41</span>	<span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span><span class="p">;</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span><span class="p">;</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">in</span> <span class="p">(</span>
+<span class="linenos">42</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceVariable</span>
+<span class="linenos">43</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">DescriptorVariable</span>
+<span class="linenos">44</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">ReferenceVariable</span>
+<span class="linenos">45</span>      
+<span class="linenos">46</span>    <span class="p">)</span> <span class="p">]];</span>
+<span class="linenos">47</span><span class="p">.</span>
+<span class="linenos">48</span><span class="nv">&lt;#rev_LogicalRecord_has_InstanceVariable&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+<span class="linenos">49</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">inversePath</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_has_InstanceVariable</span> <span class="p">];</span>
+<span class="linenos">50</span><span class="p">.</span>
+<span class="linenos">51</span><span class="nv">&lt;#LogicalRecord_isDefinedBy_Concept&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+<span class="linenos">52</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_isDefinedBy_Concept</span><span class="p">;</span>
+<span class="linenos">53</span>	<span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span><span class="p">;</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span><span class="p">;</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">in</span> <span class="p">(</span>
+<span class="linenos">54</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">Concept</span>
+<span class="linenos">55</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">Category</span>
+<span class="linenos">56</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">ConceptualValue</span>
+<span class="linenos">57</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">DimensionalKeyDefinitionMember</span>
+<span class="linenos">58</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">KeyDefinitionMember</span>
+<span class="linenos">59</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">ConceptualVariable</span>
+<span class="linenos">60</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">RepresentedVariable</span>
+<span class="linenos">61</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceVariable</span>
+<span class="linenos">62</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">DescriptorVariable</span>
+<span class="linenos">63</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">ReferenceVariable</span>
+<span class="linenos">64</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">UnitType</span>
+<span class="linenos">65</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">Universe</span>
+<span class="linenos">66</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">Population</span>
+<span class="linenos">67</span>      
+<span class="linenos">68</span>    <span class="p">)</span> <span class="p">]];</span>
+<span class="linenos">69</span><span class="p">.</span>
+<span class="linenos">70</span><span class="nv">&lt;#rev_LogicalRecord_isDefinedBy_Concept&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+<span class="linenos">71</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">inversePath</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_isDefinedBy_Concept</span> <span class="p">];</span>
+<span class="linenos">72</span><span class="p">.</span>
+<span class="linenos">73</span><span class="nv">&lt;#LogicalRecord_organizes_DataSet&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+<span class="linenos">74</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_organizes_DataSet</span><span class="p">;</span>
+<span class="linenos">75</span>	<span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span><span class="p">;</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span><span class="p">;</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">in</span> <span class="p">(</span>
+<span class="linenos">76</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">DataSet</span>
+<span class="linenos">77</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">DimensionalDataSet</span>
+<span class="linenos">78</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">KeyValueDataStore</span>
+<span class="linenos">79</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">LongDataSet</span>
+<span class="linenos">80</span>        <span class="nn">cdi</span><span class="p">:</span><span class="nt">WideDataSet</span>
+<span class="linenos">81</span>      
+<span class="linenos">82</span>    <span class="p">)</span> <span class="p">]];</span>
+<span class="linenos">83</span><span class="p">.</span>
+<span class="linenos">84</span><span class="nv">&lt;#rev_LogicalRecord_organizes_DataSet&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+<span class="linenos">85</span>    <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">inversePath</span> <span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_organizes_DataSet</span> <span class="p">];</span>
+<span class="linenos">86</span><span class="p">.</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+ShEx</label><div class="sd-tab-content encoding docutils">
+<p class="sd-card-text">Fragment for the class <strong>LogicalRecord</strong> (<a class="reference external" href="/encoding/shex/ddi-cdi.shexc">entire ShEx - Shape Expressions</a>)</p>
+<div class="highlight-shexc notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c"># class LogicalRecord</span>
+<span class="linenos"> 2</span><span class="c"># based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord</span>
+<span class="hll"><span class="linenos"> 3</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecordShape</span> <span class="k">CLOSED</span> <span class="p">{</span>
+</span><span class="linenos"> 4</span>	<span class="k">a</span> <span class="p">[</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord</span><span class="p">];</span>
+<span class="linenos"> 5</span>	<span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord-identifier</span>	<span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">IdentifierShape</span><span class="o">?</span><span class="p">;</span>
+<span class="linenos"> 6</span>	<span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_has_InstanceVariable</span>	<span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">InstanceVariableShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">DescriptorVariableShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">ReferenceVariableShape</span><span class="o">*</span><span class="p">;</span>
+<span class="linenos"> 7</span>	
+<span class="linenos"> 8</span>	<span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_isDefinedBy_Concept</span>	<span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">ConceptShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">CategoryShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">ConceptualValueShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">ConceptualVariableShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">UnitTypeShape</span><span class="o">*</span><span class="p">;</span>
+<span class="linenos"> 9</span>	
+<span class="linenos">10</span>	<span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecord_organizes_DataSet</span>	<span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">DataSetShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">DimensionalDataSetShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">KeyValueDataStoreShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LongDataSetShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">WideDataSetShape</span><span class="o">*</span><span class="p">;</span>
+<span class="linenos">11</span>	
+<span class="linenos">12</span>	<span class="o">^</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecordRelationship_hasSource_LogicalRecord</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecordRelationshipShape</span> <span class="o">*</span><span class="p">;</span>
+<span class="linenos">13</span>	<span class="o">^</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecordRelationship_hasTarget_LogicalRecord</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecordRelationshipShape</span> <span class="o">*</span><span class="p">;</span>
+<span class="linenos">14</span>	<span class="o">^</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecordRepository_has_LogicalRecord</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">LogicalRecordRepositoryShape</span> <span class="o">*</span><span class="p">;</span>
+<span class="linenos">15</span>	<span class="o">^</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">PhysicalDataSet_uses_LogicalRecord</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">PhysicalDataSetShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">StructuredDataSetShape</span> <span class="ow">OR</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">TabularTextDataSetShape</span><span class="o">*</span><span class="p">;</span>
+<span class="linenos">16</span>	<span class="o">^</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">Segment_mapsTo_LogicalRecord</span> <span class="o">@</span><span class="nn">cdi</span><span class="p">:</span><span class="nt">SegmentShape</span> <span class="o">*</span><span class="p">;</span>
+<span class="linenos">17</span>	<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</details></div>
-</section>
+</details></section>
 </section>
 
 
-            <div class="clearer"></div>
-          </div>
-        </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="LocatorMapping.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">LocatorMapping</p>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/cdi.svg" alt="Logo of "/>
-            </a></p>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../Context/index.html">Context</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">DDICDILibrary</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Classes</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../Agents/index.html">Agents</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Conceptual/index.html">Conceptual</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../DataDescription/index.html">DataDescription</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">FormatDescription</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="DataPointPosition.html">DataPointPosition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="DataPointRelationship.html">DataPointRelationship</a></li>
-<li class="toctree-l4"><a class="reference internal" href="DataStore.html">DataStore</a></li>
-<li class="toctree-l4"><a class="reference internal" href="InstanceVariableMap.html">InstanceVariableMap</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">LogicalRecord</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#definition">Definition</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="LogicalRecordPosition.html">LogicalRecordPosition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="LogicalRecordRelationship.html">LogicalRecordRelationship</a></li>
-<li class="toctree-l4"><a class="reference internal" href="LogicalRecordRelationStructure.html">LogicalRecordRelationStructure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalDataSet.html">PhysicalDataSet</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalDataSetStructure.html">PhysicalDataSetStructure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalLayoutRelationStructure.html">PhysicalLayoutRelationStructure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalRecordSegment.html">PhysicalRecordSegment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalRecordSegmentPosition.html">PhysicalRecordSegmentPosition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalRecordSegmentRelationship.html">PhysicalRecordSegmentRelationship</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalRecordSegmentStructure.html">PhysicalRecordSegmentStructure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalSegmentLayout.html">PhysicalSegmentLayout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PhysicalSegmentLocation.html">PhysicalSegmentLocation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="RecordRelation.html">RecordRelation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="SegmentByText.html">SegmentByText</a></li>
-<li class="toctree-l4"><a class="reference internal" href="UnitSegmentLayout.html">UnitSegmentLayout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ValueMapping.html">ValueMapping</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ValueMappingPosition.html">ValueMappingPosition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ValueMappingRelationship.html">ValueMappingRelationship</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../Process/index.html">Process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Representations/index.html">Representations</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../DataTypes/index.html">DataTypes</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../DesignPatterns/index.html">DesignPatterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Appendices/index.html">Appendices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About</a></li>
-</ul>
-
-        </div>
-<div id="sidebarbutton" title="Collapse sidebar">
-<span>«</span>
+    </a>
+    <a class="right-next"
+       href="LogicalRecordRelationship.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">LogicalRecordRelationship</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
 
-      </div>
-      <div class="clearer"></div>
+  <p class="copyright">
+    
+      © Copyright 2026, DDI Alliance.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="LogicalRecordPosition.html" title="LogicalRecordPosition"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="InstanceVariableMap.html" title="InstanceVariableMap"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">UML Model: DDI Cross Domain Integration (DDI-CDI 1.0)</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../../index.html" >DDICDILibrary</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >Classes</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >FormatDescription</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">LogicalRecord</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2024, DDI Alliance.
-    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

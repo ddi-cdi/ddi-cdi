@@ -1,0 +1,3096 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Associated Classes &#8212; DDI Cross Domain Integration (DDI-CDI 1.1beta)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=90ec1f7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/diagramModal.css?v=f32f5540" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=351a2e83"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/custom.js?v=630073b2"></script>
+    <script src="../../_static/_modelInformation.js?v=886d4a72"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Appendices/ExploratoryDiagrams/AssociatedClassesVegaDiagram';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Class Inheritance" href="InheritanceTreeVegaDiagram.html" />
+    <link rel="prev" title="Exploratory Diagrams" href="index.html" /> 
+    <meta http-equiv="Content-Security-Policy"
+    content="script-src 'self' 'unsafe-inline' https://cdn.datatables.net/ https://unpkg.com/ https://cdnjs.cloudflare.com/ https://cdn.jsdelivr.net/;
+              style-src 'self' 'unsafe-inline' https://cdn.datatables.net/ ;
+                img-src 'self' data: ; " />
+	<!--
+		Combined css and js downloads created with https://datatables.net/download/.
+		Options: Bootstrap 5, DataTables, SearchPanes, Select, Minify, Concatenate
+	-->
+	<link href="https://cdn.datatables.net/v/bs5/dt-2.3.2/sp-2.3.4/sl-3.0.1/datatables.min.css"
+	      rel="stylesheet"
+	      integrity="sha384-h7m53mmJL0KEQkDui56fPxSnPjuEavXjU+34pfXMjrOu4olRAwJRVX0Xn1xNNWUH"
+	      crossorigin="anonymous">
+ 
+    <script src="https://cdn.datatables.net/v/bs5/dt-2.3.2/sp-2.3.4/sl-3.0.1/datatables.min.js"
+            integrity="sha384-A4z2JTmKuCIgpL7FWMQCxpUB/VyzJllBRjl4R6TwgkCrKzGzSTol7IsajUmg8y4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.6.0/dist/panzoom.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.1/canvg.js"
+      integrity="sha512-Qw1+j4vl/AjCqxrx/omDzobdEepDHathD3Z0bwulQSrLlaTtTWhiH3sMSDU4oK2TP2EfyzHgg33gh2zxUAI3EQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+   
+
+<a class="navbar-brand logo" href="http://ddialliance.org/Specification/DDI-CDI/1.0/">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/cdi.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/cdi.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">DDI Cross Domain Integration</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><div class="model-title">
+<h3>DDI-CDI 1.1beta UML Model Documentation</h3>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"></span>
+
+
+</form></div>
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Context/index.html">Context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DDICDILibrary/index.html">DDICDILibrary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DesignPatterns/index.html">DesignPatterns</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Appendices</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Exploratory Diagrams</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Associated Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InheritanceTreeVegaDiagram.html">Class Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InheritanceTreeDiagram/index.html">Inheritance by Package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ModelItemLists/index.html">Model Item Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+  </ul>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+        <div class="header-article-item">
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Appendices</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Exploratory Diagrams</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Associated Classes</li>
+
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ddi-cdi/ddi-cdi" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ddi-cdi/ddi-cdi/issues/new?title=Issue%20on%20page%20%2FAppendices/ExploratoryDiagrams/AssociatedClassesVegaDiagram.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Associated Classes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="associated-classes">
+<span id="associatedclassesdiagram"></span><h1>Associated Classes<a class="headerlink" href="#associated-classes" title="Permalink to this heading">#</a></h1>
+<!-- Due to CORS issues everything inline. Otherwise, grammar and data could be in separate files. -->
+<div id="vis"/>
+<script src="https://cdn.jsdelivr.net/npm/vega@6.1.2/build/vega.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.2/build/vega-embed.min.js"></script>
+  <script>
+  const classData =[
+  {
+    "id": "DDICDILibrary",
+    "name": "DDICDILibrary",
+    "parent": null
+  },
+  {
+    "id": "Classes",
+    "name": "DDICDIModels::DDICDILibrary::Classes",
+    "parent": "DDICDILibrary"
+  },
+  {
+    "id": "Agents",
+    "name": "DDICDIModels::DDICDILibrary::Classes::Agents",
+    "parent": "Classes"
+  },
+  {
+    "id": "Conceptual",
+    "name": "DDICDIModels::DDICDILibrary::Classes::Conceptual",
+    "parent": "Classes"
+  },
+  {
+    "id": "DataDescription",
+    "name": "DDICDIModels::DDICDILibrary::Classes::DataDescription",
+    "parent": "Classes"
+  },
+  {
+    "id": "Components",
+    "name": "DDICDIModels::DDICDILibrary::Classes::DataDescription::Components",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "Dimensional",
+    "name": "DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "KeyValue",
+    "name": "DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "Long",
+    "name": "DDICDIModels::DDICDILibrary::Classes::DataDescription::Long",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "Wide",
+    "name": "DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "FormatDescription",
+    "name": "DDICDIModels::DDICDILibrary::Classes::FormatDescription",
+    "parent": "Classes"
+  },
+  {
+    "id": "Process",
+    "name": "DDICDIModels::DDICDILibrary::Classes::Process",
+    "parent": "Classes"
+  },
+  {
+    "id": "Representations",
+    "name": "DDICDIModels::DDICDILibrary::Classes::Representations",
+    "parent": "Classes"
+  },
+  {
+    "id": "Agent",
+    "name": "Agents::Agent",
+    "definition": "Actor that performs a role in relation to a process or product.",
+    "parent": "Agents"
+  },
+  {
+    "id": "AgentListing",
+    "name": "Agents::AgentListing",
+    "definition": "Listing of agents of any type who may be organized to describe relationships between agents.",
+    "parent": "Agents"
+  },
+  {
+    "id": "AgentPosition",
+    "name": "Agents::AgentPosition",
+    "definition": "Assigns a sequence number to an agent in an agent listing.",
+    "parent": "Agents"
+  },
+  {
+    "id": "AgentRelationship",
+    "name": "Agents::AgentRelationship",
+    "definition": "Defines the relation of an agent within a structure.",
+    "parent": "Agents"
+  },
+  {
+    "id": "AgentStructure",
+    "name": "Agents::AgentStructure",
+    "definition": "Defines the relationships between agents in a collection for a specified period and purpose.",
+    "parent": "Agents"
+  },
+  {
+    "id": "Individual",
+    "name": "Agents::Individual",
+    "definition": "A person. (See for example the W3C Friend of a Friend Ontology - http://xmlns.com/foaf/spec/#term_Person).",
+    "parent": "Agents"
+  },
+  {
+    "id": "Machine",
+    "name": "Agents::Machine",
+    "definition": "Mechanism or computer program used to perform an act.",
+    "parent": "Agents"
+  },
+  {
+    "id": "Organization",
+    "name": "Agents::Organization",
+    "definition": "Collection of people organized within a framework of authority that can perform an act or be associated with another agent.",
+    "parent": "Agents"
+  },
+  {
+    "id": "Category",
+    "name": "Conceptual::Category",
+    "definition": "Concept whose role is to define and measure a characteristic.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "CategoryPosition",
+    "name": "Conceptual::CategoryPosition",
+    "definition": "Assigns a sequence number to a category within a list.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "CategoryRelationship",
+    "name": "Conceptual::CategoryRelationship",
+    "definition": "Source-to-target relationship between categories in a structure.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "CategorySet",
+    "name": "Conceptual::CategorySet",
+    "definition": "Concept system where the underlying concepts are categories.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "CategorySetStructure",
+    "name": "Conceptual::CategorySetStructure",
+    "definition": "Description of the relationships between and among categories within a collection.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "Concept",
+    "name": "Conceptual::Concept",
+    "definition": "Unit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "ConceptMap",
+    "name": "Conceptual::ConceptMap",
+    "definition": "Correspondence between concepts in a correspondence table.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "ConceptRelationship",
+    "name": "Conceptual::ConceptRelationship",
+    "definition": "Relationship between a pair of concepts in a collection of concepts. Use controlled vocabulary provided in semantics to identify the type of relationship (relation, e.g. ParentChild, WholePart, etc.)",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "ConceptSystem",
+    "name": "Conceptual::ConceptSystem",
+    "definition": "Set of concepts structured by the relations among them [GSIM 1.1].",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "ConceptSystemCorrespondence",
+    "name": "Conceptual::ConceptSystemCorrespondence",
+    "definition": "Relationship between 2 or more concept systems described through mapping similarity relationships between their member concepts.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "ConceptSystemStructure",
+    "name": "Conceptual::ConceptSystemStructure",
+    "definition": "Relations of concepts within a collection.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "ConceptualDomain",
+    "name": "Conceptual::ConceptualDomain",
+    "definition": "Set of concepts, where each concept is intended to be used as the meaning (signified) for a datum.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "ConceptualVariable",
+    "name": "Conceptual::ConceptualVariable",
+    "definition": "A variable at the highest level of abstraction.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "InstanceVariable",
+    "name": "Conceptual::InstanceVariable",
+    "definition": "Use of a represented variable within a data set.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "Population",
+    "name": "Conceptual::Population",
+    "definition": "Universe with time and geography specified.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "RepresentedVariable",
+    "name": "Conceptual::RepresentedVariable",
+    "definition": "Conceptual variable with a substantive value domain specified.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "SentinelConceptualDomain",
+    "name": "Conceptual::SentinelConceptualDomain",
+    "definition": "Conceptual domain of sentinel concepts.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "SubstantiveConceptualDomain",
+    "name": "Conceptual::SubstantiveConceptualDomain",
+    "definition": "Conceptual domain of substantive concepts.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "Unit",
+    "name": "Conceptual::Unit",
+    "definition": "Individual object of interest for some statistical activity, such as data collection.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "UnitType",
+    "name": "Conceptual::UnitType",
+    "definition": "Unit type is a type or class of objects of interest (units).",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "Universe",
+    "name": "Conceptual::Universe",
+    "definition": "Specialized unit type, with the specialization based upon characteristics other than time and geography.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "VariableCollection",
+    "name": "Conceptual::VariableCollection",
+    "definition": "Group of any type of variable within the variable cascade (conceptual, represented, instance).",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "VariableCollectionStructure",
+    "name": "Conceptual::VariableCollectionStructure",
+    "definition": "Relation structure for use with any set of variables in the variable cascade (conceptual, represented, instance).",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "VariablePosition",
+    "name": "Conceptual::VariablePosition",
+    "definition": "Assigns a sequence number to a variable within a list.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "VariableRelationship",
+    "name": "Conceptual::VariableRelationship",
+    "definition": "Relationship between any variables in the variable cascade (conceptual, represented, instance), based on an ordered relation.",
+    "parent": "Conceptual"
+  },
+  {
+    "id": "CategoryStatistics",
+    "name": "DataDescription::CategoryStatistics",
+    "definition": "Statistics related to a specific category of an instance variable within a data set.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "AttributeComponent",
+    "name": "Components::AttributeComponent",
+    "definition": "Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.",
+    "parent": "Components"
+  },
+  {
+    "id": "ComponentPosition",
+    "name": "Components::ComponentPosition",
+    "definition": "Indexes the components in a data structure using integers with a position indicated by incrementing upward from 0 or 1.",
+    "parent": "Components"
+  },
+  {
+    "id": "DataStructureComponent",
+    "name": "Components::DataStructureComponent",
+    "definition": "Role given to a represented variable in the context of a data structure.",
+    "parent": "Components"
+  },
+  {
+    "id": "DimensionComponent",
+    "name": "Components::DimensionComponent",
+    "definition": "Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional \"cube\".",
+    "parent": "Components"
+  },
+  {
+    "id": "ForeignKey",
+    "name": "Components::ForeignKey",
+    "definition": "Role of a set of data structure components for content referencing purposes",
+    "parent": "Components"
+  },
+  {
+    "id": "ForeignKeyComponent",
+    "name": "Components::ForeignKeyComponent",
+    "definition": "Role of a data structure component for content referencing purposes",
+    "parent": "Components"
+  },
+  {
+    "id": "IdentifierComponent",
+    "name": "Components::IdentifierComponent",
+    "definition": "Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.",
+    "parent": "Components"
+  },
+  {
+    "id": "MeasureComponent",
+    "name": "Components::MeasureComponent",
+    "definition": "Role given to a represented variable in the context of a data structure to hold the observed/derived values.",
+    "parent": "Components"
+  },
+  {
+    "id": "PrimaryKey",
+    "name": "Components::PrimaryKey",
+    "definition": "Role of a set of data structure components for content linkage purposes",
+    "parent": "Components"
+  },
+  {
+    "id": "PrimaryKeyComponent",
+    "name": "Components::PrimaryKeyComponent",
+    "definition": "Role of a data structure component for content identification purposes",
+    "parent": "Components"
+  },
+  {
+    "id": "VariableDescriptorComponent",
+    "name": "Components::VariableDescriptorComponent",
+    "definition": "Role given to a represented variable in the context of a data structure to provide codes for variable identification.",
+    "parent": "Components"
+  },
+  {
+    "id": "VariableValueComponent",
+    "name": "Components::VariableValueComponent",
+    "definition": "Role given to a represented variable in the context of a data structure to record values of multiple variables.",
+    "parent": "Components"
+  },
+  {
+    "id": "ConceptualValue",
+    "name": "DataDescription::ConceptualValue",
+    "definition": "Concept (with a notion of equality defined) being observed, captured, or derived which is associated to a single data instance.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "DataPoint",
+    "name": "DataDescription::DataPoint",
+    "definition": "Container for an instance value.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "DataSet",
+    "name": "DataDescription::DataSet",
+    "definition": "Organized collection of data based on keys.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "DataStructure",
+    "name": "DataDescription::DataStructure",
+    "definition": "Data organization based on reusable data structure components.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "Datum",
+    "name": "DataDescription::Datum",
+    "definition": "Correspondence of a data instance to the concept it represents.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "DimensionGroup",
+    "name": "Dimensional::DimensionGroup",
+    "definition": "Collection of dimensions that can be reused across multiple dimensional structures.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "DimensionalDataSet",
+    "name": "Dimensional::DimensionalDataSet",
+    "definition": "Organized collection of multidimensional data. It is structured by a dimensional data structure.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "DimensionalDataStructure",
+    "name": "Dimensional::DimensionalDataStructure",
+    "definition": "Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "DimensionalKey",
+    "name": "Dimensional::DimensionalKey",
+    "definition": "Collection of data instances that uniquely identify a collection of data points in a dimensional dataset.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "DimensionalKeyDefinition",
+    "name": "Dimensional::DimensionalKeyDefinition",
+    "definition": "Collection of concepts that uniquely defines a collection of data points in a dimensional dataset.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "DimensionalKeyDefinitionMember",
+    "name": "Dimensional::DimensionalKeyDefinitionMember",
+    "definition": "Single concept that is part of a dimensional key definition.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "DimensionalKeyMember",
+    "name": "Dimensional::DimensionalKeyMember",
+    "definition": "Single data instance that is part of a dimensional key.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "QualifiedMeasure",
+    "name": "Dimensional::QualifiedMeasure",
+    "definition": "A measure having a specific production method.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "RevisableDatum",
+    "name": "Dimensional::RevisableDatum",
+    "definition": "A datum that can be qualified by a revision.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "Revision",
+    "name": "Dimensional::Revision",
+    "definition": "Algorithm applied to produce a revised datum.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "ScopedMeasure",
+    "name": "Dimensional::ScopedMeasure",
+    "definition": "A qualified measure whose domain is a universe as an aggregate, i.e. a measure with a specific production method applied to a specific cell in a cube.",
+    "parent": "Dimensional"
+  },
+  {
+    "id": "InstanceValue",
+    "name": "DataDescription::InstanceValue",
+    "definition": "Single data instance corresponding to a concept (with a notion of equality defined) being observed, captured, or derived.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "Key",
+    "name": "DataDescription::Key",
+    "definition": "Collection of data instances that uniquely identify a collection of data points in a dataset.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "KeyDefinition",
+    "name": "DataDescription::KeyDefinition",
+    "definition": "Collection of concepts that uniquely defines a collection of data points in a dataset.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "KeyDefinitionMember",
+    "name": "DataDescription::KeyDefinitionMember",
+    "definition": "Single concept that is part of the structure of a key definition.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "KeyMember",
+    "name": "DataDescription::KeyMember",
+    "definition": "Single data instance that is part of a key.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "ContextualComponent",
+    "name": "KeyValue::ContextualComponent",
+    "definition": "Encapsulates contextual information of the key-value datastore to provide a scope to the instance key. The instance key is unique within the scope.",
+    "parent": "KeyValue"
+  },
+  {
+    "id": "InstanceKey",
+    "name": "KeyValue::InstanceKey",
+    "definition": "Single-valued key representation produced from the merge of the representations of all key members and a descriptor.",
+    "parent": "KeyValue"
+  },
+  {
+    "id": "KeyValueDataStore",
+    "name": "KeyValue::KeyValueDataStore",
+    "definition": "Organized collection of key-value data. It is structured by a key value structure.",
+    "parent": "KeyValue"
+  },
+  {
+    "id": "KeyValueStructure",
+    "name": "KeyValue::KeyValueStructure",
+    "definition": "Structure of a key-value datastore (organized collection of key-value data). It is described by identifier, contextual, synthetic id, dimension, variable descriptor and variable value components.",
+    "parent": "KeyValue"
+  },
+  {
+    "id": "MainKeyMember",
+    "name": "KeyValue::MainKeyMember",
+    "definition": "Identifies the unit of interest, either a statistical unit or a population, via identifier or dimension components, respectively, plus an optional contextual component. If neither identifier nor dimension components are present, then a synthetic id component is used.",
+    "parent": "KeyValue"
+  },
+  {
+    "id": "SyntheticIdComponent",
+    "name": "KeyValue::SyntheticIdComponent",
+    "definition": "Persistent and unique identifier (PIDs) to provide standarized, long-lasting identification.",
+    "parent": "KeyValue"
+  },
+  {
+    "id": "Descriptor",
+    "name": "Long::Descriptor",
+    "definition": "Use of a code for variable identification in the context of a data structure and a variable descriptor component.",
+    "parent": "Long"
+  },
+  {
+    "id": "DescriptorValueDomain",
+    "name": "Long::DescriptorValueDomain",
+    "definition": "Set of permissible values for a variable playing the role of a variable descriptor component.",
+    "parent": "Long"
+  },
+  {
+    "id": "DescriptorVariable",
+    "name": "Long::DescriptorVariable",
+    "definition": "Variable that provides codes for variable identification in the context of a data structure. Variable playing the role of a variable descriptor component.",
+    "parent": "Long"
+  },
+  {
+    "id": "LongDataSet",
+    "name": "Long::LongDataSet",
+    "definition": "Organized collection of long data. It is structured by a long data structure.",
+    "parent": "Long"
+  },
+  {
+    "id": "LongDataStructure",
+    "name": "Long::LongDataStructure",
+    "definition": "Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.",
+    "parent": "Long"
+  },
+  {
+    "id": "LongKey",
+    "name": "Long::LongKey",
+    "definition": "Collection of data instances that uniquely identify a collection of data points in a long dataset.",
+    "parent": "Long"
+  },
+  {
+    "id": "LongMainKeyMember",
+    "name": "Long::LongMainKeyMember",
+    "definition": "Single data instance that is part of a long key.",
+    "parent": "Long"
+  },
+  {
+    "id": "ReferenceValue",
+    "name": "Long::ReferenceValue",
+    "definition": "Recorded value in a variable value component. Value referenced by a descriptor.",
+    "parent": "Long"
+  },
+  {
+    "id": "ReferenceValueDomain",
+    "name": "Long::ReferenceValueDomain",
+    "definition": "Set of permissible values for a variable playing the role of a variable value component.",
+    "parent": "Long"
+  },
+  {
+    "id": "ReferenceVariable",
+    "name": "Long::ReferenceVariable",
+    "definition": "Variable that records values of multiple variables in the context of a data structure. Variable playing the role of a variable value component.",
+    "parent": "Long"
+  },
+  {
+    "id": "Notation",
+    "name": "DataDescription::Notation",
+    "definition": "Representation of a category in the context of a code or a classification item, as opposed of the corresponding instance value which would appear when used in a dataset.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "Statistics",
+    "name": "DataDescription::Statistics",
+    "definition": "Statistics related to an instance variable within a data set.",
+    "parent": "DataDescription"
+  },
+  {
+    "id": "WideDataSet",
+    "name": "Wide::WideDataSet",
+    "definition": "Organized collection of wide data. It is structured by a wide data structure.",
+    "parent": "Wide"
+  },
+  {
+    "id": "WideDataStructure",
+    "name": "Wide::WideDataStructure",
+    "definition": "Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.",
+    "parent": "Wide"
+  },
+  {
+    "id": "WideKey",
+    "name": "Wide::WideKey",
+    "definition": "Collection of data instances that uniquely identify a collection of data points in a wide dataset.",
+    "parent": "Wide"
+  },
+  {
+    "id": "WideKeyMember",
+    "name": "Wide::WideKeyMember",
+    "definition": "Single data instance that is part of a wide key.",
+    "parent": "Wide"
+  },
+  {
+    "id": "DataPointPosition",
+    "name": "FormatDescription::DataPointPosition",
+    "definition": "Indexed location of the associated member within the associated list.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "DataPointRelationship",
+    "name": "FormatDescription::DataPointRelationship",
+    "definition": "Relations used by the segment structure of a logical record to describe specific source-target data points and their relationship.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "InstanceVariableMap",
+    "name": "FormatDescription::InstanceVariableMap",
+    "definition": "Key value relationship for two or more logical records where the key is one or more equivalent instance variables and the value is a defined relationship or a relationship to a set value.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "LocatorMapping",
+    "name": "FormatDescription::LocatorMapping",
+    "definition": "The physical characteristics of an instance variable which appears in a data set using a binary or highly structured text-based encoding (a structured data set).",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "LogicalRecord",
+    "name": "FormatDescription::LogicalRecord",
+    "definition": "Collection of instance variables.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "LogicalRecordRelationship",
+    "name": "FormatDescription::LogicalRecordRelationship",
+    "definition": "Relationships between logical records within a logical record repository structure.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "LogicalRecordRepository",
+    "name": "FormatDescription::LogicalRecordRepository",
+    "definition": "Repository of logical records.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "LogicalRecordRepositoryStructure",
+    "name": "FormatDescription::LogicalRecordRepositoryStructure",
+    "definition": "Set of relationships between logical records in a logical record repository.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "PhysicalDataSet",
+    "name": "FormatDescription::PhysicalDataSet",
+    "definition": "Information needed for understanding the physical structure of data coming from a file or other source.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "PhysicalMapping",
+    "name": "FormatDescription::PhysicalMapping",
+    "definition": "Physical characteristics of the values of an instance variable as part of a physical data set.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "PhysicalMappingPosition",
+    "name": "FormatDescription::PhysicalMappingPosition",
+    "definition": "Denotes the position of a physical mapping in a sequence within a physical data set.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "Segment",
+    "name": "FormatDescription::Segment",
+    "definition": "Description of each storage segment required to completely cover a physical data set.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "SegmentPosition",
+    "name": "FormatDescription::SegmentPosition",
+    "definition": "Assigns a position to the segment within the whole physical data set. For example in what order does this 80 character segment fall within an 800 character record.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "SegmentStructure",
+    "name": "FormatDescription::SegmentStructure",
+    "definition": "Means for describing the complex relational structure of data points in a physical record representing the logical record.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "StatisticsCollection",
+    "name": "FormatDescription::StatisticsCollection",
+    "definition": "Collection of summary and category statistics for an instance variable",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "StructuredDataSet",
+    "name": "FormatDescription::StructuredDataSet",
+    "definition": "Information describing the physical aspects of a data set using a binary or highly structured text-based encoding.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "TabularTextDataSet",
+    "name": "FormatDescription::TabularTextDataSet",
+    "definition": "Information describing the physical aspects of a data set which is encoded using a text-based method and which has an essentially tabular structure.",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "TextMapping",
+    "name": "FormatDescription::TextMapping",
+    "definition": "The physical characteristics of an instance variable which appears in a data set using a text-based encoding and having a tabular structure (a tabular text data set).",
+    "parent": "FormatDescription"
+  },
+  {
+    "id": "Activity",
+    "name": "Process::Activity",
+    "definition": "Task described at a conceptual level. It is not parameterized and as such is less reusable. For more logical/physical, fine-grained, reusable description there is a sub-type called step.",
+    "parent": "Process"
+  },
+  {
+    "id": "AllenIntervalAlgebra",
+    "name": "Process::AllenIntervalAlgebra",
+    "definition": "Control logic where the execution flow is determined by the satisfaction of temporal constraints specified with Allen's Interval Algebra over time intervals. Allen's interval algebra consists of thirteen temporal interval relations and the operations defined on them. Together these relations are dis ...",
+    "parent": "Process"
+  },
+  {
+    "id": "ConditionalControlLogic",
+    "name": "Process::ConditionalControlLogic",
+    "definition": "A set of decision points which determine the flow between the steps used to perform an activity.",
+    "parent": "Process"
+  },
+  {
+    "id": "ControlLogic",
+    "name": "Process::ControlLogic",
+    "definition": "Program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may contain control logic ...",
+    "parent": "Process"
+  },
+  {
+    "id": "Curator",
+    "name": "Process::Curator",
+    "definition": "Curator is a software agent that uses techniques such as natural language processing to map facts in the research data store to the condition part of a rule.",
+    "parent": "Process"
+  },
+  {
+    "id": "DeterministicImperative",
+    "name": "Process::DeterministicImperative",
+    "definition": "Deterministic imperative is a subtype of control logic. Deterministic control logic consists of control constructs.",
+    "parent": "Process"
+  },
+  {
+    "id": "InformationFlowDefinition",
+    "name": "Process::InformationFlowDefinition",
+    "definition": "Relationships between parameters across steps is described by the information flow definition. Each relationship creates a pathway for an information object to follow.",
+    "parent": "Process"
+  },
+  {
+    "id": "NonDeterministicDeclarative",
+    "name": "Process::NonDeterministicDeclarative",
+    "definition": "Non-deterministic control logic is a subtype of control logic. Non-deterministic (or declarative) control logic is constraint- and/or rule-based.",
+    "parent": "Process"
+  },
+  {
+    "id": "Parameter",
+    "name": "Process::Parameter",
+    "definition": "Input or output to control logic and the step/sub-step it invokes. Parameters may take the form of any information object, including data sets and structured metadata as well as configuration information for the step/sub-step.",
+    "parent": "Process"
+  },
+  {
+    "id": "ProcessingAgent",
+    "name": "Process::ProcessingAgent",
+    "definition": "A processing agent orchestrates the production of information objects in a production environment. There are processing agents which perform data capture, data editing/processing, and data analysis (etc.), each in the appropriate production environments. The processing agent performs an activity bas ...",
+    "parent": "Process"
+  },
+  {
+    "id": "ProductionEnvironment",
+    "name": "Process::ProductionEnvironment",
+    "definition": "Production environments consume and produce information objects by way of processing pipelines orchestrated by the processing agent.",
+    "parent": "Process"
+  },
+  {
+    "id": "Rule",
+    "name": "Process::Rule",
+    "definition": "A rule has a condition part and an action part. A rule takes the form of: If [Condition<U+007D> Then [Action]. A rule belongs to a rule set which is a component of rule based scheduling performed by the processing agent",
+    "parent": "Process"
+  },
+  {
+    "id": "RuleBasedScheduling",
+    "name": "Process::RuleBasedScheduling",
+    "definition": "Rule based scheduling performs a fact check on rules from the rule set, testing their condition part against the facts in the research data store. Fact checking may be assisted by a curator who can semantically compare the condition part of each candidate rule with the facts. The fact checker return ...",
+    "parent": "Process"
+  },
+  {
+    "id": "RuleSet",
+    "name": "Process::RuleSet",
+    "definition": "A rule set is a collection of rules. A rule set is a component of rule based scheduling.",
+    "parent": "Process"
+  },
+  {
+    "id": "Sequence",
+    "name": "Process::Sequence",
+    "definition": "A sequence controls the order of activities or steps by defining a simple sequence.",
+    "parent": "Process"
+  },
+  {
+    "id": "SequencePosition",
+    "name": "Process::SequencePosition",
+    "definition": "Assigns a sequence number to an activity within a sequence.",
+    "parent": "Process"
+  },
+  {
+    "id": "Service",
+    "name": "Process::Service",
+    "definition": "Service is a type of processing agent. Services are atomic. They execute acts which have input and output parameters.",
+    "parent": "Process"
+  },
+  {
+    "id": "Step",
+    "name": "Process::Step",
+    "definition": "Reusable, parameterized activity associated to information flows. One or more steps perform an activity.",
+    "parent": "Process"
+  },
+  {
+    "id": "TemporalConstraints",
+    "name": "Process::TemporalConstraints",
+    "definition": "Temporal constraints provide a mechanism for expressing concurrency control and synchronization",
+    "parent": "Process"
+  },
+  {
+    "id": "TemporalControlConstruct",
+    "name": "Process::TemporalControlConstruct",
+    "definition": "Declarative control flow operator where the continuation of the execution flow depends on the finalization of one or more preceding activities/steps. - XORJoin: Given three activities A, B and C, if XORJoin(A, B) -> C, then C is executed after either A or B finishes executing. XORJoin is sometimes r ...",
+    "parent": "Process"
+  },
+  {
+    "id": "AuthorizationSource",
+    "name": "Representations::AuthorizationSource",
+    "definition": "Identifies the authorizing agency and allows for the full text of the authorization (law, regulation, or other form of authorization).",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationFamily",
+    "name": "Representations::ClassificationFamily",
+    "definition": "Collection of classification series related by being based on a common concept",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationIndex",
+    "name": "Representations::ClassificationIndex",
+    "definition": "Ordered list of classification index entries.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationIndexEntry",
+    "name": "Representations::ClassificationIndexEntry",
+    "definition": "Word or a short phrase corresponding to a classification item in a statistical classification, together with the code of the corresponding classification item.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationIndexEntryPosition",
+    "name": "Representations::ClassificationIndexEntryPosition",
+    "definition": "Member indicator for use with member type classification index entry.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationItem",
+    "name": "Representations::ClassificationItem",
+    "definition": "A space for a category within a statistical classification.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationItemPosition",
+    "name": "Representations::ClassificationItemPosition",
+    "definition": "Provides a classification item with an index conveying the order of the classification item within a sequence, expressed as an integer, progressing upward from 0 or 1.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationItemRelationship",
+    "name": "Representations::ClassificationItemRelationship",
+    "definition": "Source-target relationship between classification items in a classification item relation structure.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationPosition",
+    "name": "Representations::ClassificationPosition",
+    "definition": "The index of a classification within a classification family expressed as an integer, progressing upward from 0 or 1.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationSeries",
+    "name": "Representations::ClassificationSeries",
+    "definition": "Ensemble of one or more statistical classifications, based on the same concept, and related to each other as versions or updates.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationSeriesStructure",
+    "name": "Representations::ClassificationSeriesStructure",
+    "definition": "Structure for describing the complex relationships between statistical classifications in a classification series.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ClassificationStructure",
+    "name": "Representations::ClassificationStructure",
+    "definition": "Complex relation structure for use with statistical classification.",
+    "parent": "Representations"
+  },
+  {
+    "id": "Code",
+    "name": "Representations::Code",
+    "definition": "The characters used as a symbol to designate a category within a codelist or classification. (Formally, a sign for which the signifier is non-linguistic alphanumeric string.)",
+    "parent": "Representations"
+  },
+  {
+    "id": "CodeList",
+    "name": "Representations::CodeList",
+    "definition": "List of codes and associated categories.",
+    "parent": "Representations"
+  },
+  {
+    "id": "CodeListStructure",
+    "name": "Representations::CodeListStructure",
+    "definition": "Relation structure of codes within a codelist.",
+    "parent": "Representations"
+  },
+  {
+    "id": "CodePosition",
+    "name": "Representations::CodePosition",
+    "definition": "An index within an order intended for presentation (even though the content within levels of the hierarchy may be conceptually unordered). Expressed as an integer counting upward from 01 or 1.",
+    "parent": "Representations"
+  },
+  {
+    "id": "CodeRelationship",
+    "name": "Representations::CodeRelationship",
+    "definition": "Source target relationship between codes in a code relation structure.",
+    "parent": "Representations"
+  },
+  {
+    "id": "CorrespondenceTable",
+    "name": "Representations::CorrespondenceTable",
+    "definition": "Set of relationships between the members within or between statistical classifications.",
+    "parent": "Representations"
+  },
+  {
+    "id": "EnumerationDomain",
+    "name": "Representations::EnumerationDomain",
+    "definition": "A base class acting as an extension point to allow all codifications (codelist, statistical classification, etc.) to be understood as enumerated value domains.",
+    "parent": "Representations"
+  },
+  {
+    "id": "Level",
+    "name": "Representations::Level",
+    "definition": "Set of all classification items the same number of relationships from the root (or top) classification item.",
+    "parent": "Representations"
+  },
+  {
+    "id": "LevelStructure",
+    "name": "Representations::LevelStructure",
+    "definition": "Nesting structure of a hierarchical collection.",
+    "parent": "Representations"
+  },
+  {
+    "id": "SentinelValueDomain",
+    "name": "Representations::SentinelValueDomain",
+    "definition": "Value domain for a sentinel conceptual domain.",
+    "parent": "Representations"
+  },
+  {
+    "id": "StatisticalClassification",
+    "name": "Representations::StatisticalClassification",
+    "definition": "Set of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent.",
+    "parent": "Representations"
+  },
+  {
+    "id": "StatisticalClassificationRelationship",
+    "name": "Representations::StatisticalClassificationRelationship",
+    "definition": "Specifies the statistical classifications for the source and target of a complex relationship and defines the relationship.",
+    "parent": "Representations"
+  },
+  {
+    "id": "SubstantiveValueDomain",
+    "name": "Representations::SubstantiveValueDomain",
+    "definition": "Value domain for a substantive conceptual domain. Typically a description and/or enumeration of allowed values of interest.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ValueAndConceptDescription",
+    "name": "Representations::ValueAndConceptDescription",
+    "definition": "Formal description of a set of values.",
+    "parent": "Representations"
+  },
+  {
+    "id": "ValueDomain",
+    "name": "Representations::ValueDomain",
+    "definition": "Set of permissible values for a variable (adapted from ISO/IEC 11179).",
+    "parent": "Representations"
+  }
+]
+;
+const associationData =[
+  {
+    "source": "Activity",
+    "target": "Activity"
+  },
+  {
+    "source": "Activity",
+    "target": "ControlLogic"
+  },
+  {
+    "source": "Activity",
+    "target": "Step"
+  },
+  {
+    "source": "AgentListing",
+    "target": "Agent"
+  },
+  {
+    "source": "AgentListing",
+    "target": "AgentPosition"
+  },
+  {
+    "source": "AgentListing",
+    "target": "Concept"
+  },
+  {
+    "source": "AgentPosition",
+    "target": "Agent"
+  },
+  {
+    "source": "AgentRelationship",
+    "target": "Agent"
+  },
+  {
+    "source": "AgentStructure",
+    "target": "AgentListing"
+  },
+  {
+    "source": "AgentStructure",
+    "target": "AgentRelationship"
+  },
+  {
+    "source": "AttributeComponent",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "AttributeComponent",
+    "target": "RepresentedVariable"
+  },
+  {
+    "source": "AuthorizationSource",
+    "target": "Agent"
+  },
+  {
+    "source": "CategoryPosition",
+    "target": "Category"
+  },
+  {
+    "source": "CategoryRelationship",
+    "target": "Category"
+  },
+  {
+    "source": "CategorySet",
+    "target": "Category"
+  },
+  {
+    "source": "CategorySet",
+    "target": "CategoryPosition"
+  },
+  {
+    "source": "CategorySet",
+    "target": "Concept"
+  },
+  {
+    "source": "CategorySetStructure",
+    "target": "CategoryRelationship"
+  },
+  {
+    "source": "CategorySetStructure",
+    "target": "CategorySet"
+  },
+  {
+    "source": "CategoryStatistics",
+    "target": "Category"
+  },
+  {
+    "source": "CategoryStatistics",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "CategoryStatistics",
+    "target": "StatisticsCollection"
+  },
+  {
+    "source": "ClassificationFamily",
+    "target": "ClassificationIndex"
+  },
+  {
+    "source": "ClassificationFamily",
+    "target": "ClassificationSeries"
+  },
+  {
+    "source": "ClassificationFamily",
+    "target": "Concept"
+  },
+  {
+    "source": "ClassificationIndex",
+    "target": "Agent"
+  },
+  {
+    "source": "ClassificationIndex",
+    "target": "ClassificationIndexEntry"
+  },
+  {
+    "source": "ClassificationIndex",
+    "target": "ClassificationIndexEntryPosition"
+  },
+  {
+    "source": "ClassificationIndex",
+    "target": "Concept"
+  },
+  {
+    "source": "ClassificationIndexEntryPosition",
+    "target": "ClassificationIndexEntry"
+  },
+  {
+    "source": "ClassificationItem",
+    "target": "AuthorizationSource"
+  },
+  {
+    "source": "ClassificationItem",
+    "target": "Category"
+  },
+  {
+    "source": "ClassificationItem",
+    "target": "ClassificationItem"
+  },
+  {
+    "source": "ClassificationItem",
+    "target": "Notation"
+  },
+  {
+    "source": "ClassificationItemPosition",
+    "target": "ClassificationItem"
+  },
+  {
+    "source": "ClassificationItemRelationship",
+    "target": "ClassificationItem"
+  },
+  {
+    "source": "ClassificationPosition",
+    "target": "StatisticalClassification"
+  },
+  {
+    "source": "ClassificationSeries",
+    "target": "Agent"
+  },
+  {
+    "source": "ClassificationSeries",
+    "target": "ClassificationPosition"
+  },
+  {
+    "source": "ClassificationSeries",
+    "target": "Concept"
+  },
+  {
+    "source": "ClassificationSeries",
+    "target": "StatisticalClassification"
+  },
+  {
+    "source": "ClassificationSeriesStructure",
+    "target": "ClassificationSeries"
+  },
+  {
+    "source": "ClassificationSeriesStructure",
+    "target": "StatisticalClassificationRelationship"
+  },
+  {
+    "source": "ClassificationStructure",
+    "target": "ClassificationItemRelationship"
+  },
+  {
+    "source": "ClassificationStructure",
+    "target": "StatisticalClassification"
+  },
+  {
+    "source": "Code",
+    "target": "Category"
+  },
+  {
+    "source": "Code",
+    "target": "Notation"
+  },
+  {
+    "source": "CodeList",
+    "target": "CategorySet"
+  },
+  {
+    "source": "CodeList",
+    "target": "Code"
+  },
+  {
+    "source": "CodeList",
+    "target": "CodePosition"
+  },
+  {
+    "source": "CodeList",
+    "target": "Concept"
+  },
+  {
+    "source": "CodeList",
+    "target": "LevelStructure"
+  },
+  {
+    "source": "CodeListStructure",
+    "target": "CodeList"
+  },
+  {
+    "source": "CodeListStructure",
+    "target": "CodeRelationship"
+  },
+  {
+    "source": "CodePosition",
+    "target": "Code"
+  },
+  {
+    "source": "CodeRelationship",
+    "target": "Code"
+  },
+  {
+    "source": "ComponentPosition",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "Concept",
+    "target": "Concept"
+  },
+  {
+    "source": "ConceptMap",
+    "target": "Concept"
+  },
+  {
+    "source": "ConceptRelationship",
+    "target": "Concept"
+  },
+  {
+    "source": "ConceptSystem",
+    "target": "Concept"
+  },
+  {
+    "source": "ConceptSystemCorrespondence",
+    "target": "ConceptMap"
+  },
+  {
+    "source": "ConceptSystemCorrespondence",
+    "target": "ConceptSystem"
+  },
+  {
+    "source": "ConceptSystemStructure",
+    "target": "ConceptRelationship"
+  },
+  {
+    "source": "ConceptSystemStructure",
+    "target": "ConceptSystem"
+  },
+  {
+    "source": "ConceptualDomain",
+    "target": "ConceptSystem"
+  },
+  {
+    "source": "ConceptualDomain",
+    "target": "ValueAndConceptDescription"
+  },
+  {
+    "source": "ConceptualValue",
+    "target": "Concept"
+  },
+  {
+    "source": "ConceptualValue",
+    "target": "ConceptualDomain"
+  },
+  {
+    "source": "ConceptualVariable",
+    "target": "Concept"
+  },
+  {
+    "source": "ConceptualVariable",
+    "target": "SentinelConceptualDomain"
+  },
+  {
+    "source": "ConceptualVariable",
+    "target": "SubstantiveConceptualDomain"
+  },
+  {
+    "source": "ConceptualVariable",
+    "target": "UnitType"
+  },
+  {
+    "source": "ControlLogic",
+    "target": "Activity"
+  },
+  {
+    "source": "ControlLogic",
+    "target": "ControlLogic"
+  },
+  {
+    "source": "ControlLogic",
+    "target": "InformationFlowDefinition"
+  },
+  {
+    "source": "ControlLogic",
+    "target": "ProcessingAgent"
+  },
+  {
+    "source": "CorrespondenceTable",
+    "target": "Agent"
+  },
+  {
+    "source": "CorrespondenceTable",
+    "target": "ConceptMap"
+  },
+  {
+    "source": "CorrespondenceTable",
+    "target": "Level"
+  },
+  {
+    "source": "CorrespondenceTable",
+    "target": "StatisticalClassification"
+  },
+  {
+    "source": "DataPoint",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "DataPoint",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "DataPointPosition",
+    "target": "DataPoint"
+  },
+  {
+    "source": "DataPointRelationship",
+    "target": "DataPoint"
+  },
+  {
+    "source": "DataSet",
+    "target": "DataPoint"
+  },
+  {
+    "source": "DataSet",
+    "target": "DataStructure"
+  },
+  {
+    "source": "DataSet",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "DataSet",
+    "target": "Key"
+  },
+  {
+    "source": "DataStructure",
+    "target": "ComponentPosition"
+  },
+  {
+    "source": "DataStructure",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "DataStructure",
+    "target": "ForeignKey"
+  },
+  {
+    "source": "DataStructure",
+    "target": "PrimaryKey"
+  },
+  {
+    "source": "DataStructure",
+    "target": "RepresentedVariable"
+  },
+  {
+    "source": "DataStructureComponent",
+    "target": "RepresentedVariable"
+  },
+  {
+    "source": "Datum",
+    "target": "ConceptualValue"
+  },
+  {
+    "source": "Datum",
+    "target": "InstanceValue"
+  },
+  {
+    "source": "Datum",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "Datum",
+    "target": "Notation"
+  },
+  {
+    "source": "Descriptor",
+    "target": "ConceptualValue"
+  },
+  {
+    "source": "Descriptor",
+    "target": "DataPoint"
+  },
+  {
+    "source": "Descriptor",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "Descriptor",
+    "target": "DescriptorValueDomain"
+  },
+  {
+    "source": "Descriptor",
+    "target": "ReferenceValue"
+  },
+  {
+    "source": "Descriptor",
+    "target": "ReferenceVariable"
+  },
+  {
+    "source": "Descriptor",
+    "target": "ValueDomain"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "Concept"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "DescriptorValueDomain"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "SentinelConceptualDomain"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "SentinelValueDomain"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "StatisticsCollection"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "SubstantiveConceptualDomain"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "SubstantiveValueDomain"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "UnitType"
+  },
+  {
+    "source": "DimensionComponent",
+    "target": "RepresentedVariable"
+  },
+  {
+    "source": "DimensionComponent",
+    "target": "ValueDomain"
+  },
+  {
+    "source": "DimensionGroup",
+    "target": "DimensionComponent"
+  },
+  {
+    "source": "DimensionalDataSet",
+    "target": "DataPoint"
+  },
+  {
+    "source": "DimensionalDataSet",
+    "target": "DataStructure"
+  },
+  {
+    "source": "DimensionalDataSet",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "DimensionalDataSet",
+    "target": "Key"
+  },
+  {
+    "source": "DimensionalDataSet",
+    "target": "ScopedMeasure"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "ComponentPosition"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "DimensionGroup"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "ForeignKey"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "PrimaryKey"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "RepresentedVariable"
+  },
+  {
+    "source": "DimensionalKeyDefinitionMember",
+    "target": "Concept"
+  },
+  {
+    "source": "DimensionalKeyDefinitionMember",
+    "target": "ConceptualDomain"
+  },
+  {
+    "source": "DimensionalKeyDefinitionMember",
+    "target": "DimensionalKeyMember"
+  },
+  {
+    "source": "DimensionalKeyMember",
+    "target": "CodeList"
+  },
+  {
+    "source": "DimensionalKeyMember",
+    "target": "ConceptualValue"
+  },
+  {
+    "source": "DimensionalKeyMember",
+    "target": "DataPoint"
+  },
+  {
+    "source": "DimensionalKeyMember",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "DimensionalKeyMember",
+    "target": "ValueDomain"
+  },
+  {
+    "source": "EnumerationDomain",
+    "target": "CategorySet"
+  },
+  {
+    "source": "EnumerationDomain",
+    "target": "Concept"
+  },
+  {
+    "source": "EnumerationDomain",
+    "target": "LevelStructure"
+  },
+  {
+    "source": "ForeignKey",
+    "target": "ForeignKeyComponent"
+  },
+  {
+    "source": "ForeignKeyComponent",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "ForeignKeyComponent",
+    "target": "PrimaryKeyComponent"
+  },
+  {
+    "source": "InformationFlowDefinition",
+    "target": "Parameter"
+  },
+  {
+    "source": "InstanceKey",
+    "target": "DataPoint"
+  },
+  {
+    "source": "InstanceKey",
+    "target": "InstanceValue"
+  },
+  {
+    "source": "InstanceKey",
+    "target": "KeyDefinition"
+  },
+  {
+    "source": "InstanceKey",
+    "target": "KeyMember"
+  },
+  {
+    "source": "InstanceKey",
+    "target": "ReferenceValue"
+  },
+  {
+    "source": "InstanceKey",
+    "target": "Unit"
+  },
+  {
+    "source": "InstanceKey",
+    "target": "Universe"
+  },
+  {
+    "source": "InstanceValue",
+    "target": "ConceptualValue"
+  },
+  {
+    "source": "InstanceValue",
+    "target": "DataPoint"
+  },
+  {
+    "source": "InstanceValue",
+    "target": "ValueDomain"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "Concept"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "SentinelConceptualDomain"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "SentinelValueDomain"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "StatisticsCollection"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "SubstantiveConceptualDomain"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "SubstantiveValueDomain"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "UnitType"
+  },
+  {
+    "source": "InstanceVariableMap",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "Key",
+    "target": "DataPoint"
+  },
+  {
+    "source": "Key",
+    "target": "KeyDefinition"
+  },
+  {
+    "source": "Key",
+    "target": "KeyMember"
+  },
+  {
+    "source": "Key",
+    "target": "Unit"
+  },
+  {
+    "source": "Key",
+    "target": "Universe"
+  },
+  {
+    "source": "KeyDefinition",
+    "target": "KeyDefinitionMember"
+  },
+  {
+    "source": "KeyDefinition",
+    "target": "Unit"
+  },
+  {
+    "source": "KeyDefinition",
+    "target": "Universe"
+  },
+  {
+    "source": "KeyMember",
+    "target": "ConceptualValue"
+  },
+  {
+    "source": "KeyMember",
+    "target": "DataPoint"
+  },
+  {
+    "source": "KeyMember",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "KeyMember",
+    "target": "ValueDomain"
+  },
+  {
+    "source": "Level",
+    "target": "ClassificationItem"
+  },
+  {
+    "source": "Level",
+    "target": "Concept"
+  },
+  {
+    "source": "LevelStructure",
+    "target": "Level"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "Concept"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "DataSet"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "LogicalRecordRelationship",
+    "target": "InstanceVariableMap"
+  },
+  {
+    "source": "LogicalRecordRelationship",
+    "target": "LogicalRecord"
+  },
+  {
+    "source": "LogicalRecordRepository",
+    "target": "Concept"
+  },
+  {
+    "source": "LogicalRecordRepository",
+    "target": "LogicalRecord"
+  },
+  {
+    "source": "LogicalRecordRepositoryStructure",
+    "target": "LogicalRecordRelationship"
+  },
+  {
+    "source": "LogicalRecordRepositoryStructure",
+    "target": "LogicalRecordRepository"
+  },
+  {
+    "source": "MainKeyMember",
+    "target": "ConceptualValue"
+  },
+  {
+    "source": "MainKeyMember",
+    "target": "DataPoint"
+  },
+  {
+    "source": "MainKeyMember",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "MainKeyMember",
+    "target": "SubstantiveValueDomain"
+  },
+  {
+    "source": "MainKeyMember",
+    "target": "ValueDomain"
+  },
+  {
+    "source": "Notation",
+    "target": "Category"
+  },
+  {
+    "source": "PhysicalDataSet",
+    "target": "Concept"
+  },
+  {
+    "source": "PhysicalDataSet",
+    "target": "DataSet"
+  },
+  {
+    "source": "PhysicalDataSet",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "PhysicalDataSet",
+    "target": "LogicalRecord"
+  },
+  {
+    "source": "PhysicalDataSet",
+    "target": "PhysicalMapping"
+  },
+  {
+    "source": "PhysicalDataSet",
+    "target": "PhysicalMappingPosition"
+  },
+  {
+    "source": "PhysicalDataSet",
+    "target": "Segment"
+  },
+  {
+    "source": "PhysicalDataSet",
+    "target": "SegmentPosition"
+  },
+  {
+    "source": "PhysicalMapping",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "PhysicalMappingPosition",
+    "target": "PhysicalMapping"
+  },
+  {
+    "source": "Population",
+    "target": "Concept"
+  },
+  {
+    "source": "Population",
+    "target": "Unit"
+  },
+  {
+    "source": "PrimaryKey",
+    "target": "PrimaryKeyComponent"
+  },
+  {
+    "source": "PrimaryKeyComponent",
+    "target": "DataStructureComponent"
+  },
+  {
+    "source": "ProcessingAgent",
+    "target": "Activity"
+  },
+  {
+    "source": "ProcessingAgent",
+    "target": "ProductionEnvironment"
+  },
+  {
+    "source": "QualifiedMeasure",
+    "target": "MeasureComponent"
+  },
+  {
+    "source": "QualifiedMeasure",
+    "target": "RepresentedVariable"
+  },
+  {
+    "source": "ReferenceValue",
+    "target": "ConceptualValue"
+  },
+  {
+    "source": "ReferenceValue",
+    "target": "DataPoint"
+  },
+  {
+    "source": "ReferenceValue",
+    "target": "ReferenceValueDomain"
+  },
+  {
+    "source": "ReferenceValue",
+    "target": "ValueDomain"
+  },
+  {
+    "source": "ReferenceValue",
+    "target": "VariableValueComponent"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "Concept"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "ReferenceValueDomain"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "SentinelConceptualDomain"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "SentinelValueDomain"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "StatisticsCollection"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "SubstantiveConceptualDomain"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "SubstantiveValueDomain"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "UnitType"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "Concept"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "SentinelConceptualDomain"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "SentinelValueDomain"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "SubstantiveConceptualDomain"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "SubstantiveValueDomain"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "UnitType"
+  },
+  {
+    "source": "RevisableDatum",
+    "target": "ConceptualValue"
+  },
+  {
+    "source": "RevisableDatum",
+    "target": "InstanceValue"
+  },
+  {
+    "source": "RevisableDatum",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "RevisableDatum",
+    "target": "Notation"
+  },
+  {
+    "source": "RevisableDatum",
+    "target": "Revision"
+  },
+  {
+    "source": "Rule",
+    "target": "ConditionalControlLogic"
+  },
+  {
+    "source": "RuleBasedScheduling",
+    "target": "Activity"
+  },
+  {
+    "source": "RuleBasedScheduling",
+    "target": "ControlLogic"
+  },
+  {
+    "source": "RuleBasedScheduling",
+    "target": "Curator"
+  },
+  {
+    "source": "RuleBasedScheduling",
+    "target": "InformationFlowDefinition"
+  },
+  {
+    "source": "RuleBasedScheduling",
+    "target": "ProcessingAgent"
+  },
+  {
+    "source": "RuleBasedScheduling",
+    "target": "RuleSet"
+  },
+  {
+    "source": "RuleSet",
+    "target": "Rule"
+  },
+  {
+    "source": "ScopedMeasure",
+    "target": "DimensionalKeyDefinition"
+  },
+  {
+    "source": "ScopedMeasure",
+    "target": "QualifiedMeasure"
+  },
+  {
+    "source": "ScopedMeasure",
+    "target": "RevisableDatum"
+  },
+  {
+    "source": "Segment",
+    "target": "Concept"
+  },
+  {
+    "source": "Segment",
+    "target": "DataPoint"
+  },
+  {
+    "source": "Segment",
+    "target": "DataPointPosition"
+  },
+  {
+    "source": "Segment",
+    "target": "LogicalRecord"
+  },
+  {
+    "source": "Segment",
+    "target": "Population"
+  },
+  {
+    "source": "SegmentPosition",
+    "target": "Segment"
+  },
+  {
+    "source": "SegmentStructure",
+    "target": "DataPointRelationship"
+  },
+  {
+    "source": "SegmentStructure",
+    "target": "Segment"
+  },
+  {
+    "source": "SentinelValueDomain",
+    "target": "EnumerationDomain"
+  },
+  {
+    "source": "SentinelValueDomain",
+    "target": "SentinelConceptualDomain"
+  },
+  {
+    "source": "SentinelValueDomain",
+    "target": "ValueAndConceptDescription"
+  },
+  {
+    "source": "Sequence",
+    "target": "Activity"
+  },
+  {
+    "source": "Sequence",
+    "target": "ControlLogic"
+  },
+  {
+    "source": "Sequence",
+    "target": "InformationFlowDefinition"
+  },
+  {
+    "source": "Sequence",
+    "target": "ProcessingAgent"
+  },
+  {
+    "source": "Sequence",
+    "target": "SequencePosition"
+  },
+  {
+    "source": "SequencePosition",
+    "target": "Activity"
+  },
+  {
+    "source": "StatisticalClassification",
+    "target": "CategorySet"
+  },
+  {
+    "source": "StatisticalClassification",
+    "target": "ClassificationIndex"
+  },
+  {
+    "source": "StatisticalClassification",
+    "target": "ClassificationItem"
+  },
+  {
+    "source": "StatisticalClassification",
+    "target": "ClassificationItemPosition"
+  },
+  {
+    "source": "StatisticalClassification",
+    "target": "Concept"
+  },
+  {
+    "source": "StatisticalClassification",
+    "target": "LevelStructure"
+  },
+  {
+    "source": "StatisticalClassification",
+    "target": "Organization"
+  },
+  {
+    "source": "StatisticalClassification",
+    "target": "StatisticalClassification"
+  },
+  {
+    "source": "StatisticalClassificationRelationship",
+    "target": "StatisticalClassification"
+  },
+  {
+    "source": "Statistics",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "Statistics",
+    "target": "StatisticsCollection"
+  },
+  {
+    "source": "StatisticsCollection",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "Step",
+    "target": "Activity"
+  },
+  {
+    "source": "Step",
+    "target": "ControlLogic"
+  },
+  {
+    "source": "Step",
+    "target": "Parameter"
+  },
+  {
+    "source": "Step",
+    "target": "Step"
+  },
+  {
+    "source": "SubstantiveValueDomain",
+    "target": "EnumerationDomain"
+  },
+  {
+    "source": "SubstantiveValueDomain",
+    "target": "SubstantiveConceptualDomain"
+  },
+  {
+    "source": "SubstantiveValueDomain",
+    "target": "ValueAndConceptDescription"
+  },
+  {
+    "source": "TabularTextDataSet",
+    "target": "Concept"
+  },
+  {
+    "source": "TabularTextDataSet",
+    "target": "DataSet"
+  },
+  {
+    "source": "TabularTextDataSet",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "TabularTextDataSet",
+    "target": "LogicalRecord"
+  },
+  {
+    "source": "TabularTextDataSet",
+    "target": "PhysicalMapping"
+  },
+  {
+    "source": "TabularTextDataSet",
+    "target": "PhysicalMappingPosition"
+  },
+  {
+    "source": "TabularTextDataSet",
+    "target": "Segment"
+  },
+  {
+    "source": "TabularTextDataSet",
+    "target": "SegmentPosition"
+  },
+  {
+    "source": "Unit",
+    "target": "UnitType"
+  },
+  {
+    "source": "VariableCollection",
+    "target": "Concept"
+  },
+  {
+    "source": "VariableCollection",
+    "target": "ConceptualVariable"
+  },
+  {
+    "source": "VariableCollection",
+    "target": "VariablePosition"
+  },
+  {
+    "source": "VariableCollectionStructure",
+    "target": "VariableCollection"
+  },
+  {
+    "source": "VariableCollectionStructure",
+    "target": "VariableRelationship"
+  },
+  {
+    "source": "VariableDescriptorComponent",
+    "target": "DescriptorVariable"
+  },
+  {
+    "source": "VariableDescriptorComponent",
+    "target": "RepresentedVariable"
+  },
+  {
+    "source": "VariableDescriptorComponent",
+    "target": "VariableValueComponent"
+  },
+  {
+    "source": "VariablePosition",
+    "target": "ConceptualVariable"
+  },
+  {
+    "source": "VariableRelationship",
+    "target": "ConceptualVariable"
+  }
+]
+;
+const spec ={
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "An one-page synopsis of a UML model. A network diagram of UML model classes, where the edges (associations) are grouped by hierarchical edge bundling. Based on Vega 'Edge Bundling', see: https://vega.github.io/vega/examples/edge-bundling/",
+  "padding": 5,
+  "width": 1300,
+  "height": 1300,
+  "signals": [
+    {
+      "name": "tension",
+      "value": 0.9,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1,
+        "step": 0.01
+      }
+    },
+    {
+      "name": "radius",
+      "value": 250,
+      "bind": {
+        "input": "range",
+        "min": 20,
+        "max": 400
+      }
+    },
+    {
+      "name": "extent",
+      "value": 360
+    },
+    {
+      "name": "rotate",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 360,
+        "step": 1
+      }
+    },
+    {
+      "name": "textSize",
+      "value": 8,
+      "bind": {
+        "input": "range",
+        "min": 2,
+        "max": 20,
+        "step": 1
+      }
+    },
+    {
+      "name": "textOffset",
+      "value": 6
+    },
+    {
+      "name": "layout",
+      "value": "cluster"
+    },
+    {
+      "name": "colorIn",
+      "value": "firebrick"
+    },
+    {
+      "name": "colorOut",
+      "value": "forestgreen"
+    },
+    {
+      "name": "originX",
+      "update": "width / 2"
+    },
+    {
+      "name": "originY",
+      "update": "height / 2"
+    },
+    {
+      "name": "active",
+      "value": null,
+      "on": [
+        {
+          "events": "text:click",
+          "update": "datum.id"
+        },
+        {
+          "events": "mousedown",
+          "update": "null"
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "tree",
+      "values": classData,
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "tree",
+          "method": {
+            "signal": "layout"
+          },
+          "size": [
+            1,
+            1
+          ],
+          "as": [
+            "alpha",
+            "beta",
+            "depth",
+            "children"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "(rotate + extent * datum.alpha + 270) % 360",
+          "as": "angle"
+        },
+        {
+          "type": "formula",
+          "expr": "inrange(datum.angle, [90, 270])",
+          "as": "leftside"
+        },
+        {
+          "type": "formula",
+          "expr": "originX + radius * datum.beta * cos(PI * datum.angle / 180)",
+          "as": "x"
+        },
+        {
+          "type": "formula",
+          "expr": "originY + radius * datum.beta * sin(PI * datum.angle / 180)",
+          "as": "y"
+        },
+        {
+          "type": "formula",
+          "expr": "'../../rewrite.html#' + substring(datum.name, indexof(datum.name, '::')+2)",
+          "as": "url"
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!datum.children"
+        }
+      ]
+    },
+    {
+      "name": "dependencies",
+      "values": associationData,
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "treePath('tree', datum.source, datum.target)",
+          "as": "treepath",
+          "initonly": true
+        }
+      ]
+    },
+    {
+      "name": "selected",
+      "source": "dependencies",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.source === active || datum.target === active"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "text": {
+            "field": "name"
+          },
+          "baseline": {
+            "value": "middle"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "dx": {
+            "signal": "textOffset * (datum.leftside ? -1 : 1)"
+          },
+          "angle": {
+            "signal": "datum.leftside ? datum.angle - 180 : datum.angle"
+          },
+          "align": {
+            "signal": "datum.leftside ? 'right' : 'left'"
+          },
+          "fontSize": {
+            "signal": "textSize"
+          },
+          "fontWeight": [
+            {
+              "test": "indata('selected', 'source', datum.id)",
+              "value": "bold"
+            },
+            {
+              "test": "indata('selected', 'target', datum.id)",
+              "value": "bold"
+            },
+            {
+              "value": null
+            }
+          ],
+          "fill": [
+            {
+              "test": "datum.id === active",
+              "value": "black"
+            },
+            {
+              "test": "indata('selected', 'source', datum.id)",
+              "signal": "colorIn"
+            },
+            {
+              "test": "indata('selected', 'target', datum.id)",
+              "signal": "colorOut"
+            },
+            {
+              "value": "black"
+            }
+          ],
+          "cursor": {
+            "value": "default"
+          },
+          "tooltip": {
+            "signal": "{'Name': datum.name, 'Definition': datum.definition, 'Click': 'to highlight its associations.'}"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "size": {
+            "value": 40
+          },
+          "stroke": {
+            "value": "grey"
+          },
+          "fill": {
+            "value": "grey"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "dx": {
+            "signal": "textOffset * (datum.leftside ? -1 : 1)"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "size": {
+            "value": 200
+          },
+          "opacity": {
+            "value": 0
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "dx": {
+            "signal": "textOffset * (datum.leftside ? -1 : 1)"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "{'Name': datum.name, 'Click': 'to open the details page (Ctrl+click for new tab, Shift+click for new window)'}"
+          },
+          "href": {
+            "signal": "isValid(datum[\"url\"]) ? datum[\"url\"] : \"\"+datum[\"url\"]"
+          }
+        }
+      }
+    },
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "path",
+          "data": "dependencies",
+          "field": "treepath"
+        }
+      },
+      "marks": [
+        {
+          "type": "line",
+          "interactive": false,
+          "from": {
+            "data": "path"
+          },
+          "encode": {
+            "enter": {
+              "interpolate": {
+                "value": "bundle"
+              },
+              "strokeWidth": {
+                "value": 1.5
+              }
+            },
+            "update": {
+              "stroke": [
+                {
+                  "test": "parent.source === active",
+                  "signal": "colorOut"
+                },
+                {
+                  "test": "parent.target === active",
+                  "signal": "colorIn"
+                },
+                {
+                  "value": "steelblue"
+                }
+              ],
+              "strokeOpacity": [
+                {
+                  "test": "parent.source === active || parent.target === active",
+                  "value": 1
+                },
+                {
+                  "value": 0.2
+                }
+              ],
+              "tension": {
+                "signal": "tension"
+              },
+              "x": {
+                "field": "x"
+              },
+              "y": {
+                "field": "y"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": [
+        "incoming",
+        "outgoing"
+      ],
+      "range": [
+        {
+          "signal": "colorIn"
+        },
+        {
+          "signal": "colorOut"
+        }
+      ]
+    }
+  ],
+  "title": {
+    "text": "Bird's Eye View of the Model with the Associations of all Classes",
+    "fontSize": 20,
+    "subtitle": [
+      "Grouped and bundled by package name.",
+      "⠀",
+      "Move the mouse pointer over a class to see its definition.",
+      "Click on a class to highlight its associations (click on the empty area to get the original view).",
+      "Click on the gray bullet point (•) next to a class to open the details page."
+    ],
+    "subtitleFontSize": 11,
+    "subtitlePadding": 10
+  },
+  "legends": [
+    {
+      "stroke": "color",
+      "orient": "top-left",
+      "title": "Associations",
+      "symbolType": "stroke"
+    }
+  ]
+}
+  ;
+  var opt = {
+    "actions": {"export": true, "source": false, "compiled": false, "editor": false},
+    "ast": true,
+    "downloadFileName": "AssociationOfAllClasses",
+    "mode": "vega",
+    "renderer": "svg"
+    };
+  vegaEmbed("#vis", spec, opt).then(console.log).catch(console.warn);
+</script></section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exploratory Diagrams</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="InheritanceTreeVegaDiagram.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class Inheritance</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, DDI Alliance.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
