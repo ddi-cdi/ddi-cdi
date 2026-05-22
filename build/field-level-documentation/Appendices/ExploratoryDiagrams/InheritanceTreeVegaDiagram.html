@@ -1,0 +1,1329 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class Inheritance &#8212; DDI Cross Domain Integration (DDI-CDI 1.1beta)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=90ec1f7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/diagramModal.css?v=f32f5540" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=351a2e83"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/custom.js?v=630073b2"></script>
+    <script src="../../_static/_modelInformation.js?v=886d4a72"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Appendices/ExploratoryDiagrams/InheritanceTreeVegaDiagram';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Inheritance by Package" href="InheritanceTreeDiagram/index.html" />
+    <link rel="prev" title="Associated Classes" href="AssociatedClassesVegaDiagram.html" /> 
+    <meta http-equiv="Content-Security-Policy"
+    content="script-src 'self' 'unsafe-inline' https://cdn.datatables.net/ https://unpkg.com/ https://cdnjs.cloudflare.com/ https://cdn.jsdelivr.net/;
+              style-src 'self' 'unsafe-inline' https://cdn.datatables.net/ ;
+                img-src 'self' data: ; " />
+	<!--
+		Combined css and js downloads created with https://datatables.net/download/.
+		Options: Bootstrap 5, DataTables, SearchPanes, Select, Minify, Concatenate
+	-->
+	<link href="https://cdn.datatables.net/v/bs5/dt-2.3.2/sp-2.3.4/sl-3.0.1/datatables.min.css"
+	      rel="stylesheet"
+	      integrity="sha384-h7m53mmJL0KEQkDui56fPxSnPjuEavXjU+34pfXMjrOu4olRAwJRVX0Xn1xNNWUH"
+	      crossorigin="anonymous">
+ 
+    <script src="https://cdn.datatables.net/v/bs5/dt-2.3.2/sp-2.3.4/sl-3.0.1/datatables.min.js"
+            integrity="sha384-A4z2JTmKuCIgpL7FWMQCxpUB/VyzJllBRjl4R6TwgkCrKzGzSTol7IsajUmg8y4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.6.0/dist/panzoom.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.1/canvg.js"
+      integrity="sha512-Qw1+j4vl/AjCqxrx/omDzobdEepDHathD3Z0bwulQSrLlaTtTWhiH3sMSDU4oK2TP2EfyzHgg33gh2zxUAI3EQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+   
+
+<a class="navbar-brand logo" href="http://ddialliance.org/Specification/DDI-CDI/1.0/">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/cdi.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/cdi.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">DDI Cross Domain Integration</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><div class="model-title">
+<h3>DDI-CDI 1.1beta UML Model Documentation</h3>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"></span>
+
+
+</form></div>
+        <div class="sidebar-primary-item">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Context/index.html">Context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DDICDILibrary/index.html">DDICDILibrary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DesignPatterns/index.html">DesignPatterns</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Appendices</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Exploratory Diagrams</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="AssociatedClassesVegaDiagram.html">Associated Classes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Class Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="InheritanceTreeDiagram/index.html">Inheritance by Package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ModelItemLists/index.html">Model Item Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+  </ul>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+        <div class="header-article-item">
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Appendices</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Exploratory Diagrams</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Class Inheritance</li>
+
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ddi-cdi/ddi-cdi" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ddi-cdi/ddi-cdi/issues/new?title=Issue%20on%20page%20%2FAppendices/ExploratoryDiagrams/InheritanceTreeVegaDiagram.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class Inheritance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="class-inheritance">
+<span id="inheritancetreevegadiagram"></span><h1>Class Inheritance<a class="headerlink" href="#class-inheritance" title="Permalink to this heading">#</a></h1>
+<!-- Due to CORS issues everything inline. Otherwise, grammar and data could be in separate files. -->
+<div id="vis"/>
+<script src="https://cdn.jsdelivr.net/npm/vega@6.1.2/build/vega.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.2/build/vega-embed.min.js"></script>
+  <script>
+  const classData =   [
+     {
+       "id": "Root",
+       "name": "Diagram root (no class)"
+     },
+     {
+       "id": "Agent",
+       "name": "Agents::Agent",
+       "definition": "Actor that performs a role in relation to a process or product.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "DataStructureComponent",
+       "name": "Components::DataStructureComponent",
+       "definition": "Role given to a represented variable in the context of a data structure.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "Concept",
+       "name": "Conceptual::Concept",
+       "definition": "Unit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).",
+       "parent": "Root"
+
+     },
+     {
+       "id": "ConceptSystem",
+       "name": "Conceptual::ConceptSystem",
+       "definition": "Set of concepts structured by the relations among them [GSIM 1.1].",
+       "parent": "Root"
+
+     },
+     {
+       "id": "ConceptualDomain",
+       "name": "Conceptual::ConceptualDomain",
+       "definition": "Set of concepts, where each concept is intended to be used as the meaning (signified) for a datum.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "DataSet",
+       "name": "DataDescription::DataSet",
+       "definition": "Organized collection of data based on keys.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "Datum",
+       "name": "DataDescription::Datum",
+       "definition": "Correspondence of a data instance to the concept it represents.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "InstanceValue",
+       "name": "DataDescription::InstanceValue",
+       "definition": "Single data instance corresponding to a concept (with a notion of equality defined) being observed, captured, or derived.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "Key",
+       "name": "DataDescription::Key",
+       "definition": "Collection of data instances that uniquely identify a collection of data points in a dataset.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "KeyDefinition",
+       "name": "DataDescription::KeyDefinition",
+       "definition": "Collection of concepts that uniquely defines a collection of data points in a dataset.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "Statistics",
+       "name": "DataDescription::Statistics",
+       "definition": "Statistics related to an instance variable within a data set.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "PhysicalDataSet",
+       "name": "FormatDescription::PhysicalDataSet",
+       "definition": "Information needed for understanding the physical structure of data coming from a file or other source.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "PhysicalMapping",
+       "name": "FormatDescription::PhysicalMapping",
+       "definition": "Physical characteristics of the values of an instance variable as part of a physical data set.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "Activity",
+       "name": "Process::Activity",
+       "definition": "Task described at a conceptual level. It is not parameterized and as such is less reusable. For more logical/physical, fine-grained, reusable description there is a sub-type called step.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "ControlLogic",
+       "name": "Process::ControlLogic",
+       "definition": "Program in which the order of statements is explicit. Control logic is either deterministic (imperative) or non-deterministic (declarative). Deterministic control logic consists of control constructs. Declarative control logic is constraint- and/or rule-based. Control logic may contain control logic ...",
+       "parent": "Root"
+
+     },
+     {
+       "id": "EnumerationDomain",
+       "name": "Representations::EnumerationDomain",
+       "definition": "A base class acting as an extension point to allow all codifications (codelist, statistical classification, etc.) to be understood as enumerated value domains.",
+       "parent": "Root"
+
+     },
+     {
+       "id": "ValueDomain",
+       "name": "Representations::ValueDomain",
+       "definition": "Set of permissible values for a variable (adapted from ISO/IEC 11179).",
+       "parent": "Root"
+
+     },
+     {
+       "id": "Individual",
+       "name": "Agents::Individual",
+       "definition": "A person. (See for example the W3C Friend of a Friend Ontology - http://xmlns.com/foaf/spec/#term_Person).",
+       "parent": "Agent"
+
+     },
+     {
+       "id": "Machine",
+       "name": "Agents::Machine",
+       "definition": "Mechanism or computer program used to perform an act.",
+       "parent": "Agent"
+
+     },
+     {
+       "id": "Organization",
+       "name": "Agents::Organization",
+       "definition": "Collection of people organized within a framework of authority that can perform an act or be associated with another agent.",
+       "parent": "Agent"
+
+     },
+     {
+       "id": "AttributeComponent",
+       "name": "Components::AttributeComponent",
+       "definition": "Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "DimensionComponent",
+       "name": "Components::DimensionComponent",
+       "definition": "Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional \"cube\".",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "IdentifierComponent",
+       "name": "Components::IdentifierComponent",
+       "definition": "Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "MeasureComponent",
+       "name": "Components::MeasureComponent",
+       "definition": "Role given to a represented variable in the context of a data structure to hold the observed/derived values.",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "VariableDescriptorComponent",
+       "name": "Components::VariableDescriptorComponent",
+       "definition": "Role given to a represented variable in the context of a data structure to provide codes for variable identification.",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "VariableValueComponent",
+       "name": "Components::VariableValueComponent",
+       "definition": "Role given to a represented variable in the context of a data structure to record values of multiple variables.",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "Category",
+       "name": "Conceptual::Category",
+       "definition": "Concept whose role is to define and measure a characteristic.",
+       "parent": "Concept"
+
+     },
+     {
+       "id": "CategorySet",
+       "name": "Conceptual::CategorySet",
+       "definition": "Concept system where the underlying concepts are categories.",
+       "parent": "ConceptSystem"
+
+     },
+     {
+       "id": "ConceptualVariable",
+       "name": "Conceptual::ConceptualVariable",
+       "definition": "A variable at the highest level of abstraction.",
+       "parent": "Concept"
+
+     },
+     {
+       "id": "SentinelConceptualDomain",
+       "name": "Conceptual::SentinelConceptualDomain",
+       "definition": "Conceptual domain of sentinel concepts.",
+       "parent": "ConceptualDomain"
+
+     },
+     {
+       "id": "SubstantiveConceptualDomain",
+       "name": "Conceptual::SubstantiveConceptualDomain",
+       "definition": "Conceptual domain of substantive concepts.",
+       "parent": "ConceptualDomain"
+
+     },
+     {
+       "id": "UnitType",
+       "name": "Conceptual::UnitType",
+       "definition": "Unit type is a type or class of objects of interest (units).",
+       "parent": "Concept"
+
+     },
+     {
+       "id": "CategoryStatistics",
+       "name": "DataDescription::CategoryStatistics",
+       "definition": "Statistics related to a specific category of an instance variable within a data set.",
+       "parent": "Statistics"
+
+     },
+     {
+       "id": "ConceptualValue",
+       "name": "DataDescription::ConceptualValue",
+       "definition": "Concept (with a notion of equality defined) being observed, captured, or derived which is associated to a single data instance.",
+       "parent": "Concept"
+
+     },
+     {
+       "id": "DataStructure",
+       "name": "DataDescription::DataStructure",
+       "definition": "Data organization based on reusable data structure components.",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "KeyMember",
+       "name": "DataDescription::KeyMember",
+       "definition": "Single data instance that is part of a key.",
+       "parent": "InstanceValue"
+
+     },
+     {
+       "id": "DimensionalDataSet",
+       "name": "Dimensional::DimensionalDataSet",
+       "definition": "Organized collection of multidimensional data. It is structured by a dimensional data structure.",
+       "parent": "DataSet"
+
+     },
+     {
+       "id": "DimensionalKey",
+       "name": "Dimensional::DimensionalKey",
+       "definition": "Collection of data instances that uniquely identify a collection of data points in a dimensional dataset.",
+       "parent": "Key"
+
+     },
+     {
+       "id": "DimensionalKeyDefinition",
+       "name": "Dimensional::DimensionalKeyDefinition",
+       "definition": "Collection of concepts that uniquely defines a collection of data points in a dimensional dataset.",
+       "parent": "KeyDefinition"
+
+     },
+     {
+       "id": "RevisableDatum",
+       "name": "Dimensional::RevisableDatum",
+       "definition": "A datum that can be qualified by a revision.",
+       "parent": "Datum"
+
+     },
+     {
+       "id": "LocatorMapping",
+       "name": "FormatDescription::LocatorMapping",
+       "definition": "The physical characteristics of an instance variable which appears in a data set using a binary or highly structured text-based encoding (a structured data set).",
+       "parent": "PhysicalMapping"
+
+     },
+     {
+       "id": "StructuredDataSet",
+       "name": "FormatDescription::StructuredDataSet",
+       "definition": "Information describing the physical aspects of a data set using a binary or highly structured text-based encoding.",
+       "parent": "PhysicalDataSet"
+
+     },
+     {
+       "id": "TabularTextDataSet",
+       "name": "FormatDescription::TabularTextDataSet",
+       "definition": "Information describing the physical aspects of a data set which is encoded using a text-based method and which has an essentially tabular structure.",
+       "parent": "PhysicalDataSet"
+
+     },
+     {
+       "id": "TextMapping",
+       "name": "FormatDescription::TextMapping",
+       "definition": "The physical characteristics of an instance variable which appears in a data set using a text-based encoding and having a tabular structure (a tabular text data set).",
+       "parent": "PhysicalMapping"
+
+     },
+     {
+       "id": "ContextualComponent",
+       "name": "KeyValue::ContextualComponent",
+       "definition": "Encapsulates contextual information of the key-value datastore to provide a scope to the instance key. The instance key is unique within the scope.",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "InstanceKey",
+       "name": "KeyValue::InstanceKey",
+       "definition": "Single-valued key representation produced from the merge of the representations of all key members and a descriptor.",
+       "parent": "Key"
+
+     },
+     {
+       "id": "KeyValueDataStore",
+       "name": "KeyValue::KeyValueDataStore",
+       "definition": "Organized collection of key-value data. It is structured by a key value structure.",
+       "parent": "DataSet"
+
+     },
+     {
+       "id": "SyntheticIdComponent",
+       "name": "KeyValue::SyntheticIdComponent",
+       "definition": "Persistent and unique identifier (PIDs) to provide standarized, long-lasting identification.",
+       "parent": "DataStructureComponent"
+
+     },
+     {
+       "id": "LongDataSet",
+       "name": "Long::LongDataSet",
+       "definition": "Organized collection of long data. It is structured by a long data structure.",
+       "parent": "DataSet"
+
+     },
+     {
+       "id": "LongKey",
+       "name": "Long::LongKey",
+       "definition": "Collection of data instances that uniquely identify a collection of data points in a long dataset.",
+       "parent": "Key"
+
+     },
+     {
+       "id": "ReferenceValue",
+       "name": "Long::ReferenceValue",
+       "definition": "Recorded value in a variable value component. Value referenced by a descriptor.",
+       "parent": "InstanceValue"
+
+     },
+     {
+       "id": "ReferenceValueDomain",
+       "name": "Long::ReferenceValueDomain",
+       "definition": "Set of permissible values for a variable playing the role of a variable value component.",
+       "parent": "ValueDomain"
+
+     },
+     {
+       "id": "DeterministicImperative",
+       "name": "Process::DeterministicImperative",
+       "definition": "Deterministic imperative is a subtype of control logic. Deterministic control logic consists of control constructs.",
+       "parent": "ControlLogic"
+
+     },
+     {
+       "id": "NonDeterministicDeclarative",
+       "name": "Process::NonDeterministicDeclarative",
+       "definition": "Non-deterministic control logic is a subtype of control logic. Non-deterministic (or declarative) control logic is constraint- and/or rule-based.",
+       "parent": "ControlLogic"
+
+     },
+     {
+       "id": "ProcessingAgent",
+       "name": "Process::ProcessingAgent",
+       "definition": "A processing agent orchestrates the production of information objects in a production environment. There are processing agents which perform data capture, data editing/processing, and data analysis (etc.), each in the appropriate production environments. The processing agent performs an activity bas ...",
+       "parent": "Agent"
+
+     },
+     {
+       "id": "Step",
+       "name": "Process::Step",
+       "definition": "Reusable, parameterized activity associated to information flows. One or more steps perform an activity.",
+       "parent": "Activity"
+
+     },
+     {
+       "id": "CodeList",
+       "name": "Representations::CodeList",
+       "definition": "List of codes and associated categories.",
+       "parent": "EnumerationDomain"
+
+     },
+     {
+       "id": "SentinelValueDomain",
+       "name": "Representations::SentinelValueDomain",
+       "definition": "Value domain for a sentinel conceptual domain.",
+       "parent": "ValueDomain"
+
+     },
+     {
+       "id": "StatisticalClassification",
+       "name": "Representations::StatisticalClassification",
+       "definition": "Set of categories represented by classification items where the subset of immediate children categories for any given parent category are mutually exclusive and jointly exhaustive with respect to that parent.",
+       "parent": "EnumerationDomain"
+
+     },
+     {
+       "id": "SubstantiveValueDomain",
+       "name": "Representations::SubstantiveValueDomain",
+       "definition": "Value domain for a substantive conceptual domain. Typically a description and/or enumeration of allowed values of interest.",
+       "parent": "ValueDomain"
+
+     },
+     {
+       "id": "WideDataSet",
+       "name": "Wide::WideDataSet",
+       "definition": "Organized collection of wide data. It is structured by a wide data structure.",
+       "parent": "DataSet"
+
+     },
+     {
+       "id": "WideKey",
+       "name": "Wide::WideKey",
+       "definition": "Collection of data instances that uniquely identify a collection of data points in a wide dataset.",
+       "parent": "Key"
+
+     },
+     {
+       "id": "RepresentedVariable",
+       "name": "Conceptual::RepresentedVariable",
+       "definition": "Conceptual variable with a substantive value domain specified.",
+       "parent": "ConceptualVariable"
+
+     },
+     {
+       "id": "Universe",
+       "name": "Conceptual::Universe",
+       "definition": "Specialized unit type, with the specialization based upon characteristics other than time and geography.",
+       "parent": "UnitType"
+
+     },
+     {
+       "id": "KeyDefinitionMember",
+       "name": "DataDescription::KeyDefinitionMember",
+       "definition": "Single concept that is part of the structure of a key definition.",
+       "parent": "ConceptualValue"
+
+     },
+     {
+       "id": "DimensionalDataStructure",
+       "name": "Dimensional::DimensionalDataStructure",
+       "definition": "Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.",
+       "parent": "DataStructure"
+
+     },
+     {
+       "id": "DimensionalKeyDefinitionMember",
+       "name": "Dimensional::DimensionalKeyDefinitionMember",
+       "definition": "Single concept that is part of a dimensional key definition.",
+       "parent": "ConceptualValue"
+
+     },
+     {
+       "id": "DimensionalKeyMember",
+       "name": "Dimensional::DimensionalKeyMember",
+       "definition": "Single data instance that is part of a dimensional key.",
+       "parent": "KeyMember"
+
+     },
+     {
+       "id": "QualifiedMeasure",
+       "name": "Dimensional::QualifiedMeasure",
+       "definition": "A measure having a specific production method.",
+       "parent": "MeasureComponent"
+
+     },
+     {
+       "id": "KeyValueStructure",
+       "name": "KeyValue::KeyValueStructure",
+       "definition": "Structure of a key-value datastore (organized collection of key-value data). It is described by identifier, contextual, synthetic id, dimension, variable descriptor and variable value components.",
+       "parent": "DataStructure"
+
+     },
+     {
+       "id": "MainKeyMember",
+       "name": "KeyValue::MainKeyMember",
+       "definition": "Identifies the unit of interest, either a statistical unit or a population, via identifier or dimension components, respectively, plus an optional contextual component. If neither identifier nor dimension components are present, then a synthetic id component is used.",
+       "parent": "KeyMember"
+
+     },
+     {
+       "id": "Descriptor",
+       "name": "Long::Descriptor",
+       "definition": "Use of a code for variable identification in the context of a data structure and a variable descriptor component.",
+       "parent": "KeyMember"
+
+     },
+     {
+       "id": "DescriptorValueDomain",
+       "name": "Long::DescriptorValueDomain",
+       "definition": "Set of permissible values for a variable playing the role of a variable descriptor component.",
+       "parent": "SubstantiveValueDomain"
+
+     },
+     {
+       "id": "LongDataStructure",
+       "name": "Long::LongDataStructure",
+       "definition": "Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.",
+       "parent": "DataStructure"
+
+     },
+     {
+       "id": "LongMainKeyMember",
+       "name": "Long::LongMainKeyMember",
+       "definition": "Single data instance that is part of a long key.",
+       "parent": "KeyMember"
+
+     },
+     {
+       "id": "ConditionalControlLogic",
+       "name": "Process::ConditionalControlLogic",
+       "definition": "A set of decision points which determine the flow between the steps used to perform an activity.",
+       "parent": "DeterministicImperative"
+
+     },
+     {
+       "id": "Curator",
+       "name": "Process::Curator",
+       "definition": "Curator is a software agent that uses techniques such as natural language processing to map facts in the research data store to the condition part of a rule.",
+       "parent": "ProcessingAgent"
+
+     },
+     {
+       "id": "RuleBasedScheduling",
+       "name": "Process::RuleBasedScheduling",
+       "definition": "Rule based scheduling performs a fact check on rules from the rule set, testing their condition part against the facts in the research data store. Fact checking may be assisted by a curator who can semantically compare the condition part of each candidate rule with the facts. The fact checker return ...",
+       "parent": "NonDeterministicDeclarative"
+
+     },
+     {
+       "id": "Sequence",
+       "name": "Process::Sequence",
+       "definition": "A sequence controls the order of activities or steps by defining a simple sequence.",
+       "parent": "DeterministicImperative"
+
+     },
+     {
+       "id": "Service",
+       "name": "Process::Service",
+       "definition": "Service is a type of processing agent. Services are atomic. They execute acts which have input and output parameters.",
+       "parent": "ProcessingAgent"
+
+     },
+     {
+       "id": "TemporalConstraints",
+       "name": "Process::TemporalConstraints",
+       "definition": "Temporal constraints provide a mechanism for expressing concurrency control and synchronization",
+       "parent": "NonDeterministicDeclarative"
+
+     },
+     {
+       "id": "WideDataStructure",
+       "name": "Wide::WideDataStructure",
+       "definition": "Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.",
+       "parent": "DataStructure"
+
+     },
+     {
+       "id": "WideKeyMember",
+       "name": "Wide::WideKeyMember",
+       "definition": "Single data instance that is part of a wide key.",
+       "parent": "KeyMember"
+
+     },
+     {
+       "id": "InstanceVariable",
+       "name": "Conceptual::InstanceVariable",
+       "definition": "Use of a represented variable within a data set.",
+       "parent": "RepresentedVariable"
+
+     },
+     {
+       "id": "Population",
+       "name": "Conceptual::Population",
+       "definition": "Universe with time and geography specified.",
+       "parent": "Universe"
+
+     },
+     {
+       "id": "AllenIntervalAlgebra",
+       "name": "Process::AllenIntervalAlgebra",
+       "definition": "Control logic where the execution flow is determined by the satisfaction of temporal constraints specified with Allen's Interval Algebra over time intervals. Allen's interval algebra consists of thirteen temporal interval relations and the operations defined on them. Together these relations are dis ...",
+       "parent": "TemporalConstraints"
+
+     },
+     {
+       "id": "TemporalControlConstruct",
+       "name": "Process::TemporalControlConstruct",
+       "definition": "Declarative control flow operator where the continuation of the execution flow depends on the finalization of one or more preceding activities/steps. - XORJoin: Given three activities A, B and C, if XORJoin(A, B) -> C, then C is executed after either A or B finishes executing. XORJoin is sometimes r ...",
+       "parent": "TemporalConstraints"
+
+     },
+     {
+       "id": "DescriptorVariable",
+       "name": "Long::DescriptorVariable",
+       "definition": "Variable that provides codes for variable identification in the context of a data structure. Variable playing the role of a variable descriptor component.",
+       "parent": "InstanceVariable"
+
+     },
+     {
+       "id": "ReferenceVariable",
+       "name": "Long::ReferenceVariable",
+       "definition": "Variable that records values of multiple variables in the context of a data structure. Variable playing the role of a variable value component.",
+       "parent": "InstanceVariable"
+
+     }
+   ]
+;
+const spec ={
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "A Cartesian layout for a node-link diagram of hierarchical data. Built according to the Vega 'Tree Layout Example' at https://vega.github.io/vega/examples/tree-layout/.",
+  "width": 1300,
+  "height": 1600,
+  "padding": 5,
+  "signals": [
+    {
+      "name": "labels",
+      "value": true
+    },
+    {
+      "name": "layout",
+      "value": "tidy"
+    },
+    {
+      "name": "links",
+      "value": "diagonal",
+      "bind": {
+        "input": "select",
+        "options": [
+          "line",
+          "curve",
+          "diagonal",
+          "orthogonal"
+        ]
+      }
+    },
+    {
+      "name": "separation",
+      "value": true
+    }
+  ],
+  "data": [
+    {
+      "name": "tree",
+      "values": classData,
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "tree",
+          "method": {
+            "signal": "layout"
+          },
+          "size": [
+            {
+              "signal": "height"
+            },
+            {
+              "signal": "width - 100"
+            }
+          ],
+          "separation": {
+            "signal": "separation"
+          },
+          "as": [
+            "y",
+            "x",
+            "depth",
+            "children"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "'../../rewrite.html#' + substring(datum.name, indexof(datum.name, '::')+2)",
+          "as": "url"
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "treelinks"
+        },
+        {
+          "type": "linkpath",
+          "orient": "horizontal",
+          "shape": {
+            "signal": "links"
+          }
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "linear",
+      "range": {
+        "scheme": "magma"
+      },
+      "domain": {
+        "data": "tree",
+        "field": "depth"
+      },
+      "zero": true
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "from": {
+        "data": "links"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "field": "path"
+          },
+          "stroke": {
+            "value": "#ccc"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "tree"
+      },
+      "encode": {
+        "enter": {
+          "size": {
+            "value": 100
+          },
+          "stroke": {
+            "value": "#fff"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "fill": {
+            "scale": "color",
+            "field": "depth"
+          },
+          "tooltip": {
+            "signal": "{'Name': datum.name, 'Definition': datum.definition, 'Click': 'to open the details page (Ctrl+click for new tab, Shift+click for new window)'}"
+          },
+          "href": {
+            "signal": "isValid(datum[\"url\"]) ? datum[\"url\"] : \"\"+datum[\"url\"]"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "tree"
+      },
+      "encode": {
+        "enter": {
+          "text": {
+            "field": "name"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "baseline": {
+            "value": "middle"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "dx": {
+            "signal": "datum.children ? -7 : 7"
+          },
+          "align": {
+            "signal": "datum.children ? 'right' : 'left'"
+          },
+          "opacity": {
+            "signal": "labels ? 1 : 0"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "{'Name': datum.name, 'Definition': datum.definition, 'Click': 'to open the details page (Ctrl+click for new tab, Shift+click for new window)'}"
+          },
+          "href": {
+            "signal": "isValid(datum[\"url\"]) ? datum[\"url\"] : \"\"+datum[\"url\"]"
+          }
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Class Inheritance of the Model",
+    "fontSize": 20,
+    "subtitle": [
+      "Class hierarchy from left to right.",
+      "Sorted by package name and class name from top to bottom.",
+      "⠀",
+      "Move the mouse pointer over a class to see its definition.",
+      "Click on a class to open the details page (Ctrl+click for new tab, Shift+click for new window)"
+    ],
+    "subtitleFontSize": 11,
+    "subtitlePadding": 10
+  }
+}
+  ;
+  var opt = {
+    "actions": {"export": true, "source": false, "compiled": false, "editor": false},
+    "ast": true,
+    "downloadFileName": "ClassInheritance",
+    "mode": "vega",
+    "renderer": "svg"
+    };
+  vegaEmbed("#vis", spec, opt).then(console.log).catch(console.warn);
+</script></section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="AssociatedClassesVegaDiagram.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Associated Classes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="InheritanceTreeDiagram/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Inheritance by Package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, DDI Alliance.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

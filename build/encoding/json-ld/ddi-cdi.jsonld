@@ -560,10 +560,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -588,8 +584,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -600,6 +596,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -608,12 +608,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -644,8 +644,8 @@
               "@reverse": "cdi:CategorySet_has_Category",
               "@type": "@id"
             },
-            "for_OF_CategoryStatistic": {
-              "@reverse": "cdi:CategoryStatistic_for_Category",
+            "for_OF_CategoryStatistics": {
+              "@reverse": "cdi:CategoryStatistics_for_Category",
               "@type": "@id"
             },
             "denotes_OF_ClassificationItem": {
@@ -710,57 +710,8 @@
               "@id": "cdi:CategoryRelationship_hasTarget_Category",
               "@type": "@id"
             },
-            "has_CategoryRelationship_OF_CategoryRelationStructure": {
-              "@reverse": "cdi:CategoryRelationStructure_has_CategoryRelationship",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "CategoryRelationStructure": {
-      "@id": "cdi:CategoryRelationStructure",
-      "@context": [
-          {
-            "identifier": {
-              "@id": "cdi:CategoryRelationStructure-identifier",
-              "@type": "@id"
-            },
-            "name": {
-              "@id": "cdi:CategoryRelationStructure-name",
-              "@type": "@id"
-            },
-            "purpose": {
-              "@id": "cdi:CategoryRelationStructure-purpose",
-              "@type": "@id"
-            },
-            "semantics": {
-              "@id": "cdi:CategoryRelationStructure-semantics",
-              "@type": "@id"
-            },
-            "specification": {
-              "@id": "cdi:CategoryRelationStructure-specification",
-              "@type": "@id"
-            },
-            "topology": {
-              "@id": "cdi:CategoryRelationStructure-topology",
-              "@type": "@id"
-            },
-            "totality": {
-              "@id": "cdi:CategoryRelationStructure-totality",
-              "@type": "@vocab",
-              "@context": {
-                "Partial": "cdi:Partial"
-            ,    "Total": "cdi:Total"
-              }
-            },
-            
-            "has_CategoryRelationship": {
-              "@id": "cdi:CategoryRelationStructure_has_CategoryRelationship",
-              "@type": "@id"
-            },
-            "structures": {
-              "@id": "cdi:CategoryRelationStructure_structures_CategorySet",
+            "has_CategoryRelationship_OF_CategorySetStructure": {
+              "@reverse": "cdi:CategorySetStructure_has_CategoryRelationship",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -804,12 +755,12 @@
               "@id": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "structures_OF_ConceptStructure": {
-              "@reverse": "cdi:ConceptStructure_structures_ConceptSystem",
-              "@type": "@id"
-            },
             "maps_OF_ConceptSystemCorrespondence": {
               "@reverse": "cdi:ConceptSystemCorrespondence_maps_ConceptSystem",
+              "@type": "@id"
+            },
+            "structures_OF_ConceptSystemStructure": {
+              "@reverse": "cdi:ConceptSystemStructure_structures_ConceptSystem",
               "@type": "@id"
             },
             "takesConceptsFrom_OF_ConceptualDomain": {
@@ -828,12 +779,61 @@
               "@id": "cdi:CategorySet_has_CategoryPosition",
               "@type": "@id"
             },
-            "structures_OF_CategoryRelationStructure": {
-              "@reverse": "cdi:CategoryRelationStructure_structures_CategorySet",
+            "structures_OF_CategorySetStructure": {
+              "@reverse": "cdi:CategorySetStructure_structures_CategorySet",
               "@type": "@id"
             },
             "references_OF_EnumerationDomain": {
               "@reverse": "cdi:EnumerationDomain_references_CategorySet",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "CategorySetStructure": {
+      "@id": "cdi:CategorySetStructure",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:CategorySetStructure-identifier",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "cdi:CategorySetStructure-name",
+              "@type": "@id"
+            },
+            "purpose": {
+              "@id": "cdi:CategorySetStructure-purpose",
+              "@type": "@id"
+            },
+            "semantics": {
+              "@id": "cdi:CategorySetStructure-semantics",
+              "@type": "@id"
+            },
+            "specification": {
+              "@id": "cdi:CategorySetStructure-specification",
+              "@type": "@id"
+            },
+            "topology": {
+              "@id": "cdi:CategorySetStructure-topology",
+              "@type": "@id"
+            },
+            "totality": {
+              "@id": "cdi:CategorySetStructure-totality",
+              "@type": "@vocab",
+              "@context": {
+                "Partial": "cdi:Partial"
+            ,    "Total": "cdi:Total"
+              }
+            },
+            
+            "has_CategoryRelationship": {
+              "@id": "cdi:CategorySetStructure_has_CategoryRelationship",
+              "@type": "@id"
+            },
+            "structures": {
+              "@id": "cdi:CategorySetStructure_structures_CategorySet",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -889,10 +889,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -917,8 +913,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -929,6 +925,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -937,12 +937,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -1019,57 +1019,8 @@
               "@id": "cdi:ConceptRelationship_hasTarget_Concept",
               "@type": "@id"
             },
-            "has_ConceptRelationship_OF_ConceptStructure": {
-              "@reverse": "cdi:ConceptStructure_has_ConceptRelationship",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "ConceptStructure": {
-      "@id": "cdi:ConceptStructure",
-      "@context": [
-          {
-            "identifier": {
-              "@id": "cdi:ConceptStructure-identifier",
-              "@type": "@id"
-            },
-            "name": {
-              "@id": "cdi:ConceptStructure-name",
-              "@type": "@id"
-            },
-            "purpose": {
-              "@id": "cdi:ConceptStructure-purpose",
-              "@type": "@id"
-            },
-            "semantics": {
-              "@id": "cdi:ConceptStructure-semantics",
-              "@type": "@id"
-            },
-            "specification": {
-              "@id": "cdi:ConceptStructure-specification",
-              "@type": "@id"
-            },
-            "topology": {
-              "@id": "cdi:ConceptStructure-topology",
-              "@type": "@id"
-            },
-            "totality": {
-              "@id": "cdi:ConceptStructure-totality",
-              "@type": "@vocab",
-              "@context": {
-                "Partial": "cdi:Partial"
-            ,    "Total": "cdi:Total"
-              }
-            },
-            
-            "has_ConceptRelationship": {
-              "@id": "cdi:ConceptStructure_has_ConceptRelationship",
-              "@type": "@id"
-            },
-            "structures": {
-              "@id": "cdi:ConceptStructure_structures_ConceptSystem",
+            "has_ConceptRelationship_OF_ConceptSystemStructure": {
+              "@reverse": "cdi:ConceptSystemStructure_has_ConceptRelationship",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -1113,12 +1064,12 @@
               "@id": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "structures_OF_ConceptStructure": {
-              "@reverse": "cdi:ConceptStructure_structures_ConceptSystem",
-              "@type": "@id"
-            },
             "maps_OF_ConceptSystemCorrespondence": {
               "@reverse": "cdi:ConceptSystemCorrespondence_maps_ConceptSystem",
+              "@type": "@id"
+            },
+            "structures_OF_ConceptSystemStructure": {
+              "@reverse": "cdi:ConceptSystemStructure_structures_ConceptSystem",
               "@type": "@id"
             },
             "takesConceptsFrom_OF_ConceptualDomain": {
@@ -1160,6 +1111,55 @@
             },
             "maps": {
               "@id": "cdi:ConceptSystemCorrespondence_maps_ConceptSystem",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "ConceptSystemStructure": {
+      "@id": "cdi:ConceptSystemStructure",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:ConceptSystemStructure-identifier",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "cdi:ConceptSystemStructure-name",
+              "@type": "@id"
+            },
+            "purpose": {
+              "@id": "cdi:ConceptSystemStructure-purpose",
+              "@type": "@id"
+            },
+            "semantics": {
+              "@id": "cdi:ConceptSystemStructure-semantics",
+              "@type": "@id"
+            },
+            "specification": {
+              "@id": "cdi:ConceptSystemStructure-specification",
+              "@type": "@id"
+            },
+            "topology": {
+              "@id": "cdi:ConceptSystemStructure-topology",
+              "@type": "@id"
+            },
+            "totality": {
+              "@id": "cdi:ConceptSystemStructure-totality",
+              "@type": "@vocab",
+              "@context": {
+                "Partial": "cdi:Partial"
+            ,    "Total": "cdi:Total"
+              }
+            },
+            
+            "has_ConceptRelationship": {
+              "@id": "cdi:ConceptSystemStructure_has_ConceptRelationship",
+              "@type": "@id"
+            },
+            "structures": {
+              "@id": "cdi:ConceptSystemStructure_structures_ConceptSystem",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -1248,10 +1248,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -1276,8 +1272,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -1288,6 +1284,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -1296,12 +1296,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -1401,10 +1401,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -1429,8 +1425,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -1441,6 +1437,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -1449,12 +1449,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -1532,6 +1532,10 @@
             " comment ": "tag:json-should-support-trailing-commas"
           },
           {
+            "function": {
+              "@id": "cdi:InstanceVariable-function",
+              "@type": "@id"
+            },
             "physicalDataType": {
               "@id": "cdi:InstanceVariable-physicalDataType",
               "@type": "@id"
@@ -1540,29 +1544,25 @@
               "@id": "cdi:InstanceVariable-platformType",
               "@type": "@id"
             },
+            "role": {
+              "@id": "cdi:InstanceVariable-role",
+              "@type": "@id"
+            },
             "source": {
               "@id": "cdi:InstanceVariable-source",
               "@type": "@id"
             },
-            "variableFunction": {
-              "@id": "cdi:InstanceVariable-variableFunction",
-              "@type": "@id"
-            },
             
-            "has_PhysicalSegmentLayout": {
-              "@id": "cdi:InstanceVariable_has_PhysicalSegmentLayout",
-              "@type": "@id"
-            },
-            "has_ValueMapping": {
-              "@id": "cdi:InstanceVariable_has_ValueMapping",
-              "@type": "@id"
-            },
-            "appliesTo_OF_CategoryStatistic": {
-              "@reverse": "cdi:CategoryStatistic_appliesTo_InstanceVariable",
+            "isDescribedBy": {
+              "@id": "cdi:InstanceVariable_isDescribedBy_StatisticsCollection",
               "@type": "@id"
             },
             "isDescribedBy_OF_DataPoint": {
               "@reverse": "cdi:DataPoint_isDescribedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "has_InstanceVariable_OF_DataSet": {
+              "@reverse": "cdi:DataSet_has_InstanceVariable",
               "@type": "@id"
             },
             "isBoundedBy_OF_Datum": {
@@ -1583,6 +1583,18 @@
             },
             "has_InstanceVariable_OF_PhysicalDataSet": {
               "@reverse": "cdi:PhysicalDataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
+            "formats_OF_PhysicalMapping": {
+              "@reverse": "cdi:PhysicalMapping_formats_InstanceVariable",
+              "@type": "@id"
+            },
+            "hasWeight_OF_StatisticsCollection": {
+              "@reverse": "cdi:StatisticsCollection_hasWeight_InstanceVariable",
+              "@type": "@id"
+            },
+            "hasWeight_OF_Statistics": {
+              "@reverse": "cdi:Statistics_hasWeight_InstanceVariable",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -1638,10 +1650,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -1666,8 +1674,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -1678,6 +1686,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -1686,12 +1698,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -1722,12 +1734,12 @@
               "@type": "xsd:boolean"
             },
             
-            "correspondsTo_Universe_OF_Key": {
-              "@reverse": "cdi:Key_correspondsTo_Universe",
-              "@type": "@id"
-            },
             "correspondsTo_Universe_OF_KeyDefinition": {
               "@reverse": "cdi:KeyDefinition_correspondsTo_Universe",
+              "@type": "@id"
+            },
+            "correspondsTo_Universe_OF_Key": {
+              "@reverse": "cdi:Key_correspondsTo_Universe",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -1742,8 +1754,8 @@
               "@id": "cdi:Population_isComposedOf_Unit",
               "@type": "@id"
             },
-            "represents_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_represents_Population",
+            "represents_OF_Segment": {
+              "@reverse": "cdi:Segment_represents_Population",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -1799,10 +1811,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -1827,8 +1835,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -1839,6 +1847,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -1847,12 +1859,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -2050,12 +2062,12 @@
               "@id": "cdi:Unit_has_UnitType",
               "@type": "@id"
             },
-            "correspondsTo_Unit_OF_Key": {
-              "@reverse": "cdi:Key_correspondsTo_Unit",
-              "@type": "@id"
-            },
             "correspondsTo_Unit_OF_KeyDefinition": {
               "@reverse": "cdi:KeyDefinition_correspondsTo_Unit",
+              "@type": "@id"
+            },
+            "correspondsTo_Unit_OF_Key": {
+              "@reverse": "cdi:Key_correspondsTo_Unit",
               "@type": "@id"
             },
             "isComposedOf_OF_Population": {
@@ -2115,10 +2127,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -2143,8 +2151,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -2155,6 +2163,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -2163,12 +2175,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -2244,10 +2256,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -2272,8 +2280,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -2284,6 +2292,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -2292,12 +2304,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -2328,12 +2340,12 @@
               "@type": "xsd:boolean"
             },
             
-            "correspondsTo_Universe_OF_Key": {
-              "@reverse": "cdi:Key_correspondsTo_Universe",
-              "@type": "@id"
-            },
             "correspondsTo_Universe_OF_KeyDefinition": {
               "@reverse": "cdi:KeyDefinition_correspondsTo_Universe",
+              "@type": "@id"
+            },
+            "correspondsTo_Universe_OF_Key": {
+              "@reverse": "cdi:Key_correspondsTo_Universe",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -2350,10 +2362,6 @@
             },
             "displayLabel": {
               "@id": "cdi:VariableCollection-displayLabel",
-              "@type": "@id"
-            },
-            "groupingSemantic": {
-              "@id": "cdi:VariableCollection-groupingSemantic",
               "@type": "@id"
             },
             "identifier": {
@@ -2385,8 +2393,57 @@
               "@id": "cdi:VariableCollection_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "structures_OF_VariableStructure": {
-              "@reverse": "cdi:VariableStructure_structures_VariableCollection",
+            "structures_OF_VariableCollectionStructure": {
+              "@reverse": "cdi:VariableCollectionStructure_structures_VariableCollection",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "VariableCollectionStructure": {
+      "@id": "cdi:VariableCollectionStructure",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:VariableCollectionStructure-identifier",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "cdi:VariableCollectionStructure-name",
+              "@type": "@id"
+            },
+            "purpose": {
+              "@id": "cdi:VariableCollectionStructure-purpose",
+              "@type": "@id"
+            },
+            "semantics": {
+              "@id": "cdi:VariableCollectionStructure-semantics",
+              "@type": "@id"
+            },
+            "specification": {
+              "@id": "cdi:VariableCollectionStructure-specification",
+              "@type": "@id"
+            },
+            "topology": {
+              "@id": "cdi:VariableCollectionStructure-topology",
+              "@type": "@id"
+            },
+            "totality": {
+              "@id": "cdi:VariableCollectionStructure-totality",
+              "@type": "@vocab",
+              "@context": {
+                "Partial": "cdi:Partial"
+            ,    "Total": "cdi:Total"
+              }
+            },
+            
+            "has_VariableRelationship": {
+              "@id": "cdi:VariableCollectionStructure_has_VariableRelationship",
+              "@type": "@id"
+            },
+            "structures": {
+              "@id": "cdi:VariableCollectionStructure_structures_VariableCollection",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -2439,57 +2496,45 @@
               "@id": "cdi:VariableRelationship_hasTarget_ConceptualVariable",
               "@type": "@id"
             },
-            "has_VariableRelationship_OF_VariableStructure": {
-              "@reverse": "cdi:VariableStructure_has_VariableRelationship",
+            "has_VariableRelationship_OF_VariableCollectionStructure": {
+              "@reverse": "cdi:VariableCollectionStructure_has_VariableRelationship",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
           }
       ]
     },
-    "VariableStructure": {
-      "@id": "cdi:VariableStructure",
+    "CategoryStatistics": {
+      "@id": "cdi:CategoryStatistics",
       "@context": [
           {
             "identifier": {
-              "@id": "cdi:VariableStructure-identifier",
+              "@id": "cdi:Statistics-identifier",
               "@type": "@id"
             },
-            "name": {
-              "@id": "cdi:VariableStructure-name",
+            "statistic": {
+              "@id": "cdi:Statistics-statistic",
               "@type": "@id"
             },
-            "purpose": {
-              "@id": "cdi:VariableStructure-purpose",
+            "typeOfStatistic": {
+              "@id": "cdi:Statistics-typeOfStatistic",
               "@type": "@id"
-            },
-            "semantics": {
-              "@id": "cdi:VariableStructure-semantics",
-              "@type": "@id"
-            },
-            "specification": {
-              "@id": "cdi:VariableStructure-specification",
-              "@type": "@id"
-            },
-            "topology": {
-              "@id": "cdi:VariableStructure-topology",
-              "@type": "@id"
-            },
-            "totality": {
-              "@id": "cdi:VariableStructure-totality",
-              "@type": "@vocab",
-              "@context": {
-                "Partial": "cdi:Partial"
-            ,    "Total": "cdi:Total"
-              }
             },
             
-            "has_VariableRelationship": {
-              "@id": "cdi:VariableStructure_has_VariableRelationship",
+            "hasWeight": {
+              "@id": "cdi:Statistics_hasWeight_InstanceVariable",
               "@type": "@id"
             },
-            "structures": {
-              "@id": "cdi:VariableStructure_structures_VariableCollection",
+            "has_StatisticsCollection": {
+              "@id": "cdi:Statistics_has_StatisticsCollection",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          },
+          {
+            
+            "for": {
+              "@id": "cdi:CategoryStatistics_for_Category",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -2545,10 +2590,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -2573,8 +2614,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -2585,6 +2626,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -2593,12 +2638,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -2670,12 +2715,8 @@
               "@reverse": "cdi:Key_identifies_DataPoint",
               "@type": "@id"
             },
-            "has_DataPoint_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_has_DataPoint",
-              "@type": "@id"
-            },
-            "formats_OF_ValueMapping": {
-              "@reverse": "cdi:ValueMapping_formats_DataPoint",
+            "has_DataPoint_OF_Segment": {
+              "@reverse": "cdi:Segment_has_DataPoint",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -2690,11 +2731,27 @@
               "@id": "cdi:DataSet-catalogDetails",
               "@type": "@id"
             },
+            "fingerprint": {
+              "@id": "cdi:DataSet-fingerprint",
+              "@type": "@id"
+            },
             "identifier": {
               "@id": "cdi:DataSet-identifier",
               "@type": "@id"
             },
+            "name": {
+              "@id": "cdi:DataSet-name",
+              "@type": "@id"
+            },
+            "recordCount": {
+              "@id": "cdi:DataSet-recordCount",
+              "@type": "xsd:integer"
+            },
             
+            "has_InstanceVariable": {
+              "@id": "cdi:DataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
             "has_DataPoint": {
               "@id": "cdi:DataSet_has_DataPoint",
               "@type": "@id"
@@ -2790,10 +2847,6 @@
             },
             "isStructuredBy_OF_DataSet": {
               "@reverse": "cdi:DataSet_isStructuredBy_DataStructure",
-              "@type": "@id"
-            },
-            "correspondsTo_DataStructure_OF_PhysicalDataSetStructure": {
-              "@reverse": "cdi:PhysicalDataSetStructure_correspondsTo_DataStructure",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -2994,10 +3047,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -3022,8 +3071,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -3034,6 +3083,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -3042,12 +3095,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -3176,6 +3229,35 @@
             },
             "uses_Notation_OF_Datum": {
               "@reverse": "cdi:Datum_uses_Notation",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "Statistics": {
+      "@id": "cdi:Statistics",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:Statistics-identifier",
+              "@type": "@id"
+            },
+            "statistic": {
+              "@id": "cdi:Statistics-statistic",
+              "@type": "@id"
+            },
+            "typeOfStatistic": {
+              "@id": "cdi:Statistics-typeOfStatistic",
+              "@type": "@id"
+            },
+            
+            "hasWeight": {
+              "@id": "cdi:Statistics_hasWeight_InstanceVariable",
+              "@type": "@id"
+            },
+            "has_StatisticsCollection": {
+              "@id": "cdi:Statistics_has_StatisticsCollection",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -3734,6 +3816,31 @@
           }
       ]
     },
+    "DimensionGroup": {
+      "@id": "cdi:DimensionGroup",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:DimensionGroup-identifier",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "cdi:DimensionGroup-name",
+              "@type": "@id"
+            },
+            
+            "has_DimensionComponent": {
+              "@id": "cdi:DimensionGroup_has_DimensionComponent",
+              "@type": "@id"
+            },
+            "uses_DimensionGroup_OF_DimensionalDataStructure": {
+              "@reverse": "cdi:DimensionalDataStructure_uses_DimensionGroup",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
     "DimensionalDataSet": {
       "@id": "cdi:DimensionalDataSet",
       "@context": [
@@ -3742,11 +3849,27 @@
               "@id": "cdi:DataSet-catalogDetails",
               "@type": "@id"
             },
+            "fingerprint": {
+              "@id": "cdi:DataSet-fingerprint",
+              "@type": "@id"
+            },
             "identifier": {
               "@id": "cdi:DataSet-identifier",
               "@type": "@id"
             },
+            "name": {
+              "@id": "cdi:DataSet-name",
+              "@type": "@id"
+            },
+            "recordCount": {
+              "@id": "cdi:DataSet-recordCount",
+              "@type": "xsd:integer"
+            },
             
+            "has_InstanceVariable": {
+              "@id": "cdi:DataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
             "has_DataPoint": {
               "@id": "cdi:DataSet_has_DataPoint",
               "@type": "@id"
@@ -3770,10 +3893,6 @@
             " comment ": "tag:json-should-support-trailing-commas"
           },
           {
-            "name": {
-              "@id": "cdi:DimensionalDataSet-name",
-              "@type": "@id"
-            },
             
             "represents": {
               "@id": "cdi:DimensionalDataSet_represents_ScopedMeasure",
@@ -3854,10 +3973,6 @@
             },
             "isStructuredBy_OF_DataSet": {
               "@reverse": "cdi:DataSet_isStructuredBy_DataStructure",
-              "@type": "@id"
-            },
-            "correspondsTo_DataStructure_OF_PhysicalDataSetStructure": {
-              "@reverse": "cdi:PhysicalDataSetStructure_correspondsTo_DataStructure",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -3999,10 +4114,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -4027,8 +4138,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -4039,6 +4150,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -4047,12 +4162,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -4151,31 +4266,6 @@
             },
             "isRepresentedBy_OF_DimensionalKeyDefinitionMember": {
               "@reverse": "cdi:DimensionalKeyDefinitionMember_isRepresentedBy_DimensionalKeyMember",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "DimensionGroup": {
-      "@id": "cdi:DimensionGroup",
-      "@context": [
-          {
-            "identifier": {
-              "@id": "cdi:DimensionGroup-identifier",
-              "@type": "@id"
-            },
-            "name": {
-              "@id": "cdi:DimensionGroup-name",
-              "@type": "@id"
-            },
-            
-            "has_DimensionComponent": {
-              "@id": "cdi:DimensionGroup_has_DimensionComponent",
-              "@type": "@id"
-            },
-            "uses_DimensionGroup_OF_DimensionalDataStructure": {
-              "@reverse": "cdi:DimensionalDataStructure_uses_DimensionGroup",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -4366,6 +4456,63 @@
           }
       ]
     },
+    "ContextualComponent": {
+      "@id": "cdi:ContextualComponent",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:DataStructureComponent-identifier",
+              "@type": "@id"
+            },
+            "semantic": {
+              "@id": "cdi:DataStructureComponent-semantic",
+              "@type": "@id"
+            },
+            "specialization": {
+              "@id": "cdi:DataStructureComponent-specialization",
+              "@type": "@id"
+            },
+            
+            "isDefinedBy_RepresentedVariable": {
+              "@id": "cdi:DataStructureComponent_isDefinedBy_RepresentedVariable",
+              "@type": "@id"
+            },
+            "correspondsTo_DataStructureComponent_OF_DataPoint": {
+              "@reverse": "cdi:DataPoint_correspondsTo_DataStructureComponent",
+              "@type": "@id"
+            },
+            "has_DataStructureComponent_OF_DataStructure": {
+              "@reverse": "cdi:DataStructure_has_DataStructureComponent",
+              "@type": "@id"
+            },
+            "isBasedOn_OF_KeyMember": {
+              "@reverse": "cdi:KeyMember_isBasedOn_DataStructureComponent",
+              "@type": "@id"
+            },
+            "qualifies_OF_AttributeComponent": {
+              "@reverse": "cdi:AttributeComponent_qualifies_DataStructureComponent",
+              "@type": "@id"
+            },
+            "indexes_OF_ComponentPosition": {
+              "@reverse": "cdi:ComponentPosition_indexes_DataStructureComponent",
+              "@type": "@id"
+            },
+            "correspondsTo_DataStructureComponent_OF_ForeignKeyComponent": {
+              "@reverse": "cdi:ForeignKeyComponent_correspondsTo_DataStructureComponent",
+              "@type": "@id"
+            },
+            "correspondsTo_DataStructureComponent_OF_PrimaryKeyComponent": {
+              "@reverse": "cdi:PrimaryKeyComponent_correspondsTo_DataStructureComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          },
+          {
+            
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
     "InstanceKey": {
       "@id": "cdi:InstanceKey",
       "@context": [
@@ -4423,11 +4570,27 @@
               "@id": "cdi:DataSet-catalogDetails",
               "@type": "@id"
             },
+            "fingerprint": {
+              "@id": "cdi:DataSet-fingerprint",
+              "@type": "@id"
+            },
             "identifier": {
               "@id": "cdi:DataSet-identifier",
               "@type": "@id"
             },
+            "name": {
+              "@id": "cdi:DataSet-name",
+              "@type": "@id"
+            },
+            "recordCount": {
+              "@id": "cdi:DataSet-recordCount",
+              "@type": "xsd:integer"
+            },
             
+            "has_InstanceVariable": {
+              "@id": "cdi:DataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
             "has_DataPoint": {
               "@id": "cdi:DataSet_has_DataPoint",
               "@type": "@id"
@@ -4527,10 +4690,6 @@
             },
             "isStructuredBy_OF_DataSet": {
               "@reverse": "cdi:DataSet_isStructuredBy_DataStructure",
-              "@type": "@id"
-            },
-            "correspondsTo_DataStructure_OF_PhysicalDataSetStructure": {
-              "@reverse": "cdi:PhysicalDataSetStructure_correspondsTo_DataStructure",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -4795,12 +4954,12 @@
           },
           {
             
-            "hasValueFrom_DescriptorValueDomain_OF_Descriptor": {
-              "@reverse": "cdi:Descriptor_hasValueFrom_DescriptorValueDomain",
-              "@type": "@id"
-            },
             "takesSubstantiveValuesFrom_DescriptorValueDomain_OF_DescriptorVariable": {
               "@reverse": "cdi:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain",
+              "@type": "@id"
+            },
+            "hasValueFrom_DescriptorValueDomain_OF_Descriptor": {
+              "@reverse": "cdi:Descriptor_hasValueFrom_DescriptorValueDomain",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -4856,10 +5015,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -4884,8 +5039,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -4896,6 +5051,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -4904,12 +5063,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -4987,6 +5146,10 @@
             " comment ": "tag:json-should-support-trailing-commas"
           },
           {
+            "function": {
+              "@id": "cdi:InstanceVariable-function",
+              "@type": "@id"
+            },
             "physicalDataType": {
               "@id": "cdi:InstanceVariable-physicalDataType",
               "@type": "@id"
@@ -4995,29 +5158,25 @@
               "@id": "cdi:InstanceVariable-platformType",
               "@type": "@id"
             },
+            "role": {
+              "@id": "cdi:InstanceVariable-role",
+              "@type": "@id"
+            },
             "source": {
               "@id": "cdi:InstanceVariable-source",
               "@type": "@id"
             },
-            "variableFunction": {
-              "@id": "cdi:InstanceVariable-variableFunction",
-              "@type": "@id"
-            },
             
-            "has_PhysicalSegmentLayout": {
-              "@id": "cdi:InstanceVariable_has_PhysicalSegmentLayout",
-              "@type": "@id"
-            },
-            "has_ValueMapping": {
-              "@id": "cdi:InstanceVariable_has_ValueMapping",
-              "@type": "@id"
-            },
-            "appliesTo_OF_CategoryStatistic": {
-              "@reverse": "cdi:CategoryStatistic_appliesTo_InstanceVariable",
+            "isDescribedBy": {
+              "@id": "cdi:InstanceVariable_isDescribedBy_StatisticsCollection",
               "@type": "@id"
             },
             "isDescribedBy_OF_DataPoint": {
               "@reverse": "cdi:DataPoint_isDescribedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "has_InstanceVariable_OF_DataSet": {
+              "@reverse": "cdi:DataSet_has_InstanceVariable",
               "@type": "@id"
             },
             "isBoundedBy_OF_Datum": {
@@ -5038,6 +5197,18 @@
             },
             "has_InstanceVariable_OF_PhysicalDataSet": {
               "@reverse": "cdi:PhysicalDataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
+            "formats_OF_PhysicalMapping": {
+              "@reverse": "cdi:PhysicalMapping_formats_InstanceVariable",
+              "@type": "@id"
+            },
+            "hasWeight_OF_StatisticsCollection": {
+              "@reverse": "cdi:StatisticsCollection_hasWeight_InstanceVariable",
+              "@type": "@id"
+            },
+            "hasWeight_OF_Statistics": {
+              "@reverse": "cdi:Statistics_hasWeight_InstanceVariable",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -5064,11 +5235,27 @@
               "@id": "cdi:DataSet-catalogDetails",
               "@type": "@id"
             },
+            "fingerprint": {
+              "@id": "cdi:DataSet-fingerprint",
+              "@type": "@id"
+            },
             "identifier": {
               "@id": "cdi:DataSet-identifier",
               "@type": "@id"
             },
+            "name": {
+              "@id": "cdi:DataSet-name",
+              "@type": "@id"
+            },
+            "recordCount": {
+              "@id": "cdi:DataSet-recordCount",
+              "@type": "xsd:integer"
+            },
             
+            "has_InstanceVariable": {
+              "@id": "cdi:DataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
             "has_DataPoint": {
               "@id": "cdi:DataSet_has_DataPoint",
               "@type": "@id"
@@ -5168,10 +5355,6 @@
             },
             "isStructuredBy_OF_DataSet": {
               "@reverse": "cdi:DataSet_isStructuredBy_DataStructure",
-              "@type": "@id"
-            },
-            "correspondsTo_DataStructure_OF_PhysicalDataSetStructure": {
-              "@reverse": "cdi:PhysicalDataSetStructure_correspondsTo_DataStructure",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -5445,10 +5628,6 @@
               "@reverse": "cdi:ClassificationSeries_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "uses_Concept_OF_Concept": {
-              "@reverse": "cdi:Concept_uses_Concept",
-              "@type": "@id"
-            },
             "hasSource_OF_ConceptMap": {
               "@reverse": "cdi:ConceptMap_hasSource_Concept",
               "@type": "@id"
@@ -5473,8 +5652,8 @@
               "@reverse": "cdi:ConceptSystem_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_DataStore": {
-              "@reverse": "cdi:DataStore_isDefinedBy_Concept",
+            "uses_Concept_OF_Concept": {
+              "@reverse": "cdi:Concept_uses_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_EnumerationDomain": {
@@ -5485,6 +5664,10 @@
               "@reverse": "cdi:Level_isDefinedBy_Concept",
               "@type": "@id"
             },
+            "isDefinedBy_Concept_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept_OF_LogicalRecord": {
               "@reverse": "cdi:LogicalRecord_isDefinedBy_Concept",
               "@type": "@id"
@@ -5493,12 +5676,12 @@
               "@reverse": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_Segment": {
+              "@reverse": "cdi:Segment_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "isDefinedBy_Concept_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+            "isDefinedBy_Concept_OF_TabularTextDataSet": {
+              "@reverse": "cdi:TabularTextDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
             "isDefinedBy_Concept_OF_VariableCollection": {
@@ -5576,6 +5759,10 @@
             " comment ": "tag:json-should-support-trailing-commas"
           },
           {
+            "function": {
+              "@id": "cdi:InstanceVariable-function",
+              "@type": "@id"
+            },
             "physicalDataType": {
               "@id": "cdi:InstanceVariable-physicalDataType",
               "@type": "@id"
@@ -5584,29 +5771,25 @@
               "@id": "cdi:InstanceVariable-platformType",
               "@type": "@id"
             },
+            "role": {
+              "@id": "cdi:InstanceVariable-role",
+              "@type": "@id"
+            },
             "source": {
               "@id": "cdi:InstanceVariable-source",
               "@type": "@id"
             },
-            "variableFunction": {
-              "@id": "cdi:InstanceVariable-variableFunction",
-              "@type": "@id"
-            },
             
-            "has_PhysicalSegmentLayout": {
-              "@id": "cdi:InstanceVariable_has_PhysicalSegmentLayout",
-              "@type": "@id"
-            },
-            "has_ValueMapping": {
-              "@id": "cdi:InstanceVariable_has_ValueMapping",
-              "@type": "@id"
-            },
-            "appliesTo_OF_CategoryStatistic": {
-              "@reverse": "cdi:CategoryStatistic_appliesTo_InstanceVariable",
+            "isDescribedBy": {
+              "@id": "cdi:InstanceVariable_isDescribedBy_StatisticsCollection",
               "@type": "@id"
             },
             "isDescribedBy_OF_DataPoint": {
               "@reverse": "cdi:DataPoint_isDescribedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "has_InstanceVariable_OF_DataSet": {
+              "@reverse": "cdi:DataSet_has_InstanceVariable",
               "@type": "@id"
             },
             "isBoundedBy_OF_Datum": {
@@ -5627,6 +5810,18 @@
             },
             "has_InstanceVariable_OF_PhysicalDataSet": {
               "@reverse": "cdi:PhysicalDataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
+            "formats_OF_PhysicalMapping": {
+              "@reverse": "cdi:PhysicalMapping_formats_InstanceVariable",
+              "@type": "@id"
+            },
+            "hasWeight_OF_StatisticsCollection": {
+              "@reverse": "cdi:StatisticsCollection_hasWeight_InstanceVariable",
+              "@type": "@id"
+            },
+            "hasWeight_OF_Statistics": {
+              "@reverse": "cdi:Statistics_hasWeight_InstanceVariable",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -5653,11 +5848,27 @@
               "@id": "cdi:DataSet-catalogDetails",
               "@type": "@id"
             },
+            "fingerprint": {
+              "@id": "cdi:DataSet-fingerprint",
+              "@type": "@id"
+            },
             "identifier": {
               "@id": "cdi:DataSet-identifier",
               "@type": "@id"
             },
+            "name": {
+              "@id": "cdi:DataSet-name",
+              "@type": "@id"
+            },
+            "recordCount": {
+              "@id": "cdi:DataSet-recordCount",
+              "@type": "xsd:integer"
+            },
             
+            "has_InstanceVariable": {
+              "@id": "cdi:DataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
             "has_DataPoint": {
               "@id": "cdi:DataSet_has_DataPoint",
               "@type": "@id"
@@ -5757,10 +5968,6 @@
             },
             "isStructuredBy_OF_DataSet": {
               "@reverse": "cdi:DataSet_isStructuredBy_DataStructure",
-              "@type": "@id"
-            },
-            "correspondsTo_DataStructure_OF_PhysicalDataSetStructure": {
-              "@reverse": "cdi:PhysicalDataSetStructure_correspondsTo_DataStructure",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -5891,8 +6098,8 @@
               "@id": "cdi:DataPointPosition_indexes_DataPoint",
               "@type": "@id"
             },
-            "has_DataPointPosition_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_has_DataPointPosition",
+            "has_DataPointPosition_OF_Segment": {
+              "@reverse": "cdi:Segment_has_DataPointPosition",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -5920,77 +6127,8 @@
               "@id": "cdi:DataPointRelationship_hasTarget_DataPoint",
               "@type": "@id"
             },
-            "has_DataPointRelationship_OF_PhysicalRecordSegmentStructure": {
-              "@reverse": "cdi:PhysicalRecordSegmentStructure_has_DataPointRelationship",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "DataStore": {
-      "@id": "cdi:DataStore",
-      "@context": [
-          {
-            "aboutMissing": {
-              "@id": "cdi:DataStore-aboutMissing",
-              "@type": "@id"
-            },
-            "allowsDuplicates": {
-              "@id": "cdi:DataStore-allowsDuplicates",
-              "@type": "xsd:boolean"
-            },
-            "catalogDetails": {
-              "@id": "cdi:DataStore-catalogDetails",
-              "@type": "@id"
-            },
-            "characterSet": {
-              "@id": "cdi:DataStore-characterSet",
-              "@type": "xsd:string"
-            },
-            "dataStoreType": {
-              "@id": "cdi:DataStore-dataStoreType",
-              "@type": "@id"
-            },
-            "identifier": {
-              "@id": "cdi:DataStore-identifier",
-              "@type": "@id"
-            },
-            "name": {
-              "@id": "cdi:DataStore-name",
-              "@type": "@id"
-            },
-            "purpose": {
-              "@id": "cdi:DataStore-purpose",
-              "@type": "@id"
-            },
-            "recordCount": {
-              "@id": "cdi:DataStore-recordCount",
-              "@type": "xsd:integer"
-            },
-            
-            "isDefinedBy_Concept": {
-              "@id": "cdi:DataStore_isDefinedBy_Concept",
-              "@type": "@id"
-            },
-            "has_LogicalRecord": {
-              "@id": "cdi:DataStore_has_LogicalRecord",
-              "@type": "@id"
-            },
-            "has_LogicalRecordPosition": {
-              "@id": "cdi:DataStore_has_LogicalRecordPosition",
-              "@type": "@id"
-            },
-            "has_RecordRelation": {
-              "@id": "cdi:DataStore_has_RecordRelation",
-              "@type": "@id"
-            },
-            "structures_OF_LogicalRecordRelationStructure": {
-              "@reverse": "cdi:LogicalRecordRelationStructure_structures_DataStore",
-              "@type": "@id"
-            },
-            "formats_OF_PhysicalDataSet": {
-              "@reverse": "cdi:PhysicalDataSet_formats_DataStore",
+            "has_DataPointRelationship_OF_SegmentStructure": {
+              "@reverse": "cdi:SegmentStructure_has_DataPointRelationship",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -6034,10 +6172,83 @@
               "@id": "cdi:InstanceVariableMap_hasTarget_InstanceVariable",
               "@type": "@id"
             },
-            "has_InstanceVariableMap_OF_RecordRelation": {
-              "@reverse": "cdi:RecordRelation_has_InstanceVariableMap",
+            "has_InstanceVariableMap_OF_LogicalRecordRelationship": {
+              "@reverse": "cdi:LogicalRecordRelationship_has_InstanceVariableMap",
               "@type": "@id"
             },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "LocatorMapping": {
+      "@id": "cdi:LocatorMapping",
+      "@context": [
+          {
+            "decimalPositions": {
+              "@id": "cdi:PhysicalMapping-decimalPositions",
+              "@type": "xsd:integer"
+            },
+            "defaultValue": {
+              "@id": "cdi:PhysicalMapping-defaultValue",
+              "@type": "xsd:string"
+            },
+            "format": {
+              "@id": "cdi:PhysicalMapping-format",
+              "@type": "@id"
+            },
+            "identifier": {
+              "@id": "cdi:PhysicalMapping-identifier",
+              "@type": "@id"
+            },
+            "isRequired": {
+              "@id": "cdi:PhysicalMapping-isRequired",
+              "@type": "xsd:boolean"
+            },
+            "maximumLength": {
+              "@id": "cdi:PhysicalMapping-maximumLength",
+              "@type": "xsd:integer"
+            },
+            "minimumLength": {
+              "@id": "cdi:PhysicalMapping-minimumLength",
+              "@type": "xsd:integer"
+            },
+            "nullSequence": {
+              "@id": "cdi:PhysicalMapping-nullSequence",
+              "@type": "xsd:string"
+            },
+            "numberPattern": {
+              "@id": "cdi:PhysicalMapping-numberPattern",
+              "@type": "xsd:string"
+            },
+            "position": {
+              "@id": "cdi:PhysicalMapping-position",
+              "@type": "xsd:integer"
+            },
+            "scale": {
+              "@id": "cdi:PhysicalMapping-scale",
+              "@type": "xsd:integer"
+            },
+            
+            "formats": {
+              "@id": "cdi:PhysicalMapping_formats_InstanceVariable",
+              "@type": "@id"
+            },
+            "has_PhysicalMapping_OF_PhysicalDataSet": {
+              "@reverse": "cdi:PhysicalDataSet_has_PhysicalMapping",
+              "@type": "@id"
+            },
+            "indexes_OF_PhysicalMappingPosition": {
+              "@reverse": "cdi:PhysicalMappingPosition_indexes_PhysicalMapping",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          },
+          {
+            "locator": {
+              "@id": "cdi:LocatorMapping-locator",
+              "@type": "xsd:string"
+            },
+            
             " comment ": "tag:json-should-support-trailing-commas"
           }
       ]
@@ -6063,14 +6274,6 @@
               "@id": "cdi:LogicalRecord_organizes_DataSet",
               "@type": "@id"
             },
-            "has_LogicalRecord_OF_DataStore": {
-              "@reverse": "cdi:DataStore_has_LogicalRecord",
-              "@type": "@id"
-            },
-            "indexes_OF_LogicalRecordPosition": {
-              "@reverse": "cdi:LogicalRecordPosition_indexes_LogicalRecord",
-              "@type": "@id"
-            },
             "hasSource_OF_LogicalRecordRelationship": {
               "@reverse": "cdi:LogicalRecordRelationship_hasSource_LogicalRecord",
               "@type": "@id"
@@ -6079,41 +6282,16 @@
               "@reverse": "cdi:LogicalRecordRelationship_hasTarget_LogicalRecord",
               "@type": "@id"
             },
-            "mapsTo_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_mapsTo_LogicalRecord",
+            "has_LogicalRecord_OF_LogicalRecordRepository": {
+              "@reverse": "cdi:LogicalRecordRepository_has_LogicalRecord",
               "@type": "@id"
             },
-            "formats_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_formats_LogicalRecord",
+            "uses_LogicalRecord_OF_PhysicalDataSet": {
+              "@reverse": "cdi:PhysicalDataSet_uses_LogicalRecord",
               "@type": "@id"
             },
-            "maps_OF_RecordRelation": {
-              "@reverse": "cdi:RecordRelation_maps_LogicalRecord",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "LogicalRecordPosition": {
-      "@id": "cdi:LogicalRecordPosition",
-      "@context": [
-          {
-            "identifier": {
-              "@id": "cdi:LogicalRecordPosition-identifier",
-              "@type": "@id"
-            },
-            "value": {
-              "@id": "cdi:LogicalRecordPosition-value",
-              "@type": "xsd:integer"
-            },
-            
-            "indexes": {
-              "@id": "cdi:LogicalRecordPosition_indexes_LogicalRecord",
-              "@type": "@id"
-            },
-            "has_LogicalRecordPosition_OF_DataStore": {
-              "@reverse": "cdi:DataStore_has_LogicalRecordPosition",
+            "mapsTo_OF_Segment": {
+              "@reverse": "cdi:Segment_mapsTo_LogicalRecord",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -6141,44 +6319,105 @@
               "@id": "cdi:LogicalRecordRelationship_hasTarget_LogicalRecord",
               "@type": "@id"
             },
-            "has_LogicalRecordRelationship_OF_LogicalRecordRelationStructure": {
-              "@reverse": "cdi:LogicalRecordRelationStructure_has_LogicalRecordRelationship",
+            "has_InstanceVariableMap": {
+              "@id": "cdi:LogicalRecordRelationship_has_InstanceVariableMap",
+              "@type": "@id"
+            },
+            "has_LogicalRecordRelationship_OF_LogicalRecordRepositoryStructure": {
+              "@reverse": "cdi:LogicalRecordRepositoryStructure_has_LogicalRecordRelationship",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
           }
       ]
     },
-    "LogicalRecordRelationStructure": {
-      "@id": "cdi:LogicalRecordRelationStructure",
+    "LogicalRecordRepository": {
+      "@id": "cdi:LogicalRecordRepository",
       "@context": [
           {
+            "aboutMissing": {
+              "@id": "cdi:LogicalRecordRepository-aboutMissing",
+              "@type": "@id"
+            },
+            "allowsDuplicates": {
+              "@id": "cdi:LogicalRecordRepository-allowsDuplicates",
+              "@type": "xsd:boolean"
+            },
+            "catalogDetails": {
+              "@id": "cdi:LogicalRecordRepository-catalogDetails",
+              "@type": "@id"
+            },
+            "characterSet": {
+              "@id": "cdi:LogicalRecordRepository-characterSet",
+              "@type": "xsd:string"
+            },
             "identifier": {
-              "@id": "cdi:LogicalRecordRelationStructure-identifier",
+              "@id": "cdi:LogicalRecordRepository-identifier",
               "@type": "@id"
             },
             "name": {
-              "@id": "cdi:LogicalRecordRelationStructure-name",
+              "@id": "cdi:LogicalRecordRepository-name",
               "@type": "@id"
             },
             "purpose": {
-              "@id": "cdi:LogicalRecordRelationStructure-purpose",
+              "@id": "cdi:LogicalRecordRepository-purpose",
+              "@type": "@id"
+            },
+            "recordCount": {
+              "@id": "cdi:LogicalRecordRepository-recordCount",
+              "@type": "xsd:integer"
+            },
+            "repositoryType": {
+              "@id": "cdi:LogicalRecordRepository-repositoryType",
+              "@type": "@id"
+            },
+            
+            "isDefinedBy_Concept": {
+              "@id": "cdi:LogicalRecordRepository_isDefinedBy_Concept",
+              "@type": "@id"
+            },
+            "has_LogicalRecord": {
+              "@id": "cdi:LogicalRecordRepository_has_LogicalRecord",
+              "@type": "@id"
+            },
+            "structures_OF_LogicalRecordRepositoryStructure": {
+              "@reverse": "cdi:LogicalRecordRepositoryStructure_structures_LogicalRecordRepository",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "LogicalRecordRepositoryStructure": {
+      "@id": "cdi:LogicalRecordRepositoryStructure",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:LogicalRecordRepositoryStructure-identifier",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "cdi:LogicalRecordRepositoryStructure-name",
+              "@type": "@id"
+            },
+            "purpose": {
+              "@id": "cdi:LogicalRecordRepositoryStructure-purpose",
               "@type": "@id"
             },
             "semantics": {
-              "@id": "cdi:LogicalRecordRelationStructure-semantics",
+              "@id": "cdi:LogicalRecordRepositoryStructure-semantics",
               "@type": "@id"
             },
             "specification": {
-              "@id": "cdi:LogicalRecordRelationStructure-specification",
+              "@id": "cdi:LogicalRecordRepositoryStructure-specification",
               "@type": "@id"
             },
             "topology": {
-              "@id": "cdi:LogicalRecordRelationStructure-topology",
+              "@id": "cdi:LogicalRecordRepositoryStructure-topology",
               "@type": "@id"
             },
             "totality": {
-              "@id": "cdi:LogicalRecordRelationStructure-totality",
+              "@id": "cdi:LogicalRecordRepositoryStructure-totality",
               "@type": "@vocab",
               "@context": {
                 "Partial": "cdi:Partial"
@@ -6187,11 +6426,11 @@
             },
             
             "has_LogicalRecordRelationship": {
-              "@id": "cdi:LogicalRecordRelationStructure_has_LogicalRecordRelationship",
+              "@id": "cdi:LogicalRecordRepositoryStructure_has_LogicalRecordRelationship",
               "@type": "@id"
             },
             "structures": {
-              "@id": "cdi:LogicalRecordRelationStructure_structures_DataStore",
+              "@id": "cdi:LogicalRecordRepositoryStructure_structures_LogicalRecordRepository",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -6202,12 +6441,28 @@
       "@id": "cdi:PhysicalDataSet",
       "@context": [
           {
-            "allowsDuplicates": {
-              "@id": "cdi:PhysicalDataSet-allowsDuplicates",
-              "@type": "xsd:boolean"
-            },
             "catalogDetails": {
               "@id": "cdi:PhysicalDataSet-catalogDetails",
+              "@type": "@id"
+            },
+            "characterSet": {
+              "@id": "cdi:PhysicalDataSet-characterSet",
+              "@type": "xsd:string"
+            },
+            "encoding": {
+              "@id": "cdi:PhysicalDataSet-encoding",
+              "@type": "@id"
+            },
+            "fileSize": {
+              "@id": "cdi:PhysicalDataSet-fileSize",
+              "@type": "xsd:double"
+            },
+            "fileSizeUofM": {
+              "@id": "cdi:PhysicalDataSet-fileSizeUofM",
+              "@type": "xsd:string"
+            },
+            "fingerprint": {
+              "@id": "cdi:PhysicalDataSet-fingerprint",
               "@type": "@id"
             },
             "identifier": {
@@ -6218,20 +6473,24 @@
               "@id": "cdi:PhysicalDataSet-name",
               "@type": "@id"
             },
-            "numberOfSegments": {
-              "@id": "cdi:PhysicalDataSet-numberOfSegments",
-              "@type": "xsd:integer"
-            },
             "overview": {
               "@id": "cdi:PhysicalDataSet-overview",
               "@type": "@id"
             },
-            "physicalFileName": {
-              "@id": "cdi:PhysicalDataSet-physicalFileName",
+            "physicalFileURL": {
+              "@id": "cdi:PhysicalDataSet-physicalFileURL",
               "@type": "xsd:string"
             },
             "purpose": {
               "@id": "cdi:PhysicalDataSet-purpose",
+              "@type": "@id"
+            },
+            "recordCount": {
+              "@id": "cdi:PhysicalDataSet-recordCount",
+              "@type": "xsd:integer"
+            },
+            "standard": {
+              "@id": "cdi:PhysicalDataSet-standard",
               "@type": "@id"
             },
             
@@ -6247,289 +6506,236 @@
               "@id": "cdi:PhysicalDataSet_correspondsTo_DataSet",
               "@type": "@id"
             },
-            "formats": {
-              "@id": "cdi:PhysicalDataSet_formats_DataStore",
+            "has_PhysicalMapping": {
+              "@id": "cdi:PhysicalDataSet_has_PhysicalMapping",
               "@type": "@id"
             },
-            "has_PhysicalRecordSegment": {
-              "@id": "cdi:PhysicalDataSet_has_PhysicalRecordSegment",
+            "has_PhysicalMappingPosition": {
+              "@id": "cdi:PhysicalDataSet_has_PhysicalMappingPosition",
               "@type": "@id"
             },
-            "has_PhysicalRecordSegmentPosition": {
-              "@id": "cdi:PhysicalDataSet_has_PhysicalRecordSegmentPosition",
+            "has_Segment": {
+              "@id": "cdi:PhysicalDataSet_has_Segment",
               "@type": "@id"
             },
-            "structures_OF_PhysicalDataSetStructure": {
-              "@reverse": "cdi:PhysicalDataSetStructure_structures_PhysicalDataSet",
+            "has_SegmentPosition": {
+              "@id": "cdi:PhysicalDataSet_has_SegmentPosition",
               "@type": "@id"
             },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "PhysicalDataSetStructure": {
-      "@id": "cdi:PhysicalDataSetStructure",
-      "@context": [
-          {
-            "identifier": {
-              "@id": "cdi:PhysicalDataSetStructure-identifier",
-              "@type": "@id"
-            },
-            "name": {
-              "@id": "cdi:PhysicalDataSetStructure-name",
-              "@type": "@id"
-            },
-            "purpose": {
-              "@id": "cdi:PhysicalDataSetStructure-purpose",
-              "@type": "@id"
-            },
-            "semantics": {
-              "@id": "cdi:PhysicalDataSetStructure-semantics",
-              "@type": "@id"
-            },
-            "specification": {
-              "@id": "cdi:PhysicalDataSetStructure-specification",
-              "@type": "@id"
-            },
-            "topology": {
-              "@id": "cdi:PhysicalDataSetStructure-topology",
-              "@type": "@id"
-            },
-            "totality": {
-              "@id": "cdi:PhysicalDataSetStructure-totality",
-              "@type": "@vocab",
-              "@context": {
-                "Partial": "cdi:Partial"
-            ,    "Total": "cdi:Total"
-              }
-            },
-            
-            "correspondsTo_DataStructure": {
-              "@id": "cdi:PhysicalDataSetStructure_correspondsTo_DataStructure",
-              "@type": "@id"
-            },
-            "has_PhysicalRecordSegmentRelationship": {
-              "@id": "cdi:PhysicalDataSetStructure_has_PhysicalRecordSegmentRelationship",
-              "@type": "@id"
-            },
-            "structures": {
-              "@id": "cdi:PhysicalDataSetStructure_structures_PhysicalDataSet",
+            "uses_LogicalRecord": {
+              "@id": "cdi:PhysicalDataSet_uses_LogicalRecord",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
           }
       ]
     },
-    "PhysicalLayoutRelationStructure": {
-      "@id": "cdi:PhysicalLayoutRelationStructure",
+    "PhysicalMapping": {
+      "@id": "cdi:PhysicalMapping",
       "@context": [
           {
-            "criteria": {
-              "@id": "cdi:PhysicalLayoutRelationStructure-criteria",
-              "@type": "@id"
+            "decimalPositions": {
+              "@id": "cdi:PhysicalMapping-decimalPositions",
+              "@type": "xsd:integer"
             },
-            "identifier": {
-              "@id": "cdi:PhysicalLayoutRelationStructure-identifier",
-              "@type": "@id"
-            },
-            "name": {
-              "@id": "cdi:PhysicalLayoutRelationStructure-name",
-              "@type": "@id"
-            },
-            "purpose": {
-              "@id": "cdi:PhysicalLayoutRelationStructure-purpose",
-              "@type": "@id"
-            },
-            "semantics": {
-              "@id": "cdi:PhysicalLayoutRelationStructure-semantics",
-              "@type": "@id"
-            },
-            "specification": {
-              "@id": "cdi:PhysicalLayoutRelationStructure-specification",
-              "@type": "@id"
-            },
-            "topology": {
-              "@id": "cdi:PhysicalLayoutRelationStructure-topology",
-              "@type": "@id"
-            },
-            "totality": {
-              "@id": "cdi:PhysicalLayoutRelationStructure-totality",
-              "@type": "@vocab",
-              "@context": {
-                "Partial": "cdi:Partial"
-            ,    "Total": "cdi:Total"
-              }
-            },
-            
-            "has_ValueMappingRelationship": {
-              "@id": "cdi:PhysicalLayoutRelationStructure_has_ValueMappingRelationship",
-              "@type": "@id"
-            },
-            "structures": {
-              "@id": "cdi:PhysicalLayoutRelationStructure_structures_PhysicalSegmentLayout",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "PhysicalRecordSegment": {
-      "@id": "cdi:PhysicalRecordSegment",
-      "@context": [
-          {
-            "catalogDetails": {
-              "@id": "cdi:PhysicalRecordSegment-catalogDetails",
-              "@type": "@id"
-            },
-            "identifier": {
-              "@id": "cdi:PhysicalRecordSegment-identifier",
-              "@type": "@id"
-            },
-            "name": {
-              "@id": "cdi:PhysicalRecordSegment-name",
-              "@type": "@id"
-            },
-            "physicalFileName": {
-              "@id": "cdi:PhysicalRecordSegment-physicalFileName",
+            "defaultValue": {
+              "@id": "cdi:PhysicalMapping-defaultValue",
               "@type": "xsd:string"
             },
-            "purpose": {
-              "@id": "cdi:PhysicalRecordSegment-purpose",
+            "format": {
+              "@id": "cdi:PhysicalMapping-format",
               "@type": "@id"
+            },
+            "identifier": {
+              "@id": "cdi:PhysicalMapping-identifier",
+              "@type": "@id"
+            },
+            "isRequired": {
+              "@id": "cdi:PhysicalMapping-isRequired",
+              "@type": "xsd:boolean"
+            },
+            "maximumLength": {
+              "@id": "cdi:PhysicalMapping-maximumLength",
+              "@type": "xsd:integer"
+            },
+            "minimumLength": {
+              "@id": "cdi:PhysicalMapping-minimumLength",
+              "@type": "xsd:integer"
+            },
+            "nullSequence": {
+              "@id": "cdi:PhysicalMapping-nullSequence",
+              "@type": "xsd:string"
+            },
+            "numberPattern": {
+              "@id": "cdi:PhysicalMapping-numberPattern",
+              "@type": "xsd:string"
+            },
+            "position": {
+              "@id": "cdi:PhysicalMapping-position",
+              "@type": "xsd:integer"
+            },
+            "scale": {
+              "@id": "cdi:PhysicalMapping-scale",
+              "@type": "xsd:integer"
             },
             
-            "isDefinedBy_Concept": {
-              "@id": "cdi:PhysicalRecordSegment_isDefinedBy_Concept",
+            "formats": {
+              "@id": "cdi:PhysicalMapping_formats_InstanceVariable",
               "@type": "@id"
             },
-            "represents": {
-              "@id": "cdi:PhysicalRecordSegment_represents_Population",
+            "has_PhysicalMapping_OF_PhysicalDataSet": {
+              "@reverse": "cdi:PhysicalDataSet_has_PhysicalMapping",
               "@type": "@id"
             },
-            "has_DataPoint": {
-              "@id": "cdi:PhysicalRecordSegment_has_DataPoint",
-              "@type": "@id"
-            },
-            "has_DataPointPosition": {
-              "@id": "cdi:PhysicalRecordSegment_has_DataPointPosition",
-              "@type": "@id"
-            },
-            "has_PhysicalSegmentLayout": {
-              "@id": "cdi:PhysicalRecordSegment_has_PhysicalSegmentLayout",
-              "@type": "@id"
-            },
-            "mapsTo": {
-              "@id": "cdi:PhysicalRecordSegment_mapsTo_LogicalRecord",
-              "@type": "@id"
-            },
-            "has_PhysicalRecordSegment_OF_PhysicalDataSet": {
-              "@reverse": "cdi:PhysicalDataSet_has_PhysicalRecordSegment",
-              "@type": "@id"
-            },
-            "indexes_OF_PhysicalRecordSegmentPosition": {
-              "@reverse": "cdi:PhysicalRecordSegmentPosition_indexes_PhysicalRecordSegment",
-              "@type": "@id"
-            },
-            "hasSource_OF_PhysicalRecordSegmentRelationship": {
-              "@reverse": "cdi:PhysicalRecordSegmentRelationship_hasSource_PhysicalRecordSegment",
-              "@type": "@id"
-            },
-            "hasTarget_OF_PhysicalRecordSegmentRelationship": {
-              "@reverse": "cdi:PhysicalRecordSegmentRelationship_hasTarget_PhysicalRecordSegment",
-              "@type": "@id"
-            },
-            "structures_OF_PhysicalRecordSegmentStructure": {
-              "@reverse": "cdi:PhysicalRecordSegmentStructure_structures_PhysicalRecordSegment",
+            "indexes_OF_PhysicalMappingPosition": {
+              "@reverse": "cdi:PhysicalMappingPosition_indexes_PhysicalMapping",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
           }
       ]
     },
-    "PhysicalRecordSegmentPosition": {
-      "@id": "cdi:PhysicalRecordSegmentPosition",
+    "PhysicalMappingPosition": {
+      "@id": "cdi:PhysicalMappingPosition",
       "@context": [
           {
             "identifier": {
-              "@id": "cdi:PhysicalRecordSegmentPosition-identifier",
+              "@id": "cdi:PhysicalMappingPosition-identifier",
               "@type": "@id"
             },
             "value": {
-              "@id": "cdi:PhysicalRecordSegmentPosition-value",
+              "@id": "cdi:PhysicalMappingPosition-value",
               "@type": "xsd:integer"
             },
             
             "indexes": {
-              "@id": "cdi:PhysicalRecordSegmentPosition_indexes_PhysicalRecordSegment",
+              "@id": "cdi:PhysicalMappingPosition_indexes_PhysicalMapping",
               "@type": "@id"
             },
-            "has_PhysicalRecordSegmentPosition_OF_PhysicalDataSet": {
-              "@reverse": "cdi:PhysicalDataSet_has_PhysicalRecordSegmentPosition",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "PhysicalRecordSegmentRelationship": {
-      "@id": "cdi:PhysicalRecordSegmentRelationship",
-      "@context": [
-          {
-            "identifier": {
-              "@id": "cdi:PhysicalRecordSegmentRelationship-identifier",
-              "@type": "@id"
-            },
-            "semantics": {
-              "@id": "cdi:PhysicalRecordSegmentRelationship-semantics",
-              "@type": "@id"
-            },
-            
-            "hasSource": {
-              "@id": "cdi:PhysicalRecordSegmentRelationship_hasSource_PhysicalRecordSegment",
-              "@type": "@id"
-            },
-            "hasTarget": {
-              "@id": "cdi:PhysicalRecordSegmentRelationship_hasTarget_PhysicalRecordSegment",
-              "@type": "@id"
-            },
-            "has_PhysicalRecordSegmentRelationship_OF_PhysicalDataSetStructure": {
-              "@reverse": "cdi:PhysicalDataSetStructure_has_PhysicalRecordSegmentRelationship",
+            "has_PhysicalMappingPosition_OF_PhysicalDataSet": {
+              "@reverse": "cdi:PhysicalDataSet_has_PhysicalMappingPosition",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
           }
       ]
     },
-    "PhysicalRecordSegmentStructure": {
-      "@id": "cdi:PhysicalRecordSegmentStructure",
+    "Segment": {
+      "@id": "cdi:Segment",
       "@context": [
           {
+            "catalogDetails": {
+              "@id": "cdi:Segment-catalogDetails",
+              "@type": "@id"
+            },
             "identifier": {
-              "@id": "cdi:PhysicalRecordSegmentStructure-identifier",
+              "@id": "cdi:Segment-identifier",
               "@type": "@id"
             },
             "name": {
-              "@id": "cdi:PhysicalRecordSegmentStructure-name",
+              "@id": "cdi:Segment-name",
+              "@type": "@id"
+            },
+            "physicalFileName": {
+              "@id": "cdi:Segment-physicalFileName",
+              "@type": "xsd:string"
+            },
+            "purpose": {
+              "@id": "cdi:Segment-purpose",
+              "@type": "@id"
+            },
+            
+            "isDefinedBy_Concept": {
+              "@id": "cdi:Segment_isDefinedBy_Concept",
+              "@type": "@id"
+            },
+            "represents": {
+              "@id": "cdi:Segment_represents_Population",
+              "@type": "@id"
+            },
+            "has_DataPoint": {
+              "@id": "cdi:Segment_has_DataPoint",
+              "@type": "@id"
+            },
+            "has_DataPointPosition": {
+              "@id": "cdi:Segment_has_DataPointPosition",
+              "@type": "@id"
+            },
+            "mapsTo": {
+              "@id": "cdi:Segment_mapsTo_LogicalRecord",
+              "@type": "@id"
+            },
+            "has_Segment_OF_PhysicalDataSet": {
+              "@reverse": "cdi:PhysicalDataSet_has_Segment",
+              "@type": "@id"
+            },
+            "indexes_OF_SegmentPosition": {
+              "@reverse": "cdi:SegmentPosition_indexes_Segment",
+              "@type": "@id"
+            },
+            "structures_OF_SegmentStructure": {
+              "@reverse": "cdi:SegmentStructure_structures_Segment",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "SegmentPosition": {
+      "@id": "cdi:SegmentPosition",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:SegmentPosition-identifier",
+              "@type": "@id"
+            },
+            "value": {
+              "@id": "cdi:SegmentPosition-value",
+              "@type": "xsd:integer"
+            },
+            
+            "indexes": {
+              "@id": "cdi:SegmentPosition_indexes_Segment",
+              "@type": "@id"
+            },
+            "has_SegmentPosition_OF_PhysicalDataSet": {
+              "@reverse": "cdi:PhysicalDataSet_has_SegmentPosition",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "SegmentStructure": {
+      "@id": "cdi:SegmentStructure",
+      "@context": [
+          {
+            "identifier": {
+              "@id": "cdi:SegmentStructure-identifier",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "cdi:SegmentStructure-name",
               "@type": "@id"
             },
             "purpose": {
-              "@id": "cdi:PhysicalRecordSegmentStructure-purpose",
+              "@id": "cdi:SegmentStructure-purpose",
               "@type": "@id"
             },
             "semantics": {
-              "@id": "cdi:PhysicalRecordSegmentStructure-semantics",
+              "@id": "cdi:SegmentStructure-semantics",
               "@type": "@id"
             },
             "specification": {
-              "@id": "cdi:PhysicalRecordSegmentStructure-specification",
+              "@id": "cdi:SegmentStructure-specification",
               "@type": "@id"
             },
             "topology": {
-              "@id": "cdi:PhysicalRecordSegmentStructure-topology",
+              "@id": "cdi:SegmentStructure-topology",
               "@type": "@id"
             },
             "totality": {
-              "@id": "cdi:PhysicalRecordSegmentStructure-totality",
+              "@id": "cdi:SegmentStructure-totality",
               "@type": "@vocab",
               "@context": {
                 "Partial": "cdi:Partial"
@@ -6538,442 +6744,129 @@
             },
             
             "has_DataPointRelationship": {
-              "@id": "cdi:PhysicalRecordSegmentStructure_has_DataPointRelationship",
+              "@id": "cdi:SegmentStructure_has_DataPointRelationship",
               "@type": "@id"
             },
             "structures": {
-              "@id": "cdi:PhysicalRecordSegmentStructure_structures_PhysicalRecordSegment",
+              "@id": "cdi:SegmentStructure_structures_Segment",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
           }
       ]
     },
-    "PhysicalSegmentLayout": {
-      "@id": "cdi:PhysicalSegmentLayout",
+    "StatisticsCollection": {
+      "@id": "cdi:StatisticsCollection",
       "@context": [
           {
-            "allowsDuplicates": {
-              "@id": "cdi:PhysicalSegmentLayout-allowsDuplicates",
-              "@type": "xsd:boolean"
-            },
-            "arrayBase": {
-              "@id": "cdi:PhysicalSegmentLayout-arrayBase",
-              "@type": "xsd:integer"
-            },
-            "catalogDetails": {
-              "@id": "cdi:PhysicalSegmentLayout-catalogDetails",
+            "identifier": {
+              "@id": "cdi:StatisticsCollection-identifier",
               "@type": "@id"
             },
-            "commentPrefix": {
-              "@id": "cdi:PhysicalSegmentLayout-commentPrefix",
-              "@type": "xsd:string"
+            
+            "hasWeight": {
+              "@id": "cdi:StatisticsCollection_hasWeight_InstanceVariable",
+              "@type": "@id"
             },
-            "delimiter": {
-              "@id": "cdi:PhysicalSegmentLayout-delimiter",
+            "isDescribedBy_OF_InstanceVariable": {
+              "@reverse": "cdi:InstanceVariable_isDescribedBy_StatisticsCollection",
+              "@type": "@id"
+            },
+            "has_StatisticsCollection_OF_Statistics": {
+              "@reverse": "cdi:Statistics_has_StatisticsCollection",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "StructuredDataSet": {
+      "@id": "cdi:StructuredDataSet",
+      "@context": [
+          {
+            "catalogDetails": {
+              "@id": "cdi:PhysicalDataSet-catalogDetails",
+              "@type": "@id"
+            },
+            "characterSet": {
+              "@id": "cdi:PhysicalDataSet-characterSet",
               "@type": "xsd:string"
             },
             "encoding": {
-              "@id": "cdi:PhysicalSegmentLayout-encoding",
+              "@id": "cdi:PhysicalDataSet-encoding",
               "@type": "@id"
             },
-            "escapeCharacter": {
-              "@id": "cdi:PhysicalSegmentLayout-escapeCharacter",
+            "fileSize": {
+              "@id": "cdi:PhysicalDataSet-fileSize",
+              "@type": "xsd:double"
+            },
+            "fileSizeUofM": {
+              "@id": "cdi:PhysicalDataSet-fileSizeUofM",
               "@type": "xsd:string"
             },
-            "hasHeader": {
-              "@id": "cdi:PhysicalSegmentLayout-hasHeader",
-              "@type": "xsd:boolean"
-            },
-            "headerIsCaseSensitive": {
-              "@id": "cdi:PhysicalSegmentLayout-headerIsCaseSensitive",
-              "@type": "xsd:boolean"
-            },
-            "headerRowCount": {
-              "@id": "cdi:PhysicalSegmentLayout-headerRowCount",
-              "@type": "xsd:integer"
+            "fingerprint": {
+              "@id": "cdi:PhysicalDataSet-fingerprint",
+              "@type": "@id"
             },
             "identifier": {
-              "@id": "cdi:PhysicalSegmentLayout-identifier",
+              "@id": "cdi:PhysicalDataSet-identifier",
               "@type": "@id"
-            },
-            "isDelimited": {
-              "@id": "cdi:PhysicalSegmentLayout-isDelimited",
-              "@type": "xsd:boolean"
-            },
-            "isFixedWidth": {
-              "@id": "cdi:PhysicalSegmentLayout-isFixedWidth",
-              "@type": "xsd:boolean"
-            },
-            "lineTerminator": {
-              "@id": "cdi:PhysicalSegmentLayout-lineTerminator",
-              "@type": "xsd:string"
             },
             "name": {
-              "@id": "cdi:PhysicalSegmentLayout-name",
+              "@id": "cdi:PhysicalDataSet-name",
               "@type": "@id"
-            },
-            "nullSequence": {
-              "@id": "cdi:PhysicalSegmentLayout-nullSequence",
-              "@type": "xsd:string"
             },
             "overview": {
-              "@id": "cdi:PhysicalSegmentLayout-overview",
+              "@id": "cdi:PhysicalDataSet-overview",
               "@type": "@id"
             },
-            "purpose": {
-              "@id": "cdi:PhysicalSegmentLayout-purpose",
-              "@type": "@id"
-            },
-            "quoteCharacter": {
-              "@id": "cdi:PhysicalSegmentLayout-quoteCharacter",
+            "physicalFileURL": {
+              "@id": "cdi:PhysicalDataSet-physicalFileURL",
               "@type": "xsd:string"
             },
-            "skipBlankRows": {
-              "@id": "cdi:PhysicalSegmentLayout-skipBlankRows",
-              "@type": "xsd:boolean"
+            "purpose": {
+              "@id": "cdi:PhysicalDataSet-purpose",
+              "@type": "@id"
             },
-            "skipDataColumns": {
-              "@id": "cdi:PhysicalSegmentLayout-skipDataColumns",
+            "recordCount": {
+              "@id": "cdi:PhysicalDataSet-recordCount",
               "@type": "xsd:integer"
             },
-            "skipInitialSpace": {
-              "@id": "cdi:PhysicalSegmentLayout-skipInitialSpace",
-              "@type": "xsd:boolean"
-            },
-            "skipRows": {
-              "@id": "cdi:PhysicalSegmentLayout-skipRows",
-              "@type": "xsd:integer"
-            },
-            "tableDirection": {
-              "@id": "cdi:PhysicalSegmentLayout-tableDirection",
-              "@type": "@vocab",
-              "@context": {
-                "Auto": "cdi:Auto"
-            ,    "Ltr": "cdi:Ltr"
-            ,    "Rtl": "cdi:Rtl"
-              }
-            },
-            "textDirection": {
-              "@id": "cdi:PhysicalSegmentLayout-textDirection",
-              "@type": "@vocab",
-              "@context": {
-                "Auto": "cdi:Auto"
-            ,    "Inherit": "cdi:Inherit"
-            ,    "Ltr": "cdi:Ltr"
-            ,    "Rtl": "cdi:Rtl"
-              }
-            },
-            "treatConsecutiveDelimitersAsOne": {
-              "@id": "cdi:PhysicalSegmentLayout-treatConsecutiveDelimitersAsOne",
-              "@type": "xsd:boolean"
-            },
-            "trim": {
-              "@id": "cdi:PhysicalSegmentLayout-trim",
-              "@type": "@vocab",
-              "@context": {
-                "Both": "cdi:Both"
-            ,    "End": "cdi:End"
-            ,    "Neither": "cdi:Neither"
-            ,    "Start": "cdi:Start"
-              }
+            "standard": {
+              "@id": "cdi:PhysicalDataSet-standard",
+              "@type": "@id"
             },
             
+            "has_InstanceVariable": {
+              "@id": "cdi:PhysicalDataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
             "isDefinedBy_Concept": {
-              "@id": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
+              "@id": "cdi:PhysicalDataSet_isDefinedBy_Concept",
               "@type": "@id"
             },
-            "formats": {
-              "@id": "cdi:PhysicalSegmentLayout_formats_LogicalRecord",
+            "correspondsTo_DataSet": {
+              "@id": "cdi:PhysicalDataSet_correspondsTo_DataSet",
               "@type": "@id"
             },
-            "has_ValueMapping": {
-              "@id": "cdi:PhysicalSegmentLayout_has_ValueMapping",
+            "has_PhysicalMapping": {
+              "@id": "cdi:PhysicalDataSet_has_PhysicalMapping",
               "@type": "@id"
             },
-            "has_ValueMappingPosition": {
-              "@id": "cdi:PhysicalSegmentLayout_has_ValueMappingPosition",
+            "has_PhysicalMappingPosition": {
+              "@id": "cdi:PhysicalDataSet_has_PhysicalMappingPosition",
               "@type": "@id"
             },
-            "has_PhysicalSegmentLayout_OF_InstanceVariable": {
-              "@reverse": "cdi:InstanceVariable_has_PhysicalSegmentLayout",
+            "has_Segment": {
+              "@id": "cdi:PhysicalDataSet_has_Segment",
               "@type": "@id"
             },
-            "structures_OF_PhysicalLayoutRelationStructure": {
-              "@reverse": "cdi:PhysicalLayoutRelationStructure_structures_PhysicalSegmentLayout",
+            "has_SegmentPosition": {
+              "@id": "cdi:PhysicalDataSet_has_SegmentPosition",
               "@type": "@id"
             },
-            "has_PhysicalSegmentLayout_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_has_PhysicalSegmentLayout",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "PhysicalSegmentLocation": {
-      "@id": "cdi:PhysicalSegmentLocation",
-      "@context": [
-          {
-            "catalogDetails": {
-              "@id": "cdi:PhysicalSegmentLocation-catalogDetails",
-              "@type": "@id"
-            },
-            "identifier": {
-              "@id": "cdi:PhysicalSegmentLocation-identifier",
-              "@type": "@id"
-            },
-            
-            "uses_PhysicalSegmentLocation_OF_ValueMapping": {
-              "@reverse": "cdi:ValueMapping_uses_PhysicalSegmentLocation",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "RecordRelation": {
-      "@id": "cdi:RecordRelation",
-      "@context": [
-          {
-            "catalogDetails": {
-              "@id": "cdi:RecordRelation-catalogDetails",
-              "@type": "@id"
-            },
-            "displayLabel": {
-              "@id": "cdi:RecordRelation-displayLabel",
-              "@type": "@id"
-            },
-            "identifier": {
-              "@id": "cdi:RecordRelation-identifier",
-              "@type": "@id"
-            },
-            "purpose": {
-              "@id": "cdi:RecordRelation-purpose",
-              "@type": "@id"
-            },
-            "usage": {
-              "@id": "cdi:RecordRelation-usage",
-              "@type": "@id"
-            },
-            
-            "has_InstanceVariableMap": {
-              "@id": "cdi:RecordRelation_has_InstanceVariableMap",
-              "@type": "@id"
-            },
-            "maps": {
-              "@id": "cdi:RecordRelation_maps_LogicalRecord",
-              "@type": "@id"
-            },
-            "has_RecordRelation_OF_DataStore": {
-              "@reverse": "cdi:DataStore_has_RecordRelation",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "SegmentByText": {
-      "@id": "cdi:SegmentByText",
-      "@context": [
-          {
-            "catalogDetails": {
-              "@id": "cdi:PhysicalSegmentLocation-catalogDetails",
-              "@type": "@id"
-            },
-            "identifier": {
-              "@id": "cdi:PhysicalSegmentLocation-identifier",
-              "@type": "@id"
-            },
-            
-            "uses_PhysicalSegmentLocation_OF_ValueMapping": {
-              "@reverse": "cdi:ValueMapping_uses_PhysicalSegmentLocation",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          },
-          {
-            "characterLength": {
-              "@id": "cdi:SegmentByText-characterLength",
-              "@type": "xsd:integer"
-            },
-            "endCharacterPosition": {
-              "@id": "cdi:SegmentByText-endCharacterPosition",
-              "@type": "xsd:integer"
-            },
-            "endLine": {
-              "@id": "cdi:SegmentByText-endLine",
-              "@type": "xsd:integer"
-            },
-            "startCharacterPosition": {
-              "@id": "cdi:SegmentByText-startCharacterPosition",
-              "@type": "xsd:integer"
-            },
-            "startLine": {
-              "@id": "cdi:SegmentByText-startLine",
-              "@type": "xsd:integer"
-            },
-            
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "UnitSegmentLayout": {
-      "@id": "cdi:UnitSegmentLayout",
-      "@context": [
-          {
-            "allowsDuplicates": {
-              "@id": "cdi:PhysicalSegmentLayout-allowsDuplicates",
-              "@type": "xsd:boolean"
-            },
-            "arrayBase": {
-              "@id": "cdi:PhysicalSegmentLayout-arrayBase",
-              "@type": "xsd:integer"
-            },
-            "catalogDetails": {
-              "@id": "cdi:PhysicalSegmentLayout-catalogDetails",
-              "@type": "@id"
-            },
-            "commentPrefix": {
-              "@id": "cdi:PhysicalSegmentLayout-commentPrefix",
-              "@type": "xsd:string"
-            },
-            "delimiter": {
-              "@id": "cdi:PhysicalSegmentLayout-delimiter",
-              "@type": "xsd:string"
-            },
-            "encoding": {
-              "@id": "cdi:PhysicalSegmentLayout-encoding",
-              "@type": "@id"
-            },
-            "escapeCharacter": {
-              "@id": "cdi:PhysicalSegmentLayout-escapeCharacter",
-              "@type": "xsd:string"
-            },
-            "hasHeader": {
-              "@id": "cdi:PhysicalSegmentLayout-hasHeader",
-              "@type": "xsd:boolean"
-            },
-            "headerIsCaseSensitive": {
-              "@id": "cdi:PhysicalSegmentLayout-headerIsCaseSensitive",
-              "@type": "xsd:boolean"
-            },
-            "headerRowCount": {
-              "@id": "cdi:PhysicalSegmentLayout-headerRowCount",
-              "@type": "xsd:integer"
-            },
-            "identifier": {
-              "@id": "cdi:PhysicalSegmentLayout-identifier",
-              "@type": "@id"
-            },
-            "isDelimited": {
-              "@id": "cdi:PhysicalSegmentLayout-isDelimited",
-              "@type": "xsd:boolean"
-            },
-            "isFixedWidth": {
-              "@id": "cdi:PhysicalSegmentLayout-isFixedWidth",
-              "@type": "xsd:boolean"
-            },
-            "lineTerminator": {
-              "@id": "cdi:PhysicalSegmentLayout-lineTerminator",
-              "@type": "xsd:string"
-            },
-            "name": {
-              "@id": "cdi:PhysicalSegmentLayout-name",
-              "@type": "@id"
-            },
-            "nullSequence": {
-              "@id": "cdi:PhysicalSegmentLayout-nullSequence",
-              "@type": "xsd:string"
-            },
-            "overview": {
-              "@id": "cdi:PhysicalSegmentLayout-overview",
-              "@type": "@id"
-            },
-            "purpose": {
-              "@id": "cdi:PhysicalSegmentLayout-purpose",
-              "@type": "@id"
-            },
-            "quoteCharacter": {
-              "@id": "cdi:PhysicalSegmentLayout-quoteCharacter",
-              "@type": "xsd:string"
-            },
-            "skipBlankRows": {
-              "@id": "cdi:PhysicalSegmentLayout-skipBlankRows",
-              "@type": "xsd:boolean"
-            },
-            "skipDataColumns": {
-              "@id": "cdi:PhysicalSegmentLayout-skipDataColumns",
-              "@type": "xsd:integer"
-            },
-            "skipInitialSpace": {
-              "@id": "cdi:PhysicalSegmentLayout-skipInitialSpace",
-              "@type": "xsd:boolean"
-            },
-            "skipRows": {
-              "@id": "cdi:PhysicalSegmentLayout-skipRows",
-              "@type": "xsd:integer"
-            },
-            "tableDirection": {
-              "@id": "cdi:PhysicalSegmentLayout-tableDirection",
-              "@type": "@vocab",
-              "@context": {
-                "Auto": "cdi:Auto"
-            ,    "Ltr": "cdi:Ltr"
-            ,    "Rtl": "cdi:Rtl"
-              }
-            },
-            "textDirection": {
-              "@id": "cdi:PhysicalSegmentLayout-textDirection",
-              "@type": "@vocab",
-              "@context": {
-                "Auto": "cdi:Auto"
-            ,    "Inherit": "cdi:Inherit"
-            ,    "Ltr": "cdi:Ltr"
-            ,    "Rtl": "cdi:Rtl"
-              }
-            },
-            "treatConsecutiveDelimitersAsOne": {
-              "@id": "cdi:PhysicalSegmentLayout-treatConsecutiveDelimitersAsOne",
-              "@type": "xsd:boolean"
-            },
-            "trim": {
-              "@id": "cdi:PhysicalSegmentLayout-trim",
-              "@type": "@vocab",
-              "@context": {
-                "Both": "cdi:Both"
-            ,    "End": "cdi:End"
-            ,    "Neither": "cdi:Neither"
-            ,    "Start": "cdi:Start"
-              }
-            },
-            
-            "isDefinedBy_Concept": {
-              "@id": "cdi:PhysicalSegmentLayout_isDefinedBy_Concept",
-              "@type": "@id"
-            },
-            "formats": {
-              "@id": "cdi:PhysicalSegmentLayout_formats_LogicalRecord",
-              "@type": "@id"
-            },
-            "has_ValueMapping": {
-              "@id": "cdi:PhysicalSegmentLayout_has_ValueMapping",
-              "@type": "@id"
-            },
-            "has_ValueMappingPosition": {
-              "@id": "cdi:PhysicalSegmentLayout_has_ValueMappingPosition",
-              "@type": "@id"
-            },
-            "has_PhysicalSegmentLayout_OF_InstanceVariable": {
-              "@reverse": "cdi:InstanceVariable_has_PhysicalSegmentLayout",
-              "@type": "@id"
-            },
-            "structures_OF_PhysicalLayoutRelationStructure": {
-              "@reverse": "cdi:PhysicalLayoutRelationStructure_structures_PhysicalSegmentLayout",
-              "@type": "@id"
-            },
-            "has_PhysicalSegmentLayout_OF_PhysicalRecordSegment": {
-              "@reverse": "cdi:PhysicalRecordSegment_has_PhysicalSegmentLayout",
+            "uses_LogicalRecord": {
+              "@id": "cdi:PhysicalDataSet_uses_LogicalRecord",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -6984,149 +6877,285 @@
           }
       ]
     },
-    "ValueMapping": {
-      "@id": "cdi:ValueMapping",
+    "TabularTextDataSet": {
+      "@id": "cdi:TabularTextDataSet",
+      "@context": [
+          {
+            "catalogDetails": {
+              "@id": "cdi:PhysicalDataSet-catalogDetails",
+              "@type": "@id"
+            },
+            "characterSet": {
+              "@id": "cdi:PhysicalDataSet-characterSet",
+              "@type": "xsd:string"
+            },
+            "encoding": {
+              "@id": "cdi:PhysicalDataSet-encoding",
+              "@type": "@id"
+            },
+            "fileSize": {
+              "@id": "cdi:PhysicalDataSet-fileSize",
+              "@type": "xsd:double"
+            },
+            "fileSizeUofM": {
+              "@id": "cdi:PhysicalDataSet-fileSizeUofM",
+              "@type": "xsd:string"
+            },
+            "fingerprint": {
+              "@id": "cdi:PhysicalDataSet-fingerprint",
+              "@type": "@id"
+            },
+            "identifier": {
+              "@id": "cdi:PhysicalDataSet-identifier",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "cdi:PhysicalDataSet-name",
+              "@type": "@id"
+            },
+            "overview": {
+              "@id": "cdi:PhysicalDataSet-overview",
+              "@type": "@id"
+            },
+            "physicalFileURL": {
+              "@id": "cdi:PhysicalDataSet-physicalFileURL",
+              "@type": "xsd:string"
+            },
+            "purpose": {
+              "@id": "cdi:PhysicalDataSet-purpose",
+              "@type": "@id"
+            },
+            "recordCount": {
+              "@id": "cdi:PhysicalDataSet-recordCount",
+              "@type": "xsd:integer"
+            },
+            "standard": {
+              "@id": "cdi:PhysicalDataSet-standard",
+              "@type": "@id"
+            },
+            
+            "has_InstanceVariable": {
+              "@id": "cdi:PhysicalDataSet_has_InstanceVariable",
+              "@type": "@id"
+            },
+            "isDefinedBy_Concept": {
+              "@id": "cdi:PhysicalDataSet_isDefinedBy_Concept",
+              "@type": "@id"
+            },
+            "correspondsTo_DataSet": {
+              "@id": "cdi:PhysicalDataSet_correspondsTo_DataSet",
+              "@type": "@id"
+            },
+            "has_PhysicalMapping": {
+              "@id": "cdi:PhysicalDataSet_has_PhysicalMapping",
+              "@type": "@id"
+            },
+            "has_PhysicalMappingPosition": {
+              "@id": "cdi:PhysicalDataSet_has_PhysicalMappingPosition",
+              "@type": "@id"
+            },
+            "has_Segment": {
+              "@id": "cdi:PhysicalDataSet_has_Segment",
+              "@type": "@id"
+            },
+            "has_SegmentPosition": {
+              "@id": "cdi:PhysicalDataSet_has_SegmentPosition",
+              "@type": "@id"
+            },
+            "uses_LogicalRecord": {
+              "@id": "cdi:PhysicalDataSet_uses_LogicalRecord",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          },
+          {
+            "arrayBase": {
+              "@id": "cdi:TabularTextDataSet-arrayBase",
+              "@type": "xsd:integer"
+            },
+            "commentPrefix": {
+              "@id": "cdi:TabularTextDataSet-commentPrefix",
+              "@type": "xsd:string"
+            },
+            "delimiter": {
+              "@id": "cdi:TabularTextDataSet-delimiter",
+              "@type": "xsd:string"
+            },
+            "escapeCharacter": {
+              "@id": "cdi:TabularTextDataSet-escapeCharacter",
+              "@type": "xsd:string"
+            },
+            "hasHeader": {
+              "@id": "cdi:TabularTextDataSet-hasHeader",
+              "@type": "xsd:boolean"
+            },
+            "headerIsCaseSensitive": {
+              "@id": "cdi:TabularTextDataSet-headerIsCaseSensitive",
+              "@type": "xsd:boolean"
+            },
+            "headerRowCount": {
+              "@id": "cdi:TabularTextDataSet-headerRowCount",
+              "@type": "xsd:integer"
+            },
+            "isDelimited": {
+              "@id": "cdi:TabularTextDataSet-isDelimited",
+              "@type": "xsd:boolean"
+            },
+            "isFixedWidth": {
+              "@id": "cdi:TabularTextDataSet-isFixedWidth",
+              "@type": "xsd:boolean"
+            },
+            "lineTerminator": {
+              "@id": "cdi:TabularTextDataSet-lineTerminator",
+              "@type": "xsd:string"
+            },
+            "nullSequence": {
+              "@id": "cdi:TabularTextDataSet-nullSequence",
+              "@type": "xsd:string"
+            },
+            "quoteCharacter": {
+              "@id": "cdi:TabularTextDataSet-quoteCharacter",
+              "@type": "xsd:string"
+            },
+            "skipBlankRows": {
+              "@id": "cdi:TabularTextDataSet-skipBlankRows",
+              "@type": "xsd:boolean"
+            },
+            "skipDataColumns": {
+              "@id": "cdi:TabularTextDataSet-skipDataColumns",
+              "@type": "xsd:integer"
+            },
+            "skipInitialSpace": {
+              "@id": "cdi:TabularTextDataSet-skipInitialSpace",
+              "@type": "xsd:boolean"
+            },
+            "skipRows": {
+              "@id": "cdi:TabularTextDataSet-skipRows",
+              "@type": "xsd:integer"
+            },
+            "tableDirection": {
+              "@id": "cdi:TabularTextDataSet-tableDirection",
+              "@type": "@vocab",
+              "@context": {
+                "Auto": "cdi:Auto"
+            ,    "Ltr": "cdi:Ltr"
+            ,    "Rtl": "cdi:Rtl"
+              }
+            },
+            "textDirection": {
+              "@id": "cdi:TabularTextDataSet-textDirection",
+              "@type": "@vocab",
+              "@context": {
+                "Auto": "cdi:Auto"
+            ,    "Inherit": "cdi:Inherit"
+            ,    "Ltr": "cdi:Ltr"
+            ,    "Rtl": "cdi:Rtl"
+              }
+            },
+            "treatConsecutiveDelimitersAsOne": {
+              "@id": "cdi:TabularTextDataSet-treatConsecutiveDelimitersAsOne",
+              "@type": "xsd:boolean"
+            },
+            "trim": {
+              "@id": "cdi:TabularTextDataSet-trim",
+              "@type": "@vocab",
+              "@context": {
+                "Both": "cdi:Both"
+            ,    "End": "cdi:End"
+            ,    "Neither": "cdi:Neither"
+            ,    "Start": "cdi:Start"
+              }
+            },
+            
+            "isDefinedBy_Concept": {
+              "@id": "cdi:TabularTextDataSet_isDefinedBy_Concept",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "TextMapping": {
+      "@id": "cdi:TextMapping",
       "@context": [
           {
             "decimalPositions": {
-              "@id": "cdi:ValueMapping-decimalPositions",
+              "@id": "cdi:PhysicalMapping-decimalPositions",
               "@type": "xsd:integer"
             },
-            "defaultDecimalSeparator": {
-              "@id": "cdi:ValueMapping-defaultDecimalSeparator",
-              "@type": "xsd:string"
-            },
-            "defaultDigitGroupSeparator": {
-              "@id": "cdi:ValueMapping-defaultDigitGroupSeparator",
-              "@type": "xsd:string"
-            },
             "defaultValue": {
-              "@id": "cdi:ValueMapping-defaultValue",
+              "@id": "cdi:PhysicalMapping-defaultValue",
               "@type": "xsd:string"
             },
             "format": {
-              "@id": "cdi:ValueMapping-format",
+              "@id": "cdi:PhysicalMapping-format",
               "@type": "@id"
             },
             "identifier": {
-              "@id": "cdi:ValueMapping-identifier",
+              "@id": "cdi:PhysicalMapping-identifier",
               "@type": "@id"
             },
             "isRequired": {
-              "@id": "cdi:ValueMapping-isRequired",
+              "@id": "cdi:PhysicalMapping-isRequired",
               "@type": "xsd:boolean"
             },
-            "length": {
-              "@id": "cdi:ValueMapping-length",
-              "@type": "xsd:integer"
-            },
             "maximumLength": {
-              "@id": "cdi:ValueMapping-maximumLength",
+              "@id": "cdi:PhysicalMapping-maximumLength",
               "@type": "xsd:integer"
             },
             "minimumLength": {
-              "@id": "cdi:ValueMapping-minimumLength",
+              "@id": "cdi:PhysicalMapping-minimumLength",
               "@type": "xsd:integer"
             },
             "nullSequence": {
-              "@id": "cdi:ValueMapping-nullSequence",
+              "@id": "cdi:PhysicalMapping-nullSequence",
               "@type": "xsd:string"
             },
             "numberPattern": {
-              "@id": "cdi:ValueMapping-numberPattern",
+              "@id": "cdi:PhysicalMapping-numberPattern",
               "@type": "xsd:string"
             },
-            "physicalDataType": {
-              "@id": "cdi:ValueMapping-physicalDataType",
-              "@type": "@id"
+            "position": {
+              "@id": "cdi:PhysicalMapping-position",
+              "@type": "xsd:integer"
             },
             "scale": {
-              "@id": "cdi:ValueMapping-scale",
+              "@id": "cdi:PhysicalMapping-scale",
               "@type": "xsd:integer"
             },
             
             "formats": {
-              "@id": "cdi:ValueMapping_formats_DataPoint",
+              "@id": "cdi:PhysicalMapping_formats_InstanceVariable",
               "@type": "@id"
             },
-            "uses_PhysicalSegmentLocation": {
-              "@id": "cdi:ValueMapping_uses_PhysicalSegmentLocation",
+            "has_PhysicalMapping_OF_PhysicalDataSet": {
+              "@reverse": "cdi:PhysicalDataSet_has_PhysicalMapping",
               "@type": "@id"
             },
-            "has_ValueMapping_OF_InstanceVariable": {
-              "@reverse": "cdi:InstanceVariable_has_ValueMapping",
-              "@type": "@id"
-            },
-            "has_ValueMapping_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_has_ValueMapping",
-              "@type": "@id"
-            },
-            "indexes_OF_ValueMappingPosition": {
-              "@reverse": "cdi:ValueMappingPosition_indexes_ValueMapping",
-              "@type": "@id"
-            },
-            "hasSource_OF_ValueMappingRelationship": {
-              "@reverse": "cdi:ValueMappingRelationship_hasSource_ValueMapping",
-              "@type": "@id"
-            },
-            "hasTarget_OF_ValueMappingRelationship": {
-              "@reverse": "cdi:ValueMappingRelationship_hasTarget_ValueMapping",
+            "indexes_OF_PhysicalMappingPosition": {
+              "@reverse": "cdi:PhysicalMappingPosition_indexes_PhysicalMapping",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "ValueMappingPosition": {
-      "@id": "cdi:ValueMappingPosition",
-      "@context": [
+          },
           {
-            "identifier": {
-              "@id": "cdi:ValueMappingPosition-identifier",
-              "@type": "@id"
+            "defaultDecimalSeparator": {
+              "@id": "cdi:TextMapping-defaultDecimalSeparator",
+              "@type": "xsd:string"
             },
-            "value": {
-              "@id": "cdi:ValueMappingPosition-value",
+            "defaultDigitGroupSeparator": {
+              "@id": "cdi:TextMapping-defaultDigitGroupSeparator",
+              "@type": "xsd:string"
+            },
+            "length": {
+              "@id": "cdi:TextMapping-length",
               "@type": "xsd:integer"
             },
-            
-            "indexes": {
-              "@id": "cdi:ValueMappingPosition_indexes_ValueMapping",
-              "@type": "@id"
-            },
-            "has_ValueMappingPosition_OF_PhysicalSegmentLayout": {
-              "@reverse": "cdi:PhysicalSegmentLayout_has_ValueMappingPosition",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "ValueMappingRelationship": {
-      "@id": "cdi:ValueMappingRelationship",
-      "@context": [
-          {
-            "identifier": {
-              "@id": "cdi:ValueMappingRelationship-identifier",
-              "@type": "@id"
-            },
-            "semantics": {
-              "@id": "cdi:ValueMappingRelationship-semantics",
+            "mappingLabel": {
+              "@id": "cdi:TextMapping-mappingLabel",
               "@type": "@id"
             },
             
-            "hasSource": {
-              "@id": "cdi:ValueMappingRelationship_hasSource_ValueMapping",
-              "@type": "@id"
-            },
-            "hasTarget": {
-              "@id": "cdi:ValueMappingRelationship_hasTarget_ValueMapping",
-              "@type": "@id"
-            },
-            "has_ValueMappingRelationship_OF_PhysicalLayoutRelationStructure": {
-              "@reverse": "cdi:PhysicalLayoutRelationStructure_has_ValueMappingRelationship",
-              "@type": "@id"
-            },
             " comment ": "tag:json-should-support-trailing-commas"
           }
       ]
@@ -7146,6 +7175,10 @@
             "displayLabel": {
               "@id": "cdi:Activity-displayLabel",
               "@type": "@id"
+            },
+            "end": {
+              "@id": "cdi:Activity-end",
+              "@type": "cdi:XsdDateTime"
             },
             "entityProduced": {
               "@id": "cdi:Activity-entityProduced",
@@ -7167,17 +7200,21 @@
               "@id": "cdi:Activity-standardModelMapping",
               "@type": "@id"
             },
-            
-            "has_Step": {
-              "@id": "cdi:Activity_has_Step",
-              "@type": "@id"
+            "start": {
+              "@id": "cdi:Activity-start",
+              "@type": "cdi:XsdDateTime"
             },
+            
             "hasInternal": {
               "@id": "cdi:Activity_hasInternal_ControlLogic",
               "@type": "@id"
             },
             "hasSubActivity": {
               "@id": "cdi:Activity_hasSubActivity_Activity",
+              "@type": "@id"
+            },
+            "has_Step": {
+              "@id": "cdi:Activity_has_Step",
               "@type": "@id"
             },
             "hasSubActivity_OF_Activity": {
@@ -7225,12 +7262,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -7303,12 +7340,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -7383,12 +7420,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -7533,12 +7570,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -7615,12 +7652,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -7848,12 +7885,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -7946,12 +7983,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -8120,6 +8157,10 @@
               "@id": "cdi:Activity-displayLabel",
               "@type": "@id"
             },
+            "end": {
+              "@id": "cdi:Activity-end",
+              "@type": "cdi:XsdDateTime"
+            },
             "entityProduced": {
               "@id": "cdi:Activity-entityProduced",
               "@type": "@id"
@@ -8140,17 +8181,21 @@
               "@id": "cdi:Activity-standardModelMapping",
               "@type": "@id"
             },
-            
-            "has_Step": {
-              "@id": "cdi:Activity_has_Step",
-              "@type": "@id"
+            "start": {
+              "@id": "cdi:Activity-start",
+              "@type": "cdi:XsdDateTime"
             },
+            
             "hasInternal": {
               "@id": "cdi:Activity_hasInternal_ControlLogic",
               "@type": "@id"
             },
             "hasSubActivity": {
               "@id": "cdi:Activity_hasSubActivity_Activity",
+              "@type": "@id"
+            },
+            "has_Step": {
+              "@id": "cdi:Activity_has_Step",
               "@type": "@id"
             },
             "hasSubActivity_OF_Activity": {
@@ -8230,12 +8275,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -8291,12 +8336,12 @@
               "@type": "@id"
             },
             
-            "has_InformationFlowDefinition": {
-              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
-              "@type": "@id"
-            },
             "hasSubControlLogic": {
               "@id": "cdi:ControlLogic_hasSubControlLogic_ControlLogic",
+              "@type": "@id"
+            },
+            "has_InformationFlowDefinition": {
+              "@id": "cdi:ControlLogic_has_InformationFlowDefinition",
               "@type": "@id"
             },
             "informs": {
@@ -8376,35 +8421,6 @@
             },
             "hasRulingBy_OF_ClassificationItem": {
               "@reverse": "cdi:ClassificationItem_hasRulingBy_AuthorizationSource",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "CategoryStatistic": {
-      "@id": "cdi:CategoryStatistic",
-      "@context": [
-          {
-            "identifier": {
-              "@id": "cdi:CategoryStatistic-identifier",
-              "@type": "@id"
-            },
-            "statistic": {
-              "@id": "cdi:CategoryStatistic-statistic",
-              "@type": "@id"
-            },
-            "typeOfCategoryStatistic": {
-              "@id": "cdi:CategoryStatistic-typeOfCategoryStatistic",
-              "@type": "@id"
-            },
-            
-            "appliesTo": {
-              "@id": "cdi:CategoryStatistic_appliesTo_InstanceVariable",
-              "@type": "@id"
-            },
-            "for": {
-              "@id": "cdi:CategoryStatistic_for_Category",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -8546,12 +8562,12 @@
               "@type": "@id"
             },
             
-            "has_ClassificationIndexEntry_OF_ClassificationIndex": {
-              "@reverse": "cdi:ClassificationIndex_has_ClassificationIndexEntry",
-              "@type": "@id"
-            },
             "indexes_OF_ClassificationIndexEntryPosition": {
               "@reverse": "cdi:ClassificationIndexEntryPosition_indexes_ClassificationIndexEntry",
+              "@type": "@id"
+            },
+            "has_ClassificationIndexEntry_OF_ClassificationIndex": {
+              "@reverse": "cdi:ClassificationIndex_has_ClassificationIndexEntry",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -8640,10 +8656,6 @@
               "@id": "cdi:ClassificationItem_hasRulingBy_AuthorizationSource",
               "@type": "@id"
             },
-            "excludes_OF_ClassificationItem": {
-              "@reverse": "cdi:ClassificationItem_excludes_ClassificationItem",
-              "@type": "@id"
-            },
             "indexes_OF_ClassificationItemPosition": {
               "@reverse": "cdi:ClassificationItemPosition_indexes_ClassificationItem",
               "@type": "@id"
@@ -8654,6 +8666,10 @@
             },
             "hasTarget_OF_ClassificationItemRelationship": {
               "@reverse": "cdi:ClassificationItemRelationship_hasTarget_ClassificationItem",
+              "@type": "@id"
+            },
+            "excludes_OF_ClassificationItem": {
+              "@reverse": "cdi:ClassificationItem_excludes_ClassificationItem",
               "@type": "@id"
             },
             "groups_OF_Level": {
@@ -8714,61 +8730,8 @@
               "@id": "cdi:ClassificationItemRelationship_hasTarget_ClassificationItem",
               "@type": "@id"
             },
-            "has_ClassificationItemRelationship_OF_ClassificationItemStructure": {
-              "@reverse": "cdi:ClassificationItemStructure_has_ClassificationItemRelationship",
-              "@type": "@id"
-            },
-            " comment ": "tag:json-should-support-trailing-commas"
-          }
-      ]
-    },
-    "ClassificationItemStructure": {
-      "@id": "cdi:ClassificationItemStructure",
-      "@context": [
-          {
-            "displayLabel": {
-              "@id": "cdi:ClassificationItemStructure-displayLabel",
-              "@type": "@id"
-            },
-            "identifier": {
-              "@id": "cdi:ClassificationItemStructure-identifier",
-              "@type": "@id"
-            },
-            "name": {
-              "@id": "cdi:ClassificationItemStructure-name",
-              "@type": "@id"
-            },
-            "purpose": {
-              "@id": "cdi:ClassificationItemStructure-purpose",
-              "@type": "@id"
-            },
-            "semantics": {
-              "@id": "cdi:ClassificationItemStructure-semantics",
-              "@type": "@id"
-            },
-            "specification": {
-              "@id": "cdi:ClassificationItemStructure-specification",
-              "@type": "@id"
-            },
-            "topology": {
-              "@id": "cdi:ClassificationItemStructure-topology",
-              "@type": "@id"
-            },
-            "totality": {
-              "@id": "cdi:ClassificationItemStructure-totality",
-              "@type": "@vocab",
-              "@context": {
-                "Partial": "cdi:Partial"
-            ,    "Total": "cdi:Total"
-              }
-            },
-            
-            "has_ClassificationItemRelationship": {
-              "@id": "cdi:ClassificationItemStructure_has_ClassificationItemRelationship",
-              "@type": "@id"
-            },
-            "structures": {
-              "@id": "cdi:ClassificationItemStructure_structures_StatisticalClassification",
+            "has_ClassificationItemRelationship_OF_ClassificationStructure": {
+              "@reverse": "cdi:ClassificationStructure_has_ClassificationItemRelationship",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -8912,6 +8875,59 @@
             },
             "structures": {
               "@id": "cdi:ClassificationSeriesStructure_structures_ClassificationSeries",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "ClassificationStructure": {
+      "@id": "cdi:ClassificationStructure",
+      "@context": [
+          {
+            "displayLabel": {
+              "@id": "cdi:ClassificationStructure-displayLabel",
+              "@type": "@id"
+            },
+            "identifier": {
+              "@id": "cdi:ClassificationStructure-identifier",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "cdi:ClassificationStructure-name",
+              "@type": "@id"
+            },
+            "purpose": {
+              "@id": "cdi:ClassificationStructure-purpose",
+              "@type": "@id"
+            },
+            "semantics": {
+              "@id": "cdi:ClassificationStructure-semantics",
+              "@type": "@id"
+            },
+            "specification": {
+              "@id": "cdi:ClassificationStructure-specification",
+              "@type": "@id"
+            },
+            "topology": {
+              "@id": "cdi:ClassificationStructure-topology",
+              "@type": "@id"
+            },
+            "totality": {
+              "@id": "cdi:ClassificationStructure-totality",
+              "@type": "@vocab",
+              "@context": {
+                "Partial": "cdi:Partial"
+            ,    "Total": "cdi:Total"
+              }
+            },
+            
+            "has_ClassificationItemRelationship": {
+              "@id": "cdi:ClassificationStructure_has_ClassificationItemRelationship",
+              "@type": "@id"
+            },
+            "structures": {
+              "@id": "cdi:ClassificationStructure_structures_StatisticalClassification",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -9481,10 +9497,6 @@
               "@id": "cdi:StatisticalClassification_isVariantOf_StatisticalClassification",
               "@type": "@id"
             },
-            "structures_OF_ClassificationItemStructure": {
-              "@reverse": "cdi:ClassificationItemStructure_structures_StatisticalClassification",
-              "@type": "@id"
-            },
             "indexes_OF_ClassificationPosition": {
               "@reverse": "cdi:ClassificationPosition_indexes_StatisticalClassification",
               "@type": "@id"
@@ -9493,8 +9505,20 @@
               "@reverse": "cdi:ClassificationSeries_has_StatisticalClassification",
               "@type": "@id"
             },
+            "structures_OF_ClassificationStructure": {
+              "@reverse": "cdi:ClassificationStructure_structures_StatisticalClassification",
+              "@type": "@id"
+            },
             "mapsTo_OF_CorrespondenceTable": {
               "@reverse": "cdi:CorrespondenceTable_mapsTo_StatisticalClassification",
+              "@type": "@id"
+            },
+            "hasSource_OF_StatisticalClassificationRelationship": {
+              "@reverse": "cdi:StatisticalClassificationRelationship_hasSource_StatisticalClassification",
+              "@type": "@id"
+            },
+            "hasTarget_OF_StatisticalClassificationRelationship": {
+              "@reverse": "cdi:StatisticalClassificationRelationship_hasTarget_StatisticalClassification",
               "@type": "@id"
             },
             "isPredecessorOf_OF_StatisticalClassification": {
@@ -9507,14 +9531,6 @@
             },
             "isVariantOf_OF_StatisticalClassification": {
               "@reverse": "cdi:StatisticalClassification_isVariantOf_StatisticalClassification",
-              "@type": "@id"
-            },
-            "hasSource_OF_StatisticalClassificationRelationship": {
-              "@reverse": "cdi:StatisticalClassificationRelationship_hasSource_StatisticalClassification",
-              "@type": "@id"
-            },
-            "hasTarget_OF_StatisticalClassificationRelationship": {
-              "@reverse": "cdi:StatisticalClassificationRelationship_hasTarget_StatisticalClassification",
               "@type": "@id"
             },
             " comment ": "tag:json-should-support-trailing-commas"
@@ -9722,11 +9738,11 @@
             },
             "majorVersion": {
               "@id": "cdi:ModelIdentification-majorVersion",
-              "@type": "xsd:integer"
+              "@type": "xsd:string"
             },
             "minorVersion": {
               "@id": "cdi:ModelIdentification-minorVersion",
-              "@type": "xsd:integer"
+              "@type": "xsd:string"
             },
             "subtitle": {
               "@id": "cdi:ModelIdentification-subtitle",
@@ -10125,6 +10141,31 @@
             ,    "Disjoint": "cdi:Disjoint"
             ,    "ExactMatch": "cdi:ExactMatch"
               }
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "DataFingerprint": {
+      "@id": "cdi:DataFingerprint",
+      "@context": [
+          {
+            "algorithmSpecification": {
+              "@id": "cdi:DataFingerprint-algorithmSpecification",
+              "@type": "xsd:string"
+            },
+            "algorithmVersion": {
+              "@id": "cdi:DataFingerprint-algorithmVersion",
+              "@type": "xsd:string"
+            },
+            "typeOfFingerprint": {
+              "@id": "cdi:DataFingerprint-typeOfFingerprint",
+              "@type": "xsd:string"
+            },
+            "value": {
+              "@id": "cdi:DataFingerprint-value",
+              "@type": "xsd:string"
             },
             
             " comment ": "tag:json-should-support-trailing-commas" 
@@ -10993,13 +11034,8 @@
             " comment ": "tag:json-should-support-trailing-commas" 
           }
       ]
-    },
-    "@vocab": "tag:DEBUG:UNRECOGNIZED_TERM:",
-    "sameAs": {
-      "@id": "http://www.w3.org/2002/07/owl#sameAs",
-      "@type": "@id"
     }
   },
-  "generatedBy": "This code was generated by the Eclipse Acceleo project UCMIS M2T on 2025-01-25 15:34:53.",
+  "generatedBy": "This code was generated by the Eclipse Acceleo project UCMIS M2T on 2026-04-15 14:38:46.",
   "basedOn": "based on the UML model DDICDIModels"
 }

@@ -1,3 +1,117 @@
+Changes 2026-04-15
+version number changed at ModelIdentification::minorVersion to '1beta'.
+ModelIdentification::minorVersion type changed to String
+ModelIdentification::majorVersion type changed to String
+several heading lines according to restructuredText rules changed (number of '=' changed)
+XMLSchemaDataTypes::XsdDateTime added for use with Process::Activity::start/end
+Filename changed: from ddi-cdi_ea15.feap to ddi-cdi.feap (feap shouldn't be version dependent)
+
+Changes 2026-03-12
+DataStore renamed LogicalRecordRepository
+LogicalRecordRepository refines Collection (instead of List)
+LogicalRecordRelationStructure renamed LogicalRecordRepositoryStructure
+PhysicalRecordSegment merged with PhysicalSegmentLayout
+PhysicalSegmentLayout renamed TabularTextDataSet
+ClassificationItemStructure renamed ClassificationStructure
+ConceptStructure renamed ConceptSystemStructure
+CategoryRelationStructure renamed CategorySetStructure
+VariableStructure renamed VariableCollectionStructure
+TabularTextDataSet 
+- Added inheritance from PhysicalDataSet
+- Added has dependency to TextMapping
+PhysicalRecordSegment renamed Segment
+PhysicalRecordSegmentStructure renamed SegmentStructure
+PhysicalRecordSegmentPosition renamed SegmentPosition
+ValueMapping renamed PhysicalMapping
+ValueMappingPosition renamed PhysicalMappingPosition
+Segment maptTo LogicaRecord association renamed has and retyped to aggregation
+LogicalRecordRelationship has InstanceVariableMap added
+DataSet has InstanceVariable added
+PhysicalDataSet has PhysicalMapping added
+PhysicalDataSet formats LogicalRecordStore association deleted
+PhysicalDataSet uses LogicalRecord association added
+TextMapping formats DataPoint association deleted
+PhysicalDataSet 
+- Deleted allowsDuplicate
+- Deleted numberOfSegments
+- Added characterSet attribute
+- Replaced physicalFileName by physicalFileURL
+- Added encoding
+- Added standard (conformsTo)
+- Added fileSize
+- Added fileSizeUofM
+- Added fingerprint (of type DataFingerprint datatype - new)
+DataSet
+- Added recordCount
+- Added fingerprint (of type DataFingerprint datatype - new)
+- Added name
+DimensionalDataSet
+- Removed name (now inherited from DataSet)
+TabularTextDataSet
+- Deleted encoding
+- Deleted catalogDetails (now inherited)
+- Deleted name (now inherited)
+- Deleted overview (now inherited)
+- Deleted purpose (now inherited)
+PhysicalSegmentLocation deleted
+PhysicalRecordSegmentRelationship deleted
+PhysicalDataSetStructure deleted
+SegmentByText deleted
+UnitSegmentLayout deleted
+RecordRelation deleted
+LogicalRecordPosition deleted
+ValueMappingRelationship deleted
+PhysicalLayoutRelationStructure deleted
+TextMapping added
+- Added defaultDecimalSeparator
+- Added defaultDigitGroupSeparator
+- Added length
+- Added mappingLabel
+PhysicalMapping
+- Deleted defaultDecimalSeparator
+- Deleted defaultDigitGroupSeparator
+- Deleted length
+LocatorMapping added
+- Added locator 
+StatisticsCollection added
+Statistics added
+InstanceVariable isDescribedBy StatisticsCollection added
+Statistics added
+- Added identifier
+- Added statistics
+- TypeOfStatistic
+StatisticsCollection added
+CategoryStatistics retyped to Statistics
+CategoryStatistics
+- Deleted attributes, now inherited from Statistics
+DataFingerprint datatype added (following DDI-L model)
+- Added value
+- Added algorithmSpecification
+- Added algorithmVersion
+- Added typeOfFingerprint
+Statistics and CategoryStatistics moved to DataDescription
+List of allowsDuplicate = False made optional
+- AgentListing
+- ConceptSystem
+- VariableCollection
+- LogicalRecordCollection
+- ClassificationSeries
+- CodeList
+- StatisticalClassification
+- Collection
+InstanceVariable
+- Added role
+- Renamed variableFunction to function
+Fixed documentation (in alignment with new class names)
+- LogicalRecordRepository
+- ClassificationStructure
+- ConceptSystemStructure
+- PhysicalMappingPosition
+Changed cardinality on association has LogicalRecordRepository to 0..1
+Activity
+- Added start and end as Timestamps
+Fixed typo (linguistic signifier) in all name attribute definitions
+
 Changes 2025-01-23
 Updated repo location in documentation to github
 

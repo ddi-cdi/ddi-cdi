@@ -1,375 +1,575 @@
-/* overwrite of css in classic.css or additional css */
-
-div.body {
-	font-size: 80%;
-	min-height: 73vh;
+/* back-to-top button can irritate in complex pages */
+button#pst-back-to-top {
+	display: none !important;
 }
 
-/* 2025-01 */
-div.sphinxsidebarwrapper {
-	width: 270px;
+/* link color */
+div.sidebar-primary-item a,
+article.bd-article a {
+	color: blue !important;
 }
 
-div.sphinxsidebar {
-	font-size: 70%;
+/* remove light/dark button */
+button.theme-switch-button {
+	display: none !important;
 }
 
-div.body h1,
-div.body h2,
-div.body h3,
-div.body h4,
-div.body h5,
-div.body h6 {
-	margin: 0px 0px 0px 0px;
-/*    margin: 30px 0px 10px 0px; */
-	border-radius: 0.25rem;
+/*
+Enable full width for content in combination with configuration
+in conf.py: 'secondary_sidebar_items': []
+Separate rules required.
+*/
+.bd-main .bd-content .bd-article-container {
+	max-width: 100%;
+	/* default is 60em */
+	width: 4000px;
+	/* force to max-width */
 }
 
-div.body h1 {
-	margin-top: 0; padding-top: 0; font-size: 180%;
-/*	margin-top: 0; padding-top: 0; font-size: 240%; */
-}
-div.body h2 {
-	font-size: 130%; background-color: #EEEEEE;
+.bd-page-width {
+	max-width: 100%;
+	/* default is 88rem */
+	width: 4000px;
+	/* force to max-width */
 }
 
-/* make top bar sticky */
-div.related {
-	position: fixed;
-	top: 0;
+/* without this, the icon can show up while resizing the window */
+label.secondary-toggle {
+	display: none;
+}
+
+/* adjustment for breadcrumbs */
+ul.bd-breadcrumbs {
+	padding-top: 1rem;
+	padding-left: 1.5rem;
+}
+
+/* adjustment for main content */
+article.bd-article {
+	border-style: solid none none none;
+	border-color: #f3f4f5;
+	padding: 0.2em 0.2em 0.2em 0.2em;
+	font-size: 0.9rem;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+}
+
+div.header-article-items {
+	height: 2rem !important;
+}
+
+footer.prev-next-footer {
+	font-size: 0.8rem;
+}
+
+/* search button on the top right shows only up in narrow windows */
+/*
+@media (min-width: 992px) {
+  .search-button {
+    display: none !important;
+  }
+}
+*/
+/* adjust navigation bar with contents */
+div.sidebar-primary-item {
+	font-size: 0.8rem;
+	padding: 0.3rem !important;
+}
+
+.sidebar-primary-item>h3 {
+	font-size: 0.9rem;
+	margin-top: 0.5rem;
+}
+
+.bd-sidebar-primary {
+	background-color: #f3f4f5;
+	/* same grey as the dropdown bar */
+}
+
+img.logo__image {
+	width: 70%;
+}
+
+p.logo__title {
+	font-size: 0.9rem !important;
+}
+
+div.sidebar-primary-item>ul {
+	margin-top: -1rem;
+	margin-left: -1rem;
+}
+
+div.sidebar-primary-item ul:not(:has(li.toctree-l1)) {
+	padding-left: 0.6rem;
+}
+
+div.sidebar-primary-item:has(div.model-title) {
+	margin-top: -2.5rem
+}
+
+div.model-title>h3 {
+	font-size: 0.8rem;
+	font-weight: bold;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+p.sidebar-indices-items__title {
+	display: none;
+}
+
+/* main content */
+section>h1 {
+	font-size: 1.5rem;
+}
+
+section>h2 {
+	font-size: 1rem;
+	margin-top: 0;
+	margin-bottom: 0.25rem;
+}
+
+/* dropdowns */
+summary.sd-summary-title {
+	font-size: 1rem;
+	font-weight: normal !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	padding-left: 0.2rem !important;
+}
+
+summary.sd-summary-title:hover {
+	font-weight: bold !important;
+}
+
+div.sd-summary-down,
+div.sd-summary-up {
+	margin-top: -0.5rem;
+}
+
+details.sd-dropdown {
+	margin-bottom: 0.8rem !important;
+}
+
+div.sd-tab-content>div>div.highlight>pre {
+	background-color: inherit;
+	font-size: 0.8rem;
+}
+
+/*
+Horizontal spacing, see:
+https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/layout.html#horizontal-spacing
+*/
+div.sd-summary-content {
+	overflow-x: auto;
+	padding-top: 0.5rem;
+	font-size: 0.8rem
+}
+
+/* for inheritance block */
+div.line-block {
+	height: 0.4rem;
+	margin-top: 0;
+}
+
+/* data tables */
+/* div.dataTables_scrollBody {
+	height: auto !important;
+} */
+
+/* table.main-table {
+	table-layout: fixed;
+}*/
+/* table#datatable-associations { */
+/* table.dataTable { */
+/* table.main-table {
+	table-layout: fixed;
+	display: block; */
+/* 	overflow-x: auto; */
+/* } */
+
+/* for 'entries per page' */
+div.dt-length label {
+	padding-left: 0.2rem;
+}
+
+table.dataTable.main-table {
 	width: 100%;
 }
 
-/* put body below top bar */
-div.documentwrapper {
-	margin-top: 1.9em;
+table.dataTable.main-table th {
+	vertical-align: top;
 }
+/* otherwise head of table is not 100%. reason not clear */
+/* table.dataTable, div.dt-scroll-headInner
+{
+	width: 100% !important;
+} */
 
-/* put logo below top bar */
-p.logo {
-	margin-top: 1.9em;
-}
+/* table#datatable-associations div.dt-layout-row { */
+/* table.dataTable div.dt-layout-row {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+} */
 
-img.logo {
-	background-color: white;
-}
+/* table#datatable-associations tbody tr:nth-child(odd) { */
+/* table.dataTable tbody tr:nth-child(odd) {
+	background-color: #f3f4f5;
+} */
 
-/*
-div.admonition {
-	background-color: #EEEEEE;
-}
+/* div.dtsp-panesContainer {
+	padding: 0.3rem;
+	border: 1px solid #f0f0f0 !important;
+	border-radius: 4px;
+	font-size: 0.8rem;
+} */
 
-div.admonition * {
-	background-color: white;
-}
-
-div.admonition ul li::marker, div.summary-content ul li::marker {
-	content: "ᐊ─";
-}
-
-p.admonition-title::after {
-	content: "";
-}
-
-p.admonition-title, summary.summary-title {
-	background-color: #EEEEEE;
-	font-size: 130%;
-	font-weight: normal;
-	font-family: 'Trebuchet MS', sans-serif;
-	color: #20435c;
-}
-*/
-
-details.sd-dropdown {
-	margin-bottom: 1ex !important;
-}
-
-summary.sd-summary-title, summary.sd-card-header {
-	background-color: #EEEEEE;
-	font-size: 130%;
-	font-weight: normal !important;
-	font-family: 'Trebuchet MS', sans-serif;
-	color: #20435c;
-	padding-top: 3px !important;
-	padding-bottom: 3px !important;
-	padding-left: 0.6em !important;
-}
-
-svg.sd-octicon {
-	margin-top: -0.8em !important;
-}
-
-/*
-summary.summary-title {
-	background-color: #EEEEEE;
-	font-size: 130%;
-	font-weight: normal;
-	font-family: 'Trebuchet MS', sans-serif;
-	color: #20435c;
-}
-*/
-
-details.mb-3 {
-	margin-bottom: 0.25em !important;
-}
-
-summary.summary-title {
-	padding: 0.25em !important;
-}
-
-div.summary-down, div.summary-up {
-	top: 0.25em !important;
-}
-
-div.card-body {
-	padding: 0.3em;
-}
-
-/*
-div.admonition p.admonition-title + p {
-    display: block;
-}
-
-button.toggle-button {
-	background-color: gray;
-}
-*/
-
-div#diagram {
-    /* display: flex;  disable for classic, pydata? */
-	justify-content: center;
-	max-width: 100%;
-}
-
-a.reference {
-	color: blue;
-}
-
-div#sidebarbutton {
-	background-color: steelblue;
-	min-height: 80vh;
-}
-
-div#sidebarbutton span {
-	width: 10px; /* 2025-01 */
-	/* font-size: 1.8em; */
-}
-
-div.figure {
- 	width: 100%;
-} 
-p.plantuml object {
-	/* center */
-	display: block;
-    margin: 0 auto;
-/*	pointer-events: none; */
-}
-
-p.upper-caption {
-	text-align: center !important;
-}
-
-/* additional styles for datatables */
-table.dataTable tbody > tr.selected {
-	background-color: lightgoldenrodyellow !important;
-}
-
-div.dataTables_paginate {
-	float: unset !important;
-	text-align: center !important;
-	padding-top: 0 !important;
-}
-
-div.dtsp-title {
-	margin-top: 11px !important;
-}
-
-div.dtsp-panesContainer button.dtsp-clearAll {
-	background-color:lightgray !important;
-	padding: 2px !important;
+div.dt-container > div.dt-layout-row:has(div>div.dtsp-panesContainer) {
+	margin: unset;
 }
 
 div.dtsp-panesContainer {
-	padding: 0px !important;
+	margin-bottom: 0 !important;
 }
 
-div.dt-buttons {
-	float: none !important;
-	text-align: center;
+div.dtsp-panesContainer div.dtsp-title {
+	padding-top: 0.1rem !important;
+	padding-right: 2rem !important;
 }
 
-div.dataTables_scrollBody {
-	height: 7em !important;
+/* remove links in search panes */
+ div.dtsp-panesContainer a {
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none;
+	color: black !important;
 }
 
-/*
-div#all-classes-list div.dataTables_scrollBody {
-	height: 7em !important;
-}
-*/
-
-div.dataTables_length {
-	margin-top: 0.08em;
-	margin-right: 2em;
+/* div.dtsp-columns-6 {
+	margin: unset !important;
 }
 
-div.dataTables_info {
-	clear: unset !important;
+div.dtsp-searchPane {
+	margin-left: 0.1rem;
+	margin-right: 0.1rem !important;
+} */
+
+div.dtsp-searchPanes {
+	font-size: 0.8rem;
+	margin-top: 1.5rem;
 }
 
-table.datatable-attributes, table.datatable-associations {
-    margin-bottom: 0.2em !important;
-    padding-top: 0.2em !important;
+/* div.dtsp-panesContainer div.dtsp-searchPanes
+flex */
+
+/* THIS IS THE ISSUE */
+div.dtsp-panesContainer div.dtsp-titleRow:has(button.dtsp-collapseAll.disabled) +
+	div.dtsp-searchPanes-wrapper {
+	display: none;
+}
+/* div.dtsp-titleRow:has(button.dtsp-collapseAll.disabled) + div.dtsp-searchPanes {
+	display: none;
+} */
+
+div.dtsp-panesContainer div.dtsp-titleRow:not(:has(button.dtsp-collapseAll.disabled)) +
+	div.dtsp-searchPanes-wrapper {
+	display: flex;
+}
+	
+  /* flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: stretch;
+  clear: both;
+  text-align: left; */
+  
+/* 	background: red; */
+
+
+/* div.dtsp-panesContainer div.dtsp-titleRow:not(:has(button.dtsp-collapseAll.disabled)) + div.dtsp-searchPanes {
+	display: flex;
+	background: red;
+} */
+
+div.dtsp-searchPanes td.dtsp-nameColumn {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
 }
 
-div.dtsp-emptyMessage {
-	display:none;
-}
-
-button.link {
-	display: inline-block;
-	position: relative;
-	background-color: transparent;
-	cursor: pointer;
- 	border: 0;
- 	padding: 0;
- 	color: green;
- 	text-decoration: underline;
- 	font: inherit;
-}
- 
-div.dtsp-topRow {
-	border-top-color: lightgray;
-	border-top-style: solid;
-	border-top-width: thin;
-	margin-top: 1px;
-}
-
-p.plantuml {
-	overflow: auto;
-}
-
-div.highlight {
-	background-color: #f9f9f9;
-	font-size: 130%;
-}
-
-div.linenodiv {
-	font-size: 130%;
-	padding-top: 0.1em;
-}
-
-span.focus {
-	background-color:#FFD700;
-	font-weight: bold;
-}
-
-/*
-div.highlight pre {
- 	white-space: pre-wrap; 
-}
-*/
-
-p.plantuml a.diagram-link {
-	color: blue !important;
-	font-style: italic;
-	font-size: 80%;
-}
-
-table.classes-list > thead > tr > th > p {
-	text-align: center;
-}
-
-table.classes-list td.dt-body-right {
-	padding-right: 4em;
-}
-
-input.dtsp-search::placeholder {
-	font-size: 70% !important;
-	font-weight: bold;
-}
-
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane tr > td {
-	padding: 0.1em 0.2em !important;
-}
-div.dtsp-subRow1 {
-	margin-top: -0.5em;
-	margin-bottom: -1em;
-}
-
-div#all-packages-list {
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-div.legend-searchpanes, div.legend-allassociations {
-	font-style: italic;
-	margin-top: 0.4em;
-	font-size: 90%;
-}
-
-/*
-div.abstract-inreference.line-block {
-	font-style: italic;
-	margin-bottom: -1em;
-	margin-top: -1em;
-}
-*/
-
-div.sphinxsidebar li {
-	list-style:disclosure-closed
-}
-
-div.sphinxsidebar li.current {
-	list-style:disclosure-open
-}
-
-div.sphinxsidebar li.dot:before {
-	content: '\2043'; /* Hyphen Bullet: ⁃ */
-	margin-left: -1em;
-	margin-right: 0.6em;
-}
-
-li.current {
-	color: #ff4000;
-}
-
-li.current > a {
-	color: white;
-}
-
-div.abstract {
-	font-style: italic;
+div.dtsp-searchPanes td.dtsp-nameColumn p {
 	display: inline;
 }
 
-div.regular {
-	font-style: unset;
+/* div.dt-layout-cell > div.dtsp-panesContainer > div.dtsp-searchPanes > div.dtsp-searchPane { */
+div.dtsp-searchPanes > div.dtsp-searchPane {
+/* 	margin-bottom: 0.1rem !important; */
+	max-width: fit-content !important;
+	min-width: 20rem !important;
+	margin-right: 0.2rem !important;
+}
+
+div > div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane
+{
+	margin-top: 0 !important;
+}
+
+/* div.dtsp-searchPanes > div.dtsp-searchPane {
+	max-width: fit-content !important;
+	min-width: 15rem !important;
+	margin-right: 0.5rem !important;
+} */
+
+div.dtsp-searchCont {
+	font-size: 120%;
+}
+
+div.dt-scroll-body{
+ 	height: unset !important;
+}
+
+/* div.dtsp-panesContainer p.sd-card-text, div.dtsp-panesContainer span.dtsp-name > p {
 	display: inline;
+} */
+
+/* div.dtsp-panesContainer td.dtsp-nameColumn {
+	padding-top: 0.2rem !important;
+	padding-bottom: 0 !important;
+} */
+
+/* div.dtsp-panesContainer div.dt-scroll-body {
+	height: auto !important;
+} */
+
+div.dtsp-panesContainer div.dtsp-emptyMessage {
+	display: none;
 }
 
-/* workaround because list symbols are not shown. not clear why. */
+/* div:not(dtsp-panesContainerX) table.dataTable.main-table > tbody > tr.selected > * {
+	box-shadow: inset 0 0 0 9999px Yellow;
+} */
+/* table#datatable-associations>tbody>tr.selected>* { */
+/* div.dt-container table.dataTable > tbody > tr.selected > * { */
+/* div:not(dtsp-panesContainer) table.dataTable > tbody > tr.selected > * { */
+	/* box-shadow: inset 0 0 0 9999px Yellow;
+} */
 
-ul.simple>li.dot {
-	list-style: disc !important;
+/* Xtable.main-table th.main-table-header {
+	width: min-content;
+} */
+
+/* description */
+/* table#datatable-associations th:nth-child(3) {
+	width: fit-content;
+	min-width: 10rem;
+} */
+
+/*
+table.main-table td {
+	width: fit-content;
+	min-width: 5rem !important;
 }
 
-ol.arabic>li.dot {
-	list-style: decimal !important;
+table.main-table th > p {
+	width: fit-content;
+	min-width: 5rem !important;
 }
 
-.ui-tooltip {
-	font-size: 80% !important;
+table.main-table td > p {
+	width: fit-content;
+	min-width: 5rem !important;
+} */
+
+/* div.main-table-wrapper {
+	overflow-x: hidden;
+} */
+
+/* issue with datatables css. reason ?? */
+/* table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control::before {
+	display: none !important;
+} */
+
+/* table#datatable-attributes th:nth-child(3),
+table#datatable-associations th:nth-child(3)
+table#datatable-enumeration-literals th:nth-child(2) {
+ 	min-width: 15rem !important;
+} */
+
+td.narrow-column {
+	width: min-content;
 }
 
-/* SVG does not work for svg referenced in object. Must be in a stylesheet of the SVG */
-/*rect:hover {*/
-g[id]:hover {
-	filter: drop-shadow(0px 0px 30px black) brightness(1.1);
-	stroke-width: 0.25%;
+td.description {
+	width: fit-content;
+	min-width: 10rem;
 }
 
-th.head>p {
-	text-align: left;
+button.btn, button.page-link {
+	font-size: 0.6rem;
+}
+
+.table-hover tbody tr:hover, .table-hover tbody tr:hover td{
+  background-color: Cornsilk;
+  box-shadow: unset !important;
+}
+
+@media screen {
+	/* adjust size of plantuml diagram */
+	p.plantuml > object {
+		max-width: 100% !important;
+		height: auto !important;
+		display: block;
+		margin: auto;
+	}
+	section#diagram > h2,
+	section#inheritance > h2,
+	section#attributes > h2,
+	section#associations > h2,
+	section#encodings > h2,
+	section#usage > h2,
+	section#enumeration-literals > h2,
+	table.main-table > caption
+	{
+		display: none;
+	}
+}
+
+@media print {
+/* can't be changed by user
+	@page {
+		size: landscape;
+	} */
+	/* not used yet */
+	@page landscape {
+		size: landscape;
+	}
+	body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    pre {
+    	font-family: "Courier New", Courier, mono;
+    }
+	table.main-table *, table.main-table td {
+        box-shadow: unset !important;
+	}
+	table.main-table tr {
+		border-top: 1px solid gray !important;
+    }
+	a,
+	table.main-table td a,
+	ul.pagination > li > button
+	{
+		color: black !important;
+		text-decoration: none;
+	}
+	ul.pagination > li.active > button
+	{
+		border-color: black;
+	}
+	div#print-main-content,		/* local table of contents at top */
+	div.dtsp-panesContainer, div.mt-2:has(div > div.dt-length),
+ 	div.bd-article-container > footer,
+ 	a.skip-link
+ 	{
+ 		display: none;
+	}
+	section#diagram,
+	section#inheritance,
+	section#attributes,
+	section#associations,
+	section#encodings,
+	section#usage,
+	section#enumeration-literals
+	{
+		visibility: hidden;
+	}
+	section:has(h1),
+	details > div.sd-summary-content *,
+	section#all-classes,
+	section#all-associations,
+	section#all-structured-data-types,
+	section#all-enumerations,
+	section#all-packages
+	{
+ 		visibility: visible;
+	}
+	main#main-content > footer.bd-footer-content {
+		display: block !;
+ 		visibility: hidden;
+	}
+	/* p.copyright {
+ 		visibility: visible;
+	} */
+    p.plantuml {
+		display: flex;
+		justify-content: center; /* OK, horizonally */
+	    /* ?? not clear if this works */ 
+		align-items: center !important;
+    }
+   	p.plantuml > object {
+  		/* A4 210mm x 297mm, letter 215.9mm x 279.4mm */
+   		height: 147mm !important; /* 70% of 210mm */
+  		width: 195.58mm !important; /* 70% of 279.4mm */
+		/* 		object-fit: cover; */
+/* 		break-before: page; */
+	}
+	/* article header */
+	div.onlyprint {
+		margin-bottom: 1rem;
+	}
+	div.onlyprint > h1 {
+		font-size: 1.5em !important;
+	}
+	section#diagram,
+	section#inheritance,
+	section#encodings,
+	section#attributes > table,
+	section#associations > table,
+	section#usage > table,
+	section#enumeration-literals > table
+	{
+		break-inside: avoid;
+	}
+	section > h2,
+	table.main-table > caption
+	{
+		font-size: 1.4rem;
+	}
+	/* section#inheritance > h2,
+	section#usage > h2,
+	section#enumeration-literals > h2,
+	section#encodings > h2 {
+		text-align: center
+	} */
+ 	section#associations table.main-table,
+ 	table#datatable-classes-list,
+ 	table#datatable-associations-list,
+ 	table#all-structured-data-types
+ 	{
+		zoom: 78%;
+	}
+	div#encodings pre {
+		white-space: pre-wrap;
+		font-size: 0.7rem;
+	}
+}
+
+section#mapping-uml-to-encodings > section > h2 {
+	display: none
+}
+
+section#mapping-uml-to-encodings div.sd-card-title {
+	text-align: center;
+}
+
+section#mapping-uml-to-encodings div.sd-tab-set {
+	margin-bottom: 0;
+}
+
+section#mapping-uml-to-encodings label.sd-tab-label {
+	transform: rotate(-30deg);
+	font-size: 0.7rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
 }

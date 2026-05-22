@@ -1,0 +1,2647 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc:    <http://purl.org/dc/elements/1.1/>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX cdi:   <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/>
+PREFIX ucmis: <http://ddialliance.org/Specification/UCMIS/1.0/RDF>
+
+start = @http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/:WideDataSetShape
+
+# class Activity
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::Activity
+cdi:ActivityShape CLOSED {
+	a [cdi:Activity];
+	$cdi:ActivityProperties (
+	cdi:Activity-definition	@cdi:InternationalStringShape?;
+	cdi:Activity-description	xsd:string?;
+	cdi:Activity-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:Activity-end	cdi:XsdDateTime?;
+	cdi:Activity-entityProduced	@cdi:ReferenceShape*;
+	cdi:Activity-entityUsed	@cdi:ReferenceShape*;
+	cdi:Activity-identifier	@cdi:IdentifierShape?;
+	cdi:Activity-name	@cdi:ObjectNameShape*;
+	cdi:Activity-standardModelMapping	@cdi:ReferenceShape*;
+	cdi:Activity-start	cdi:XsdDateTime?;
+	cdi:Activity_hasInternal_ControlLogic	@cdi:ControlLogicShape OR @cdi:DeterministicImperativeShape OR @cdi:NonDeterministicDeclarativeShape*;
+	
+	cdi:Activity_hasSubActivity_Activity	@cdi:ActivityShape OR @cdi:StepShape*;
+	
+	cdi:Activity_has_Step	@cdi:StepShape *;
+	
+	^cdi:ControlLogic_invokes_Activity @cdi:ControlLogicShape OR @cdi:DeterministicImperativeShape OR @cdi:NonDeterministicDeclarativeShape*;
+	^cdi:ProcessingAgent_performs_Activity @cdi:ProcessingAgentShape OR @cdi:CuratorShape OR @cdi:ServiceShape*;
+	^cdi:SequencePosition_indexes_Activity @cdi:SequencePositionShape *;
+		);
+}
+
+# class Agent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Agents::Agent
+cdi:AgentShape CLOSED {
+	a [cdi:Agent];
+	$cdi:AgentProperties (
+	cdi:Agent-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:Agent-identifier	@cdi:IdentifierShape?;
+	cdi:Agent-image	@cdi:PrivateImageShape*;
+	cdi:Agent-purpose	@cdi:InternationalStringShape?;
+	^cdi:AgentListing_has_Agent @cdi:AgentListingShape *;
+	^cdi:AgentListing_isMaintainedBy_Agent @cdi:AgentListingShape *;
+	^cdi:AgentPosition_indexes_Agent @cdi:AgentPositionShape *;
+	^cdi:AgentRelationship_hasSource_Agent @cdi:AgentRelationshipShape *;
+	^cdi:AgentRelationship_hasTarget_Agent @cdi:AgentRelationshipShape *;
+	^cdi:AuthorizationSource_has_Agent @cdi:AuthorizationSourceShape *;
+	^cdi:ClassificationIndex_hasContact_Agent @cdi:ClassificationIndexShape *;
+	^cdi:ClassificationIndex_isMaintainedBy_Agent @cdi:ClassificationIndexShape *;
+	^cdi:ClassificationSeries_isOwnedBy_Agent @cdi:ClassificationSeriesShape *;
+	^cdi:CorrespondenceTable_hasContact_Agent @cdi:CorrespondenceTableShape *;
+	^cdi:CorrespondenceTable_isMaintainedBy_Agent @cdi:CorrespondenceTableShape *;
+	^cdi:CorrespondenceTable_isOwnedBy_Agent @cdi:CorrespondenceTableShape *;
+		);
+}
+
+# class AgentListing
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Agents::AgentListing
+cdi:AgentListingShape CLOSED {
+	a [cdi:AgentListing];
+	cdi:AgentListing-allowsDuplicates	xsd:boolean?;
+	cdi:AgentListing-identifier	@cdi:IdentifierShape?;
+	cdi:AgentListing-name	@cdi:ObjectNameShape*;
+	cdi:AgentListing-purpose	@cdi:InternationalStringShape?;
+	cdi:AgentListing_has_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape*;
+	
+	cdi:AgentListing_has_AgentPosition	@cdi:AgentPositionShape *;
+	
+	cdi:AgentListing_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	cdi:AgentListing_isMaintainedBy_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape?;
+	
+	^cdi:AgentStructure_structures_AgentListing @cdi:AgentStructureShape *;
+	}
+
+# class AgentPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Agents::AgentPosition
+cdi:AgentPositionShape CLOSED {
+	a [cdi:AgentPosition];
+	cdi:AgentPosition-identifier	@cdi:IdentifierShape?;
+	cdi:AgentPosition-value	xsd:integer;
+	^cdi:AgentListing_has_AgentPosition @cdi:AgentListingShape ;
+	cdi:AgentPosition_indexes_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape?;
+	
+	}
+
+# class AgentRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Agents::AgentRelationship
+cdi:AgentRelationshipShape CLOSED {
+	a [cdi:AgentRelationship];
+	cdi:AgentRelationship-effectiveDates	@cdi:DateRangeShape?;
+	cdi:AgentRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:AgentRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:AgentRelationship_hasSource_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape;
+	
+	cdi:AgentRelationship_hasTarget_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape;
+	
+	^cdi:AgentStructure_has_AgentRelationship @cdi:AgentStructureShape ;
+	}
+
+# class AgentStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Agents::AgentStructure
+cdi:AgentStructureShape CLOSED {
+	a [cdi:AgentStructure];
+	cdi:AgentStructure-effectiveDates	@cdi:DateRangeShape?;
+	cdi:AgentStructure-identifier	@cdi:IdentifierShape?;
+	cdi:AgentStructure-name	@cdi:ObjectNameShape*;
+	cdi:AgentStructure-privacy	@cdi:ControlledVocabularyEntryShape?;
+	cdi:AgentStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:AgentStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:AgentStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:AgentStructure-topology	@cdi:ControlledVocabularyEntryShape?;
+	cdi:AgentStructure-totality	@cdi:StructureExtentShape?;
+	cdi:AgentStructure_has_AgentRelationship	@cdi:AgentRelationshipShape *;
+	
+	cdi:AgentStructure_structures_AgentListing	@cdi:AgentListingShape ?;
+	
+	}
+
+# class AllenIntervalAlgebra
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::AllenIntervalAlgebra
+cdi:AllenIntervalAlgebraShape CLOSED {
+	a [cdi:AllenIntervalAlgebra];
+	cdi:AllenIntervalAlgebra-temporalIntervalRelation	@cdi:TemporalRelationShape;
+		&cdi:TemporalConstraintsProperties;
+	}
+
+# class AttributeComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::AttributeComponent
+cdi:AttributeComponentShape CLOSED {
+	a [cdi:AttributeComponent];
+	cdi:AttributeComponent_qualifies_DataStructureComponent	@cdi:DataStructureComponentShape OR @cdi:AttributeComponentShape OR @cdi:ContextualComponentShape OR @cdi:DataStructureShape OR @cdi:DimensionComponentShape OR @cdi:IdentifierComponentShape OR @cdi:MeasureComponentShape OR @cdi:SyntheticIdComponentShape OR @cdi:VariableDescriptorComponentShape OR @cdi:VariableValueComponentShape*;
+	
+		&cdi:DataStructureComponentProperties;
+	}
+
+# class AuthorizationSource
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::AuthorizationSource
+cdi:AuthorizationSourceShape CLOSED {
+	a [cdi:AuthorizationSource];
+	cdi:AuthorizationSource-authorizationDate	@cdi:CombinedDateShape?;
+	cdi:AuthorizationSource-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:AuthorizationSource-identifier	@cdi:IdentifierShape?;
+	cdi:AuthorizationSource-legalMandate	@cdi:InternationalStringShape?;
+	cdi:AuthorizationSource-purpose	@cdi:InternationalStringShape?;
+	cdi:AuthorizationSource-statementOfAuthorization	@cdi:InternationalStringShape?;
+	cdi:AuthorizationSource_has_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape*;
+	
+	^cdi:ClassificationItem_hasRulingBy_AuthorizationSource @cdi:ClassificationItemShape *;
+	}
+
+# class Category
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::Category
+cdi:CategoryShape CLOSED {
+	a [cdi:Category];
+	cdi:Category-descriptiveText	@cdi:InternationalStringShape?;
+	^cdi:CategoryPosition_indexes_Category @cdi:CategoryPositionShape *;
+	^cdi:CategoryRelationship_hasSource_Category @cdi:CategoryRelationshipShape *;
+	^cdi:CategoryRelationship_hasTarget_Category @cdi:CategoryRelationshipShape *;
+	^cdi:CategorySet_has_Category @cdi:CategorySetShape *;
+	^cdi:CategoryStatistics_for_Category @cdi:CategoryStatisticsShape *;
+	^cdi:ClassificationItem_denotes_Category @cdi:ClassificationItemShape *;
+	^cdi:Code_denotes_Category @cdi:CodeShape *;
+	^cdi:Notation_represents_Category @cdi:NotationShape +;
+		&cdi:ConceptProperties;
+	}
+
+# class CategoryPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryPosition
+cdi:CategoryPositionShape CLOSED {
+	a [cdi:CategoryPosition];
+	cdi:CategoryPosition-identifier	@cdi:IdentifierShape?;
+	cdi:CategoryPosition-value	xsd:integer;
+	cdi:CategoryPosition_indexes_Category	@cdi:CategoryShape ;
+	
+	^cdi:CategorySet_has_CategoryPosition @cdi:CategorySetShape ;
+	}
+
+# class CategoryRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategoryRelationship
+cdi:CategoryRelationshipShape CLOSED {
+	a [cdi:CategoryRelationship];
+	cdi:CategoryRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:CategoryRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:CategoryRelationship_hasSource_Category	@cdi:CategoryShape *;
+	
+	cdi:CategoryRelationship_hasTarget_Category	@cdi:CategoryShape *;
+	
+	^cdi:CategorySetStructure_has_CategoryRelationship @cdi:CategorySetStructureShape ;
+	}
+
+# class CategorySet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySet
+cdi:CategorySetShape CLOSED {
+	a [cdi:CategorySet];
+	^cdi:CategorySetStructure_structures_CategorySet @cdi:CategorySetStructureShape *;
+	cdi:CategorySet_has_Category	@cdi:CategoryShape *;
+	
+	cdi:CategorySet_has_CategoryPosition	@cdi:CategoryPositionShape *;
+	
+	^cdi:EnumerationDomain_references_CategorySet @cdi:EnumerationDomainShape OR @cdi:CodeListShape OR @cdi:StatisticalClassificationShape*;
+		&cdi:ConceptSystemProperties;
+	}
+
+# class CategorySetStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::CategorySetStructure
+cdi:CategorySetStructureShape CLOSED {
+	a [cdi:CategorySetStructure];
+	cdi:CategorySetStructure-identifier	@cdi:IdentifierShape?;
+	cdi:CategorySetStructure-name	@cdi:ObjectNameShape*;
+	cdi:CategorySetStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:CategorySetStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:CategorySetStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:CategorySetStructure-topology	@cdi:ControlledVocabularyEntryShape?;
+	cdi:CategorySetStructure-totality	@cdi:StructureExtentShape?;
+	cdi:CategorySetStructure_has_CategoryRelationship	@cdi:CategoryRelationshipShape *;
+	
+	cdi:CategorySetStructure_structures_CategorySet	@cdi:CategorySetShape ?;
+	
+	}
+
+# class CategoryStatistics
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::CategoryStatistics
+cdi:CategoryStatisticsShape CLOSED {
+	a [cdi:CategoryStatistics];
+	cdi:CategoryStatistics_for_Category	@cdi:CategoryShape ?;
+	
+		&cdi:StatisticsProperties;
+	}
+
+# class ClassificationFamily
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationFamily
+cdi:ClassificationFamilyShape CLOSED {
+	a [cdi:ClassificationFamily];
+	cdi:ClassificationFamily-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:ClassificationFamily-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationFamily-name	@cdi:ObjectNameShape*;
+	cdi:ClassificationFamily-purpose	@cdi:InternationalStringShape?;
+	cdi:ClassificationFamily_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	cdi:ClassificationFamily_groups_ClassificationSeries	@cdi:ClassificationSeriesShape *;
+	
+	cdi:ClassificationFamily_uses_ClassificationIndex	@cdi:ClassificationIndexShape *;
+	
+	}
+
+# class ClassificationIndex
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationIndex
+cdi:ClassificationIndexShape CLOSED {
+	a [cdi:ClassificationIndex];
+	cdi:ClassificationIndex-allowsDuplicates	xsd:boolean;
+	cdi:ClassificationIndex-availableLanguage	xsd:language*;
+	cdi:ClassificationIndex-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:ClassificationIndex-codingInstruction	@cdi:CommandCodeShape*;
+	cdi:ClassificationIndex-corrections	@cdi:InternationalStringShape*;
+	cdi:ClassificationIndex-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationIndex-name	@cdi:ObjectNameShape*;
+	cdi:ClassificationIndex-purpose	@cdi:InternationalStringShape?;
+	cdi:ClassificationIndex-releaseDate	@cdi:CombinedDateShape?;
+	cdi:ClassificationIndex_hasContact_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape*;
+	
+	cdi:ClassificationIndex_isMaintainedBy_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape?;
+	
+	cdi:ClassificationIndex_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	^cdi:ClassificationFamily_uses_ClassificationIndex @cdi:ClassificationFamilyShape *;
+	cdi:ClassificationIndex_has_ClassificationIndexEntry	@cdi:ClassificationIndexEntryShape *;
+	
+	cdi:ClassificationIndex_has_ClassificationIndexEntryPosition	@cdi:ClassificationIndexEntryPositionShape *;
+	
+	^cdi:StatisticalClassification_isIndexedBy_ClassificationIndex @cdi:StatisticalClassificationShape *;
+	}
+
+# class ClassificationIndexEntry
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationIndexEntry
+cdi:ClassificationIndexEntryShape CLOSED {
+	a [cdi:ClassificationIndexEntry];
+	cdi:ClassificationIndexEntry-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:ClassificationIndexEntry-codingInstruction	@cdi:CommandCodeShape?;
+	cdi:ClassificationIndexEntry-entry	@cdi:InternationalStringShape?;
+	cdi:ClassificationIndexEntry-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationIndexEntry-validDates	@cdi:DateRangeShape?;
+	^cdi:ClassificationIndexEntryPosition_indexes_ClassificationIndexEntry @cdi:ClassificationIndexEntryPositionShape *;
+	^cdi:ClassificationIndex_has_ClassificationIndexEntry @cdi:ClassificationIndexShape *;
+	}
+
+# class ClassificationIndexEntryPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationIndexEntryPosition
+cdi:ClassificationIndexEntryPositionShape CLOSED {
+	a [cdi:ClassificationIndexEntryPosition];
+	cdi:ClassificationIndexEntryPosition-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationIndexEntryPosition-value	xsd:integer;
+	cdi:ClassificationIndexEntryPosition_indexes_ClassificationIndexEntry	@cdi:ClassificationIndexEntryShape ;
+	
+	^cdi:ClassificationIndex_has_ClassificationIndexEntryPosition @cdi:ClassificationIndexShape ;
+	}
+
+# class ClassificationItem
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItem
+cdi:ClassificationItemShape CLOSED {
+	a [cdi:ClassificationItem];
+	cdi:ClassificationItem-changeFromPreviousVersion	@cdi:InternationalStringShape?;
+	cdi:ClassificationItem-changeLog	@cdi:InternationalStringShape?;
+	cdi:ClassificationItem-explanatoryNotes	@cdi:InternationalStringShape*;
+	cdi:ClassificationItem-futureNotes	@cdi:InternationalStringShape*;
+	cdi:ClassificationItem-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationItem-isGenerated	xsd:boolean?;
+	cdi:ClassificationItem-isValid	xsd:boolean?;
+	cdi:ClassificationItem-name	@cdi:ObjectNameShape*;
+	cdi:ClassificationItem-validDates	@cdi:DateRangeShape?;
+	cdi:ClassificationItem_denotes_Category	@cdi:CategoryShape ;
+	
+	cdi:ClassificationItem_uses_Notation	@cdi:NotationShape ;
+	
+	^cdi:ClassificationItemPosition_indexes_ClassificationItem @cdi:ClassificationItemPositionShape *;
+	^cdi:ClassificationItemRelationship_hasSource_ClassificationItem @cdi:ClassificationItemRelationshipShape *;
+	^cdi:ClassificationItemRelationship_hasTarget_ClassificationItem @cdi:ClassificationItemRelationshipShape *;
+	cdi:ClassificationItem_excludes_ClassificationItem	@cdi:ClassificationItemShape *;
+	
+	cdi:ClassificationItem_hasRulingBy_AuthorizationSource	@cdi:AuthorizationSourceShape *;
+	
+	^cdi:Level_groups_ClassificationItem @cdi:LevelShape *;
+	^cdi:StatisticalClassification_has_ClassificationItem @cdi:StatisticalClassificationShape *;
+	}
+
+# class ClassificationItemPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemPosition
+cdi:ClassificationItemPositionShape CLOSED {
+	a [cdi:ClassificationItemPosition];
+	cdi:ClassificationItemPosition-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationItemPosition-value	xsd:integer;
+	cdi:ClassificationItemPosition_indexes_ClassificationItem	@cdi:ClassificationItemShape ?;
+	
+	^cdi:StatisticalClassification_has_ClassificationItemPosition @cdi:StatisticalClassificationShape ?;
+	}
+
+# class ClassificationItemRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationItemRelationship
+cdi:ClassificationItemRelationshipShape CLOSED {
+	a [cdi:ClassificationItemRelationship];
+	cdi:ClassificationItemRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationItemRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ClassificationItemRelationship_hasSource_ClassificationItem	@cdi:ClassificationItemShape *;
+	
+	cdi:ClassificationItemRelationship_hasTarget_ClassificationItem	@cdi:ClassificationItemShape *;
+	
+	^cdi:ClassificationStructure_has_ClassificationItemRelationship @cdi:ClassificationStructureShape ;
+	}
+
+# class ClassificationPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationPosition
+cdi:ClassificationPositionShape CLOSED {
+	a [cdi:ClassificationPosition];
+	cdi:ClassificationPosition-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationPosition-value	xsd:integer;
+	cdi:ClassificationPosition_indexes_StatisticalClassification	@cdi:StatisticalClassificationShape ?;
+	
+	^cdi:ClassificationSeries_has_ClassificationPosition @cdi:ClassificationSeriesShape ;
+	}
+
+# class ClassificationSeries
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeries
+cdi:ClassificationSeriesShape CLOSED {
+	a [cdi:ClassificationSeries];
+	cdi:ClassificationSeries-allowsDuplicates	xsd:boolean?;
+	cdi:ClassificationSeries-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:ClassificationSeries-context	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ClassificationSeries-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationSeries-keyword	@cdi:ControlledVocabularyEntryShape*;
+	cdi:ClassificationSeries-name	@cdi:ObjectNameShape*;
+	cdi:ClassificationSeries-objectsOrUnitsClassified	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ClassificationSeries-purpose	@cdi:InternationalStringShape?;
+	cdi:ClassificationSeries-subject	@cdi:ControlledVocabularyEntryShape*;
+	cdi:ClassificationSeries_isOwnedBy_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape*;
+	
+	cdi:ClassificationSeries_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	^cdi:ClassificationFamily_groups_ClassificationSeries @cdi:ClassificationFamilyShape ?;
+	^cdi:ClassificationSeriesStructure_structures_ClassificationSeries @cdi:ClassificationSeriesStructureShape *;
+	cdi:ClassificationSeries_has_ClassificationPosition	@cdi:ClassificationPositionShape *;
+	
+	cdi:ClassificationSeries_has_StatisticalClassification	@cdi:StatisticalClassificationShape *;
+	
+	}
+
+# class ClassificationSeriesStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationSeriesStructure
+cdi:ClassificationSeriesStructureShape CLOSED {
+	a [cdi:ClassificationSeriesStructure];
+	cdi:ClassificationSeriesStructure-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationSeriesStructure-name	@cdi:ObjectNameShape*;
+	cdi:ClassificationSeriesStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:ClassificationSeriesStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ClassificationSeriesStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:ClassificationSeriesStructure-topology	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ClassificationSeriesStructure-totality	@cdi:StructureExtentShape?;
+	cdi:ClassificationSeriesStructure_has_StatisticalClassificationRelationship	@cdi:StatisticalClassificationRelationshipShape *;
+	
+	cdi:ClassificationSeriesStructure_structures_ClassificationSeries	@cdi:ClassificationSeriesShape ?;
+	
+	}
+
+# class ClassificationStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ClassificationStructure
+cdi:ClassificationStructureShape CLOSED {
+	a [cdi:ClassificationStructure];
+	cdi:ClassificationStructure-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:ClassificationStructure-identifier	@cdi:IdentifierShape?;
+	cdi:ClassificationStructure-name	@cdi:ObjectNameShape*;
+	cdi:ClassificationStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:ClassificationStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ClassificationStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:ClassificationStructure-topology	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ClassificationStructure-totality	@cdi:StructureExtentShape?;
+	cdi:ClassificationStructure_has_ClassificationItemRelationship	@cdi:ClassificationItemRelationshipShape *;
+	
+	cdi:ClassificationStructure_structures_StatisticalClassification	@cdi:StatisticalClassificationShape ?;
+	
+	}
+
+# class Code
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::Code
+cdi:CodeShape CLOSED {
+	a [cdi:Code];
+	cdi:Code-identifier	@cdi:IdentifierShape?;
+	cdi:Code_denotes_Category	@cdi:CategoryShape ;
+	
+	cdi:Code_uses_Notation	@cdi:NotationShape ;
+	
+	^cdi:CodeList_has_Code @cdi:CodeListShape *;
+	^cdi:CodePosition_indexes_Code @cdi:CodePositionShape *;
+	^cdi:CodeRelationship_hasSource_Code @cdi:CodeRelationshipShape *;
+	^cdi:CodeRelationship_hasTarget_Code @cdi:CodeRelationshipShape *;
+	}
+
+# class CodeList
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::CodeList
+cdi:CodeListShape CLOSED {
+	a [cdi:CodeList];
+	cdi:CodeList-allowsDuplicates	xsd:boolean?;
+	^cdi:DimensionalKeyMember_hasValueFrom_CodeList @cdi:DimensionalKeyMemberShape *;
+	^cdi:CodeListStructure_structures_CodeList @cdi:CodeListStructureShape ?;
+	cdi:CodeList_has_Code	@cdi:CodeShape *;
+	
+	cdi:CodeList_has_CodePosition	@cdi:CodePositionShape *;
+	
+		&cdi:EnumerationDomainProperties;
+	}
+
+# class CodeListStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::CodeListStructure
+cdi:CodeListStructureShape CLOSED {
+	a [cdi:CodeListStructure];
+	cdi:CodeListStructure-identifier	@cdi:IdentifierShape?;
+	cdi:CodeListStructure-name	@cdi:ObjectNameShape*;
+	cdi:CodeListStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:CodeListStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:CodeListStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:CodeListStructure-topology	@cdi:ControlledVocabularyEntryShape;
+	cdi:CodeListStructure-totality	@cdi:StructureExtentShape?;
+	cdi:CodeListStructure_has_CodeRelationship	@cdi:CodeRelationshipShape *;
+	
+	cdi:CodeListStructure_structures_CodeList	@cdi:CodeListShape ?;
+	
+	}
+
+# class CodePosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::CodePosition
+cdi:CodePositionShape CLOSED {
+	a [cdi:CodePosition];
+	cdi:CodePosition-identifier	@cdi:IdentifierShape?;
+	cdi:CodePosition-value	xsd:integer;
+	^cdi:CodeList_has_CodePosition @cdi:CodeListShape ;
+	cdi:CodePosition_indexes_Code	@cdi:CodeShape ?;
+	
+	}
+
+# class CodeRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::CodeRelationship
+cdi:CodeRelationshipShape CLOSED {
+	a [cdi:CodeRelationship];
+	cdi:CodeRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:CodeRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	^cdi:CodeListStructure_has_CodeRelationship @cdi:CodeListStructureShape ;
+	cdi:CodeRelationship_hasSource_Code	@cdi:CodeShape *;
+	
+	cdi:CodeRelationship_hasTarget_Code	@cdi:CodeShape *;
+	
+	}
+
+# class ComponentPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ComponentPosition
+cdi:ComponentPositionShape CLOSED {
+	a [cdi:ComponentPosition];
+	cdi:ComponentPosition-identifier	@cdi:IdentifierShape?;
+	cdi:ComponentPosition-value	xsd:integer;
+	^cdi:DataStructure_has_ComponentPosition @cdi:DataStructureShape OR @cdi:DimensionalDataStructureShape OR @cdi:KeyValueStructureShape OR @cdi:LongDataStructureShape OR @cdi:WideDataStructureShape;
+	cdi:ComponentPosition_indexes_DataStructureComponent	@cdi:DataStructureComponentShape OR @cdi:AttributeComponentShape OR @cdi:ContextualComponentShape OR @cdi:DataStructureShape OR @cdi:DimensionComponentShape OR @cdi:IdentifierComponentShape OR @cdi:MeasureComponentShape OR @cdi:SyntheticIdComponentShape OR @cdi:VariableDescriptorComponentShape OR @cdi:VariableValueComponentShape?;
+	
+	}
+
+# class Concept
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::Concept
+cdi:ConceptShape CLOSED {
+	a [cdi:Concept];
+	$cdi:ConceptProperties (
+	cdi:Concept-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:Concept-definition	@cdi:InternationalStringShape?;
+	cdi:Concept-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:Concept-externalDefinition	@cdi:ReferenceShape?;
+	cdi:Concept-identifier	@cdi:IdentifierShape?;
+	cdi:Concept-name	@cdi:ObjectNameShape*;
+	^cdi:AgentListing_isDefinedBy_Concept @cdi:AgentListingShape *;
+	^cdi:ClassificationFamily_isDefinedBy_Concept @cdi:ClassificationFamilyShape *;
+	^cdi:ClassificationIndex_isDefinedBy_Concept @cdi:ClassificationIndexShape *;
+	^cdi:ClassificationSeries_isDefinedBy_Concept @cdi:ClassificationSeriesShape *;
+	^cdi:ConceptMap_hasSource_Concept @cdi:ConceptMapShape *;
+	^cdi:ConceptMap_hasTarget_Concept @cdi:ConceptMapShape *;
+	^cdi:ConceptRelationship_hasSource_Concept @cdi:ConceptRelationshipShape *;
+	^cdi:ConceptRelationship_hasTarget_Concept @cdi:ConceptRelationshipShape *;
+	^cdi:ConceptSystem_has_Concept @cdi:ConceptSystemShape OR @cdi:CategorySetShape*;
+	^cdi:ConceptSystem_isDefinedBy_Concept @cdi:ConceptSystemShape OR @cdi:CategorySetShape*;
+	cdi:Concept_uses_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	^cdi:EnumerationDomain_isDefinedBy_Concept @cdi:EnumerationDomainShape OR @cdi:CodeListShape OR @cdi:StatisticalClassificationShape*;
+	^cdi:Level_isDefinedBy_Concept @cdi:LevelShape *;
+	^cdi:LogicalRecordRepository_isDefinedBy_Concept @cdi:LogicalRecordRepositoryShape *;
+	^cdi:LogicalRecord_isDefinedBy_Concept @cdi:LogicalRecordShape *;
+	^cdi:PhysicalDataSet_isDefinedBy_Concept @cdi:PhysicalDataSetShape OR @cdi:StructuredDataSetShape OR @cdi:TabularTextDataSetShape*;
+	^cdi:Segment_isDefinedBy_Concept @cdi:SegmentShape *;
+	^cdi:TabularTextDataSet_isDefinedBy_Concept @cdi:TabularTextDataSetShape *;
+	^cdi:VariableCollection_isDefinedBy_Concept @cdi:VariableCollectionShape *;
+		);
+}
+
+# class ConceptMap
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptMap
+cdi:ConceptMapShape CLOSED {
+	a [cdi:ConceptMap];
+	cdi:ConceptMap-correspondence	@cdi:CorrespondenceDefinitionShape?;
+	cdi:ConceptMap-displayLabel	@cdi:LabelForDisplayShape?;
+	cdi:ConceptMap-identifier	@cdi:IdentifierShape?;
+	cdi:ConceptMap-usage	@cdi:InternationalStringShape?;
+	cdi:ConceptMap-validDates	@cdi:DateRangeShape?;
+	cdi:ConceptMap_hasSource_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape+;
+	
+	cdi:ConceptMap_hasTarget_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape+;
+	
+	^cdi:ConceptSystemCorrespondence_has_ConceptMap @cdi:ConceptSystemCorrespondenceShape ?;
+	^cdi:CorrespondenceTable_has_ConceptMap @cdi:CorrespondenceTableShape ?;
+	}
+
+# class ConceptRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptRelationship
+cdi:ConceptRelationshipShape CLOSED {
+	a [cdi:ConceptRelationship];
+	cdi:ConceptRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:ConceptRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ConceptRelationship_hasSource_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape;
+	
+	cdi:ConceptRelationship_hasTarget_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape;
+	
+	^cdi:ConceptSystemStructure_has_ConceptRelationship @cdi:ConceptSystemStructureShape ;
+	}
+
+# class ConceptSystem
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystem
+cdi:ConceptSystemShape CLOSED {
+	a [cdi:ConceptSystem];
+	$cdi:ConceptSystemProperties (
+	cdi:ConceptSystem-allowsDuplicates	xsd:boolean?;
+	cdi:ConceptSystem-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:ConceptSystem-externalDefinition	@cdi:ReferenceShape?;
+	cdi:ConceptSystem-identifier	@cdi:IdentifierShape?;
+	cdi:ConceptSystem-name	@cdi:ObjectNameShape*;
+	cdi:ConceptSystem-purpose	@cdi:InternationalStringShape?;
+	^cdi:ConceptSystemCorrespondence_maps_ConceptSystem @cdi:ConceptSystemCorrespondenceShape *;
+	^cdi:ConceptSystemStructure_structures_ConceptSystem @cdi:ConceptSystemStructureShape *;
+	cdi:ConceptSystem_has_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	cdi:ConceptSystem_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	^cdi:ConceptualDomain_takesConceptsFrom_ConceptSystem @cdi:ConceptualDomainShape OR @cdi:SentinelConceptualDomainShape OR @cdi:SubstantiveConceptualDomainShape*;
+		);
+}
+
+# class ConceptSystemCorrespondence
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemCorrespondence
+cdi:ConceptSystemCorrespondenceShape CLOSED {
+	a [cdi:ConceptSystemCorrespondence];
+	cdi:ConceptSystemCorrespondence-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:ConceptSystemCorrespondence-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:ConceptSystemCorrespondence-identifier	@cdi:IdentifierShape?;
+	cdi:ConceptSystemCorrespondence-purpose	@cdi:InternationalStringShape?;
+	cdi:ConceptSystemCorrespondence-usage	@cdi:InternationalStringShape?;
+	cdi:ConceptSystemCorrespondence_has_ConceptMap	@cdi:ConceptMapShape *;
+	
+	cdi:ConceptSystemCorrespondence_maps_ConceptSystem	@cdi:ConceptSystemShape OR @cdi:CategorySetShape;
+	
+	}
+
+# class ConceptSystemStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptSystemStructure
+cdi:ConceptSystemStructureShape CLOSED {
+	a [cdi:ConceptSystemStructure];
+	cdi:ConceptSystemStructure-identifier	@cdi:IdentifierShape?;
+	cdi:ConceptSystemStructure-name	@cdi:ObjectNameShape*;
+	cdi:ConceptSystemStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:ConceptSystemStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ConceptSystemStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:ConceptSystemStructure-topology	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ConceptSystemStructure-totality	@cdi:StructureExtentShape?;
+	cdi:ConceptSystemStructure_has_ConceptRelationship	@cdi:ConceptRelationshipShape *;
+	
+	cdi:ConceptSystemStructure_structures_ConceptSystem	@cdi:ConceptSystemShape OR @cdi:CategorySetShape?;
+	
+	}
+
+# class ConceptualDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualDomain
+cdi:ConceptualDomainShape CLOSED {
+	a [cdi:ConceptualDomain];
+	$cdi:ConceptualDomainProperties (
+	cdi:ConceptualDomain-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:ConceptualDomain-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:ConceptualDomain-identifier	@cdi:IdentifierShape?;
+	cdi:ConceptualDomain_isDescribedBy_ValueAndConceptDescription	@cdi:ValueAndConceptDescriptionShape ?;
+	
+	cdi:ConceptualDomain_takesConceptsFrom_ConceptSystem	@cdi:ConceptSystemShape OR @cdi:CategorySetShape?;
+	
+	^cdi:ConceptualValue_hasConceptFrom_ConceptualDomain @cdi:ConceptualValueShape OR @cdi:DimensionalKeyDefinitionMemberShape OR @cdi:KeyDefinitionMemberShape*;
+		);
+}
+
+# class ConceptualValue
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::ConceptualValue
+cdi:ConceptualValueShape CLOSED {
+	a [cdi:ConceptualValue];
+	$cdi:ConceptualValueProperties (
+	cdi:ConceptualValue_hasConceptFrom_ConceptualDomain	@cdi:ConceptualDomainShape OR @cdi:SentinelConceptualDomainShape OR @cdi:SubstantiveConceptualDomainShape;
+	
+	^cdi:Datum_denotes_ConceptualValue @cdi:DatumShape OR @cdi:RevisableDatumShape*;
+	^cdi:InstanceValue_represents_ConceptualValue @cdi:InstanceValueShape OR @cdi:KeyMemberShape OR @cdi:ReferenceValueShape+;
+		&cdi:ConceptProperties;
+		);
+}
+
+# class ConceptualVariable
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::ConceptualVariable
+cdi:ConceptualVariableShape CLOSED {
+	a [cdi:ConceptualVariable];
+	$cdi:ConceptualVariableProperties (
+	cdi:ConceptualVariable-descriptiveText	@cdi:InternationalStringShape?;
+	cdi:ConceptualVariable-unitOfMeasureKind	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ConceptualVariable_measures_UnitType	@cdi:UnitTypeShape OR @cdi:UniverseShape?;
+	
+	cdi:ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain	@cdi:SentinelConceptualDomainShape ?;
+	
+	cdi:ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain	@cdi:SubstantiveConceptualDomainShape ?;
+	
+	^cdi:VariableCollection_has_ConceptualVariable @cdi:VariableCollectionShape *;
+	^cdi:VariablePosition_indexes_ConceptualVariable @cdi:VariablePositionShape *;
+	^cdi:VariableRelationship_hasSource_ConceptualVariable @cdi:VariableRelationshipShape *;
+	^cdi:VariableRelationship_hasTarget_ConceptualVariable @cdi:VariableRelationshipShape *;
+		&cdi:ConceptProperties;
+		);
+}
+
+# class ConditionalControlLogic
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::ConditionalControlLogic
+cdi:ConditionalControlLogicShape CLOSED {
+	a [cdi:ConditionalControlLogic];
+	cdi:ConditionalControlLogic-condition	@cdi:CommandCodeShape;
+	cdi:ConditionalControlLogic-construct	@cdi:ControlConstructShape;
+	^cdi:Rule_hasPrecondition_ConditionalControlLogic @cdi:RuleShape *;
+		&cdi:DeterministicImperativeProperties;
+	}
+
+# class ContextualComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::ContextualComponent
+cdi:ContextualComponentShape CLOSED {
+	a [cdi:ContextualComponent];
+		&cdi:DataStructureComponentProperties;
+	}
+
+# class ControlLogic
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::ControlLogic
+cdi:ControlLogicShape CLOSED {
+	a [cdi:ControlLogic];
+	$cdi:ControlLogicProperties (
+	cdi:ControlLogic-description	xsd:string?;
+	cdi:ControlLogic-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:ControlLogic-identifier	@cdi:IdentifierShape?;
+	cdi:ControlLogic-name	@cdi:ObjectNameShape*;
+	cdi:ControlLogic-workflow	@cdi:ControlledVocabularyEntryShape?;
+	^cdi:Activity_hasInternal_ControlLogic @cdi:ActivityShape OR @cdi:StepShape*;
+	cdi:ControlLogic_hasSubControlLogic_ControlLogic	@cdi:ControlLogicShape OR @cdi:DeterministicImperativeShape OR @cdi:NonDeterministicDeclarativeShape*;
+	
+	cdi:ControlLogic_has_InformationFlowDefinition	@cdi:InformationFlowDefinitionShape *;
+	
+	cdi:ControlLogic_informs_ProcessingAgent	@cdi:ProcessingAgentShape OR @cdi:CuratorShape OR @cdi:ServiceShape*;
+	
+	cdi:ControlLogic_invokes_Activity	@cdi:ActivityShape OR @cdi:StepShape+;
+	
+		);
+}
+
+# class CorrespondenceTable
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::CorrespondenceTable
+cdi:CorrespondenceTableShape CLOSED {
+	a [cdi:CorrespondenceTable];
+	cdi:CorrespondenceTable-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:CorrespondenceTable-effectiveDates	@cdi:DateRangeShape?;
+	cdi:CorrespondenceTable-identifier	@cdi:IdentifierShape?;
+	cdi:CorrespondenceTable_hasContact_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape*;
+	
+	cdi:CorrespondenceTable_isMaintainedBy_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape?;
+	
+	cdi:CorrespondenceTable_isOwnedBy_Agent	@cdi:AgentShape OR @cdi:IndividualShape OR @cdi:MachineShape OR @cdi:OrganizationShape OR @cdi:ProcessingAgentShape*;
+	
+	cdi:CorrespondenceTable_has_ConceptMap	@cdi:ConceptMapShape *;
+	
+	cdi:CorrespondenceTable_hasSource_Level	@cdi:LevelShape ?;
+	
+	cdi:CorrespondenceTable_hasTarget_Level	@cdi:LevelShape ?;
+	
+	cdi:CorrespondenceTable_mapsTo_StatisticalClassification	@cdi:StatisticalClassificationShape ;
+	
+	}
+
+# class Curator
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::Curator
+cdi:CuratorShape CLOSED {
+	a [cdi:Curator];
+	^cdi:RuleBasedScheduling_has_Curator @cdi:RuleBasedSchedulingShape ?;
+		&cdi:ProcessingAgentProperties;
+	}
+
+# class DataPoint
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataPoint
+cdi:DataPointShape CLOSED {
+	a [cdi:DataPoint];
+	cdi:DataPoint-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:DataPoint-identifier	@cdi:IdentifierShape?;
+	cdi:DataPoint_isDescribedBy_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape;
+	
+	^cdi:DataPointPosition_indexes_DataPoint @cdi:DataPointPositionShape *;
+	^cdi:DataPointRelationship_hasSource_DataPoint @cdi:DataPointRelationshipShape *;
+	^cdi:DataPointRelationship_hasTarget_DataPoint @cdi:DataPointRelationshipShape *;
+	cdi:DataPoint_correspondsTo_DataStructureComponent	@cdi:DataStructureComponentShape OR @cdi:AttributeComponentShape OR @cdi:ContextualComponentShape OR @cdi:DataStructureShape OR @cdi:DimensionComponentShape OR @cdi:IdentifierComponentShape OR @cdi:MeasureComponentShape OR @cdi:SyntheticIdComponentShape OR @cdi:VariableDescriptorComponentShape OR @cdi:VariableValueComponentShape*;
+	
+	^cdi:DataSet_has_DataPoint @cdi:DataSetShape OR @cdi:DimensionalDataSetShape OR @cdi:KeyValueDataStoreShape OR @cdi:LongDataSetShape OR @cdi:WideDataSetShape;
+	^cdi:InstanceValue_isStoredIn_DataPoint @cdi:InstanceValueShape OR @cdi:KeyMemberShape OR @cdi:ReferenceValueShape?;
+	^cdi:Key_identifies_DataPoint @cdi:KeyShape OR @cdi:DimensionalKeyShape OR @cdi:InstanceKeyShape OR @cdi:LongKeyShape OR @cdi:WideKeyShape?;
+	^cdi:Segment_has_DataPoint @cdi:SegmentShape *;
+	}
+
+# class DataPointPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataPointPosition
+cdi:DataPointPositionShape CLOSED {
+	a [cdi:DataPointPosition];
+	cdi:DataPointPosition-identifier	@cdi:IdentifierShape?;
+	cdi:DataPointPosition-value	xsd:integer;
+	cdi:DataPointPosition_indexes_DataPoint	@cdi:DataPointShape ?;
+	
+	^cdi:Segment_has_DataPointPosition @cdi:SegmentShape ;
+	}
+
+# class DataPointRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::DataPointRelationship
+cdi:DataPointRelationshipShape CLOSED {
+	a [cdi:DataPointRelationship];
+	cdi:DataPointRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:DataPointRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:DataPointRelationship_hasSource_DataPoint	@cdi:DataPointShape *;
+	
+	cdi:DataPointRelationship_hasTarget_DataPoint	@cdi:DataPointShape *;
+	
+	^cdi:SegmentStructure_has_DataPointRelationship @cdi:SegmentStructureShape ;
+	}
+
+# class DataSet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataSet
+cdi:DataSetShape CLOSED {
+	a [cdi:DataSet];
+	$cdi:DataSetProperties (
+	cdi:DataSet-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:DataSet-fingerprint	@cdi:DataFingerprintShape?;
+	cdi:DataSet-identifier	@cdi:IdentifierShape?;
+	cdi:DataSet-name	@cdi:ObjectNameShape*;
+	cdi:DataSet-recordCount	xsd:integer?;
+	cdi:DataSet_has_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape*;
+	
+	cdi:DataSet_has_DataPoint	@cdi:DataPointShape *;
+	
+	cdi:DataSet_has_Key	@cdi:KeyShape OR @cdi:DimensionalKeyShape OR @cdi:InstanceKeyShape OR @cdi:LongKeyShape OR @cdi:WideKeyShape*;
+	
+	cdi:DataSet_isStructuredBy_DataStructure	@cdi:DataStructureShape OR @cdi:DimensionalDataStructureShape OR @cdi:KeyValueStructureShape OR @cdi:LongDataStructureShape OR @cdi:WideDataStructureShape*;
+	
+	^cdi:LogicalRecord_organizes_DataSet @cdi:LogicalRecordShape *;
+	^cdi:PhysicalDataSet_correspondsTo_DataSet @cdi:PhysicalDataSetShape OR @cdi:StructuredDataSetShape OR @cdi:TabularTextDataSetShape*;
+		);
+}
+
+# class DataStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::DataStructure
+cdi:DataStructureShape CLOSED {
+	a [cdi:DataStructure];
+	$cdi:DataStructureProperties (
+	^cdi:DataSet_isStructuredBy_DataStructure @cdi:DataSetShape OR @cdi:DimensionalDataSetShape OR @cdi:KeyValueDataStoreShape OR @cdi:LongDataSetShape OR @cdi:WideDataSetShape*;
+	cdi:DataStructure_has_ComponentPosition	@cdi:ComponentPositionShape *;
+	
+	cdi:DataStructure_has_DataStructureComponent	@cdi:DataStructureComponentShape OR @cdi:AttributeComponentShape OR @cdi:ContextualComponentShape OR @cdi:DataStructureShape OR @cdi:DimensionComponentShape OR @cdi:IdentifierComponentShape OR @cdi:MeasureComponentShape OR @cdi:SyntheticIdComponentShape OR @cdi:VariableDescriptorComponentShape OR @cdi:VariableValueComponentShape*;
+	
+	cdi:DataStructure_has_ForeignKey	@cdi:ForeignKeyShape *;
+	
+	cdi:DataStructure_has_PrimaryKey	@cdi:PrimaryKeyShape ?;
+	
+		&cdi:DataStructureComponentProperties;
+		);
+}
+
+# class DataStructureComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DataStructureComponent
+cdi:DataStructureComponentShape CLOSED {
+	a [cdi:DataStructureComponent];
+	$cdi:DataStructureComponentProperties (
+	cdi:DataStructureComponent-identifier	@cdi:IdentifierShape?;
+	cdi:DataStructureComponent-semantic	@cdi:PairedControlledVocabularyEntryShape*;
+	cdi:DataStructureComponent-specialization	@cdi:SpecializationRoleShape?;
+	cdi:DataStructureComponent_isDefinedBy_RepresentedVariable	@cdi:RepresentedVariableShape OR @cdi:InstanceVariableShape?;
+	
+	^cdi:DataPoint_correspondsTo_DataStructureComponent @cdi:DataPointShape *;
+	^cdi:DataStructure_has_DataStructureComponent @cdi:DataStructureShape OR @cdi:DimensionalDataStructureShape OR @cdi:KeyValueStructureShape OR @cdi:LongDataStructureShape OR @cdi:WideDataStructureShape?;
+	^cdi:KeyMember_isBasedOn_DataStructureComponent @cdi:KeyMemberShape OR @cdi:DescriptorShape OR @cdi:DimensionalKeyMemberShape OR @cdi:LongMainKeyMemberShape OR @cdi:MainKeyMemberShape OR @cdi:WideKeyMemberShape*;
+	^cdi:AttributeComponent_qualifies_DataStructureComponent @cdi:AttributeComponentShape *;
+	^cdi:ComponentPosition_indexes_DataStructureComponent @cdi:ComponentPositionShape *;
+	^cdi:ForeignKeyComponent_correspondsTo_DataStructureComponent @cdi:ForeignKeyComponentShape ?;
+	^cdi:PrimaryKeyComponent_correspondsTo_DataStructureComponent @cdi:PrimaryKeyComponentShape ?;
+		);
+}
+
+# class Datum
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Datum
+cdi:DatumShape CLOSED {
+	a [cdi:Datum];
+	$cdi:DatumProperties (
+	cdi:Datum-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:Datum-identifier	@cdi:IdentifierShape?;
+	cdi:Datum_isBoundedBy_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape+;
+	
+	cdi:Datum_denotes_ConceptualValue	@cdi:ConceptualValueShape OR @cdi:DimensionalKeyDefinitionMemberShape OR @cdi:KeyDefinitionMemberShape;
+	
+	cdi:Datum_uses_InstanceValue	@cdi:InstanceValueShape OR @cdi:KeyMemberShape OR @cdi:ReferenceValueShape+;
+	
+	cdi:Datum_uses_Notation	@cdi:NotationShape ?;
+	
+		);
+}
+
+# class Descriptor
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::Descriptor
+cdi:DescriptorShape CLOSED {
+	a [cdi:Descriptor];
+	cdi:Descriptor_hasValueFrom_DescriptorValueDomain	@cdi:DescriptorValueDomainShape ;
+	
+	cdi:Descriptor_identifies_ReferenceVariable	@cdi:ReferenceVariableShape ;
+	
+	cdi:Descriptor_refersTo_ReferenceValue	@cdi:ReferenceValueShape +;
+	
+		&cdi:KeyMemberProperties;
+	}
+
+# class DescriptorValueDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::DescriptorValueDomain
+cdi:DescriptorValueDomainShape CLOSED {
+	a [cdi:DescriptorValueDomain];
+	^cdi:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain @cdi:DescriptorVariableShape *;
+	^cdi:Descriptor_hasValueFrom_DescriptorValueDomain @cdi:DescriptorShape *;
+		&cdi:SubstantiveValueDomainProperties;
+	}
+
+# class DescriptorVariable
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::DescriptorVariable
+cdi:DescriptorVariableShape CLOSED {
+	a [cdi:DescriptorVariable];
+	^cdi:VariableDescriptorComponent_isDefinedBy_DescriptorVariable @cdi:VariableDescriptorComponentShape *;
+	cdi:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain	@cdi:DescriptorValueDomainShape ?;
+	
+		&cdi:InstanceVariableProperties;
+	}
+
+# class DeterministicImperative
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::DeterministicImperative
+cdi:DeterministicImperativeShape CLOSED {
+	a [cdi:DeterministicImperative];
+	$cdi:DeterministicImperativeProperties (
+		&cdi:ControlLogicProperties;
+		);
+}
+
+# class DimensionComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::DimensionComponent
+cdi:DimensionComponentShape CLOSED {
+	a [cdi:DimensionComponent];
+	cdi:DimensionComponent-categoricalAdditivity	xsd:boolean?;
+	cdi:DimensionComponent_isStructuredBy_ValueDomain	@cdi:ValueDomainShape OR @cdi:ReferenceValueDomainShape OR @cdi:SentinelValueDomainShape OR @cdi:SubstantiveValueDomainShape?;
+	
+	^cdi:DimensionGroup_has_DimensionComponent @cdi:DimensionGroupShape *;
+		&cdi:DataStructureComponentProperties;
+	}
+
+# class DimensionGroup
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionGroup
+cdi:DimensionGroupShape CLOSED {
+	a [cdi:DimensionGroup];
+	cdi:DimensionGroup-identifier	@cdi:IdentifierShape?;
+	cdi:DimensionGroup-name	@cdi:ObjectNameShape*;
+	cdi:DimensionGroup_has_DimensionComponent	@cdi:DimensionComponentShape +;
+	
+	^cdi:DimensionalDataStructure_uses_DimensionGroup @cdi:DimensionalDataStructureShape *;
+	}
+
+# class DimensionalDataSet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalDataSet
+cdi:DimensionalDataSetShape CLOSED {
+	a [cdi:DimensionalDataSet];
+	cdi:DimensionalDataSet_represents_ScopedMeasure	@cdi:ScopedMeasureShape *;
+	
+		&cdi:DataSetProperties;
+	}
+
+# class DimensionalDataStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalDataStructure
+cdi:DimensionalDataStructureShape CLOSED {
+	a [cdi:DimensionalDataStructure];
+	cdi:DimensionalDataStructure_uses_DimensionGroup	@cdi:DimensionGroupShape *;
+	
+		&cdi:DataStructureProperties;
+	}
+
+# class DimensionalKey
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKey
+cdi:DimensionalKeyShape CLOSED {
+	a [cdi:DimensionalKey];
+		&cdi:KeyProperties;
+	}
+
+# class DimensionalKeyDefinition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinition
+cdi:DimensionalKeyDefinitionShape CLOSED {
+	a [cdi:DimensionalKeyDefinition];
+	^cdi:ScopedMeasure_circumscribes_DimensionalKeyDefinition @cdi:ScopedMeasureShape *;
+		&cdi:KeyDefinitionProperties;
+	}
+
+# class DimensionalKeyDefinitionMember
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyDefinitionMember
+cdi:DimensionalKeyDefinitionMemberShape CLOSED {
+	a [cdi:DimensionalKeyDefinitionMember];
+	cdi:DimensionalKeyDefinitionMember_isRepresentedBy_DimensionalKeyMember	@cdi:DimensionalKeyMemberShape +;
+	
+		&cdi:ConceptualValueProperties;
+	}
+
+# class DimensionalKeyMember
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::DimensionalKeyMember
+cdi:DimensionalKeyMemberShape CLOSED {
+	a [cdi:DimensionalKeyMember];
+	^cdi:DimensionalKeyDefinitionMember_isRepresentedBy_DimensionalKeyMember @cdi:DimensionalKeyDefinitionMemberShape ?;
+	cdi:DimensionalKeyMember_hasValueFrom_CodeList	@cdi:CodeListShape ;
+	
+		&cdi:KeyMemberProperties;
+	}
+
+# class EnumerationDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::EnumerationDomain
+cdi:EnumerationDomainShape CLOSED {
+	a [cdi:EnumerationDomain];
+	$cdi:EnumerationDomainProperties (
+	cdi:EnumerationDomain-identifier	@cdi:IdentifierShape?;
+	cdi:EnumerationDomain-name	@cdi:ObjectNameShape*;
+	cdi:EnumerationDomain-purpose	@cdi:InternationalStringShape?;
+	cdi:EnumerationDomain_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	cdi:EnumerationDomain_references_CategorySet	@cdi:CategorySetShape ?;
+	
+	cdi:EnumerationDomain_uses_LevelStructure	@cdi:LevelStructureShape ?;
+	
+	^cdi:SentinelValueDomain_takesValuesFrom_EnumerationDomain @cdi:SentinelValueDomainShape *;
+	^cdi:SubstantiveValueDomain_takesValuesFrom_EnumerationDomain @cdi:SubstantiveValueDomainShape OR @cdi:DescriptorValueDomainShape*;
+		);
+}
+
+# class ForeignKey
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKey
+cdi:ForeignKeyShape CLOSED {
+	a [cdi:ForeignKey];
+	cdi:ForeignKey-identifier	@cdi:IdentifierShape?;
+	^cdi:DataStructure_has_ForeignKey @cdi:DataStructureShape OR @cdi:DimensionalDataStructureShape OR @cdi:KeyValueStructureShape OR @cdi:LongDataStructureShape OR @cdi:WideDataStructureShape;
+	cdi:ForeignKey_isComposedOf_ForeignKeyComponent	@cdi:ForeignKeyComponentShape +;
+	
+	}
+
+# class ForeignKeyComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::ForeignKeyComponent
+cdi:ForeignKeyComponentShape CLOSED {
+	a [cdi:ForeignKeyComponent];
+	cdi:ForeignKeyComponent-identifier	@cdi:IdentifierShape?;
+	cdi:ForeignKeyComponent_correspondsTo_DataStructureComponent	@cdi:DataStructureComponentShape OR @cdi:AttributeComponentShape OR @cdi:ContextualComponentShape OR @cdi:DataStructureShape OR @cdi:DimensionComponentShape OR @cdi:IdentifierComponentShape OR @cdi:MeasureComponentShape OR @cdi:SyntheticIdComponentShape OR @cdi:VariableDescriptorComponentShape OR @cdi:VariableValueComponentShape;
+	
+	cdi:ForeignKeyComponent_references_PrimaryKeyComponent	@cdi:PrimaryKeyComponentShape ;
+	
+	^cdi:ForeignKey_isComposedOf_ForeignKeyComponent @cdi:ForeignKeyShape ;
+	}
+
+# class IdentifierComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::IdentifierComponent
+cdi:IdentifierComponentShape CLOSED {
+	a [cdi:IdentifierComponent];
+		&cdi:DataStructureComponentProperties;
+	}
+
+# class Individual
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Agents::Individual
+cdi:IndividualShape CLOSED {
+	a [cdi:Individual];
+	cdi:Individual-contactInformation	@cdi:ContactInformationShape?;
+	cdi:Individual-individualName	@cdi:IndividualNameShape*;
+		&cdi:AgentProperties;
+	}
+
+# class InformationFlowDefinition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::InformationFlowDefinition
+cdi:InformationFlowDefinitionShape CLOSED {
+	a [cdi:InformationFlowDefinition];
+	cdi:InformationFlowDefinition-identifier	@cdi:IdentifierShape?;
+	^cdi:ControlLogic_has_InformationFlowDefinition @cdi:ControlLogicShape OR @cdi:DeterministicImperativeShape OR @cdi:NonDeterministicDeclarativeShape*;
+	cdi:InformationFlowDefinition_from_Parameter	@cdi:ParameterShape ?;
+	
+	cdi:InformationFlowDefinition_to_Parameter	@cdi:ParameterShape *;
+	
+	}
+
+# class InstanceKey
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::InstanceKey
+cdi:InstanceKeyShape CLOSED {
+	a [cdi:InstanceKey];
+	cdi:InstanceKey_has_InstanceValue	@cdi:InstanceValueShape OR @cdi:KeyMemberShape OR @cdi:ReferenceValueShape?;
+	
+	cdi:InstanceKey_refersTo_ReferenceValue	@cdi:ReferenceValueShape ;
+	
+		&cdi:KeyProperties;
+	}
+
+# class InstanceValue
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::InstanceValue
+cdi:InstanceValueShape CLOSED {
+	a [cdi:InstanceValue];
+	$cdi:InstanceValueProperties (
+	cdi:InstanceValue-content	@cdi:TypedStringShape?;
+	cdi:InstanceValue-identifier	@cdi:IdentifierShape?;
+	cdi:InstanceValue-whiteSpace	@cdi:WhiteSpaceRuleShape?;
+	^cdi:Datum_uses_InstanceValue @cdi:DatumShape OR @cdi:RevisableDatumShape*;
+	^cdi:InstanceKey_has_InstanceValue @cdi:InstanceKeyShape *;
+	cdi:InstanceValue_hasValueFrom_ValueDomain	@cdi:ValueDomainShape OR @cdi:ReferenceValueDomainShape OR @cdi:SentinelValueDomainShape OR @cdi:SubstantiveValueDomainShape;
+	
+	cdi:InstanceValue_isStoredIn_DataPoint	@cdi:DataPointShape ?;
+	
+	cdi:InstanceValue_represents_ConceptualValue	@cdi:ConceptualValueShape OR @cdi:DimensionalKeyDefinitionMemberShape OR @cdi:KeyDefinitionMemberShape?;
+	
+		);
+}
+
+# class InstanceVariable
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::InstanceVariable
+cdi:InstanceVariableShape CLOSED {
+	a [cdi:InstanceVariable];
+	$cdi:InstanceVariableProperties (
+	cdi:InstanceVariable-function	@cdi:ControlledVocabularyEntryShape*;
+	cdi:InstanceVariable-physicalDataType	@cdi:ControlledVocabularyEntryShape?;
+	cdi:InstanceVariable-platformType	@cdi:ControlledVocabularyEntryShape?;
+	cdi:InstanceVariable-role	@cdi:ControlledVocabularyEntryShape*;
+	cdi:InstanceVariable-source	@cdi:ReferenceShape?;
+	^cdi:DataPoint_isDescribedBy_InstanceVariable @cdi:DataPointShape *;
+	^cdi:DataSet_has_InstanceVariable @cdi:DataSetShape OR @cdi:DimensionalDataSetShape OR @cdi:KeyValueDataStoreShape OR @cdi:LongDataSetShape OR @cdi:WideDataSetShape+;
+	^cdi:Datum_isBoundedBy_InstanceVariable @cdi:DatumShape OR @cdi:RevisableDatumShape*;
+	^cdi:InstanceVariableMap_hasSource_InstanceVariable @cdi:InstanceVariableMapShape *;
+	^cdi:InstanceVariableMap_hasTarget_InstanceVariable @cdi:InstanceVariableMapShape *;
+	cdi:InstanceVariable_isDescribedBy_StatisticsCollection	@cdi:StatisticsCollectionShape ?;
+	
+	^cdi:LogicalRecord_has_InstanceVariable @cdi:LogicalRecordShape *;
+	^cdi:PhysicalDataSet_has_InstanceVariable @cdi:PhysicalDataSetShape OR @cdi:StructuredDataSetShape OR @cdi:TabularTextDataSetShape*;
+	^cdi:PhysicalMapping_formats_InstanceVariable @cdi:PhysicalMappingShape OR @cdi:LocatorMappingShape OR @cdi:TextMappingShape*;
+	^cdi:StatisticsCollection_hasWeight_InstanceVariable @cdi:StatisticsCollectionShape *;
+	^cdi:Statistics_hasWeight_InstanceVariable @cdi:StatisticsShape OR @cdi:CategoryStatisticsShape*;
+		&cdi:RepresentedVariableProperties;
+		);
+}
+
+# class InstanceVariableMap
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::InstanceVariableMap
+cdi:InstanceVariableMapShape CLOSED {
+	a [cdi:InstanceVariableMap];
+	cdi:InstanceVariableMap-comparison	@cdi:ComparisonOperatorShape;
+	cdi:InstanceVariableMap-correspondence	@cdi:CorrespondenceDefinitionShape;
+	cdi:InstanceVariableMap-identifier	@cdi:IdentifierShape?;
+	cdi:InstanceVariableMap-setValue	xsd:string;
+	cdi:InstanceVariableMap_hasSource_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape+;
+	
+	cdi:InstanceVariableMap_hasTarget_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape*;
+	
+	^cdi:LogicalRecordRelationship_has_InstanceVariableMap @cdi:LogicalRecordRelationshipShape +;
+	}
+
+# class Key
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Key
+cdi:KeyShape CLOSED {
+	a [cdi:Key];
+	$cdi:KeyProperties (
+	cdi:Key-identifier	@cdi:IdentifierShape?;
+	cdi:Key_correspondsTo_Unit	@cdi:UnitShape ?;
+	
+	cdi:Key_correspondsTo_Universe	@cdi:UniverseShape OR @cdi:PopulationShape?;
+	
+	^cdi:DataSet_has_Key @cdi:DataSetShape OR @cdi:DimensionalDataSetShape OR @cdi:KeyValueDataStoreShape OR @cdi:LongDataSetShape OR @cdi:WideDataSetShape;
+	cdi:Key_has_KeyMember	@cdi:KeyMemberShape OR @cdi:DescriptorShape OR @cdi:DimensionalKeyMemberShape OR @cdi:LongMainKeyMemberShape OR @cdi:MainKeyMemberShape OR @cdi:WideKeyMemberShape*;
+	
+	cdi:Key_identifies_DataPoint	@cdi:DataPointShape +;
+	
+	cdi:Key_represents_KeyDefinition	@cdi:KeyDefinitionShape OR @cdi:DimensionalKeyDefinitionShape?;
+	
+		);
+}
+
+# class KeyDefinition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinition
+cdi:KeyDefinitionShape CLOSED {
+	a [cdi:KeyDefinition];
+	$cdi:KeyDefinitionProperties (
+	cdi:KeyDefinition-identifier	@cdi:IdentifierShape?;
+	cdi:KeyDefinition_correspondsTo_Unit	@cdi:UnitShape ?;
+	
+	cdi:KeyDefinition_correspondsTo_Universe	@cdi:UniverseShape OR @cdi:PopulationShape?;
+	
+	cdi:KeyDefinition_has_KeyDefinitionMember	@cdi:KeyDefinitionMemberShape *;
+	
+	^cdi:Key_represents_KeyDefinition @cdi:KeyShape OR @cdi:DimensionalKeyShape OR @cdi:InstanceKeyShape OR @cdi:LongKeyShape OR @cdi:WideKeyShape+;
+		);
+}
+
+# class KeyDefinitionMember
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyDefinitionMember
+cdi:KeyDefinitionMemberShape CLOSED {
+	a [cdi:KeyDefinitionMember];
+	^cdi:KeyDefinition_has_KeyDefinitionMember @cdi:KeyDefinitionShape OR @cdi:DimensionalKeyDefinitionShape?;
+		&cdi:ConceptualValueProperties;
+	}
+
+# class KeyMember
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyMember
+cdi:KeyMemberShape CLOSED {
+	a [cdi:KeyMember];
+	$cdi:KeyMemberProperties (
+	cdi:KeyMember_isBasedOn_DataStructureComponent	@cdi:DataStructureComponentShape OR @cdi:AttributeComponentShape OR @cdi:ContextualComponentShape OR @cdi:DataStructureShape OR @cdi:DimensionComponentShape OR @cdi:IdentifierComponentShape OR @cdi:MeasureComponentShape OR @cdi:SyntheticIdComponentShape OR @cdi:VariableDescriptorComponentShape OR @cdi:VariableValueComponentShape*;
+	
+	^cdi:Key_has_KeyMember @cdi:KeyShape OR @cdi:DimensionalKeyShape OR @cdi:InstanceKeyShape OR @cdi:LongKeyShape OR @cdi:WideKeyShape?;
+		&cdi:InstanceValueProperties;
+		);
+}
+
+# class KeyValueDataStore
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::KeyValueDataStore
+cdi:KeyValueDataStoreShape CLOSED {
+	a [cdi:KeyValueDataStore];
+		&cdi:DataSetProperties;
+	}
+
+# class KeyValueStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::KeyValueStructure
+cdi:KeyValueStructureShape CLOSED {
+	a [cdi:KeyValueStructure];
+		&cdi:DataStructureProperties;
+	}
+
+# class Level
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::Level
+cdi:LevelShape CLOSED {
+	a [cdi:Level];
+	cdi:Level-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:Level-identifier	@cdi:IdentifierShape?;
+	cdi:Level-levelNumber	xsd:integer;
+	cdi:Level_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape?;
+	
+	^cdi:CorrespondenceTable_hasSource_Level @cdi:CorrespondenceTableShape *;
+	^cdi:CorrespondenceTable_hasTarget_Level @cdi:CorrespondenceTableShape *;
+	^cdi:LevelStructure_has_Level @cdi:LevelStructureShape *;
+	cdi:Level_groups_ClassificationItem	@cdi:ClassificationItemShape *;
+	
+	}
+
+# class LevelStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::LevelStructure
+cdi:LevelStructureShape CLOSED {
+	a [cdi:LevelStructure];
+	cdi:LevelStructure-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:LevelStructure-identifier	@cdi:IdentifierShape?;
+	cdi:LevelStructure-name	@cdi:ObjectNameShape*;
+	cdi:LevelStructure-usage	@cdi:InternationalStringShape?;
+	cdi:LevelStructure-validDateRange	@cdi:DateRangeShape?;
+	^cdi:EnumerationDomain_uses_LevelStructure @cdi:EnumerationDomainShape OR @cdi:CodeListShape OR @cdi:StatisticalClassificationShape*;
+	cdi:LevelStructure_has_Level	@cdi:LevelShape *;
+	
+	^cdi:StatisticalClassification_has_LevelStructure @cdi:StatisticalClassificationShape *;
+	}
+
+# class LocatorMapping
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LocatorMapping
+cdi:LocatorMappingShape CLOSED {
+	a [cdi:LocatorMapping];
+	cdi:LocatorMapping-locator	xsd:string;
+		&cdi:PhysicalMappingProperties;
+	}
+
+# class LogicalRecord
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecord
+cdi:LogicalRecordShape CLOSED {
+	a [cdi:LogicalRecord];
+	cdi:LogicalRecord-identifier	@cdi:IdentifierShape?;
+	cdi:LogicalRecord_has_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape*;
+	
+	cdi:LogicalRecord_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	cdi:LogicalRecord_organizes_DataSet	@cdi:DataSetShape OR @cdi:DimensionalDataSetShape OR @cdi:KeyValueDataStoreShape OR @cdi:LongDataSetShape OR @cdi:WideDataSetShape*;
+	
+	^cdi:LogicalRecordRelationship_hasSource_LogicalRecord @cdi:LogicalRecordRelationshipShape *;
+	^cdi:LogicalRecordRelationship_hasTarget_LogicalRecord @cdi:LogicalRecordRelationshipShape *;
+	^cdi:LogicalRecordRepository_has_LogicalRecord @cdi:LogicalRecordRepositoryShape *;
+	^cdi:PhysicalDataSet_uses_LogicalRecord @cdi:PhysicalDataSetShape OR @cdi:StructuredDataSetShape OR @cdi:TabularTextDataSetShape*;
+	^cdi:Segment_mapsTo_LogicalRecord @cdi:SegmentShape *;
+	}
+
+# class LogicalRecordRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordRelationship
+cdi:LogicalRecordRelationshipShape CLOSED {
+	a [cdi:LogicalRecordRelationship];
+	cdi:LogicalRecordRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:LogicalRecordRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:LogicalRecordRelationship_hasSource_LogicalRecord	@cdi:LogicalRecordShape *;
+	
+	cdi:LogicalRecordRelationship_hasTarget_LogicalRecord	@cdi:LogicalRecordShape *;
+	
+	cdi:LogicalRecordRelationship_has_InstanceVariableMap	@cdi:InstanceVariableMapShape *;
+	
+	^cdi:LogicalRecordRepositoryStructure_has_LogicalRecordRelationship @cdi:LogicalRecordRepositoryStructureShape ;
+	}
+
+# class LogicalRecordRepository
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordRepository
+cdi:LogicalRecordRepositoryShape CLOSED {
+	a [cdi:LogicalRecordRepository];
+	cdi:LogicalRecordRepository-aboutMissing	@cdi:InternationalStringShape?;
+	cdi:LogicalRecordRepository-allowsDuplicates	xsd:boolean?;
+	cdi:LogicalRecordRepository-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:LogicalRecordRepository-characterSet	xsd:string?;
+	cdi:LogicalRecordRepository-identifier	@cdi:IdentifierShape?;
+	cdi:LogicalRecordRepository-name	@cdi:ObjectNameShape*;
+	cdi:LogicalRecordRepository-purpose	@cdi:InternationalStringShape?;
+	cdi:LogicalRecordRepository-recordCount	xsd:integer?;
+	cdi:LogicalRecordRepository-repositoryType	@cdi:ControlledVocabularyEntryShape?;
+	cdi:LogicalRecordRepository_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	^cdi:LogicalRecordRepositoryStructure_structures_LogicalRecordRepository @cdi:LogicalRecordRepositoryStructureShape *;
+	cdi:LogicalRecordRepository_has_LogicalRecord	@cdi:LogicalRecordShape *;
+	
+	}
+
+# class LogicalRecordRepositoryStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::LogicalRecordRepositoryStructure
+cdi:LogicalRecordRepositoryStructureShape CLOSED {
+	a [cdi:LogicalRecordRepositoryStructure];
+	cdi:LogicalRecordRepositoryStructure-identifier	@cdi:IdentifierShape?;
+	cdi:LogicalRecordRepositoryStructure-name	@cdi:ObjectNameShape*;
+	cdi:LogicalRecordRepositoryStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:LogicalRecordRepositoryStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:LogicalRecordRepositoryStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:LogicalRecordRepositoryStructure-topology	@cdi:ControlledVocabularyEntryShape?;
+	cdi:LogicalRecordRepositoryStructure-totality	@cdi:StructureExtentShape?;
+	cdi:LogicalRecordRepositoryStructure_has_LogicalRecordRelationship	@cdi:LogicalRecordRelationshipShape *;
+	
+	cdi:LogicalRecordRepositoryStructure_structures_LogicalRecordRepository	@cdi:LogicalRecordRepositoryShape ?;
+	
+	}
+
+# class LongDataSet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongDataSet
+cdi:LongDataSetShape CLOSED {
+	a [cdi:LongDataSet];
+		&cdi:DataSetProperties;
+	}
+
+# class LongDataStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongDataStructure
+cdi:LongDataStructureShape CLOSED {
+	a [cdi:LongDataStructure];
+		&cdi:DataStructureProperties;
+	}
+
+# class LongKey
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongKey
+cdi:LongKeyShape CLOSED {
+	a [cdi:LongKey];
+		&cdi:KeyProperties;
+	}
+
+# class LongMainKeyMember
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::LongMainKeyMember
+cdi:LongMainKeyMemberShape CLOSED {
+	a [cdi:LongMainKeyMember];
+		&cdi:KeyMemberProperties;
+	}
+
+# class Machine
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Agents::Machine
+cdi:MachineShape CLOSED {
+	a [cdi:Machine];
+	cdi:Machine-accessLocation	@cdi:AccessLocationShape?;
+	cdi:Machine-function	@cdi:ControlledVocabularyEntryShape*;
+	cdi:Machine-machineInterface	@cdi:ControlledVocabularyEntryShape*;
+	cdi:Machine-name	@cdi:ObjectNameShape*;
+	cdi:Machine-ownerOperatorContact	@cdi:ContactInformationShape?;
+	cdi:Machine-typeOfMachine	@cdi:ControlledVocabularyEntryShape?;
+		&cdi:AgentProperties;
+	}
+
+# class MainKeyMember
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::MainKeyMember
+cdi:MainKeyMemberShape CLOSED {
+	a [cdi:MainKeyMember];
+	cdi:MainKeyMember_hasValueFrom_SubstantiveValueDomain	@cdi:SubstantiveValueDomainShape OR @cdi:DescriptorValueDomainShape?;
+	
+		&cdi:KeyMemberProperties;
+	}
+
+# class MeasureComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::MeasureComponent
+cdi:MeasureComponentShape CLOSED {
+	a [cdi:MeasureComponent];
+	$cdi:MeasureComponentProperties (
+	cdi:MeasureComponent-name	@cdi:ObjectNameShape*;
+	^cdi:QualifiedMeasure_refines_MeasureComponent @cdi:QualifiedMeasureShape *;
+		&cdi:DataStructureComponentProperties;
+		);
+}
+
+# class NonDeterministicDeclarative
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::NonDeterministicDeclarative
+cdi:NonDeterministicDeclarativeShape CLOSED {
+	a [cdi:NonDeterministicDeclarative];
+	$cdi:NonDeterministicDeclarativeProperties (
+		&cdi:ControlLogicProperties;
+		);
+}
+
+# class Notation
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Notation
+cdi:NotationShape CLOSED {
+	a [cdi:Notation];
+	cdi:Notation-content	@cdi:TypedStringShape?;
+	cdi:Notation-identifier	@cdi:IdentifierShape?;
+	cdi:Notation-whiteSpace	@cdi:WhiteSpaceRuleShape?;
+	cdi:Notation_represents_Category	@cdi:CategoryShape *;
+	
+	^cdi:ClassificationItem_uses_Notation @cdi:ClassificationItemShape *;
+	^cdi:Code_uses_Notation @cdi:CodeShape *;
+	^cdi:Datum_uses_Notation @cdi:DatumShape OR @cdi:RevisableDatumShape*;
+	}
+
+# class Organization
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Agents::Organization
+cdi:OrganizationShape CLOSED {
+	a [cdi:Organization];
+	cdi:Organization-contactInformation	@cdi:ContactInformationShape?;
+	cdi:Organization-organizationName	@cdi:OrganizationNameShape+;
+	^cdi:StatisticalClassification_isMaintainedBy_Organization @cdi:StatisticalClassificationShape *;
+		&cdi:AgentProperties;
+	}
+
+# class Parameter
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::Parameter
+cdi:ParameterShape CLOSED {
+	a [cdi:Parameter];
+	cdi:Parameter-entityBound	@cdi:ReferenceShape*;
+	cdi:Parameter-identifier	@cdi:IdentifierShape?;
+	cdi:Parameter-name	@cdi:ObjectNameShape*;
+	^cdi:InformationFlowDefinition_from_Parameter @cdi:InformationFlowDefinitionShape *;
+	^cdi:InformationFlowDefinition_to_Parameter @cdi:InformationFlowDefinitionShape *;
+	^cdi:Step_produces_Parameter @cdi:StepShape *;
+	^cdi:Step_receives_Parameter @cdi:StepShape *;
+	}
+
+# class PhysicalDataSet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalDataSet
+cdi:PhysicalDataSetShape CLOSED {
+	a [cdi:PhysicalDataSet];
+	$cdi:PhysicalDataSetProperties (
+	cdi:PhysicalDataSet-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:PhysicalDataSet-characterSet	xsd:string?;
+	cdi:PhysicalDataSet-encoding	@cdi:ControlledVocabularyEntryShape?;
+	cdi:PhysicalDataSet-fileSize	xsd:double?;
+	cdi:PhysicalDataSet-fileSizeUofM	xsd:string?;
+	cdi:PhysicalDataSet-fingerprint	@cdi:DataFingerprintShape?;
+	cdi:PhysicalDataSet-identifier	@cdi:IdentifierShape?;
+	cdi:PhysicalDataSet-name	@cdi:ObjectNameShape?;
+	cdi:PhysicalDataSet-overview	@cdi:InternationalStringShape?;
+	cdi:PhysicalDataSet-physicalFileURL	xsd:string?;
+	cdi:PhysicalDataSet-purpose	@cdi:InternationalStringShape?;
+	cdi:PhysicalDataSet-recordCount	xsd:integer?;
+	cdi:PhysicalDataSet-standard	@cdi:conformsToShape*;
+	cdi:PhysicalDataSet_has_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape*;
+	
+	cdi:PhysicalDataSet_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	cdi:PhysicalDataSet_correspondsTo_DataSet	@cdi:DataSetShape OR @cdi:DimensionalDataSetShape OR @cdi:KeyValueDataStoreShape OR @cdi:LongDataSetShape OR @cdi:WideDataSetShape?;
+	
+	cdi:PhysicalDataSet_has_PhysicalMapping	@cdi:PhysicalMappingShape OR @cdi:LocatorMappingShape OR @cdi:TextMappingShape*;
+	
+	cdi:PhysicalDataSet_has_PhysicalMappingPosition	@cdi:PhysicalMappingPositionShape *;
+	
+	cdi:PhysicalDataSet_has_Segment	@cdi:SegmentShape *;
+	
+	cdi:PhysicalDataSet_has_SegmentPosition	@cdi:SegmentPositionShape *;
+	
+	cdi:PhysicalDataSet_uses_LogicalRecord	@cdi:LogicalRecordShape ?;
+	
+		);
+}
+
+# class PhysicalMapping
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalMapping
+cdi:PhysicalMappingShape CLOSED {
+	a [cdi:PhysicalMapping];
+	$cdi:PhysicalMappingProperties (
+	cdi:PhysicalMapping-decimalPositions	xsd:integer?;
+	cdi:PhysicalMapping-defaultValue	xsd:string?;
+	cdi:PhysicalMapping-format	@cdi:ControlledVocabularyEntryShape?;
+	cdi:PhysicalMapping-identifier	@cdi:IdentifierShape?;
+	cdi:PhysicalMapping-isRequired	xsd:boolean?;
+	cdi:PhysicalMapping-maximumLength	xsd:integer?;
+	cdi:PhysicalMapping-minimumLength	xsd:integer?;
+	cdi:PhysicalMapping-nullSequence	xsd:string?;
+	cdi:PhysicalMapping-numberPattern	xsd:string?;
+	cdi:PhysicalMapping-position	xsd:integer?;
+	cdi:PhysicalMapping-scale	xsd:integer?;
+	cdi:PhysicalMapping_formats_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape?;
+	
+	^cdi:PhysicalDataSet_has_PhysicalMapping @cdi:PhysicalDataSetShape OR @cdi:StructuredDataSetShape OR @cdi:TabularTextDataSetShape*;
+	^cdi:PhysicalMappingPosition_indexes_PhysicalMapping @cdi:PhysicalMappingPositionShape *;
+		);
+}
+
+# class PhysicalMappingPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::PhysicalMappingPosition
+cdi:PhysicalMappingPositionShape CLOSED {
+	a [cdi:PhysicalMappingPosition];
+	cdi:PhysicalMappingPosition-identifier	@cdi:IdentifierShape?;
+	cdi:PhysicalMappingPosition-value	xsd:integer;
+	^cdi:PhysicalDataSet_has_PhysicalMappingPosition @cdi:PhysicalDataSetShape OR @cdi:StructuredDataSetShape OR @cdi:TabularTextDataSetShape;
+	cdi:PhysicalMappingPosition_indexes_PhysicalMapping	@cdi:PhysicalMappingShape OR @cdi:LocatorMappingShape OR @cdi:TextMappingShape;
+	
+	}
+
+# class Population
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::Population
+cdi:PopulationShape CLOSED {
+	a [cdi:Population];
+	cdi:Population-timePeriodOfPopulation	@cdi:DateRangeShape*;
+	cdi:Population_isComposedOf_Unit	@cdi:UnitShape *;
+	
+	^cdi:Segment_represents_Population @cdi:SegmentShape *;
+		&cdi:UniverseProperties;
+	}
+
+# class PrimaryKey
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKey
+cdi:PrimaryKeyShape CLOSED {
+	a [cdi:PrimaryKey];
+	cdi:PrimaryKey-identifier	@cdi:IdentifierShape?;
+	^cdi:DataStructure_has_PrimaryKey @cdi:DataStructureShape OR @cdi:DimensionalDataStructureShape OR @cdi:KeyValueStructureShape OR @cdi:LongDataStructureShape OR @cdi:WideDataStructureShape;
+	cdi:PrimaryKey_isComposedOf_PrimaryKeyComponent	@cdi:PrimaryKeyComponentShape +;
+	
+	}
+
+# class PrimaryKeyComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::PrimaryKeyComponent
+cdi:PrimaryKeyComponentShape CLOSED {
+	a [cdi:PrimaryKeyComponent];
+	cdi:PrimaryKeyComponent-identifier	@cdi:IdentifierShape?;
+	^cdi:ForeignKeyComponent_references_PrimaryKeyComponent @cdi:ForeignKeyComponentShape *;
+	cdi:PrimaryKeyComponent_correspondsTo_DataStructureComponent	@cdi:DataStructureComponentShape OR @cdi:AttributeComponentShape OR @cdi:ContextualComponentShape OR @cdi:DataStructureShape OR @cdi:DimensionComponentShape OR @cdi:IdentifierComponentShape OR @cdi:MeasureComponentShape OR @cdi:SyntheticIdComponentShape OR @cdi:VariableDescriptorComponentShape OR @cdi:VariableValueComponentShape;
+	
+	^cdi:PrimaryKey_isComposedOf_PrimaryKeyComponent @cdi:PrimaryKeyShape ;
+	}
+
+# class ProcessingAgent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::ProcessingAgent
+cdi:ProcessingAgentShape CLOSED {
+	a [cdi:ProcessingAgent];
+	$cdi:ProcessingAgentProperties (
+	^cdi:ControlLogic_informs_ProcessingAgent @cdi:ControlLogicShape OR @cdi:DeterministicImperativeShape OR @cdi:NonDeterministicDeclarativeShape*;
+	cdi:ProcessingAgent_operatesOn_ProductionEnvironment	@cdi:ProductionEnvironmentShape *;
+	
+	cdi:ProcessingAgent_performs_Activity	@cdi:ActivityShape OR @cdi:StepShape*;
+	
+		&cdi:AgentProperties;
+		);
+}
+
+# class ProductionEnvironment
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::ProductionEnvironment
+cdi:ProductionEnvironmentShape CLOSED {
+	a [cdi:ProductionEnvironment];
+	cdi:ProductionEnvironment-description	xsd:string?;
+	cdi:ProductionEnvironment-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:ProductionEnvironment-identifier	@cdi:IdentifierShape?;
+	cdi:ProductionEnvironment-name	@cdi:ObjectNameShape*;
+	^cdi:ProcessingAgent_operatesOn_ProductionEnvironment @cdi:ProcessingAgentShape OR @cdi:CuratorShape OR @cdi:ServiceShape*;
+	}
+
+# class QualifiedMeasure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::QualifiedMeasure
+cdi:QualifiedMeasureShape CLOSED {
+	a [cdi:QualifiedMeasure];
+	cdi:QualifiedMeasure_refines_MeasureComponent	@cdi:MeasureComponentShape OR @cdi:QualifiedMeasureShape?;
+	
+	^cdi:ScopedMeasure_restricts_QualifiedMeasure @cdi:ScopedMeasureShape *;
+		&cdi:MeasureComponentProperties;
+	}
+
+# class ReferenceValue
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValue
+cdi:ReferenceValueShape CLOSED {
+	a [cdi:ReferenceValue];
+	cdi:ReferenceValue_correspondsTo_VariableValueComponent	@cdi:VariableValueComponentShape ;
+	
+	^cdi:InstanceKey_refersTo_ReferenceValue @cdi:InstanceKeyShape *;
+	^cdi:Descriptor_refersTo_ReferenceValue @cdi:DescriptorShape ;
+	cdi:ReferenceValue_hasValueFrom_ReferenceValueDomain	@cdi:ReferenceValueDomainShape ;
+	
+		&cdi:InstanceValueProperties;
+	}
+
+# class ReferenceValueDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceValueDomain
+cdi:ReferenceValueDomainShape CLOSED {
+	a [cdi:ReferenceValueDomain];
+	^cdi:ReferenceValue_hasValueFrom_ReferenceValueDomain @cdi:ReferenceValueShape *;
+	^cdi:ReferenceVariable_takesValuesFrom_ReferenceValueDomain @cdi:ReferenceVariableShape *;
+		&cdi:ValueDomainProperties;
+	}
+
+# class ReferenceVariable
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Long::ReferenceVariable
+cdi:ReferenceVariableShape CLOSED {
+	a [cdi:ReferenceVariable];
+	^cdi:Descriptor_identifies_ReferenceVariable @cdi:DescriptorShape *;
+	cdi:ReferenceVariable_takesValuesFrom_ReferenceValueDomain	@cdi:ReferenceValueDomainShape ?;
+	
+		&cdi:InstanceVariableProperties;
+	}
+
+# class RepresentedVariable
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::RepresentedVariable
+cdi:RepresentedVariableShape CLOSED {
+	a [cdi:RepresentedVariable];
+	$cdi:RepresentedVariableProperties (
+	cdi:RepresentedVariable-describedUnitOfMeasure	@cdi:ControlledVocabularyEntryShape?;
+	cdi:RepresentedVariable-hasIntendedDataType	@cdi:ControlledVocabularyEntryShape?;
+	cdi:RepresentedVariable-simpleUnitOfMeasure	xsd:string?;
+	^cdi:DataStructureComponent_isDefinedBy_RepresentedVariable @cdi:DataStructureComponentShape OR @cdi:AttributeComponentShape OR @cdi:ContextualComponentShape OR @cdi:DataStructureShape OR @cdi:DimensionComponentShape OR @cdi:IdentifierComponentShape OR @cdi:MeasureComponentShape OR @cdi:SyntheticIdComponentShape OR @cdi:VariableDescriptorComponentShape OR @cdi:VariableValueComponentShape*;
+	cdi:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain	@cdi:SentinelValueDomainShape *;
+	
+	cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain	@cdi:SubstantiveValueDomainShape OR @cdi:DescriptorValueDomainShape?;
+	
+		&cdi:ConceptualVariableProperties;
+		);
+}
+
+# class RevisableDatum
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::RevisableDatum
+cdi:RevisableDatumShape CLOSED {
+	a [cdi:RevisableDatum];
+	cdi:RevisableDatum-vintage	xsd:integer;
+	cdi:RevisableDatum_correspondsTo_Revision	@cdi:RevisionShape ?;
+	
+	^cdi:ScopedMeasure_generates_RevisableDatum @cdi:ScopedMeasureShape ;
+		&cdi:DatumProperties;
+	}
+
+# class Revision
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::Revision
+cdi:RevisionShape CLOSED {
+	a [cdi:Revision];
+	cdi:Revision-algorithm	xsd:string?;
+	cdi:Revision-identifier	@cdi:IdentifierShape?;
+	cdi:Revision-overview	@cdi:InternationalStringShape?;
+	^cdi:RevisableDatum_correspondsTo_Revision @cdi:RevisableDatumShape *;
+	}
+
+# class Rule
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::Rule
+cdi:RuleShape CLOSED {
+	a [cdi:Rule];
+	cdi:Rule-identifier	@cdi:IdentifierShape?;
+	^cdi:RuleSet_has_Rule @cdi:RuleSetShape ?;
+	cdi:Rule_hasPrecondition_ConditionalControlLogic	@cdi:ConditionalControlLogicShape *;
+	
+	}
+
+# class RuleBasedScheduling
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::RuleBasedScheduling
+cdi:RuleBasedSchedulingShape CLOSED {
+	a [cdi:RuleBasedScheduling];
+	cdi:RuleBasedScheduling-schedulingType	@cdi:SchedulingStrategyShape;
+	cdi:RuleBasedScheduling_has_Curator	@cdi:CuratorShape *;
+	
+	cdi:RuleBasedScheduling_has_RuleSet	@cdi:RuleSetShape *;
+	
+		&cdi:NonDeterministicDeclarativeProperties;
+	}
+
+# class RuleSet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::RuleSet
+cdi:RuleSetShape CLOSED {
+	a [cdi:RuleSet];
+	cdi:RuleSet-identifier	@cdi:IdentifierShape?;
+	^cdi:RuleBasedScheduling_has_RuleSet @cdi:RuleBasedSchedulingShape ?;
+	cdi:RuleSet_has_Rule	@cdi:RuleShape *;
+	
+	}
+
+# class ScopedMeasure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Dimensional::ScopedMeasure
+cdi:ScopedMeasureShape CLOSED {
+	a [cdi:ScopedMeasure];
+	cdi:ScopedMeasure-frequency	@cdi:InternationalStringShape?;
+	cdi:ScopedMeasure-identifier	@cdi:IdentifierShape?;
+	^cdi:DimensionalDataSet_represents_ScopedMeasure @cdi:DimensionalDataSetShape *;
+	cdi:ScopedMeasure_circumscribes_DimensionalKeyDefinition	@cdi:DimensionalKeyDefinitionShape ?;
+	
+	cdi:ScopedMeasure_generates_RevisableDatum	@cdi:RevisableDatumShape ;
+	
+	cdi:ScopedMeasure_restricts_QualifiedMeasure	@cdi:QualifiedMeasureShape ?;
+	
+	}
+
+# class Segment
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::Segment
+cdi:SegmentShape CLOSED {
+	a [cdi:Segment];
+	cdi:Segment-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:Segment-identifier	@cdi:IdentifierShape?;
+	cdi:Segment-name	@cdi:ObjectNameShape*;
+	cdi:Segment-physicalFileName	xsd:string?;
+	cdi:Segment-purpose	@cdi:InternationalStringShape?;
+	cdi:Segment_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	cdi:Segment_represents_Population	@cdi:PopulationShape ?;
+	
+	cdi:Segment_has_DataPoint	@cdi:DataPointShape *;
+	
+	^cdi:PhysicalDataSet_has_Segment @cdi:PhysicalDataSetShape OR @cdi:StructuredDataSetShape OR @cdi:TabularTextDataSetShape*;
+	^cdi:SegmentPosition_indexes_Segment @cdi:SegmentPositionShape *;
+	^cdi:SegmentStructure_structures_Segment @cdi:SegmentStructureShape *;
+	cdi:Segment_has_DataPointPosition	@cdi:DataPointPositionShape *;
+	
+	cdi:Segment_mapsTo_LogicalRecord	@cdi:LogicalRecordShape ?;
+	
+	}
+
+# class SegmentPosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::SegmentPosition
+cdi:SegmentPositionShape CLOSED {
+	a [cdi:SegmentPosition];
+	cdi:SegmentPosition-identifier	@cdi:IdentifierShape?;
+	cdi:SegmentPosition-value	xsd:integer;
+	^cdi:PhysicalDataSet_has_SegmentPosition @cdi:PhysicalDataSetShape OR @cdi:StructuredDataSetShape OR @cdi:TabularTextDataSetShape;
+	cdi:SegmentPosition_indexes_Segment	@cdi:SegmentShape ;
+	
+	}
+
+# class SegmentStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::SegmentStructure
+cdi:SegmentStructureShape CLOSED {
+	a [cdi:SegmentStructure];
+	cdi:SegmentStructure-identifier	@cdi:IdentifierShape?;
+	cdi:SegmentStructure-name	@cdi:ObjectNameShape?;
+	cdi:SegmentStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:SegmentStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:SegmentStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:SegmentStructure-topology	@cdi:ControlledVocabularyEntryShape?;
+	cdi:SegmentStructure-totality	@cdi:StructureExtentShape?;
+	cdi:SegmentStructure_has_DataPointRelationship	@cdi:DataPointRelationshipShape *;
+	
+	cdi:SegmentStructure_structures_Segment	@cdi:SegmentShape ?;
+	
+	}
+
+# class SentinelConceptualDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::SentinelConceptualDomain
+cdi:SentinelConceptualDomainShape CLOSED {
+	a [cdi:SentinelConceptualDomain];
+	^cdi:ConceptualVariable_takesSentinelConceptsFrom_SentinelConceptualDomain @cdi:ConceptualVariableShape OR @cdi:RepresentedVariableShape*;
+	^cdi:SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain @cdi:SentinelValueDomainShape *;
+		&cdi:ConceptualDomainProperties;
+	}
+
+# class SentinelValueDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::SentinelValueDomain
+cdi:SentinelValueDomainShape CLOSED {
+	a [cdi:SentinelValueDomain];
+	cdi:SentinelValueDomain-platformType	@cdi:ControlledVocabularyEntryShape?;
+	^cdi:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain @cdi:RepresentedVariableShape OR @cdi:InstanceVariableShape*;
+	cdi:SentinelValueDomain_takesConceptsFrom_SentinelConceptualDomain	@cdi:SentinelConceptualDomainShape ?;
+	
+	cdi:SentinelValueDomain_isDescribedBy_ValueAndConceptDescription	@cdi:ValueAndConceptDescriptionShape ?;
+	
+	cdi:SentinelValueDomain_takesValuesFrom_EnumerationDomain	@cdi:EnumerationDomainShape OR @cdi:CodeListShape OR @cdi:StatisticalClassificationShape?;
+	
+		&cdi:ValueDomainProperties;
+	}
+
+# class Sequence
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::Sequence
+cdi:SequenceShape CLOSED {
+	a [cdi:Sequence];
+	cdi:Sequence_has_SequencePosition	@cdi:SequencePositionShape *;
+	
+		&cdi:DeterministicImperativeProperties;
+	}
+
+# class SequencePosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::SequencePosition
+cdi:SequencePositionShape CLOSED {
+	a [cdi:SequencePosition];
+	cdi:SequencePosition-identifier	@cdi:IdentifierShape?;
+	cdi:SequencePosition-value	xsd:integer;
+	cdi:SequencePosition_indexes_Activity	@cdi:ActivityShape OR @cdi:StepShape;
+	
+	^cdi:Sequence_has_SequencePosition @cdi:SequenceShape ;
+	}
+
+# class Service
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::Service
+cdi:ServiceShape CLOSED {
+	a [cdi:Service];
+		&cdi:ProcessingAgentProperties;
+	}
+
+# class StatisticalClassification
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassification
+cdi:StatisticalClassificationShape CLOSED {
+	a [cdi:StatisticalClassification];
+	cdi:StatisticalClassification-allowsDuplicates	xsd:boolean?;
+	cdi:StatisticalClassification-availableLanguage	xsd:language*;
+	cdi:StatisticalClassification-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:StatisticalClassification-changeFromBase	@cdi:InternationalStringShape?;
+	cdi:StatisticalClassification-copyright	@cdi:InternationalStringShape*;
+	cdi:StatisticalClassification-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:StatisticalClassification-isCurrent	xsd:boolean?;
+	cdi:StatisticalClassification-isFloating	xsd:boolean?;
+	cdi:StatisticalClassification-purposeOfVariant	@cdi:InternationalStringShape?;
+	cdi:StatisticalClassification-rationale	@cdi:InternationalStringShape?;
+	cdi:StatisticalClassification-releaseDate	@cdi:CombinedDateShape?;
+	cdi:StatisticalClassification-updateChanges	@cdi:InternationalStringShape*;
+	cdi:StatisticalClassification-usage	@cdi:InternationalStringShape?;
+	cdi:StatisticalClassification-validDates	@cdi:DateRangeShape?;
+	cdi:StatisticalClassification_isMaintainedBy_Organization	@cdi:OrganizationShape *;
+	
+	^cdi:ClassificationPosition_indexes_StatisticalClassification @cdi:ClassificationPositionShape *;
+	^cdi:ClassificationSeries_has_StatisticalClassification @cdi:ClassificationSeriesShape ?;
+	^cdi:ClassificationStructure_structures_StatisticalClassification @cdi:ClassificationStructureShape *;
+	^cdi:CorrespondenceTable_mapsTo_StatisticalClassification @cdi:CorrespondenceTableShape *;
+	^cdi:StatisticalClassificationRelationship_hasSource_StatisticalClassification @cdi:StatisticalClassificationRelationshipShape *;
+	^cdi:StatisticalClassificationRelationship_hasTarget_StatisticalClassification @cdi:StatisticalClassificationRelationshipShape *;
+	cdi:StatisticalClassification_has_ClassificationItem	@cdi:ClassificationItemShape *;
+	
+	cdi:StatisticalClassification_has_ClassificationItemPosition	@cdi:ClassificationItemPositionShape *;
+	
+	cdi:StatisticalClassification_has_LevelStructure	@cdi:LevelStructureShape ?;
+	
+	cdi:StatisticalClassification_isIndexedBy_ClassificationIndex	@cdi:ClassificationIndexShape *;
+	
+	cdi:StatisticalClassification_isPredecessorOf_StatisticalClassification	@cdi:StatisticalClassificationShape *;
+	
+	cdi:StatisticalClassification_isSuccessorOf_StatisticalClassification	@cdi:StatisticalClassificationShape *;
+	
+	cdi:StatisticalClassification_isVariantOf_StatisticalClassification	@cdi:StatisticalClassificationShape ?;
+	
+		&cdi:EnumerationDomainProperties;
+	}
+
+# class StatisticalClassificationRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::StatisticalClassificationRelationship
+cdi:StatisticalClassificationRelationshipShape CLOSED {
+	a [cdi:StatisticalClassificationRelationship];
+	cdi:StatisticalClassificationRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:StatisticalClassificationRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	^cdi:ClassificationSeriesStructure_has_StatisticalClassificationRelationship @cdi:ClassificationSeriesStructureShape ;
+	cdi:StatisticalClassificationRelationship_hasSource_StatisticalClassification	@cdi:StatisticalClassificationShape *;
+	
+	cdi:StatisticalClassificationRelationship_hasTarget_StatisticalClassification	@cdi:StatisticalClassificationShape *;
+	
+	}
+
+# class Statistics
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Statistics
+cdi:StatisticsShape CLOSED {
+	a [cdi:Statistics];
+	$cdi:StatisticsProperties (
+	cdi:Statistics-identifier	@cdi:IdentifierShape?;
+	cdi:Statistics-statistic	@cdi:StatisticShape*;
+	cdi:Statistics-typeOfStatistic	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Statistics_hasWeight_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape?;
+	
+	cdi:Statistics_has_StatisticsCollection	@cdi:StatisticsCollectionShape ?;
+	
+		);
+}
+
+# class StatisticsCollection
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::StatisticsCollection
+cdi:StatisticsCollectionShape CLOSED {
+	a [cdi:StatisticsCollection];
+	cdi:StatisticsCollection-identifier	@cdi:IdentifierShape?;
+	^cdi:InstanceVariable_isDescribedBy_StatisticsCollection @cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape?;
+	cdi:StatisticsCollection_hasWeight_InstanceVariable	@cdi:InstanceVariableShape OR @cdi:DescriptorVariableShape OR @cdi:ReferenceVariableShape?;
+	
+	^cdi:Statistics_has_StatisticsCollection @cdi:StatisticsShape OR @cdi:CategoryStatisticsShape*;
+	}
+
+# class Step
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::Step
+cdi:StepShape CLOSED {
+	a [cdi:Step];
+	cdi:Step-script	@cdi:CommandCodeShape?;
+	cdi:Step-scriptingLanguage	@cdi:ControlledVocabularyEntryShape?;
+	^cdi:Activity_has_Step @cdi:ActivityShape OR @cdi:StepShape*;
+	cdi:Step_hasSubStep_Step	@cdi:StepShape *;
+	
+	cdi:Step_produces_Parameter	@cdi:ParameterShape *;
+	
+	cdi:Step_receives_Parameter	@cdi:ParameterShape *;
+	
+		&cdi:ActivityProperties;
+	}
+
+# class StructuredDataSet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::StructuredDataSet
+cdi:StructuredDataSetShape CLOSED {
+	a [cdi:StructuredDataSet];
+		&cdi:PhysicalDataSetProperties;
+	}
+
+# class SubstantiveConceptualDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::SubstantiveConceptualDomain
+cdi:SubstantiveConceptualDomainShape CLOSED {
+	a [cdi:SubstantiveConceptualDomain];
+	^cdi:ConceptualVariable_takesSubstantiveConceptsFrom_SubstantiveConceptualDomain @cdi:ConceptualVariableShape OR @cdi:RepresentedVariableShape*;
+	^cdi:SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain @cdi:SubstantiveValueDomainShape OR @cdi:DescriptorValueDomainShape*;
+		&cdi:ConceptualDomainProperties;
+	}
+
+# class SubstantiveValueDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::SubstantiveValueDomain
+cdi:SubstantiveValueDomainShape CLOSED {
+	a [cdi:SubstantiveValueDomain];
+	$cdi:SubstantiveValueDomainProperties (
+	^cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain @cdi:RepresentedVariableShape OR @cdi:InstanceVariableShape*;
+	cdi:SubstantiveValueDomain_takesConceptsFrom_SubstantiveConceptualDomain	@cdi:SubstantiveConceptualDomainShape ?;
+	
+	^cdi:MainKeyMember_hasValueFrom_SubstantiveValueDomain @cdi:MainKeyMemberShape *;
+	cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription	@cdi:ValueAndConceptDescriptionShape ?;
+	
+	cdi:SubstantiveValueDomain_takesValuesFrom_EnumerationDomain	@cdi:EnumerationDomainShape OR @cdi:CodeListShape OR @cdi:StatisticalClassificationShape?;
+	
+		&cdi:ValueDomainProperties;
+		);
+}
+
+# class SyntheticIdComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::KeyValue::SyntheticIdComponent
+cdi:SyntheticIdComponentShape CLOSED {
+	a [cdi:SyntheticIdComponent];
+		&cdi:DataStructureComponentProperties;
+	}
+
+# class TabularTextDataSet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::TabularTextDataSet
+cdi:TabularTextDataSetShape CLOSED {
+	a [cdi:TabularTextDataSet];
+	cdi:TabularTextDataSet-arrayBase	xsd:integer?;
+	cdi:TabularTextDataSet-commentPrefix	xsd:string?;
+	cdi:TabularTextDataSet-delimiter	xsd:string?;
+	cdi:TabularTextDataSet-escapeCharacter	xsd:string?;
+	cdi:TabularTextDataSet-hasHeader	xsd:boolean?;
+	cdi:TabularTextDataSet-headerIsCaseSensitive	xsd:boolean?;
+	cdi:TabularTextDataSet-headerRowCount	xsd:integer?;
+	cdi:TabularTextDataSet-isDelimited	xsd:boolean;
+	cdi:TabularTextDataSet-isFixedWidth	xsd:boolean;
+	cdi:TabularTextDataSet-lineTerminator	xsd:string*;
+	cdi:TabularTextDataSet-nullSequence	xsd:string?;
+	cdi:TabularTextDataSet-quoteCharacter	xsd:string?;
+	cdi:TabularTextDataSet-skipBlankRows	xsd:boolean?;
+	cdi:TabularTextDataSet-skipDataColumns	xsd:integer?;
+	cdi:TabularTextDataSet-skipInitialSpace	xsd:boolean?;
+	cdi:TabularTextDataSet-skipRows	xsd:integer?;
+	cdi:TabularTextDataSet-tableDirection	@cdi:TableDirectionValuesShape?;
+	cdi:TabularTextDataSet-textDirection	@cdi:TextDirectionValuesShape?;
+	cdi:TabularTextDataSet-treatConsecutiveDelimitersAsOne	xsd:boolean?;
+	cdi:TabularTextDataSet-trim	@cdi:TrimValuesShape?;
+	cdi:TabularTextDataSet_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+		&cdi:PhysicalDataSetProperties;
+	}
+
+# class TemporalConstraints
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::TemporalConstraints
+cdi:TemporalConstraintsShape CLOSED {
+	a [cdi:TemporalConstraints];
+	$cdi:TemporalConstraintsProperties (
+		&cdi:NonDeterministicDeclarativeProperties;
+		);
+}
+
+# class TemporalControlConstruct
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Process::TemporalControlConstruct
+cdi:TemporalControlConstructShape CLOSED {
+	a [cdi:TemporalControlConstruct];
+	cdi:TemporalControlConstruct-temporalControl	@cdi:TemporalOperatorShape;
+		&cdi:TemporalConstraintsProperties;
+	}
+
+# class TextMapping
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::FormatDescription::TextMapping
+cdi:TextMappingShape CLOSED {
+	a [cdi:TextMapping];
+	cdi:TextMapping-defaultDecimalSeparator	xsd:string?;
+	cdi:TextMapping-defaultDigitGroupSeparator	xsd:string?;
+	cdi:TextMapping-length	xsd:integer?;
+	cdi:TextMapping-mappingLabel	@cdi:LabelForDisplayShape*;
+		&cdi:PhysicalMappingProperties;
+	}
+
+# class Unit
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::Unit
+cdi:UnitShape CLOSED {
+	a [cdi:Unit];
+	cdi:Unit-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:Unit-definition	@cdi:InternationalStringShape?;
+	cdi:Unit-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:Unit-identifier	@cdi:IdentifierShape?;
+	cdi:Unit-name	@cdi:ObjectNameShape*;
+	^cdi:KeyDefinition_correspondsTo_Unit @cdi:KeyDefinitionShape OR @cdi:DimensionalKeyDefinitionShape*;
+	^cdi:Key_correspondsTo_Unit @cdi:KeyShape OR @cdi:DimensionalKeyShape OR @cdi:InstanceKeyShape OR @cdi:LongKeyShape OR @cdi:WideKeyShape*;
+	^cdi:Population_isComposedOf_Unit @cdi:PopulationShape *;
+	cdi:Unit_has_UnitType	@cdi:UnitTypeShape OR @cdi:UniverseShape*;
+	
+	}
+
+# class UnitType
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::UnitType
+cdi:UnitTypeShape CLOSED {
+	a [cdi:UnitType];
+	$cdi:UnitTypeProperties (
+	cdi:UnitType-descriptiveText	@cdi:InternationalStringShape?;
+	^cdi:ConceptualVariable_measures_UnitType @cdi:ConceptualVariableShape OR @cdi:RepresentedVariableShape*;
+	^cdi:Unit_has_UnitType @cdi:UnitShape *;
+		&cdi:ConceptProperties;
+		);
+}
+
+# class Universe
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::Universe
+cdi:UniverseShape CLOSED {
+	a [cdi:Universe];
+	$cdi:UniverseProperties (
+	cdi:Universe-isInclusive	xsd:boolean?;
+	^cdi:KeyDefinition_correspondsTo_Universe @cdi:KeyDefinitionShape OR @cdi:DimensionalKeyDefinitionShape*;
+	^cdi:Key_correspondsTo_Universe @cdi:KeyShape OR @cdi:DimensionalKeyShape OR @cdi:InstanceKeyShape OR @cdi:LongKeyShape OR @cdi:WideKeyShape*;
+		&cdi:UnitTypeProperties;
+		);
+}
+
+# class ValueAndConceptDescription
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ValueAndConceptDescription
+cdi:ValueAndConceptDescriptionShape CLOSED {
+	a [cdi:ValueAndConceptDescription];
+	cdi:ValueAndConceptDescription-classificationLevel	@cdi:CategoryRelationCodeShape?;
+	cdi:ValueAndConceptDescription-description	@cdi:InternationalStringShape?;
+	cdi:ValueAndConceptDescription-formatPattern	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ValueAndConceptDescription-identifier	@cdi:IdentifierShape?;
+	cdi:ValueAndConceptDescription-logicalExpression	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ValueAndConceptDescription-maximumValueExclusive	xsd:string?;
+	cdi:ValueAndConceptDescription-maximumValueInclusive	xsd:string?;
+	cdi:ValueAndConceptDescription-minimumValueExclusive	xsd:string?;
+	cdi:ValueAndConceptDescription-minimumValueInclusive	xsd:string?;
+	cdi:ValueAndConceptDescription-regularExpression	@cdi:TypedStringShape?;
+	^cdi:ConceptualDomain_isDescribedBy_ValueAndConceptDescription @cdi:ConceptualDomainShape OR @cdi:SentinelConceptualDomainShape OR @cdi:SubstantiveConceptualDomainShape*;
+	^cdi:SentinelValueDomain_isDescribedBy_ValueAndConceptDescription @cdi:SentinelValueDomainShape *;
+	^cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription @cdi:SubstantiveValueDomainShape OR @cdi:DescriptorValueDomainShape*;
+	}
+
+# class ValueDomain
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Representations::ValueDomain
+cdi:ValueDomainShape CLOSED {
+	a [cdi:ValueDomain];
+	$cdi:ValueDomainProperties (
+	cdi:ValueDomain-catalogDetails	@cdi:CatalogDetailsShape?;
+	cdi:ValueDomain-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:ValueDomain-identifier	@cdi:IdentifierShape?;
+	cdi:ValueDomain-recommendedDataType	@cdi:ControlledVocabularyEntryShape*;
+	^cdi:InstanceValue_hasValueFrom_ValueDomain @cdi:InstanceValueShape OR @cdi:KeyMemberShape OR @cdi:ReferenceValueShape*;
+	^cdi:DimensionComponent_isStructuredBy_ValueDomain @cdi:DimensionComponentShape *;
+		);
+}
+
+# class VariableCollection
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollection
+cdi:VariableCollectionShape CLOSED {
+	a [cdi:VariableCollection];
+	cdi:VariableCollection-allowsDuplicates	xsd:boolean?;
+	cdi:VariableCollection-displayLabel	@cdi:LabelForDisplayShape*;
+	cdi:VariableCollection-identifier	@cdi:IdentifierShape?;
+	cdi:VariableCollection-name	@cdi:ObjectNameShape*;
+	cdi:VariableCollection-purpose	@cdi:InternationalStringShape?;
+	cdi:VariableCollection-usage	@cdi:InternationalStringShape?;
+	^cdi:VariableCollectionStructure_structures_VariableCollection @cdi:VariableCollectionStructureShape *;
+	cdi:VariableCollection_has_ConceptualVariable	@cdi:ConceptualVariableShape OR @cdi:RepresentedVariableShape*;
+	
+	cdi:VariableCollection_has_VariablePosition	@cdi:VariablePositionShape *;
+	
+	cdi:VariableCollection_isDefinedBy_Concept	@cdi:ConceptShape OR @cdi:CategoryShape OR @cdi:ConceptualValueShape OR @cdi:ConceptualVariableShape OR @cdi:UnitTypeShape*;
+	
+	}
+
+# class VariableCollectionStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableCollectionStructure
+cdi:VariableCollectionStructureShape CLOSED {
+	a [cdi:VariableCollectionStructure];
+	cdi:VariableCollectionStructure-identifier	@cdi:IdentifierShape?;
+	cdi:VariableCollectionStructure-name	@cdi:OrganizationNameShape*;
+	cdi:VariableCollectionStructure-purpose	@cdi:InternationalStringShape?;
+	cdi:VariableCollectionStructure-semantics	@cdi:ControlledVocabularyEntryShape?;
+	cdi:VariableCollectionStructure-specification	@cdi:StructureSpecificationShape?;
+	cdi:VariableCollectionStructure-topology	@cdi:ControlledVocabularyEntryShape?;
+	cdi:VariableCollectionStructure-totality	@cdi:StructureExtentShape?;
+	cdi:VariableCollectionStructure_has_VariableRelationship	@cdi:VariableRelationshipShape *;
+	
+	cdi:VariableCollectionStructure_structures_VariableCollection	@cdi:VariableCollectionShape ?;
+	
+	}
+
+# class VariableDescriptorComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::VariableDescriptorComponent
+cdi:VariableDescriptorComponentShape CLOSED {
+	a [cdi:VariableDescriptorComponent];
+	cdi:VariableDescriptorComponent_isDefinedBy_DescriptorVariable	@cdi:DescriptorVariableShape ?;
+	
+	cdi:VariableDescriptorComponent_refersTo_VariableValueComponent	@cdi:VariableValueComponentShape ;
+	
+		&cdi:DataStructureComponentProperties;
+	}
+
+# class VariablePosition
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariablePosition
+cdi:VariablePositionShape CLOSED {
+	a [cdi:VariablePosition];
+	cdi:VariablePosition-identifier	@cdi:IdentifierShape?;
+	cdi:VariablePosition-value	xsd:integer;
+	^cdi:VariableCollection_has_VariablePosition @cdi:VariableCollectionShape ;
+	cdi:VariablePosition_indexes_ConceptualVariable	@cdi:ConceptualVariableShape OR @cdi:RepresentedVariableShape;
+	
+	}
+
+# class VariableRelationship
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::Conceptual::VariableRelationship
+cdi:VariableRelationshipShape CLOSED {
+	a [cdi:VariableRelationship];
+	cdi:VariableRelationship-identifier	@cdi:IdentifierShape?;
+	cdi:VariableRelationship-semantics	@cdi:ControlledVocabularyEntryShape?;
+	^cdi:VariableCollectionStructure_has_VariableRelationship @cdi:VariableCollectionStructureShape ;
+	cdi:VariableRelationship_hasSource_ConceptualVariable	@cdi:ConceptualVariableShape OR @cdi:RepresentedVariableShape*;
+	
+	cdi:VariableRelationship_hasTarget_ConceptualVariable	@cdi:ConceptualVariableShape OR @cdi:RepresentedVariableShape*;
+	
+	}
+
+# class VariableValueComponent
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Components::VariableValueComponent
+cdi:VariableValueComponentShape CLOSED {
+	a [cdi:VariableValueComponent];
+	^cdi:ReferenceValue_correspondsTo_VariableValueComponent @cdi:ReferenceValueShape *;
+	^cdi:VariableDescriptorComponent_refersTo_VariableValueComponent @cdi:VariableDescriptorComponentShape ;
+		&cdi:DataStructureComponentProperties;
+	}
+
+# class WideDataSet
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideDataSet
+cdi:WideDataSetShape CLOSED {
+	a [cdi:WideDataSet];
+		&cdi:DataSetProperties;
+	}
+
+# class WideDataStructure
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideDataStructure
+cdi:WideDataStructureShape CLOSED {
+	a [cdi:WideDataStructure];
+		&cdi:DataStructureProperties;
+	}
+
+# class WideKey
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKey
+cdi:WideKeyShape CLOSED {
+	a [cdi:WideKey];
+		&cdi:KeyProperties;
+	}
+
+# class WideKeyMember
+# based on the UML class DDICDIModels::DDICDILibrary::Classes::DataDescription::Wide::WideKeyMember
+cdi:WideKeyMemberShape CLOSED {
+	a [cdi:WideKeyMember];
+		&cdi:KeyMemberProperties;
+	}
+
+# datatype AccessInformation
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::AccessInformation
+cdi:AccessInformationShape CLOSED {
+	a [cdi:AccessInformation];
+	cdi:AccessInformation-copyright	@cdi:InternationalStringShape*;
+	cdi:AccessInformation-embargo	@cdi:EmbargoInformationShape*;
+	cdi:AccessInformation-license	@cdi:LicenseInformationShape*;
+	cdi:AccessInformation-rights	@cdi:InternationalStringShape*;
+	}
+
+# datatype AccessLocation
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::AccessLocation
+cdi:AccessLocationShape CLOSED {
+	a [cdi:AccessLocation];
+	cdi:AccessLocation-mimeType	@cdi:ControlledVocabularyEntryShape?;
+	cdi:AccessLocation-physicalLocation	@cdi:InternationalStringShape*;
+	cdi:AccessLocation-uri	xsd:anyURI*;
+	}
+
+# datatype Address
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Address
+cdi:AddressShape CLOSED {
+	a [cdi:Address];
+	cdi:Address-cityPlaceLocal	xsd:string?;
+	cdi:Address-countryCode	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Address-effectiveDates	@cdi:DateRangeShape?;
+	cdi:Address-geographicPoint	@cdi:SpatialPointShape?;
+	cdi:Address-isPreferred	xsd:boolean?;
+	cdi:Address-line	xsd:string*;
+	cdi:Address-locationName	@cdi:ObjectNameShape?;
+	cdi:Address-postalCode	xsd:string?;
+	cdi:Address-privacy	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Address-regionalCoverage	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Address-stateProvince	xsd:string?;
+	cdi:Address-timeZone	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Address-typeOfAddress	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Address-typeOfLocation	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype AgentInRole
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::AgentInRole
+cdi:AgentInRoleShape CLOSED {
+	a [cdi:AgentInRole];
+	cdi:AgentInRole-agentName	@cdi:BibliographicNameShape?;
+	cdi:AgentInRole-reference	@cdi:ReferenceShape?;
+	cdi:AgentInRole-role	@cdi:PairedControlledVocabularyEntryShape*;
+	}
+
+# datatype BibliographicName
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::BibliographicName
+cdi:BibliographicNameShape CLOSED {
+	a [cdi:BibliographicName];
+	cdi:BibliographicName-affiliation	xsd:string?;
+		&cdi:InternationalStringProperties;
+	}
+
+# datatype CatalogDetails
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CatalogDetails
+cdi:CatalogDetailsShape CLOSED {
+	a [cdi:CatalogDetails];
+	cdi:CatalogDetails-access	@cdi:AccessInformationShape*;
+	cdi:CatalogDetails-alternativeTitle	@cdi:InternationalStringShape*;
+	cdi:CatalogDetails-contributor	@cdi:AgentInRoleShape*;
+	cdi:CatalogDetails-creator	@cdi:AgentInRoleShape*;
+	cdi:CatalogDetails-date	@cdi:CombinedDateShape*;
+	cdi:CatalogDetails-identifier	@cdi:InternationalIdentifierShape?;
+	cdi:CatalogDetails-informationSource	@cdi:InternationalStringShape*;
+	cdi:CatalogDetails-languageOfObject	xsd:language*;
+	cdi:CatalogDetails-provenance	@cdi:ProvenanceInformationShape?;
+	cdi:CatalogDetails-publisher	@cdi:AgentInRoleShape*;
+	cdi:CatalogDetails-relatedResource	@cdi:ReferenceShape*;
+	cdi:CatalogDetails-subTitle	@cdi:InternationalStringShape*;
+	cdi:CatalogDetails-summary	@cdi:InternationalStringShape?;
+	cdi:CatalogDetails-title	@cdi:InternationalStringShape?;
+	cdi:CatalogDetails-typeOfResource	@cdi:ControlledVocabularyEntryShape*;
+	}
+
+# datatype CombinedDate
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CombinedDate
+cdi:CombinedDateShape CLOSED {
+	a [cdi:CombinedDate];
+	cdi:CombinedDate-isoDate	xsd:date?;
+	cdi:CombinedDate-nonIsoDate	@cdi:NonIsoDateShape*;
+	cdi:CombinedDate-semantics	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype Command
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Command
+cdi:CommandShape CLOSED {
+	a [cdi:Command];
+	cdi:Command-commandContent	@cdi:TypedStringShape?;
+	cdi:Command-programLanguage	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype CommandCode
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CommandCode
+cdi:CommandCodeShape CLOSED {
+	a [cdi:CommandCode];
+	cdi:CommandCode-command	@cdi:CommandShape*;
+	cdi:CommandCode-commandFile	@cdi:CommandFileShape*;
+	cdi:CommandCode-description	@cdi:InternationalStringShape?;
+	}
+
+# datatype CommandFile
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CommandFile
+cdi:CommandFileShape CLOSED {
+	a [cdi:CommandFile];
+	cdi:CommandFile-location	@cdi:InternationalStringShape?;
+	cdi:CommandFile-uri	xsd:anyURI?;
+	}
+
+# datatype ContactInformation
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ContactInformation
+cdi:ContactInformationShape CLOSED {
+	a [cdi:ContactInformation];
+	cdi:ContactInformation-address	@cdi:AddressShape*;
+	cdi:ContactInformation-email	@cdi:EmailShape*;
+	cdi:ContactInformation-emessaging	@cdi:ElectronicMessageSystemShape*;
+	cdi:ContactInformation-telephone	@cdi:TelephoneShape*;
+	cdi:ContactInformation-website	@cdi:WebLinkShape*;
+	}
+
+# datatype ControlledVocabularyEntry
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ControlledVocabularyEntry
+cdi:ControlledVocabularyEntryShape CLOSED {
+	a [cdi:ControlledVocabularyEntry];
+	cdi:ControlledVocabularyEntry-entryReference	@cdi:ReferenceShape*;
+	cdi:ControlledVocabularyEntry-entryValue	xsd:string*;
+	cdi:ControlledVocabularyEntry-name	xsd:string?;
+	cdi:ControlledVocabularyEntry-valueForOther	xsd:string?;
+	cdi:ControlledVocabularyEntry-vocabulary	@cdi:ReferenceShape?;
+	}
+
+# datatype CorrespondenceDefinition
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::CorrespondenceDefinition
+cdi:CorrespondenceDefinitionShape CLOSED {
+	a [cdi:CorrespondenceDefinition];
+	cdi:CorrespondenceDefinition-commonality	@cdi:InternationalStringShape?;
+	cdi:CorrespondenceDefinition-commonalityCode	@cdi:ControlledVocabularyEntryShape*;
+	cdi:CorrespondenceDefinition-difference	@cdi:InternationalStringShape?;
+	cdi:CorrespondenceDefinition-matching	@cdi:MatchingCriterionShape?;
+	}
+
+# datatype DataFingerprint
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::DataFingerprint
+cdi:DataFingerprintShape CLOSED {
+	a [cdi:DataFingerprint];
+	cdi:DataFingerprint-algorithmSpecification	xsd:string?;
+	cdi:DataFingerprint-algorithmVersion	xsd:string?;
+	cdi:DataFingerprint-typeOfFingerprint	xsd:string?;
+	cdi:DataFingerprint-value	xsd:string?;
+	}
+
+# datatype DateRange
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::DateRange
+cdi:DateRangeShape CLOSED {
+	a [cdi:DateRange];
+	cdi:DateRange-endDate	@cdi:CombinedDateShape?;
+	cdi:DateRange-startDate	@cdi:CombinedDateShape?;
+	}
+
+# datatype ElectronicMessageSystem
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ElectronicMessageSystem
+cdi:ElectronicMessageSystemShape CLOSED {
+	a [cdi:ElectronicMessageSystem];
+	cdi:ElectronicMessageSystem-contactAddress	xsd:string?;
+	cdi:ElectronicMessageSystem-effectiveDates	@cdi:DateRangeShape?;
+	cdi:ElectronicMessageSystem-isPreferred	xsd:boolean?;
+	cdi:ElectronicMessageSystem-privacy	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ElectronicMessageSystem-typeOfService	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype Email
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Email
+cdi:EmailShape CLOSED {
+	a [cdi:Email];
+	cdi:Email-effectiveDates	@cdi:DateRangeShape?;
+	cdi:Email-internetEmail	xsd:string?;
+	cdi:Email-isPreferred	xsd:boolean?;
+	cdi:Email-privacy	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Email-typeOfEmail	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype EmbargoInformation
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::EmbargoInformation
+cdi:EmbargoInformationShape CLOSED {
+	a [cdi:EmbargoInformation];
+	cdi:EmbargoInformation-description	@cdi:InternationalStringShape?;
+	cdi:EmbargoInformation-period	@cdi:DateRangeShape*;
+	}
+
+# datatype FundingInformation
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::FundingInformation
+cdi:FundingInformationShape CLOSED {
+	a [cdi:FundingInformation];
+	cdi:FundingInformation-fundingAgent	@cdi:AgentInRoleShape*;
+	cdi:FundingInformation-grantNumber	xsd:string?;
+	}
+
+# datatype GeoRole
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::GeoRole
+cdi:GeoRoleShape CLOSED {
+	a [cdi:GeoRole];
+	cdi:GeoRole-geography	@cdi:ControlledVocabularyEntryShape?;
+		&cdi:SpecializationRoleProperties;
+	}
+
+# datatype Identifier
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Identifier
+cdi:IdentifierShape CLOSED {
+	a [cdi:Identifier];
+	cdi:Identifier-ddiIdentifier	@cdi:InternationalRegistrationDataIdentifierShape?;
+	cdi:Identifier-isDdiIdentifierPersistent	xsd:boolean?;
+	cdi:Identifier-isDdiIdentifierUniversallyUnique	xsd:boolean?;
+	cdi:Identifier-nonDdiIdentifier	@cdi:NonDdiIdentifierShape*;
+	cdi:Identifier-uri	xsd:anyURI?;
+	cdi:Identifier-versionDate	xsd:date?;
+	cdi:Identifier-versionRationale	@cdi:RationaleDefinitionShape?;
+	cdi:Identifier-versionResponsibility	@cdi:AgentInRoleShape?;
+	}
+
+# datatype IndividualName
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::IndividualName
+cdi:IndividualNameShape CLOSED {
+	a [cdi:IndividualName];
+	cdi:IndividualName-abbreviation	@cdi:InternationalStringShape?;
+	cdi:IndividualName-context	@cdi:ControlledVocabularyEntryShape?;
+	cdi:IndividualName-effectiveDates	@cdi:DateRangeShape?;
+	cdi:IndividualName-firstGiven	xsd:string?;
+	cdi:IndividualName-fullName	@cdi:InternationalStringShape?;
+	cdi:IndividualName-isFormal	xsd:boolean?;
+	cdi:IndividualName-isPreferred	xsd:boolean?;
+	cdi:IndividualName-lastFamily	xsd:string?;
+	cdi:IndividualName-middle	xsd:string*;
+	cdi:IndividualName-prefix	xsd:string?;
+	cdi:IndividualName-sex	@cdi:SexSpecificationShape?;
+	cdi:IndividualName-suffix	xsd:string?;
+	cdi:IndividualName-typeOfIndividualName	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype InternationalIdentifier
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalIdentifier
+cdi:InternationalIdentifierShape CLOSED {
+	a [cdi:InternationalIdentifier];
+	cdi:InternationalIdentifier-identifierContent	xsd:string?;
+	cdi:InternationalIdentifier-isURI	xsd:boolean?;
+	cdi:InternationalIdentifier-managingAgency	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype InternationalRegistrationDataIdentifier
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalRegistrationDataIdentifier
+cdi:InternationalRegistrationDataIdentifierShape CLOSED {
+	a [cdi:InternationalRegistrationDataIdentifier];
+	cdi:InternationalRegistrationDataIdentifier-dataIdentifier	xsd:string;
+	cdi:InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier	xsd:string;
+	cdi:InternationalRegistrationDataIdentifier-versionIdentifier	xsd:string;
+	}
+
+# datatype InternationalString
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::InternationalString
+cdi:InternationalStringShape CLOSED {
+	a [cdi:InternationalString];
+	$cdi:InternationalStringProperties (
+	cdi:InternationalString-languageSpecificString	@cdi:LanguageStringShape*;
+		);
+}
+
+# datatype LabelForDisplay
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LabelForDisplay
+cdi:LabelForDisplayShape CLOSED {
+	a [cdi:LabelForDisplay];
+	cdi:LabelForDisplay-locationVariant	@cdi:ControlledVocabularyEntryShape?;
+	cdi:LabelForDisplay-maxLength	xsd:integer?;
+	cdi:LabelForDisplay-validDates	@cdi:DateRangeShape?;
+		&cdi:InternationalStringProperties;
+	}
+
+# datatype LanguageString
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LanguageString
+cdi:LanguageStringShape CLOSED {
+	a [cdi:LanguageString];
+	cdi:LanguageString-content	xsd:string;
+	cdi:LanguageString-isTranslatable	xsd:boolean?;
+	cdi:LanguageString-isTranslated	xsd:boolean?;
+	cdi:LanguageString-language	xsd:language?;
+	cdi:LanguageString-scope	xsd:string?;
+	cdi:LanguageString-structureUsed	@cdi:ControlledVocabularyEntryShape?;
+	cdi:LanguageString-translationDate	xsd:date?;
+	cdi:LanguageString-translationSourceLanguage	xsd:language*;
+	}
+
+# datatype LicenseInformation
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::LicenseInformation
+cdi:LicenseInformationShape CLOSED {
+	a [cdi:LicenseInformation];
+	cdi:LicenseInformation-contact	@cdi:ContactInformationShape*;
+	cdi:LicenseInformation-description	@cdi:InternationalStringShape*;
+	cdi:LicenseInformation-licenseAgent	@cdi:AgentInRoleShape*;
+	cdi:LicenseInformation-licenseReference	@cdi:ReferenceShape*;
+	}
+
+# datatype ModelIdentification
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::ModelIdentification
+cdi:ModelIdentificationShape CLOSED {
+	a [cdi:ModelIdentification];
+	cdi:ModelIdentification-acronym	xsd:string;
+	cdi:ModelIdentification-language	xsd:string;
+	cdi:ModelIdentification-majorVersion	xsd:string;
+	cdi:ModelIdentification-minorVersion	xsd:string;
+	cdi:ModelIdentification-subtitle	xsd:string;
+	cdi:ModelIdentification-title	xsd:string;
+	cdi:ModelIdentification-uri	xsd:string;
+	}
+
+# datatype NonDdiIdentifier
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::NonDdiIdentifier
+cdi:NonDdiIdentifierShape CLOSED {
+	a [cdi:NonDdiIdentifier];
+	cdi:NonDdiIdentifier-managingAgency	xsd:string?;
+	cdi:NonDdiIdentifier-type	xsd:string;
+	cdi:NonDdiIdentifier-value	xsd:string;
+	cdi:NonDdiIdentifier-version	xsd:string?;
+	}
+
+# datatype NonIsoDate
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::NonIsoDate
+cdi:NonIsoDateShape CLOSED {
+	a [cdi:NonIsoDate];
+	cdi:NonIsoDate-calendar	@cdi:ControlledVocabularyEntryShape?;
+	cdi:NonIsoDate-dateContent	xsd:string;
+	cdi:NonIsoDate-nonIsoDateFormat	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype ObjectAttributeSelector
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectAttributeSelector
+cdi:ObjectAttributeSelectorShape CLOSED {
+	a [cdi:ObjectAttributeSelector];
+	cdi:ObjectAttributeSelector-refinedBy	@cdi:ObjectAttributeSelectorShape?;
+	cdi:ObjectAttributeSelector-refinedByOrderNumber	xsd:integer?;
+	cdi:ObjectAttributeSelector-value	xsd:string?;
+		&cdi:SelectorProperties;
+	}
+
+# datatype ObjectName
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ObjectName
+cdi:ObjectNameShape CLOSED {
+	a [cdi:ObjectName];
+	$cdi:ObjectNameProperties (
+	cdi:ObjectName-context	@cdi:ControlledVocabularyEntryShape?;
+	cdi:ObjectName-name	xsd:string?;
+		);
+}
+
+# datatype OrganizationName
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::OrganizationName
+cdi:OrganizationNameShape CLOSED {
+	a [cdi:OrganizationName];
+	cdi:OrganizationName-abbreviation	@cdi:InternationalStringShape?;
+	cdi:OrganizationName-effectiveDates	@cdi:DateRangeShape?;
+	cdi:OrganizationName-isFormal	xsd:boolean?;
+	cdi:OrganizationName-typeOfOrganizationName	@cdi:ControlledVocabularyEntryShape?;
+		&cdi:ObjectNameProperties;
+	}
+
+# datatype PairedControlledVocabularyEntry
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::PairedControlledVocabularyEntry
+cdi:PairedControlledVocabularyEntryShape CLOSED {
+	a [cdi:PairedControlledVocabularyEntry];
+	cdi:PairedControlledVocabularyEntry-extent	@cdi:ControlledVocabularyEntryShape?;
+	cdi:PairedControlledVocabularyEntry-term	@cdi:ControlledVocabularyEntryShape;
+	}
+
+# datatype PrivateImage
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::PrivateImage
+cdi:PrivateImageShape CLOSED {
+	a [cdi:PrivateImage];
+	cdi:PrivateImage-effectiveDates	@cdi:DateRangeShape?;
+	cdi:PrivateImage-privacy	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype ProvenanceInformation
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::ProvenanceInformation
+cdi:ProvenanceInformationShape CLOSED {
+	a [cdi:ProvenanceInformation];
+	cdi:ProvenanceInformation-funding	@cdi:FundingInformationShape*;
+	cdi:ProvenanceInformation-provenanceStatement	@cdi:InternationalStringShape*;
+	cdi:ProvenanceInformation-recordCreationDate	xsd:date?;
+	cdi:ProvenanceInformation-recordLastRevisionDate	xsd:date?;
+	}
+
+# datatype RationaleDefinition
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::RationaleDefinition
+cdi:RationaleDefinitionShape CLOSED {
+	a [cdi:RationaleDefinition];
+	cdi:RationaleDefinition-rationaleCode	@cdi:ControlledVocabularyEntryShape?;
+	cdi:RationaleDefinition-rationaleDescription	@cdi:InternationalStringShape?;
+	}
+
+# datatype Reference
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Reference
+cdi:ReferenceShape CLOSED {
+	a [cdi:Reference];
+	cdi:Reference-ddiReference	@cdi:InternationalRegistrationDataIdentifierShape?;
+	cdi:Reference-deepLink	@cdi:SelectorShape?;
+	cdi:Reference-description	xsd:string?;
+	cdi:Reference-location	@cdi:InternationalStringShape?;
+	cdi:Reference-nonDdiReference	@cdi:NonDdiIdentifierShape*;
+	cdi:Reference-semantic	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Reference-uri	xsd:anyURI?;
+	cdi:Reference-validType	xsd:string*;
+	}
+
+# datatype Selector
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Selector
+cdi:SelectorShape CLOSED {
+	a [cdi:Selector];
+	}
+
+# datatype SpatialCoordinate
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpatialCoordinate
+cdi:SpatialCoordinateShape CLOSED {
+	a [cdi:SpatialCoordinate];
+	cdi:SpatialCoordinate-content	xsd:string?;
+	cdi:SpatialCoordinate-coordinateType	@cdi:PointFormatShape?;
+	}
+
+# datatype SpatialPoint
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpatialPoint
+cdi:SpatialPointShape CLOSED {
+	a [cdi:SpatialPoint];
+	cdi:SpatialPoint-xCoordinate	@cdi:SpatialCoordinateShape?;
+	cdi:SpatialPoint-yCoordinate	@cdi:SpatialCoordinateShape?;
+	}
+
+# datatype SpecializationRole
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::SpecializationRole
+cdi:SpecializationRoleShape CLOSED {
+	a [cdi:SpecializationRole];
+	}
+
+# datatype Statistic
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Statistic
+cdi:StatisticShape CLOSED {
+	a [cdi:Statistic];
+	cdi:Statistic-computationBase	@cdi:ComputationBaseListShape?;
+	cdi:Statistic-content	xsd:double?;
+	cdi:Statistic-isWeighted	xsd:boolean?;
+	cdi:Statistic-typeOfNumericValue	xsd:string?;
+	}
+
+# datatype StructureSpecification
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::StructureSpecification
+cdi:StructureSpecificationShape CLOSED {
+	a [cdi:StructureSpecification];
+	cdi:StructureSpecification-reflexive	@cdi:MemberRelationshipScopeShape?;
+	cdi:StructureSpecification-symmetric	@cdi:MemberRelationshipScopeShape?;
+	cdi:StructureSpecification-transitive	@cdi:MemberRelationshipScopeShape?;
+	}
+
+# datatype Telephone
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::Telephone
+cdi:TelephoneShape CLOSED {
+	a [cdi:Telephone];
+	cdi:Telephone-effectiveDates	@cdi:DateRangeShape?;
+	cdi:Telephone-isPreferred	xsd:boolean?;
+	cdi:Telephone-privacy	@cdi:ControlledVocabularyEntryShape?;
+	cdi:Telephone-telephoneNumber	xsd:string?;
+	cdi:Telephone-typeOfTelephone	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype TextPositionSelector
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TextPositionSelector
+cdi:TextPositionSelectorShape CLOSED {
+	a [cdi:TextPositionSelector];
+	cdi:TextPositionSelector-end	xsd:integer;
+	cdi:TextPositionSelector-start	xsd:integer;
+		&cdi:SelectorProperties;
+	}
+
+# datatype TimeRole
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TimeRole
+cdi:TimeRoleShape CLOSED {
+	a [cdi:TimeRole];
+	cdi:TimeRole-time	@cdi:ControlledVocabularyEntryShape?;
+		&cdi:SpecializationRoleProperties;
+	}
+
+# datatype TypedString
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::TypedString
+cdi:TypedStringShape CLOSED {
+	a [cdi:TypedString];
+	cdi:TypedString-content	xsd:string;
+	cdi:TypedString-typeOfContent	@cdi:ControlledVocabularyEntryShape?;
+	}
+
+# datatype WebLink
+# based on the UML data type DDICDIModels::DDICDILibrary::DataTypes::StructuredDataTypes::WebLink
+cdi:WebLinkShape CLOSED {
+	a [cdi:WebLink];
+	cdi:WebLink-effectiveDates	@cdi:DateRangeShape?;
+	cdi:WebLink-isPreferred	xsd:boolean?;
+	cdi:WebLink-privacy	@cdi:ControlledVocabularyEntryShape?;
+	cdi:WebLink-typeOfWebsite	@cdi:ControlledVocabularyEntryShape?;
+	cdi:WebLink-uri	xsd:anyURI?;
+	}
+
